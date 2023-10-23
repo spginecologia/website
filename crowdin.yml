@@ -1,0 +1,3 @@
+files:
+  - source: /nextjs/translations/en.json
+    translation: /nextjs/translations/%two_letters_code%.json
