@@ -1,0 +1,73 @@
+/* * */
+/* CONTAINER */
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--size-md);
+  width: 100%;
+  background-color: var(--color-reference-0);
+  border-bottom: 1px solid var(--color-gray-2);
+  padding: var(--size-md);
+  cursor: pointer;
+}
+
+.container:hover {
+  background-color: var(--color-gray-0);
+}
+
+.container:active {
+  background-color: var(--color-gray-1);
+}
+
+@media (prefers-color-scheme: dark) {
+  .container {
+    background-color: var(--color-gray-1);
+  }
+  .container:active {
+    background-color: var(--color-reference-0);
+  }
+}
+
+/* * */
+/* CHEVRON */
+
+.chevron {
+  font-size: 20px;
+  opacity: 0.25;
+  color: var(--color-gray-9);
+}
+
+.isSelected .chevron {
+  opacity: 0.75;
+}
+
+/* * */
+/* CONTENT WRAPPER */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--size-sm);
+  width: 100%;
+}
+
+/* * */
+/* SELECTED MODE */
+
+.isSelected,
+.isSelected:hover,
+.isSelected:active {
+  cursor: default;
+  background-color: var(--color-gray-1);
+}
+
+@media (prefers-color-scheme: dark) {
+  .isSelected,
+  .isSelected:hover,
+  .isSelected:active {
+    background-color: var(--color-reference-0);
+  }
+}
