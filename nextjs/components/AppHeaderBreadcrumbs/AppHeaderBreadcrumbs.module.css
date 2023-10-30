@@ -1,0 +1,12 @@
+/* * */
+/* CONTAINER */
+
+.container {
+  font-size: 11px;
+  width: 600px;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #645a69;
+}

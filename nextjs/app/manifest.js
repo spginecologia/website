@@ -1,7 +1,7 @@
 export default function manifest() {
   return {
-    name: 'GO | Gestor de Oferta',
-    short_name: 'Gestor de Oferta',
+    name: 'Sociedade Portuguesa de Ginecologia',
+    short_name: 'SPG',
     description: 'Construção da rede Carris Metropolitana',
     start_url: '/',
     theme_color: '#ffffff',

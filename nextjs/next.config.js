@@ -7,7 +7,7 @@ module.exports = {
     return [
       {
         source: '/',
-        destination: '/dashboard',
+        destination: '/frontend',
         permanent: true,
       },
     ];

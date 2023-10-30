@@ -1,0 +1,26 @@
+/* * */
+/* CONTAINER */
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 25px;
+}
+
+/* * */
+/* LINK */
+
+.link {
+  font-size: 16px;
+  line-height: 1;
+  color: var(--spg-brand-1);
+  padding: 4px 0;
+  border-bottom: 2px solid transparent;
+  transition: all 200ms ease;
+}
+
+.link:hover {
+  border-bottom-color: var(--spg-brand-1);
+}

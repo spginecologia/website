@@ -1,7 +1,7 @@
 .spinner {
   border-style: solid;
-  border-color: var(--gray3);
-  border-top-color: var(--gray6);
+  border-color: var(--spg-brand-1);
+  border-top-color: var(--spg-support-3);
   border-radius: 999px;
   animation: spin 1s linear infinite;
 }

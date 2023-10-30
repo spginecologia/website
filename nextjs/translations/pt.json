@@ -1,4 +1,54 @@
 {
+    "AppHeaderMenu": {
+        "sociedade": {
+            "label": "Sociedade"
+        },
+        "seccoes": {
+            "label": "Secções"
+        },
+        "nucleos": {
+            "label": "Núcleos"
+        },
+        "noticias": {
+            "label": "Notícias"
+        },
+        "agenda": {
+            "label": "Agenda"
+        },
+        "premio": {
+            "label": "Prémio SPG"
+        }
+    },
+    "AppHeaderAcademia": {
+        "home": {
+            "label": "Home"
+        },
+        "videos": {
+            "label": "Vídeos"
+        },
+        "videos_new": {
+            "label": "Submeter Vídeo"
+        },
+        "consensos": {
+            "label": "Consensos"
+        },
+        "publicacoes": {
+            "label": "Publicações"
+        },
+        "courses": {
+            "label": "Palestras e Cursos"
+        },
+        "bolsa": {
+            "label": "Bolsa de Investigação"
+        },
+        "pesquisa": {
+            "label": "Pesquisa por Tópicos"
+        }
+    },
+    "none-1": {},
+    "none-2": {},
+    "none-3": {},
+    "none-4": {},
     "auth": {
         "signin": {
             "submit": "Sign In"

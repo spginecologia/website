@@ -1,21 +1,33 @@
-import { useSession } from 'next-auth/react';
-import styles from './AppHeader.module.css';
-import AppOptions from '../AppOptions/AppOptions';
-import { useState } from 'react';
+'use client';
 
-const greetings = ['Olá', 'Hi', 'Hey', 'Oi', 'Hallo', 'Привіт', 'Ciao', 'Hej'];
+/* * */
+
+import styles from './AppHeader.module.css';
+import AppHeaderMenu from '@/components/AppHeaderMenu/AppHeaderMenu';
+import AppHeaderLogo from '@/components/AppHeaderLogo/AppHeaderLogo';
+import AppHeaderBreadcrumbs from '@/components/AppHeaderBreadcrumbs/AppHeaderBreadcrumbs';
+import AppHeaderAcademia from '@/components/AppHeaderAcademia/AppHeaderAcademia';
+import AppHeaderUser from '@/components/AppHeaderUser/AppHeaderUser';
+
+/* * */
 
 export default function AppHeader() {
-  //
-  const { data: session } = useSession();
-
-  const [drawnGreeting] = useState(greetings[(greetings.length * Math.random()) | 0]);
-
   return (
     <div className={styles.container}>
-      <p className={styles.greeting}>{session?.user?.name ? `${drawnGreeting} ${session?.user?.name}` : '• • •'}</p>
-      <div className={styles.options}>
-        <AppOptions />
+      <div className={styles.primaryWrapper}>
+        <div className={styles.primary}>
+          <AppHeaderLogo />
+          <AppHeaderMenu />
+          <div className={styles.buttons}>
+            <AppHeaderAcademia />
+            <AppHeaderUser />
+          </div>
+        </div>
+      </div>
+      <div className={styles.secondaryWrapper}>
+        <div className={styles.secondary}>
+          <AppHeaderBreadcrumbs />
+        </div>
       </div>
     </div>
   );

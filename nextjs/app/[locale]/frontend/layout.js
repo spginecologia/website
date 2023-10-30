@@ -1,7 +1,6 @@
 'use client';
 
 import 'dayjs/locale/pt';
-import { MapProvider } from 'react-map-gl/maplibre';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import AppWrapper from '@/components/AppWrapper/AppWrapper';
@@ -18,9 +17,5 @@ export default function Layout({ children }) {
     },
   });
 
-  return (
-    <MapProvider>
-      <AppWrapper>{children}</AppWrapper>
-    </MapProvider>
-  );
+  return <AppWrapper>{children}</AppWrapper>;
 }

@@ -16,7 +16,7 @@ export default async function LocaleLayout({ children, params: { locale } }) {
 
   //updateInterval={1}
   return (
-    <NextIntlClientProvider locale={locale} messages={messages} timeZone='Europe/Lisbon' now={Date.now()}>
+    <NextIntlClientProvider locale={locale} messages={messages} timeZone="Europe/Lisbon" now={Date.now()}>
       {children}
     </NextIntlClientProvider>
   );

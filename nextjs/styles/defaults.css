@@ -1,12 +1,45 @@
 :root {
+  /* * */
+  /* COLORS */
+
+  /* BRAND */
+  --spg-brand-1: #a0285a;
+  --spg-brand-2: #b46996;
+  --spg-brand-3: #f5cdcd;
+  /* SUPPORT */
+  --spg-support-1: #870f50;
+  --spg-support-2: #64003c;
+  --spg-support-3: #ebe9e6;
+  --spg-support-4: #a09696;
+  --spg-support-5: #645a69;
+  /* REFERENCE */
+  --color-reference-0: #ffffff;
+  --color-reference-1: #000000;
+
+  /* * */
+  /* DIMENSIONS */
+
+  /* APP WIDTH */
+  --app-width: 1250px;
+  --app-padding: 30px;
   /* SIZES */
   --size-xs: 5px;
   --size-sm: 10px;
   --size-md: 15px;
   --size-lg: 25px;
+  --size-xl: 50px;
 
+  /* * */
   /* FONTS */
+
+  /* SIZES */
   --font-sm: 12px;
   --font-md: 14px;
   --font-lg: 18px;
+}
+
+html * {
+  font-family: lato, sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
