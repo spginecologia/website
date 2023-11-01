@@ -26,14 +26,14 @@ export default function PatternCard({ _id, onClick }) {
   return patternData ? (
     <div className={styles.container} onClick={() => onClick(_id)}>
       <div className={styles.routeInfo}>
-        <Text size='subtitle' style='muted'>
+        <Text size="subtitle" style="muted">
           {patternData.code || '...'}
         </Text>
-        <Text size='title' style={!patternData.headsign && 'untitled'}>
+        <Text size="title" style={!patternData.headsign && 'untitled'}>
           {patternData.headsign ? patternData.headsign : t('untitled')}
         </Text>
       </div>
-      <IconChevronRight size='20px' />
+      <IconChevronRight size="20px" />
     </div>
   ) : (
     <div className={styles.loading}>

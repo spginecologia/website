@@ -42,11 +42,7 @@ export default function HCalendarToggle({ date, dateObj, activeDates = [], onTog
           <Text size="h4">Notas sobre esta Data: {dateObj.notes}</Text>
         </SimpleGrid>
       </Modal>
-      <div
-        className={`${styles.container} ${readOnly && styles.readOnly} ${styles[`period${dateObj.period}`]} ${dateObj.is_holiday && styles.isHoliday} ${dateObj.notes && styles.hasNote} ${isActive && styles.isActive}`}
-        onClick={handleClick}
-        onContextMenu={handleContextMenu}
-      >
+      <div className={`${styles.container} ${readOnly && styles.readOnly} ${styles[`period${dateObj.period}`]} ${dateObj.is_holiday && styles.isHoliday} ${dateObj.notes && styles.hasNote} ${isActive && styles.isActive}`} onClick={handleClick} onContextMenu={handleContextMenu}>
         {dayString}
       </div>
     </>

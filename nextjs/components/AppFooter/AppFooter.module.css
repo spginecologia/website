@@ -1,0 +1,48 @@
+/* * */
+/* CONTAINER */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--spg-brand-2);
+}
+
+/* * */
+/* PRIMARY */
+
+.primaryWrapper {
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.primary {
+  display: grid;
+  grid-template-columns: 200px 1fr minmax(200px, auto);
+  align-items: flex-start;
+  justify-content: stretch;
+  gap: 75px;
+  width: 100%;
+  max-width: var(--app-width);
+  padding: 50px var(--app-padding);
+  margin: auto;
+}
+
+/* * */
+/* SECONDARY */
+
+.secondaryWrapper {
+  width: 100%;
+}
+
+.secondary {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  width: 100%;
+  max-width: var(--app-width);
+  padding: 20px var(--app-padding);
+  margin: auto;
+}

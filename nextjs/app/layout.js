@@ -13,7 +13,6 @@ import '@mantine/notifications/styles.css';
 /* * */
 
 import Providers from './providers';
-import { ColorSchemeScript } from '@mantine/core';
 
 /* * */
 
@@ -29,7 +28,6 @@ export default function RootLayout({ children }) {
   return (
     <html>
       <head>
-        <ColorSchemeScript />
         <link rel="stylesheet" href="https://use.typekit.net/xgs1heq.css" />
       </head>
       <body>

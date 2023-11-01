@@ -1,0 +1,55 @@
+/* * */
+/* CONTAINER */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.05);
+  text-align: left;
+  padding: 20px;
+  border-radius: 2px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.05);
+}
+
+/* * */
+/* HEADER, TITLE & SUBTITLE */
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.title {
+  font-family: 'lemonde-journal';
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.subtitle {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+/* * */
+/* FORM */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* * */
+/* INPUTS */
+
+.input {
+  font-size: 20px;
+  outline: none;
+}

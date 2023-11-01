@@ -15,12 +15,19 @@
   /* REFERENCE */
   --color-reference-0: #ffffff;
   --color-reference-1: #000000;
+  /* STATE */
+  --color-state-success: #000000;
+  --color-state-success-background: rgba(0, 0, 0, 0.25);
+  --color-state-warning: #ffffff;
+  --color-state-warning-background: rgba(0, 0, 0, 0.25);
+  --color-state-error: #b41e00;
+  --color-state-error-background: rgba(180, 30, 0, 0.15);
 
   /* * */
   /* DIMENSIONS */
 
   /* APP WIDTH */
-  --app-width: 1250px;
+  --app-width: 1300px;
   --app-padding: 30px;
   /* SIZES */
   --size-xs: 5px;

@@ -1,7 +1,7 @@
 'use client';
 
 import useSWR from 'swr';
-import Pannel from '@/components/Pannel/Pannel';
+import Pannel from '@/components/Panel/Panel';
 import Text from '@/components/Text/Text';
 import parseDate from '@/services/parseDate';
 import { useTranslations } from 'next-intl';
@@ -221,16 +221,7 @@ export default function ExportFileForm() {
 
       <Section>
         <SimpleGrid cols={2}>
-          <DatePickerInput
-            label={t('form.feed_start_date.label')}
-            description={t('form.feed_start_date.description')}
-            placeholder={t('form.feed_start_date.placeholder')}
-            value={selectedFeedStartDate}
-            onChange={setSelectedFeedStartDate}
-            disabled={!selectedAgencyId}
-            dropdownType="modal"
-            clearable
-          />
+          <DatePickerInput label={t('form.feed_start_date.label')} description={t('form.feed_start_date.description')} placeholder={t('form.feed_start_date.placeholder')} value={selectedFeedStartDate} onChange={setSelectedFeedStartDate} disabled={!selectedAgencyId} dropdownType="modal" clearable />
           <DatePickerInput
             label={t('form.feed_end_date.label')}
             description={t('form.feed_end_date.description')}
@@ -304,11 +295,7 @@ export default function ExportFileForm() {
       <Divider />
 
       <Section>
-        <Button
-          onClick={handleStartExport}
-          loading={isCreatingExport}
-          disabled={!selectedAgencyId || !selectedFeedStartDate || !selectedFeedEndDate || (shouldAdjustCalendars && (!selectedCalendarsStartDate || !selectedCalendarsEndDate)) || selectedStopSequenceStart.length === 0}
-        >
+        <Button onClick={handleStartExport} loading={isCreatingExport} disabled={!selectedAgencyId || !selectedFeedStartDate || !selectedFeedEndDate || (shouldAdjustCalendars && (!selectedCalendarsStartDate || !selectedCalendarsEndDate)) || selectedStopSequenceStart.length === 0}>
           {t('operations.start.label')}
         </Button>
       </Section>

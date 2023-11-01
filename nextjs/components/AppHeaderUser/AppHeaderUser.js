@@ -6,14 +6,14 @@ import styles from './AppHeaderUser.module.css';
 import Link from 'next-intl/link';
 import { useTranslations } from 'next-intl';
 import { useSession } from 'next-auth/react';
-import { IconBrandYoutube, IconBuildingCottage } from '@tabler/icons-react';
+import { IconUserCircle, IconWallet } from '@tabler/icons-react';
 import Loader from '@/components/Loader/Loader';
 
 /* * */
 
 const PROFILE_PAGES = [
-  { key: 'home', path: '/home', icon: <IconBuildingCottage size={20} /> },
-  { key: 'videos', path: '/videos', icon: <IconBrandYoutube size={22} /> },
+  { key: 'account', path: '/account', icon: <IconUserCircle size={24} /> },
+  { key: 'payments', path: '/payments', icon: <IconWallet size={24} /> },
 ];
 
 /* * */
@@ -27,19 +27,27 @@ export default function AppHeaderUser() {
   const t = useTranslations('AppHeaderUser');
   const { status: sessionStatus, data: sessionData } = useSession();
 
-  console.log(sessionStatus);
-
   //
-  // A. Render components
+  // B. Render components
 
   return (
     <div className={styles.container}>
       {sessionStatus === 'loading' && <Loader size={20} visible full />}
       {sessionStatus === 'authenticated' && (
-        <Link href="/profile" className={styles.target}>
-          {sessionData?.user?.title && <span className={styles.userTitle}>{sessionData?.user?.title}</span>}
-          {sessionData?.user?.name && <span className={styles.userTitle}>{sessionData?.user?.name.substring(0, 10)}</span>}
-        </Link>
+        <>
+          <Link href="/account" className={styles.target}>
+            {sessionData?.user?.title && <span className={styles.userTitle}>{sessionData?.user?.title}</span>}
+            {sessionData?.user?.name && <span className={styles.userTitle}>{sessionData?.user?.name.substring(0, 12)}</span>}
+          </Link>
+          <div className={styles.dropdown}>
+            {PROFILE_PAGES.map((item) => (
+              <Link key={item.key} href={item.path} className={styles.dropdownLink}>
+                <span className={styles.dropdownLinkIcon}>{item.icon}</span>
+                <span className={styles.dropdownLinkLabel}>{t(`${item.key}.label`)}</span>
+              </Link>
+            ))}
+          </div>
+        </>
       )}
     </div>
   );

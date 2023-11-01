@@ -5,7 +5,7 @@ import { styled } from '@stitches/react';
 import { Checkbox, ActionIcon, Flex, Stack, Text, Code, Button, Tooltip, SimpleGrid } from '@mantine/core';
 import { openConfirmModal } from '@mantine/modals';
 import { IconCloudUpload, IconX, IconTrash, IconCircleCheckFilled, IconAlertTriangleFilled, IconRotateClockwise2 } from '@tabler/icons-react';
-import Pannel from '../Pannel/Pannel';
+import Pannel from '../Panel/Panel';
 import HeaderTitle from '../lists/HeaderTitle';
 
 const TableRow = styled('div', {
@@ -118,7 +118,7 @@ export default function BulkImportTable({ controller }) {
       centered: true,
       closeOnClickOutside: true,
       children: (
-        <Flex direction='column'>
+        <Flex direction="column">
           <Text>Se uma shape com o mesmo ID já existir, será atualizada com os pontos desta nova importação. Se não existir, então será criada uma nova shape.</Text>
           <Code style={{ fontSize: '14px' }}>code: {row.item.code}</Code>
           <Code style={{ fontSize: '14px' }}>distance: {row.item.distance}</Code>
@@ -210,7 +210,7 @@ export default function BulkImportTable({ controller }) {
     return (
       <TableBodyRow checked={isThisRowChecked}>
         <TableCellBody>
-          <Checkbox aria-label='Selecionar linha' checked={isThisRowChecked} onChange={() => handleCheckSingleRow(row.row_id)} transitionDuration={0} />
+          <Checkbox aria-label="Selecionar linha" checked={isThisRowChecked} onChange={() => handleCheckSingleRow(row.row_id)} transitionDuration={0} />
         </TableCellBody>
         <TableCellBody onClick={() => handleCheckSingleRow(row.row_id)} style={{ cursor: 'pointer' }}>
           {row.item.code || '-'}
@@ -219,11 +219,11 @@ export default function BulkImportTable({ controller }) {
         <TableCellBody>{row.item.points.length}</TableCellBody>
         <TableCellBody>
           <Flex>
-            <ActionIcon size='lg' color='blue' onClick={() => handleUploadSingleRow(row)}>
-              <IconCloudUpload size='20px' />
+            <ActionIcon size="lg" color="blue" onClick={() => handleUploadSingleRow(row)}>
+              <IconCloudUpload size="20px" />
             </ActionIcon>
-            <ActionIcon size='lg' color='red' onClick={() => handleDeleteSingleRow(row)}>
-              <IconTrash size='20px' />
+            <ActionIcon size="lg" color="red" onClick={() => handleDeleteSingleRow(row)}>
+              <IconTrash size="20px" />
             </ActionIcon>
           </Flex>
         </TableCellBody>
@@ -235,7 +235,7 @@ export default function BulkImportTable({ controller }) {
     return (
       <TableBodyRow>
         <TableCellBody>
-          <ActionIcon size='lg' color='blue' loading />
+          <ActionIcon size="lg" color="blue" loading />
         </TableCellBody>
         <TableCellBody>{row.item.code || '-'}</TableCellBody>
         <TableCellBody>{row.item.distance || 0} km</TableCellBody>
@@ -249,8 +249,8 @@ export default function BulkImportTable({ controller }) {
     return (
       <TableBodyRow uploaded>
         <TableCellBody>
-          <ActionIcon size='sm' color='green' variant='transparent' aria-label='Shape uploaded'>
-            <IconCircleCheckFilled size='20px' />
+          <ActionIcon size="sm" color="green" variant="transparent" aria-label="Shape uploaded">
+            <IconCircleCheckFilled size="20px" />
           </ActionIcon>
         </TableCellBody>
         <TableCellBody>{row.item.code || '-'}</TableCellBody>
@@ -265,17 +265,17 @@ export default function BulkImportTable({ controller }) {
     return (
       <TableBodyRow error>
         <TableCellBody>
-          <ActionIcon size='sm' color='red' variant='transparent' aria-label='Error uploading'>
-            <IconAlertTriangleFilled size='20px' />
+          <ActionIcon size="sm" color="red" variant="transparent" aria-label="Error uploading">
+            <IconAlertTriangleFilled size="20px" />
           </ActionIcon>
         </TableCellBody>
         <TableCellBody>{row.item.code || '-'}</TableCellBody>
         <TableCellBody>{row.item.distance || 0} km</TableCellBody>
         <TableCellBody>{row.item.points.length}</TableCellBody>
         <TableCellBody>
-          <Tooltip label='Tentar Novamente' position='left' color='gray' withArrow>
-            <ActionIcon size='lg' variant='default' aria-label='Shape uploaded'>
-              <IconCloudUpload size='20px' />
+          <Tooltip label="Tentar Novamente" position="left" color="gray" withArrow>
+            <ActionIcon size="lg" variant="default" aria-label="Shape uploaded">
+              <IconCloudUpload size="20px" />
             </ActionIcon>
           </Tooltip>
         </TableCellBody>
@@ -290,18 +290,18 @@ export default function BulkImportTable({ controller }) {
     <Pannel
       header={
         <>
-          <ActionIcon size='lg' onClick={handleReset}>
-            <IconX size='20px' />
+          <ActionIcon size="lg" onClick={handleReset}>
+            <IconX size="20px" />
           </ActionIcon>
-          <HeaderTitle text='Import Shapes' />
+          <HeaderTitle text="Import Shapes" />
         </>
       }
       footer={
-        <SimpleGrid cols={2} w='100%'>
+        <SimpleGrid cols={2} w="100%">
           <Button onClick={handleUploadBulkInit} disabled={!checkedRows.length}>
             Iniciar Importação de {checkedRows.length} shapes
           </Button>
-          <Button color='red' onClick={handleReset}>
+          <Button color="red" onClick={handleReset}>
             Cancelar e Limpar Lista
           </Button>
         </SimpleGrid>
@@ -309,13 +309,7 @@ export default function BulkImportTable({ controller }) {
     >
       <TableHeader>
         <TableCellHeader>
-          <Checkbox
-            aria-label='Selecionar todas'
-            checked={checkedRows.length === controller.allRows.length}
-            indeterminate={checkedRows.length > 0 && checkedRows.length !== controller.allRows.length}
-            onChange={handleCheckAllRows}
-            transitionDuration={0}
-          />
+          <Checkbox aria-label="Selecionar todas" checked={checkedRows.length === controller.allRows.length} indeterminate={checkedRows.length > 0 && checkedRows.length !== controller.allRows.length} onChange={handleCheckAllRows} transitionDuration={0} />
         </TableCellHeader>
         <TableCellHeader>code</TableCellHeader>
         <TableCellHeader>Extensão</TableCellHeader>

@@ -1,5 +1,3 @@
-'use client';
-
 /* * */
 
 import Link from 'next-intl/link';
@@ -10,12 +8,12 @@ import { IconSearch } from '@tabler/icons-react';
 /* * */
 
 const MENU_PAGES = [
-  { key: 'sociedade', path: '/sociedade' },
-  { key: 'seccoes', path: '/seccoes' },
-  { key: 'nucleos', path: '/nucleos' },
-  { key: 'noticias', path: '/noticias' },
+  { key: 'society', path: '/society' },
+  { key: 'sections', path: '/sections' },
+  { key: 'workgroups', path: '/workgroups' },
+  { key: 'news', path: '/news' },
   { key: 'agenda', path: '/agenda' },
-  { key: 'premio', path: '/premio' },
+  { key: 'award', path: '/award' },
 ];
 
 /* * */
@@ -38,7 +36,7 @@ export default function AppHeaderMenu() {
           {t(`${item.key}.label`)}
         </Link>
       ))}
-      <Link href={'/pesquisa'} className={styles.link}>
+      <Link href={'/academia/topics'} className={styles.search}>
         <IconSearch size={18} />
       </Link>
     </div>

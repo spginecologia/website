@@ -1,5 +1,3 @@
-'use client';
-
 /* * */
 
 import styles from './AppHeaderAcademia.module.css';
@@ -11,14 +9,14 @@ import { IconBooks, IconBrandYoutube, IconBuildingCottage, IconBulb, IconFileChe
 /* * */
 
 const ACADEMIA_PAGES = [
-  { key: 'home', path: '/home', icon: <IconBuildingCottage size={20} /> },
-  { key: 'videos', path: '/videos', icon: <IconBrandYoutube size={22} /> },
-  { key: 'videos_new', path: '/videos/new', icon: <IconVideoPlus size={24} /> },
-  { key: 'consensos', path: '/consensos', icon: <IconFileCheck size={24} /> },
-  { key: 'publicacoes', path: '/publicacoes', icon: <IconBooks size={24} /> },
-  { key: 'courses', path: '/courses', icon: <IconSchool size={24} /> },
-  { key: 'bolsa', path: '/bolsa', icon: <IconBulb size={24} /> },
-  { key: 'pesquisa', path: '/pesquisa', icon: <IconListSearch size={24} /> },
+  { key: 'home', path: '/academia', icon: <IconBuildingCottage size={20} /> },
+  { key: 'videos', path: '/academia/videos', icon: <IconBrandYoutube size={22} /> },
+  { key: 'videos_new', path: '/academia/videos/new', icon: <IconVideoPlus size={24} /> },
+  { key: 'guidelines', path: '/academia/guidelines', icon: <IconFileCheck size={24} /> },
+  { key: 'publications', path: '/academia/publications', icon: <IconBooks size={24} /> },
+  { key: 'courses', path: '/academia/courses', icon: <IconSchool size={24} /> },
+  { key: 'grant', path: '/academia/grant', icon: <IconBulb size={24} /> },
+  { key: 'topics', path: '/academia/topics', icon: <IconListSearch size={24} /> },
 ];
 
 /* * */
@@ -32,7 +30,7 @@ export default function AppHeaderAcademia() {
   const t = useTranslations('AppHeaderAcademia');
 
   //
-  // A. Render components
+  // B. Render components
 
   return (
     <div className={styles.container}>

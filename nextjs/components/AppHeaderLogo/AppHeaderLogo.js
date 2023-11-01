@@ -8,7 +8,7 @@ import { SpgLogoCompact } from '@/assets/spg';
 
 export default function AppHeaderLogo() {
   return (
-    <Link href={'/frontend'} className={styles.container}>
+    <Link href="/frontend" className={styles.container}>
       <SpgLogoCompact />
     </Link>
   );

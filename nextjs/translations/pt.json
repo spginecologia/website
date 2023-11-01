@@ -1,21 +1,21 @@
 {
     "AppHeaderMenu": {
-        "sociedade": {
+        "society": {
             "label": "Sociedade"
         },
-        "seccoes": {
+        "sections": {
             "label": "Secções"
         },
-        "nucleos": {
+        "workgroups": {
             "label": "Núcleos"
         },
-        "noticias": {
+        "news": {
             "label": "Notícias"
         },
         "agenda": {
             "label": "Agenda"
         },
-        "premio": {
+        "award": {
             "label": "Prémio SPG"
         }
     },
@@ -29,44 +29,114 @@
         "videos_new": {
             "label": "Submeter Vídeo"
         },
-        "consensos": {
+        "guidelines": {
             "label": "Consensos"
         },
-        "publicacoes": {
+        "publications": {
             "label": "Publicações"
         },
         "courses": {
             "label": "Palestras e Cursos"
         },
-        "bolsa": {
+        "grant": {
             "label": "Bolsa de Investigação"
         },
-        "pesquisa": {
+        "topics": {
             "label": "Pesquisa por Tópicos"
         }
+    },
+    "AppHeaderUser": {
+        "account": {
+            "label": "Conta SPG"
+        },
+        "payments": {
+            "label": "Pagamentos"
+        }
+    },
+    "AppFooterNewsletter": {
+        "title": "Newsletter",
+        "subtitle": "Subscreva a newsletter e fique a par das nossas atualizações.",
+        "form": {
+            "name": {
+                "label": "Nome",
+                "placeholder": "Nome"
+            },
+            "email": {
+                "label": "Email",
+                "placeholder": "Email"
+            },
+            "submit": {
+                "label": "Subscrever"
+            }
+        }
+    },
+    "AppFooterContacts": {
+        "address": {
+            "title": "Sede Social"
+        }
+    },
+    "AppFooterLegal": {
+        "credits": "Desenvolvido por Joao.Earth",
+        "copyright": "Sociedade Portuguesa de Ginecologia © {year}",
+        "brand_assets": "Brand Assets",
+        "privacy": "Privacidade"
+    },
+    "AuthExplorer": {},
+    "AuthExplorerSignIn": {
+        "title": "Login",
+        "subtitle": "Se precisar de ajuda contacte-nos.",
+        "email": {
+            "label": "Email",
+            "placeholder": "email@exemplo.pt"
+        },
+        "submit": {
+            "label": "Iniciar Sessão"
+        }
+    },
+    "AuthExplorerSignInVerify": {
+        "title": "Login",
+        "subtitle": "Por favor verifique a sua caixa de email.",
+        "retry": "Não recebi o email de login"
+    },
+    "AuthExplorerSignInError": {
+        "title": "Login",
+        "retry": "Tentar Novamente",
+        "error_type": {
+            "Configuration": {
+                "message": "Existe um problema com a configuração do servidor",
+                "action": "Por favor entre em contacto connosco."
+            },
+            "AccessDenied": {
+                "message": "Este email não existe nos nossos registos",
+                "action": "Tem a certeza que é com este email que está registado na SPG?"
+            },
+            "Verification": {
+                "message": "O login expirou ou foi utilizado noutro browser",
+                "action": "Por favor faça login novamente."
+            },
+            "unknown": {
+                "message": "Erro Desconhecido",
+                "action": "Por favor entre em contacto connosco."
+            }
+        }
+    },
+    "AccountExplorer": {},
+    "AccountExplorerProfile": {
+        "title": "Perfil de Sócio",
+        "subtitle": "Todas as suas informações"
+    },
+    "AccountExplorerPayments": {
+        "title": "Conta Corrente",
+        "subtitle": "Todos os seus pagamentos"
+    },
+    "AccountExplorerVideos": {
+        "title": "Videos",
+        "subtitle": "Todos os seus videos"
     },
     "none-1": {},
     "none-2": {},
     "none-3": {},
     "none-4": {},
-    "auth": {
-        "signin": {
-            "submit": "Sign In"
-        },
-        "verify": {
-            "instruction": "Please check your email",
-            "submit": "I did not receive my email"
-        },
-        "error": {
-            "submit": "Try Again",
-            "type": {
-                "configuration": "There is a problem with the server configuration.",
-                "access-denied": "You cannot login with this email.",
-                "verification": "The token has expired or has already been used.",
-                "unknown": "Unkown Issue"
-            }
-        }
-    },
     "agencies": {
         "untitled": "Untitled Agency",
         "list": {

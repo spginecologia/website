@@ -26,14 +26,14 @@ export default function RouteCard({ _id, onClick }) {
   return routeData ? (
     <div className={styles.container} onClick={() => onClick(_id)}>
       <div className={styles.routeInfo}>
-        <Text size='subtitle' style='muted'>
+        <Text size="subtitle" style="muted">
           {routeData.code || '...'}
         </Text>
-        <Text size='title' style={!routeData.name && 'untitled'}>
+        <Text size="title" style={!routeData.name && 'untitled'}>
           {routeData.name ? routeData.name : t('untitled')}
         </Text>
       </div>
-      <IconChevronRight size='20px' />
+      <IconChevronRight size="20px" />
     </div>
   ) : (
     <div className={styles.loading}>

@@ -5,7 +5,7 @@ import Text from '@/components/Text/Text';
 import { useTranslations } from 'next-intl';
 import { IconCloudDownload } from '@tabler/icons-react';
 import { Divider } from '@mantine/core';
-import Pannel from '@/components/Pannel/Pannel';
+import Pannel from '@/components/Panel/Panel';
 import { ExportResultWaiting, ExportResultInProgress, ExportResultCompleted, ExportResultError } from '@/components/ExportResult/ExportResult';
 import { Section } from '@/components/Layouts/Layouts';
 import NoDataLabel from '../NoDataLabel/NoDataLabel';
@@ -32,14 +32,14 @@ export default function ExportedFilesList() {
       header={
         <>
           <IconCloudDownload size={22} />
-          <Text size='h2' full>
+          <Text size="h2" full>
             {t('title')}
           </Text>
         </>
       }
     >
       <Section>
-        <Text size='h4' color='muted'>
+        <Text size="h4" color="muted">
           {t('description')}
         </Text>
       </Section>

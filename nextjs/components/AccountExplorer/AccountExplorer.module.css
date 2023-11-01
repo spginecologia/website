@@ -1,0 +1,18 @@
+/* * */
+/* CONTAINER */
+
+.container {
+  width: 100%;
+  min-height: 500px;
+  background-color: var(--spg-support-3);
+}
+
+/* * */
+/* GRID */
+
+.grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}

@@ -1,0 +1,23 @@
+/* * */
+/* CONTAINER */
+
+.container {
+  display: flex;
+  width: 100%;
+}
+
+.firstSection {
+  padding-top: 150px;
+}
+
+/* * */
+/* INNER WRAPPER */
+
+.innerWrapper {
+  display: flex;
+  width: 100%;
+  max-width: var(--app-width);
+  padding: 0 var(--app-padding);
+  margin: auto;
+  min-height: 300px;
+}

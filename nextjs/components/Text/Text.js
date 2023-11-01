@@ -1,5 +1,29 @@
+/* * */
+
 import styles from './Text.module.css';
 
-export default function Text({ size = 'md', style = 'regular', color = 'default', full, children }) {
-  return <div className={`${styles.text} ${styles[size]} ${styles[style]} ${styles[color]} ${full && styles.fullWidth}`}>{children}</div>;
+/* * */
+
+export default function Text({ variant = 'default', text = '', ...props }) {
+  switch (variant) {
+    default:
+    case 'default':
+      return (
+        <p className={`${styles.text} ${styles.default}`} {...props}>
+          {text}
+        </p>
+      );
+    case 'muted':
+      return (
+        <p className={`${styles.text} ${styles.muted}`} {...props}>
+          {text}
+        </p>
+      );
+    case 'error':
+      return (
+        <p className={`${styles.text} ${styles.error}`} {...props}>
+          {text}
+        </p>
+      );
+  }
 }

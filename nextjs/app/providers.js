@@ -29,7 +29,7 @@ export default function Providers({ children, session }) {
   return (
     <SessionProvider session={session} refetchInterval={15}>
       <SWRConfig value={swrOptions}>
-        <MantineProvider defaultColorScheme="auto">
+        <MantineProvider>
           <DatesProvider settings={{ locale: 'pt' }}>
             <Notifications />
             <ModalsProvider>{children}</ModalsProvider>
