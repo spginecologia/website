@@ -1,0 +1,30 @@
+/* * */
+/* CONTAINER */
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-reference-0);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+}
+
+/* * */
+/* HEADER */
+
+.header {
+  width: 100%;
+  padding: 10px;
+  border-bottom: 1px solid var(--spg-support-3);
+}
+
+/* * */
+/* ITEMS */
+
+.items {
+  width: 100%;
+  overflow-y: auto;
+  border-bottom: 1px solid var(--spg-support-3);
+}

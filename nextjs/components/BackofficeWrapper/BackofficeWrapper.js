@@ -8,8 +8,10 @@ import BackofficeSidebar from '@/components/BackofficeSidebar/BackofficeSidebar'
 export default function BackofficeWrapper({ children }) {
   return (
     <div className={styles.container}>
-      <BackofficeSidebar />
-      <div className={styles.innerWrapper}>{children}</div>
+      <div className={styles.sidebarWrapper}>
+        <BackofficeSidebar />
+      </div>
+      <div className={styles.contentWrapper}>{children}</div>
     </div>
   );
 }

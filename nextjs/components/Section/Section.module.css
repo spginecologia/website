@@ -20,5 +20,4 @@
   max-width: var(--app-width);
   padding: 0 var(--app-padding);
   margin: auto;
-  min-height: 300px;
 }

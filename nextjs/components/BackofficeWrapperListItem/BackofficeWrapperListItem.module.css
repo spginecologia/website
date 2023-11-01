@@ -8,13 +8,13 @@
   gap: var(--size-md);
   width: 100%;
   background-color: var(--color-reference-0);
-  border-bottom: 1px solid var(--color-gray-2);
+  border-bottom: 1px solid var(--spg-support-3);
   padding: var(--size-md);
   cursor: pointer;
 }
 
 .container:hover {
-  background-color: var(--color-gray-0);
+  background-color: var(--spg-brand-3);
 }
 
 .container:active {

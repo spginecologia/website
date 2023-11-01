@@ -1,7 +1,7 @@
 import { useParams } from 'next/navigation';
 import { useRouter } from 'next-intl/client';
 import { useTranslations } from 'next-intl';
-import BaseListItem from '@/components/BaseListItem/BaseListItem';
+import BaseListItem from '@/components/BackofficeWrapperListItem/BackofficeWrapperListItem';
 import Text from '@/components/Text/Text';
 
 export default function ListItem({ _id, name }) {

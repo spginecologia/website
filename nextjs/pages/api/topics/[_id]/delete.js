@@ -2,7 +2,7 @@
 
 import checkAuthentication from '@/services/checkAuthentication';
 import mongodb from '@/services/mongodb';
-import { UserModel } from '@/schemas/User/model';
+import { TopicModel } from '@/schemas/Topic/model';
 
 /* * */
 
@@ -10,10 +10,10 @@ export default async function handler(req, res) {
   //
 
   // 1.
-  // Refuse request if not GET
+  // Refuse request if not DELETE
 
-  if (req.method != 'GET') {
-    await res.setHeader('Allow', ['GET']);
+  if (req.method != 'DELETE') {
+    await res.setHeader('Allow', ['DELETE']);
     return await res.status(405).json({ message: `Method ${req.method} Not Allowed.` });
   }
 
@@ -21,7 +21,7 @@ export default async function handler(req, res) {
   // Check for correct Authentication and valid Permissions
 
   try {
-    await checkAuthentication({ scope: 'users', permission: 'view', req, res });
+    await checkAuthentication({ scope: 'topics', permission: 'delete', req, res });
   } catch (err) {
     console.log(err);
     return await res.status(401).json({ message: err.message || 'Could not verify Authentication.' });
@@ -38,16 +38,15 @@ export default async function handler(req, res) {
   }
 
   // 4.
-  // List all documents
+  // Delete the requested document
 
   try {
-    const allDocuments = await UserModel.find({});
-    const collator = new Intl.Collator('en', { numeric: true, sensitivity: 'base' });
-    const sortedDocuments = allDocuments.sort((a, b) => collator.compare(a.first_name, b.first_name));
-    return await res.status(200).send(sortedDocuments);
+    const deletedDocument = await TopicModel.findOneAndDelete({ _id: { $eq: req.query._id } });
+    if (!deletedDocument) return await res.status(404).json({ message: `Topic with _id: ${req.query._id} not found.` });
+    else return await res.status(200).send(deletedDocument);
   } catch (err) {
     console.log(err);
-    return await res.status(500).json({ message: 'Cannot list Users.' });
+    return await res.status(500).json({ message: 'Cannot delete this Topic.' });
   }
 
   //

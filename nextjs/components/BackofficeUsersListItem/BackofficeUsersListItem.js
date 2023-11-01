@@ -1,12 +1,12 @@
 import { useParams } from 'next/navigation';
 import { useRouter } from 'next-intl/client';
 import { useTranslations } from 'next-intl';
-import BaseListItem from '@/components/BackofficeWrapperListItem/BackofficeWrapperListItem';
+import BackofficeWrapperListItem from '@/components/BackofficeWrapperListItem/BackofficeWrapperListItem';
 import Text from '@/components/Text/Text';
 import Badge from '@/components/Badge/Badge';
 import { Group } from '@mantine/core';
 
-export default function ListItem({ _id, name, email }) {
+export default function BackofficeUsersListItem({ _id, name, email }) {
   //
 
   const router = useRouter();
@@ -15,17 +15,17 @@ export default function ListItem({ _id, name, email }) {
 
   const handleClick = () => {
     if (user_id === _id) return;
-    router.push(`/dashboard/users/${_id}`);
+    router.push(`/admin/users/${_id}`);
   };
 
   return (
-    <BaseListItem onClick={handleClick} isSelected={user_id === _id} withChevron>
+    <BackofficeWrapperListItem onClick={handleClick} isSelected={user_id === _id} withChevron>
       {/* <Text size="title" style={!name && 'untitled'}>
         {name || t('untitled')}
       </Text> */}
       <Group>
         <Badge>{email}</Badge>
       </Group>
-    </BaseListItem>
+    </BackofficeWrapperListItem>
   );
 }

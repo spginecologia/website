@@ -5,8 +5,8 @@
 import { signIn } from 'next-auth/react';
 import { Space } from '@mantine/core';
 import { useForm, yupResolver } from '@mantine/form';
-import { Default as EmailDefault } from '@/schemas/Email/default';
-import { Validation as EmailValidation } from '@/schemas/Email/validation';
+import { SignInDefault } from '@/schemas/SignIn/default';
+import { SignInValidation } from '@/schemas/SignIn/validation';
 import { useTranslations } from 'next-intl';
 import styles from './AuthExplorerSignIn.module.css';
 import Title from '@/components/Title/Title';
@@ -29,8 +29,8 @@ export default function AuthExplorerSignIn() {
 
   const form = useForm({
     clearInputErrorOnChange: true,
-    validate: yupResolver(EmailValidation),
-    initialValues: EmailDefault,
+    validate: yupResolver(SignInValidation),
+    initialValues: SignInDefault,
   });
 
   //

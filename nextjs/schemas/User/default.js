@@ -1,115 +1,65 @@
 /* * */
-/* DOCUMENT TYPE: USER */
-/* Explanation needed. */
-/* * */
 
-/* * */
-/* A. Default Values */
 export const UserDefault = {
-  name: '',
-  email: '',
+  //
+  title: '',
+  first_name: '',
+  last_name: '',
+  full_name: '',
+  birthday: '',
+  //
   phone: '',
-  emailVerified: '',
+  email: '',
+  medical_id: '',
+  //
+  personal_tax_id: '',
+  personal_address_1: '',
+  personal_address_2: '',
+  personal_postal_code: '',
+  personal_city: '',
+  personal_country: '',
+  //
+  billing_tax_id: '',
+  billing_name: '',
+  billing_address_1: '',
+  billing_address_2: '',
+  billing_postal_code: '',
+  billing_city: '',
+  billing_country: '',
+  //
+  primary_workplace: '',
+  secondary_workplace: '',
+  //
+  favorite_sections: [],
+  favorite_topics: [],
+  //
+  send_newsletter: true,
+  send_notifications: true,
+  //
+  registration_date: '',
+  membership_date: '',
   last_active: '',
+  //
+  admin_observations: '',
+  //
   permissions: {
-    // AGENCIES
-    agencies: {
-      view: false,
-      create_edit: false,
-      lock: false,
+    //
+    topics: {
+      create_edit: true,
       delete: false,
     },
-    // EXPORTS
-    exports: {
-      view: false,
-      gtfs_v18: false,
-      gtfs_v29: false,
-      gtfs_v30: false,
-      netex_v1: false,
-      agencies: [],
-    },
-    // USERS
+    //
     users: {
       view: false,
       create_edit: false,
       delete: false,
     },
-    // USERS
-    lines: {
-      view: false,
-      create_edit: false,
-      lock: false,
-      delete: false,
-      agencies: [],
+    //
+    admin: {
+      backoffice: false,
+      debug: false,
     },
-    // TYPOLOGIES
-    typologies: {
-      view: false,
-      create_edit: false,
-      lock: false,
-      delete: false,
-    },
-    // FARES
-    fares: {
-      view: false,
-      create_edit: false,
-      lock: false,
-      delete: false,
-    },
-    // ZONES
-    zones: {
-      view: false,
-      create_edit: false,
-      lock: false,
-      delete: false,
-    },
-    // STOPS
-    stops: {
-      view: false,
-      propose: false,
-      create_edit: false,
-      edit_code: false,
-      lock: false,
-      delete: false,
-      batch_update: false,
-      municipalities: [],
-    },
-    // MUNICIPALITIES
-    municipalities: {
-      view: false,
-      create_edit: false,
-      lock: false,
-      delete: false,
-    },
-    // ALERTS
-    alerts: {
-      view: false,
-      create_edit: false,
-      publish: false,
-      delete: false,
-    },
-    // CALENDARS
-    calendars: {
-      view: false,
-      create_edit: false,
-      lock: false,
-      delete: false,
-    },
-    // DATES
-    dates: {
-      view: false,
-      create_edit: false,
-      delete: false,
-    },
-    // THREADS
-    threads: {
-      view: false,
-      create_edit: false,
-      delete: false,
-    },
-    // CONFIGS
-    configs: {
-      admin: false,
-    },
+    //
   },
+  //
 };

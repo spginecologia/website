@@ -1,7 +1,7 @@
-import styles from './BaseListItem.module.css';
+import styles from './BackofficeWrapperListItem.module.css';
 import { IconChevronRight } from '@tabler/icons-react';
 
-export default function BaseListItem({ children, onClick, isSelected, withChevron, style }) {
+export default function BackofficeWrapperListItem({ children, onClick, isSelected, withChevron, style }) {
   return (
     <div className={`${styles.container} ${isSelected && styles.isSelected}`} onClick={onClick} selected={isSelected} style={style}>
       <div className={styles.wrapper}>{children}</div>

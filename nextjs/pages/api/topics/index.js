@@ -1,8 +1,7 @@
 /* * */
 
-import checkAuthentication from '@/services/checkAuthentication';
 import mongodb from '@/services/mongodb';
-import { UserModel } from '@/schemas/User/model';
+import { TopicModel } from '@/schemas/Topic/model';
 
 /* * */
 
@@ -18,16 +17,6 @@ export default async function handler(req, res) {
   }
 
   // 2.
-  // Check for correct Authentication and valid Permissions
-
-  try {
-    await checkAuthentication({ scope: 'users', permission: 'view', req, res });
-  } catch (err) {
-    console.log(err);
-    return await res.status(401).json({ message: err.message || 'Could not verify Authentication.' });
-  }
-
-  // 3.
   // Connect to MongoDB
 
   try {
@@ -37,17 +26,17 @@ export default async function handler(req, res) {
     return await res.status(500).json({ message: 'MongoDB connection error.' });
   }
 
-  // 4.
+  // 3.
   // List all documents
 
   try {
-    const allDocuments = await UserModel.find({});
+    const allDocuments = await TopicModel.find({});
     const collator = new Intl.Collator('en', { numeric: true, sensitivity: 'base' });
-    const sortedDocuments = allDocuments.sort((a, b) => collator.compare(a.first_name, b.first_name));
+    const sortedDocuments = allDocuments.sort((a, b) => collator.compare(a.title, b.title));
     return await res.status(200).send(sortedDocuments);
   } catch (err) {
     console.log(err);
-    return await res.status(500).json({ message: 'Cannot list Users.' });
+    return await res.status(500).json({ message: 'Cannot list Topics.' });
   }
 
   //

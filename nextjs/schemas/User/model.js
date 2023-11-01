@@ -1,272 +1,186 @@
+/* * */
+
 import mongoose from 'mongoose';
 
 /* * */
-/* DOCUMENT TYPE: USER */
-/* Explanation needed. */
-/* * */
 
-/* * */
-/* A. Mongoose Schema */
-export const UserSchema = new mongoose.Schema(
-  {
-    name: {
+export const UserSchema = new mongoose.Schema({
+  //
+  title: {
+    type: String,
+    maxlength: 10,
+  },
+  first_name: {
+    type: String,
+    maxlength: 25,
+  },
+  last_name: {
+    type: String,
+    maxlength: 25,
+  },
+  full_name: {
+    type: String,
+    maxlength: 150,
+  },
+  birthday: {
+    type: Date,
+  },
+  //
+  email: {
+    type: String,
+    maxlength: 50,
+    unique: true,
+  },
+  phone: {
+    type: String,
+    maxlength: 50,
+  },
+  medical_id: {
+    type: String,
+    maxlength: 10,
+  },
+  //
+  personal_tax_id: {
+    type: String,
+    maxlength: 11,
+  },
+  personal_address_1: {
+    type: String,
+    maxlength: 100,
+  },
+  personal_address_2: {
+    type: String,
+    maxlength: 100,
+  },
+  personal_postal_code: {
+    type: String,
+    maxlength: 10,
+  },
+  personal_city: {
+    type: String,
+    maxlength: 50,
+  },
+  personal_country: {
+    type: String,
+    maxlength: 50,
+  },
+  //
+  billing_tax_id: {
+    type: String,
+    maxlength: 50,
+  },
+  billing_name: {
+    type: String,
+    maxlength: 50,
+  },
+  billing_address_1: {
+    type: String,
+    maxlength: 100,
+  },
+  billing_address_2: {
+    type: String,
+    maxlength: 100,
+  },
+  billing_postal_code: {
+    type: String,
+    maxlength: 10,
+  },
+  billing_city: {
+    type: String,
+    maxlength: 50,
+  },
+  billing_country: {
+    type: String,
+    maxlength: 50,
+  },
+  //
+  primary_workplace: {
+    type: String,
+    maxlength: 100,
+  },
+  secondary_workplace: {
+    type: String,
+    maxlength: 100,
+  },
+  //
+  favorite_sections: [
+    {
       type: String,
-      maxlength: 50,
+      maxlength: 100,
     },
-    email: {
-      type: String,
-      maxlength: 50,
-      unique: true,
+  ],
+  favorite_topics: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Topic',
     },
-    phone: {
-      type: String,
-      maxlength: 50,
+  ],
+  //
+  send_newsletter: {
+    type: Boolean,
+    default: true,
+  },
+  send_notifications: {
+    type: Boolean,
+    default: true,
+  },
+  //
+  registration_date: {
+    type: Date,
+  },
+  membership_date: {
+    type: Date,
+  },
+  last_active: {
+    type: Date,
+  },
+  //
+  admin_observations: {
+    type: String,
+    maxlength: 1000,
+  },
+  //
+  permissions: {
+    //
+    topics: {
+      create_edit: {
+        type: Boolean,
+        default: true,
+      },
+      delete: {
+        type: Boolean,
+        default: false,
+      },
     },
-    last_active: {
-      type: Date,
+    //
+    users: {
+      view: {
+        type: Boolean,
+        default: false,
+      },
+      create_edit: {
+        type: Boolean,
+        default: false,
+      },
+      delete: {
+        type: Boolean,
+        default: false,
+      },
     },
-    permissions: {
-      //
-      // AGENCIES
-      agencies: {
-        view: {
-          type: Boolean,
-        },
-        create_edit: {
-          type: Boolean,
-        },
-        lock: {
-          type: Boolean,
-        },
-        delete: {
-          type: Boolean,
-        },
+    //
+    admin: {
+      backoffice: {
+        type: Boolean,
+        default: false,
       },
-      //
-      // EXPORTS
-      exports: {
-        view: {
-          type: Boolean,
-        },
-        gtfs_v18: {
-          type: Boolean,
-        },
-        gtfs_v29: {
-          type: Boolean,
-        },
-        gtfs_v30: {
-          type: Boolean,
-        },
-        netex_v1: {
-          type: Boolean,
-        },
-        agencies: [
-          {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: 'Agency',
-          },
-        ],
-      },
-      //
-      // USERS
-      users: {
-        view: {
-          type: Boolean,
-        },
-        create_edit: {
-          type: Boolean,
-        },
-        delete: {
-          type: Boolean,
-        },
-      },
-      //
-      // LINES
-      lines: {
-        view: {
-          type: Boolean,
-        },
-        create_edit: {
-          type: Boolean,
-        },
-        lock: {
-          type: Boolean,
-        },
-        delete: {
-          type: Boolean,
-        },
-        agencies: [
-          {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: 'Agency',
-          },
-        ],
-      },
-      //
-      // TYPOLOGIES
-      typologies: {
-        view: {
-          type: Boolean,
-        },
-        create_edit: {
-          type: Boolean,
-        },
-        lock: {
-          type: Boolean,
-        },
-        delete: {
-          type: Boolean,
-        },
-      },
-      //
-      // FARES
-      fares: {
-        view: {
-          type: Boolean,
-        },
-        create_edit: {
-          type: Boolean,
-        },
-        lock: {
-          type: Boolean,
-        },
-        delete: {
-          type: Boolean,
-        },
-      },
-      //
-      // ZONES
-      zones: {
-        view: {
-          type: Boolean,
-        },
-        create_edit: {
-          type: Boolean,
-        },
-        lock: {
-          type: Boolean,
-        },
-        delete: {
-          type: Boolean,
-        },
-      },
-      //
-      // STOPS
-      stops: {
-        view: {
-          type: Boolean,
-        },
-        propose: {
-          type: Boolean,
-        },
-        create_edit: {
-          type: Boolean,
-        },
-        edit_code: {
-          type: Boolean,
-        },
-        lock: {
-          type: Boolean,
-        },
-        delete: {
-          type: Boolean,
-        },
-        batch_update: {
-          type: Boolean,
-        },
-        municipalities: [
-          {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: 'Municipality',
-          },
-        ],
-      },
-      //
-      // MUNICIPALITIES
-      municipalities: {
-        view: {
-          type: Boolean,
-        },
-        create_edit: {
-          type: Boolean,
-        },
-        lock: {
-          type: Boolean,
-        },
-        delete: {
-          type: Boolean,
-        },
-      },
-      //
-      // ALERTS
-      alerts: {
-        view: {
-          type: Boolean,
-        },
-        create_edit: {
-          type: Boolean,
-        },
-        publish: {
-          type: Boolean,
-        },
-        delete: {
-          type: Boolean,
-        },
-      },
-      //
-      // CALENDARS
-      calendars: {
-        view: {
-          type: Boolean,
-        },
-        create_edit: {
-          type: Boolean,
-        },
-        lock: {
-          type: Boolean,
-        },
-        delete: {
-          type: Boolean,
-        },
-      },
-      //
-      // DATES
-      dates: {
-        view: {
-          type: Boolean,
-        },
-        create_edit: {
-          type: Boolean,
-        },
-        delete: {
-          type: Boolean,
-        },
-      },
-      //
-      // THREADS
-      threads: {
-        view: {
-          type: Boolean,
-        },
-        create_edit: {
-          type: Boolean,
-        },
-        delete: {
-          type: Boolean,
-        },
-      },
-      //
-      // CONFIGS
-      configs: {
-        admin: {
-          type: Boolean,
-        },
+      debug: {
+        type: Boolean,
+        default: false,
       },
     },
   },
-  { timestamps: true }
-);
+});
 
 /* * */
-/* B. Mongoose Model */
+
 export const UserModel = mongoose?.models?.User || mongoose.model('User', UserSchema);

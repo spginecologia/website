@@ -9,7 +9,8 @@ import { SpgLogoIcon } from '@/assets/spg';
 import { useParams, usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { Tooltip, ActionIcon } from '@mantine/core';
-import { IconChartPie, IconNews, IconCalendarEvent, IconBrandYoutube, IconUsers, IconFileCheck, IconBooks, IconSchool, IconBulb, IconAward, IconMessageHeart, IconListSearch, IconFlower, IconCash } from '@tabler/icons-react';
+import { IconChartPie, IconNews, IconCalendarEvent, IconBrandYoutube, IconUsers, IconFileCheck, IconBooks, IconSchool, IconBulb, IconAward, IconMessageHeart, IconListSearch, IconFlower, IconCash, IconLogout2 } from '@tabler/icons-react';
+import { signOut } from 'next-auth/react';
 
 /* * */
 
@@ -56,7 +57,14 @@ export default function BackofficeSidebar() {
   };
 
   //
-  // C. Render components
+  // C. Handle actions
+
+  const handleLogout = () => {
+    signOut();
+  };
+
+  //
+  // D. Render components
 
   return (
     <div className={styles.container}>
@@ -75,6 +83,11 @@ export default function BackofficeSidebar() {
             </Tooltip>
           </AuthGate>
         ))}
+        <Tooltip label={'Logout'} position="right">
+          <ActionIcon className={styles.navButton} size="xl" color="red" onClick={handleLogout}>
+            <IconLogout2 />
+          </ActionIcon>
+        </Tooltip>
       </div>
     </div>
   );

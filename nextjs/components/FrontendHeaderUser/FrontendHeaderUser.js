@@ -37,7 +37,7 @@ export default function FrontendHeaderUser() {
         <>
           <Link href="/account" className={styles.target}>
             {sessionData?.user?.title && <span className={styles.userTitle}>{sessionData?.user?.title}</span>}
-            {sessionData?.user?.name && <span className={styles.userTitle}>{sessionData?.user?.name.substring(0, 12)}</span>}
+            {sessionData?.user?.first_name && <span className={styles.userFirstName}>{sessionData?.user?.first_name.substring(0, 12)}</span>}
           </Link>
           <div className={styles.dropdown}>
             {PROFILE_PAGES.map((item) => (

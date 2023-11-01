@@ -2,7 +2,7 @@ import { withAuth } from 'next-auth/middleware';
 import createIntlMiddleware from 'next-intl/middleware';
 import { availableLocales } from './translations/config';
 
-// const publicPages = ['/', '/auth/signin', '/auth/verify', '/auth/error'];
+const publicPages = ['/', '/login', '/login/verify', '/login/error'];
 
 const intlMiddleware = createIntlMiddleware({
   locales: availableLocales,
@@ -15,14 +15,14 @@ const intlMiddleware = createIntlMiddleware({
 const authMiddleware = withAuth((req) => intlMiddleware(req));
 
 export default function middleware(req) {
-  //   const publicPathnameRegex = RegExp(`^(/(${availableLocales.join('|')}))?(${publicPages.join('|')})?/?$`, 'i');
-  //   const isPublicPage = publicPathnameRegex.test(req.nextUrl.pathname);
+  const publicPathnameRegex = RegExp(`^(/(${availableLocales.join('|')}))?(${publicPages.join('|')})?/?$`, 'i');
+  const isPublicPage = publicPathnameRegex.test(req.nextUrl.pathname);
 
-  //   if (isPublicPage) {
-  //     return intlMiddleware(req);
-  //   } else {
-  return authMiddleware(req);
-  //   }
+  if (isPublicPage) {
+    return intlMiddleware(req);
+  } else {
+    return authMiddleware(req);
+  }
 }
 
 export const config = {
