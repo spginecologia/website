@@ -12,7 +12,7 @@ export default function Layout({ children }) {
 
   const router = useRouter();
 
-  const { status } = useSession({
+  useSession({
     required: true,
     onUnauthenticated() {
       router.push(`/login?callbackUrl=${window.location.pathname}`);

@@ -1,18 +1,20 @@
+'use client';
+
 /* * */
 
-import styles from './AppFooterContacts.module.css';
+import styles from './FrontendFooterContacts.module.css';
 import { useTranslations } from 'next-intl';
 import { Facebook, Instagram, LinkedIn } from '@/assets/socials';
 
 /* * */
 
-export default function AppFooterContacts() {
+export default function FrontendFooterContacts() {
   //
 
   //
   // A. Setup variables
 
-  const t = useTranslations('AppFooterContacts');
+  const t = useTranslations('FrontendFooterContacts');
 
   //
   // B. Render components

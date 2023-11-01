@@ -1,5 +1,5 @@
 {
-    "AppHeaderMenu": {
+    "FrontendHeaderMenu": {
         "society": {
             "label": "Sociedade"
         },
@@ -19,7 +19,7 @@
             "label": "Prémio SPG"
         }
     },
-    "AppHeaderAcademia": {
+    "FrontendHeaderAcademia": {
         "home": {
             "label": "Home"
         },
@@ -45,18 +45,15 @@
             "label": "Pesquisa por Tópicos"
         }
     },
-    "AppHeaderUser": {
+    "FrontendHeaderUser": {
         "account": {
             "label": "Conta SPG"
-        },
-        "payments": {
-            "label": "Pagamentos"
         },
         "admin": {
             "label": "Admin"
         }
     },
-    "AppFooterNewsletter": {
+    "FrontendFooterNewsletter": {
         "title": "Newsletter",
         "subtitle": "Subscreva a newsletter e fique a par das nossas atualizações.",
         "form": {
@@ -73,18 +70,17 @@
             }
         }
     },
-    "AppFooterContacts": {
+    "FrontendFooterContacts": {
         "address": {
             "title": "Sede Social"
         }
     },
-    "AppFooterLegal": {
+    "FrontendFooterLegal": {
         "credits": "Desenvolvido por Joao.Earth",
         "copyright": "Sociedade Portuguesa de Ginecologia © {year}",
         "brand_assets": "Brand Assets",
         "privacy": "Privacidade"
     },
-    "AuthExplorer": {},
     "AuthExplorerSignIn": {
         "title": "Login",
         "subtitle": "Se precisar de ajuda contacte-nos.",
@@ -123,7 +119,6 @@
             }
         }
     },
-    "AccountExplorer": {},
     "AccountExplorerProfile": {
         "title": "Perfil de Sócio",
         "subtitle": "Todas as suas informações"

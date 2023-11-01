@@ -3,18 +3,18 @@
 /* * */
 
 import Link from 'next-intl/link';
-import styles from './AppFooterLegal.module.css';
+import styles from './FrontendFooterLegal.module.css';
 import { useTranslations } from 'next-intl';
 
 /* * */
 
-export default function AppFooterLegal() {
+export default function FrontendFooterLegal() {
   //
 
   //
   // A. Setup variables
 
-  const t = useTranslations('AppFooterLegal');
+  const t = useTranslations('FrontendFooterLegal');
 
   //
   // B. Render components

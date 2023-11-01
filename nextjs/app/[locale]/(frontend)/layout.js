@@ -1,11 +1,9 @@
-'use client';
-
 /* * */
 
-import AppWrapper from '@/components/AppWrapper/AppWrapper';
+import FrontendWrapper from '@/components/FrontendWrapper/FrontendWrapper';
 
 /* * */
 
 export default async function Layout({ children }) {
-  return <AppWrapper>{children}</AppWrapper>;
+  return <FrontendWrapper>{children}</FrontendWrapper>;
 }

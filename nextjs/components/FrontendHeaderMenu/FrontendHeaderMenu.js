@@ -1,7 +1,9 @@
+'use client';
+
 /* * */
 
 import Link from 'next-intl/link';
-import styles from './AppHeaderMenu.module.css';
+import styles from './FrontendHeaderMenu.module.css';
 import { useTranslations } from 'next-intl';
 import { IconSearch } from '@tabler/icons-react';
 
@@ -18,13 +20,13 @@ const MENU_PAGES = [
 
 /* * */
 
-export default function AppHeaderMenu() {
+export default function FrontendHeaderMenu() {
   //
 
   //
   // A. Setup variables
 
-  const t = useTranslations('AppHeaderMenu');
+  const t = useTranslations('FrontendHeaderMenu');
 
   //
   // B. Render components

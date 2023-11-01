@@ -1,6 +1,8 @@
+'use client';
+
 /* * */
 
-import styles from './AppHeaderAcademia.module.css';
+import styles from './FrontendHeaderAcademia.module.css';
 import { SpgAcademia } from '@/assets/spg';
 import Link from 'next-intl/link';
 import { useTranslations } from 'next-intl';
@@ -21,13 +23,13 @@ const ACADEMIA_PAGES = [
 
 /* * */
 
-export default function AppHeaderAcademia() {
+export default function FrontendHeaderAcademia() {
   //
 
   //
   // A. Setup variables
 
-  const t = useTranslations('AppHeaderAcademia');
+  const t = useTranslations('FrontendHeaderAcademia');
 
   //
   // B. Render components

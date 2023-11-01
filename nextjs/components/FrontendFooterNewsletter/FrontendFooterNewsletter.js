@@ -1,19 +1,21 @@
+'use client';
+
 /* * */
 
 import { useTranslations } from 'next-intl';
-import styles from './AppFooterNewsletter.module.css';
+import styles from './FrontendFooterNewsletter.module.css';
 import { useForm, yupResolver } from '@mantine/form';
 import { TextInput } from '@mantine/core';
 
 /* * */
 
-export default function AppFooterNewsletter() {
+export default function FrontendFooterNewsletter() {
   //
 
   //
   // A. Setup variables
 
-  const t = useTranslations('AppFooterNewsletter');
+  const t = useTranslations('FrontendFooterNewsletter');
 
   //
   // C. Setup form
