@@ -1,5 +1,7 @@
 'use client';
 
+/* * */
+
 import { SWRConfig } from 'swr';
 import { SessionProvider } from 'next-auth/react';
 import { MantineProvider } from '@mantine/core';
@@ -7,10 +9,14 @@ import { Notifications } from '@mantine/notifications';
 import { ModalsProvider } from '@mantine/modals';
 import { DatesProvider } from '@mantine/dates';
 
+/* * */
+
 export default function Providers({ children, session }) {
   //
 
-  // SWR CONFIGURATION
+  //
+  // A. Setup SWR
+
   const swrOptions = {
     refreshInterval: 30000,
     fetcher: async (...args) => {
@@ -26,6 +32,9 @@ export default function Providers({ children, session }) {
     },
   };
 
+  //
+  // B. Render components
+
   return (
     <SessionProvider session={session} refetchInterval={15}>
       <SWRConfig value={swrOptions}>
@@ -38,4 +47,6 @@ export default function Providers({ children, session }) {
       </SWRConfig>
     </SessionProvider>
   );
+
+  //
 }
