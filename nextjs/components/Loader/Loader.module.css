@@ -30,7 +30,7 @@
 }
 
 .full {
-  position: relative;
+  position: absolute;
 }
 
 .fixed {

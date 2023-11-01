@@ -63,8 +63,8 @@ export default function FrontendFooterNewsletter() {
         <h3 className={styles.subtitle}>{t('subtitle')}</h3>
       </div>
       <form onSubmit={form.onSubmit(handleFormSubmit)} className={styles.form}>
-        <TextInput aria-label={t('form.name.label')} placeholder={t('form.name.placeholder')} {...form.getInputProps('name')} styles={{ input: styles.input }} />
-        <TextInput aria-label={t('form.email.label')} placeholder={t('form.email.placeholder')} {...form.getInputProps('email')} className={styles.input} />
+        <TextInput aria-label={t('form.name.label')} placeholder={t('form.name.placeholder')} {...form.getInputProps('name')} />
+        <TextInput aria-label={t('form.email.label')} placeholder={t('form.email.placeholder')} {...form.getInputProps('email')} />
       </form>
     </div>
   );

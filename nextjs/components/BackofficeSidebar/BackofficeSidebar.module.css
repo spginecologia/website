@@ -26,6 +26,7 @@
   align-items: center;
   padding: 18px;
   border-bottom: 1px solid var(--spg-support-3);
+  transition: all 200ms ease;
 }
 
 .logo:hover {

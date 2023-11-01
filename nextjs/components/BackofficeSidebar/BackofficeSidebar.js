@@ -2,14 +2,14 @@
 
 /* * */
 
-import styles from './BackofficeSidebar.module.css';
 import Link from 'next-intl/link';
+import styles from './BackofficeSidebar.module.css';
+import AuthGate from '@/components/AuthGate/AuthGate';
+import { SpgLogoIcon } from '@/assets/spg';
 import { useParams, usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { Tooltip, ActionIcon } from '@mantine/core';
-import { IconChartPie, IconNews, IconCalendarEvent, IconBrandYoutube } from '@tabler/icons-react';
-import AuthGate from '@/components/AuthGate/AuthGate';
-import { SpgLogoIcon } from '@/assets/spg';
+import { IconChartPie, IconNews, IconCalendarEvent, IconBrandYoutube, IconUsers, IconFileCheck, IconBooks, IconSchool, IconBulb, IconAward, IconMessageHeart, IconListSearch, IconFlower, IconCash } from '@tabler/icons-react';
 
 /* * */
 
@@ -18,6 +18,16 @@ const SIDEBAR_LINKS = [
   { key: 'news', path: '/admin/news', icon: <IconNews />, auth_scope: 'news', auth_permission: 'view' },
   { key: 'agenda', path: '/admin/agenda', icon: <IconCalendarEvent />, auth_scope: 'agenda', auth_permission: 'view' },
   { key: 'videos', path: '/admin/videos', icon: <IconBrandYoutube />, auth_scope: 'videos', auth_permission: 'view' },
+  { key: 'guidelines', path: '/admin/guidelines', icon: <IconFileCheck />, auth_scope: 'guidelines', auth_permission: 'view' },
+  { key: 'publications', path: '/admin/publications', icon: <IconBooks />, auth_scope: 'publications', auth_permission: 'view' },
+  { key: 'courses', path: '/admin/courses', icon: <IconSchool />, auth_scope: 'courses', auth_permission: 'view' },
+  { key: 'awards', path: '/admin/awards', icon: <IconAward />, auth_scope: 'awards', auth_permission: 'view' },
+  { key: 'grants', path: '/admin/grants', icon: <IconBulb />, auth_scope: 'grants', auth_permission: 'view' },
+  { key: 'topics', path: '/admin/topics', icon: <IconListSearch />, auth_scope: 'topics', auth_permission: 'view' },
+  { key: 'testimonials', path: '/admin/testimonials', icon: <IconMessageHeart />, auth_scope: 'testimonials', auth_permission: 'view' },
+  { key: 'tributes', path: '/admin/tributes', icon: <IconFlower />, auth_scope: 'tributes', auth_permission: 'view' },
+  { key: 'users', path: '/admin/users', icon: <IconUsers />, auth_scope: 'users', auth_permission: 'view' },
+  { key: 'payments', path: '/admin/payments', icon: <IconCash />, auth_scope: 'payments', auth_permission: 'view' },
 ];
 
 /* * */
