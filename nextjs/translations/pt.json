@@ -51,6 +51,9 @@
         },
         "payments": {
             "label": "Pagamentos"
+        },
+        "admin": {
+            "label": "Admin"
         }
     },
     "AppFooterNewsletter": {

@@ -5,11 +5,11 @@ module.exports = {
   reactStrictMode: true,
   async redirects() {
     return [
-      {
-        source: '/',
-        destination: '/frontend',
-        permanent: true,
-      },
+      //   {
+      //     source: '/source',
+      //     destination: '/destination',
+      //     permanent: true,
+      //   },
     ];
   },
 };

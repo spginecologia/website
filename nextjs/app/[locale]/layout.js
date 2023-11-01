@@ -4,11 +4,10 @@
 
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
-import AppWrapper from '@/components/AppWrapper/AppWrapper';
 
 /* * */
 
-export default async function LocaleLayout({ children, params: { locale } }) {
+export default async function Layout({ children, params: { locale } }) {
   //
 
   let messages;
@@ -21,7 +20,7 @@ export default async function LocaleLayout({ children, params: { locale } }) {
   //updateInterval={1}
   return (
     <NextIntlClientProvider locale={locale} messages={messages} timeZone="Europe/Lisbon" now={Date.now()}>
-      <AppWrapper>{children}</AppWrapper>
+      {children}
     </NextIntlClientProvider>
   );
 }

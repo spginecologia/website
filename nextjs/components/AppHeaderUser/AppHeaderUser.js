@@ -6,7 +6,7 @@ import styles from './AppHeaderUser.module.css';
 import Link from 'next-intl/link';
 import { useTranslations } from 'next-intl';
 import { useSession } from 'next-auth/react';
-import { IconUserCircle, IconWallet } from '@tabler/icons-react';
+import { IconSettings, IconUserCircle, IconWallet } from '@tabler/icons-react';
 import Loader from '@/components/Loader/Loader';
 
 /* * */
@@ -14,6 +14,7 @@ import Loader from '@/components/Loader/Loader';
 const PROFILE_PAGES = [
   { key: 'account', path: '/account', icon: <IconUserCircle size={24} /> },
   { key: 'payments', path: '/payments', icon: <IconWallet size={24} /> },
+  { key: 'admin', path: '/admin', icon: <IconSettings size={24} /> },
 ];
 
 /* * */
