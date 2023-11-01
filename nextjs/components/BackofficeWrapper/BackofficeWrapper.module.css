@@ -1,0 +1,17 @@
+/* * */
+/* CONTAINER */
+
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-reference-0);
+}
+
+/* * */
+/* INNER WRAPPER */
+
+.innerWrapper {
+  width: 100%;
+  height: 100%;
+  padding-left: 50px;
+}

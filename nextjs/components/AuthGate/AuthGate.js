@@ -7,6 +7,8 @@ import { useEffect, useMemo } from 'react';
 export default function AuthGate({ scope = '', permission = '', redirect = false, children }) {
   //
 
+  return children;
+
   const router = useRouter();
   const { data: session, status } = useSession();
 

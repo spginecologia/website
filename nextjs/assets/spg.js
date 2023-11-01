@@ -1,5 +1,19 @@
 /* * */
 
+export function SpgLogoIcon() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 90">
+      <path fill="#a0285a" strokeWidth="0" d="M58.54 88.56L109 30.06c2.27-2.63.41-6.72-3.04-6.72H4.04c-3.47 0-5.32 4.13-3.02 6.75l51.46 58.5a4.016 4.016 0 006.06-.03" />
+      <path fill="#f5cdcd" strokeWidth="0" d="M54.84 89.94c.46.09.94.09 1.4-.02V67.58h-1.4v22.36z" />
+      <path fill="#f5cdcd" strokeWidth="0" d="M56.23 0S31.66 29.32 31.66 42.99c0 5.7 1.92 10.95 5.13 15.13 0 0 7.16 9.62 19.44 9.62V0z" />
+      <path fill="#b46996" strokeWidth="0" d="M56.23 0S80.8 29.32 80.8 42.99c0 5.7-1.92 10.95-5.13 15.13 0 0-7.15 9.62-19.44 9.62V0z" />
+      <path fill="none" stroke="#fff" strokeMiterlimit="10" strokeWidth="20" d="M-374.72 -318.46H763.3999999999999V1321.78H-374.72z" />
+    </svg>
+  );
+}
+
+/* * */
+
 export function SpgLogoCompact() {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 90">

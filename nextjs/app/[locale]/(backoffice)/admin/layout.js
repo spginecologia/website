@@ -4,6 +4,7 @@
 
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
+import BackofficeWrapper from '@/components/BackofficeWrapper/BackofficeWrapper';
 
 /* * */
 
@@ -19,5 +20,5 @@ export default function Layout({ children }) {
     },
   });
 
-  return <div style={{ backgroundColor: 'beige' }}>{children}</div>;
+  return <BackofficeWrapper>{children}</BackofficeWrapper>;
 }
