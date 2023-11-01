@@ -1,10 +1,16 @@
 /* * */
 
-import { OneFullColumn } from '@/components/Layouts/Layouts';
 import NoDataLabel from '@/components/NoDataLabel/NoDataLabel';
+import Section from '@/components/Section/Section';
+import { Space } from '@mantine/core';
 
 /* * */
 
 export default function Page() {
-  return <OneFullColumn first={<NoDataLabel text={'Homepage'} fill />} />;
+  return (
+    <Section first>
+      <NoDataLabel text={'Homepage'} />
+      <Space h={300} />
+    </Section>
+  );
 }
