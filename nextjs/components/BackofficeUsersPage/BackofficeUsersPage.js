@@ -125,8 +125,6 @@ export default function BackofficeUsersPage() {
   //
   // E. Render components
 
-  console.log(userForm.values);
-
   return (
     <UserFormProvider form={userForm}>
       <form onSubmit={userForm.onSubmit(async () => await handleSave())}>
@@ -159,7 +157,7 @@ export default function BackofficeUsersPage() {
             <SimpleGrid cols={3}>
               <TextInput label={t('fields.medical_id.label')} placeholder={t('fields.medical_id.placeholder')} {...userForm.getInputProps('medical_id')} readOnly={isReadOnly} />
               <TextInput label={t('fields.personal_tax_id.label')} placeholder={t('fields.personal_tax_id.placeholder')} {...userForm.getInputProps('personal_tax_id')} readOnly={isReadOnly} />
-              <DatePickerInput label={t('fields.birthday.label')} placeholder={t('fields.birthday.placeholder')} {...userForm.getInputProps('birthday')} readOnly={isReadOnly} />
+              <DatePickerInput label={t('fields.birthday.label')} placeholder={t('fields.birthday.placeholder')} {...userForm.getInputProps('birthday')} value={userForm.values.birthday ? new Date(userForm.values.birthday) : null} readOnly={isReadOnly} clearable />
             </SimpleGrid>
           </BackofficeWrapperPageSection>
 
