@@ -6,7 +6,7 @@ export const UserDefault = {
   first_name: '',
   last_name: '',
   full_name: '',
-  birthday: '',
+  birthday: new Date(),
   //
   phone: '',
   email: '',

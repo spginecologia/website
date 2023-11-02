@@ -68,25 +68,6 @@ export default function Page() {
   };
 
   //
-  // D. Format data
-
-  const agenciesFormattedForSelect = useMemo(() => {
-    return agenciesData
-      ? agenciesData.map((item) => {
-          return { value: item._id, label: item.name || '-' };
-        })
-      : [];
-  }, [agenciesData]);
-
-  const municipalitiesFormattedForSelect = useMemo(() => {
-    return municipalitiesData
-      ? municipalitiesData.map((item) => {
-          return { value: item._id, label: item.name || '-' };
-        })
-      : [];
-  }, [municipalitiesData]);
-
-  //
   // D. Handle actions
 
   const handleValidate = () => {

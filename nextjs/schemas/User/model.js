@@ -43,6 +43,7 @@ export const UserSchema = new mongoose.Schema({
   personal_tax_id: {
     type: String,
     maxlength: 11,
+    unique: true,
   },
   personal_address_1: {
     type: String,

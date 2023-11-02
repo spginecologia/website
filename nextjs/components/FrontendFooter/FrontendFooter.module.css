@@ -23,8 +23,8 @@
   justify-content: stretch;
   gap: 75px;
   width: 100%;
-  max-width: var(--app-width);
-  padding: 50px var(--app-padding);
+  max-width: var(--frontend-global-width);
+  padding: 50px var(--frontend-global-padding);
   margin: auto;
 }
 
@@ -42,7 +42,7 @@
   justify-content: space-between;
   gap: 30px;
   width: 100%;
-  max-width: var(--app-width);
-  padding: 20px var(--app-padding);
+  max-width: var(--frontend-global-width);
+  padding: 20px var(--frontend-global-padding);
   margin: auto;
 }

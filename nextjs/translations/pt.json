@@ -147,6 +147,59 @@
         "users": "Sócios",
         "payments": "Pagamentos"
     },
+    "BackofficeWrapperButtonClose": {
+        "label": "Fechar",
+        "loading": "A atualizar..."
+    },
+    "BackofficeWrapperButtonSave": {
+        "up_to_date": "Alterações Guardadas",
+        "invalid": "Existem erros no preenchimento",
+        "label": "Guardar Alterações",
+        "loading": "A guardar alterações..."
+    },
+    "BackofficeWrapperButtonDelete": {
+        "label": "Eliminar",
+        "loading": "A eliminar..."
+    },
+    "BackofficeUsersPage": {
+        "sections": {
+            "references": {
+                "title": "Referências",
+                "subtitle": "Informações genéricas sobre este sócio."
+            }
+        },
+        "fields": {
+            "title": {
+                "label": "Título de Apresentação",
+                "placeholder": "Choose an option...",
+                "nothingFound": "No Results Found"
+            },
+            "first_name": {
+                "label": "Primeiro Nome",
+                "placeholder": "André"
+            },
+            "last_name": {
+                "label": "Último Nome",
+                "placeholder": "Soares"
+            },
+            "full_name": {
+                "label": "Nome Completo",
+                "placeholder": "André dos Santos Silva Soares"
+            },
+            "birthday": {
+                "label": "Data de Nascimento",
+                "placeholder": "15 de Janeiro de 1995"
+            },
+            "medical_id": {
+                "label": "Número de Cédula Médica",
+                "placeholder": "012345"
+            },
+            "personal_tax_id": {
+                "label": "Número de Contribuinte Pessoal",
+                "placeholder": "PT123456789"
+            }
+        }
+    },
     "none-1": {},
     "none-2": {},
     "none-3": {},

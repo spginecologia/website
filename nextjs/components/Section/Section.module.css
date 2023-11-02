@@ -17,7 +17,7 @@
   position: relative;
   display: flex;
   width: 100%;
-  max-width: var(--app-width);
-  padding: 0 var(--app-padding);
+  max-width: var(--frontend-global-width);
+  padding: 0 var(--frontend-global-padding);
   margin: auto;
 }

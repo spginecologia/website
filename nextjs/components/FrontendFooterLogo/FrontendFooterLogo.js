@@ -8,7 +8,7 @@ import { SpgLogoWhite } from '@/assets/spg';
 
 export default function FrontendFooterLogo() {
   return (
-    <Link href="/frontend" className={styles.container}>
+    <Link href="/" className={styles.container}>
       <SpgLogoWhite />
     </Link>
   );

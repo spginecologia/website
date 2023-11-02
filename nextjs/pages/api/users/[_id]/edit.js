@@ -66,10 +66,18 @@ export default async function handler(req, res) {
   // Check for uniqueness
 
   try {
-    // The values that need to be unique are ['email'].
+    // The values that need to be unique are ['email', 'medical_id', 'personal_tax_id'].
     const foundDocumentWithEmail = await UserModel.exists({ email: { $eq: req.body.email } });
     if (foundDocumentWithEmail && foundDocumentWithEmail._id != req.query._id) {
       throw new Error('A User with the same email already exists.');
+    }
+    const foundDocumentWithMedicalId = await UserModel.exists({ medical_id: { $eq: req.body.medical_id } });
+    if (foundDocumentWithMedicalId && foundDocumentWithMedicalId._id != req.query._id) {
+      throw new Error('A User with the same medical_id already exists.');
+    }
+    const foundDocumentWithPersonalTaxId = await UserModel.exists({ personal_tax_id: { $eq: req.body.personal_tax_id } });
+    if (foundDocumentWithPersonalTaxId && foundDocumentWithPersonalTaxId._id != req.query._id) {
+      throw new Error('A User with the same personal_tax_id already exists.');
     }
   } catch (err) {
     console.log(err);
@@ -79,28 +87,28 @@ export default async function handler(req, res) {
   // 6.
   // Reset & Ensure permissions
 
-  try {
-    // Agencies
-    if (!req.body.permissions.agencies.view) {
-      req.body.permissions.agencies.create_edit = false;
-      req.body.permissions.agencies.delete = false;
-    }
-    // Exports
-    if (!req.body.permissions.exports.view) {
-      req.body.permissions.exports.gtfs_v18 = false;
-      req.body.permissions.exports.gtfs_v29 = false;
-      req.body.permissions.exports.gtfs_v30 = false;
-      req.body.permissions.exports.agencies = [];
-    }
-    // Users
-    if (!req.body.permissions.users.view) {
-      req.body.permissions.users.create_edit = false;
-      req.body.permissions.users.delete = false;
-    }
-  } catch (err) {
-    console.log(err);
-    return await res.status(409).json({ message: err.message });
-  }
+  //   try {
+  //     // Agencies
+  //     if (!req.body.permissions.agencies.view) {
+  //       req.body.permissions.agencies.create_edit = false;
+  //       req.body.permissions.agencies.delete = false;
+  //     }
+  //     // Exports
+  //     if (!req.body.permissions.exports.view) {
+  //       req.body.permissions.exports.gtfs_v18 = false;
+  //       req.body.permissions.exports.gtfs_v29 = false;
+  //       req.body.permissions.exports.gtfs_v30 = false;
+  //       req.body.permissions.exports.agencies = [];
+  //     }
+  //     // Users
+  //     if (!req.body.permissions.users.view) {
+  //       req.body.permissions.users.create_edit = false;
+  //       req.body.permissions.users.delete = false;
+  //     }
+  //   } catch (err) {
+  //     console.log(err);
+  //     return await res.status(409).json({ message: err.message });
+  //   }
 
   // 7.
   // Update the correct document

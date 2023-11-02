@@ -26,15 +26,18 @@
   /* * */
   /* DIMENSIONS */
 
-  /* APP WIDTH */
-  --app-width: 1300px;
-  --app-padding: 30px;
   /* SIZES */
   --size-xs: 5px;
   --size-sm: 10px;
   --size-md: 15px;
   --size-lg: 25px;
   --size-xl: 50px;
+
+  /* FRONTEND */
+  --frontend-global-width: 1300px;
+  --frontend-global-padding: 30px;
+  /* BACKOFFICE */
+  --backoffice-header-height: 55px;
 
   /* * */
   /* FONTS */

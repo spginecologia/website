@@ -8,7 +8,7 @@
   background-color: var(--color-reference-0);
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: var(--backoffice-header-height) 1fr;
 }
 
 /* * */
@@ -16,6 +16,9 @@
 
 .header {
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 10px;
   border-bottom: 1px solid var(--spg-support-3);
 }

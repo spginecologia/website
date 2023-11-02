@@ -14,20 +14,11 @@
 }
 
 .container:hover {
-  background-color: var(--spg-brand-3);
+  background-color: var(--spg-support-3);
 }
 
 .container:active {
-  background-color: var(--color-gray-1);
-}
-
-@media (prefers-color-scheme: dark) {
-  .container {
-    background-color: var(--color-gray-1);
-  }
-  .container:active {
-    background-color: var(--color-reference-0);
-  }
+  background-color: var(--spg-support-3);
 }
 
 /* * */
@@ -36,7 +27,7 @@
 .chevron {
   font-size: 20px;
   opacity: 0.25;
-  color: var(--color-gray-9);
+  color: var(--spg-support-5);
 }
 
 .isSelected .chevron {
