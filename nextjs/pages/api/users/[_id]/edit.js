@@ -67,16 +67,16 @@ export default async function handler(req, res) {
 
   try {
     // The values that need to be unique are ['email', 'medical_id', 'personal_tax_id'].
-    const foundDocumentWithEmail = await UserModel.exists({ email: { $eq: req.body.email } });
-    if (foundDocumentWithEmail && foundDocumentWithEmail._id != req.query._id) {
+    const foundUserWithEmail = await UserModel.exists({ email: { $eq: req.body.email } });
+    if (foundUserWithEmail && foundUserWithEmail._id != req.query._id) {
       throw new Error('A User with the same email already exists.');
     }
-    const foundDocumentWithMedicalId = await UserModel.exists({ medical_id: { $eq: req.body.medical_id } });
-    if (foundDocumentWithMedicalId && foundDocumentWithMedicalId._id != req.query._id) {
+    const foundUserWithMedicalId = await UserModel.exists({ medical_id: { $eq: req.body.medical_id } });
+    if (foundUserWithMedicalId && foundUserWithMedicalId._id != req.query._id) {
       throw new Error('A User with the same medical_id already exists.');
     }
-    const foundDocumentWithPersonalTaxId = await UserModel.exists({ personal_tax_id: { $eq: req.body.personal_tax_id } });
-    if (foundDocumentWithPersonalTaxId && foundDocumentWithPersonalTaxId._id != req.query._id) {
+    const foundUserWithPersonalTaxId = await UserModel.exists({ personal_tax_id: { $eq: req.body.personal_tax_id } });
+    if (foundUserWithPersonalTaxId && foundUserWithPersonalTaxId._id != req.query._id) {
       throw new Error('A User with the same personal_tax_id already exists.');
     }
   } catch (err) {
@@ -114,7 +114,7 @@ export default async function handler(req, res) {
   // Update the correct document
 
   try {
-    const editedDocument = await UserModel.findOneAndUpdate({ _id: { $eq: req.query._id } }, req.body, { new: true });
+    const editedDocument = await UserModel.findOneAndReplace({ _id: { $eq: req.query._id } }, req.body, { new: true });
     if (!editedDocument) return await res.status(404).json({ message: `User with _id: ${req.query._id} not found.` });
     return await res.status(200).json(editedDocument);
   } catch (err) {

@@ -3,6 +3,7 @@ import checkAuthentication from '@/services/checkAuthentication';
 import mongodb from '@/services/mongodb';
 import { UserDefault } from '@/schemas/User/default';
 import { UserModel } from '@/schemas/User/model';
+import generator from '@/services/generator';
 
 /* * */
 /* CREATE USER */

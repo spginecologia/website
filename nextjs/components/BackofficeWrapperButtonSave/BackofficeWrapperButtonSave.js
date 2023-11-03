@@ -3,8 +3,8 @@
 /* * */
 
 import { useTranslations } from 'next-intl';
-import { Tooltip, ActionIcon, Button } from '@mantine/core';
-import { IconCloudCheck, IconAlertTriangleFilled, IconDeviceFloppy } from '@tabler/icons-react';
+import { Tooltip, ActionIcon } from '@mantine/core';
+import { IconCloudCheck, IconDeviceFloppy } from '@tabler/icons-react';
 
 /* * */
 

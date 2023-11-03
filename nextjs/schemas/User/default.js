@@ -43,23 +43,49 @@ export const UserDefault = {
   admin_observations: '',
   //
   permissions: {
-    //
-    topics: {
-      create_edit: true,
+    admin: {
+      backoffice: false,
+      debug: false,
+    },
+    news: {
+      create_edit: false,
       delete: false,
     },
-    //
+    agenda: {
+      create_edit: false,
+      delete: false,
+    },
+    videos: {
+      view: false,
+      upload: false,
+      create_edit_own: false,
+      approve: false,
+      create_edit_all: false,
+      delete: false,
+    },
+    guidelines: {
+      create_edit: false,
+      delete: false,
+    },
+    publications: {
+      view: false,
+      create_edit: false,
+      delete: false,
+    },
+    courses: {
+      view: false,
+      create_edit: false,
+      delete: false,
+    },
+    topics: {
+      create_edit: false,
+      delete: false,
+    },
     users: {
       view: false,
       create_edit: false,
       delete: false,
     },
-    //
-    admin: {
-      backoffice: false,
-      debug: false,
-    },
-    //
   },
   //
 };

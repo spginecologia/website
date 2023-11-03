@@ -144,6 +144,107 @@ export const UserSchema = new mongoose.Schema({
   //
   permissions: {
     //
+    admin: {
+      backoffice: {
+        type: Boolean,
+        default: false,
+      },
+      debug: {
+        type: Boolean,
+        default: false,
+      },
+    },
+    //
+    news: {
+      create_edit: {
+        type: Boolean,
+        default: true,
+      },
+      delete: {
+        type: Boolean,
+        default: false,
+      },
+    },
+    //
+    agenda: {
+      create_edit: {
+        type: Boolean,
+        default: true,
+      },
+      delete: {
+        type: Boolean,
+        default: false,
+      },
+    },
+    //
+    videos: {
+      view: {
+        type: Boolean,
+        default: false,
+      },
+      upload: {
+        type: Boolean,
+        default: false,
+      },
+      create_edit_own: {
+        type: Boolean,
+        default: false,
+      },
+      approve: {
+        type: Boolean,
+        default: false,
+      },
+      create_edit_all: {
+        type: Boolean,
+        default: false,
+      },
+      delete: {
+        type: Boolean,
+        default: false,
+      },
+    },
+    //
+    guidelines: {
+      create_edit: {
+        type: Boolean,
+        default: true,
+      },
+      delete: {
+        type: Boolean,
+        default: false,
+      },
+    },
+    //
+    publications: {
+      view: {
+        type: Boolean,
+        default: true,
+      },
+      create_edit: {
+        type: Boolean,
+        default: true,
+      },
+      delete: {
+        type: Boolean,
+        default: false,
+      },
+    },
+    //
+    courses: {
+      view: {
+        type: Boolean,
+        default: true,
+      },
+      create_edit: {
+        type: Boolean,
+        default: true,
+      },
+      delete: {
+        type: Boolean,
+        default: false,
+      },
+    },
+    //
     topics: {
       create_edit: {
         type: Boolean,
@@ -165,17 +266,6 @@ export const UserSchema = new mongoose.Schema({
         default: false,
       },
       delete: {
-        type: Boolean,
-        default: false,
-      },
-    },
-    //
-    admin: {
-      backoffice: {
-        type: Boolean,
-        default: false,
-      },
-      debug: {
         type: Boolean,
         default: false,
       },

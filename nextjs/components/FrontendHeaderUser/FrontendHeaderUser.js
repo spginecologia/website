@@ -49,6 +49,13 @@ export default function FrontendHeaderUser() {
           </div>
         </>
       )}
+      {sessionStatus === 'unauthenticated' && (
+        <>
+          <Link href="/login" className={styles.target}>
+            <span className={styles.userFirstName}>{t('login.label')}</span>
+          </Link>
+        </>
+      )}
     </div>
   );
 

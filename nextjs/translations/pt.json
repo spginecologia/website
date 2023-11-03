@@ -46,6 +46,9 @@
         }
     },
     "FrontendHeaderUser": {
+        "login": {
+            "label": "Login"
+        },
         "account": {
             "label": "Conta SPG"
         },
@@ -151,6 +154,10 @@
         "label": "Fechar",
         "loading": "A atualizar..."
     },
+    "BackofficeWrapperButtonCreate": {
+        "label": "Criar",
+        "loading": "A criar..."
+    },
     "BackofficeWrapperButtonSave": {
         "up_to_date": "Alterações Guardadas",
         "invalid": "Existem erros no preenchimento",
@@ -162,6 +169,17 @@
         "loading": "A eliminar..."
     },
     "BackofficeUsersPage": {
+        "operations": {
+            "delete": {
+                "title": "Eliminar Utilizador",
+                "description": "Eliminar é irreversível. Tem a certeza que pretende eliminar este utilizador?",
+                "confirm": "Eliminar utilizador para sempre",
+                "cancel": "Não Eliminar",
+                "loading": "A eliminar...",
+                "success": "Utilizador eliminado.",
+                "error": "Ocorreu um erro ao eliminar este utilizador."
+            }
+        },
         "sections": {
             "status": {
                 "title": "Status",
@@ -190,6 +208,40 @@
             "observations": {
                 "title": "Observações",
                 "subtitle": "Dados privados sobre este sócio."
+            },
+            "permissions": {
+                "title": "Permissões",
+                "subtitle": "O que este sócio pode e não pode fazer no site.",
+                "presets": {
+                    "candidate": {
+                        "label": "Candidato",
+                        "description": ""
+                    },
+                    "member": {
+                        "label": "Sócio",
+                        "description": ""
+                    },
+                    "reviewer": {
+                        "label": "Gestor de Vídeos",
+                        "description": ""
+                    },
+                    "publisher": {
+                        "label": "Gestor de Conteúdos",
+                        "description": ""
+                    },
+                    "secretary": {
+                        "label": "Secretário",
+                        "description": ""
+                    },
+                    "accountant": {
+                        "label": "Contabilista",
+                        "description": ""
+                    },
+                    "admin": {
+                        "label": "Administrador",
+                        "description": ""
+                    }
+                }
             }
         },
         "fields": {
@@ -327,6 +379,126 @@
                 "placeholder": "2 de Novembro de 2023",
                 "was_active": "Ativo {value}",
                 "was_never_active": "Este sócio nunca fez login no site"
+            },
+            "admin": {
+                "divider": {
+                    "label": "Administração & Backoffice"
+                },
+                "backoffice": {
+                    "label": "Aceder ao Backoffice",
+                    "description": "Este sócio pode aceder ao backoffice."
+                },
+                "debug": {
+                    "label": "Debug",
+                    "description": "Ver detalhes de programação do site."
+                }
+            },
+            "news": {
+                "divider": {
+                    "label": "Notícias"
+                },
+                "create_edit": {
+                    "label": "Editar Notícias",
+                    "description": "Este sócio pode editar notícias."
+                },
+                "delete": {
+                    "label": "Eliminar Notícias",
+                    "description": "Este sócio pode eliminar notícias."
+                }
+            },
+            "agenda": {
+                "divider": {
+                    "label": "Agenda"
+                },
+                "create_edit": {
+                    "label": "Editar Eventos",
+                    "description": "Este sócio pode editar eventos."
+                },
+                "delete": {
+                    "label": "Eliminar Eventos",
+                    "description": "Este sócio pode eliminar eventos."
+                }
+            },
+            "videos": {
+                "divider": {
+                    "label": "Vídeos Cirúrgicos"
+                },
+                "view": {
+                    "label": "Ver Vídeos Cirúrgicos",
+                    "description": "Este sócio pode ver vídeos cirúrgicos na Academia SPG."
+                },
+                "upload": {
+                    "label": "Subemeter Vídeos",
+                    "description": "Este sócio pode submeter novos vídeos para aprovação."
+                },
+                "create_edit_own": {
+                    "label": "Editar os seus Vídeos",
+                    "description": "Este sócio pode editar os vídeos que submeteu."
+                },
+                "approve": {
+                    "label": "Aprovar qualquer Vídeo",
+                    "description": "Este sócio pode aprovar e desaprovar qualquer vídeo submetidos."
+                },
+                "create_edit_all": {
+                    "label": "Editar qualquer Vídeo",
+                    "description": "Este sócio pode editar todos os vídeos submetidos."
+                },
+                "delete": {
+                    "label": "Eliminar qualquer Vídeo",
+                    "description": "Este sócio pode eliminar qualquer vídeo submetido."
+                }
+            },
+            "guidelines": {
+                "divider": {
+                    "label": "Consensos"
+                },
+                "create_edit": {
+                    "label": "Editar Consensos",
+                    "description": "Este sócio pode editar consensos."
+                },
+                "delete": {
+                    "label": "Eliminar Consensos",
+                    "description": "Este sócio pode eliminar consensos."
+                }
+            },
+            "publications": {
+                "divider": {
+                    "label": "Publicações"
+                },
+                "create_edit": {
+                    "label": "Editar Publicações",
+                    "description": "Este sócio pode editar publicações."
+                },
+                "delete": {
+                    "label": "Eliminar Publicações",
+                    "description": "Este sócio pode eliminar publicações."
+                }
+            },
+            "courses": {
+                "divider": {
+                    "label": "Palestras & Cursos"
+                },
+                "create_edit": {
+                    "label": "Editar Palestras & Cursos",
+                    "description": "Este sócio pode editar palestras & cursos."
+                },
+                "delete": {
+                    "label": "Eliminar Palestras & Cursos",
+                    "description": "Este sócio pode eliminar palestras & cursos."
+                }
+            },
+            "topics": {
+                "divider": {
+                    "label": "Tópicos"
+                },
+                "create_edit": {
+                    "label": "Editar Tópicos",
+                    "description": "Este sócio pode editar tópicos."
+                },
+                "delete": {
+                    "label": "Eliminar Tópicos",
+                    "description": "Este sócio pode eliminar tópicos."
+                }
             }
         }
     },
@@ -792,7 +964,7 @@
         }
     },
     "SearchField": {
-        "placeholder": "Search..."
+        "placeholder": "Procurar..."
     },
     "AutoSave": {
         "retry": {
