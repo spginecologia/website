@@ -43,49 +43,17 @@ export const UserDefault = {
   admin_observations: '',
   //
   permissions: {
-    admin: {
-      backoffice: false,
-      debug: false,
-    },
-    news: {
-      create_edit: false,
-      delete: false,
-    },
-    agenda: {
-      create_edit: false,
-      delete: false,
-    },
-    videos: {
-      view: false,
-      upload: false,
-      create_edit_own: false,
-      approve: false,
-      create_edit_all: false,
-      delete: false,
-    },
-    guidelines: {
-      create_edit: false,
-      delete: false,
-    },
-    publications: {
-      view: false,
-      create_edit: false,
-      delete: false,
-    },
-    courses: {
-      view: false,
-      create_edit: false,
-      delete: false,
-    },
-    topics: {
-      create_edit: false,
-      delete: false,
-    },
-    users: {
-      view: false,
-      create_edit: false,
-      delete: false,
-    },
+    admin: { backoffice: false, debug: false },
+    news: { create_edit: false, delete: false },
+    agenda: { create_edit: false, delete: false },
+    videos: { view: false, upload: false, create_edit_own: false, approve: false, create_edit_all: false, delete: false },
+    guidelines: { create_edit: false, delete: false },
+    publications: { view: false, create_edit: false, delete: false },
+    courses: { view: false, create_edit: false, delete: false },
+    topics: { create_edit: false, delete: false },
+    testimonials: { create_edit: false, delete: false },
+    tributes: { create_edit: false, delete: false },
+    users: { view: false, create_edit: false, permissions: false, approve: false, charge_money: false, delete: false },
   },
   //
 };

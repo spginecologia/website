@@ -138,7 +138,9 @@ export default function BackofficeUsersPage() {
             publications: { view: false, create_edit: false, delete: false },
             courses: { view: false, create_edit: false, delete: false },
             topics: { create_edit: false, delete: false },
-            users: { view: false, create_edit: false, delete: false },
+            testimonials: { create_edit: false, delete: false },
+            tributes: { create_edit: false, delete: false },
+            users: { view: false, create_edit: false, permissions: false, approve: false, charge_money: false, delete: false },
           },
         });
         return;
@@ -153,7 +155,9 @@ export default function BackofficeUsersPage() {
             publications: { view: true, create_edit: false, delete: false },
             courses: { view: true, create_edit: false, delete: false },
             topics: { create_edit: false, delete: false },
-            users: { view: false, create_edit: false, delete: false },
+            testimonials: { create_edit: false, delete: false },
+            tributes: { create_edit: false, delete: false },
+            users: { view: false, create_edit: false, permissions: false, approve: false, charge_money: false, delete: false },
           },
         });
         return;
@@ -168,7 +172,9 @@ export default function BackofficeUsersPage() {
             publications: { view: true, create_edit: false, delete: false },
             courses: { view: true, create_edit: false, delete: false },
             topics: { create_edit: false, delete: false },
-            users: { view: false, create_edit: false, delete: false },
+            testimonials: { create_edit: false, delete: false },
+            tributes: { create_edit: false, delete: false },
+            users: { view: false, create_edit: false, permissions: false, approve: false, charge_money: false, delete: false },
           },
         });
         return;
@@ -183,7 +189,9 @@ export default function BackofficeUsersPage() {
             publications: { view: true, create_edit: true, delete: true },
             courses: { view: true, create_edit: true, delete: true },
             topics: { create_edit: true, delete: true },
-            users: { view: false, create_edit: false, delete: false },
+            testimonials: { create_edit: true, delete: true },
+            tributes: { create_edit: true, delete: true },
+            users: { view: false, create_edit: false, permissions: false, approve: false, charge_money: false, delete: false },
           },
         });
         return;
@@ -198,7 +206,9 @@ export default function BackofficeUsersPage() {
             publications: { view: false, create_edit: false, delete: false },
             courses: { view: false, create_edit: false, delete: false },
             topics: { create_edit: false, delete: false },
-            users: { view: true, create_edit: false, delete: false },
+            testimonials: { create_edit: false, delete: false },
+            tributes: { create_edit: false, delete: false },
+            users: { view: true, create_edit: true, permissions: true, approve: true, charge_money: false, delete: false },
           },
         });
         return;
@@ -213,7 +223,9 @@ export default function BackofficeUsersPage() {
             publications: { view: false, create_edit: false, delete: false },
             courses: { view: false, create_edit: false, delete: false },
             topics: { create_edit: false, delete: false },
-            users: { view: false, create_edit: false, delete: false },
+            testimonials: { create_edit: false, delete: false },
+            tributes: { create_edit: false, delete: false },
+            users: { view: true, create_edit: true, approve: false, charge_money: true, delete: false },
           },
         });
         return;
@@ -228,7 +240,9 @@ export default function BackofficeUsersPage() {
             publications: { view: true, create_edit: true, delete: true },
             courses: { view: true, create_edit: true, delete: true },
             topics: { create_edit: true, delete: true },
-            users: { view: true, create_edit: true, delete: true },
+            testimonials: { create_edit: true, delete: true },
+            tributes: { create_edit: true, delete: true },
+            users: { view: true, create_edit: true, approve: true, charge_money: true, delete: true },
           },
         });
         return;
@@ -255,7 +269,7 @@ export default function BackofficeUsersPage() {
           onSave={handleSave}
           onDelete={handleDelete}
         >
-          <BackofficeWrapperPageSection title={t('sections.status.title')} subtitle={t('sections.status.subtitle')}>
+          <BackofficeWrapperPageSection title={t('sections.status.title')} subtitle={t('sections.status.subtitle')} defaultOpen>
             <SimpleGrid cols={3}>
               <DateTimePicker
                 label={t('fields.last_active.label')}
@@ -289,8 +303,6 @@ export default function BackofficeUsersPage() {
             </SimpleGrid>
           </BackofficeWrapperPageSection>
 
-          <Divider />
-
           <BackofficeWrapperPageSection title={t('sections.references.title')} subtitle={t('sections.references.subtitle')}>
             <SimpleGrid cols={3}>
               <Select label={t('fields.title.label')} placeholder={t('fields.title.placeholder')} nothingFoundMessage={t('fields.title.nothingFound')} {...userForm.getInputProps('title')} data={UserOptions.title} searchable clearable />
@@ -315,8 +327,6 @@ export default function BackofficeUsersPage() {
             </SimpleGrid>
           </BackofficeWrapperPageSection>
 
-          <Divider />
-
           <BackofficeWrapperPageSection title={t('sections.contacts.title')} subtitle={t('sections.contacts.subtitle')}>
             <SimpleGrid cols={2}>
               <TextInput type="email" label={t('fields.email.label')} placeholder={t('fields.email.placeholder')} {...userForm.getInputProps('email')} readOnly={isReadOnly} />
@@ -333,8 +343,6 @@ export default function BackofficeUsersPage() {
             </SimpleGrid>
           </BackofficeWrapperPageSection>
 
-          <Divider />
-
           <BackofficeWrapperPageSection title={t('sections.activity_interests.title')} subtitle={t('sections.activity_interests.subtitle')}>
             <SimpleGrid cols={2}>
               <TextInput label={t('fields.primary_workplace.label')} placeholder={t('fields.primary_workplace.placeholder')} {...userForm.getInputProps('primary_workplace')} readOnly={isReadOnly} />
@@ -345,8 +353,6 @@ export default function BackofficeUsersPage() {
               <MultiSelect label={t('fields.favorite_topics.label')} placeholder={t('fields.favorite_topics.placeholder')} nothingFoundMessage={t('fields.favorite_topics.nothingFound')} {...userForm.getInputProps('favorite_topics')} data={UserOptions.title} searchable clearable />
             </SimpleGrid>
           </BackofficeWrapperPageSection>
-
-          <Divider />
 
           <BackofficeWrapperPageSection title={t('sections.billing.title')} subtitle={t('sections.billing.subtitle')}>
             <SimpleGrid cols={2}>
@@ -364,8 +370,6 @@ export default function BackofficeUsersPage() {
             </SimpleGrid>
           </BackofficeWrapperPageSection>
 
-          <Divider />
-
           <BackofficeWrapperPageSection title={t('sections.communications.title')} subtitle={t('sections.communications.subtitle')}>
             <SimpleGrid cols={3}>
               <Switch size="md" label={t('fields.send_mandatory_communications.label')} description={t('fields.send_mandatory_communications.description')} checked disabled />
@@ -374,15 +378,11 @@ export default function BackofficeUsersPage() {
             </SimpleGrid>
           </BackofficeWrapperPageSection>
 
-          <Divider />
-
           <BackofficeWrapperPageSection title={t('sections.observations.title')} subtitle={t('sections.observations.subtitle')}>
             <SimpleGrid cols={1}>
               <Textarea label={t('fields.admin_observations.label')} placeholder={t('fields.admin_observations.placeholder')} {...userForm.getInputProps('admin_observations')} rows={8} readOnly={isReadOnly} />
             </SimpleGrid>
           </BackofficeWrapperPageSection>
-
-          <Divider />
 
           <BackofficeWrapperPageSection title={t('sections.permissions.title')} subtitle={t('sections.permissions.subtitle')}>
             <SimpleGrid cols={4}>
@@ -409,57 +409,83 @@ export default function BackofficeUsersPage() {
               </Button>
             </SimpleGrid>
 
-            <Divider label={t('fields.admin.divider.label')} labelPosition="left" mt={20} />
+            <Divider label={t('fields.permissions.admin.divider.label')} labelPosition="left" mt={20} />
             <SimpleGrid cols={3}>
-              <Switch size="md" label={t('fields.admin.backoffice.label')} description={t('fields.admin.backoffice.description')} {...userForm.getInputProps('permissions.admin.backoffice', { type: 'checkbox' })} readOnly={isReadOnly} />
-              <Switch size="md" label={t('fields.admin.debug.label')} description={t('fields.admin.debug.description')} {...userForm.getInputProps('permissions.admin.debug', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.admin.backoffice.label')} description={t('fields.permissions.admin.backoffice.description')} {...userForm.getInputProps('permissions.admin.backoffice', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.admin.debug.label')} description={t('fields.permissions.admin.debug.description')} {...userForm.getInputProps('permissions.admin.debug', { type: 'checkbox' })} readOnly={isReadOnly} />
             </SimpleGrid>
 
-            <Divider label={t('fields.news.divider.label')} labelPosition="left" mt={20} />
+            <Divider label={t('fields.permissions.news.divider.label')} labelPosition="left" mt={20} />
             <SimpleGrid cols={3}>
-              <Switch size="md" label={t('fields.news.create_edit.label')} description={t('fields.news.create_edit.description')} {...userForm.getInputProps('permissions.news.create_edit', { type: 'checkbox' })} readOnly={isReadOnly} />
-              <Switch size="md" label={t('fields.news.delete.label')} description={t('fields.news.delete.description')} {...userForm.getInputProps('permissions.news.delete', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.news.create_edit.label')} description={t('fields.permissions.news.create_edit.description')} {...userForm.getInputProps('permissions.news.create_edit', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.news.delete.label')} description={t('fields.permissions.news.delete.description')} {...userForm.getInputProps('permissions.news.delete', { type: 'checkbox' })} readOnly={isReadOnly} />
             </SimpleGrid>
 
-            <Divider label={t('fields.agenda.divider.label')} labelPosition="left" mt={20} />
+            <Divider label={t('fields.permissions.agenda.divider.label')} labelPosition="left" mt={20} />
             <SimpleGrid cols={3}>
-              <Switch size="md" label={t('fields.agenda.create_edit.label')} description={t('fields.agenda.create_edit.description')} {...userForm.getInputProps('permissions.agenda.create_edit', { type: 'checkbox' })} readOnly={isReadOnly} />
-              <Switch size="md" label={t('fields.agenda.delete.label')} description={t('fields.agenda.delete.description')} {...userForm.getInputProps('permissions.agenda.delete', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.agenda.create_edit.label')} description={t('fields.permissions.agenda.create_edit.description')} {...userForm.getInputProps('permissions.agenda.create_edit', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.agenda.delete.label')} description={t('fields.permissions.agenda.delete.description')} {...userForm.getInputProps('permissions.agenda.delete', { type: 'checkbox' })} readOnly={isReadOnly} />
             </SimpleGrid>
 
-            <Divider label={t('fields.videos.divider.label')} labelPosition="left" mt={20} />
+            <Divider label={t('fields.permissions.videos.divider.label')} labelPosition="left" mt={20} />
             <SimpleGrid cols={3}>
-              <Switch size="md" label={t('fields.videos.view.label')} description={t('fields.videos.view.description')} {...userForm.getInputProps('permissions.videos.view', { type: 'checkbox' })} readOnly={isReadOnly} />
-              <Switch size="md" label={t('fields.videos.upload.label')} description={t('fields.videos.upload.description')} {...userForm.getInputProps('permissions.videos.upload', { type: 'checkbox' })} readOnly={isReadOnly} />
-              <Switch size="md" label={t('fields.videos.create_edit_own.label')} description={t('fields.videos.create_edit_own.description')} {...userForm.getInputProps('permissions.videos.create_edit_own', { type: 'checkbox' })} readOnly={isReadOnly} />
-              <Switch size="md" label={t('fields.videos.approve.label')} description={t('fields.videos.approve.description')} {...userForm.getInputProps('permissions.videos.approve', { type: 'checkbox' })} readOnly={isReadOnly} />
-              <Switch size="md" label={t('fields.videos.create_edit_all.label')} description={t('fields.videos.create_edit_all.description')} {...userForm.getInputProps('permissions.videos.create_edit_all', { type: 'checkbox' })} readOnly={isReadOnly} />
-              <Switch size="md" label={t('fields.videos.delete.label')} description={t('fields.videos.delete.description')} {...userForm.getInputProps('permissions.videos.delete', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.videos.view.label')} description={t('fields.permissions.videos.view.description')} {...userForm.getInputProps('permissions.videos.view', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.videos.upload.label')} description={t('fields.permissions.videos.upload.description')} {...userForm.getInputProps('permissions.videos.upload', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.videos.create_edit_own.label')} description={t('fields.permissions.videos.create_edit_own.description')} {...userForm.getInputProps('permissions.videos.create_edit_own', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.videos.approve.label')} description={t('fields.permissions.videos.approve.description')} {...userForm.getInputProps('permissions.videos.approve', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.videos.create_edit_all.label')} description={t('fields.permissions.videos.create_edit_all.description')} {...userForm.getInputProps('permissions.videos.create_edit_all', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.videos.delete.label')} description={t('fields.permissions.videos.delete.description')} {...userForm.getInputProps('permissions.videos.delete', { type: 'checkbox' })} readOnly={isReadOnly} />
             </SimpleGrid>
 
-            <Divider label={t('fields.guidelines.divider.label')} labelPosition="left" mt={20} />
+            <Divider label={t('fields.permissions.guidelines.divider.label')} labelPosition="left" mt={20} />
             <SimpleGrid cols={3}>
-              <Switch size="md" label={t('fields.guidelines.create_edit.label')} description={t('fields.guidelines.create_edit.description')} {...userForm.getInputProps('permissions.guidelines.create_edit', { type: 'checkbox' })} readOnly={isReadOnly} />
-              <Switch size="md" label={t('fields.guidelines.delete.label')} description={t('fields.guidelines.delete.description')} {...userForm.getInputProps('permissions.guidelines.delete', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.guidelines.create_edit.label')} description={t('fields.permissions.guidelines.create_edit.description')} {...userForm.getInputProps('permissions.guidelines.create_edit', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.guidelines.delete.label')} description={t('fields.permissions.guidelines.delete.description')} {...userForm.getInputProps('permissions.guidelines.delete', { type: 'checkbox' })} readOnly={isReadOnly} />
             </SimpleGrid>
 
-            <Divider label={t('fields.publications.divider.label')} labelPosition="left" mt={20} />
+            <Divider label={t('fields.permissions.publications.divider.label')} labelPosition="left" mt={20} />
             <SimpleGrid cols={3}>
-              <Switch size="md" label={t('fields.publications.create_edit.label')} description={t('fields.publications.create_edit.description')} {...userForm.getInputProps('permissions.publications.create_edit', { type: 'checkbox' })} readOnly={isReadOnly} />
-              <Switch size="md" label={t('fields.publications.delete.label')} description={t('fields.publications.delete.description')} {...userForm.getInputProps('permissions.publications.delete', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.publications.create_edit.label')} description={t('fields.permissions.publications.create_edit.description')} {...userForm.getInputProps('permissions.publications.create_edit', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.publications.delete.label')} description={t('fields.permissions.publications.delete.description')} {...userForm.getInputProps('permissions.publications.delete', { type: 'checkbox' })} readOnly={isReadOnly} />
             </SimpleGrid>
 
-            <Divider label={t('fields.courses.divider.label')} labelPosition="left" mt={20} />
+            <Divider label={t('fields.permissions.courses.divider.label')} labelPosition="left" mt={20} />
             <SimpleGrid cols={3}>
-              <Switch size="md" label={t('fields.courses.create_edit.label')} description={t('fields.courses.create_edit.description')} {...userForm.getInputProps('permissions.courses.create_edit', { type: 'checkbox' })} readOnly={isReadOnly} />
-              <Switch size="md" label={t('fields.courses.delete.label')} description={t('fields.courses.delete.description')} {...userForm.getInputProps('permissions.courses.delete', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.courses.create_edit.label')} description={t('fields.permissions.courses.create_edit.description')} {...userForm.getInputProps('permissions.courses.create_edit', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.courses.delete.label')} description={t('fields.permissions.courses.delete.description')} {...userForm.getInputProps('permissions.courses.delete', { type: 'checkbox' })} readOnly={isReadOnly} />
             </SimpleGrid>
 
-            <Divider label={t('fields.topics.divider.label')} labelPosition="left" mt={20} />
+            <Divider label={t('fields.permissions.topics.divider.label')} labelPosition="left" mt={20} />
             <SimpleGrid cols={3}>
-              <Switch size="md" label={t('fields.topics.create_edit.label')} description={t('fields.topics.create_edit.description')} {...userForm.getInputProps('permissions.topics.create_edit', { type: 'checkbox' })} readOnly={isReadOnly} />
-              <Switch size="md" label={t('fields.topics.delete.label')} description={t('fields.topics.delete.description')} {...userForm.getInputProps('permissions.topics.delete', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.topics.create_edit.label')} description={t('fields.permissions.topics.create_edit.description')} {...userForm.getInputProps('permissions.topics.create_edit', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.topics.delete.label')} description={t('fields.permissions.topics.delete.description')} {...userForm.getInputProps('permissions.topics.delete', { type: 'checkbox' })} readOnly={isReadOnly} />
             </SimpleGrid>
+
+            <Divider label={t('fields.permissions.testimonials.divider.label')} labelPosition="left" mt={20} />
+            <SimpleGrid cols={3}>
+              <Switch size="md" label={t('fields.permissions.testimonials.create_edit.label')} description={t('fields.permissions.testimonials.create_edit.description')} {...userForm.getInputProps('permissions.testimonials.create_edit', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.testimonials.delete.label')} description={t('fields.permissions.testimonials.delete.description')} {...userForm.getInputProps('permissions.testimonials.delete', { type: 'checkbox' })} readOnly={isReadOnly} />
+            </SimpleGrid>
+
+            <Divider label={t('fields.permissions.tributes.divider.label')} labelPosition="left" mt={20} />
+            <SimpleGrid cols={3}>
+              <Switch size="md" label={t('fields.permissions.tributes.create_edit.label')} description={t('fields.permissions.tributes.create_edit.description')} {...userForm.getInputProps('permissions.tributes.create_edit', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.tributes.delete.label')} description={t('fields.permissions.tributes.delete.description')} {...userForm.getInputProps('permissions.tributes.delete', { type: 'checkbox' })} readOnly={isReadOnly} />
+            </SimpleGrid>
+
+            <Divider label={t('fields.permissions.users.divider.label')} labelPosition="left" mt={20} />
+            <SimpleGrid cols={3}>
+              <Switch size="md" label={t('fields.permissions.users.view.label')} description={t('fields.permissions.users.view.description')} {...userForm.getInputProps('permissions.users.view', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.users.create_edit.label')} description={t('fields.permissions.users.create_edit.description')} {...userForm.getInputProps('permissions.users.create_edit', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.users.permissions.label')} description={t('fields.permissions.users.permissions.description')} {...userForm.getInputProps('permissions.users.permissions', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.users.approve.label')} description={t('fields.permissions.users.approve.description')} {...userForm.getInputProps('permissions.users.approve', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.users.charge_money.label')} description={t('fields.permissions.users.charge_money.description')} {...userForm.getInputProps('permissions.users.charge_money', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.users.delete.label')} description={t('fields.permissions.users.delete.description')} {...userForm.getInputProps('permissions.users.delete', { type: 'checkbox' })} readOnly={isReadOnly} />
+            </SimpleGrid>
+          </BackofficeWrapperPageSection>
+
+          <BackofficeWrapperPageSection title={t('sections.checking_account.title')} subtitle={t('sections.checking_account.subtitle')}>
+            <SimpleGrid cols={1}>TBD</SimpleGrid>
           </BackofficeWrapperPageSection>
         </BackofficeWrapperPage>
       </form>

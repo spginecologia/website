@@ -158,7 +158,7 @@ export const UserSchema = new mongoose.Schema({
     news: {
       create_edit: {
         type: Boolean,
-        default: true,
+        default: false,
       },
       delete: {
         type: Boolean,
@@ -169,7 +169,7 @@ export const UserSchema = new mongoose.Schema({
     agenda: {
       create_edit: {
         type: Boolean,
-        default: true,
+        default: false,
       },
       delete: {
         type: Boolean,
@@ -207,7 +207,7 @@ export const UserSchema = new mongoose.Schema({
     guidelines: {
       create_edit: {
         type: Boolean,
-        default: true,
+        default: false,
       },
       delete: {
         type: Boolean,
@@ -218,11 +218,11 @@ export const UserSchema = new mongoose.Schema({
     publications: {
       view: {
         type: Boolean,
-        default: true,
+        default: false,
       },
       create_edit: {
         type: Boolean,
-        default: true,
+        default: false,
       },
       delete: {
         type: Boolean,
@@ -233,11 +233,11 @@ export const UserSchema = new mongoose.Schema({
     courses: {
       view: {
         type: Boolean,
-        default: true,
+        default: false,
       },
       create_edit: {
         type: Boolean,
-        default: true,
+        default: false,
       },
       delete: {
         type: Boolean,
@@ -248,7 +248,29 @@ export const UserSchema = new mongoose.Schema({
     topics: {
       create_edit: {
         type: Boolean,
-        default: true,
+        default: false,
+      },
+      delete: {
+        type: Boolean,
+        default: false,
+      },
+    },
+    //
+    testimonials: {
+      create_edit: {
+        type: Boolean,
+        default: false,
+      },
+      delete: {
+        type: Boolean,
+        default: false,
+      },
+    },
+    //
+    tributes: {
+      create_edit: {
+        type: Boolean,
+        default: false,
       },
       delete: {
         type: Boolean,
@@ -262,6 +284,18 @@ export const UserSchema = new mongoose.Schema({
         default: false,
       },
       create_edit: {
+        type: Boolean,
+        default: false,
+      },
+      permissions: {
+        type: Boolean,
+        default: false,
+      },
+      approve: {
+        type: Boolean,
+        default: false,
+      },
+      charge_money: {
         type: Boolean,
         default: false,
       },

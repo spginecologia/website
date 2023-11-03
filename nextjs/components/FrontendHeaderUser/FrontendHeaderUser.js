@@ -33,6 +33,11 @@ export default function FrontendHeaderUser() {
   return (
     <div className={styles.container}>
       {sessionStatus === 'loading' && <Loader size={20} visible full />}
+      {sessionStatus === 'unauthenticated' && (
+        <Link href="/login" className={styles.login}>
+          <span className={styles.userFirstName}>{t('login.label')}</span>
+        </Link>
+      )}
       {sessionStatus === 'authenticated' && (
         <>
           <Link href="/account" className={styles.target}>
@@ -47,13 +52,6 @@ export default function FrontendHeaderUser() {
               </Link>
             ))}
           </div>
-        </>
-      )}
-      {sessionStatus === 'unauthenticated' && (
-        <>
-          <Link href="/login" className={styles.target}>
-            <span className={styles.userFirstName}>{t('login.label')}</span>
-          </Link>
         </>
       )}
     </div>

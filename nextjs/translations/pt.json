@@ -242,6 +242,10 @@
                         "description": ""
                     }
                 }
+            },
+            "checking_account": {
+                "title": "Conta Corrente",
+                "subtitle": "Registo de pagamentos e transações."
             }
         },
         "fields": {
@@ -380,124 +384,181 @@
                 "was_active": "Ativo {value}",
                 "was_never_active": "Este sócio nunca fez login no site"
             },
-            "admin": {
-                "divider": {
-                    "label": "Administração & Backoffice"
+            "permissions": {
+                "admin": {
+                    "divider": {
+                        "label": "Administração & Backoffice"
+                    },
+                    "backoffice": {
+                        "label": "Aceder ao Backoffice",
+                        "description": "Este sócio pode aceder ao backoffice."
+                    },
+                    "debug": {
+                        "label": "Debug",
+                        "description": "Ver detalhes de programação do site."
+                    }
                 },
-                "backoffice": {
-                    "label": "Aceder ao Backoffice",
-                    "description": "Este sócio pode aceder ao backoffice."
+                "news": {
+                    "divider": {
+                        "label": "Notícias"
+                    },
+                    "create_edit": {
+                        "label": "Editar Notícias",
+                        "description": "Este sócio pode editar notícias."
+                    },
+                    "delete": {
+                        "label": "Eliminar Notícias",
+                        "description": "Este sócio pode eliminar notícias."
+                    }
                 },
-                "debug": {
-                    "label": "Debug",
-                    "description": "Ver detalhes de programação do site."
-                }
-            },
-            "news": {
-                "divider": {
-                    "label": "Notícias"
+                "agenda": {
+                    "divider": {
+                        "label": "Agenda"
+                    },
+                    "create_edit": {
+                        "label": "Editar Eventos",
+                        "description": "Este sócio pode editar eventos."
+                    },
+                    "delete": {
+                        "label": "Eliminar Eventos",
+                        "description": "Este sócio pode eliminar eventos."
+                    }
                 },
-                "create_edit": {
-                    "label": "Editar Notícias",
-                    "description": "Este sócio pode editar notícias."
+                "videos": {
+                    "divider": {
+                        "label": "Vídeos Cirúrgicos"
+                    },
+                    "view": {
+                        "label": "Ver Vídeos Cirúrgicos",
+                        "description": "Este sócio pode ver vídeos cirúrgicos na Academia SPG."
+                    },
+                    "upload": {
+                        "label": "Subemeter Vídeos",
+                        "description": "Este sócio pode submeter novos vídeos para aprovação."
+                    },
+                    "create_edit_own": {
+                        "label": "Editar os seus Vídeos",
+                        "description": "Este sócio pode editar os vídeos que submeteu."
+                    },
+                    "approve": {
+                        "label": "Aprovar qualquer Vídeo",
+                        "description": "Este sócio pode aprovar e desaprovar qualquer vídeo submetidos."
+                    },
+                    "create_edit_all": {
+                        "label": "Editar qualquer Vídeo",
+                        "description": "Este sócio pode editar todos os vídeos submetidos."
+                    },
+                    "delete": {
+                        "label": "Eliminar qualquer Vídeo",
+                        "description": "Este sócio pode eliminar qualquer vídeo submetido."
+                    }
                 },
-                "delete": {
-                    "label": "Eliminar Notícias",
-                    "description": "Este sócio pode eliminar notícias."
-                }
-            },
-            "agenda": {
-                "divider": {
-                    "label": "Agenda"
+                "guidelines": {
+                    "divider": {
+                        "label": "Consensos"
+                    },
+                    "create_edit": {
+                        "label": "Editar Consensos",
+                        "description": "Este sócio pode editar consensos."
+                    },
+                    "delete": {
+                        "label": "Eliminar Consensos",
+                        "description": "Este sócio pode eliminar consensos."
+                    }
                 },
-                "create_edit": {
-                    "label": "Editar Eventos",
-                    "description": "Este sócio pode editar eventos."
+                "publications": {
+                    "divider": {
+                        "label": "Publicações"
+                    },
+                    "create_edit": {
+                        "label": "Editar Publicações",
+                        "description": "Este sócio pode editar publicações."
+                    },
+                    "delete": {
+                        "label": "Eliminar Publicações",
+                        "description": "Este sócio pode eliminar publicações."
+                    }
                 },
-                "delete": {
-                    "label": "Eliminar Eventos",
-                    "description": "Este sócio pode eliminar eventos."
-                }
-            },
-            "videos": {
-                "divider": {
-                    "label": "Vídeos Cirúrgicos"
+                "courses": {
+                    "divider": {
+                        "label": "Palestras & Cursos"
+                    },
+                    "create_edit": {
+                        "label": "Editar Palestras & Cursos",
+                        "description": "Este sócio pode editar palestras & cursos."
+                    },
+                    "delete": {
+                        "label": "Eliminar Palestras & Cursos",
+                        "description": "Este sócio pode eliminar palestras & cursos."
+                    }
                 },
-                "view": {
-                    "label": "Ver Vídeos Cirúrgicos",
-                    "description": "Este sócio pode ver vídeos cirúrgicos na Academia SPG."
+                "topics": {
+                    "divider": {
+                        "label": "Tópicos"
+                    },
+                    "create_edit": {
+                        "label": "Editar Tópicos",
+                        "description": "Este sócio pode editar tópicos."
+                    },
+                    "delete": {
+                        "label": "Eliminar Tópicos",
+                        "description": "Este sócio pode eliminar tópicos."
+                    }
                 },
-                "upload": {
-                    "label": "Subemeter Vídeos",
-                    "description": "Este sócio pode submeter novos vídeos para aprovação."
+                "testimonials": {
+                    "divider": {
+                        "label": "Testemunhos"
+                    },
+                    "create_edit": {
+                        "label": "Editar Testemunhos",
+                        "description": "Este sócio pode editar testemunhos."
+                    },
+                    "delete": {
+                        "label": "Eliminar Testemunhos",
+                        "description": "Este sócio pode eliminar testemunhos."
+                    }
                 },
-                "create_edit_own": {
-                    "label": "Editar os seus Vídeos",
-                    "description": "Este sócio pode editar os vídeos que submeteu."
+                "tributes": {
+                    "divider": {
+                        "label": "Homenagens"
+                    },
+                    "create_edit": {
+                        "label": "Editar Homenagens",
+                        "description": "Este sócio pode editar homenagens."
+                    },
+                    "delete": {
+                        "label": "Eliminar Homenagens",
+                        "description": "Este sócio pode eliminar homenagens."
+                    }
                 },
-                "approve": {
-                    "label": "Aprovar qualquer Vídeo",
-                    "description": "Este sócio pode aprovar e desaprovar qualquer vídeo submetidos."
-                },
-                "create_edit_all": {
-                    "label": "Editar qualquer Vídeo",
-                    "description": "Este sócio pode editar todos os vídeos submetidos."
-                },
-                "delete": {
-                    "label": "Eliminar qualquer Vídeo",
-                    "description": "Este sócio pode eliminar qualquer vídeo submetido."
-                }
-            },
-            "guidelines": {
-                "divider": {
-                    "label": "Consensos"
-                },
-                "create_edit": {
-                    "label": "Editar Consensos",
-                    "description": "Este sócio pode editar consensos."
-                },
-                "delete": {
-                    "label": "Eliminar Consensos",
-                    "description": "Este sócio pode eliminar consensos."
-                }
-            },
-            "publications": {
-                "divider": {
-                    "label": "Publicações"
-                },
-                "create_edit": {
-                    "label": "Editar Publicações",
-                    "description": "Este sócio pode editar publicações."
-                },
-                "delete": {
-                    "label": "Eliminar Publicações",
-                    "description": "Este sócio pode eliminar publicações."
-                }
-            },
-            "courses": {
-                "divider": {
-                    "label": "Palestras & Cursos"
-                },
-                "create_edit": {
-                    "label": "Editar Palestras & Cursos",
-                    "description": "Este sócio pode editar palestras & cursos."
-                },
-                "delete": {
-                    "label": "Eliminar Palestras & Cursos",
-                    "description": "Este sócio pode eliminar palestras & cursos."
-                }
-            },
-            "topics": {
-                "divider": {
-                    "label": "Tópicos"
-                },
-                "create_edit": {
-                    "label": "Editar Tópicos",
-                    "description": "Este sócio pode editar tópicos."
-                },
-                "delete": {
-                    "label": "Eliminar Tópicos",
-                    "description": "Este sócio pode eliminar tópicos."
+                "users": {
+                    "divider": {
+                        "label": "Gestão de Sócios"
+                    },
+                    "view": {
+                        "label": "Ver Sócios",
+                        "description": "Este sócio pode consultar as informações de outros sócios."
+                    },
+                    "create_edit": {
+                        "label": "Editar Sócios",
+                        "description": "Este sócio pode editar as informações de outros sócios."
+                    },
+                    "permissions": {
+                        "label": "Alterar Permissões",
+                        "description": "Este sócio pode alterar as permissões de outros sócios."
+                    },
+                    "approve": {
+                        "label": "Aprovar Sócios",
+                        "description": "Este sócio pode aprovar candidatos a sócios."
+                    },
+                    "charge_money": {
+                        "label": "Gerir Pagamentos",
+                        "description": "Este sócio pode consultar a conta corrente, enviar pedidos de pagamento e alterar o estado da subscrição de outros sócios."
+                    },
+                    "delete": {
+                        "label": "Eliminar Sócios",
+                        "description": "Este sócio pode eliminar outros sócios."
+                    }
                 }
             }
         }

@@ -15,6 +15,7 @@
 /* * */
 /* TARGET */
 
+.login,
 .target {
   display: flex;
   flex-direction: row;
@@ -25,9 +26,13 @@
   height: 100%;
   z-index: 8888;
   padding: 10px 20px;
-  background-color: #ffffff;
+  background-color: var(--color-reference-0);
   cursor: pointer;
   text-align: center;
+}
+
+.login:hover {
+  background-color: var(--spg-support-3);
 }
 
 .userTitle,
