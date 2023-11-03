@@ -2,6 +2,7 @@
 
 /* * */
 
+import 'dayjs/locale/pt';
 import { SWRConfig } from 'swr';
 import { SessionProvider } from 'next-auth/react';
 import { MantineProvider } from '@mantine/core';
@@ -39,7 +40,7 @@ export default function Providers({ children, session }) {
     <SessionProvider session={session} refetchInterval={15}>
       <SWRConfig value={swrOptions}>
         <MantineProvider>
-          <DatesProvider settings={{ locale: 'pt' }}>
+          <DatesProvider settings={{ locale: 'pt', firstDayOfWeek: 1, weekendDays: [6, 0], timezone: 'Europe/Lisbon' }}>
             <Notifications />
             <ModalsProvider>{children}</ModalsProvider>
           </DatesProvider>

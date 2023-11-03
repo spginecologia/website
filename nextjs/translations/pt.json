@@ -163,9 +163,33 @@
     },
     "BackofficeUsersPage": {
         "sections": {
+            "status": {
+                "title": "Status",
+                "subtitle": "Detalhes da conta deste sócio."
+            },
             "references": {
                 "title": "Referências",
                 "subtitle": "Informações genéricas sobre este sócio."
+            },
+            "contacts": {
+                "title": "Contactos",
+                "subtitle": "Informações genéricas sobre este sócio."
+            },
+            "activity_interests": {
+                "title": "Atividade & Interesses",
+                "subtitle": "Informações genéricas sobre este sócio."
+            },
+            "billing": {
+                "title": "Dados de Faturação",
+                "subtitle": "Informações genéricas sobre este sócio."
+            },
+            "communications": {
+                "title": "Comunicações",
+                "subtitle": "Informações genéricas sobre este sócio."
+            },
+            "observations": {
+                "title": "Observações",
+                "subtitle": "Dados privados sobre este sócio."
             }
         },
         "fields": {
@@ -197,6 +221,112 @@
             "personal_tax_id": {
                 "label": "Número de Contribuinte Pessoal",
                 "placeholder": "PT123456789"
+            },
+            "email": {
+                "label": "Email",
+                "placeholder": "nome@exemplo.pt"
+            },
+            "phone": {
+                "label": "Número de Telefone",
+                "placeholder": "+351 912 345 678"
+            },
+            "personal_address_1": {
+                "label": "Morada",
+                "placeholder": "Rua de Santa Apolónia 3"
+            },
+            "personal_address_2": {
+                "label": "Morada (Continuação)",
+                "placeholder": "Edifício 3"
+            },
+            "personal_postal_code": {
+                "label": "Código Postal",
+                "placeholder": "1234-567"
+            },
+            "personal_city": {
+                "label": "Cidade",
+                "placeholder": "Coimbra"
+            },
+            "personal_country": {
+                "label": "País",
+                "placeholder": "Portugal"
+            },
+            "primary_workplace": {
+                "label": "Local de Trabalho Principal",
+                "placeholder": "Hospital Central"
+            },
+            "secondary_workplace": {
+                "label": "Local de Trabalho Secundário",
+                "placeholder": "Clínica Local"
+            },
+            "favorite_sections": {
+                "label": "Secções de Interesse",
+                "placeholder": "Choose an option...",
+                "nothingFound": "No Results Found"
+            },
+            "favorite_topics": {
+                "label": "Tópicos de Interesse",
+                "placeholder": "Choose an option...",
+                "nothingFound": "No Results Found"
+            },
+            "billing_name": {
+                "label": "Nome p/ Fatura",
+                "placeholder": "Empresa ABC, Lda."
+            },
+            "billing_tax_id": {
+                "label": "NIF p/ Fatura",
+                "placeholder": "PT512345678"
+            },
+            "billing_address_1": {
+                "label": "Morada de Faturação",
+                "placeholder": "Rua de Santa Cruz 12"
+            },
+            "billing_address_2": {
+                "label": "Morada de Faturação (continuação)",
+                "placeholder": "Escritório 14"
+            },
+            "billing_postal_code": {
+                "label": "Código Postal de Faturação",
+                "placeholder": "1234-567"
+            },
+            "billing_city": {
+                "label": "Cidade de Faturação",
+                "placeholder": "Coimbra"
+            },
+            "billing_country": {
+                "label": "País de Faturação",
+                "placeholder": "Portugal"
+            },
+            "send_newsletter": {
+                "label": "Enviar Newsletters",
+                "description": "Sócio pretende receber newsletters periódicas."
+            },
+            "send_notifications": {
+                "label": "Enviar Alertas",
+                "description": "Sócio pretende receber alertas e outras comunicações."
+            },
+            "send_mandatory_communications": {
+                "label": "Enviar Comunicações Obrigatórias",
+                "description": "Receção de comunicações obrigatórias não pode ser desativado."
+            },
+            "admin_observations": {
+                "label": "Observações (privado)",
+                "placeholder": "Utilizador prefere envio por carta..."
+            },
+            "registration_date": {
+                "label": "Data de Registo",
+                "description": "Data do pedido de inclusão a sócio",
+                "placeholder": "10 de Fevereiro de 2023"
+            },
+            "membership_date": {
+                "label": "Sócio Desde",
+                "description": "Data de aprovação formal do membro",
+                "placeholder": "12 de Fevereiro de 2023"
+            },
+            "last_active": {
+                "label": "Última Atividade",
+                "placeholder": "2 de Novembro de 2023",
+                "was_active": "Ativo {value}",
+                "was_never_active": "Este sócio nunca fez login no site"
             }
         }
     },

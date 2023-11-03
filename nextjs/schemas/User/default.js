@@ -17,7 +17,7 @@ export const UserDefault = {
   personal_address_2: '',
   personal_postal_code: '',
   personal_city: '',
-  personal_country: '',
+  personal_country: 'Portugal',
   //
   billing_tax_id: '',
   billing_name: '',
@@ -25,7 +25,7 @@ export const UserDefault = {
   billing_address_2: '',
   billing_postal_code: '',
   billing_city: '',
-  billing_country: '',
+  billing_country: 'Portugal',
   //
   primary_workplace: '',
   secondary_workplace: '',

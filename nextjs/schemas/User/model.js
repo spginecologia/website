@@ -64,6 +64,7 @@ export const UserSchema = new mongoose.Schema({
   personal_country: {
     type: String,
     maxlength: 50,
+    default: 'Portugal',
   },
   //
   billing_tax_id: {
