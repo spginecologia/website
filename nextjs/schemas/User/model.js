@@ -22,8 +22,13 @@ export const UserSchema = new mongoose.Schema({
     type: String,
     maxlength: 150,
   },
-  birthday: {
-    type: Date,
+  display_name: {
+    type: String,
+    maxlength: 25,
+  },
+  short_display_name: {
+    type: String,
+    maxlength: 25,
   },
   //
   email: {
@@ -38,6 +43,9 @@ export const UserSchema = new mongoose.Schema({
   medical_id: {
     type: String,
     maxlength: 10,
+  },
+  birthday: {
+    type: Date,
   },
   //
   personal_tax_id: {

@@ -1,11 +1,12 @@
+/* * */
+
 import delay from '@/services/delay';
 import checkAuthentication from '@/services/checkAuthentication';
 import mongodb from '@/services/mongodb';
-import { AgencyModel } from '@/schemas/Agency/model';
+import { TopicDefault } from '@/schemas/Topic/default';
+import { TopicModel } from '@/schemas/Topic/model';
+import generator from '@/services/generator';
 
-/* * */
-/* LIST ALL AGENCIES */
-/* This endpoint returns all agencies. */
 /* * */
 
 export default async function handler(req, res) {
@@ -24,7 +25,7 @@ export default async function handler(req, res) {
   // Check for correct Authentication and valid Permissions
 
   try {
-    await checkAuthentication({ scope: 'agencies', permission: 'view', req, res });
+    await checkAuthentication({ scope: 'topics', permission: 'create_edit', req, res });
   } catch (err) {
     console.log(err);
     return await res.status(401).json({ message: err.message || 'Could not verify Authentication.' });
@@ -40,14 +41,18 @@ export default async function handler(req, res) {
     return await res.status(500).json({ message: 'MongoDB connection error.' });
   }
 
-  // 3.
-  // List all documents
+  // 2.
+  // Save a new document with default values
 
   try {
-    const allDocuments = await AgencyModel.find();
-    return await res.status(200).send(allDocuments);
+    const newDocument = { ...TopicDefault, title: `New Topic (${generator({ length: 5, type: 'numeric' })})` };
+    while (await TopicModel.exists({ title: newDocument.title })) {
+      newDocument.title = `New Topic (${generator({ length: 5, type: 'numeric' })})`;
+    }
+    const createdDocument = await TopicModel(newDocument).save();
+    return await res.status(201).json(createdDocument);
   } catch (err) {
     console.log(err);
-    return await res.status(500).json({ message: 'Cannot list Agencies.' });
+    return await res.status(500).json({ message: 'Cannot create this Topic.' });
   }
 }

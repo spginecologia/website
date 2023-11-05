@@ -1,16 +1,19 @@
 /* * */
 
+import delay from '@/services/delay';
 import checkAuthentication from '@/services/checkAuthentication';
 import mongodb from '@/services/mongodb';
+import { TopicDefault } from '@/schemas/Topic/default';
 import { TopicModel } from '@/schemas/Topic/model';
-import { TopicValidation } from '@/schemas/Topic/validation';
+import generator from '@/services/generator';
 
 /* * */
 
 export default async function handler(req, res) {
   //
+  await delay();
 
-  // 1.
+  // 0.
   // Refuse request if not GET
 
   if (req.method != 'GET') {
@@ -18,7 +21,7 @@ export default async function handler(req, res) {
     return await res.status(405).json({ message: `Method ${req.method} Not Allowed.` });
   }
 
-  // 2.
+  // 1.
   // Check for correct Authentication and valid Permissions
 
   try {
@@ -28,7 +31,7 @@ export default async function handler(req, res) {
     return await res.status(401).json({ message: err.message || 'Could not verify Authentication.' });
   }
 
-  // 3.
+  // 2.
   // Connect to MongoDB
 
   try {
@@ -38,46 +41,18 @@ export default async function handler(req, res) {
     return await res.status(500).json({ message: 'MongoDB connection error.' });
   }
 
-  // 4.
-  // Ensure latest schema modifications are applied in the database
+  // 2.
+  // Save a new document with default values
 
   try {
-    await TopicModel.syncIndexes();
-  } catch (err) {
-    console.log(err);
-    return await res.status(500).json({ message: 'Cannot sync indexes.' });
-  }
-
-  // 5.
-  // Parse request body into JSON
-
-  try {
-    req.body = await JSON.parse(req.body);
-  } catch (err) {
-    console.log(err);
-    return await res.status(500).json({ message: 'JSON parse error.' });
-  }
-
-  // 6.
-  // Validate req.body against schema
-
-  try {
-    req.body = TopicValidation.cast(req.body);
-  } catch (err) {
-    console.log(err);
-    return await res.status(400).json({ message: JSON.parse(err.message)[0].message });
-  }
-
-  // 7.
-  // Save the new document
-
-  try {
-    const createdDocument = await TopicModel(req.body).save();
+    const newDocument = { ...TopicDefault, title: `New Topic (${generator({ length: 5, type: 'numeric' })})` };
+    while (await TopicModel.exists({ title: newDocument.title })) {
+      newDocument.title = `New Topic (${generator({ length: 5, type: 'numeric' })})`;
+    }
+    const createdDocument = await TopicModel(newDocument).save();
     return await res.status(201).json(createdDocument);
   } catch (err) {
     console.log(err);
     return await res.status(500).json({ message: 'Cannot create this Topic.' });
   }
-
-  //
 }

@@ -1,18 +1,15 @@
-import delay from '@/services/delay';
+/* * */
+
 import checkAuthentication from '@/services/checkAuthentication';
 import mongodb from '@/services/mongodb';
-import { AgencyModel } from '@/schemas/Agency/model';
+import { TopicModel } from '@/schemas/Topic/model';
 
-/* * */
-/* DELETE AGENCY */
-/* Explanation needed. */
 /* * */
 
 export default async function handler(req, res) {
   //
-  await delay();
 
-  // 0.
+  // 1.
   // Refuse request if not DELETE
 
   if (req.method != 'DELETE') {
@@ -20,17 +17,17 @@ export default async function handler(req, res) {
     return await res.status(405).json({ message: `Method ${req.method} Not Allowed.` });
   }
 
-  // 1.
+  // 2.
   // Check for correct Authentication and valid Permissions
 
   try {
-    await checkAuthentication({ scope: 'agencies', permission: 'delete', req, res });
+    await checkAuthentication({ scope: 'topics', permission: 'delete', req, res });
   } catch (err) {
     console.log(err);
     return await res.status(401).json({ message: err.message || 'Could not verify Authentication.' });
   }
 
-  // 2.
+  // 3.
   // Connect to MongoDB
 
   try {
@@ -40,15 +37,17 @@ export default async function handler(req, res) {
     return await res.status(500).json({ message: 'MongoDB connection error.' });
   }
 
-  // 3.
+  // 4.
   // Delete the requested document
 
   try {
-    const deletedDocument = await AgencyModel.findOneAndDelete({ _id: { $eq: req.query._id } });
-    if (!deletedDocument) return await res.status(404).json({ message: `Agency with _id: ${req.query._id} not found.` });
-    return await res.status(200).send(deletedDocument);
+    const deletedDocument = await TopicModel.findOneAndDelete({ _id: { $eq: req.query._id } });
+    if (!deletedDocument) return await res.status(404).json({ message: `Topic with _id: ${req.query._id} not found.` });
+    else return await res.status(200).send(deletedDocument);
   } catch (err) {
     console.log(err);
-    return await res.status(500).json({ message: 'Cannot delete this Agency.' });
+    return await res.status(500).json({ message: 'Cannot delete this Topic.' });
   }
+
+  //
 }

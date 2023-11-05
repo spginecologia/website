@@ -169,6 +169,7 @@
         "loading": "A eliminar..."
     },
     "BackofficeUsersPage": {
+        "untitled": "Utilizador sem Nome",
         "operations": {
             "delete": {
                 "title": "Eliminar Utilizador",
@@ -560,6 +561,66 @@
                         "description": "Este sócio pode eliminar outros sócios."
                     }
                 }
+            }
+        }
+    },
+    "BackofficeTopicsPage": {
+        "untitled": "Tópico sem Nome",
+        "operations": {
+            "delete": {
+                "title": "Eliminar Tópico",
+                "description": "Eliminar é irreversível. Tem a certeza que pretende eliminar este tópico?",
+                "confirm": "Eliminar tópico para sempre",
+                "cancel": "Não Eliminar",
+                "loading": "A eliminar...",
+                "success": "Tópico eliminado.",
+                "error": "Ocorreu um erro ao eliminar este tópico."
+            }
+        },
+        "sections": {
+            "default": {
+                "title": "Sobre este Tópico",
+                "subtitle": "Configurar tópico"
+            }
+        },
+        "fields": {
+            "title": {
+                "label": "Título",
+                "placeholder": "Patologia Rara"
+            },
+            "description": {
+                "label": "Descrição",
+                "placeholder": "Breve resumo sobre este tópico."
+            }
+        }
+    },
+    "BackofficeNewsPage": {
+        "untitled": "Notícia sem Nome",
+        "operations": {
+            "delete": {
+                "title": "Eliminar Notícia",
+                "description": "Eliminar é irreversível. Tem a certeza que pretende eliminar esta notícia?",
+                "confirm": "Eliminar notícia para sempre",
+                "cancel": "Não Eliminar",
+                "loading": "A eliminar...",
+                "success": "Notícia eliminado.",
+                "error": "Ocorreu um erro ao eliminar esta notícia."
+            }
+        },
+        "sections": {
+            "default": {
+                "title": "Sobre este Notícia",
+                "subtitle": "Configurar tópico"
+            }
+        },
+        "fields": {
+            "title": {
+                "label": "Título",
+                "placeholder": "Patologia Rara"
+            },
+            "description": {
+                "label": "Descrição",
+                "placeholder": "Breve resumo sobre este tópico."
             }
         }
     },

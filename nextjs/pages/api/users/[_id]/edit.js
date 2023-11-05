@@ -87,30 +87,58 @@ export default async function handler(req, res) {
   // 6.
   // Reset & Ensure permissions
 
-  //   try {
-  //     // Agencies
-  //     if (!req.body.permissions.agencies.view) {
-  //       req.body.permissions.agencies.create_edit = false;
-  //       req.body.permissions.agencies.delete = false;
-  //     }
-  //     // Exports
-  //     if (!req.body.permissions.exports.view) {
-  //       req.body.permissions.exports.gtfs_v18 = false;
-  //       req.body.permissions.exports.gtfs_v29 = false;
-  //       req.body.permissions.exports.gtfs_v30 = false;
-  //       req.body.permissions.exports.agencies = [];
-  //     }
-  //     // Users
-  //     if (!req.body.permissions.users.view) {
-  //       req.body.permissions.users.create_edit = false;
-  //       req.body.permissions.users.delete = false;
-  //     }
-  //   } catch (err) {
-  //     console.log(err);
-  //     return await res.status(409).json({ message: err.message });
-  //   }
+  try {
+    // // Agencies
+    // if (!req.body.permissions.agencies.view) {
+    //   req.body.permissions.agencies.create_edit = false;
+    //   req.body.permissions.agencies.delete = false;
+    // }
+    // // Exports
+    // if (!req.body.permissions.exports.view) {
+    //   req.body.permissions.exports.gtfs_v18 = false;
+    //   req.body.permissions.exports.gtfs_v29 = false;
+    //   req.body.permissions.exports.gtfs_v30 = false;
+    //   req.body.permissions.exports.agencies = [];
+    // }
+    // // Users
+    // if (!req.body.permissions.users.view) {
+    //   req.body.permissions.users.create_edit = false;
+    //   req.body.permissions.users.delete = false;
+    // }
+  } catch (err) {
+    console.log(err);
+    return await res.status(409).json({ message: err.message });
+  }
 
   // 7.
+  // Set display name
+
+  try {
+    // Reset the display names
+    req.body.display_name = '';
+    req.body.short_display_name = '';
+    // Try to build the display names with everything
+    if (req.body.title) {
+      req.body.display_name += ` ${req.body.title} `;
+      req.body.short_display_name += ` ${req.body.title} `;
+    }
+    if (req.body.first_name) {
+      req.body.display_name += ` ${req.body.first_name} `;
+      req.body.short_display_name += ` ${req.body.first_name} `;
+    }
+    if (req.body.last_name) {
+      req.body.display_name += ` ${req.body.last_name} `;
+      req.body.short_display_name += ` ${req.body.last_name} `;
+    }
+    // Then trim the extra spaces and double spaces
+    req.body.display_name = req.body.display_name.replace(/  +/g, ' ').trim();
+    req.body.short_display_name = req.body.short_display_name.replace(/  +/g, ' ').trim();
+  } catch (err) {
+    console.log(err);
+    return await res.status(409).json({ message: err.message });
+  }
+
+  // 8.
   // Update the correct document
 
   try {

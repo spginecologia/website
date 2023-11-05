@@ -14,26 +14,26 @@ import BackofficeWrapperListItem from '@/components/BackofficeWrapperListItem/Ba
 
 /* * */
 
-export default function BackofficeUsersList() {
+export default function BackofficeTopicsList() {
   //
 
   //
   // A. Setup variables
 
   const router = useRouter();
-  const { user_id } = useParams();
+  const { topic_id } = useParams();
   const [searchQuery, setSearchQuery] = useState('');
   const [isCreating, setIsCreating] = useState(false);
 
   //
   // B. Fetch data
 
-  const { data: allUsersData, isLoading: allUsersLoading, mutate: allUsersMutate } = useSWR('/api/users');
+  const { data: allTopicsData, isLoading: allTopicsLoading, mutate: allTopicsMutate } = useSWR('/api/topics');
 
   //
   // C. Handle search
 
-  const filteredUsersData = useSearch(searchQuery, allUsersData, { keys: ['name', 'email', 'phone'] });
+  const filteredTopicsData = useSearch(searchQuery, allTopicsData, { keys: ['title'] });
 
   //
   // D. Handle actions
@@ -41,9 +41,9 @@ export default function BackofficeUsersList() {
   const handleCreate = async () => {
     try {
       setIsCreating(true);
-      const result = await API({ service: 'users', operation: 'create', method: 'GET' });
-      router.push(`/admin/users/${result._id}`);
-      allUsersMutate();
+      const result = await API({ service: 'topics', operation: 'create', method: 'GET' });
+      router.push(`/admin/topics/${result._id}`);
+      allTopicsMutate();
       setIsCreating(false);
     } catch (err) {
       console.log(err);
@@ -52,16 +52,16 @@ export default function BackofficeUsersList() {
   };
 
   const handleOpen = async (item_id) => {
-    if (user_id === item_id) return;
-    router.push(`/admin/users/${item_id}`);
+    if (topic_id === item_id) return;
+    router.push(`/admin/topics/${item_id}`);
   };
 
   //
   // E. Render components
 
   return (
-    <BackofficeWrapperList isLoading={allUsersLoading} searchQuery={searchQuery} onChangeSearchQuery={setSearchQuery} isCreating={isCreating} onCreate={handleCreate}>
-      {filteredUsersData && filteredUsersData.length > 0 ? filteredUsersData.map((item) => <BackofficeWrapperListItem key={item._id} title={item.display_name} subtitle={item.personal_tax_id} onClick={() => handleOpen(item._id)} isSelected={user_id === item._id} />) : <NoDataLabel fill />}
+    <BackofficeWrapperList isLoading={allTopicsLoading} searchQuery={searchQuery} onChangeSearchQuery={setSearchQuery} isCreating={isCreating} onCreate={handleCreate}>
+      {filteredTopicsData && filteredTopicsData.length > 0 ? filteredTopicsData.map((item) => <BackofficeWrapperListItem key={item._id} title={item.title} onClick={() => handleOpen(item._id)} isSelected={topic_id === item._id} />) : <NoDataLabel fill />}
     </BackofficeWrapperList>
   );
 

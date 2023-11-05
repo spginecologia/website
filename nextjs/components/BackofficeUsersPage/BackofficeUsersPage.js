@@ -256,7 +256,7 @@ export default function BackofficeUsersPage() {
     <UserFormProvider form={userForm}>
       <form onSubmit={userForm.onSubmit(async () => await handleSave())}>
         <BackofficeWrapperPage
-          title={`${userData?.title} ${userData?.first_name} ${userData?.last_name}`}
+          title={userData?.display_name || t('untitled')}
           isDirty={userForm.isDirty()}
           isValid={userForm.isValid()}
           isLoading={userLoading}

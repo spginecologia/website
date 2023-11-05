@@ -46,10 +46,12 @@ export default async function handler(req, res) {
   // Save a new document with default values
 
   try {
-    const newDocument = { ...UserDefault, name: generator({ length: 5 }) };
-    while (await UserModel.exists({ name: newDocument.name })) {
-      newDocument.name = generator({ length: 5 });
+    const newDocument = { ...UserDefault, first_name: `New User (${generator({ length: 5, type: 'numeric' })})` };
+    while (await UserModel.exists({ first_name: newDocument.first_name })) {
+      newDocument.first_name = `New User (${generator({ length: 5, type: 'numeric' })})`;
     }
+    newDocument.display_name = newDocument.first_name;
+    newDocument.short_display_name = newDocument.first_name;
     const createdDocument = await UserModel(newDocument).save();
     return await res.status(201).json(createdDocument);
   } catch (err) {

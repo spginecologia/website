@@ -1,7 +1,7 @@
-:root {
-  /* * */
-  /* COLORS */
+/* * */
+/* COLORS */
 
+:root {
   /* BRAND */
   --spg-brand-1: #a0285a;
   --spg-brand-2: #b46996;
@@ -22,10 +22,37 @@
   --color-state-warning-background: rgba(0, 0, 0, 0.25);
   --color-state-error: #b41e00;
   --color-state-error-background: rgba(180, 30, 0, 0.15);
+}
 
-  /* * */
-  /* DIMENSIONS */
+@media (prefers-color-scheme: dark) {
+  /* :root { */
+  /* BRAND */
+  /* --spg-brand-1: #a0285a; */
+  /* --spg-brand-2: #b46996; */
+  /* --spg-brand-3: #f5cdcd; */
+  /* SUPPORT */
+  /* --spg-support-1: #870f50; */
+  /* --spg-support-2: #64003c; */
+  /* --spg-support-3: #242227; */
+  /* --spg-support-4: #aa9797; */
+  /* --spg-support-5: #786e7c; */
+  /* REFERENCE */
+  /* --color-reference-0: #171b21; */
+  /* --color-reference-1: #cdd9e5; */
+  /* STATE */
+  /* --color-state-success: #000000; */
+  /* --color-state-success-background: rgba(0, 0, 0, 0.25); */
+  /* --color-state-warning: #ffffff; */
+  /* --color-state-warning-background: rgba(0, 0, 0, 0.25); */
+  /* --color-state-error: #b41e00; */
+  /* --color-state-error-background: rgba(180, 30, 0, 0.15); */
+  /* } */
+}
 
+/* * */
+/* DIMENSIONS */
+
+:root {
   /* SIZES */
   --size-xs: 5px;
   --size-sm: 10px;

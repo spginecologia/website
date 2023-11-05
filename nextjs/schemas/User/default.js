@@ -6,11 +6,13 @@ export const UserDefault = {
   first_name: '',
   last_name: '',
   full_name: '',
-  birthday: null,
+  display_name: '',
+  short_display_name: '',
   //
   phone: '',
   email: '',
   medical_id: '',
+  birthday: null,
   //
   personal_tax_id: '',
   personal_address_1: '',
