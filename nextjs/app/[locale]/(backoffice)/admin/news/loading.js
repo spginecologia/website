@@ -1,7 +1,7 @@
 /* * */
 
 import Loader from '@/components/Loader/Loader';
-import Section from '@/components/Section/Section';
+import Section from '@/components/FrontendSection/FrontendSection';
 
 /* * */
 

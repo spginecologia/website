@@ -1,7 +1,7 @@
 /* * */
 
 import NoDataLabel from '@/components/NoDataLabel/NoDataLabel';
-import Section from '@/components/Section/Section';
+import Section from '@/components/FrontendSection/FrontendSection';
 import { Space } from '@mantine/core';
 
 /* * */

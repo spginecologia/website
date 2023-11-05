@@ -7,7 +7,7 @@ import { useSession } from 'next-auth/react';
 import { useSearchParams } from 'next/navigation';
 import { useRouter } from 'next-intl/client';
 import styles from './AuthExplorer.module.css';
-import Section from '@/components/Section/Section';
+import Section from '@/components/FrontendSection/FrontendSection';
 import Loader from '@/components/Loader/Loader';
 import Panel from '@/components/Panel/Panel';
 

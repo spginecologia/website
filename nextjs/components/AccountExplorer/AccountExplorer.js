@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next-intl/client';
 import styles from './AccountExplorer.module.css';
-import Section from '@/components/Section/Section';
+import Section from '@/components/FrontendSection/FrontendSection';
 import Loader from '@/components/Loader/Loader';
 
 /* * */
