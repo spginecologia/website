@@ -1,0 +1,24 @@
+/* * */
+/* TAG AND LINK */
+
+.tag,
+.link {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--spg-brand-1);
+  text-transform: uppercase;
+  border-radius: 5px;
+  line-height: 1.3;
+}
+
+/* * */
+/* LINK */
+
+.link {
+  transition: all 0.2s ease;
+}
+
+.link:hover {
+  color: var(--spg-support-2);
+  text-decoration: underline;
+}

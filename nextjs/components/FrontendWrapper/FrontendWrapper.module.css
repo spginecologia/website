@@ -4,5 +4,8 @@
 .container {
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
   background-color: var(--color-reference-0);
 }

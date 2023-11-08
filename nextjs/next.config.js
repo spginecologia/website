@@ -3,6 +3,9 @@
 module.exports = {
   output: 'standalone',
   reactStrictMode: true,
+  images: {
+    remotePatterns: [{ protocol: 'https', hostname: 'spginecologia.pt', port: '' }],
+  },
   async redirects() {
     return [
       //   {

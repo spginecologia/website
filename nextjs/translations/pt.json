@@ -624,6 +624,9 @@
             }
         }
     },
+    "FrontendPublishDate": {
+        "label": "Publicado a {date}"
+    },
     "none-1": {},
     "none-2": {},
     "none-3": {},
