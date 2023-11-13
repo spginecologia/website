@@ -28,12 +28,12 @@ export default function BackofficeNewsList() {
   //
   // B. Fetch data
 
-  const { data: allTopicsData, isLoading: allTopicsLoading, mutate: allTopicsMutate } = useSWR('/api/news');
+  const { data: allNewsData, isLoading: allNewsLoading, mutate: allNewsMutate } = useSWR('/api/news/all');
 
   //
   // C. Handle search
 
-  const filteredTopicsData = useSearch(searchQuery, allTopicsData, { keys: ['title'] });
+  const filteredNewsData = useSearch(searchQuery, allNewsData, { keys: ['title'] });
 
   //
   // D. Handle actions
@@ -43,7 +43,7 @@ export default function BackofficeNewsList() {
       setIsCreating(true);
       const result = await API({ service: 'news', operation: 'create', method: 'GET' });
       router.push(`/admin/news/${result._id}`);
-      allTopicsMutate();
+      allNewsMutate();
       setIsCreating(false);
     } catch (err) {
       console.log(err);
@@ -60,8 +60,8 @@ export default function BackofficeNewsList() {
   // E. Render components
 
   return (
-    <BackofficeWrapperList isLoading={allTopicsLoading} searchQuery={searchQuery} onChangeSearchQuery={setSearchQuery} isCreating={isCreating} onCreate={handleCreate}>
-      {filteredTopicsData && filteredTopicsData.length > 0 ? filteredTopicsData.map((item) => <BackofficeWrapperListItem key={item._id} title={item.title} onClick={() => handleOpen(item._id)} isSelected={news_id === item._id} />) : <NoDataLabel fill />}
+    <BackofficeWrapperList isLoading={allNewsLoading} searchQuery={searchQuery} onChangeSearchQuery={setSearchQuery} isCreating={isCreating} onCreate={handleCreate}>
+      {filteredNewsData && filteredNewsData.length > 0 ? filteredNewsData.map((item) => <BackofficeWrapperListItem key={item._id} title={item.title} onClick={() => handleOpen(item._id)} isSelected={news_id === item._id} />) : <NoDataLabel fill />}
     </BackofficeWrapperList>
   );
 

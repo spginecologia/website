@@ -36,7 +36,7 @@ export default async function handler(req, res) {
     return await res.status(200).send(sortedDocuments);
   } catch (err) {
     console.log(err);
-    return await res.status(500).json({ message: 'Cannot list Newss.' });
+    return await res.status(500).json({ message: 'Cannot list News.' });
   }
 
   //

@@ -1,0 +1,56 @@
+/* * */
+/* CONTAINER */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-items: flex-start;
+  align-items: flex-start;
+  gap: 15px;
+  transition: all 300ms ease;
+  min-height: 200px;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0);
+  overflow: hidden;
+  background-color: var(--color-reference-0);
+  padding: 20px;
+}
+
+.container:hover {
+  border-color: var(--spg-brand-1);
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.15);
+}
+
+/* * */
+/* IMAGE WRAPPER */
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  background-color: blue;
+  padding-bottom: 60%;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* * */
+/* CONTENT WRAPPER */
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-items: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+/* * */
+/* TITLE */
+
+.title {
+  font-family: 'lemonde-journal';
+  color: #000000;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: left;
+  font-size: 21px;
+  color: var(--spg-brand-1);
+}

@@ -3,8 +3,8 @@
 import delay from '@/services/delay';
 import checkAuthentication from '@/services/checkAuthentication';
 import mongodb from '@/services/mongodb';
-import { TopicDefault } from '@/schemas/Topic/default';
-import { TopicModel } from '@/schemas/Topic/model';
+import { NewsDefault } from '@/schemas/News/default';
+import { NewsModel } from '@/schemas/News/model';
 import generator from '@/services/generator';
 
 /* * */
@@ -25,7 +25,7 @@ export default async function handler(req, res) {
   // Check for correct Authentication and valid Permissions
 
   try {
-    await checkAuthentication({ scope: 'topics', permission: 'create_edit', req, res });
+    await checkAuthentication({ scope: 'news', permission: 'create_edit', req, res });
   } catch (err) {
     console.log(err);
     return await res.status(401).json({ message: err.message || 'Could not verify Authentication.' });
@@ -45,14 +45,14 @@ export default async function handler(req, res) {
   // Save a new document with default values
 
   try {
-    const newDocument = { ...TopicDefault, title: `New Topic (${generator({ length: 5, type: 'numeric' })})` };
-    while (await TopicModel.exists({ title: newDocument.title })) {
-      newDocument.title = `New Topic (${generator({ length: 5, type: 'numeric' })})`;
+    const newDocument = { ...NewsDefault, title: `New Article (${generator({ length: 5, type: 'numeric' })})` };
+    while (await NewsModel.exists({ title: newDocument.title })) {
+      newDocument.title = `New Article (${generator({ length: 5, type: 'numeric' })})`;
     }
-    const createdDocument = await TopicModel(newDocument).save();
+    const createdDocument = await NewsModel(newDocument).save();
     return await res.status(201).json(createdDocument);
   } catch (err) {
     console.log(err);
-    return await res.status(500).json({ message: 'Cannot create this Topic.' });
+    return await res.status(500).json({ message: 'Cannot create this News.' });
   }
 }

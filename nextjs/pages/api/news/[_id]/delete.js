@@ -2,7 +2,7 @@
 
 import checkAuthentication from '@/services/checkAuthentication';
 import mongodb from '@/services/mongodb';
-import { TopicModel } from '@/schemas/Topic/model';
+import { NewsModel } from '@/schemas/News/model';
 
 /* * */
 
@@ -41,12 +41,12 @@ export default async function handler(req, res) {
   // Delete the requested document
 
   try {
-    const deletedDocument = await TopicModel.findOneAndDelete({ _id: { $eq: req.query._id } });
-    if (!deletedDocument) return await res.status(404).json({ message: `Topic with _id: ${req.query._id} not found.` });
+    const deletedDocument = await NewsModel.findOneAndDelete({ _id: { $eq: req.query._id } });
+    if (!deletedDocument) return await res.status(404).json({ message: `News with _id: ${req.query._id} not found.` });
     else return await res.status(200).send(deletedDocument);
   } catch (err) {
     console.log(err);
-    return await res.status(500).json({ message: 'Cannot delete this Topic.' });
+    return await res.status(500).json({ message: 'Cannot delete this News.' });
   }
 
   //
