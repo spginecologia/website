@@ -5,7 +5,7 @@
 import { useEffect } from 'react';
 import { useSession } from 'next-auth/react';
 import { useSearchParams } from 'next/navigation';
-import { useRouter } from 'next-intl/client';
+import { useRouter } from '@/translations/navigation';
 import styles from './AuthExplorer.module.css';
 import Section from '@/components/FrontendSection/FrontendSection';
 import Loader from '@/components/Loader/Loader';

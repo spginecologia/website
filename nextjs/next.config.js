@@ -1,6 +1,10 @@
-/** @type {import('next').NextConfig} */
+/* * */
 
-module.exports = {
+const withNextIntl = require('next-intl/plugin')();
+
+/* * */
+
+module.exports = withNextIntl({
   output: 'standalone',
   reactStrictMode: true,
   images: {
@@ -15,4 +19,4 @@ module.exports = {
       //   },
     ];
   },
-};
+});

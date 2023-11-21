@@ -2,7 +2,7 @@
 
 /* * */
 
-import { useRouter } from 'next-intl/client';
+import { useRouter } from '@/translations/navigation';
 import { useTranslations } from 'next-intl';
 import styles from './AuthExplorerSignInVerify.module.css';
 import Title from '@/components/Title/Title';

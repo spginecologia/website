@@ -2,7 +2,7 @@
 
 /* * */
 
-import Link from 'next-intl/link';
+import { Link } from '@/translations/navigation';
 import styles from './FrontendFooterLegal.module.css';
 import { useTranslations } from 'next-intl';
 

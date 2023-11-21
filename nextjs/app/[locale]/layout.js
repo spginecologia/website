@@ -1,22 +1,17 @@
-'use client';
-
 /* * */
 
 import { notFound } from 'next/navigation';
-import { NextIntlClientProvider } from 'next-intl';
+import { availableLocales } from '@/translations/config';
+import { NextIntlClientProvider, useMessages } from 'next-intl';
 
 /* * */
 
-export default async function Layout({ children, params: { locale } }) {
+export default function Layout({ children, params: { locale } }) {
   //
 
-  let messages;
+  if (!availableLocales.includes(locale)) notFound();
 
-  try {
-    messages = (await import(`../../translations/${locale}.json`)).default;
-  } catch (error) {
-    notFound();
-  }
+  const messages = useMessages();
 
   return (
     <NextIntlClientProvider locale={locale} messages={messages} timeZone="Europe/Lisbon" now={Date.now()}>

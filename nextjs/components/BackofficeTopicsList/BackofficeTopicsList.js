@@ -4,7 +4,7 @@
 
 import useSWR from 'swr';
 import { useState } from 'react';
-import { useRouter } from 'next-intl/client';
+import { useRouter } from '@/translations/navigation';
 import { useParams } from 'next/navigation';
 import API from '@/services/API';
 import useSearch from '@/hooks/useSearch';

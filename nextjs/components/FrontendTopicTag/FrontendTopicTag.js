@@ -2,7 +2,7 @@
 
 /* * */
 
-import Link from 'next-intl/link';
+import { Link } from '@/translations/navigation';
 import styles from './FrontendTopicTag.module.css';
 import Loader from '@/components/Loader/Loader';
 

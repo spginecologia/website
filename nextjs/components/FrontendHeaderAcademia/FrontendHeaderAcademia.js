@@ -4,7 +4,7 @@
 
 import styles from './FrontendHeaderAcademia.module.css';
 import { SpgAcademia } from '@/assets/spg';
-import Link from 'next-intl/link';
+import { Link } from '@/translations/navigation';
 import { useTranslations } from 'next-intl';
 import { IconBooks, IconBrandYoutube, IconBuildingCottage, IconBulb, IconFileCheck, IconListSearch, IconSchool, IconVideoPlus } from '@tabler/icons-react';
 

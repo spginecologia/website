@@ -1,6 +1,6 @@
 /* * */
 
-import Link from 'next-intl/link';
+import { Link } from '@/translations/navigation';
 import styles from './FrontendHeaderLogo.module.css';
 import { SpgLogoCompact } from '@/assets/spg';
 

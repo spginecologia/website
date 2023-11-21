@@ -3,7 +3,7 @@
 /* * */
 
 import { useSearchParams } from 'next/navigation';
-import { useRouter } from 'next-intl/client';
+import { useRouter } from '@/translations/navigation';
 import { useTranslations } from 'next-intl';
 import styles from './AuthExplorerSignInError.module.css';
 import Title from '@/components/Title/Title';

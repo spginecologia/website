@@ -3,7 +3,7 @@
 /* * */
 
 import styles from './FrontendHeaderUser.module.css';
-import Link from 'next-intl/link';
+import { Link } from '@/translations/navigation';
 import { useTranslations } from 'next-intl';
 import { useSession } from 'next-auth/react';
 import { IconSettings, IconUserCircle } from '@tabler/icons-react';

@@ -2,7 +2,7 @@
 
 /* * */
 
-import Link from 'next-intl/link';
+import { Link } from '@/translations/navigation';
 import styles from './BackofficeSidebar.module.css';
 import AuthGate from '@/components/AuthGate/AuthGate';
 import { SpgLogoIcon } from '@/assets/spg';

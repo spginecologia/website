@@ -2,7 +2,7 @@
 
 /* * */
 
-import Link from 'next-intl/link';
+import { Link } from '@/translations/navigation';
 import styles from './FrontendHeaderMenu.module.css';
 import { useTranslations } from 'next-intl';
 import { IconSearch } from '@tabler/icons-react';

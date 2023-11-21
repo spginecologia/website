@@ -1,7 +1,7 @@
 /* * */
 
 import { withAuth } from 'next-auth/middleware';
-import { availableLocales } from './translations/config';
+import { availableLocales } from '@/translations/config';
 import createIntlMiddleware from 'next-intl/middleware';
 
 /* * */
@@ -40,14 +40,16 @@ const PUBLIC_PAGES = [
 
 /* * */
 
-const intlMiddleware = createIntlMiddleware({ locales: availableLocales, defaultLocale: 'pt' });
+const intlMiddleware = createIntlMiddleware({ locales: availableLocales, defaultLocale: 'pt', localePrefix: 'as-needed' });
 
 const authMiddleware = withAuth((req) => intlMiddleware(req));
 
 /* * */
 
 export default function middleware(req) {
-  const publicPathnameRegex = RegExp(`^(/(${availableLocales.join('|')}))?(${PUBLIC_PAGES.map((page) => page.replace('*', '.*')).join('|')})/?$`, 'i');
+  const LOCALE_REGEX = `(/(${availableLocales.join('|')}))`;
+  const PUBLIC_PAGES_REGEX = PUBLIC_PAGES.map((page) => page.replace('*', '.*')).join('|');
+  const publicPathnameRegex = RegExp(`^${LOCALE_REGEX}?(${PUBLIC_PAGES_REGEX})/?$`, 'i');
   const isPublicPage = publicPathnameRegex.test(req.nextUrl.pathname);
 
   if (isPublicPage) {
@@ -57,7 +59,9 @@ export default function middleware(req) {
   }
 }
 
+/* * */
+
 export const config = {
   // Skip all paths that should not be internationalized
-  matcher: ['/((?!api|_next|.*\\..*).*)'],
+  matcher: ['/((?!api|_next|_vercel|.*\\..*).*)'],
 };
