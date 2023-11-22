@@ -5,6 +5,7 @@ import FrontendSection from '@/components/FrontendSection/FrontendSection';
 import FrontendNewsGridFeatured from '@/components/FrontendNewsGridFeatured/FrontendNewsGridFeatured';
 import FrontendNewsGridWrapper from '@/components/FrontendNewsGridWrapper/FrontendNewsGridWrapper';
 import FrontendNewsGridRegular from '@/components/FrontendNewsGridRegular/FrontendNewsGridRegular';
+import FrontendWrapperInner from '@/components/FrontendWrapperInner/FrontendWrapperInner';
 
 /* * */
 
@@ -29,7 +30,7 @@ export default function FrontendNewsPage() {
   // B. Render components
 
   return (
-    <>
+    <FrontendWrapperInner>
       <FrontendSection first>
         <FrontendNewsGridFeatured />
       </FrontendSection>
@@ -40,7 +41,7 @@ export default function FrontendNewsPage() {
           ))}
         </FrontendNewsGridWrapper>
       </FrontendSection>
-    </>
+    </FrontendWrapperInner>
   );
 
   //

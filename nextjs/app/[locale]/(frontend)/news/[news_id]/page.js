@@ -1,16 +1,9 @@
 /* * */
 
-import NoDataLabel from '@/components/NoDataLabel/NoDataLabel';
-import Section from '@/components/FrontendSection/FrontendSection';
-import { Space } from '@mantine/core';
+import FrontendNewsPageDetail from '@/components/FrontendNewsPageDetail/FrontendNewsPageDetail';
 
 /* * */
 
 export default function Page() {
-  return (
-    <Section first>
-      <NoDataLabel text={'Notícias'} />
-      <Space h={300} />
-    </Section>
-  );
+  return <FrontendNewsPageDetail />;
 }
