@@ -1,9 +1,9 @@
 /* * */
 
-import AccountExplorerVideos from '@/components/AccountExplorerVideos/AccountExplorerVideos';
+import FrontendAccountVideos from '@/components/FrontendAccountVideos/FrontendAccountVideos';
 
 /* * */
 
 export default function Page() {
-  return <AccountExplorerVideos />;
+  return <FrontendAccountVideos />;
 }

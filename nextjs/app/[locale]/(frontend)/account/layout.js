@@ -1,15 +1,15 @@
 /* * */
 
-import AccountExplorer from '@/components/AccountExplorer/AccountExplorer';
+import FrontendAccount from '@/components/FrontendAccount/FrontendAccount';
 
 /* * */
 
 export default function Layout({ profile, payments, videos }) {
   return (
-    <AccountExplorer>
+    <FrontendAccount>
       {profile}
       {payments}
       {videos}
-    </AccountExplorer>
+    </FrontendAccount>
   );
 }

@@ -12,7 +12,7 @@ import FrontendPublishDate from '@/components/FrontendPublishDate/FrontendPublis
 
 export default function FrontendNewsGridFeatured() {
   return (
-    <Link href={'/'} className={styles.container}>
+    <Link href={'/news/jhdbs'} className={styles.container}>
       <div className={styles.imageWrapper}>
         <Image src="https://spginecologia.pt/wp-content/uploads/2023/10/Portugese-2023-WMD-FLYER-Colour-1-copy-scaled.jpg" fill style={{ objectFit: 'cover' }} />
       </div>

@@ -122,15 +122,19 @@
             }
         }
     },
-    "AccountExplorerProfile": {
-        "title": "Perfil de Sócio",
+    "FrontendAccount": {
+        "title": "A minha conta",
         "subtitle": "Todas as suas informações"
     },
-    "AccountExplorerPayments": {
+    "FrontendAccountProfile": {
+        "title": "Dados Pessoais",
+        "subtitle": "Todas as suas informações"
+    },
+    "FrontendAccountPayments": {
         "title": "Conta Corrente",
         "subtitle": "Todos os seus pagamentos"
     },
-    "AccountExplorerVideos": {
+    "FrontendAccountVideos": {
         "title": "Videos",
         "subtitle": "Todos os seus videos"
     },

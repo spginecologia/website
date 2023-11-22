@@ -1,9 +1,9 @@
 /* * */
 
-import AccountExplorerPayments from '@/components/AccountExplorerPayments/AccountExplorerPayments';
+import FrontendAccountPayments from '@/components/FrontendAccountPayments/FrontendAccountPayments';
 
 /* * */
 
 export default function Page() {
-  return <AccountExplorerPayments />;
+  return <FrontendAccountPayments />;
 }

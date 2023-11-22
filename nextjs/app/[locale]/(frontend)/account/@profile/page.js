@@ -1,9 +1,9 @@
 /* * */
 
-import AccountExplorerProfile from '@/components/AccountExplorerProfile/AccountExplorerProfile';
+import FrontendAccountProfile from '@/components/FrontendAccountProfile/FrontendAccountProfile';
 
 /* * */
 
 export default function Page() {
-  return <AccountExplorerProfile />;
+  return <FrontendAccountProfile />;
 }

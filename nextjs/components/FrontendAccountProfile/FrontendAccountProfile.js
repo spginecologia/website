@@ -3,20 +3,20 @@
 /* * */
 
 import { useTranslations } from 'next-intl';
-import styles from './AccountExplorerVideos.module.css';
+import styles from './FrontendAccountProfile.module.css';
 import Title from '@/components/Title/Title';
 import Text from '@/components/Text/Text';
 import Panel from '@/components/Panel/Panel';
 
 /* * */
 
-export default function AccountExplorerVideos() {
+export default function FrontendAccountProfile() {
   //
 
   //
   // A. Setup variables
 
-  const t = useTranslations('AccountExplorerVideos');
+  const t = useTranslations('FrontendAccountProfile');
 
   //
   // C. Render components
