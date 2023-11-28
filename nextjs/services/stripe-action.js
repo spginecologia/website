@@ -7,6 +7,7 @@ import { formatAmountForStripe } from '@/services/stripe-helpers';
 import { stripe } from '@/services/stripe-lib';
 
 export async function createCheckoutSession(data) {
+  return 'uidhiudh';
   const checkoutSession = await stripe.checkout.sessions.create({
     mode: 'payment',
     submit_type: 'donate',
