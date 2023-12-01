@@ -3,6 +3,7 @@
 import delay from '@/services/delay';
 import checkAuthentication from '@/services/checkAuthentication';
 import mongodb from '@/services/mongodb';
+import STRIPE from '@/services/STRIPE';
 import { UserModel } from '@/schemas/User/model';
 
 /* * */
@@ -42,12 +43,41 @@ export default async function handler(req, res) {
   // 3.
   // Fetch the correct document
 
+  let foundDocument;
   try {
-    const foundDocument = await UserModel.findOne({ _id: { $eq: req.query._id } });
+    foundDocument = await UserModel.findOne({ _id: { $eq: req.query._id } });
     if (!foundDocument) return await res.status(404).json({ message: `User with _id: ${req.query._id} not found.` });
-    return await res.status(200).json({ status: foundDocument.subscription_status ? true : false });
   } catch (err) {
     console.log(err);
     return await res.status(500).json({ message: 'Cannot fetch this User.' });
   }
+
+  // 4.
+  // Create a checkout session
+
+  const checkoutSession = await STRIPE.checkout.sessions.create({
+    //
+    mode: 'subscription',
+    //
+    success_url: `http://localhost:3000/account?session_id={CHECKOUT_SESSION_ID}`,
+    cancel_url: `http://localhost:3000/account`,
+    //
+    customer: foundDocument._id,
+    customer_email: foundDocument.email,
+    //
+    line_items: [
+      {
+        quantity: 1,
+        price: 'price_1JODFuLAEpuD5IbneJw36Rk0',
+      },
+    ],
+    //
+  });
+
+  // 5.
+  // Redirect user
+
+  res.redirect(checkoutSession.url);
+
+  //
 }
