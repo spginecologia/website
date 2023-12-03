@@ -26,7 +26,7 @@ export default function FrontendAccountSubscription() {
   //
   // B. Fetch data
 
-  const { data: subscriptionData, isLoading: subscriptionLoading } = useSWR('/api/subscription');
+  const { data: subscriptionData, isLoading: subscriptionLoading } = useSWR('/api/account/subscription');
 
   //
   // C. Render components

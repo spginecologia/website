@@ -20,7 +20,7 @@ export default function FrontendAccountSubscriptionManage({ status }) {
   switch (status) {
     case 'active':
       return (
-        <a className={`${styles.container} ${styles.active}`} href="/api/subscription/manage">
+        <a className={`${styles.container} ${styles.active}`} href="/api/account/subscription/manage">
           <IconCreditCardPay size={18} />
           <p className={styles.label}>{t('active')}</p>
         </a>
@@ -29,7 +29,7 @@ export default function FrontendAccountSubscriptionManage({ status }) {
     case 'past_due':
     case 'incomplete':
       return (
-        <a className={`${styles.container} ${styles.pastDue}`} href="/api/subscription/manage">
+        <a className={`${styles.container} ${styles.pastDue}`} href="/api/account/subscription/manage">
           <IconCreditCardPay size={18} />
           <p className={styles.label}>{t('past_due')}</p>
         </a>
@@ -39,7 +39,7 @@ export default function FrontendAccountSubscriptionManage({ status }) {
     case 'canceled':
     case 'incomplete_expired':
       return (
-        <a className={`${styles.container} ${styles.canceled}`} href="/api/subscription/renew">
+        <a className={`${styles.container} ${styles.canceled}`} href="/api/account/subscription/renew">
           <IconCreditCardPay size={18} />
           <p className={styles.label}>{t('canceled')}</p>
         </a>
@@ -47,7 +47,7 @@ export default function FrontendAccountSubscriptionManage({ status }) {
 
     default:
       return (
-        <a className={`${styles.container} ${styles.notFound}`} href="/api/subscription/renew">
+        <a className={`${styles.container} ${styles.notFound}`} href="/api/account/subscription/renew">
           <IconCreditCardPay size={18} />
           <p className={styles.label}>{t('not_found')}</p>
         </a>
