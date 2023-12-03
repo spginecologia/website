@@ -1,0 +1,52 @@
+/* * */
+/* CONTAINER */
+
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.container:hover {
+  text-decoration: underline;
+}
+
+/* * */
+/* LABEL */
+
+.label {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+
+/* * */
+/* STATUSES */
+
+.active,
+.pastDue,
+.notFound {
+  color: var(--spg-support-4);
+}
+.active:hover,
+.pastDue:hover,
+.notFound:hover {
+  color: var(--spg-support-5);
+}
+
+.pastDue {
+  color: var(--color-reference-1);
+}
+.pastDue:hover {
+  color: var(--color-reference-1);
+}
+
+.canceled {
+  color: var(--spg-brand-2);
+}
+.canceled:hover {
+  color: var(--spg-brand-1);
+}

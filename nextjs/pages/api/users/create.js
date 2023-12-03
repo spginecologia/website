@@ -1,6 +1,6 @@
 import delay from '@/services/delay';
 import checkAuthentication from '@/services/checkAuthentication';
-import mongodb from '@/services/mongodb';
+import mongodb from '@/services/MONGOOSE';
 import { UserDefault } from '@/schemas/User/default';
 import { UserModel } from '@/schemas/User/model';
 import generator from '@/services/generator';

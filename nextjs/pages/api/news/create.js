@@ -2,7 +2,7 @@
 
 import delay from '@/services/delay';
 import checkAuthentication from '@/services/checkAuthentication';
-import mongodb from '@/services/mongodb';
+import mongodb from '@/services/MONGOOSE';
 import { NewsDefault } from '@/schemas/News/default';
 import { NewsModel } from '@/schemas/News/model';
 import generator from '@/services/generator';

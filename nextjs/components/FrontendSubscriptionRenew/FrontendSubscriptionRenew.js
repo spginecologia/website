@@ -11,7 +11,6 @@ import FrontendSubscriptionRenewSuccess from '@/components/FrontendSubscriptionR
 import FrontendSubscriptionRenewError from '@/components/FrontendSubscriptionRenewError/FrontendSubscriptionRenewError';
 import FrontendSubscriptionRenewLoading from '@/components/FrontendSubscriptionRenewLoading/FrontendSubscriptionRenewLoading';
 import useSWR from 'swr';
-import { useSession } from 'next-auth/react';
 
 /* * */
 

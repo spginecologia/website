@@ -1,7 +1,7 @@
 /* * */
 
 import checkAuthentication from '@/services/checkAuthentication';
-import mongodb from '@/services/mongodb';
+import mongodb from '@/services/MONGOOSE';
 import { TopicModel } from '@/schemas/Topic/model';
 
 /* * */

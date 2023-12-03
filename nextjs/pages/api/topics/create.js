@@ -2,7 +2,7 @@
 
 import delay from '@/services/delay';
 import checkAuthentication from '@/services/checkAuthentication';
-import mongodb from '@/services/mongodb';
+import mongodb from '@/services/MONGOOSE';
 import { TopicDefault } from '@/schemas/Topic/default';
 import { TopicModel } from '@/schemas/Topic/model';
 import generator from '@/services/generator';

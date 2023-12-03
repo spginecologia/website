@@ -1,7 +1,7 @@
 /* * */
 
 import checkAuthentication from '@/services/checkAuthentication';
-import mongodb from '@/services/mongodb';
+import MONGOOSE from '@/services/MONGOOSE';
 import STRIPE from '@/services/STRIPE';
 import { UserModel } from '@/schemas/User/model';
 
@@ -37,7 +37,7 @@ export default async function handler(req, res) {
   // Connect to MongoDB
 
   try {
-    await mongodb.connect();
+    await MONGOOSE.connect();
   } catch (err) {
     console.log(err);
     return await res.status(500).json({ message: 'MongoDB connection error.' });

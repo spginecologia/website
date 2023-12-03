@@ -4,11 +4,11 @@ import FrontendAccount from '@/components/FrontendAccount/FrontendAccount';
 
 /* * */
 
-export default function Layout({ profile, payments, videos }) {
+export default function Layout({ profile, subscription, videos }) {
   return (
     <FrontendAccount>
       {profile}
-      {payments}
+      {subscription}
       {videos}
     </FrontendAccount>
   );

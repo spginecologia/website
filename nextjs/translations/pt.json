@@ -130,9 +130,30 @@
         "title": "Dados Pessoais",
         "subtitle": "Todas as suas informações"
     },
-    "FrontendAccountPayments": {
+    "FrontendAccountSubscription": {
+        "title": "Pagamentos & Faturas",
+        "subtitle": "Faça a gestão autónoma dos pagamentos da sua quota de sócio."
+    },
+    "FrontendAccountSubscriptionCheckout": {
         "title": "Conta Corrente",
         "subtitle": "Todos os seus pagamentos"
+    },
+    "FrontendAccountSubscriptionManage": {
+        "active": "Gerir Métodos de Pagamento",
+        "past_due": "Verificar Método de Pagamento",
+        "canceled": "Renovar pagamento agora",
+        "not_found": "Efetuar pagamento de Quota agora"
+    },
+    "FrontendAccountSubscriptionInfoStatus": {
+        "active": "Pagamento de Quota regularizado",
+        "past_due": "Ainda não foi possível efetuar o pagamento.",
+        "canceled": "A sua subscrição está desativada",
+        "not_found": "É necessário regularizar o pagamento da sua Quota"
+    },
+    "FrontendAccountSubscriptionInfoRenew": {
+        "active": "Renova a {renew_date}",
+        "past_due": "Renova a {renew_date}",
+        "canceled": "Expirou a {canceled_date}"
     },
     "FrontendAccountVideos": {
         "title": "Videos",

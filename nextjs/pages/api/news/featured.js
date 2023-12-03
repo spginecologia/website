@@ -1,6 +1,6 @@
 /* * */
 
-import mongodb from '@/services/mongodb';
+import mongodb from '@/services/MONGOOSE';
 import { NewsModel } from '@/schemas/News/model';
 
 /* * */

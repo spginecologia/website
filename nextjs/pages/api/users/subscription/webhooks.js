@@ -1,6 +1,6 @@
 /* * */
 
-import mongodb from '@/services/mongodb';
+import MONGOOSE from '@/services/MONGOOSE';
 import { UserModel } from '@/schemas/User/model';
 import STRIPE from '@/services/STRIPE';
 
@@ -67,7 +67,7 @@ export default async function handler(req, res) {
   // Connect to MongoDB
 
   try {
-    await mongodb.connect();
+    await MONGOOSE.connect();
   } catch (err) {
     console.log('ERROR: Failed to connect to MongoDB.', err);
     return await res.status(500).send();
@@ -118,11 +118,10 @@ export default async function handler(req, res) {
         { stripe_customer_id: { $eq: stripeEventData.customer } },
         {
           subscription: {
-            stripe_subscription_id: stripeEventData.id,
+            stripe_id: stripeEventData.id,
             status: stripeEventData.status,
-            created: stripeEventData.created,
-            current_period_start: stripeEventData.current_period_start,
             current_period_end: stripeEventData.current_period_end,
+            canceled_at: stripeEventData.canceled_at,
           },
         }
       );
@@ -137,11 +136,26 @@ export default async function handler(req, res) {
         { stripe_customer_id: { $eq: stripeEventData.customer } },
         {
           subscription: {
-            stripe_subscription_id: stripeEventData.id,
+            stripe_id: stripeEventData.id,
             status: stripeEventData.status,
-            created: stripeEventData.created,
-            current_period_start: stripeEventData.current_period_start,
             current_period_end: stripeEventData.current_period_end,
+            canceled_at: stripeEventData.canceled_at,
+          },
+        }
+      );
+      return res.status(200).send();
+
+    // 6.4.
+    // A subscription was deleted
+
+    case 'customer.subscription.deleted':
+      stripeEventData = stripeEvent.data.object;
+      await UserModel.updateOne(
+        { stripe_customer_id: { $eq: stripeEventData.customer } },
+        {
+          subscription: {
+            stripe_id: stripeEventData.id,
+            status: stripeEventData.status,
           },
         }
       );

@@ -320,24 +320,22 @@ export const UserSchema = new mongoose.Schema({
   },
   //
   subscription: {
-    stripe_subscription_id: {
+    stripe_id: {
       type: String,
       maxlength: 100,
     },
     status: {
       type: String,
-      maxlength: 100,
-    },
-    created: {
-      type: Number,
-    },
-    current_period_start: {
-      type: Number,
+      maxlength: 20,
     },
     current_period_end: {
       type: Number,
     },
+    canceled_at: {
+      type: Number,
+    },
   },
+
   //
 });
 

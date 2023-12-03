@@ -18,10 +18,12 @@
   /* STATE */
   --color-state-success: #3ca06e;
   --color-state-success-background: rgba(0, 0, 0, 0.25);
-  --color-state-warning: #ffffff;
+  --color-state-warning: #e6a04b;
   --color-state-warning-background: rgba(0, 0, 0, 0.25);
   --color-state-error: #b41e00;
   --color-state-error-background: rgba(180, 30, 0, 0.15);
+  --color-state-info: #2d82c3;
+  --color-state-info-background: rgba(180, 30, 0, 0.15);
 }
 
 @media (prefers-color-scheme: dark) {
