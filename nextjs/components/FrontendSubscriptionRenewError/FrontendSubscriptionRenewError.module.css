@@ -1,0 +1,19 @@
+/* * */
+/* CONTAINER */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 30px;
+}
+
+/* * */
+/* ICON */
+
+.icon {
+  color: var(--color-state-error);
+}

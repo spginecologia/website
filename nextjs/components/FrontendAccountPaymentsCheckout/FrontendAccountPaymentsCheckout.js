@@ -26,7 +26,7 @@ export default function FrontendAccountPaymentsCheckout() {
   // D. Render components
 
   return (
-    <form action={`/api/users/${sessionData?.user?._id}/subscription/renew`}>
+    <form action={`/api/users/subscription/renew`}>
       <button className="checkout-style-background" type="submit" disabled={loading}>
         Renovar Subscrição 30€
       </button>

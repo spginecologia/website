@@ -313,6 +313,32 @@ export const UserSchema = new mongoose.Schema({
       },
     },
   },
+  //
+  stripe_customer_id: {
+    type: String,
+    maxlength: 100,
+  },
+  //
+  subscription: {
+    stripe_subscription_id: {
+      type: String,
+      maxlength: 100,
+    },
+    status: {
+      type: String,
+      maxlength: 100,
+    },
+    created: {
+      type: Number,
+    },
+    current_period_start: {
+      type: Number,
+    },
+    current_period_end: {
+      type: Number,
+    },
+  },
+  //
 });
 
 /* * */

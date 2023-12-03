@@ -1,3 +1,5 @@
+/* * */
+
 import { authOptions } from 'pages/api/auth/[...nextauth]';
 import { getServerSession } from 'next-auth/next';
 
@@ -19,8 +21,10 @@ export default async function checkAuthentication({ scope, permission, req, res 
 
   // 1.2.
   // Check if the current user has permission to access the feature
-  if (!session?.user?.permissions[scope][permission] === true) {
-    throw new Error(`Permission denied for user "${session?.user?.name}" | Scope: ${scope} | Permission: ${permission}`);
+  if (scope && permission) {
+    if (!session?.user?.permissions[scope][permission] === true) {
+      throw new Error(`Permission denied for user "${session?.user?.name}" | Scope: ${scope} | Permission: ${permission}`);
+    }
   }
 
   // 1.3.

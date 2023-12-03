@@ -25,7 +25,7 @@ export default function FrontendAccountPayments() {
   //
   // B. Fetch data
 
-  const { data: subscriptionData } = useSWR(sessionData?.user?._id && `/api/users/${sessionData.user._id}/subscription/status`);
+  const { data: subscriptionStatusData, isLoading: subscriptionStatusLoading } = useSWR('/api/users/subscription/status');
 
   //
   // C. Render components
@@ -35,7 +35,8 @@ export default function FrontendAccountPayments() {
       <div className={styles.container}>
         <Title level="h2" text={t('title')} />
         <Text text={t('subtitle')} />
-        {subscriptionData?.status ? 'You are subscribed' : <FrontendAccountPaymentsCheckout />}
+        {subscriptionStatusLoading ? 'loading' : subscriptionStatusData?.status ? <a href="/api/users/subscription/manage">You are subscribed. Manage</a> : <FrontendAccountPaymentsCheckout />}
+        <FrontendAccountPaymentsCheckout />
       </div>
     </Panel>
   );

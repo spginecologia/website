@@ -138,6 +138,18 @@
         "title": "Videos",
         "subtitle": "Todos os seus videos"
     },
+    "FrontendSubscriptionRenewLoading": {
+        "title": "A Sincronizar...",
+        "subtitle": "Por favor aguarde..."
+    },
+    "FrontendSubscriptionRenewSuccess": {
+        "title": "Subscrição Renovada",
+        "subtitle": "Vai expirar em {renew_date}"
+    },
+    "FrontendSubscriptionRenewError": {
+        "title": "Erro",
+        "subtitle": "Ocorreu um erro"
+    },
     "BackofficeSidebar": {
         "statistics": "Estatísticas",
         "news": "Notícias",
