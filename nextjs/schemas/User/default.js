@@ -58,4 +58,13 @@ export const UserDefault = {
     users: { view: false, create_edit: false, permissions: false, approve: false, charge_money: false, delete: false },
   },
   //
+  stripe_customer_id: null,
+  //
+  subscription: {
+    stripe_id: null,
+    status: null,
+    current_period_end: null,
+    canceled_at: null,
+  },
+  //
 };
