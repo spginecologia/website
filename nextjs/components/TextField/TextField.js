@@ -14,14 +14,14 @@ export default function TextField({ type = 'text', name, label, description, pla
   //
   // A. Setup variables
 
-  const [textFieldId, setTextFieldId] = useState('');
+  const [textFieldId, setTextFieldId] = useState(name || generator(3));
 
   //
   // B. Transform data
 
-  useEffect(() => {
-    setTextFieldId(name || generator(3));
-  }, []);
+  //   useEffect(() => {
+  //     setTextFieldId(name || generator(3));
+  //   }, []);
 
   //
   // C. Render components

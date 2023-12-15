@@ -13,6 +13,8 @@ import Title from '@/components/Title/Title';
 import Text from '@/components/Text/Text';
 import Button from '@/components/Button/Button';
 import TextField from '@/components/TextField/TextField';
+import { useState } from 'react';
+import Loader from '@/components/Loader/Loader';
 
 /* * */
 
@@ -23,6 +25,7 @@ export default function AuthExplorerSignIn() {
   // A. Setup variables
 
   const t = useTranslations('AuthExplorerSignIn');
+  const [isLoading, setIsLoading] = useState(false);
 
   //
   // B. Setup form
@@ -37,6 +40,7 @@ export default function AuthExplorerSignIn() {
   // C. Handle actions
 
   const handleSignIn = async () => {
+    setIsLoading(true);
     signIn('email', { email: form.values.email, callbackUrl: '/' });
   };
 
@@ -49,7 +53,7 @@ export default function AuthExplorerSignIn() {
       <Text text={t('subtitle')} />
       <Space h={5} />
       <TextField type="email" label={t('email.label')} placeholder={t('email.placeholder')} {...form.getInputProps('email')} />
-      <Button type={'submit'} label={t('submit.label')} />
+      {!isLoading ? <Button type={'submit'} label={t('submit.label')} /> : <Loader visible />}
     </form>
   );
 }
