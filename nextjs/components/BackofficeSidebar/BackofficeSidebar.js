@@ -9,7 +9,7 @@ import { SpgLogoIcon } from '@/assets/spg';
 import { useParams, usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { Tooltip, ActionIcon } from '@mantine/core';
-import { IconChartPie, IconNews, IconCalendarEvent, IconBrandYoutube, IconUsers, IconFileCheck, IconBooks, IconSchool, IconBulb, IconAward, IconMessageHeart, IconListSearch, IconFlower, IconCash, IconLogout2 } from '@tabler/icons-react';
+import { IconChartPie, IconNews, IconCalendarEvent, IconBrandYoutube, IconUsers, IconFileCheck, IconBooks, IconSchool, IconBulb, IconAward, IconMessageHeart, IconListSearch, IconFlower, IconCash, IconLogout2, IconLink } from '@tabler/icons-react';
 import { signOut } from 'next-auth/react';
 
 /* * */
@@ -25,6 +25,7 @@ const SIDEBAR_LINKS = [
   { key: 'awards', path: '/admin/awards', icon: <IconAward />, auth_scope: 'awards', auth_permission: 'view' },
   { key: 'grants', path: '/admin/grants', icon: <IconBulb />, auth_scope: 'grants', auth_permission: 'view' },
   { key: 'topics', path: '/admin/topics', icon: <IconListSearch />, auth_scope: 'topics', auth_permission: 'view' },
+  { key: 'links', path: '/admin/links', icon: <IconLink />, auth_scope: 'links', auth_permission: 'view' },
   { key: 'testimonials', path: '/admin/testimonials', icon: <IconMessageHeart />, auth_scope: 'testimonials', auth_permission: 'view' },
   { key: 'tributes', path: '/admin/tributes', icon: <IconFlower />, auth_scope: 'tributes', auth_permission: 'view' },
   { key: 'users', path: '/admin/users', icon: <IconUsers />, auth_scope: 'users', auth_permission: 'view' },

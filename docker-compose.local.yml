@@ -1,0 +1,25 @@
+version: '3.9'
+
+volumes:
+  mongodbdata:
+
+services:
+  #
+
+  # # # # # # # # # # # # # # # # # # # # #
+  # # # # # # # # # # # # # # # # # # # # #
+
+  mongodb-spg:
+    image: mongo
+    restart: unless-stopped
+    logging:
+      options:
+        max-size: '1m'
+        max-file: '1'
+    ports:
+      - 27018:27017
+    volumes:
+      - mongodbdata:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=mongodbuser
+      - MONGO_INITDB_ROOT_PASSWORD=mongodbpassword

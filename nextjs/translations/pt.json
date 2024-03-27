@@ -182,6 +182,7 @@
         "awards": "Prémios SPG",
         "grants": "Bolsas de Investigação",
         "topics": "Tópicos",
+        "links": "Links Rápidos",
         "testimonials": "Testemunhos",
         "tributes": "Homenagens",
         "users": "Sócios",
@@ -628,6 +629,54 @@
             "description": {
                 "label": "Descrição",
                 "placeholder": "Breve resumo sobre este tópico."
+            }
+        }
+    },
+    "BackofficeLinksPage": {
+        "untitled": "Link sem Título",
+        "operations": {
+            "delete": {
+                "title": "Eliminar Link",
+                "description": "Eliminar é irreversível. Tem a certeza que pretende eliminar este Link?",
+                "confirm": "Eliminar Link para sempre",
+                "cancel": "Não Eliminar",
+                "loading": "A eliminar...",
+                "success": "Link eliminado.",
+                "error": "Ocorreu um erro ao eliminar este Link."
+            }
+        },
+        "sections": {
+            "default": {
+                "title": "Configurações",
+                "subtitle": "Configurar Link"
+            },
+            "visibility": {
+                "title": "Visibilidade",
+                "subtitle": "Ativar e desativar Link"
+            }
+        },
+        "fields": {
+            "title": {
+                "label": "Título",
+                "placeholder": "Patologia Rara"
+            },
+            "subtitle": {
+                "label": "Subtítulo",
+                "placeholder": "Breve resumo sobre este Link."
+            },
+            "href": {
+                "label": "URL de Destino",
+                "placeholder": "https://o-meu-link..."
+            },
+            "sort_order": {
+                "label": "Ordem de Apresentação",
+                "placeholder": "3"
+            },
+            "is_active": {
+                "label": "Ativar Link"
+            },
+            "is_featured": {
+                "label": "Destacar Link"
             }
         }
     },

@@ -36,6 +36,9 @@ const PUBLIC_PAGES = [
   '/login/verify',
   '/login/error',
   '/agenda',
+  //
+  '/links',
+  //
 ];
 
 /* * */

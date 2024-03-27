@@ -50,6 +50,7 @@
 
 .navButton:hover,
 .navButton:active {
+  color: var(--spg-support-5);
   background-color: var(--spg-support-3);
 }
 

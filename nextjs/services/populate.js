@@ -1,30 +1,60 @@
-export default function populate(defaultObj, dataObj) {
+/* * */
+
+export default function populate(template, data) {
   //
 
-  // Create a deep copy of the default object
-  const newObj = JSON.parse(JSON.stringify(defaultObj));
+  // Return the template if there is no data
+  if (!data) return template;
 
-  // Return default if there is no data
-  if (!dataObj) return newObj;
+  // Create a deep copy of the template object
+  const populatedTemplateObject = JSON.parse(JSON.stringify(template));
 
-  // Recursive helper function to populate the object
-  function populateObject(obj, data) {
-    for (const key in obj) {
-      if (data?.hasOwnProperty(key)) {
-        if (Array.isArray(obj[key]) && Array.isArray(data[key]) && obj[key].length === 0) {
-          obj[key] = data[key]; // Assign array directly from data object
-        } else if (typeof obj[key] === 'object' && typeof data[key] === 'object') {
-          populateObject(obj[key], data[key]); // Recursively populate nested objects
-        } else {
-          obj[key] = data[key]; // Assign value from data object
-        }
+  // Setup a recursive function to populate the template
+  const recursivePopulate = (currentTemplateStep, currentDataStep) => {
+    //
+
+    // If the template is an object and not null
+    if (typeof currentTemplateStep === 'object' && currentTemplateStep !== null) {
+      //
+
+      // If the template is an array and the data is also an array, populate each element recursively
+      if (Array.isArray(currentTemplateStep) && Array.isArray(currentDataStep)) {
+        return currentDataStep?.map((item) => recursivePopulate(currentTemplateStep, item));
       }
+
+      // If the data is also an object, recursively populate its properties
+      if (typeof currentDataStep === 'object') {
+        const populatedInnerObject = {};
+        for (const key in currentTemplateStep) {
+          populatedInnerObject[key] = recursivePopulate(currentTemplateStep[key], currentDataStep[key]);
+        }
+        return populatedInnerObject;
+      }
+
+      // If the data is null then use the template value
+      if (currentDataStep === null || currentDataStep === undefined) {
+        return currentTemplateStep;
+      }
+
+      // If it is something else use the data
+      return currentDataStep;
+
+      //
     }
-  }
 
-  populateObject(newObj, dataObj); // Populate the object with data
+    // If the template is not an object (i.e. an object or array) but data is null, use the template value
+    if (currentDataStep === null || currentDataStep === undefined) {
+      return currentTemplateStep;
+    }
 
-  return newObj;
+    // If the template is not an object and the data is defined, then use the data
+    return currentDataStep;
+
+    //
+  };
+
+  // Initiate the recursive dance
+  return recursivePopulate(populatedTemplateObject, data);
 
   //
 }

@@ -1,0 +1,12 @@
+/* * */
+/* CONTAINER */
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-reference-0);
+  gap: var(--size-md);
+  align-items: center;
+  justify-content: center;
+}
