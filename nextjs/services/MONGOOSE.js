@@ -1,10 +1,8 @@
-/* * * * * */
-/* MONGODB */
 /* * */
 
-/* * */
-/* IMPORTS */
 import mongoose from 'mongoose';
+
+/* * */
 
 async function connect() {
   await mongoose
@@ -19,6 +17,8 @@ async function connect() {
     });
 }
 
+/* * */
+
 async function disconnect() {
   await mongoose
     .disconnect()
@@ -30,9 +30,13 @@ async function disconnect() {
     });
 }
 
-const mongodb = {
+/* * */
+
+const mongooseClient = {
   connect,
   disconnect,
 };
 
-export default mongodb;
+/* * */
+
+export default mongooseClient;

@@ -37,7 +37,7 @@ export default function Providers({ children, session }) {
   // B. Render components
 
   return (
-    <SessionProvider session={session} refetchInterval={15}>
+    <SessionProvider session={session} refetchInterval={5}>
       <SWRConfig value={swrOptions}>
         <MantineProvider defaultColorScheme="light">
           <DatesProvider settings={{ locale: 'pt', firstDayOfWeek: 1, weekendDays: [6, 0], timezone: 'Europe/Lisbon' }}>

@@ -129,36 +129,12 @@ export default function BackofficeUsersPage() {
     switch (preset) {
       case 'candidate':
         userForm.setValues({
-          permissions: {
-            admin: { backoffice: false, debug: false },
-            news: { create_edit: false, delete: false },
-            agenda: { create_edit: false, delete: false },
-            videos: { view: false, upload: false, create_edit_own: false, approve: false, create_edit_all: false, delete: false },
-            guidelines: { create_edit: false, delete: false },
-            publications: { view: false, create_edit: false, delete: false },
-            courses: { view: false, create_edit: false, delete: false },
-            topics: { create_edit: false, delete: false },
-            testimonials: { create_edit: false, delete: false },
-            tributes: { create_edit: false, delete: false },
-            users: { view: false, create_edit: false, permissions: false, approve: false, charge_money: false, delete: false },
-          },
+          permissions: UserOptions.permissions_presets.candidate,
         });
         return;
       case 'member':
         userForm.setValues({
-          permissions: {
-            admin: { backoffice: false, debug: false },
-            news: { create_edit: false, delete: false },
-            agenda: { create_edit: false, delete: false },
-            videos: { view: true, upload: true, create_edit_own: true, approve: false, create_edit_all: false, delete: false },
-            guidelines: { create_edit: false, delete: false },
-            publications: { view: true, create_edit: false, delete: false },
-            courses: { view: true, create_edit: false, delete: false },
-            topics: { create_edit: false, delete: false },
-            testimonials: { create_edit: false, delete: false },
-            tributes: { create_edit: false, delete: false },
-            users: { view: false, create_edit: false, permissions: false, approve: false, charge_money: false, delete: false },
-          },
+          permissions: UserOptions.permissions_presets.member,
         });
         return;
       case 'reviewer':
@@ -411,76 +387,77 @@ export default function BackofficeUsersPage() {
 
             <Divider label={t('fields.permissions.admin.divider.label')} labelPosition="left" mt={20} />
             <SimpleGrid cols={3}>
-              <Switch size="md" label={t('fields.permissions.admin.backoffice.label')} description={t('fields.permissions.admin.backoffice.description')} {...userForm.getInputProps('permissions.admin.backoffice', { type: 'checkbox' })} readOnly={isReadOnly} />
-              <Switch size="md" label={t('fields.permissions.admin.debug.label')} description={t('fields.permissions.admin.debug.description')} {...userForm.getInputProps('permissions.admin.debug', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.admin.backoffice.label')} description={t('fields.permissions.admin.backoffice.description')} {...userForm.getInputProps('permissions.admin.backoffice.is_allowed', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.admin.debug.label')} description={t('fields.permissions.admin.debug.description')} {...userForm.getInputProps('permissions.admin.debug.is_allowed', { type: 'checkbox' })} readOnly={isReadOnly} />
             </SimpleGrid>
 
             <Divider label={t('fields.permissions.news.divider.label')} labelPosition="left" mt={20} />
             <SimpleGrid cols={3}>
-              <Switch size="md" label={t('fields.permissions.news.create_edit.label')} description={t('fields.permissions.news.create_edit.description')} {...userForm.getInputProps('permissions.news.create_edit', { type: 'checkbox' })} readOnly={isReadOnly} />
-              <Switch size="md" label={t('fields.permissions.news.delete.label')} description={t('fields.permissions.news.delete.description')} {...userForm.getInputProps('permissions.news.delete', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.news.create_edit.label')} description={t('fields.permissions.news.create_edit.description')} {...userForm.getInputProps('permissions.news.create_edit.is_allowed', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.news.delete.label')} description={t('fields.permissions.news.delete.description')} {...userForm.getInputProps('permissions.news.delete.is_allowed', { type: 'checkbox' })} readOnly={isReadOnly} />
             </SimpleGrid>
 
             <Divider label={t('fields.permissions.agenda.divider.label')} labelPosition="left" mt={20} />
             <SimpleGrid cols={3}>
-              <Switch size="md" label={t('fields.permissions.agenda.create_edit.label')} description={t('fields.permissions.agenda.create_edit.description')} {...userForm.getInputProps('permissions.agenda.create_edit', { type: 'checkbox' })} readOnly={isReadOnly} />
-              <Switch size="md" label={t('fields.permissions.agenda.delete.label')} description={t('fields.permissions.agenda.delete.description')} {...userForm.getInputProps('permissions.agenda.delete', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.agenda.create_edit.label')} description={t('fields.permissions.agenda.create_edit.description')} {...userForm.getInputProps('permissions.agenda.create_edit.is_allowed', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.agenda.delete.label')} description={t('fields.permissions.agenda.delete.description')} {...userForm.getInputProps('permissions.agenda.delete.is_allowed', { type: 'checkbox' })} readOnly={isReadOnly} />
             </SimpleGrid>
 
             <Divider label={t('fields.permissions.videos.divider.label')} labelPosition="left" mt={20} />
             <SimpleGrid cols={3}>
-              <Switch size="md" label={t('fields.permissions.videos.view.label')} description={t('fields.permissions.videos.view.description')} {...userForm.getInputProps('permissions.videos.view', { type: 'checkbox' })} readOnly={isReadOnly} />
-              <Switch size="md" label={t('fields.permissions.videos.upload.label')} description={t('fields.permissions.videos.upload.description')} {...userForm.getInputProps('permissions.videos.upload', { type: 'checkbox' })} readOnly={isReadOnly} />
-              <Switch size="md" label={t('fields.permissions.videos.create_edit_own.label')} description={t('fields.permissions.videos.create_edit_own.description')} {...userForm.getInputProps('permissions.videos.create_edit_own', { type: 'checkbox' })} readOnly={isReadOnly} />
-              <Switch size="md" label={t('fields.permissions.videos.approve.label')} description={t('fields.permissions.videos.approve.description')} {...userForm.getInputProps('permissions.videos.approve', { type: 'checkbox' })} readOnly={isReadOnly} />
-              <Switch size="md" label={t('fields.permissions.videos.create_edit_all.label')} description={t('fields.permissions.videos.create_edit_all.description')} {...userForm.getInputProps('permissions.videos.create_edit_all', { type: 'checkbox' })} readOnly={isReadOnly} />
-              <Switch size="md" label={t('fields.permissions.videos.delete.label')} description={t('fields.permissions.videos.delete.description')} {...userForm.getInputProps('permissions.videos.delete', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.videos.view.label')} description={t('fields.permissions.videos.view.description')} {...userForm.getInputProps('permissions.videos.view.is_allowed', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.videos.upload.label')} description={t('fields.permissions.videos.upload.description')} {...userForm.getInputProps('permissions.videos.upload.is_allowed', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.videos.create_edit_own.label')} description={t('fields.permissions.videos.create_edit_own.description')} {...userForm.getInputProps('permissions.videos.create_edit_own.is_allowed', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.videos.approve.label')} description={t('fields.permissions.videos.approve.description')} {...userForm.getInputProps('permissions.videos.approve.is_allowed', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.videos.create_edit_all.label')} description={t('fields.permissions.videos.create_edit_all.description')} {...userForm.getInputProps('permissions.videos.create_edit_all.is_allowed', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.videos.delete.label')} description={t('fields.permissions.videos.delete.description')} {...userForm.getInputProps('permissions.videos.delete.is_allowed', { type: 'checkbox' })} readOnly={isReadOnly} />
             </SimpleGrid>
 
             <Divider label={t('fields.permissions.guidelines.divider.label')} labelPosition="left" mt={20} />
             <SimpleGrid cols={3}>
-              <Switch size="md" label={t('fields.permissions.guidelines.create_edit.label')} description={t('fields.permissions.guidelines.create_edit.description')} {...userForm.getInputProps('permissions.guidelines.create_edit', { type: 'checkbox' })} readOnly={isReadOnly} />
-              <Switch size="md" label={t('fields.permissions.guidelines.delete.label')} description={t('fields.permissions.guidelines.delete.description')} {...userForm.getInputProps('permissions.guidelines.delete', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.guidelines.create_edit.label')} description={t('fields.permissions.guidelines.create_edit.description')} {...userForm.getInputProps('permissions.guidelines.create_edit.is_allowed', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.guidelines.delete.label')} description={t('fields.permissions.guidelines.delete.description')} {...userForm.getInputProps('permissions.guidelines.delete.is_allowed', { type: 'checkbox' })} readOnly={isReadOnly} />
             </SimpleGrid>
 
             <Divider label={t('fields.permissions.publications.divider.label')} labelPosition="left" mt={20} />
             <SimpleGrid cols={3}>
-              <Switch size="md" label={t('fields.permissions.publications.create_edit.label')} description={t('fields.permissions.publications.create_edit.description')} {...userForm.getInputProps('permissions.publications.create_edit', { type: 'checkbox' })} readOnly={isReadOnly} />
-              <Switch size="md" label={t('fields.permissions.publications.delete.label')} description={t('fields.permissions.publications.delete.description')} {...userForm.getInputProps('permissions.publications.delete', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.publications.create_edit.label')} description={t('fields.permissions.publications.create_edit.description')} {...userForm.getInputProps('permissions.publications.create_edit.is_allowed', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.publications.delete.label')} description={t('fields.permissions.publications.delete.description')} {...userForm.getInputProps('permissions.publications.delete.is_allowed', { type: 'checkbox' })} readOnly={isReadOnly} />
             </SimpleGrid>
 
             <Divider label={t('fields.permissions.courses.divider.label')} labelPosition="left" mt={20} />
             <SimpleGrid cols={3}>
-              <Switch size="md" label={t('fields.permissions.courses.create_edit.label')} description={t('fields.permissions.courses.create_edit.description')} {...userForm.getInputProps('permissions.courses.create_edit', { type: 'checkbox' })} readOnly={isReadOnly} />
-              <Switch size="md" label={t('fields.permissions.courses.delete.label')} description={t('fields.permissions.courses.delete.description')} {...userForm.getInputProps('permissions.courses.delete', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.courses.create_edit.label')} description={t('fields.permissions.courses.create_edit.description')} {...userForm.getInputProps('permissions.courses.create_edit.is_allowed', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.courses.delete.label')} description={t('fields.permissions.courses.delete.description')} {...userForm.getInputProps('permissions.courses.delete.is_allowed', { type: 'checkbox' })} readOnly={isReadOnly} />
             </SimpleGrid>
 
             <Divider label={t('fields.permissions.topics.divider.label')} labelPosition="left" mt={20} />
             <SimpleGrid cols={3}>
-              <Switch size="md" label={t('fields.permissions.topics.create_edit.label')} description={t('fields.permissions.topics.create_edit.description')} {...userForm.getInputProps('permissions.topics.create_edit', { type: 'checkbox' })} readOnly={isReadOnly} />
-              <Switch size="md" label={t('fields.permissions.topics.delete.label')} description={t('fields.permissions.topics.delete.description')} {...userForm.getInputProps('permissions.topics.delete', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.topics.create_edit.label')} description={t('fields.permissions.topics.create_edit.description')} {...userForm.getInputProps('permissions.topics.create_edit.is_allowed', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.topics.delete.label')} description={t('fields.permissions.topics.delete.description')} {...userForm.getInputProps('permissions.topics.delete.is_allowed', { type: 'checkbox' })} readOnly={isReadOnly} />
             </SimpleGrid>
 
             <Divider label={t('fields.permissions.testimonials.divider.label')} labelPosition="left" mt={20} />
             <SimpleGrid cols={3}>
-              <Switch size="md" label={t('fields.permissions.testimonials.create_edit.label')} description={t('fields.permissions.testimonials.create_edit.description')} {...userForm.getInputProps('permissions.testimonials.create_edit', { type: 'checkbox' })} readOnly={isReadOnly} />
-              <Switch size="md" label={t('fields.permissions.testimonials.delete.label')} description={t('fields.permissions.testimonials.delete.description')} {...userForm.getInputProps('permissions.testimonials.delete', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.testimonials.create_edit.label')} description={t('fields.permissions.testimonials.create_edit.description')} {...userForm.getInputProps('permissions.testimonials.create_edit.is_allowed', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.testimonials.delete.label')} description={t('fields.permissions.testimonials.delete.description')} {...userForm.getInputProps('permissions.testimonials.delete.is_allowed', { type: 'checkbox' })} readOnly={isReadOnly} />
             </SimpleGrid>
 
             <Divider label={t('fields.permissions.tributes.divider.label')} labelPosition="left" mt={20} />
             <SimpleGrid cols={3}>
-              <Switch size="md" label={t('fields.permissions.tributes.create_edit.label')} description={t('fields.permissions.tributes.create_edit.description')} {...userForm.getInputProps('permissions.tributes.create_edit', { type: 'checkbox' })} readOnly={isReadOnly} />
-              <Switch size="md" label={t('fields.permissions.tributes.delete.label')} description={t('fields.permissions.tributes.delete.description')} {...userForm.getInputProps('permissions.tributes.delete', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.tributes.create_edit.label')} description={t('fields.permissions.tributes.create_edit.description')} {...userForm.getInputProps('permissions.tributes.create_edit.is_allowed', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.tributes.delete.label')} description={t('fields.permissions.tributes.delete.description')} {...userForm.getInputProps('permissions.tributes.delete.is_allowed', { type: 'checkbox' })} readOnly={isReadOnly} />
             </SimpleGrid>
 
             <Divider label={t('fields.permissions.users.divider.label')} labelPosition="left" mt={20} />
             <SimpleGrid cols={3}>
-              <Switch size="md" label={t('fields.permissions.users.view.label')} description={t('fields.permissions.users.view.description')} {...userForm.getInputProps('permissions.users.view', { type: 'checkbox' })} readOnly={isReadOnly} />
-              <Switch size="md" label={t('fields.permissions.users.create_edit.label')} description={t('fields.permissions.users.create_edit.description')} {...userForm.getInputProps('permissions.users.create_edit', { type: 'checkbox' })} readOnly={isReadOnly} />
-              <Switch size="md" label={t('fields.permissions.users.permissions.label')} description={t('fields.permissions.users.permissions.description')} {...userForm.getInputProps('permissions.users.permissions', { type: 'checkbox' })} readOnly={isReadOnly} />
-              <Switch size="md" label={t('fields.permissions.users.approve.label')} description={t('fields.permissions.users.approve.description')} {...userForm.getInputProps('permissions.users.approve', { type: 'checkbox' })} readOnly={isReadOnly} />
-              <Switch size="md" label={t('fields.permissions.users.charge_money.label')} description={t('fields.permissions.users.charge_money.description')} {...userForm.getInputProps('permissions.users.charge_money', { type: 'checkbox' })} readOnly={isReadOnly} />
-              <Switch size="md" label={t('fields.permissions.users.delete.label')} description={t('fields.permissions.users.delete.description')} {...userForm.getInputProps('permissions.users.delete', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.users.view.label')} description={t('fields.permissions.users.view.description')} {...userForm.getInputProps('permissions.users.view.is_allowed', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.users.create.label')} description={t('fields.permissions.users.create.description')} {...userForm.getInputProps('permissions.users.create.is_allowed', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.users.edit.label')} description={t('fields.permissions.users.edit.description')} {...userForm.getInputProps('permissions.users.edit.is_allowed', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.users.edit_permissions.label')} description={t('fields.permissions.users.edit_permissions.description')} {...userForm.getInputProps('permissions.users.edit_permissions.is_allowed', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.users.approve.label')} description={t('fields.permissions.users.approve.description')} {...userForm.getInputProps('permissions.users.approve.is_allowed', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.users.charge_money.label')} description={t('fields.permissions.users.charge_money.description')} {...userForm.getInputProps('permissions.users.charge_money.is_allowed', { type: 'checkbox' })} readOnly={isReadOnly} />
+              <Switch size="md" label={t('fields.permissions.users.delete.label')} description={t('fields.permissions.users.delete.description')} {...userForm.getInputProps('permissions.users.delete.is_allowed', { type: 'checkbox' })} readOnly={isReadOnly} />
             </SimpleGrid>
           </BackofficeWrapperPageSection>
 

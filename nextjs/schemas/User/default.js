@@ -45,17 +45,95 @@ export const UserDefault = {
   admin_observations: '',
   //
   permissions: {
-    admin: { backoffice: false, debug: false },
-    news: { create_edit: false, delete: false },
-    agenda: { create_edit: false, delete: false },
-    videos: { view: false, upload: false, create_edit_own: false, approve: false, create_edit_all: false, delete: false },
-    guidelines: { create_edit: false, delete: false },
-    publications: { view: false, create_edit: false, delete: false },
-    courses: { view: false, create_edit: false, delete: false },
-    topics: { create_edit: false, delete: false },
-    testimonials: { create_edit: false, delete: false },
-    tributes: { create_edit: false, delete: false },
-    users: { view: false, create_edit: false, permissions: false, approve: false, charge_money: false, delete: false },
+    //
+    news: {
+      view: { is_allowed: false },
+      edit: { is_allowed: false },
+      create: { is_allowed: false },
+      delete: { is_allowed: false },
+      navigate: { is_allowed: false },
+    },
+    //
+    agenda: {
+      view: { is_allowed: false },
+      edit: { is_allowed: false },
+      create: { is_allowed: false },
+      delete: { is_allowed: false },
+      navigate: { is_allowed: false },
+    },
+    //
+    videos: {
+      view: { is_allowed: false },
+      edit: { is_allowed: false },
+      create: { is_allowed: false },
+      delete: { is_allowed: false },
+      navigate: { is_allowed: false },
+    },
+    //
+    guidelines: {
+      view: { is_allowed: false },
+      edit: { is_allowed: false },
+      create: { is_allowed: false },
+      delete: { is_allowed: false },
+      navigate: { is_allowed: false },
+    },
+    //
+    publications: {
+      view: { is_allowed: false },
+      edit: { is_allowed: false },
+      create: { is_allowed: false },
+      delete: { is_allowed: false },
+      navigate: { is_allowed: false },
+    },
+    //
+    courses: {
+      view: { is_allowed: false },
+      edit: { is_allowed: false },
+      create: { is_allowed: false },
+      delete: { is_allowed: false },
+      navigate: { is_allowed: false },
+    },
+    //
+    topics: {
+      view: { is_allowed: false },
+      edit: { is_allowed: false },
+      create: { is_allowed: false },
+      delete: { is_allowed: false },
+      navigate: { is_allowed: false },
+    },
+    //
+    testimonials: {
+      view: { is_allowed: false },
+      edit: { is_allowed: false },
+      create: { is_allowed: false },
+      delete: { is_allowed: false },
+      navigate: { is_allowed: false },
+    },
+    //
+    tributes: {
+      view: { is_allowed: false },
+      edit: { is_allowed: false },
+      create: { is_allowed: false },
+      delete: { is_allowed: false },
+      navigate: { is_allowed: false },
+    },
+    //
+    users: {
+      view: { is_allowed: false },
+      edit: { is_allowed: false },
+      edit_permissions: { is_allowed: false },
+      approve: { is_allowed: false },
+      charge_money: { is_allowed: false },
+      create: { is_allowed: false },
+      delete: { is_allowed: false },
+      navigate: { is_allowed: false },
+    },
+    //
+    admin: {
+      backoffice: { is_allowed: false },
+      debug: { is_allowed: false },
+    },
+    //
   },
   //
   stripe_customer_id: null,

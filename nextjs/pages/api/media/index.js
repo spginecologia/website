@@ -2,7 +2,7 @@
 
 import getSession from '@/authentication/getSession';
 import prepareApiEndpoint from '@/services/prepareApiEndpoint';
-import { UserModel } from '@/schemas/User/model';
+import { MediaModel } from '@/schemas/Media/model';
 
 /* * */
 
@@ -28,7 +28,7 @@ export default async function handler(req, res) {
   // Prepare endpoint
 
   try {
-    await prepareApiEndpoint({ request: req, method: 'GET', session: sessionData, permissions: [{ scope: 'users', action: 'view' }] });
+    await prepareApiEndpoint({ request: req, method: 'GET', session: sessionData, permissions: [{ scope: 'media', action: 'view' }] });
   } catch (err) {
     console.log(err);
     return await res.status(400).json({ message: err.message || 'Could not prepare endpoint.' });
@@ -38,7 +38,7 @@ export default async function handler(req, res) {
   // Ensure latest schema modifications are applied in the database
 
   try {
-    await UserModel.syncIndexes();
+    await MediaModel.syncIndexes();
   } catch (err) {
     console.log(err);
     return await res.status(500).json({ message: 'Cannot sync indexes.' });
@@ -48,13 +48,11 @@ export default async function handler(req, res) {
   // List all documents
 
   try {
-    const allDocuments = await UserModel.find({});
-    const collator = new Intl.Collator('en', { numeric: true, sensitivity: 'base' });
-    const sortedDocuments = allDocuments.sort((a, b) => collator.compare(a.first_name, b.first_name));
-    return await res.status(200).send(sortedDocuments);
+    const allDocuments = await MediaModel.find();
+    return await res.status(200).send(allDocuments);
   } catch (err) {
     console.log(err);
-    return await res.status(500).json({ message: 'Cannot list Users.' });
+    return await res.status(500).json({ message: 'Cannot list Medias.' });
   }
 
   //

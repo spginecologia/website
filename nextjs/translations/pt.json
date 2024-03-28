@@ -578,11 +578,15 @@
                         "label": "Ver Sócios",
                         "description": "Este sócio pode consultar as informações de outros sócios."
                     },
-                    "create_edit": {
+                    "create": {
+                        "label": "Criar Sócios",
+                        "description": "Este sócio pode criar outros sócios."
+                    },
+                    "edit": {
                         "label": "Editar Sócios",
                         "description": "Este sócio pode editar as informações de outros sócios."
                     },
-                    "permissions": {
+                    "edit_permissions": {
                         "label": "Alterar Permissões",
                         "description": "Este sócio pode alterar as permissões de outros sócios."
                     },

@@ -1,5 +1,3 @@
-version: '3.9'
-
 volumes:
   mongodbdata:
 
@@ -9,7 +7,7 @@ services:
   # # # # # # # # # # # # # # # # # # # # #
   # # # # # # # # # # # # # # # # # # # # #
 
-  mongodb-spg:
+  mongodb:
     image: mongo
     restart: unless-stopped
     logging:
@@ -17,7 +15,7 @@ services:
         max-size: '1m'
         max-file: '1'
     ports:
-      - 27018:27017
+      - 3705:27017
     volumes:
       - mongodbdata:/data/db
     environment:

@@ -1,9 +1,13 @@
+/* * */
+
 import NextAuth from 'next-auth';
 import EmailProvider from 'next-auth/providers/email';
 import { MongoDBAdapter } from '@auth/mongodb-adapter';
 import clientPromise from '@/services/mongodb-adapter';
-import mongodb from '@/services/MONGOOSE';
+import MONGOOSE from '@/services/MONGOOSE';
 import { UserModel } from '@/schemas/User/model';
+
+/* * */
 
 export const authOptions = {
   debug: false,
@@ -25,14 +29,13 @@ export const authOptions = {
   pages: {
     signIn: '/login',
     verifyRequest: '/login/verify',
-    signOut: '/login/signout',
     error: '/login/error',
   },
   callbacks: {
     async signIn({ user }) {
       try {
-        await mongodb.connect();
-        const foundUser = await UserModel.findOne({ email: user.email });
+        await MONGOOSE.connect();
+        const foundUser = await UserModel.exists({ email: user.email });
         if (!foundUser) return false;
         else return true;
       } catch (err) {
@@ -40,18 +43,15 @@ export const authOptions = {
         return false;
       }
     },
-    async jwt({ token, user }) {
-      if (user) token.user = user;
-      return token;
-    },
     async session({ session, token }) {
       try {
-        if (token.user) {
-          await mongodb.connect();
-          const foundUser = await UserModel.findOneAndUpdate({ _id: token.user.id }, { last_active: new Date() }, { new: true });
+        if (token.email) {
+          await MONGOOSE.connect();
+          const foundUser = await UserModel.findOneAndUpdate({ email: token.email }, { last_active: new Date() }, { new: true });
           if (foundUser) session.user = foundUser;
           return session;
         }
+        throw new Error('JWT Token did not have the email property.');
       } catch (err) {
         console.log(err);
         return false;
@@ -59,5 +59,7 @@ export const authOptions = {
     },
   },
 };
+
+/* * */
 
 export default NextAuth(authOptions);

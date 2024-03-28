@@ -34,27 +34,16 @@ export default async function handler(req, res) {
     return await res.status(400).json({ message: err.message || 'Could not prepare endpoint.' });
   }
 
-  // 4.
-  // Ensure latest schema modifications are applied in the database
+  // 3.
+  // Fetch the requested document
 
   try {
-    await UserModel.syncIndexes();
+    const foundDocument = await UserModel.findOne({ _id: { $eq: req.query._id } });
+    if (!foundDocument) return await res.status(404).json({ message: `User with _id: ${req.query._id} not found.` });
+    else return await res.status(200).json(foundDocument);
   } catch (err) {
     console.log(err);
-    return await res.status(500).json({ message: 'Cannot sync indexes.' });
-  }
-
-  // 5.
-  // List all documents
-
-  try {
-    const allDocuments = await UserModel.find({});
-    const collator = new Intl.Collator('en', { numeric: true, sensitivity: 'base' });
-    const sortedDocuments = allDocuments.sort((a, b) => collator.compare(a.first_name, b.first_name));
-    return await res.status(200).send(sortedDocuments);
-  } catch (err) {
-    console.log(err);
-    return await res.status(500).json({ message: 'Cannot list Users.' });
+    return await res.status(500).json({ message: 'Cannot fetch this User.' });
   }
 
   //

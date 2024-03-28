@@ -152,166 +152,94 @@ export const UserSchema = new mongoose.Schema({
   //
   permissions: {
     //
-    admin: {
-      backoffice: {
-        type: Boolean,
-        default: false,
-      },
-      debug: {
-        type: Boolean,
-        default: false,
-      },
-    },
-    //
     news: {
-      create_edit: {
-        type: Boolean,
-        default: false,
-      },
-      delete: {
-        type: Boolean,
-        default: false,
-      },
+      view: { is_allowed: { type: Boolean } },
+      edit: { is_allowed: { type: Boolean } },
+      create: { is_allowed: { type: Boolean } },
+      delete: { is_allowed: { type: Boolean } },
+      navigate: { is_allowed: { type: Boolean } },
     },
     //
     agenda: {
-      create_edit: {
-        type: Boolean,
-        default: false,
-      },
-      delete: {
-        type: Boolean,
-        default: false,
-      },
+      view: { is_allowed: { type: Boolean } },
+      edit: { is_allowed: { type: Boolean } },
+      create: { is_allowed: { type: Boolean } },
+      delete: { is_allowed: { type: Boolean } },
+      navigate: { is_allowed: { type: Boolean } },
     },
     //
     videos: {
-      view: {
-        type: Boolean,
-        default: false,
-      },
-      upload: {
-        type: Boolean,
-        default: false,
-      },
-      create_edit_own: {
-        type: Boolean,
-        default: false,
-      },
-      approve: {
-        type: Boolean,
-        default: false,
-      },
-      create_edit_all: {
-        type: Boolean,
-        default: false,
-      },
-      delete: {
-        type: Boolean,
-        default: false,
-      },
+      view: { is_allowed: { type: Boolean } },
+      edit: { is_allowed: { type: Boolean } },
+      create: { is_allowed: { type: Boolean } },
+      delete: { is_allowed: { type: Boolean } },
+      navigate: { is_allowed: { type: Boolean } },
     },
     //
     guidelines: {
-      create_edit: {
-        type: Boolean,
-        default: false,
-      },
-      delete: {
-        type: Boolean,
-        default: false,
-      },
+      view: { is_allowed: { type: Boolean } },
+      edit: { is_allowed: { type: Boolean } },
+      create: { is_allowed: { type: Boolean } },
+      delete: { is_allowed: { type: Boolean } },
+      navigate: { is_allowed: { type: Boolean } },
     },
     //
     publications: {
-      view: {
-        type: Boolean,
-        default: false,
-      },
-      create_edit: {
-        type: Boolean,
-        default: false,
-      },
-      delete: {
-        type: Boolean,
-        default: false,
-      },
+      view: { is_allowed: { type: Boolean } },
+      edit: { is_allowed: { type: Boolean } },
+      create: { is_allowed: { type: Boolean } },
+      delete: { is_allowed: { type: Boolean } },
+      navigate: { is_allowed: { type: Boolean } },
     },
     //
     courses: {
-      view: {
-        type: Boolean,
-        default: false,
-      },
-      create_edit: {
-        type: Boolean,
-        default: false,
-      },
-      delete: {
-        type: Boolean,
-        default: false,
-      },
+      view: { is_allowed: { type: Boolean } },
+      edit: { is_allowed: { type: Boolean } },
+      create: { is_allowed: { type: Boolean } },
+      delete: { is_allowed: { type: Boolean } },
+      navigate: { is_allowed: { type: Boolean } },
     },
     //
     topics: {
-      create_edit: {
-        type: Boolean,
-        default: false,
-      },
-      delete: {
-        type: Boolean,
-        default: false,
-      },
+      view: { is_allowed: { type: Boolean } },
+      edit: { is_allowed: { type: Boolean } },
+      create: { is_allowed: { type: Boolean } },
+      delete: { is_allowed: { type: Boolean } },
+      navigate: { is_allowed: { type: Boolean } },
     },
     //
     testimonials: {
-      create_edit: {
-        type: Boolean,
-        default: false,
-      },
-      delete: {
-        type: Boolean,
-        default: false,
-      },
+      view: { is_allowed: { type: Boolean } },
+      edit: { is_allowed: { type: Boolean } },
+      create: { is_allowed: { type: Boolean } },
+      delete: { is_allowed: { type: Boolean } },
+      navigate: { is_allowed: { type: Boolean } },
     },
     //
     tributes: {
-      create_edit: {
-        type: Boolean,
-        default: false,
-      },
-      delete: {
-        type: Boolean,
-        default: false,
-      },
+      view: { is_allowed: { type: Boolean } },
+      edit: { is_allowed: { type: Boolean } },
+      create: { is_allowed: { type: Boolean } },
+      delete: { is_allowed: { type: Boolean } },
+      navigate: { is_allowed: { type: Boolean } },
     },
     //
     users: {
-      view: {
-        type: Boolean,
-        default: false,
-      },
-      create_edit: {
-        type: Boolean,
-        default: false,
-      },
-      permissions: {
-        type: Boolean,
-        default: false,
-      },
-      approve: {
-        type: Boolean,
-        default: false,
-      },
-      charge_money: {
-        type: Boolean,
-        default: false,
-      },
-      delete: {
-        type: Boolean,
-        default: false,
-      },
+      view: { is_allowed: { type: Boolean } },
+      edit: { is_allowed: { type: Boolean } },
+      edit_permissions: { is_allowed: { type: Boolean } },
+      approve: { is_allowed: { type: Boolean } },
+      charge_money: { is_allowed: { type: Boolean } },
+      create: { is_allowed: { type: Boolean } },
+      delete: { is_allowed: { type: Boolean } },
+      navigate: { is_allowed: { type: Boolean } },
     },
+    //
+    admin: {
+      backoffice: { is_allowed: { type: Boolean } },
+      debug: { is_allowed: { type: Boolean } },
+    },
+    //
   },
   //
   stripe_customer_id: {
