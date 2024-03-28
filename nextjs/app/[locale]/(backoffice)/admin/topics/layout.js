@@ -1,6 +1,6 @@
 /* * */
 
-import AuthGate from '@/components/AuthGate/AuthGate';
+import AppAuthenticationCheck from '@/components/AppAuthenticationCheck/AppAuthenticationCheck';
 import BackofficeWrapperLayout from '@/components/BackofficeWrapperLayout/BackofficeWrapperLayout';
 import BackofficeTopicsList from '@/components/BackofficeTopicsList/BackofficeTopicsList';
 
@@ -8,8 +8,8 @@ import BackofficeTopicsList from '@/components/BackofficeTopicsList/BackofficeTo
 
 export default function Layout({ children }) {
   return (
-    <AuthGate scope="users" permission="view" redirect>
+    <AppAuthenticationCheck scope="users" permission="view" redirect>
       <BackofficeWrapperLayout list={<BackofficeTopicsList />} page={children} />
-    </AuthGate>
+    </AppAuthenticationCheck>
   );
 }

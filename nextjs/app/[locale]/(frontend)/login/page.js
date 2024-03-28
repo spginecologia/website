@@ -1,9 +1,9 @@
 /* * */
 
-import AuthExplorerSignIn from '@/components/AuthExplorerSignIn/AuthExplorerSignIn';
+import AppAuthenticationLogin from '@/components/AppAuthenticationLogin/AppAuthenticationLogin';
 
 /* * */
 
 export default function Page() {
-  return <AuthExplorerSignIn />;
+  return <AppAuthenticationLogin />;
 }

@@ -1,9 +1,9 @@
 /* * */
 
-import AuthExplorerSignInError from '@/components/AuthExplorerSignInError/AuthExplorerSignInError';
+import AppAuthenticationLoginError from '@/components/AppAuthenticationLoginError/AppAuthenticationLoginError';
 
 /* * */
 
 export default function Page() {
-  return <AuthExplorerSignInError />;
+  return <AppAuthenticationLoginError />;
 }

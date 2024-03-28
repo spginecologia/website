@@ -4,7 +4,7 @@
 
 import { Link } from '@/translations/navigation';
 import styles from './BackofficeSidebar.module.css';
-import AuthGate from '@/components/AuthGate/AuthGate';
+import AppAuthenticationCheck from '@/components/AppAuthenticationCheck/AppAuthenticationCheck';
 import { SpgLogoIcon } from '@/assets/spg';
 import { useParams, usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
@@ -74,7 +74,7 @@ export default function BackofficeSidebar() {
       </Link>
       <div className={styles.navWrapper}>
         {SIDEBAR_LINKS.map((item) => (
-          <AuthGate key={item.key} scope={item.auth_scope} permission={item.auth_permission}>
+          <AppAuthenticationCheck key={item.key} scope={item.auth_scope} permission={item.auth_permission}>
             <Tooltip label={t(item.key)} position="right">
               <Link href={item.path}>
                 <ActionIcon className={`${styles.navButton} ${isActivePage(item.path) && styles.selected}`} size="xl" color="gray">
@@ -82,7 +82,7 @@ export default function BackofficeSidebar() {
                 </ActionIcon>
               </Link>
             </Tooltip>
-          </AuthGate>
+          </AppAuthenticationCheck>
         ))}
         <Tooltip label={'Logout'} position="right">
           <ActionIcon className={styles.navButton} size="xl" color="red" onClick={handleLogout}>

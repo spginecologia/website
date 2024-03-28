@@ -2,7 +2,7 @@
 
 /* * */
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import styles from './TextField.module.css';
 import generator from '@/services/generator';
 
@@ -28,20 +28,10 @@ export default function TextField({ type = 'text', name, label, description, pla
 
   return (
     <div className={`${styles.container} ${error && styles.isError}`}>
-      <label htmlFor={textFieldId} className={styles.regularLabel}>
-        {label}
-      </label>
+      <label className={styles.regularLabel}>{label}</label>
       <input type={type} name={textFieldId} placeholder={placeholder} className={styles.input} {...props} />
-      {description && (
-        <label htmlFor={textFieldId} className={styles.descriptionLabel}>
-          {description}
-        </label>
-      )}
-      {error && (
-        <label htmlFor={textFieldId} className={styles.errorLabel}>
-          {error}
-        </label>
-      )}
+      {description && <label className={styles.descriptionLabel}>{description}</label>}
+      {error && <label className={styles.errorLabel}>{error}</label>}
     </div>
   );
 

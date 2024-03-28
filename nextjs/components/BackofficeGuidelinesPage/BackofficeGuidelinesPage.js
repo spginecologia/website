@@ -17,7 +17,7 @@ import notify from '@/services/notify';
 import { openConfirmModal } from '@mantine/modals';
 import { useTranslations } from 'next-intl';
 import { useSession } from 'next-auth/react';
-import { isAllowed } from '@/components/AuthGate/AuthGate';
+import { isAllowed } from '@/components/AppAuthenticationCheck/AppAuthenticationCheck';
 import populate from '@/services/populate';
 import BackofficeWrapperPage from '@/components/BackofficeWrapperPage/BackofficeWrapperPage';
 import BackofficeWrapperPageSection from '@/components/BackofficeWrapperPageSection/BackofficeWrapperPageSection';

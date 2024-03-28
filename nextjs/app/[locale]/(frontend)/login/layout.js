@@ -1,9 +1,9 @@
 /* * */
 
-import AuthExplorer from '@/components/AuthExplorer/AuthExplorer';
+import AppAuthentication from '@/components/AppAuthentication/AppAuthentication';
 
 /* * */
 
 export default function Layout({ children }) {
-  return <AuthExplorer>{children}</AuthExplorer>;
+  return <AppAuthentication>{children}</AppAuthentication>;
 }

@@ -18,7 +18,7 @@ import { openConfirmModal } from '@mantine/modals';
 import UserActivityBadge from '@/components/UserActivityBadge/UserActivityBadge';
 import { useFormatter, useNow, useTranslations } from 'next-intl';
 import { useSession } from 'next-auth/react';
-import AuthGate, { isAllowed } from '@/components/AuthGate/AuthGate';
+import AppAuthenticationCheck, { isAllowed } from '@/components/AppAuthenticationCheck/AppAuthenticationCheck';
 import populate from '@/services/populate';
 import BackofficeWrapperPage from '@/components/BackofficeWrapperPage/BackofficeWrapperPage';
 import BackofficeWrapperPageSection from '@/components/BackofficeWrapperPageSection/BackofficeWrapperPageSection';

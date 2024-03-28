@@ -3,7 +3,6 @@
 /* * */
 
 import { useSession } from 'next-auth/react';
-import { useRouter } from 'next/navigation';
 import BackofficeWrapper from '@/components/BackofficeWrapper/BackofficeWrapper';
 
 /* * */
@@ -11,14 +10,21 @@ import BackofficeWrapper from '@/components/BackofficeWrapper/BackofficeWrapper'
 export default function Layout({ children }) {
   //
 
-  const router = useRouter();
+  //
+  // A. Handle session
 
-  useSession({
+  const { status: sessionStatus } = useSession({
     required: true,
     onUnauthenticated() {
-      router.push(`/login?callbackUrl=${window.location.pathname}`);
+      if (!window.location.pathname || window.location.pathname === '/') window.location = '/login';
+      else window.location = `/login?callbackUrl=${window.location.pathname}`;
     },
   });
 
-  return <BackofficeWrapper>{children}</BackofficeWrapper>;
+  //
+  // B. Render components
+
+  return sessionStatus === 'authenticated' ? <BackofficeWrapper>{children}</BackofficeWrapper> : <Loader visible fill />;
+
+  //
 }

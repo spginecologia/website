@@ -1,9 +1,9 @@
 /* * */
 
-import AuthExplorerSignInVerify from '@/components/AuthExplorerSignInVerify/AuthExplorerSignInVerify';
+import AppAuthenticationSignInVerify from '@/components/AppAuthenticationSignInVerify/AppAuthenticationSignInVerify';
 
 /* * */
 
 export default function Page() {
-  return <AuthExplorerSignInVerify />;
+  return <AppAuthenticationSignInVerify />;
 }

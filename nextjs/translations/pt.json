@@ -84,7 +84,7 @@
         "brand_assets": "Brand Assets",
         "privacy": "Privacidade"
     },
-    "AuthExplorerSignIn": {
+    "AppAuthenticationLogin": {
         "title": "Login",
         "subtitle": "Se precisar de ajuda contacte-nos.",
         "email": {
@@ -95,12 +95,12 @@
             "label": "Iniciar Sessão"
         }
     },
-    "AuthExplorerSignInVerify": {
+    "AppAuthenticationLoginVerify": {
         "title": "Login",
         "subtitle": "Por favor verifique a sua caixa de email.",
         "retry": "Não recebi o email de login"
     },
-    "AuthExplorerSignInError": {
+    "AppAuthenticationLoginError": {
         "title": "Login",
         "retry": "Tentar Novamente",
         "error_type": {

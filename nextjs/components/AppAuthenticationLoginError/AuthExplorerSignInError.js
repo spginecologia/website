@@ -5,7 +5,7 @@
 import { useSearchParams } from 'next/navigation';
 import { useRouter } from '@/translations/navigation';
 import { useTranslations } from 'next-intl';
-import styles from './AuthExplorerSignInError.module.css';
+import styles from './AppAuthenticationSignInError.module.css';
 import Title from '@/components/Title/Title';
 import Text from '@/components/Text/Text';
 import Button from '@/components/Button/Button';
@@ -14,7 +14,7 @@ import { Space } from '@mantine/core';
 
 /* * */
 
-export default function AuthExplorerSignInError() {
+export default function AppAuthenticationSignInError() {
   //
 
   //
@@ -22,7 +22,7 @@ export default function AuthExplorerSignInError() {
 
   const router = useRouter();
   const searchParams = useSearchParams();
-  const t = useTranslations('AuthExplorerSignInError');
+  const t = useTranslations('AppAuthenticationSignInError');
 
   //
   // B. Transform data

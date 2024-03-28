@@ -4,7 +4,7 @@
 
 import { useRouter } from '@/translations/navigation';
 import { useTranslations } from 'next-intl';
-import styles from './AuthExplorerSignInVerify.module.css';
+import styles from './AppAuthenticationSignInVerify.module.css';
 import Title from '@/components/Title/Title';
 import Text from '@/components/Text/Text';
 import Button from '@/components/Button/Button';
@@ -12,14 +12,14 @@ import { Space } from '@mantine/core';
 
 /* * */
 
-export default function AuthExplorerSignInVerify() {
+export default function AppAuthenticationSignInVerify() {
   //
 
   //
   // A. Setup variables
 
   const router = useRouter();
-  const t = useTranslations('AuthExplorerSignInVerify');
+  const t = useTranslations('AppAuthenticationSignInVerify');
 
   //
   // B. Handle actions

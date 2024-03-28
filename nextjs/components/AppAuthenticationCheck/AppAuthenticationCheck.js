@@ -4,7 +4,7 @@ import { useSession } from 'next-auth/react';
 import { useRouter } from '@/translations/navigation';
 import { useEffect, useMemo } from 'react';
 
-export default function AuthGate({ scope = '', permission = '', redirect = false, children }) {
+export default function AppAuthenticationCheck({ scope = '', permission = '', redirect = false, children }) {
   //
 
   return children;

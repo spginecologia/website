@@ -8,7 +8,7 @@ import { useForm, yupResolver } from '@mantine/form';
 import { SignInDefault } from '@/schemas/SignIn/default';
 import { SignInValidation } from '@/schemas/SignIn/validation';
 import { useTranslations } from 'next-intl';
-import styles from './AuthExplorerSignIn.module.css';
+import styles from './AppAuthenticationLogin.module.css';
 import Title from '@/components/Title/Title';
 import Text from '@/components/Text/Text';
 import Button from '@/components/Button/Button';
@@ -18,13 +18,13 @@ import Loader from '@/components/Loader/Loader';
 
 /* * */
 
-export default function AuthExplorerSignIn() {
+export default function AppAuthenticationLogin() {
   //
 
   //
   // A. Setup variables
 
-  const t = useTranslations('AuthExplorerSignIn');
+  const t = useTranslations('AppAuthenticationLogin');
   const [isLoading, setIsLoading] = useState(false);
 
   //
