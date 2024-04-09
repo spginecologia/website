@@ -45,7 +45,7 @@ export default function BackofficeUsersPage() {
   const { user_id } = useParams();
 
   const { data: session } = useSession();
-  const isReadOnly = !isAllowed(session, 'users', 'create_edit');
+  const isReadOnly = false; // !isAllowed(session, 'users', 'create_edit');
 
   //
   // B. Fetch data
@@ -139,87 +139,27 @@ export default function BackofficeUsersPage() {
         return;
       case 'reviewer':
         userForm.setValues({
-          permissions: {
-            admin: { backoffice: true, debug: false },
-            news: { create_edit: false, delete: false },
-            agenda: { create_edit: false, delete: false },
-            videos: { view: true, upload: true, create_edit_own: true, approve: true, create_edit_all: true, delete: false },
-            guidelines: { create_edit: false, delete: false },
-            publications: { view: true, create_edit: false, delete: false },
-            courses: { view: true, create_edit: false, delete: false },
-            topics: { create_edit: false, delete: false },
-            testimonials: { create_edit: false, delete: false },
-            tributes: { create_edit: false, delete: false },
-            users: { view: false, create_edit: false, permissions: false, approve: false, charge_money: false, delete: false },
-          },
+          permissions: UserOptions.permissions_presets.reviewer,
         });
         return;
       case 'publisher':
         userForm.setValues({
-          permissions: {
-            admin: { backoffice: true, debug: false },
-            news: { create_edit: true, delete: true },
-            agenda: { create_edit: true, delete: true },
-            videos: { view: true, upload: true, create_edit_own: true, approve: false, create_edit_all: false, delete: false },
-            guidelines: { create_edit: true, delete: true },
-            publications: { view: true, create_edit: true, delete: true },
-            courses: { view: true, create_edit: true, delete: true },
-            topics: { create_edit: true, delete: true },
-            testimonials: { create_edit: true, delete: true },
-            tributes: { create_edit: true, delete: true },
-            users: { view: false, create_edit: false, permissions: false, approve: false, charge_money: false, delete: false },
-          },
+          permissions: UserOptions.permissions_presets.publisher,
         });
         return;
       case 'secretary':
         userForm.setValues({
-          permissions: {
-            admin: { backoffice: true, debug: false },
-            news: { create_edit: false, delete: false },
-            agenda: { create_edit: false, delete: false },
-            videos: { view: false, upload: false, create_edit_own: false, approve: false, create_edit_all: false, delete: false },
-            guidelines: { create_edit: false, delete: false },
-            publications: { view: false, create_edit: false, delete: false },
-            courses: { view: false, create_edit: false, delete: false },
-            topics: { create_edit: false, delete: false },
-            testimonials: { create_edit: false, delete: false },
-            tributes: { create_edit: false, delete: false },
-            users: { view: true, create_edit: true, permissions: true, approve: true, charge_money: false, delete: false },
-          },
+          permissions: UserOptions.permissions_presets.secretary,
         });
         return;
       case 'accountant':
         userForm.setValues({
-          permissions: {
-            admin: { backoffice: true, debug: false },
-            news: { create_edit: false, delete: false },
-            agenda: { create_edit: false, delete: false },
-            videos: { view: false, upload: false, create_edit_own: false, approve: false, create_edit_all: false, delete: false },
-            guidelines: { create_edit: false, delete: false },
-            publications: { view: false, create_edit: false, delete: false },
-            courses: { view: false, create_edit: false, delete: false },
-            topics: { create_edit: false, delete: false },
-            testimonials: { create_edit: false, delete: false },
-            tributes: { create_edit: false, delete: false },
-            users: { view: true, create_edit: true, approve: false, charge_money: true, delete: false },
-          },
+          permissions: UserOptions.permissions_presets.accountant,
         });
         return;
       case 'admin':
         userForm.setValues({
-          permissions: {
-            admin: { backoffice: true, debug: false },
-            news: { create_edit: true, delete: true },
-            agenda: { create_edit: true, delete: true },
-            videos: { view: true, upload: true, create_edit_own: true, approve: true, create_edit_all: true, delete: true },
-            guidelines: { create_edit: true, delete: true },
-            publications: { view: true, create_edit: true, delete: true },
-            courses: { view: true, create_edit: true, delete: true },
-            topics: { create_edit: true, delete: true },
-            testimonials: { create_edit: true, delete: true },
-            tributes: { create_edit: true, delete: true },
-            users: { view: true, create_edit: true, approve: true, charge_money: true, delete: true },
-          },
+          permissions: UserOptions.permissions_presets.admin,
         });
         return;
     }

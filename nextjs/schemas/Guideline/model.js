@@ -20,10 +20,12 @@ export const GuidelineSchema = new mongoose.Schema({
   document_document: {
     type: Number,
   },
-  topics: {
-    type: Boolean,
-    default: false,
-  },
+  topics: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Topic',
+    },
+  ],
   cover_image: {
     type: Boolean,
     default: false,

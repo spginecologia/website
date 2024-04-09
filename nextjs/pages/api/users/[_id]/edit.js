@@ -101,6 +101,16 @@ export default async function handler(req, res) {
   }
 
   // 12.
+  // Setup automatic fields
+
+  try {
+    req.body.display_name = `${req.body.title} ${req.body.first_name}`;
+  } catch (err) {
+    console.log(err);
+    return await res.status(500).json({ message: err.message || 'Could not ensure user permissions are correctly formatted.' });
+  }
+
+  // 13.
   // Update the requested document
 
   try {

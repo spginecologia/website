@@ -3,6 +3,7 @@
 /* * */
 
 import { useSession } from 'next-auth/react';
+import Loader from '@/components/Loader/Loader';
 import BackofficeWrapper from '@/components/BackofficeWrapper/BackofficeWrapper';
 
 /* * */

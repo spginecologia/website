@@ -1,6 +1,7 @@
 /* * */
 
-import mongodb from '@/services/MONGOOSE';
+import getSession from '@/authentication/getSession';
+import prepareApiEndpoint from '@/services/prepareApiEndpoint';
 import { GuidelineModel } from '@/schemas/Guideline/model';
 
 /* * */
@@ -9,21 +10,28 @@ export default async function handler(req, res) {
   //
 
   // 1.
-  // Refuse request if not GET
+  // Setup variables
 
-  if (req.method != 'GET') {
-    await res.setHeader('Allow', ['GET']);
-    return await res.status(405).json({ message: `Method ${req.method} Not Allowed.` });
-  }
+  let sessionData;
 
   // 2.
-  // Connect to MongoDB
+  // Get session data
 
   try {
-    await mongodb.connect();
+    sessionData = await getSession(req, res);
   } catch (err) {
     console.log(err);
-    return await res.status(500).json({ message: 'MongoDB connection error.' });
+    return await res.status(400).json({ message: err.message || 'Could not get Session data. Are you logged in?' });
+  }
+
+  // 3.
+  // Prepare endpoint
+
+  try {
+    await prepareApiEndpoint({ request: req, method: 'GET', session: sessionData, permissions: [{ scope: 'guidelines', action: 'view' }] });
+  } catch (err) {
+    console.log(err);
+    return await res.status(400).json({ message: err.message || 'Could not prepare endpoint.' });
   }
 
   // 3.

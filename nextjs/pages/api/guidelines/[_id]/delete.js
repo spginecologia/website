@@ -1,7 +1,7 @@
 /* * */
 
-import checkAuthentication from '@/services/checkAuthentication';
-import mongodb from '@/services/MONGOOSE';
+import getSession from '@/authentication/getSession';
+import prepareApiEndpoint from '@/services/prepareApiEndpoint';
 import { GuidelineModel } from '@/schemas/Guideline/model';
 
 /* * */
@@ -10,31 +10,28 @@ export default async function handler(req, res) {
   //
 
   // 1.
-  // Refuse request if not DELETE
+  // Setup variables
 
-  if (req.method != 'DELETE') {
-    await res.setHeader('Allow', ['DELETE']);
-    return await res.status(405).json({ message: `Method ${req.method} Not Allowed.` });
-  }
+  let sessionData;
 
   // 2.
-  // Check for correct Authentication and valid Permissions
+  // Get session data
 
   try {
-    await checkAuthentication({ scope: 'topics', permission: 'delete', req, res });
+    sessionData = await getSession(req, res);
   } catch (err) {
     console.log(err);
-    return await res.status(401).json({ message: err.message || 'Could not verify Authentication.' });
+    return await res.status(400).json({ message: err.message || 'Could not get Session data. Are you logged in?' });
   }
 
   // 3.
-  // Connect to MongoDB
+  // Prepare endpoint
 
   try {
-    await mongodb.connect();
+    await prepareApiEndpoint({ request: req, method: 'DELETE', session: sessionData, permissions: [{ scope: 'guidelines', action: 'delete' }] });
   } catch (err) {
     console.log(err);
-    return await res.status(500).json({ message: 'MongoDB connection error.' });
+    return await res.status(400).json({ message: err.message || 'Could not prepare endpoint.' });
   }
 
   // 4.

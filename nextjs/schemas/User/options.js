@@ -25,6 +25,10 @@ export const UserOptions = {
       publications: { ...UserDefault.permissions.publications, view: { is_allowed: true } },
       courses: { ...UserDefault.permissions.courses, view: { is_allowed: true } },
     },
+    reviewer: UserDefault.permissions,
+    publisher: UserDefault.permissions,
+    secretary: UserDefault.permissions,
+    accountant: UserDefault.permissions,
     admin: {
       ...UserDefault.permissions,
       videos: { ...UserDefault.permissions.videos, view: { is_allowed: true }, upload: { is_allowed: true }, create_edit_own: { is_allowed: true } },
