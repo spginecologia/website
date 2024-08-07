@@ -1,4 +1,3 @@
-
 # # # # # # # # #
 
 FROM node:alpine AS base
@@ -17,7 +16,8 @@ WORKDIR /app
 
 COPY package.json ./
 
-RUN npm install --omit-dev
+RUN npm install --omit-dev \
+    && npm cache clean --force
 
 
 # # # # # # # # #
@@ -32,6 +32,8 @@ WORKDIR /app
 
 COPY --from=dependencies /app/node_modules ./node_modules
 COPY . .
+
+RUN npx @helperkits/bumper bump
 
 RUN npm run build
 
@@ -56,11 +58,7 @@ COPY --from=builder /app/public ./public
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 
-# RUN mkdir -p ./exported_files
-# RUN chown -R nextjs:nodejs ./exported_files
-# RUN chmod -R 755 ./exported_files
-
-# USER nextjs
+USER nextjs
 
 EXPOSE 3000
 ENV PORT 3000
