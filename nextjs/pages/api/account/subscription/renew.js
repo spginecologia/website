@@ -87,15 +87,15 @@ export default async function handler(req, res) {
     //
     mode: 'subscription',
     //
-    success_url: `http://localhost:3000/subscription/renew?success=true&session_id={CHECKOUT_SESSION_ID}`,
-    cancel_url: `http://localhost:3000/account`,
+    success_url: `http://localhost:3005/subscription/renew?success=true&session_id={CHECKOUT_SESSION_ID}`,
+    cancel_url: `http://localhost:3005/account`,
     //
     // Specify only 'customer' or 'customer_email'
     customer: userData.stripe_customer_id || undefined,
     customer_email: userData.stripe_customer_id ? undefined : userData.email,
     //
     metadata: {
-      user_id: userData._id,
+      user_id: String(userData._id),
     },
     //
     line_items: [
