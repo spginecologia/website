@@ -7,7 +7,7 @@ import mongoose from 'mongoose';
 async function connect() {
   await mongoose
     .set('strictQuery', false)
-    .connect(process.env.MONGODB_CONNECTION_STRING)
+    .connect(process.env.WEBSITEDB_MONGODB_URI)
     // .then(() => console.log('Connected.'))
     .catch((error) => {
       console.log('Connection to MongoDB failed.');

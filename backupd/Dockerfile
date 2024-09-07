@@ -2,8 +2,8 @@ FROM mongo:latest
 
 WORKDIR /backupd
 
-COPY ./backupd.sh ./backupd.sh
+COPY . .
 
-RUN chmod 0644 ./backupd.sh
+RUN chmod +x backupd.sh websitedb.sh
 
 CMD ["sh", "backupd.sh"]

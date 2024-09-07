@@ -1,6 +1,6 @@
 volumes:
   certbotdata:
-  mongodbdata:
+  websitedbdata:
 
 services:
   #
@@ -53,7 +53,7 @@ services:
   # # # # # # # # # # # # # # # # # # # # #
   # # # # # # # # # # # # # # # # # # # # #
 
-  mongodb:
+  websitedbdb:
     image: mongo
     restart: unless-stopped
     logging:
@@ -61,10 +61,10 @@ services:
         max-size: '1m'
         max-file: '1'
     volumes:
-      - mongodbdata:/data/db
+      - websitedbdbdata:/data/db
     environment:
-      - MONGO_INITDB_ROOT_USERNAME=mongodbuser
-      - MONGO_INITDB_ROOT_PASSWORD=mongodbpassword
+      - MONGO_INITDB_ROOT_USERNAME=websitedbuser
+      - MONGO_INITDB_ROOT_PASSWORD=websitedbpassword
 
   # # # # # # # # # # # # # # # # # # # # #
   # # # # # # # # # # # # # # # # # # # # #

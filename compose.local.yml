@@ -7,7 +7,7 @@ services:
   # # # # # # # # # # # # # # # # # # # # #
   # # # # # # # # # # # # # # # # # # # # #
 
-  mongodb:
+  websitedbdb:
     image: mongo
     restart: unless-stopped
     logging:
@@ -19,5 +19,5 @@ services:
     volumes:
       - mongodbdata:/data/db
     environment:
-      - MONGO_INITDB_ROOT_USERNAME=mongodbuser
-      - MONGO_INITDB_ROOT_PASSWORD=mongodbpassword
+      - MONGO_INITDB_ROOT_USERNAME=websitedbuser
+      - MONGO_INITDB_ROOT_PASSWORD=websitedbpassword
