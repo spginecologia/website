@@ -53,7 +53,7 @@ services:
   # # # # # # # # # # # # # # # # # # # # #
   # # # # # # # # # # # # # # # # # # # # #
 
-  websitedbdb:
+  websitedb:
     image: mongo
     restart: unless-stopped
     logging:
@@ -61,7 +61,7 @@ services:
         max-size: '1m'
         max-file: '1'
     volumes:
-      - websitedbdbdata:/data/db
+      - websitedbdata:/data/db
     environment:
       - MONGO_INITDB_ROOT_USERNAME=websitedbuser
       - MONGO_INITDB_ROOT_PASSWORD=websitedbpassword
