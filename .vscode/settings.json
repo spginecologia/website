@@ -16,9 +16,9 @@
 	"editor.defaultFormatter": "dbaeumer.vscode-eslint",
 
 	// Disable the default CSS formatter, use stylelint instead
-	 "css.validate": false,
-	 "less.validate": false,
-	 "scss.validate": false,
+	  "css.validate": false,
+	  "less.validate": false,
+	  "scss.validate": false,
 
 	// Auto fix
 	"editor.codeActionsOnSave": {
@@ -54,17 +54,17 @@
 	  "yaml",
 	  "toml",
 	  "astro"
-	 ],
+	  ],
 
-	 "workbench.editor.customLabels.enabled": true,
+	  "workbench.editor.customLabels.enabled": true,
 
-	 "workbench.editor.customLabels.patterns": {
-		 "**/components/**/*.js": "${dirname} (${extname})",
-		 "**/components/**/*.ts": "${dirname} (${extname})",
-		 "**/components/**/*.tsx": "${dirname} (${extname})",
-		 "**/components/**/*.css": "${dirname} (${extname})"
-	 },
+	  "workbench.editor.customLabels.patterns": {
+		  "**/components/**/*.js": "${dirname} (${extname})",
+		  "**/components/**/*.ts": "${dirname} (${extname})",
+		  "**/components/**/*.tsx": "${dirname} (${extname})",
+		  "**/components/**/*.css": "${dirname} (${extname})"
+	  },
 
-	"typescript.tsdk": "./frontend/node_modules/typescript/lib"
+	"typescript.tsdk": "./nextjs/node_modules/typescript/lib"
 
- }
+  }

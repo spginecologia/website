@@ -5,7 +5,7 @@
 import { useSearchParams } from 'next/navigation';
 import { useRouter } from '@/translations/navigation';
 import { useTranslations } from 'next-intl';
-import styles from './AppAuthenticationSignInError.module.css';
+import styles from './styles.module.css';
 import Title from '@/components/Title/Title';
 import Text from '@/components/Text/Text';
 import Button from '@/components/Button/Button';

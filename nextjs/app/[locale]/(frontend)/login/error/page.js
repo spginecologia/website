@@ -1,6 +1,6 @@
 /* * */
 
-import AppAuthenticationLoginError from '@/components/AppAuthenticationLoginError/AppAuthenticationLoginError';
+import AppAuthenticationLoginError from '@/components/AppAuthenticationLoginError';
 
 /* * */
 
