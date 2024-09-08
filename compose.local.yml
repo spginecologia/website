@@ -1,5 +1,5 @@
 volumes:
-  mongodbdata:
+  websitedbdata:
 
 services:
   #
@@ -17,13 +17,12 @@ services:
     volumes:
       - ./backups/:/backups
     environment:
-      - MONGO_INITDB_ROOT_USERNAME=websitedbuser
-      - MONGO_INITDB_ROOT_PASSWORD=websitedbpassword
+      - WEBSITEDB_MONGODB_URI=mongodb://websitedbuser:websitedbpassword@websitedb/production?authSource=admin
 
   # # # # # # # # # # # # # # # # # # # # #
   # # # # # # # # # # # # # # # # # # # # #
 
-  websitedbdb:
+  websitedb:
     image: mongo
     restart: unless-stopped
     logging:
@@ -33,7 +32,7 @@ services:
     ports:
       - 37005:27017
     volumes:
-      - mongodbdata:/data/db
+      - websitedbdata:/data/db
     environment:
       - MONGO_INITDB_ROOT_USERNAME=websitedbuser
       - MONGO_INITDB_ROOT_PASSWORD=websitedbpassword

@@ -41,3 +41,6 @@ yarn-error.log*
 
 # nginx Uptime Monitor
 nginx/uptime.conf
+
+# Backups
+spg-backup-*
