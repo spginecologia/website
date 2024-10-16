@@ -1,0 +1,1103 @@
+[
+    {
+        "id": 5951,
+        "date": "2021-11-16T20:14:03",
+        "date_gmt": "2021-11-16T20:14:03",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=curso&#038;p=5951"
+        },
+        "modified": "2021-11-16T20:38:30",
+        "modified_gmt": "2021-11-16T20:38:30",
+        "slug": "webinar-curso-de-ecografia",
+        "status": "publish",
+        "type": "curso",
+        "link": "https://spginecologia.pt/curso/5951/",
+        "title": {
+            "rendered": "Webinar: Curso de Ecografia"
+        },
+        "content": {
+            "rendered": "<p><video style=\"width:100%\" controls><source type=\"video/mp4\" src=\"https://spginecologia.pt/wp-content/uploads/2021/11/2501145606.mp4\"></video></p>\n",
+            "protected": false
+        },
+        "featured_media": 750,
+        "template": "",
+        "categories": [
+            53,
+            59
+        ],
+        "class_list": [
+            "post-5951",
+            "curso",
+            "type-curso",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry",
+            "category-ecografia",
+            "category-neg"
+        ],
+        "acf": [],
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso/5951"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/curso"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/750"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=5951"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=5951"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 5046,
+        "date": "2021-10-22T20:39:58",
+        "date_gmt": "2021-10-22T19:39:58",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=curso&#038;p=5046"
+        },
+        "modified": "2021-10-22T20:39:58",
+        "modified_gmt": "2021-10-22T19:39:58",
+        "slug": "bases-e-diretrizes-da-terapia-hormonal-no-climaterio",
+        "status": "publish",
+        "type": "curso",
+        "link": "https://spginecologia.pt/curso/5046/",
+        "title": {
+            "rendered": "Bases e Diretrizes da Terapia Hormonal no Climatério"
+        },
+        "content": {
+            "rendered": "<p><iframe loading=\"lazy\" title=\"Bases e diretrizes da terapia hormonal no climatério\" width=\"500\" height=\"281\" src=\"https://www.youtube.com/embed/2iJgSdKIIt4?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe></p>\n",
+            "protected": false
+        },
+        "featured_media": 5048,
+        "template": "",
+        "categories": [
+            23,
+            83
+        ],
+        "class_list": [
+            "post-5046",
+            "curso",
+            "type-curso",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry",
+            "category-menopausa",
+            "category-terapia-hormonal"
+        ],
+        "acf": [],
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso/5046"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/curso"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/5048"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=5046"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=5046"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 4612,
+        "date": "2021-10-11T15:23:10",
+        "date_gmt": "2021-10-11T14:23:10",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=curso&#038;p=4612"
+        },
+        "modified": "2021-10-11T15:24:49",
+        "modified_gmt": "2021-10-11T14:24:49",
+        "slug": "endoscopia-o-futuro-e-hoje",
+        "status": "publish",
+        "type": "curso",
+        "link": "https://spginecologia.pt/curso/4612/",
+        "title": {
+            "rendered": "Endoscopia — O Futuro é Hoje"
+        },
+        "content": {
+            "rendered": "<p><video style=\"width: 100%\" controls><source type=\"video/mp4\" src=\"https://spginecologia.pt/wp-content/uploads/2021/10/2846021630.mp4\"></video></p>\n",
+            "protected": false
+        },
+        "featured_media": 745,
+        "template": "",
+        "categories": [
+            75
+        ],
+        "class_list": [
+            "post-4612",
+            "curso",
+            "type-curso",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry",
+            "category-endoscopia-ginecologica"
+        ],
+        "acf": [],
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso/4612"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/curso"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/745"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=4612"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=4612"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 287,
+        "date": "2021-07-19T19:10:12",
+        "date_gmt": "2021-07-19T18:10:12",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=curso&#038;p=287"
+        },
+        "modified": "2021-09-01T15:02:31",
+        "modified_gmt": "2021-09-01T14:02:31",
+        "slug": "do-essencial-a-inovacao-em-uroginecologia",
+        "status": "publish",
+        "type": "curso",
+        "link": "https://spginecologia.pt/curso/287/",
+        "title": {
+            "rendered": "Do Essencial à Inovação em Uroginecologia"
+        },
+        "content": {
+            "rendered": "<p><video style=\"width: 100%\" controls><source type=\"video/mp4\" src=\"https://spginecologia.pt/wp-content/uploads/2021/09/webinar-spug-22-maio-2021.mp4\"></video></p>\n",
+            "protected": false
+        },
+        "featured_media": 288,
+        "template": "",
+        "categories": [
+            16,
+            3
+        ],
+        "class_list": [
+            "post-287",
+            "curso",
+            "type-curso",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry",
+            "category-spug",
+            "category-uroginecologia"
+        ],
+        "acf": [],
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso/287"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/curso"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/288"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=287"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=287"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 285,
+        "date": "2021-03-03T13:00:45",
+        "date_gmt": "2021-03-03T13:00:45",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=curso&#038;p=285"
+        },
+        "modified": "2021-07-19T19:08:23",
+        "modified_gmt": "2021-07-19T18:08:23",
+        "slug": "hemorragia-uterina-anomala-protocolos-de-atuacao-dra-ana-teresa-marujo-dra-neuza-mendes",
+        "status": "publish",
+        "type": "curso",
+        "link": "https://spginecologia.pt/curso/285/",
+        "title": {
+            "rendered": "Hemorragia uterina anómala – protocolos de atuação (Drª Ana Teresa Marujo, Drª Neuza Mendes)"
+        },
+        "content": {
+            "rendered": "<p><a class=\"button-default\" target=\"_blank\" href=\"/wp-content/uploads/2021/07/hemorragia-uterina-anomala-protocolos-de-atuacao.pdf\" rel=\"noopener\">Abrir Documento</a></p>\n<script type=\"text/javascript\">window.location.replace(\"/wp-content/uploads/2021/07/hemorragia-uterina-anomala-protocolos-de-atuacao.pdf\");</script>\n",
+            "protected": false
+        },
+        "featured_media": 0,
+        "template": "",
+        "categories": [
+            25
+        ],
+        "class_list": [
+            "post-285",
+            "curso",
+            "type-curso",
+            "status-publish",
+            "hentry",
+            "category-ginecologia-da-infancia-e-da-adolescencia"
+        ],
+        "acf": [],
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso/285"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/curso"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=285"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=285"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 283,
+        "date": "2021-03-03T12:00:24",
+        "date_gmt": "2021-03-03T12:00:24",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=curso&#038;p=283"
+        },
+        "modified": "2021-07-19T19:06:31",
+        "modified_gmt": "2021-07-19T18:06:31",
+        "slug": "transexualidade-da-leitura-e-compreensao-a-intervencao-disforia-de-genero-dra-zelia-figueiredo",
+        "status": "publish",
+        "type": "curso",
+        "link": "https://spginecologia.pt/curso/283/",
+        "title": {
+            "rendered": "Transexualidade: da leitura e compreensão à intervenção – Disforia de Género (Drª Zélia Figueiredo)"
+        },
+        "content": {
+            "rendered": "<p><a class=\"button-default\" target=\"_blank\" href=\"/wp-content/uploads/2021/07/diversidade-de-genero-sexual-e-relacional.pdf\" rel=\"noopener\">Abrir Documento</a></p>\n<script type=\"text/javascript\">window.location.replace(\"/wp-content/uploads/2021/07/diversidade-de-genero-sexual-e-relacional.pdf\");</script>\n",
+            "protected": false
+        },
+        "featured_media": 0,
+        "template": "",
+        "categories": [
+            25
+        ],
+        "class_list": [
+            "post-283",
+            "curso",
+            "type-curso",
+            "status-publish",
+            "hentry",
+            "category-ginecologia-da-infancia-e-da-adolescencia"
+        ],
+        "acf": [],
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso/283"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/curso"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=283"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=283"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 280,
+        "date": "2021-03-03T11:00:25",
+        "date_gmt": "2021-03-03T11:00:25",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=curso&#038;p=280"
+        },
+        "modified": "2021-07-19T19:04:52",
+        "modified_gmt": "2021-07-19T18:04:52",
+        "slug": "saude-reprodutiva-das-adolescentes-amenorreias-dra-helena-solheiro",
+        "status": "publish",
+        "type": "curso",
+        "link": "https://spginecologia.pt/curso/280/",
+        "title": {
+            "rendered": "Saúde reprodutiva das adolescentes – Amenorreias (Drª Helena Solheiro)"
+        },
+        "content": {
+            "rendered": "<p><a class=\"button-default\" target=\"_blank\" href=\"/wp-content/uploads/2021/07/amenorreias.pdf\" rel=\"noopener\">Abrir Documento</a></p>\n<script type=\"text/javascript\">window.location.replace(\"/wp-content/uploads/2021/07/amenorreias.pdf\");</script>\n",
+            "protected": false
+        },
+        "featured_media": 0,
+        "template": "",
+        "categories": [
+            25
+        ],
+        "class_list": [
+            "post-280",
+            "curso",
+            "type-curso",
+            "status-publish",
+            "hentry",
+            "category-ginecologia-da-infancia-e-da-adolescencia"
+        ],
+        "acf": [],
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso/280"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/curso"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=280"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=280"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 267,
+        "date": "2021-03-03T10:00:58",
+        "date_gmt": "2021-03-03T10:00:58",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=curso&#038;p=267"
+        },
+        "modified": "2021-07-19T19:08:46",
+        "modified_gmt": "2021-07-19T18:08:46",
+        "slug": "a-nova-vacina-contra-o-hpv-dra-vera-ramos",
+        "status": "publish",
+        "type": "curso",
+        "link": "https://spginecologia.pt/curso/267/",
+        "title": {
+            "rendered": "A nova vacina contra o HPV (Drª Vera Ramos)"
+        },
+        "content": {
+            "rendered": "<p><a class=\"button-default\" target=\"_blank\" href=\"/wp-content/uploads/2021/07/a-nova-vacina-contra-o-hpv.pdf\" rel=\"noopener\">Abrir Documento</a></p>\n<script type=\"text/javascript\">window.location.replace(\"/wp-content/uploads/2021/07/a-nova-vacina-contra-o-hpv.pdf\");</script>\n",
+            "protected": false
+        },
+        "featured_media": 278,
+        "template": "",
+        "categories": [
+            25
+        ],
+        "class_list": [
+            "post-267",
+            "curso",
+            "type-curso",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry",
+            "category-ginecologia-da-infancia-e-da-adolescencia"
+        ],
+        "acf": [],
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso/267"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/curso"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/278"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=267"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=267"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 263,
+        "date": "2021-03-03T09:00:15",
+        "date_gmt": "2021-03-03T09:00:15",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=curso&#038;p=263"
+        },
+        "modified": "2021-07-19T19:04:36",
+        "modified_gmt": "2021-07-19T18:04:36",
+        "slug": "consulta-de-ginecologia-na-pre-puberdade-dra-filomena-sousa",
+        "status": "publish",
+        "type": "curso",
+        "link": "https://spginecologia.pt/curso/263/",
+        "title": {
+            "rendered": "Consulta de ginecologia na pré-puberdade (Drª Filomena Sousa)"
+        },
+        "content": {
+            "rendered": "<p><a class=\"button-default\" href=\"/wp-content/uploads/2021/07/Exame-ginecologico-na-pre-puberdade-SPG.pdf\">Abrir Documento</a></p>\n<script type=\"text/javascript\">window.location.replace(\"/wp-content/uploads/2021/07/Exame-ginecologico-na-pre-puberdade-SPG.pdf\");</script>\n",
+            "protected": false
+        },
+        "featured_media": 265,
+        "template": "",
+        "categories": [
+            25
+        ],
+        "class_list": [
+            "post-263",
+            "curso",
+            "type-curso",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry",
+            "category-ginecologia-da-infancia-e-da-adolescencia"
+        ],
+        "acf": [],
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso/263"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/curso"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/265"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=263"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=263"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 260,
+        "date": "2021-03-03T08:00:15",
+        "date_gmt": "2021-03-03T08:00:15",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=curso&#038;p=260"
+        },
+        "modified": "2021-07-19T19:09:03",
+        "modified_gmt": "2021-07-19T18:09:03",
+        "slug": "impacto-da-violencia-no-desenvolvimento-psicossexual-da-adolescente-dra-sonia-araujo",
+        "status": "publish",
+        "type": "curso",
+        "link": "https://spginecologia.pt/curso/260/",
+        "title": {
+            "rendered": "Impacto da violência no desenvolvimento psicossexual da adolescente (Drª Sónia Araújo)"
+        },
+        "content": {
+            "rendered": "<p><a class=\"button-default\" target=\"_blank\" href=\"/wp-content/uploads/2021/07/Impacto-Violencia-no-Desenv-Psicos-Adolescente.pdf\" rel=\"noopener\">Abrir Documento</a></p>\n<script type=\"text/javascript\">window.location.replace(\"/wp-content/uploads/2021/07/Impacto-Violencia-no-Desenv-Psicos-Adolescente.pdf\");</script>\n",
+            "protected": false
+        },
+        "featured_media": 262,
+        "template": "",
+        "categories": [
+            25
+        ],
+        "class_list": [
+            "post-260",
+            "curso",
+            "type-curso",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry",
+            "category-ginecologia-da-infancia-e-da-adolescencia"
+        ],
+        "acf": [],
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso/260"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/curso"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/262"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=260"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=260"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 257,
+        "date": "2021-02-27T08:00:00",
+        "date_gmt": "2021-02-27T08:00:00",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=curso&#038;p=257"
+        },
+        "modified": "2021-09-01T14:57:06",
+        "modified_gmt": "2021-09-01T13:57:06",
+        "slug": "webinar-de-ginecologia-oncologica",
+        "status": "publish",
+        "type": "curso",
+        "link": "https://spginecologia.pt/curso/257/",
+        "title": {
+            "rendered": "Webinar de Ginecologia Oncológica"
+        },
+        "content": {
+            "rendered": "<p><video style=\"width: 100%\" controls><source type=\"video/mp4\" src=\"https://spginecologia.pt/wp-content/uploads/2021/09/2297418160.mp4\"></video></p>\n",
+            "protected": false
+        },
+        "featured_media": 258,
+        "template": "",
+        "categories": [
+            24,
+            20,
+            21
+        ],
+        "class_list": [
+            "post-257",
+            "curso",
+            "type-curso",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry",
+            "category-ginecologia-oncologica",
+            "category-oncologia",
+            "category-spgo"
+        ],
+        "acf": [],
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso/257"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/curso"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/258"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=257"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=257"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 254,
+        "date": "2021-02-10T08:00:55",
+        "date_gmt": "2021-02-10T08:00:55",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=curso&#038;p=254"
+        },
+        "modified": "2021-09-01T14:53:55",
+        "modified_gmt": "2021-09-01T13:53:55",
+        "slug": "consenso-nacional-sobre-menopausa-revisao-e-atualizacao",
+        "status": "publish",
+        "type": "curso",
+        "link": "https://spginecologia.pt/curso/254/",
+        "title": {
+            "rendered": "Consenso Nacional sobre Menopausa: Revisão e Atualização"
+        },
+        "content": {
+            "rendered": "<p><video style=\"width: 100%\" controls><source type=\"video/mp4\" src=\"https://spginecologia.pt/wp-content/uploads/2021/09/Webinar-Consensos-de-Menopausa-Revisão-e-Actualização-28-de-Novembro-de-2020.mp4\"></video></p>\n",
+            "protected": false
+        },
+        "featured_media": 255,
+        "template": "",
+        "categories": [
+            23
+        ],
+        "class_list": [
+            "post-254",
+            "curso",
+            "type-curso",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry",
+            "category-menopausa"
+        ],
+        "acf": [],
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso/254"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/curso"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/255"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=254"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=254"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 251,
+        "date": "2021-02-10T08:00:33",
+        "date_gmt": "2021-02-10T08:00:33",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=curso&#038;p=251"
+        },
+        "modified": "2021-09-01T14:46:31",
+        "modified_gmt": "2021-09-01T13:46:31",
+        "slug": "webinar-astellas-incontinencia-urinaria",
+        "status": "publish",
+        "type": "curso",
+        "link": "https://spginecologia.pt/curso/251/",
+        "title": {
+            "rendered": "Webinar Astellas - Incontinência Urinária"
+        },
+        "content": {
+            "rendered": "<p><video style=\"width: 100%\" controls><source type=\"video/mp4\" src=\"https://spginecologia.pt/wp-content/uploads/2021/09/Webinar-Astellas-Incontinência-Urinária.mp4\"></video></p>\n",
+            "protected": false
+        },
+        "featured_media": 252,
+        "template": "",
+        "categories": [
+            22,
+            3
+        ],
+        "class_list": [
+            "post-251",
+            "curso",
+            "type-curso",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry",
+            "category-incontinencia",
+            "category-uroginecologia"
+        ],
+        "acf": [],
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso/251"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/curso"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/252"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=251"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=251"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 246,
+        "date": "2020-06-03T08:00:12",
+        "date_gmt": "2020-06-03T07:00:12",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=curso&#038;p=246"
+        },
+        "modified": "2021-11-04T23:49:40",
+        "modified_gmt": "2021-11-04T23:49:40",
+        "slug": "apresentacao-dos-consensos-de-cancro-ginecologico",
+        "status": "publish",
+        "type": "curso",
+        "link": "https://spginecologia.pt/curso/246/",
+        "title": {
+            "rendered": "Apresentação dos Consensos de Cancro Ginecológico"
+        },
+        "content": {
+            "rendered": "<p><video style=\"width: 100%;\" controls=\"controls\" width=\"300\" height=\"150\"><source type=\"video/mp4\" src=\"https://spginecologia.pt/wp-content/uploads/2021/09/SPG-Cancro-Ginecológico-3-de-Junho-de-2020-1.mp4\" /></video></p>\n",
+            "protected": false
+        },
+        "featured_media": 5539,
+        "template": "",
+        "categories": [
+            19,
+            20,
+            21
+        ],
+        "class_list": [
+            "post-246",
+            "curso",
+            "type-curso",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry",
+            "category-ginecologia",
+            "category-oncologia",
+            "category-spgo"
+        ],
+        "acf": [],
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso/246"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/curso"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/5539"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=246"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=246"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    }
+]

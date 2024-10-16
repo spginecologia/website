@@ -1,0 +1,1129 @@
+[
+    {
+        "id": 41831,
+        "date": "2024-10-01T19:38:21",
+        "date_gmt": "2024-10-01T18:38:21",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=consenso&#038;p=41831"
+        },
+        "modified": "2024-10-01T19:38:28",
+        "modified_gmt": "2024-10-01T18:38:28",
+        "slug": "miomas-uterinos-2024",
+        "status": "publish",
+        "type": "consenso",
+        "link": "https://spginecologia.pt/consenso/41831/",
+        "title": {
+            "rendered": "Miomas Uterinos 2024"
+        },
+        "featured_media": 41834,
+        "template": "",
+        "categories": [],
+        "class_list": [
+            "post-41831",
+            "consenso",
+            "type-consenso",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry"
+        ],
+        "acf": {
+            "category_select_mode": "Search",
+            "post_category_search": false,
+            "post_category_select": false,
+            "consenso_type": "pdf",
+            "consenso_file": 40361,
+            "consenso_url": null
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso/41831"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/consenso"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/41834"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=41831"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=41831"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 34101,
+        "date": "2023-10-09T08:33:11",
+        "date_gmt": "2023-10-09T07:33:11",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=consenso&#038;p=34101"
+        },
+        "modified": "2023-10-09T16:14:16",
+        "modified_gmt": "2023-10-09T15:14:16",
+        "slug": "recomendacoes-para-o-diagnostico-e-tratamento-das-vaginites",
+        "status": "publish",
+        "type": "consenso",
+        "link": "https://spginecologia.pt/consenso/34101/",
+        "title": {
+            "rendered": "Recomendações para o Diagnóstico e Tratamento das Vaginites"
+        },
+        "featured_media": 34104,
+        "template": "",
+        "categories": [],
+        "class_list": [
+            "post-34101",
+            "consenso",
+            "type-consenso",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry"
+        ],
+        "acf": {
+            "category_select_mode": "Search",
+            "post_category_search": false,
+            "post_category_select": false,
+            "consenso_type": "url",
+            "consenso_file": "",
+            "consenso_url": {
+                "title": "",
+                "url": "https://www.issvd.org/guidelines",
+                "target": ""
+            }
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso/34101"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/consenso"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/34104"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=34101"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=34101"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 31026,
+        "date": "2023-05-18T00:00:39",
+        "date_gmt": "2023-05-17T23:00:39",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=consenso&#038;p=31026"
+        },
+        "modified": "2023-10-09T08:31:56",
+        "modified_gmt": "2023-10-09T07:31:56",
+        "slug": "rastreio-do-cancro-do-colo-do-utero",
+        "status": "publish",
+        "type": "consenso",
+        "link": "https://spginecologia.pt/consenso/31026/",
+        "title": {
+            "rendered": "Rastreio do Cancro do Colo do Útero"
+        },
+        "featured_media": 31031,
+        "template": "",
+        "categories": [
+            104,
+            5,
+            55
+        ],
+        "class_list": [
+            "post-31026",
+            "consenso",
+            "type-consenso",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry",
+            "category-cancro-do-colo-do-utero",
+            "category-consenso",
+            "category-spcptgi"
+        ],
+        "acf": {
+            "category_select_mode": "Search",
+            "post_category_search": [
+                55,
+                5,
+                104
+            ],
+            "post_category_select": [
+                5,
+                55,
+                104
+            ],
+            "consenso_type": "pdf",
+            "consenso_file": 31030,
+            "consenso_url": null
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso/31026"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/consenso"
+                }
+            ],
+            "acf:term": [
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/104"
+                },
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/5"
+                },
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/55"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/31031"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=31026"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=31026"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 177,
+        "date": "2023-03-16T08:00:53",
+        "date_gmt": "2023-03-16T08:00:53",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=consenso&#038;p=177"
+        },
+        "modified": "2023-10-09T08:32:11",
+        "modified_gmt": "2023-10-09T07:32:11",
+        "slug": "consenso-nacional-cancro-ginecologico-2020",
+        "status": "publish",
+        "type": "consenso",
+        "link": "https://spginecologia.pt/consenso/177/",
+        "title": {
+            "rendered": "Consenso Nacional Cancro Ginecológico 2020"
+        },
+        "featured_media": 29454,
+        "template": "",
+        "categories": [],
+        "class_list": [
+            "post-177",
+            "consenso",
+            "type-consenso",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry"
+        ],
+        "acf": {
+            "category_select_mode": "Search",
+            "post_category_search": false,
+            "post_category_select": false,
+            "consenso_type": "pdf",
+            "consenso_file": 29302,
+            "consenso_url": null
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso/177"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/consenso"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/29454"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=177"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=177"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 173,
+        "date": "2021-10-18T08:00:27",
+        "date_gmt": "2021-10-18T07:00:27",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=consenso&#038;p=173"
+        },
+        "modified": "2023-10-09T08:32:13",
+        "modified_gmt": "2023-10-09T07:32:13",
+        "slug": "consenso-nacional-sobre-menopausa-2016",
+        "status": "publish",
+        "type": "consenso",
+        "link": "https://spginecologia.pt/consenso/173/",
+        "title": {
+            "rendered": "Consenso Nacional sobre Menopausa 2021"
+        },
+        "featured_media": 4827,
+        "template": "",
+        "categories": [
+            5,
+            23
+        ],
+        "class_list": [
+            "post-173",
+            "consenso",
+            "type-consenso",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry",
+            "category-consenso",
+            "category-menopausa"
+        ],
+        "acf": {
+            "category_select_mode": "Search",
+            "post_category_search": [
+                23,
+                5
+            ],
+            "post_category_select": [
+                5,
+                23
+            ],
+            "consenso_type": "pdf",
+            "consenso_file": 8150,
+            "consenso_url": null
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso/173"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/consenso"
+                }
+            ],
+            "acf:term": [
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/5"
+                },
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/23"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/4827"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=173"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=173"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 179,
+        "date": "2021-04-05T08:00:05",
+        "date_gmt": "2021-04-05T07:00:05",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=consenso&#038;p=179"
+        },
+        "modified": "2023-10-09T08:32:16",
+        "modified_gmt": "2023-10-09T07:32:16",
+        "slug": "minibook-dos-consensos-de-uroginecologia-2021",
+        "status": "publish",
+        "type": "consenso",
+        "link": "https://spginecologia.pt/consenso/179/",
+        "title": {
+            "rendered": "Minibook dos Consensos de Uroginecologia 2021"
+        },
+        "featured_media": 181,
+        "template": "",
+        "categories": [
+            6,
+            5,
+            4,
+            3
+        ],
+        "class_list": [
+            "post-179",
+            "consenso",
+            "type-consenso",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry",
+            "category-cancro-da-prostata",
+            "category-consenso",
+            "category-spg",
+            "category-uroginecologia"
+        ],
+        "acf": {
+            "category_select_mode": "Search",
+            "post_category_search": [
+                3,
+                4,
+                5,
+                6
+            ],
+            "post_category_select": [
+                3,
+                4,
+                5,
+                6
+            ],
+            "consenso_type": "pdf",
+            "consenso_file": 2707,
+            "consenso_url": null
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso/179"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/consenso"
+                }
+            ],
+            "acf:term": [
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/6"
+                },
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/5"
+                },
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/4"
+                },
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/3"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/181"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=179"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=179"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 178,
+        "date": "2021-03-29T08:00:59",
+        "date_gmt": "2021-03-29T07:00:59",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=consenso&#038;p=178"
+        },
+        "modified": "2023-10-09T08:32:18",
+        "modified_gmt": "2023-10-09T07:32:18",
+        "slug": "consenso-nacional-sobre-uroginecologia-2021",
+        "status": "publish",
+        "type": "consenso",
+        "link": "https://spginecologia.pt/consenso/178/",
+        "title": {
+            "rendered": "Consenso Nacional sobre Uroginecologia 2021"
+        },
+        "featured_media": 183,
+        "template": "",
+        "categories": [],
+        "class_list": [
+            "post-178",
+            "consenso",
+            "type-consenso",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry"
+        ],
+        "acf": {
+            "category_select_mode": "Search",
+            "post_category_search": false,
+            "post_category_select": false,
+            "consenso_type": "pdf",
+            "consenso_file": 182,
+            "consenso_url": null
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso/178"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/consenso"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/183"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=178"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=178"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 176,
+        "date": "2020-01-01T08:00:47",
+        "date_gmt": "2020-01-01T08:00:47",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=consenso&#038;p=176"
+        },
+        "modified": "2023-10-09T08:32:20",
+        "modified_gmt": "2023-10-09T07:32:20",
+        "slug": "consenso-sobre-contracecao-2020",
+        "status": "publish",
+        "type": "consenso",
+        "link": "https://spginecologia.pt/consenso/176/",
+        "title": {
+            "rendered": "Consenso sobre Contraceção 2020"
+        },
+        "featured_media": 186,
+        "template": "",
+        "categories": [],
+        "class_list": [
+            "post-176",
+            "consenso",
+            "type-consenso",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry"
+        ],
+        "acf": {
+            "category_select_mode": "Search",
+            "post_category_search": false,
+            "post_category_select": false,
+            "consenso_type": "pdf",
+            "consenso_file": 187,
+            "consenso_url": null
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso/176"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/consenso"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/186"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=176"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=176"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 175,
+        "date": "2018-06-07T08:00:41",
+        "date_gmt": "2018-06-07T07:00:41",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=consenso&#038;p=175"
+        },
+        "modified": "2023-10-09T08:32:23",
+        "modified_gmt": "2023-10-09T07:32:23",
+        "slug": "consenso-nacional-sobre-hemorragias-uterinas-anormais-2018",
+        "status": "publish",
+        "type": "consenso",
+        "link": "https://spginecologia.pt/consenso/175/",
+        "title": {
+            "rendered": "Consenso Nacional sobre Hemorragias Uterinas Anormais 2018"
+        },
+        "featured_media": 205,
+        "template": "",
+        "categories": [],
+        "class_list": [
+            "post-175",
+            "consenso",
+            "type-consenso",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry"
+        ],
+        "acf": {
+            "category_select_mode": "Search",
+            "post_category_search": false,
+            "post_category_select": false,
+            "consenso_type": "pdf",
+            "consenso_file": 206,
+            "consenso_url": null
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso/175"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/consenso"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/205"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=175"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=175"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 174,
+        "date": "2018-01-29T08:00:34",
+        "date_gmt": "2018-01-29T08:00:34",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=consenso&#038;p=174"
+        },
+        "modified": "2023-10-09T08:32:26",
+        "modified_gmt": "2023-10-09T07:32:26",
+        "slug": "consenso-nacional-sobre-vacinas-contra-hpv-2017",
+        "status": "publish",
+        "type": "consenso",
+        "link": "https://spginecologia.pt/consenso/174/",
+        "title": {
+            "rendered": "Consenso Nacional sobre Vacinas Contra HPV 2017"
+        },
+        "featured_media": 211,
+        "template": "",
+        "categories": [],
+        "class_list": [
+            "post-174",
+            "consenso",
+            "type-consenso",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry"
+        ],
+        "acf": {
+            "category_select_mode": "Search",
+            "post_category_search": false,
+            "post_category_select": false,
+            "consenso_type": "pdf",
+            "consenso_file": 212,
+            "consenso_url": null
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso/174"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/consenso"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/211"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=174"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=174"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 171,
+        "date": "2015-03-13T08:00:16",
+        "date_gmt": "2015-03-13T08:00:16",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=consenso&#038;p=171"
+        },
+        "modified": "2023-10-09T08:32:31",
+        "modified_gmt": "2023-10-09T07:32:31",
+        "slug": "consenso-sobre-endometriose-2015",
+        "status": "publish",
+        "type": "consenso",
+        "link": "https://spginecologia.pt/consenso/171/",
+        "title": {
+            "rendered": "Consenso sobre Endometriose 2015"
+        },
+        "featured_media": 213,
+        "template": "",
+        "categories": [],
+        "class_list": [
+            "post-171",
+            "consenso",
+            "type-consenso",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry"
+        ],
+        "acf": {
+            "category_select_mode": "Search",
+            "post_category_search": false,
+            "post_category_select": false,
+            "consenso_type": "pdf",
+            "consenso_file": 214,
+            "consenso_url": null
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso/171"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/consenso"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/213"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=171"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=171"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 170,
+        "date": "2014-02-22T08:00:09",
+        "date_gmt": "2014-02-22T08:00:09",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=consenso&#038;p=170"
+        },
+        "modified": "2023-10-09T08:32:34",
+        "modified_gmt": "2023-10-09T07:32:34",
+        "slug": "consenso-sobre-infeccao-por-hpv-e-neoplasia-intraepitelial-do-colo-vulva-e-vagina-2014",
+        "status": "publish",
+        "type": "consenso",
+        "link": "https://spginecologia.pt/consenso/170/",
+        "title": {
+            "rendered": "Consenso sobre Infecção por HPV e Neoplasia Intraepitelial do Colo, Vulva e Vagina 2014"
+        },
+        "featured_media": 215,
+        "template": "",
+        "categories": [],
+        "class_list": [
+            "post-170",
+            "consenso",
+            "type-consenso",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry"
+        ],
+        "acf": {
+            "category_select_mode": "Search",
+            "post_category_search": false,
+            "post_category_select": false,
+            "consenso_type": "pdf",
+            "consenso_file": 216,
+            "consenso_url": null
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso/170"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/consenso"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/215"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=170"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=170"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 169,
+        "date": "2012-03-16T08:00:05",
+        "date_gmt": "2012-03-16T08:00:05",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=consenso&#038;p=169"
+        },
+        "modified": "2023-10-09T08:32:36",
+        "modified_gmt": "2023-10-09T07:32:36",
+        "slug": "revisao-dos-consensos-em-infeccoes-vulvovaginais-2012",
+        "status": "publish",
+        "type": "consenso",
+        "link": "https://spginecologia.pt/consenso/169/",
+        "title": {
+            "rendered": "Revisão dos Consensos em Infecções Vulvovaginais 2012"
+        },
+        "featured_media": 217,
+        "template": "",
+        "categories": [],
+        "class_list": [
+            "post-169",
+            "consenso",
+            "type-consenso",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry"
+        ],
+        "acf": {
+            "category_select_mode": "Search",
+            "post_category_search": false,
+            "post_category_select": false,
+            "consenso_type": "pdf",
+            "consenso_file": 218,
+            "consenso_url": null
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso/169"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/consenso"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/217"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=169"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=169"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    }
+]

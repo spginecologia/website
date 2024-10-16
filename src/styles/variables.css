@@ -1,0 +1,92 @@
+:root {
+  /* Colors */
+  --color-brand-primary: #b46996;
+  --color-brand-primary-foreground: #fff;
+
+  --color-brand-secondary: #870e51;
+  --color-brand-secondary-foreground: #fff;
+
+  --color-background-100: #ffffff;
+  --color-background-200: #eae9e6;
+  --color-background-300: #bebebe;
+
+  --color-foreground-100: #000;
+  --color-foreground-200: #645a69;
+  --color-foreground-300: #9b8ca3;
+
+  /* Typography */
+  --font-family-primary: "lato", sans-serif;
+  --font-family-secondary: "lemonde-journal", Times New Roman;
+
+  --text-xs: 1.4rem; /* 14px */
+  --text-sm: 1.6rem; /* 16px */
+  --text-base: 1.8rem; /* 18px */
+  --text-lg: 2rem; /* 20px */
+  --text-xl: 2.4rem; /* 24px */
+  --text-2xl: 2.8rem; /* 28px */
+  --text-3xl: 3.2rem; /* 32px */
+  --text-4xl: 3.6rem; /* 36px */
+  --text-5xl: 4rem; /* 40px */
+  --text-6xl: 4.8rem; /* 48px */
+  --text-7xl: 5.6rem; /* 56px */
+  --text-8xl: 6.4rem; /* 64px */
+
+  /* Shadows */
+  --box-shadow-sm: 0px 0px 15px 0px rgba(0,0,0,0.15);
+  --box-shadow-md: 0px 0px 10px 0px rgba(100,90,105,0.2);
+
+  /* Border */
+  --border-primary: 1px solid var(--color-foreground-300);
+  --border-brand: 1px solid var(--color-brand-secondary);
+  --border-brand-foreground: 1px solid var(--color-brand-primary-foreground);
+  --border-radius: 0px; /* This should be in px, not rem */
+
+  /* Sizes */
+  --root-size: 62.5%;
+  --max-width: 1400px;
+
+  --screen-sm: 640px;
+  --screen-md: 768px;
+  --screen-lg: 1024px;
+
+  /* Spacing */
+  --size-spacing-1: 0.1rem;
+  --size-spacing-2: 0.2rem;
+  --size-spacing-3: 0.3rem;
+  --size-spacing-4: 0.4rem;
+  --size-spacing-5: 0.5rem;
+  --size-spacing-10: 1rem;
+  --size-spacing-15: 1.5rem;
+  --size-spacing-20: 2rem;
+  --size-spacing-25: 2.5rem;
+  --size-spacing-30: 3rem;
+  --size-spacing-35: 3.5rem;
+  --size-spacing-40: 4rem;
+  --size-spacing-50: 5rem;
+  --size-spacing-60: 6rem;
+  --size-spacing-70: 7rem;
+}
+
+@media only screen and (max-width: 1023px) {
+  :root {
+    --root-size: 50%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  :root {
+    --root-size: 45%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+	only-mobile {
+		display: none;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	only-desktop {
+		display: none;
+	}
+}

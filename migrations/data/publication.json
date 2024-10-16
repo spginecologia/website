@@ -1,0 +1,1274 @@
+[
+    {
+        "id": 30081,
+        "date": "2023-03-27T14:08:37",
+        "date_gmt": "2023-03-27T13:08:37",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=publicacao&#038;p=30081"
+        },
+        "modified": "2023-03-27T14:08:37",
+        "modified_gmt": "2023-03-27T13:08:37",
+        "slug": "manual-de-boas-praticas-reaproveitamento-sanguineo-peri-operatorio-cell-salvage",
+        "status": "publish",
+        "type": "publicacao",
+        "link": "https://spginecologia.pt/publicacao/30081/",
+        "title": {
+            "rendered": "Manual de Boas Práticas – Reaproveitamento Sanguíneo Peri-operatório – Cell Salvage"
+        },
+        "featured_media": 30086,
+        "template": "",
+        "categories": [],
+        "class_list": [
+            "post-30081",
+            "publicacao",
+            "type-publicacao",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry"
+        ],
+        "acf": {
+            "category_select_mode": "Search",
+            "post_category_search": false,
+            "post_category_select": false
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao/30081"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/publicacao"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/30086"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=30081"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=30081"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 28021,
+        "date": "2023-02-03T14:07:44",
+        "date_gmt": "2023-02-03T14:07:44",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=publicacao&#038;p=28021"
+        },
+        "modified": "2023-02-03T14:07:44",
+        "modified_gmt": "2023-02-03T14:07:44",
+        "slug": "saude-cardiovascular-da-mulher",
+        "status": "publish",
+        "type": "publicacao",
+        "link": "https://spginecologia.pt/publicacao/28021/",
+        "title": {
+            "rendered": "Saúde Cardiovascular da Mulher"
+        },
+        "featured_media": 28025,
+        "template": "",
+        "categories": [],
+        "class_list": [
+            "post-28021",
+            "publicacao",
+            "type-publicacao",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry"
+        ],
+        "acf": {
+            "category_select_mode": "Search",
+            "post_category_search": false,
+            "post_category_select": false
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao/28021"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/publicacao"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/28025"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=28021"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=28021"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 6814,
+        "date": "2021-12-15T12:41:53",
+        "date_gmt": "2021-12-15T12:41:53",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=publicacao&#038;p=6814"
+        },
+        "modified": "2021-12-15T12:41:53",
+        "modified_gmt": "2021-12-15T12:41:53",
+        "slug": "premature-ovarian-insufficiency-an-international-menopause-society-white-paper",
+        "status": "publish",
+        "type": "publicacao",
+        "link": "https://spginecologia.pt/publicacao/6814/",
+        "title": {
+            "rendered": "Premature ovarian insufficiency: an International Menopause Society White Paper"
+        },
+        "featured_media": 6817,
+        "template": "",
+        "categories": [
+            23,
+            49
+        ],
+        "class_list": [
+            "post-6814",
+            "publicacao",
+            "type-publicacao",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry",
+            "category-menopausa",
+            "category-saude-feminina"
+        ],
+        "acf": {
+            "category_select_mode": "Search",
+            "post_category_search": [
+                23,
+                49
+            ],
+            "post_category_select": [
+                23,
+                49
+            ]
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao/6814"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/publicacao"
+                }
+            ],
+            "acf:term": [
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/49"
+                },
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/23"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/6817"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=6814"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=6814"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 204,
+        "date": "2021-06-23T08:00:17",
+        "date_gmt": "2021-06-23T07:00:17",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=publicacao&#038;p=204"
+        },
+        "modified": "2021-07-19T15:15:08",
+        "modified_gmt": "2021-07-19T14:15:08",
+        "slug": "confidentiality-in-adolescent-health-care",
+        "status": "publish",
+        "type": "publicacao",
+        "link": "https://spginecologia.pt/publicacao/204/",
+        "title": {
+            "rendered": "Confidentiality in Adolescent Health Care"
+        },
+        "featured_media": 231,
+        "template": "",
+        "categories": [],
+        "class_list": [
+            "post-204",
+            "publicacao",
+            "type-publicacao",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry"
+        ],
+        "acf": {
+            "category_select_mode": "",
+            "post_category_search": false,
+            "post_category_select": false
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao/204"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/publicacao"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/231"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=204"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=204"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 202,
+        "date": "2021-05-05T08:00:07",
+        "date_gmt": "2021-05-05T07:00:07",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=publicacao&#038;p=202"
+        },
+        "modified": "2021-07-19T15:10:40",
+        "modified_gmt": "2021-07-19T14:10:40",
+        "slug": "consenso-sobre-o-uso-de-redes-transvaginais-para-correccao-cirurgica-do-prolapso-dos-orgaos-pelvicos-pop",
+        "status": "publish",
+        "type": "publicacao",
+        "link": "https://spginecologia.pt/publicacao/202/",
+        "title": {
+            "rendered": "Consenso sobre o uso de redes transvaginais para correcção cirúrgica do Prolapso dos Órgãos Pélvicos (POP)"
+        },
+        "featured_media": 234,
+        "template": "",
+        "categories": [
+            13,
+            14,
+            15,
+            16
+        ],
+        "class_list": [
+            "post-202",
+            "publicacao",
+            "type-publicacao",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry",
+            "category-cirurgia-vaginal",
+            "category-prolapso-dos-orgaos-pelvicos",
+            "category-proteses-e-implantes",
+            "category-spug"
+        ],
+        "acf": {
+            "category_select_mode": "",
+            "post_category_search": [
+                13,
+                14,
+                15,
+                16
+            ],
+            "post_category_select": [
+                13,
+                14,
+                15,
+                16
+            ]
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao/202"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/publicacao"
+                }
+            ],
+            "acf:term": [
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/16"
+                },
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/15"
+                },
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/14"
+                },
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/13"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/234"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=202"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=202"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 201,
+        "date": "2021-04-01T08:00:02",
+        "date_gmt": "2021-04-01T07:00:02",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=publicacao&#038;p=201"
+        },
+        "modified": "2021-07-19T15:11:13",
+        "modified_gmt": "2021-07-19T14:11:13",
+        "slug": "european-consensus-statement-on-essential-colposcopy-2020",
+        "status": "publish",
+        "type": "publicacao",
+        "link": "https://spginecologia.pt/publicacao/201/",
+        "title": {
+            "rendered": "European Consensus Statement On Essential Colposcopy 2020"
+        },
+        "featured_media": 227,
+        "template": "",
+        "categories": [
+            12
+        ],
+        "class_list": [
+            "post-201",
+            "publicacao",
+            "type-publicacao",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry",
+            "category-colposcopia"
+        ],
+        "acf": {
+            "category_select_mode": "",
+            "post_category_search": [
+                12
+            ],
+            "post_category_select": [
+                12
+            ]
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao/201"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/publicacao"
+                }
+            ],
+            "acf:term": [
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/12"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/227"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=201"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=201"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 203,
+        "date": "2021-03-05T08:00:12",
+        "date_gmt": "2021-03-05T08:00:12",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=publicacao&#038;p=203"
+        },
+        "modified": "2021-07-19T15:12:08",
+        "modified_gmt": "2021-07-19T14:12:08",
+        "slug": "documento-de-consenso-sobre-o-uso-de-fitas-sinteticas-slings-suburetrais-na-correcao-cirurgica-da-incontinencia-urinaria-de-esforco",
+        "status": "publish",
+        "type": "publicacao",
+        "link": "https://spginecologia.pt/publicacao/203/",
+        "title": {
+            "rendered": "Documento de consenso sobre o uso de fitas sintéticas (slings) suburetrais na correção cirúrgica da Incontinência Urinária de Esforço"
+        },
+        "featured_media": 236,
+        "template": "",
+        "categories": [
+            17,
+            18,
+            16
+        ],
+        "class_list": [
+            "post-203",
+            "publicacao",
+            "type-publicacao",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry",
+            "category-incontinencia-urinaria-de-esforco",
+            "category-slings-suburetrais",
+            "category-spug"
+        ],
+        "acf": {
+            "category_select_mode": "",
+            "post_category_search": [
+                16,
+                17,
+                18
+            ],
+            "post_category_select": [
+                16,
+                17,
+                18
+            ]
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao/203"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/publicacao"
+                }
+            ],
+            "acf:term": [
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/18"
+                },
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/17"
+                },
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/16"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/236"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=203"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=203"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 200,
+        "date": "2020-04-01T08:00:55",
+        "date_gmt": "2020-04-01T07:00:55",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=publicacao&#038;p=200"
+        },
+        "modified": "2021-07-19T15:08:52",
+        "modified_gmt": "2021-07-19T14:08:52",
+        "slug": "recomendacoes-da-spg-triagem-de-pacientes-com-patologia-ginecologica",
+        "status": "publish",
+        "type": "publicacao",
+        "link": "https://spginecologia.pt/publicacao/200/",
+        "title": {
+            "rendered": "Recomendações da SPG: triagem de pacientes com patologia ginecológica"
+        },
+        "featured_media": 226,
+        "template": "",
+        "categories": [
+            11
+        ],
+        "class_list": [
+            "post-200",
+            "publicacao",
+            "type-publicacao",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry",
+            "category-patologia-ginecologica"
+        ],
+        "acf": {
+            "category_select_mode": "",
+            "post_category_search": [
+                11
+            ],
+            "post_category_select": [
+                11
+            ]
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao/200"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/publicacao"
+                }
+            ],
+            "acf:term": [
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/11"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/226"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=200"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=200"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 199,
+        "date": "2020-04-01T08:00:49",
+        "date_gmt": "2020-04-01T07:00:49",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=publicacao&#038;p=199"
+        },
+        "modified": "2021-07-19T15:07:56",
+        "modified_gmt": "2021-07-19T14:07:56",
+        "slug": "recomendacoes-da-spcptgi-covid-19",
+        "status": "publish",
+        "type": "publicacao",
+        "link": "https://spginecologia.pt/publicacao/199/",
+        "title": {
+            "rendered": "Recomendações da SPCPTGI: Covid-19"
+        },
+        "featured_media": 225,
+        "template": "",
+        "categories": [
+            10
+        ],
+        "class_list": [
+            "post-199",
+            "publicacao",
+            "type-publicacao",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry",
+            "category-covid-19"
+        ],
+        "acf": {
+            "category_select_mode": "",
+            "post_category_search": [
+                10
+            ],
+            "post_category_select": [
+                10
+            ]
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao/199"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/publicacao"
+                }
+            ],
+            "acf:term": [
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/10"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/225"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=199"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=199"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 198,
+        "date": "2020-04-01T08:00:44",
+        "date_gmt": "2020-04-01T07:00:44",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=publicacao&#038;p=198"
+        },
+        "modified": "2021-07-19T15:07:11",
+        "modified_gmt": "2021-07-19T14:07:11",
+        "slug": "recomendacoes-da-speg-covid-19",
+        "status": "publish",
+        "type": "publicacao",
+        "link": "https://spginecologia.pt/publicacao/198/",
+        "title": {
+            "rendered": "Recomendações da SPEG: Covid-19"
+        },
+        "featured_media": 224,
+        "template": "",
+        "categories": [
+            10
+        ],
+        "class_list": [
+            "post-198",
+            "publicacao",
+            "type-publicacao",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry",
+            "category-covid-19"
+        ],
+        "acf": {
+            "category_select_mode": "",
+            "post_category_search": [
+                10
+            ],
+            "post_category_select": [
+                10
+            ]
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao/198"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/publicacao"
+                }
+            ],
+            "acf:term": [
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/10"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/224"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=198"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=198"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 196,
+        "date": "2019-04-22T08:00:31",
+        "date_gmt": "2019-04-22T07:00:31",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=publicacao&#038;p=196"
+        },
+        "modified": "2021-07-19T15:05:53",
+        "modified_gmt": "2021-07-19T14:05:53",
+        "slug": "molecular-aspects-of-collagenolysis-associated-with-stress-urinary-incontinence-in-women-with-urethral-hypermobility-vs-intrinsic-sphincter-deficiency",
+        "status": "publish",
+        "type": "publicacao",
+        "link": "https://spginecologia.pt/publicacao/196/",
+        "title": {
+            "rendered": "Molecular aspects of collagenolysis associated with stress urinary incontinence in women with urethral hypermobility vs intrinsic sphincter deficiency"
+        },
+        "featured_media": 223,
+        "template": "",
+        "categories": [
+            3
+        ],
+        "class_list": [
+            "post-196",
+            "publicacao",
+            "type-publicacao",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry",
+            "category-uroginecologia"
+        ],
+        "acf": {
+            "category_select_mode": "",
+            "post_category_search": [
+                3
+            ],
+            "post_category_select": [
+                3
+            ]
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao/196"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/publicacao"
+                }
+            ],
+            "acf:term": [
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/3"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/223"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=196"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=196"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 195,
+        "date": "2017-12-06T08:00:26",
+        "date_gmt": "2017-12-06T08:00:26",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=publicacao&#038;p=195"
+        },
+        "modified": "2021-07-19T15:04:43",
+        "modified_gmt": "2021-07-19T14:04:43",
+        "slug": "hysterectomies-in-portugal-2000-2014-what-has-changed",
+        "status": "publish",
+        "type": "publicacao",
+        "link": "https://spginecologia.pt/publicacao/195/",
+        "title": {
+            "rendered": "Hysterectomies in Portugal (2000–2014): What has changed?"
+        },
+        "featured_media": 219,
+        "template": "",
+        "categories": [
+            9
+        ],
+        "class_list": [
+            "post-195",
+            "publicacao",
+            "type-publicacao",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry",
+            "category-histerectomia"
+        ],
+        "acf": {
+            "category_select_mode": "",
+            "post_category_search": [
+                9
+            ],
+            "post_category_select": [
+                9
+            ]
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao/195"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/publicacao"
+                }
+            ],
+            "acf:term": [
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/9"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/219"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=195"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=195"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 194,
+        "date": "2017-02-16T08:00:20",
+        "date_gmt": "2017-02-16T08:00:20",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=publicacao&#038;p=194"
+        },
+        "modified": "2021-07-19T15:03:21",
+        "modified_gmt": "2021-07-19T14:03:21",
+        "slug": "endometriose-recomendacoes-de-consenso-nacionais-clinica-e-diagnostico",
+        "status": "publish",
+        "type": "publicacao",
+        "link": "https://spginecologia.pt/publicacao/194/",
+        "title": {
+            "rendered": "Endometriose – Recomendações de consenso nacionais – clínica e diagnóstico"
+        },
+        "featured_media": 221,
+        "template": "",
+        "categories": [
+            8
+        ],
+        "class_list": [
+            "post-194",
+            "publicacao",
+            "type-publicacao",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry",
+            "category-endometriose"
+        ],
+        "acf": {
+            "category_select_mode": "",
+            "post_category_search": [
+                8
+            ],
+            "post_category_select": [
+                8
+            ]
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao/194"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/publicacao"
+                }
+            ],
+            "acf:term": [
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/8"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/221"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=194"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=194"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 193,
+        "date": "2017-02-16T08:00:13",
+        "date_gmt": "2017-02-16T08:00:13",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=publicacao&#038;p=193"
+        },
+        "modified": "2021-07-19T15:02:33",
+        "modified_gmt": "2021-07-19T14:02:33",
+        "slug": "avaliacao-das-praticas-contracetivas-das-mulheres-em-portugal",
+        "status": "publish",
+        "type": "publicacao",
+        "link": "https://spginecologia.pt/publicacao/193/",
+        "title": {
+            "rendered": "Avaliação das práticas contracetivas das mulheres em Portugal"
+        },
+        "featured_media": 220,
+        "template": "",
+        "categories": [
+            7
+        ],
+        "class_list": [
+            "post-193",
+            "publicacao",
+            "type-publicacao",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry",
+            "category-contracecao"
+        ],
+        "acf": {
+            "category_select_mode": "",
+            "post_category_search": [
+                7
+            ],
+            "post_category_select": [
+                7
+            ]
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao/193"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/publicacao"
+                }
+            ],
+            "acf:term": [
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/7"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/220"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=193"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=193"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    }
+]

@@ -1,0 +1,3047 @@
+[
+    {
+        "id": 34384,
+        "date": "2024-02-14T23:16:23",
+        "date_gmt": "2024-02-14T23:16:23",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?p=34384"
+        },
+        "modified": "2024-02-14T23:41:26",
+        "modified_gmt": "2024-02-14T23:41:26",
+        "slug": "quistectomia-de-endometrioma-tecnica-invertida",
+        "status": "publish",
+        "type": "video",
+        "link": "https://spginecologia.pt/video/34384/",
+        "title": {
+            "rendered": "Quistectomia de Endometrioma: Técnica Invertida"
+        },
+        "author": 86,
+        "featured_media": 34387,
+        "comment_status": "closed",
+        "ping_status": "closed",
+        "template": "",
+        "categories": [
+            8,
+            68
+        ],
+        "class_list": [
+            "post-34384",
+            "video",
+            "type-video",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry",
+            "category-endometriose",
+            "category-laparoscopia"
+        ],
+        "acf": {
+            "category_select_mode": "Search",
+            "post_category_search": [
+                8,
+                68
+            ],
+            "post_category_select": [
+                8,
+                68
+            ],
+            "video_file": 34385,
+            "video_file_length": "2:58",
+            "video_featured": false,
+            "video_declaration_signed": 34386,
+            "video_rgpd_confirmation": true,
+            "video_authors": "Lisandra Mendonça, Ângela Rodrigues, Vera Ramos, Maria João Carvalho, Fernanda Águas",
+            "video_section": "endoscopia_ginecologica",
+            "video_introduction": "Os endometriomas são lesões quísticas encontradas nos ovários e que podem estar associados a dor pélvica crónica incapacitante e infertilidade, pelo que frequentemente necessitam de tratamento cirúrgico. \r\nNeste vídeo são apresentados os passos cirúrgicos de uma quistectomia laparoscópica através da técnica invertida.",
+            "video_description": "<p>O caso descreve uma mulher de 32 anos com antecedentes de Infertilidade prim&aacute;ria com 18 meses de evolu&ccedil;&atilde;o e com queixas de dismenorreia prim&aacute;ria. A quistectomia laparosc&oacute;pica pela t&eacute;cnica invertida prima por realizar o <em>stripping </em>na por&ccedil;&atilde;o mais espessa do quisto reduzindo a possibilidade de fragmentar as paredes do mesmo, identificando assim mais facilmente o plano &nbsp;de separa&ccedil;&atilde;o entre o par&ecirc;nquima ov&aacute;rico e o quisto. Adicionalmente, a realiza&ccedil;&atilde;o da incis&atilde;o at&eacute; aos bordos do quisto &eacute; uma refer&ecirc;ncia importante de orienta&ccedil;&atilde;o para o cirurgi&atilde;o, realizando a quistectomia sob visualiza&ccedil;&atilde;o direta, permitindo uma excis&atilde;o completa. Neste caso, e por se tratar de um quadro de infertilidade associada &agrave; endometriose &eacute; aconselhada a realiza&ccedil;&atilde;o da prova de cromotuba&ccedil;&atilde;o tub&aacute;ria bilateral no final do procedimento para confirmar a permeabilidade tubar.</p>"
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video/34384"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/video"
+                }
+            ],
+            "author": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/users/86"
+                }
+            ],
+            "replies": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/comments?post=34384"
+                }
+            ],
+            "acf:term": [
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/68"
+                },
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/8"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/34387"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=34384"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=34384"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 34380,
+        "date": "2024-02-14T23:11:21",
+        "date_gmt": "2024-02-14T23:11:21",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?p=34380"
+        },
+        "modified": "2024-02-14T23:41:44",
+        "modified_gmt": "2024-02-14T23:41:44",
+        "slug": "reanastomose-tubaria-bilateral-por-mini-laparoscopia",
+        "status": "publish",
+        "type": "video",
+        "link": "https://spginecologia.pt/video/34380/",
+        "title": {
+            "rendered": "Reanastomose Tubária Bilateral por Mini-Laparoscopia"
+        },
+        "author": 86,
+        "featured_media": 34383,
+        "comment_status": "closed",
+        "ping_status": "closed",
+        "template": "",
+        "categories": [
+            96,
+            19,
+            68
+        ],
+        "class_list": [
+            "post-34380",
+            "video",
+            "type-video",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry",
+            "category-anatomia-pelvica",
+            "category-ginecologia",
+            "category-laparoscopia"
+        ],
+        "acf": {
+            "category_select_mode": "Search",
+            "post_category_search": [
+                19,
+                68,
+                96
+            ],
+            "post_category_select": [
+                19,
+                68,
+                96
+            ],
+            "video_file": 34381,
+            "video_file_length": "5:00",
+            "video_featured": false,
+            "video_declaration_signed": 34382,
+            "video_rgpd_confirmation": true,
+            "video_authors": "Lisandra Mendonça, Simone Subtil, Vera Ramos, Francisco Falcão, Maria João Carvalho, Fernanda Águas",
+            "video_section": "endoscopia_ginecologica",
+            "video_introduction": "A laqueação tubar bilateral é um método contracetivo definitivo mundialmente conhecido. Todavia, o arrependimento é frequente, com incidências na ordem dos 3-8%. Os principais fatores de risco são a idade jovem no momento do procedimento, novos relacionamentos ou morte de um filho. Nestes casos, há duas opções disponíveis: a reanastomose tubar e/ou a fertilização in vitro. O objetivo do primeiro é alcançar a patência tubar bilateral, permitindo a conceção espontânea. Até recentemente, a laparotomia era a via preferencial, alcançando taxas de sucesso na ordem dos 57-84%. Recentemente, a mini-laparoscopia emergiu como uma nova abordagem deste procedimento. Neste vídeo são descritos os passos cirúrgicos de uma reanastomose tubária bilateral através de mini-laparoscopia. ",
+            "video_description": "<p>O v&iacute;deo descreve um caso de uma mulher de 33 anos, G3P3, com antecedentes de laquea&ccedil;&atilde;o tubar bilateral laparosc&oacute;pica com an&eacute;is de <em>Yoon</em> realizada em 2014.</p>\r\n<p>Foi proposta para esta cirurgia uma vez que pretendia nova gravidez de um outro relacionamento. Para a realiza&ccedil;&atilde;o deste procedimento, &eacute; fulcral o estudo do casal pr&eacute;vio, com avalia&ccedil;&atilde;o da reserva ov&aacute;rica com hormona antimulleriana e contagem de fol&iacute;culos antrais assim como espermograma que t&ecirc;m que ser normais. Neste procedimento foram usados um trocar umbilical de 10 mm e 3 trocares de mini-laparoscopia, um suprap&uacute;bico e um em cada fossa il&iacute;aca. &nbsp;&nbsp;Exposta a escava&ccedil;&atilde;o p&eacute;lvica &eacute; importante inspecionar as caracter&iacute;sticas das trompas, neste caso, observando-se os an&eacute;is de Yoon nas por&ccedil;&otilde;es ampulares, com afastamento dos topos de cerca de 5-7 mm e f&iacute;mbrias &iacute;ntegras, assegurando condi&ccedil;&otilde;es anat&oacute;micas favor&aacute;veis ao sucesso do procedimento. Ap&oacute;s sec&ccedil;&atilde;o do topo proximal da trompa foi instilado azul de metileno atrav&eacute;s de cateteriza&ccedil;&atilde;o uterina por via vaginal, identificando-se o l&uacute;men. O topo distal foi seccionado, identificando-se tamb&eacute;m o l&uacute;men. O mesossalpinge foi aproximado usando fio monofilamento reabsorv&iacute;vel 5/0. Para a anastomose tub&aacute;ria foram suturados os dois topos com fio monofilamento reabsorv&iacute;vel 6/0, aproximando a camada muscular e a serosa em 4 pontos (nas posi&ccedil;&otilde;es 3,6,9 e 12h), n&atilde;o entrando no l&uacute;men.&nbsp; Ap&oacute;s a anastomose foi realizada nova prova de cromotuba&ccedil;&atilde;o para avaliar a sa&iacute;da de contraste atrav&eacute;s das f&iacute;mbrias que como &eacute; poss&iacute;vel verificar foi positiva. Procedeu-se de igual forma para a trompa contralateral. No final foi novamente realizada prova de cromotuba&ccedil;&atilde;o que foi positiva bilateralmente e avaliada a dimens&atilde;o tub&aacute;ria de forma indireta. Ap&oacute;s 3 meses de contrace&ccedil;&atilde;o &eacute; importante realizar uma histerossalpingografia para avaliar a permeabilidade tub&aacute;ria que, neste caso, revelou ser positiva bilateralmente e, por isso a mulher iniciou tentativas de conce&ccedil;&atilde;o. Neste caso em particular, a conce&ccedil;&atilde;o espont&acirc;nea ocorreu 6 meses ap&oacute;s o procedimento culminando posteriormente num parto eut&oacute;cico, sem intercorr&ecirc;ncias.&nbsp;</p>"
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video/34380"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/video"
+                }
+            ],
+            "author": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/users/86"
+                }
+            ],
+            "replies": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/comments?post=34380"
+                }
+            ],
+            "acf:term": [
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/96"
+                },
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/68"
+                },
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/19"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/34383"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=34380"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=34380"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 30344,
+        "date": "2024-02-14T17:36:06",
+        "date_gmt": "2024-02-14T17:36:06",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?p=30344"
+        },
+        "modified": "2024-02-14T23:42:05",
+        "modified_gmt": "2024-02-14T23:42:05",
+        "slug": "ressecao-intestinal-laparoscopica-com-extracao-da-peca-por-orificio-natural-num-caso-de-endometriose-rectal-profunda",
+        "status": "publish",
+        "type": "video",
+        "link": "https://spginecologia.pt/video/30344/",
+        "title": {
+            "rendered": "Resseção intestinal laparoscópica com extração da peça por orifício natural num caso de endometriose rectal profunda"
+        },
+        "author": 131,
+        "featured_media": 30347,
+        "comment_status": "closed",
+        "ping_status": "closed",
+        "template": "",
+        "categories": [
+            8,
+            75,
+            103
+        ],
+        "class_list": [
+            "post-30344",
+            "video",
+            "type-video",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry",
+            "category-endometriose",
+            "category-endoscopia-ginecologica",
+            "category-nose"
+        ],
+        "acf": {
+            "category_select_mode": "Search",
+            "post_category_search": [
+                8,
+                75,
+                103
+            ],
+            "post_category_select": [
+                8,
+                75,
+                103
+            ],
+            "video_file": 30345,
+            "video_file_length": "4:31",
+            "video_featured": false,
+            "video_declaration_signed": 30346,
+            "video_rgpd_confirmation": true,
+            "video_authors": "Tânia Barros; Marta Melo; Cristiana Moreira; Jaime Vilaça; Rosa Zulmira Macedo; Hélder Ferreira",
+            "video_section": "endoscopia_ginecologica",
+            "video_introduction": "Demonstração da técnica de resseção intestinal segmentar e anastomose laparoscópica, com extração da peça por orifício natural (natural orifice specimen extraction, NOSE) via anal, em casos de endometriose intestinal.\r\n",
+            "video_description": "<p><strong>Descri&ccedil;&atilde;o</strong></p>\r\n<p>Mulher, 30 anos, com obstipa&ccedil;&atilde;o, rectorragias, disquesia, dismenorreia e dispareunia refrat&aacute;rias &agrave; terap&ecirc;utica m&eacute;dica. O estudo imagiol&oacute;gico revelou oblitera&ccedil;&atilde;o do fundo de saco de <em>Douglas</em> por n&oacute;dulo de endometriose transmural e envolvimento circunferencial de 45%, que se estendia&nbsp;dos 13 cm aos 10 cm da margem anal.</p>\r\n<p>Submetida a laparoscopia. Mobiliza&ccedil;&atilde;o bilateral do c&oacute;lon. Identifica&ccedil;&atilde;o dos ureteres com verde de indocianina. Disse&ccedil;&atilde;o do espa&ccedil;o retovaginal. Identifica&ccedil;&atilde;o das margens cranial/caudal do n&oacute;dulo. Resse&ccedil;&atilde;o intestinal com <em>stapler </em>linear. Extra&ccedil;&atilde;o da pe&ccedil;a via anal. Encerramento das extremidades com<em> stapler</em> linear. Anastomose topo-a-topo com<em> stapler</em> circular. A cirurgia teve a dura&ccedil;&atilde;o de 3 horas. Sem complica&ccedil;&otilde;es intra/p&oacute;s-operat&oacute;rias. Alta ao 5&ordm; dia p&oacute;s-operat&oacute;rio.</p>\r\n<p><strong>Conclus&atilde;o</strong></p>\r\n<p>A anastomose intracorporal e a extra&ccedil;&atilde;o de pe&ccedil;as operat&oacute;rias por NOSE &eacute; uma t&eacute;cnica segura e uma alternativa a ter em considera&ccedil;&atilde;o para o tratamento da endometriose intestinal.<br />A sele&ccedil;&atilde;o criteriosa das doentes, a avalia&ccedil;&atilde;o pr&eacute;-operat&oacute;ria cuidadosa e uma equipa multidisciplinar experiente &eacute; fundamental para o sucesso desta t&eacute;cnica cir&uacute;rgica.</p>"
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video/30344"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/video"
+                }
+            ],
+            "author": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/users/131"
+                }
+            ],
+            "replies": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/comments?post=30344"
+                }
+            ],
+            "acf:term": [
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/103"
+                },
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/75"
+                },
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/8"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/30347"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=30344"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=30344"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 29977,
+        "date": "2023-03-25T22:13:49",
+        "date_gmt": "2023-03-25T22:13:49",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?p=29977"
+        },
+        "modified": "2024-02-14T23:42:25",
+        "modified_gmt": "2024-02-14T23:42:25",
+        "slug": "standardizacao-da-tecnica-cirurgica-para-a-pesquisa-do-ganglio-sentinela-no-cancro-do-endometrio",
+        "status": "publish",
+        "type": "video",
+        "link": "https://spginecologia.pt/video/29977/",
+        "title": {
+            "rendered": "Standardização da técnica cirúrgica para a pesquisa do gânglio sentinela no cancro do endométrio"
+        },
+        "author": 430,
+        "featured_media": 29980,
+        "comment_status": "closed",
+        "ping_status": "closed",
+        "template": "",
+        "categories": [
+            72,
+            75,
+            73,
+            24,
+            68
+        ],
+        "class_list": [
+            "post-29977",
+            "video",
+            "type-video",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry",
+            "category-cancro-do-endometrio",
+            "category-endoscopia-ginecologica",
+            "category-ganglio-sentinela",
+            "category-ginecologia-oncologica",
+            "category-laparoscopia"
+        ],
+        "acf": {
+            "category_select_mode": "Search",
+            "post_category_search": [
+                24,
+                68,
+                72,
+                73,
+                75
+            ],
+            "post_category_select": [
+                24,
+                68,
+                72,
+                73,
+                75
+            ],
+            "video_file": 29978,
+            "video_file_length": "4:42",
+            "video_featured": true,
+            "video_declaration_signed": 29979,
+            "video_rgpd_confirmation": true,
+            "video_authors": "Bárbara Gomes; Cláudia Andrade; Teresa Rebelo; Cristina Frutuoso; Fernanda Águas",
+            "video_section": "endoscopia_ginecologica",
+            "video_introduction": "A pesquisa de gânglio sentinela no cancro do endométrio tem vindo a ser idealizada como alternativa à linfadenectomia por apresentar menor morbilidade e maior precisão no estadiamento cirúrgico graças ao ultrastaging histológico, obtendo assim altas taxas de deteção, sensibilidade e valor preditivo negativo. A standardização da técnica cirúrgica é importante de forma a garantir qualidade cirúrgica. ",
+            "video_description": "<p>Neste v&iacute;deo narrado demonstramos os passos cir&uacute;rgicos da pesquisa de g&acirc;nglio sentinela num caso de adenocarcinoma do endom&eacute;trio, tipo endometri&oacute;ide, estadio FIGO IA.</p>\r\n<p>A variablidade da t&eacute;cnica cir&uacute;rgica influencia a sua sensibilidade, pelo que a standardiza&ccedil;&atilde;o &eacute; essencial.&nbsp;Em 2021, Moloney <em>et al</em> publicaram um consenso de <em>experts</em> com passos espec&iacute;ficos mandat&oacute;rios e proibidos para a disse&ccedil;&atilde;o do g&acirc;nglio sentinela neste tipo de tumores.&nbsp;</p>\r\n<p>Os passos obrigat&oacute;rios iniciam-se com a inje&ccedil;&atilde;o de verde de indocianina no colo, &agrave;s 3 e 9 horas, superficial e profundamente. Segue-se a inspe&ccedil;&atilde;o de toda a cavidade e identifica&ccedil;&atilde;o de estruturas anat&oacute;micas chave (vasos il&iacute;acos externos, art&eacute;ria umbilical obliterada, fossa paravesical, ureter e nervo obturador). A disse&ccedil;&atilde;o deve ser cuidada com preserva&ccedil;&atilde;o da rede linf&aacute;tica. Quando identificado o g&acirc;nglio sentinela, este deve ser isolado das estruturas anat&oacute;micas envolventes e extra&iacute;do em saco protector. Por fim, deve ser confirmada a fluoresc&ecirc;ncia do g&acirc;nglio. &nbsp;</p>\r\n<p>Esta sistematiza&ccedil;&atilde;o &eacute; fundamental para assegurar a qualidade cir&uacute;rgica da pesquisa do g&acirc;nglio sentinela, fundamental nos est&aacute;dios iniciais no cancro do endom&eacute;trio.</p>"
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video/29977"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/video"
+                }
+            ],
+            "author": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/users/430"
+                }
+            ],
+            "replies": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/comments?post=29977"
+                }
+            ],
+            "acf:term": [
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/75"
+                },
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/73"
+                },
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/72"
+                },
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/68"
+                },
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/24"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/29980"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=29977"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=29977"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 29965,
+        "date": "2023-03-25T22:04:35",
+        "date_gmt": "2023-03-25T22:04:35",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?p=29965"
+        },
+        "modified": "2023-04-18T20:37:54",
+        "modified_gmt": "2023-04-18T19:37:54",
+        "slug": "tratamento-do-istmocelo-o-papel-da-cirurgia-endoscopica",
+        "status": "publish",
+        "type": "video",
+        "link": "https://spginecologia.pt/video/29965/",
+        "title": {
+            "rendered": "Tratamento do istmocelo - o papel da cirurgia endoscópica"
+        },
+        "author": 254,
+        "featured_media": 29968,
+        "comment_status": "closed",
+        "ping_status": "closed",
+        "template": "",
+        "categories": [
+            75,
+            68
+        ],
+        "class_list": [
+            "post-29965",
+            "video",
+            "type-video",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry",
+            "category-endoscopia-ginecologica",
+            "category-laparoscopia"
+        ],
+        "acf": {
+            "category_select_mode": "Search",
+            "post_category_search": [
+                68,
+                75
+            ],
+            "post_category_select": [
+                68,
+                75
+            ],
+            "video_file": 29966,
+            "video_file_length": "5:17",
+            "video_featured": true,
+            "video_declaration_signed": 29967,
+            "video_rgpd_confirmation": true,
+            "video_authors": "Ana Tomé, João Lopes, Catarina Castro, Inês Reis, João Alves, Sónia Barata, Filipa Osório",
+            "video_section": "endoscopia_ginecologica",
+            "video_introduction": "O istmocelo define-se como um defeito anatómico na parede anterior do útero na área da cicatriz da cesariana. Esta condição está associada a quadros de hemorragia uterina anormal, dor pélvica crónica e infertilidade.",
+            "video_description": "<p>Apesar do tratamento do istmocelo n&atilde;o ser consensual, a sua corre&ccedil;&atilde;o cir&uacute;rgica parece melhorar a infertilidade secund&aacute;ria em doentes em que n&atilde;o &eacute; identificada outra causa. Neste v&iacute;deo demonstramos o caso de uma doente com istmocelo, com hist&oacute;ria de infertilidade secund&aacute;ria, a quem foi proposta a sua corre&ccedil;&atilde;o por via laparosc&oacute;pica e histerosc&oacute;pica combinadas. Considerando que a espessura do miom&eacute;rio &eacute; um fator de risco independente para rutura uterina a t&eacute;cnica proposta &eacute; prefer&iacute;vel em rela&ccedil;&atilde;o &agrave; abordagem histerosc&oacute;pica atendendo ao desejo de gravidez futura da doente.</p>"
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video/29965"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/video"
+                }
+            ],
+            "author": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/users/254"
+                }
+            ],
+            "replies": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/comments?post=29965"
+                }
+            ],
+            "acf:term": [
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/75"
+                },
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/68"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/29968"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=29965"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=29965"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 22965,
+        "date": "2023-02-08T16:02:35",
+        "date_gmt": "2023-02-08T16:02:35",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?p=22965"
+        },
+        "modified": "2023-04-18T20:37:35",
+        "modified_gmt": "2023-04-18T19:37:35",
+        "slug": "massas-anexiais-na-gravidez-abordagem-laparoscopica",
+        "status": "publish",
+        "type": "video",
+        "link": "https://spginecologia.pt/video/22965/",
+        "title": {
+            "rendered": "Massas anexiais na gravidez: abordagem laparoscópica"
+        },
+        "author": 0,
+        "featured_media": 22968,
+        "comment_status": "closed",
+        "ping_status": "closed",
+        "template": "",
+        "categories": [
+            96,
+            68,
+            79
+        ],
+        "class_list": [
+            "post-22965",
+            "video",
+            "type-video",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry",
+            "category-anatomia-pelvica",
+            "category-laparoscopia",
+            "category-obstetricia"
+        ],
+        "acf": {
+            "category_select_mode": "Search",
+            "post_category_search": [
+                68,
+                79,
+                96
+            ],
+            "post_category_select": [
+                68,
+                79,
+                96
+            ],
+            "video_file": 22966,
+            "video_file_length": "7:56",
+            "video_featured": true,
+            "video_declaration_signed": 22967,
+            "video_rgpd_confirmation": true,
+            "video_authors": "Cristiana Moreira; Tânia Barros; Hélder Ferreira",
+            "video_section": "endoscopia_ginecologica",
+            "video_introduction": "As massas anexiais na gravidez são achados cada vez mais comuns desde a implementação do rastreio ecográfico de primeiro trimestre. A sua abordagem não é consensual. Apresenta-se um vídeo de um caso de abordagem laparoscópica de massas anexiais bilaterais na gravidez. ",
+            "video_description": "<p>Caso cl&iacute;nico: Primigesta de 30 anos. Saud&aacute;vel. Diagn&oacute;stico de tumefa&ccedil;&otilde;es anexiais qu&iacute;sticas bilaterais na ecografia de 1&ordm; trimestre, com 4 e 5 cm de maiores di&acirc;metros. Realizada quistectomia laparosc&oacute;pica bilateral &agrave;s 26 semanas por aumento das dimens&otilde;es (13,5 e 11 cm). N&atilde;o houve intercorr&ecirc;ncias intra ou peri-procedimento e o parto foi espont&acirc;neo, tendo ocorrido no termo. A an&aacute;lises anatomopatol&oacute;gica das pe&ccedil;as de quistectomia ov&aacute;rica bilateral realizada no 2&ordm; trimestre de gesta&ccedil;&atilde;o, revelou tratar-se de cistadenomas mucinosos.&nbsp;</p>"
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video/22965"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/video"
+                }
+            ],
+            "replies": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/comments?post=22965"
+                }
+            ],
+            "acf:term": [
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/96"
+                },
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/79"
+                },
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/68"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/22968"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=22965"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=22965"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 23406,
+        "date": "2023-02-08T15:43:38",
+        "date_gmt": "2023-02-08T15:43:38",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?p=23406"
+        },
+        "modified": "2023-04-18T20:37:21",
+        "modified_gmt": "2023-04-18T19:37:21",
+        "slug": "histerectomia-assistida-por-vnotes-uma-nova-abordagem-cirurgica-no-prolapso-uterino",
+        "status": "publish",
+        "type": "video",
+        "link": "https://spginecologia.pt/video/23406/",
+        "title": {
+            "rendered": "Histerectomia assistida por vNOTES: uma nova abordagem cirúrgica no prolapso uterino"
+        },
+        "author": 0,
+        "featured_media": 23409,
+        "comment_status": "closed",
+        "ping_status": "closed",
+        "template": "",
+        "categories": [
+            9,
+            14
+        ],
+        "class_list": [
+            "post-23406",
+            "video",
+            "type-video",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry",
+            "category-histerectomia",
+            "category-prolapso-dos-orgaos-pelvicos"
+        ],
+        "acf": {
+            "category_select_mode": "Search",
+            "post_category_search": [
+                9,
+                14
+            ],
+            "post_category_select": [
+                9,
+                14
+            ],
+            "video_file": 23407,
+            "video_file_length": "5:08",
+            "video_featured": true,
+            "video_declaration_signed": 23408,
+            "video_rgpd_confirmation": true,
+            "video_authors": "Luís Ferreira de Castro, Ana Andrade, Marília Freixo, Marta Melo, Rafael Brás, Bercina Candoso, Rosa Zulmira Macedo",
+            "video_section": "uroginecologia",
+            "video_introduction": "O prolapso dos orgãos pélvicos (POP) é uma patologia ginecológica benigna que afeta 40 a 50% das mulheres acima dos 50 anos. O tratamento cirúrgico desta entidade está indicado em mulheres com prolapso sintomático após falha ou recusa da abordagem conservadora. A  cirurgia endoscópica transluminal por orifícios naturais via vaginal (vNOTES) consiste na utilização do orifício vaginal como uma porta de acesso cirúrgica para um procedimento laparoscópico. Esta abordagem minimamente invasiva tem expandido de forma significativa na última década, e pode ser aplicada no tratamento cirúrgico de POP.  ",
+            "video_description": "<p>O procedimento cir&uacute;rgico foi realizado numa mulher de 68 anos com obesidade e hipertens&atilde;o, que descrevia uma sensa&ccedil;&atilde;o de corpo estranho vulvar com 3 anos de evolu&ccedil;&atilde;o. No exame ginecol&oacute;gico constatou-se um POP classificado como histerocelo grau III, cistocelo grau II e retocelo grau I. Adicionalmente, na ecografia ginecol&oacute;gica observou-se um quisto justaov&aacute;rico esquerdo, bilocular, regular e n&atilde;o vascularizado, com 42mm de maior di&acirc;metro (O-RADS 2). Atendendo &agrave; presen&ccedil;a de um prolapso maioritariamente apical e de um quisto anexial numa mulher p&oacute;s-menopausa, decidiu-se realizar uma histerectomia com anexectomia bilateral assistida por vNOTES.</p>\r\n<p>Na fase inicial da cirurgia procedeu-se &agrave; incis&atilde;o circular do colo, colpotomia posterior e anterior, sec&ccedil;&atilde;o dos ligamentos uterossagrados e coloca&ccedil;&atilde;o, via vaginal, de um dispositivo de retra&ccedil;&atilde;o como interface com a cavidade peritoneal, acoplado a um sistema de porta &uacute;nica semelhante &agrave; laparoscopia. Seguiu-se a parte endosc&oacute;pica do procedimento que englobou a forma&ccedil;&atilde;o de pneumoperitoneu, a inspe&ccedil;&atilde;o endosc&oacute;pica da cavidade peritoneal, a coagula&ccedil;&atilde;o das art&eacute;rias uterinas, a sec&ccedil;&atilde;o dos param&eacute;trios, ligamentos redondos e infund&iacute;bulo-p&eacute;lvicos e a extra&ccedil;&atilde;o do &uacute;tero e anexos. Ap&oacute;s a remo&ccedil;&atilde;o do sistema cir&uacute;rgico de porta &uacute;nica, finalizou-se o procedimento com uma culdoplastia de McCall, corre&ccedil;&atilde;o de prolapso anterior com tecidos nativos e perineoplastia com reconstru&ccedil;&atilde;o do corpo perineal. N&atilde;o foram reportadas complica&ccedil;&otilde;es intra ou p&oacute;s-operat&oacute;rias.</p>\r\n<p>A t&eacute;cnica vNOTES combina os princ&iacute;pios da cirurgia laparosc&oacute;pica com a abordagem por via vaginal e os seus resultados cir&uacute;rgicos tem sido alvo de estudo na literatura recente. Comparativamente com a histerectomia vaginal convencional, a histerectomia assistida por vNOTES permite melhorar a visualiza&ccedil;&atilde;o e exposi&ccedil;&atilde;o anat&oacute;mica, facilitando a explora&ccedil;&atilde;o na cavidade peritoneal e a salpingectomia ou anexectomia, e reduzir o tempo intraoperat&oacute;rio e o risco de complica&ccedil;&otilde;es ureterais. Relativamente &agrave; histerectomia por via laparosc&oacute;pica, a t&eacute;cnica vNOTES possibilita uma interven&ccedil;&atilde;o sem cicatrizes abdominais ou complica&ccedil;&otilde;es da parede abdominal e associa-se a um menor score de dor, de tempo operat&oacute;rio e de internamento.</p>\r\n<p>Em suma, a histerectomia assistida por vNOTES representa uma alternativa eficaz e segura na abordagem cir&uacute;rgica de um prolapso apical, aglomerando as vantagens da laparoscopia e da histerectomia vaginal num &uacute;nico procedimento.&nbsp;</p>"
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video/23406"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/video"
+                }
+            ],
+            "replies": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/comments?post=23406"
+                }
+            ],
+            "acf:term": [
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/14"
+                },
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/9"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/23409"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=23406"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=23406"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 20223,
+        "date": "2023-02-08T14:21:20",
+        "date_gmt": "2023-02-08T14:21:20",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?p=20223"
+        },
+        "modified": "2023-04-18T20:37:03",
+        "modified_gmt": "2023-04-18T19:37:03",
+        "slug": "dois-casos-de-polipectomia-com-sistema-de-extraccao-de-tecido-intra-uterino",
+        "status": "publish",
+        "type": "video",
+        "link": "https://spginecologia.pt/video/20223/",
+        "title": {
+            "rendered": "Dois casos de polipectomia com sistema de extracção de tecido intra-uterino"
+        },
+        "author": 0,
+        "featured_media": 20226,
+        "comment_status": "closed",
+        "ping_status": "closed",
+        "template": "",
+        "categories": [
+            75,
+            97,
+            98
+        ],
+        "class_list": [
+            "post-20223",
+            "video",
+            "type-video",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry",
+            "category-endoscopia-ginecologica",
+            "category-morcelador",
+            "category-polipectomia"
+        ],
+        "acf": {
+            "category_select_mode": "Search",
+            "post_category_search": [
+                75,
+                97,
+                98
+            ],
+            "post_category_select": [
+                75,
+                97,
+                98
+            ],
+            "video_file": 20224,
+            "video_file_length": "4:47",
+            "video_featured": true,
+            "video_declaration_signed": 20225,
+            "video_rgpd_confirmation": true,
+            "video_authors": "Ana Carolina Coimbra, Pedro Pinto, João Cavaco Gomes, Margarida Martinho",
+            "video_section": "endoscopia_ginecologica",
+            "video_introduction": "Apresentamos os dois primeiros casos de polipectomia com o sistema IBS® (Integrated Bigatti Shaver) realizados no CHUSJ, em regime de ambulatório.\r\nOs sistemas histeroscópicos de remoção de tecido permitem a fragmentação mecânica de lesões e remoção dos fragmentos por aspiração, constituindo uma alternativa aparentemente segura mas eficaz no tratamento de patologia estrutural intra-uterina.",
+            "video_description": "<p>A ressectoscopia convencional &eacute; ainda considerada a t&eacute;cnica de elei&ccedil;&atilde;o para o tratamento de p&oacute;lipos endometriais e miomas submucosos de maiores dimens&otilde;es, n&atilde;o sendo contudo isenta de riscos. A ressectoscopia obriga &agrave; dilata&ccedil;&atilde;o do colo uterino, utiliza&ccedil;&atilde;o de energia el&eacute;ctrica e remo&ccedil;&atilde;o dos fragmentos, tornando-a num procedimento cir&uacute;rgico mais demorado e com uma curva de aprendizagem longa, podendo associar-se a sobrecarga h&iacute;drica, perfura&ccedil;&atilde;o uterina e les&otilde;es t&eacute;rmicas.</p>\r\n<p>Os sistemas histerosc&oacute;picos de morcela&ccedil;&atilde;o intra-uterina permitem a remo&ccedil;&atilde;o mec&acirc;nica de forma&ccedil;&otilde;es intra-cavit&aacute;rias e a aspira&ccedil;&atilde;o simult&acirc;nea dos fragmentos resultantes, tendo demonstrado vantagens na visualiza&ccedil;&atilde;o durante o procedimento, com menor risco de complica&ccedil;&otilde;es como intravasamento, les&atilde;o do endom&eacute;trio saud&aacute;vel e aquelas associadas &agrave; utiliza&ccedil;&atilde;o de energia el&eacute;ctrica. O tempo operat&oacute;rio mostrou ser mais reduzido, estando descritas concomitantemente uma maior taxa de sucesso e uma menor curva de aprendizagem.</p>"
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video/20223"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/video"
+                }
+            ],
+            "replies": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/comments?post=20223"
+                }
+            ],
+            "acf:term": [
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/98"
+                },
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/97"
+                },
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/75"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/20226"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=20223"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=20223"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 19628,
+        "date": "2023-02-08T14:01:54",
+        "date_gmt": "2023-02-08T14:01:54",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?p=19628"
+        },
+        "modified": "2023-04-18T20:39:57",
+        "modified_gmt": "2023-04-18T19:39:57",
+        "slug": "excisao-por-cirurgia-robotica-de-nodulo-de-endometriose-do-nervo-obturador",
+        "status": "publish",
+        "type": "video",
+        "link": "https://spginecologia.pt/video/19628/",
+        "title": {
+            "rendered": "Excisão por cirurgia robótica de nódulo de endometriose do nervo obturador"
+        },
+        "author": 0,
+        "featured_media": 19631,
+        "comment_status": "closed",
+        "ping_status": "closed",
+        "template": "",
+        "categories": [
+            8,
+            75
+        ],
+        "class_list": [
+            "post-19628",
+            "video",
+            "type-video",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry",
+            "category-endometriose",
+            "category-endoscopia-ginecologica"
+        ],
+        "acf": {
+            "category_select_mode": "Search",
+            "post_category_search": [
+                8,
+                75
+            ],
+            "post_category_select": [
+                8,
+                75
+            ],
+            "video_file": 19629,
+            "video_file_length": "4:52",
+            "video_featured": true,
+            "video_declaration_signed": 19630,
+            "video_rgpd_confirmation": true,
+            "video_authors": "Margarida Cal, Natacha Sousa, João Sequeira Alves, Sónia Barata, Filipa Osório",
+            "video_section": "endoscopia_ginecologica",
+            "video_introduction": "Introdução: \r\nA endometriose afeta aproximadamente 10% das mulheres em idade reprodutiva, sendo as manifestações clínicas mais frequentes a dismenorreia, dispareunia, dor pélvica crónica e infertilidade. A doença manifesta-se principalmente na cavidade pélvica, embora possam existir apresentações atípicas numa minoria dos casos. A endometriose do nervo obturador é uma apresentação incomum da doença, causada por um implante de tecido endometrial ectópico no nervo obturador, que se associa a uma neuropatia sensitivo-motora. A cirurgia minimamente invasiva é a abordagem preferida no tratamento cirúrgico da endometriose; neste caso, dada a elevada complexidade cirúrgica, foi escolhida a via robótica pela elevada precisão.",
+            "video_description": "<p>Descri&ccedil;&atilde;o do caso:&nbsp;<br />Mulher de 36 anos com diagn&oacute;stico de endometriose, que recorreu &agrave; consulta por queixas de ciatalgia catamenial c&iacute;clica intensa, com agravamento recente.&nbsp;<br />Ao exame objetivo apresentava dor &agrave; palpa&ccedil;&atilde;o da espinha ci&aacute;tica e no exame neurol&oacute;gico a explora&ccedil;&atilde;o sensitiva era compat&iacute;vel com dor no territ&oacute;rio do derm&aacute;tomo correspondente a L5.&nbsp;<br />A resson&acirc;ncia magn&eacute;tica revelou &uacute;tero com adenomiose difusa e um n&oacute;dulo de endometriose dos nervos obturador e ci&aacute;tico direito, com cerca de 2.8cm e com extens&atilde;o para o espa&ccedil;o obturador e plexo hipog&aacute;strico.&nbsp;<br />Foi realizada cirurgia rob&oacute;tica com dissec&ccedil;&atilde;o da parede p&eacute;lvica direita e identifica&ccedil;&atilde;o do n&oacute;dulo de endometriose em topografia medial ao nervo obturador, superior ao nervo ci&aacute;tico e externo ao ureter; foi realizada excis&atilde;o parcial do n&oacute;dulo de endometriose (por invas&atilde;o muscular) com energia monopolar e bipolar e liberta&ccedil;&atilde;o de ader&ecirc;ncias ao nervo obturador direito. O procedimento cir&uacute;rgico e p&oacute;s-operat&oacute;rio decorreram sem complica&ccedil;&otilde;es, com melhoria franca das queixas da doente.</p>\r\n<p>Conclus&atilde;o:<br />A endometriose do nervo obturador e ci&aacute;tico &eacute; uma forma incomum de apresenta&ccedil;&atilde;o da doen&ccedil;a, contudo deve ser colocada esta hip&oacute;tese diagn&oacute;stica perante mulheres em idade f&eacute;rtil com diagn&oacute;stico de endometriose e queixas de ciatalgia. A cirurgia minimamente invasiva, nomeadamente por via rob&oacute;tica, permite a excis&atilde;o destes n&oacute;dulos, sendo um procedimento complexo que exige um conhecimento aprofundado de neuropelveologia.</p>"
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video/19628"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/video"
+                }
+            ],
+            "replies": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/comments?post=19628"
+                }
+            ],
+            "acf:term": [
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/75"
+                },
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/8"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/19631"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=19628"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=19628"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 18899,
+        "date": "2022-08-01T00:13:52",
+        "date_gmt": "2022-07-31T23:13:52",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?p=18899"
+        },
+        "modified": "2023-04-18T20:35:50",
+        "modified_gmt": "2023-04-18T19:35:50",
+        "slug": "a-importancia-dos-exames-complementares-no-diagnostico-de-malformacoes-mullerianas",
+        "status": "publish",
+        "type": "video",
+        "link": "https://spginecologia.pt/video/18899/",
+        "title": {
+            "rendered": "A importância dos exames complementares no diagnóstico de malformações mullerianas"
+        },
+        "author": 0,
+        "featured_media": 18902,
+        "comment_status": "closed",
+        "ping_status": "closed",
+        "template": "",
+        "categories": [
+            69
+        ],
+        "class_list": [
+            "post-18899",
+            "video",
+            "type-video",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry",
+            "category-anomalia-mulleriana"
+        ],
+        "acf": {
+            "category_select_mode": "Search",
+            "post_category_search": [
+                69
+            ],
+            "post_category_select": [
+                69
+            ],
+            "video_file": 18900,
+            "video_file_length": "2:02",
+            "video_featured": false,
+            "video_declaration_signed": 18901,
+            "video_rgpd_confirmation": true,
+            "video_authors": "Sara Dias Leite; Ana Sofia Fernandes",
+            "video_section": "endoscopia_ginecologica",
+            "video_introduction": "As malformações do trato genital feminino são alterações da normal anatomia resultantes de anomalias com origem nos ductos mullerianos, com uma prevalência de cerca de 4-7%. O diagnóstico implica uma alta suspeição clínica e adequação dos exames complementares de diagnóstico a a realizar.\r\n",
+            "video_description": "Nulípara de 26 anos, sem coitarca, saudável, encaminhada à consulta de ginecologia por suspeita de malformação uterina.\r\nDificuldade no exame ginecológico, com observação de um colo uterino, sem aparentes septos vaginais.<span class=\"Apple-converted-space\"> </span>Na ecografia transvaginal constatadas duas estruturas uterinas independentes e dois colos uterinos. A avaliação ecográfica 3D confirmou a presença de útero bicorporal. Decidida realização de vaginoscopia, tendo-se visualizado um septo vaginal longitudinal incompleto ocupando o terço superior da vagina. Identificados dois colos comunicantes com a vagina, um de cada lado do septo vaginal. Reavaliação ginecológica com identificação de septo vaginal longitudinal com inserção na parede lateral esquerda e apresentação preferencial do colo direito.\r\n\r\nDe acordo com a classificação da ASRM, feito o diagnóstico de útero didelfos, bicolis e septo vaginal longitudinal (ESHRE/ESGE U3bC2V1).\r\n\r\nA doente mantém-se assintomática."
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video/18899"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/video"
+                }
+            ],
+            "replies": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/comments?post=18899"
+                }
+            ],
+            "acf:term": [
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/69"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/18902"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=18899"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=18899"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 17954,
+        "date": "2022-07-26T23:18:55",
+        "date_gmt": "2022-07-26T22:18:55",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?p=17954"
+        },
+        "modified": "2023-04-18T20:36:18",
+        "modified_gmt": "2023-04-18T19:36:18",
+        "slug": "miomectomia-laparoscopica-com-oclusao-transitoria-das-arterias-uterinas-e-vasos-infudibulo-pelvicos",
+        "status": "publish",
+        "type": "video",
+        "link": "https://spginecologia.pt/video/17954/",
+        "title": {
+            "rendered": "Miomectomia laparoscópica com oclusão transitória das artérias uterinas e vasos infudíbulo-pélvicos"
+        },
+        "author": 0,
+        "featured_media": 17957,
+        "comment_status": "closed",
+        "ping_status": "closed",
+        "template": "",
+        "categories": [
+            68,
+            78
+        ],
+        "class_list": [
+            "post-17954",
+            "video",
+            "type-video",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry",
+            "category-laparoscopia",
+            "category-miomectomia"
+        ],
+        "acf": {
+            "category_select_mode": "Search",
+            "post_category_search": [
+                68,
+                78
+            ],
+            "post_category_select": [
+                68,
+                78
+            ],
+            "video_file": 17955,
+            "video_file_length": "4:50",
+            "video_featured": false,
+            "video_declaration_signed": 17956,
+            "video_rgpd_confirmation": true,
+            "video_authors": "Luís Ferreira de Castro; Ana Andrade; Rosa Zulmira Macedo; Hélder Ferreira",
+            "video_section": "endoscopia_ginecologica",
+            "video_introduction": "O mioma uterino é o tumor pélvico benigno mais frequente na mulher em idade reprodutiva. A miomectomia laparoscópica (ML) é uma opção terapêutica quando se deseja preservar a fertilidade, porém este procedimento pode resultar em hemorragia abundante e tempo operatório prolongado. A oclusão transitória das artérias uterinas (AU) e ligamentos infundíbulo-pélvicos (LIP) pode ser uma alternativa segura para prevenir os riscos associados à ML.",
+            "video_description": "<p>Este caso descreve uma mulher de 37 anos com cl&iacute;nica de hemorragia uterina anormal resistente ao tratamento m&eacute;dico e um mioma FIGO tipo 5 com 9 cm de maior di&acirc;metro. Uma vez que desejava preservar a fertilidade, optou-se por miomectomia laparosc&oacute;pica com oclus&atilde;o transit&oacute;ria das art&eacute;rias uterinas (AU) e ligamentos infund&iacute;bulo-p&eacute;lvicos (LIP) para reduzir a hemorragia intraoperat&oacute;ria. A oclus&atilde;o transit&oacute;ria dos ped&iacute;culos vasculares foi realizada no in&iacute;cio do procedimento, utilizando endoclips de tit&acirc;nio com 5 mm. Ap&oacute;s identifica&ccedil;&atilde;o dos ureteres, procedeu-se ao isolamento e oclus&atilde;o das AU perto da sua origem. Em seguida, os vasos dos LIP foram clampeados a cerca de 2 cm da inser&ccedil;&atilde;o no ov&aacute;rio. A miomectomia foi realizada atrav&eacute;s de uma incis&atilde;o uterina obl&iacute;qua no local do mioma, seguida de disse&ccedil;&atilde;o circunferencial para permitir a enuclea&ccedil;&atilde;o do tumor. Ap&oacute;s encerramento do miom&eacute;trio e previamente &agrave; morcela&ccedil;&atilde;o do mioma, os clips vasculares foram removidos para restabelecer a vasculariza&ccedil;&atilde;o e reavaliar a hemostase.</p>"
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video/17954"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/video"
+                }
+            ],
+            "replies": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/comments?post=17954"
+                }
+            ],
+            "acf:term": [
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/78"
+                },
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/68"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/17957"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=17954"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=17954"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 12282,
+        "date": "2022-04-14T22:34:22",
+        "date_gmt": "2022-04-14T21:34:22",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?p=12282"
+        },
+        "modified": "2023-04-18T20:36:28",
+        "modified_gmt": "2023-04-18T19:36:28",
+        "slug": "excisao-laparoscopica-de-nodulo-de-endometriose-do-canal-inguinal",
+        "status": "publish",
+        "type": "video",
+        "link": "https://spginecologia.pt/video/12282/",
+        "title": {
+            "rendered": "Excisão laparoscópica de nódulo de endometriose do canal inguinal"
+        },
+        "author": 0,
+        "featured_media": 12285,
+        "comment_status": "closed",
+        "ping_status": "closed",
+        "template": "",
+        "categories": [
+            91,
+            90,
+            8,
+            68
+        ],
+        "class_list": [
+            "post-12282",
+            "video",
+            "type-video",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry",
+            "category-canal-de-nuck",
+            "category-canal-inguinal",
+            "category-endometriose",
+            "category-laparoscopia"
+        ],
+        "acf": {
+            "category_select_mode": "Search",
+            "post_category_search": [
+                8,
+                68,
+                90,
+                91
+            ],
+            "post_category_select": [
+                8,
+                68,
+                90,
+                91
+            ],
+            "video_file": 12283,
+            "video_file_length": "5:23",
+            "video_featured": false,
+            "video_declaration_signed": 12284,
+            "video_rgpd_confirmation": true,
+            "video_authors": "Margarida Cal, Madalena Andrade Tavares, Sónia Barata, João Alves, Filipa Osório",
+            "video_section": "endoscopia_ginecologica",
+            "video_introduction": "A endometriose do canal inguinal é uma forma muito rara de apresentação da doença; ",
+            "video_description": "<p>Neste v&iacute;deo demonstramos, passo a passo, uma cirurgia laparosc&oacute;pica em que foi realizada excis&atilde;o de um n&oacute;dulo de endometriose do canal de Nuck, al&eacute;m de excis&atilde;o de nodulo do septo retovaginal e histerectomia total laparosc&oacute;pica.</p>\r\n<p>Afilia&ccedil;&otilde;es:</p>\r\n<ul>\r\n<li>Hospital de Santa Maria, Centro Hospitalar Universit&aacute;rio Lisboa Norte</li>\r\n<li>Hospital de Vila Franca de Xira</li>\r\n<li>Hospital da Luz de Lisboa&nbsp;</li>\r\n</ul>"
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video/12282"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/video"
+                }
+            ],
+            "replies": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/comments?post=12282"
+                }
+            ],
+            "acf:term": [
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/91"
+                },
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/90"
+                },
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/68"
+                },
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/8"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/12285"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=12282"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=12282"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 5178,
+        "date": "2021-10-30T17:59:37",
+        "date_gmt": "2021-10-30T16:59:37",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?p=5178"
+        },
+        "modified": "2021-10-30T17:59:37",
+        "modified_gmt": "2021-10-30T16:59:37",
+        "slug": "remocao-de-diu-retido-por-histeroscopia-office-com-recurso-a-anestesia-histeroscopica",
+        "status": "publish",
+        "type": "video",
+        "link": "https://spginecologia.pt/video/5178/",
+        "title": {
+            "rendered": "Remoção de DIU retido por histeroscopia office com recurso a anestesia histeroscópica"
+        },
+        "author": 279,
+        "featured_media": 5181,
+        "comment_status": "closed",
+        "ping_status": "closed",
+        "template": "",
+        "categories": [
+            81,
+            80,
+            85
+        ],
+        "class_list": [
+            "post-5178",
+            "video",
+            "type-video",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry",
+            "category-anestesia-histeroscopica",
+            "category-histeroscopia-office",
+            "category-remocao-diu"
+        ],
+        "acf": {
+            "category_select_mode": "Search",
+            "post_category_search": [
+                80,
+                81,
+                85
+            ],
+            "post_category_select": [
+                80,
+                81,
+                85
+            ],
+            "video_file": 5179,
+            "video_file_length": "3:40",
+            "video_featured": false,
+            "video_declaration_signed": 5180,
+            "video_rgpd_confirmation": true,
+            "video_authors": "João Mairos",
+            "video_section": "endoscopia_ginecologica",
+            "video_introduction": "Demonstração da técnica de remoção de dispositivo intra-uterino (DIU) retido e incluso por histeroscopia office (ou histeroscopia de consultório), com recurso a anestesia histeroscópica.  A abordagem uterina é realizada por vaginoscopia (sem uso de espéculo ou tenáculo) e respeitando o conceito \"ver e tratar\". Após o procedimento, a doente retomou de imediato a sua vida diária, sem necessidade de qualquer recobro.",
+            "video_description": "A entrada na cavidade uterina é fácil, visualizando-se DIU intracavitário e incluso na parede uterina. A remoção é trabalhosa e efectuada com recurso a tesoura mecânica, libertando os braços do DIU do miométrio, sendo permitida pelo uso de anestesia histeroscópica, com sucesso. O procedimento é concluído sem complicações."
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video/5178"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/video"
+                }
+            ],
+            "author": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/users/279"
+                }
+            ],
+            "replies": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/comments?post=5178"
+                }
+            ],
+            "acf:term": [
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/85"
+                },
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/81"
+                },
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/80"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/5181"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=5178"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=5178"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 5168,
+        "date": "2021-10-30T17:58:26",
+        "date_gmt": "2021-10-30T16:58:26",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?p=5168"
+        },
+        "modified": "2021-10-30T17:58:26",
+        "modified_gmt": "2021-10-30T16:58:26",
+        "slug": "septoplastia-por-histeroscopia-office-com-recurso-a-anestesia-histeroscopica",
+        "status": "publish",
+        "type": "video",
+        "link": "https://spginecologia.pt/video/5168/",
+        "title": {
+            "rendered": "Septoplastia por histeroscopia office com recurso a anestesia histeroscópica"
+        },
+        "author": 279,
+        "featured_media": 5171,
+        "comment_status": "closed",
+        "ping_status": "closed",
+        "template": "",
+        "categories": [
+            81,
+            80,
+            84
+        ],
+        "class_list": [
+            "post-5168",
+            "video",
+            "type-video",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry",
+            "category-anestesia-histeroscopica",
+            "category-histeroscopia-office",
+            "category-septoplastia"
+        ],
+        "acf": {
+            "category_select_mode": "Search",
+            "post_category_search": [
+                80,
+                81,
+                84
+            ],
+            "post_category_select": [
+                80,
+                81,
+                84
+            ],
+            "video_file": 5169,
+            "video_file_length": "3:02",
+            "video_featured": false,
+            "video_declaration_signed": 5170,
+            "video_rgpd_confirmation": true,
+            "video_authors": "João Mairos",
+            "video_section": "endoscopia_ginecologica",
+            "video_introduction": "Demonstração técnica de septoplastia por histeroscopia office (ou histeroscopia de consultório) de um septo uterino, com recurso a anestesia histeroscópica. A abordagem uterina é realizada por vaginoscopia (sem uso de espéculo ou tenáculo) e respeitando o conceito \"ver e tratar\". Após o procedimento, a doente retomou de imediato a sua vida diária, sem necessidade de qualquer recobro.",
+            "video_description": "A entrada na cavidade uterina é fácil, visualizando-se de imediato o septo uterino. A septoplastia é iniciada sem anestesia, com recurso a electrocirurgia bipolar, sendo interrompida pelo facto de a doente referir dor. Efectua-se então anestesia histeroscópica, garantindo as condições adequadas para concluir, com sucesso, o procedimento da septoplastia (até se tornar visível a vascularização miometrial). No final é efectuada a hemostase de pequeno vaso sangrante também por electrocoagulação. O procedimento é concluído sem complicações."
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video/5168"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/video"
+                }
+            ],
+            "author": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/users/279"
+                }
+            ],
+            "replies": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/comments?post=5168"
+                }
+            ],
+            "acf:term": [
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/84"
+                },
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/81"
+                },
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/80"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/5171"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=5168"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=5168"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 5137,
+        "date": "2021-10-30T17:57:51",
+        "date_gmt": "2021-10-30T16:57:51",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?p=5137"
+        },
+        "modified": "2021-10-30T18:04:03",
+        "modified_gmt": "2021-10-30T17:04:03",
+        "slug": "cerclage-cervico-istmica-transabdominal-por-via-laparoscopica-caso-clinico",
+        "status": "publish",
+        "type": "video",
+        "link": "https://spginecologia.pt/video/5137/",
+        "title": {
+            "rendered": "Cerclage cérvico-ístmica transabdominal por via laparoscópica: caso clínico"
+        },
+        "author": 285,
+        "featured_media": 5230,
+        "comment_status": "closed",
+        "ping_status": "closed",
+        "template": "",
+        "categories": [
+            75,
+            68,
+            79
+        ],
+        "class_list": [
+            "post-5137",
+            "video",
+            "type-video",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry",
+            "category-endoscopia-ginecologica",
+            "category-laparoscopia",
+            "category-obstetricia"
+        ],
+        "acf": {
+            "category_select_mode": "Search",
+            "post_category_search": [
+                68,
+                75,
+                79
+            ],
+            "post_category_select": [
+                68,
+                75,
+                79
+            ],
+            "video_file": 5138,
+            "video_file_length": "6:16",
+            "video_featured": false,
+            "video_declaration_signed": 5139,
+            "video_rgpd_confirmation": true,
+            "video_authors": "Adriano Soares; Carla Duarte; Luísa Machado; Cláudia Guerra; Pedro Oliveira",
+            "video_section": "endoscopia_ginecologica",
+            "video_introduction": "A cerclage transabdominal na junção cérvico-ístmica parece ser um procedimento seguro e eficaz em casos selecionados de incompetência cervical. \r\nOs autores reportam o caso clínico de uma mulher com 35 anos, Gesta 3, Para 0, com história de 2 abortamentos tardios (às 18 e 22 semanas), ambos com o diagnóstico de incompetência cervical, o segundo dos quais após cerclage cervical profilática por via vaginal. Foi submetida a cerclage cérvico-ístmica transabdominal por via laparoscópica às 10 semanas de gravidez. O procedimento decorreu sem intercorrências.",
+            "video_description": "Caso clínico apresentado no Webinar da Secção Portuguesa de Endoscopia Ginecológica no dia 18 de Setembro 2021 sobre cerclage transabdominal na junção cérvico-ístmica por via laparoscópica."
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video/5137"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/video"
+                }
+            ],
+            "author": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/users/285"
+                }
+            ],
+            "replies": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/comments?post=5137"
+                }
+            ],
+            "acf:term": [
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/79"
+                },
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/75"
+                },
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/68"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/5230"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=5137"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=5137"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 3206,
+        "date": "2021-10-07T18:55:25",
+        "date_gmt": "2021-10-07T17:55:25",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?p=3206"
+        },
+        "modified": "2021-10-30T18:07:12",
+        "modified_gmt": "2021-10-30T17:07:12",
+        "slug": "miomectomia-por-histeroscopia-office-com-recurso-a-anestesia-histeroscopica",
+        "status": "publish",
+        "type": "video",
+        "link": "https://spginecologia.pt/video/3206/",
+        "title": {
+            "rendered": "Miomectomia por histeroscopia office com recurso a anestesia histeroscópica"
+        },
+        "author": 279,
+        "featured_media": 3209,
+        "comment_status": "closed",
+        "ping_status": "closed",
+        "template": "",
+        "categories": [
+            81,
+            80,
+            78
+        ],
+        "class_list": [
+            "post-3206",
+            "video",
+            "type-video",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry",
+            "category-anestesia-histeroscopica",
+            "category-histeroscopia-office",
+            "category-miomectomia"
+        ],
+        "acf": {
+            "category_select_mode": "Search",
+            "post_category_search": [
+                78,
+                80,
+                81
+            ],
+            "post_category_select": [
+                78,
+                80,
+                81
+            ],
+            "video_file": 3207,
+            "video_file_length": "6:03",
+            "video_featured": false,
+            "video_declaration_signed": 3208,
+            "video_rgpd_confirmation": true,
+            "video_authors": "João Mairos",
+            "video_section": "endoscopia_ginecologica",
+            "video_introduction": "Demonstração técnica de miomectomia por Histeroscopia Office (ou histeroscopia de consultório) de fibromioma submucoso nível 2, com recurso a Anestesia Histeroscópica. A abordagem uterina é feita por vaginoscopia (sem uso de espéculo ou tenáculo) e respeitando o conceito \"ver e tratar\". Após o procedimento a doente retomou de imediato a sua vida diária, sem necessidade de qualquer recobro.",
+            "video_description": "<p>A entrada na cavidade uterina &eacute; dificultada por um colo pouco perme&aacute;vel. A cria&ccedil;&atilde;o de trajecto cervical &eacute; efectuada com recurso a tesoura mec&acirc;nica e com apoio de anestesia histerosc&oacute;pica. O mioma de n&iacute;vel 2 &eacute; extra&iacute;do por electrocirurgia bipolar e com apoio tamb&eacute;m de anestesia histerosc&oacute;pica. Pode observar-se o recurso &agrave; cria&ccedil;&atilde;o de um gancho com o el&eacute;ctrodo bipolar, permitindo movimentos tipo \"colher\". No final &eacute; utilizado um cesto de histeroscopia para extrair os fragmentos do interior da cavidade uterina.</p>"
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video/3206"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/video"
+                }
+            ],
+            "author": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/users/279"
+                }
+            ],
+            "replies": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/comments?post=3206"
+                }
+            ],
+            "acf:term": [
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/81"
+                },
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/80"
+                },
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/78"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/3209"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=3206"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=3206"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 1020,
+        "date": "2021-09-01T14:34:41",
+        "date_gmt": "2021-09-01T13:34:41",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=video&#038;p=1020"
+        },
+        "modified": "2021-10-30T18:06:11",
+        "modified_gmt": "2021-10-30T17:06:11",
+        "slug": "morcelacao-manual-por-minilaparotomia-em-saco-alexis",
+        "status": "publish",
+        "type": "video",
+        "link": "https://spginecologia.pt/video/1020/",
+        "title": {
+            "rendered": "Morcelação manual por minilaparotomia em saco alexis®"
+        },
+        "author": 198,
+        "featured_media": 1023,
+        "comment_status": "open",
+        "ping_status": "closed",
+        "template": "",
+        "categories": [
+            68,
+            78
+        ],
+        "class_list": [
+            "post-1020",
+            "video",
+            "type-video",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry",
+            "category-laparoscopia",
+            "category-miomectomia"
+        ],
+        "acf": {
+            "category_select_mode": "Search",
+            "post_category_search": [
+                68,
+                78
+            ],
+            "post_category_select": [
+                68,
+                78
+            ],
+            "video_file": 1022,
+            "video_file_length": "7:36",
+            "video_featured": false,
+            "video_declaration_signed": 1021,
+            "video_rgpd_confirmation": true,
+            "video_authors": "Iolanda Ferreira 1, José Lourenço Reis 2, Bruno Nogueira 2, Cristina Bragança 3, Carlos Veríssimo 2",
+            "video_section": "endoscopia_ginecologica",
+            "video_introduction": "A morcelação mecânica (MM) em cirurgia minimamente invasiva tornou-se um tema controverso quando, em 2014, se tornou evidente a possibilidade de carcinoma oculto na peça cirúrgica morcelada, e o risco de “upstaging” usando morcelação mecânica sem sistema de contenção. Restrições ao uso de morceladores mecânicos e o uso de sistemas de contenção de peça cirúrgica ganharam popularidade desde então, pautando o caminho para o renascimento de técnicas alternativas à MM, como a morcelação manual por mini-laparotomia (ML).",
+            "video_description": "Objetivos:\r\nApresentação de caso clínico com o objetivo de alertar para o uso de sistemas de contenção e técnicas de morcelação mais seguras. Efetuada revisão da literatura sobre técnicas de morcelação e peça cirúrgica em cirurgia minimamente invasiva.\r\n\r\nMaterial e métodos:\r\nApresentamos o caso clínico de uma mulher de 36 anos, avaliada em consulta de Ginecologia no Hospital Beatriz Ângelo, com história de hemorragia uterina anómala crónica abundante associada a spotting intermenstrual. Estes sintomas não apresentaram melhoria sob contraceção oral combinada. A ecografia endovaginal revelava a presença de um mioma tipo 3 na parede uterina posterior, com as dimensões de 54x46x51 mm. A doente desejava preservar a fertilidade, pelo que foi submetida a miomectomia por laparoscopia, cuja extração da peça cirúrgica foi efetuada usando morcelação manual por ML (MMM), com auxílio de um sistema de contenção aprovado pela FDA, usado pela primeira vez na Ginecologia em Portugal, o saco Alexis®.\r\n\r\nResultados e Conclusões:\r\nO sistema de contenção foi introduzido na cavidade abdominal em 1 min:30 segundos, através de uma incisão de 35 mm. A morcelação manual durou 7 min:40 segundos. A evolução pós-operatória decorreu sem intercorrências, com alta ao 2º dia.\r\nA literatura não demonstra diferenças relativamente à perda de sangue estimada, duração da cirurgia ou complicações peri-operatórias quando comparadas as várias modalidades de morcelação de peça cirúrgica em sacos de contenção – morcelação manual por via vaginal (MV), MMM e MM. Devido à ausência de vantagem na diminuição do tempo cirúrgico e ao aumento do custo associado ao uso da MM, conclui-se que o futuro da morcelação poderá passar pela adoção das antigas técnicas, como a MMM ou MV.\r\n\r\n1 Centro Hospitalar e Universitário de Coimbra, Universidade de Coimbra, Coimbra, Portugal\r\n2 Serviço de Ginecologia do Hospital Beatriz Ângelo, Loures, Portugal\r\n3 Unidade Local de Saúde do Baixo Alentejo, EPE, Beja, Portugal"
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video/1020"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/video"
+                }
+            ],
+            "author": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/users/198"
+                }
+            ],
+            "replies": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/comments?post=1020"
+                }
+            ],
+            "acf:term": [
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/78"
+                },
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/68"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/1023"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=1020"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=1020"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 1017,
+        "date": "2021-04-12T01:30:16",
+        "date_gmt": "2021-04-12T00:30:16",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=video&#038;p=1017"
+        },
+        "modified": "2021-11-26T12:42:54",
+        "modified_gmt": "2021-11-26T12:42:54",
+        "slug": "as-diferentes-apresentacoes-clinicas-em-oncologia",
+        "status": "publish",
+        "type": "video",
+        "link": "https://spginecologia.pt/video/1017/",
+        "title": {
+            "rendered": "As Diferentes Apresentações Clínicas em Oncologia"
+        },
+        "author": 313,
+        "featured_media": 1018,
+        "comment_status": "open",
+        "ping_status": "closed",
+        "template": "",
+        "categories": [
+            76,
+            24
+        ],
+        "class_list": [
+            "post-1017",
+            "video",
+            "type-video",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry",
+            "category-apresentacao-clinica",
+            "category-ginecologia-oncologica"
+        ],
+        "acf": {
+            "category_select_mode": "Search",
+            "post_category_search": [
+                76,
+                24
+            ],
+            "post_category_select": [
+                24,
+                76
+            ],
+            "video_file": 1019,
+            "video_file_length": "8:52",
+            "video_featured": false,
+            "video_declaration_signed": "",
+            "video_rgpd_confirmation": true,
+            "video_authors": "Oliveira J.; Andrade C.; Frutuoso C.; Sousa F.; Silva C.; Campos S.; Águas F.",
+            "video_section": "ginecologia_oncologica",
+            "video_introduction": "Na Ginecologia oncológica, a mesma patologia pode ter diferentes formas de apresentação e a mesma forma de apresentação pode corresponder a diferentes patologias. Inúmeras vezes somos surpreendidos na hora da cirurgia e defrontamo-nos com verdadeiros desafios cirúrgicos.",
+            "video_description": "<strong>Autores </strong><strong>(por números)</strong>\r\n1. Oliveira J. (1,2)\r\n2. Andrade C. (1)\r\n3. Frutuoso C. (1)\r\n4. Sousa F. (1,2)\r\n5. Silva C. (1)\r\n6. Campos S. (1,2)\r\n7. Águas F. (1)\r\n\r\n<strong>Afiliações (por números)</strong>\r\n(1) Serviço de Ginecologia, Centro Hospitalar e Universitário de Coimbra\r\n(2) Faculdade de Medicina, Universidade de Coimbra, Centro Académico Clínico de Coimbra\r\n\r\n<strong>Objetivo</strong>\r\nReconhecer as diferentes formas de apresentação do cancro ginecológico.\r\n\r\n<strong>Material e Métodos</strong>\r\nAnálise retrospetiva da apresentação clínica, imagiológica e laparoscópica de 8 casos clínicos da Unidade de Ginecologia Oncológica do Serviço de Ginecologia (CHUC).\r\n\r\n<strong>Resultados</strong>\r\nCaso 1 - Jovem com tumor anexial volumoso sólido com vascularização atípica que revelou ser um tumor esclerosante do ovário.\r\nCaso 2 - Doente de 77 anos com carcinoma seroso de alto grau anexial num estadio inicial associado a patologia uterina benigna.\r\nCaso 3 - Doente de 49 anos com síndrome febril e massa pélvica volumosa que revelou tratar-se de uma torção anexial e 2 massas anexiais correspondentes a um tumor de Krukenberg originário de um adenocarcinoma invasor do colon sigmóide.\r\nCaso 4 - Doente 53 anoscom carcinoma seroso de alto grau da trompa num estadio inicial.\r\nCaso 5 - Doente de76 anos, IMC 51, com adenocarcinoma do endométrio tipo endometrióide submetida a histerectomia laparoscópica.\r\nCaso 6 - Doente de 64 anos submetida a laparoscopia de avaliação de ressecabilidade cirúrgica por um carcinoma seroso de alto grau do ovário.\r\nCaso 7 - Grávida de 15 semanas com quisto do ovário volumoso e risco de malignidade 11.7% (ADNEX) que se tratava de um cistoadenofibroma.\r\nCaso 8 - Doente de 70 anos com adenocarcinoma do endométrio tipo endometrióide com invasão tumoral até à serosa.\r\n\r\n<strong>Conclusão</strong>\r\nA patologia oncológica pode ser apresentada sob a maior variedade de formas clínicas, com diferentes sintomas, diferentes estadios, associada a outras patologias benignas e em todas as idades. A salientar as formas de apresentação oncológicas anexiais com origem primária em tumores do tubo digestivo."
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video/1017"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/video"
+                }
+            ],
+            "author": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/users/313"
+                }
+            ],
+            "replies": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/comments?post=1017"
+                }
+            ],
+            "acf:term": [
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/24"
+                },
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/76"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/1018"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=1017"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=1017"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 1013,
+        "date": "2021-04-11T17:47:37",
+        "date_gmt": "2021-04-11T16:47:37",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=video&#038;p=1013"
+        },
+        "modified": "2021-09-01T14:35:02",
+        "modified_gmt": "2021-09-01T13:35:02",
+        "slug": "laparoscopic-ressection-of-a-presacral-schwannoma",
+        "status": "publish",
+        "type": "video",
+        "link": "https://spginecologia.pt/video/1013/",
+        "title": {
+            "rendered": "Laparoscopic Ressection of a Presacral Schwannoma"
+        },
+        "author": 208,
+        "featured_media": 1015,
+        "comment_status": "open",
+        "ping_status": "closed",
+        "template": "",
+        "categories": [
+            24,
+            68
+        ],
+        "class_list": [
+            "post-1013",
+            "video",
+            "type-video",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry",
+            "category-ginecologia-oncologica",
+            "category-laparoscopia"
+        ],
+        "acf": {
+            "category_select_mode": "Search",
+            "post_category_search": [
+                24,
+                68
+            ],
+            "post_category_select": [
+                24,
+                68
+            ],
+            "video_file": 1016,
+            "video_file_length": "8:00",
+            "video_featured": false,
+            "video_declaration_signed": 1014,
+            "video_rgpd_confirmation": true,
+            "video_authors": "Ana Helena Fachada, Ana Rita Pinto, Nuno Nogueira Martins",
+            "video_section": "ginecologia_oncologica",
+            "video_introduction": "Objective: To show how retrouterine masses can be safely managed with a laparoscopic resection. Design: Stepwise demonstration of the technique with narrated video footage. Setting: Schwannomas are tumors arising from the neural sheath of peripheral nerves (schwannoma cells) and their pelvic location is extremely rare (1 to 3% of all schwannomas1). The differential diagnosis of retrouterine masses represents a challenge, due to its non-specific presentation. A 41-year-old woman was referred to the authors’ Department presenting with chronic pelvic pain. Her pelvic magnetic resonance imaging (MRI) showed a solid, well-defined pelvic mass located in the left posterior pelvic space, of 53 × 47 mm size. Tumor markers were: CA125: 30,4U/mL, HE4: 72 U/mL, with pre-menopausal ROMA: 17% (low risk).",
+            "video_description": "Interventions: After the proper informed consent, the patient underwent laparoscopic surgery for mass removal, definitive diagnosis, exclusion of malignancy and symptomatic relief. Surgery was performed using mainly reusable material, including a bipolar forceps, scissors and needle holders. Clear recognition of anatomical landmarks such as the presacral vessels and the left ureter are of the utmost importance in order to perform a safe surgery. Intact tumor extraction was assisted by using a bag across the vaginal posterior cul-de-sac and the histology revealed a benign cellular shwannoma.\r\n\r\nConclusion: Pelvic schwannomas are rare pelvic tumors, mostly with non-specific presentation and no typical radiological characteristics2. They are a challenge in preoperative diagnosis, so laparoscopic surgical approach allows a better exposure of the operative field3 and an improved vision of anatomical landmarks. The minimal invasive technique used gave to this patient an uneventful post-operative period and allowed a complete resolution of symptoms, besides the enhanced recovery confirmed at the post-operative appointment two months later.\r\n\r\nServiço de Ginecologia e Obstetrícia, Centro Hospitalar Tondela-Viseu, Viseu"
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video/1013"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/video"
+                }
+            ],
+            "author": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/users/208"
+                }
+            ],
+            "replies": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/comments?post=1013"
+                }
+            ],
+            "acf:term": [
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/68"
+                },
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/24"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/1015"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=1013"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=1013"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 1009,
+        "date": "2021-03-18T01:30:36",
+        "date_gmt": "2021-03-18T01:30:36",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=video&#038;p=1009"
+        },
+        "modified": "2022-05-28T00:57:42",
+        "modified_gmt": "2022-05-27T23:57:42",
+        "slug": "miomectomia-laparoscopica-de-2-miomas-gigantes",
+        "status": "publish",
+        "type": "video",
+        "link": "https://spginecologia.pt/video/1009/",
+        "title": {
+            "rendered": "Miomectomia Laparoscópica de 2 Miomas Gigantes"
+        },
+        "author": 180,
+        "featured_media": 1010,
+        "comment_status": "open",
+        "ping_status": "closed",
+        "template": "",
+        "categories": [
+            68,
+            78
+        ],
+        "class_list": [
+            "post-1009",
+            "video",
+            "type-video",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry",
+            "category-laparoscopia",
+            "category-miomectomia"
+        ],
+        "acf": {
+            "category_select_mode": "Search",
+            "post_category_search": [
+                68,
+                78
+            ],
+            "post_category_select": [
+                68,
+                78
+            ],
+            "video_file": 1012,
+            "video_file_length": "5:12",
+            "video_featured": false,
+            "video_declaration_signed": 1011,
+            "video_rgpd_confirmation": true,
+            "video_authors": "Madalena Andrade Tavares; Margarida Cal; Marta Magro; Sónia Barata; João Alves; Filipa Osório",
+            "video_section": "geral",
+            "video_introduction": "A incidência de fibromiomas em mulheres em idade reprodutiva é de 20 a 40%. As manifestações clínicas mais frequentes são: hemorragia uterina anormal, dor pélvica, massa abdominal e infertilidade. O tratamento dos fibromiomas pode ser médico, cirúrgico ou uma combinação de ambos. Relativamente ao tratamento cirúrgico, esta patologia representa uma das principais indicações para realização de histerectomia. No entanto, em mulheres com desejo de preservação da fertilidade deverá ser ponderada uma abordagem mais conservadora, como a miomectomia. A excisão de fibromiomas pode ser realizada por via histeroscópica (Miomas FIGO 0 a 2) ou abdominal (Miomas FIGO 4 a 8). Com a evolução da cirurgia minimamente invasiva e da técnica de sutura laparoscópica, tem-se tornado possível a realização de miomectomias laparoscópicas cada vez mais complexas, nomeadamente fibromiomas múltiplos ou de grandes dimensões, com menor morbilidade e menor risco de aderências pós-operatórias.",
+            "video_description": "Neste vídeo apresentamos o caso de uma paciente nuligesta de 28 anos sem antecedentes pessoais relevantes, referenciada à consulta por massa pélvica. Referia ciclos regulares com cataménios de 5dias. Ao exame objectivo observava-se útero móvel com volumosa massa adjacente que se prolongava até ao umbigo. A ecografia pélvica e ressonância magnética revelaram útero com 75x36x48 mm com massa anterior sugestiva de conglomerado de miomas subserosos com 128x73x98 mm; endométrio e anexos sem alterações.\r\nFoi realizada miomectomia laparoscópica com excisão de 2 miomas com um peso total de 1145gr, sem intercorrências.\r\n\r\nA realização de miomectomia laparoscópica, ainda que esteja associada a menor morbilidade e menor risco de aderências, é um procedimento laborioso e cuja execução requer um elevado grau de experiência, nomeadamente na realização de sutura laparoscópica rápida e eficaz de forma a diminuir a perda hemática intra-operatória e assegurar um correto encerramento da abertura da parede uterina.\r\n\r\n<strong>Autores </strong><strong>(por números)</strong>\r\n1. Madalena Andrade Tavares (1)\r\n2. Margarida Cal (2)\r\n3. Marta Magro (3)\r\n4. Sónia Barata (3)\r\n5. João Alves (3)\r\n6. Filipa Osório (2,3)\r\n\r\n<strong>Afiliações (por números)</strong>\r\n(1) Serviço de Ginecologia e Obstetrícia do Hospital Vila Franca de Xira, Portugal\r\n(2) Departamento De Ginecologia, Obstetrícia e Medicina da Reprodução do Centro Hospitalar Lisboa Norte, Portugal\r\n(3) Serviço de Ginecologia e Obstetrícia do Hospital da Luz, Lisboa, Portugal"
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video/1009"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/video"
+                }
+            ],
+            "author": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/users/180"
+                }
+            ],
+            "replies": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/comments?post=1009"
+                }
+            ],
+            "acf:term": [
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/78"
+                },
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/68"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/1010"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=1009"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=1009"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 1000,
+        "date": "2021-03-08T13:57:20",
+        "date_gmt": "2021-03-08T13:57:20",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=video&#038;p=1000"
+        },
+        "modified": "2022-05-28T00:57:14",
+        "modified_gmt": "2022-05-27T23:57:14",
+        "slug": "ganglio-sentinela-com-verde-de-indocianina-no-cancro-do-endometrio",
+        "status": "publish",
+        "type": "video",
+        "link": "https://spginecologia.pt/video/1000/",
+        "title": {
+            "rendered": "Gânglio Sentinela com Verde de Indocianina no Cancro do Endométrio"
+        },
+        "author": 1,
+        "featured_media": 1001,
+        "comment_status": "open",
+        "ping_status": "closed",
+        "template": "",
+        "categories": [
+            72,
+            73,
+            74
+        ],
+        "class_list": [
+            "post-1000",
+            "video",
+            "type-video",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry",
+            "category-cancro-do-endometrio",
+            "category-ganglio-sentinela",
+            "category-verde-de-indocianina"
+        ],
+        "acf": {
+            "category_select_mode": "Search",
+            "post_category_search": [
+                72,
+                73,
+                74
+            ],
+            "post_category_select": [
+                72,
+                73,
+                74
+            ],
+            "video_file": 1004,
+            "video_file_length": "7:57",
+            "video_featured": false,
+            "video_declaration_signed": 1002,
+            "video_rgpd_confirmation": true,
+            "video_authors": "Cláudia Andrade; Ana Rita Rolha; Teresa Rebelo; Ana Sofia Custódio; Olga Caramelo; Isabel Henriques; Cristina Frutuoso; Fernanda Águas",
+            "video_section": "ginecologia_oncologica",
+            "video_introduction": "A técnica do gânglio sentinela é uma técnica amplamente conhecida e difundida em cancros ginecológicos e não ginecológicos. No cancro do endométrio, evidências científicas recentes demonstram a sua utilidade e eficácia na substituição da realização de linfadenectomias pélvicas em casos selecionados. A utilização do verde de indocianina, com a ajuda de uma fonte de luz específica, veio melhorar a taxa de detecção bilateral do gânglio, com menor risco de efeitos secundários, suportando cada vez mais o uso de gânglio sentinela no cancro do endométrio.",
+            "video_description": "<strong>Autores </strong><strong>(por números)\r\n</strong>1. Cláudia Andrade (1)\r\n2. Ana Rita Rolha (1)\r\n3. Teresa Rebelo (1)\r\n4. Ana Sofia Custódio (1)\r\n5. Olga Caramelo (1)\r\n6. Isabel Henriques (1)\r\n7. Cristina Frutuoso (1)\r\n8. Fernanda Águas (1)\r\n\r\n<strong>Afiliações (por números)\r\n</strong>(1) Serviço de Ginecologia, Centro Hospitalar Universitário de Coimbra, Coimbra\r\n\r\n<strong>Objetivo</strong>\r\nDemonstração da técnica cirúrgica da pesquisa dos gânglios sentinelas no cancro do endométrio com verde de indocianina.\r\n\r\n<strong>Material e Métodos</strong>\r\nVídeo demonstrativo da técnica cirúrgica do gânglio sentinela com verde de indocianina por laparoscopia, em doentes do Serviço de Ginecologia - Centro Hospitalar Universitário de Coimbra, com adenocarcionoma do endométrio tipo endometrióide. Explicação das vias de disseminação linfática no cancro do endométrio.\r\n\r\n<strong>Resultado e Conclusões</strong>\r\nA possibilidade de realização de gânglio sentinela no cancro do endométrio permite uma redução significativa na morbilidade destas doentes, que na maioria dos casos estão associadas a idades avançadas, obesidade e síndrome metabólico.\r\n\r\nO uso do gânglio sentinela no cancro do endométrio está recomendado apenas em protocolos de estudo, carecendo ainda de estudos prospectivos randomizados para sua validação. No entanto, este parece ser uma técnica promissora e bastante útil no cancro do endométrio e é já recomendado pelas principais guidelines internacionais em casos selecionados, de acordo com um protocolo bem definido."
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video/1000"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/video"
+                }
+            ],
+            "author": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/users/1"
+                }
+            ],
+            "replies": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/comments?post=1000"
+                }
+            ],
+            "acf:term": [
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/74"
+                },
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/73"
+                },
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/72"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/1001"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=1000"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=1000"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 993,
+        "date": "2021-02-24T11:20:20",
+        "date_gmt": "2021-02-24T11:20:20",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=video&#038;p=993"
+        },
+        "modified": "2021-09-01T13:27:17",
+        "modified_gmt": "2021-09-01T12:27:17",
+        "slug": "gravidez-em-utero-rudimentar-um-caso-de-sucesso",
+        "status": "publish",
+        "type": "video",
+        "link": "https://spginecologia.pt/video/993/",
+        "title": {
+            "rendered": "Gravidez em útero rudimentar: um caso de sucesso"
+        },
+        "author": 1,
+        "featured_media": 997,
+        "comment_status": "open",
+        "ping_status": "closed",
+        "template": "",
+        "categories": [
+            69,
+            70,
+            71
+        ],
+        "class_list": [
+            "post-993",
+            "video",
+            "type-video",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry",
+            "category-anomalia-mulleriana",
+            "category-gravidez-ectopica",
+            "category-utero-rudimentar"
+        ],
+        "acf": {
+            "category_select_mode": "Search",
+            "post_category_search": [
+                69,
+                70,
+                71
+            ],
+            "post_category_select": [
+                69,
+                70,
+                71
+            ],
+            "video_file": 998,
+            "video_file_length": "6:20",
+            "video_featured": false,
+            "video_declaration_signed": 995,
+            "video_rgpd_confirmation": true,
+            "video_authors": "Ana Raquel Neves; Ângela Rodrigues; Fabiane Neves; Manuel Fonseca; Maria Geraldina Castro; Miguel Branco; Fernanda Geraldes; Fernanda Águas",
+            "video_section": "geral",
+            "video_introduction": "A gravidez em útero rudimentar (GUR) tem uma incidência estimada entre 1:76.000-1:160.000 e associa-se a elevada morbilidade. A maioria dos casos ocorre em cavidades não comunicantes, por migração transperitoneal dos gâmetas. O seu diagnóstico na avaliação ecográfica de rotina é difícil, ocorrendo, frequentemente, após rotura da cavidade gravídica, com uma mortalidade materna estimada de 0,5%.",
+            "video_description": "<strong>Autores</strong>\r\n1. Ana Raquel Neves (1,2)\r\n2. Ângela Rodrigues (3,4)\r\n3. Fabiane Neves (5)\r\n4. Manuel Fonseca (3,4)\r\n5. Maria Geraldina Castro (3)\r\n6. Miguel Branco (4)\r\n7. Fernanda Geraldes (3)\r\n8. Fernanda Águas (3)\r\n\r\n<strong>Afiliações</strong>\r\n(1) Serviço de Medicina da Reprodução, Hospital Universitário Dexeus, Barcelona, Espanha\r\n(2) Universidade Autónoma de Barcelona, Barcelona, Espanha\r\n(3) Serviço de Ginecologia, Centro Hospitalar e Universitário de Coimbra, Coimbra, Portugal\r\n(4) Serviço de Obstetrícia B, Centro Hospitalar e Universitário de Coimbra, Coimbra Portugal\r\n(5) Serviço de Ginecologia e Obstetrícia, Centro Hospitalar de Leiria, Leiria, Portugal\r\n\r\n<strong>Objectivo</strong>\r\nApresentação de um caso clínico de GUR.\r\n\r\n<strong>Material e métodos</strong>\r\nConsulta do processo clínico informático com recurso ao sistema SCLINICO e das videogravações cirúrgicas.\r\n\r\n<strong>Resultados</strong>\r\nMulher de 34 anos, G4P1, assintomática, enviada ao Serviço de Urgência por suspeita ecográfica de gravidez tubar direita apresentando embrião único, viável, com comprimento crânio-caudal compatível com gestação de 6 semanas. Realizada laparoscopia diagnóstica que revelou ausência de alterações anexiais e presença de hemi-útero esquerdo, normodimensionado, de coloração normal, e cavidade rudimentar à direita, de menores dimensões e aspecto inturgescido, compatível com cavidade gravídica. Os achados laparoscópicos permitiram efetuar o diagnóstico de gravidez em útero rudimentar em contexto de malformação uterina U4a (ESHRE/ESGE). A reavaliação com ecografia 3D e por RMN confirmou o diagnóstico de anomalia U4aC0V0 (ESHRE/ESGE), com cavidades não comunicantes e GUR.  Efectuado tratamento médico com metotrexato intra-sacular (sob controlo ecográfico, por via vaginal) e intramuscular, em dose única, e monitorização seriada ecográfica e analítica. Realizada histerectomia laparoscópica do útero rudimentar e salpingectomia homolateral sem intercorrências.\r\n\r\n<strong>Conclusão</strong>\r\nGUR é um evento raro e que, frequentemente, se apresenta com complicações graves. No entanto, 40% dos casos são assintomáticos, sobretudo quando diagnosticados no 1º trimestre.  Um diagnóstico precoce permite o planeamento da terapêutica e a resolução antes da rotura uterina. A sensibilidade da ecografia no diagnóstico do útero rudimentar é de 33% e deve ser complementada pela RMN, que permite uma melhor avaliação da comunicação das cavidades. O tratamento de escolha é a histerectomia da cavidade rudimentar e a via laparoscópica deve ser a preferencial nos casos de diagnóstico precoce. A terapêutica com metotrexato pré-cirúrgica permite a redução da massa gravídica, diminuindo os riscos cirúrgicos e facilitando o procedimento."
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video/993"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/video"
+                }
+            ],
+            "author": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/users/1"
+                }
+            ],
+            "replies": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/comments?post=993"
+                }
+            ],
+            "acf:term": [
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/71"
+                },
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/70"
+                },
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/69"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/997"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=993"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=993"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 991,
+        "date": "2021-02-24T11:18:22",
+        "date_gmt": "2021-02-24T11:18:22",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=video&#038;p=991"
+        },
+        "modified": "2021-11-26T12:41:17",
+        "modified_gmt": "2021-11-26T12:41:17",
+        "slug": "endometriose-do-ape%cc%82ndice-iliocecal-abordagem-laparoscopica",
+        "status": "publish",
+        "type": "video",
+        "link": "https://spginecologia.pt/video/991/",
+        "title": {
+            "rendered": "Endometriose Do Apêndice Iliocecal: Abordagem Laparoscópica"
+        },
+        "author": 150,
+        "featured_media": 996,
+        "comment_status": "open",
+        "ping_status": "closed",
+        "template": "",
+        "categories": [
+            67,
+            8,
+            68
+        ],
+        "class_list": [
+            "post-991",
+            "video",
+            "type-video",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry",
+            "category-apendicectomia",
+            "category-endometriose",
+            "category-laparoscopia"
+        ],
+        "acf": {
+            "category_select_mode": "Search",
+            "post_category_search": [
+                67,
+                8,
+                68
+            ],
+            "post_category_select": [
+                8,
+                67,
+                68
+            ],
+            "video_file": 994,
+            "video_file_length": "4:14",
+            "video_featured": false,
+            "video_declaration_signed": 992,
+            "video_rgpd_confirmation": true,
+            "video_authors": "Rafael Brás; Helena Veloso; Maria Lúcia Moleiro; Mariana Coroado; Andrés Vigueres; Hélder Ferreira; Alexandre Morgado",
+            "video_section": "geral",
+            "video_introduction": "Endometriose é uma entidade definida por ectopia de estroma e glândulas endometriais. Trata-se de uma doença benigna, estrogénio-dependente, inflamatória que pode ter sintomas severos e sequelas clinicas importantes. Os sintomas dependem em parte do local em que a endometriose se desenvolve. De uma forma geral os locais mais comuns são os ovários, fundo de saco anterior e posterior e ligamentos útero-sagrados. Alguns locais menos frequentemente envolvidos são a vagina, septo retovaginal, colon, bexiga, ureter e apêndice iliocecal. Existem também casos raros documentados de endometriose extrapélvica.",
+            "video_description": "<strong>Autores</strong>\r\n1. Rafael Brás (1)\r\n2. Helena Veloso (1)\r\n3. Maria Lúcia Moleiro (1)\r\n4. Mariana Coroado (1)\r\n5. Andrés Vigueres (1)\r\n6. Hélder Ferreira (1)\r\n7. Alexandre Morgado (1)\r\n\r\n<strong>Afiliação</strong>\r\n(1) Centro Materno Infantil do Norte - Centro Hospitalar Universitário do Porto\r\n\r\n<strong>Objetivos</strong>\r\nApresentação de video com a abordagem cirúrgica de endometriose envolvendo o apêndice iliocecal.\r\n\r\n<strong>Material e Métodos</strong>\r\nArmazenamento e tratamento de imagens de video do procedimento cirúrgico. Pesquisa de literatura no PubMed utilizando os termos “endometriosis” e “appendix“.\r\n\r\n<strong>Resultados</strong>\r\nApresentamos um caso de uma doente com 38 anos, nuligesta, saudável que foi referenciada a nosso centro com clínica de dismenorreia, dispareunia e disquezia cíclica com cerca de um ano e meio de evolução. Ao exame fisico apresentava apenas ligeiro desconforto na palpação profunda da fossa ilíaca direita, sendo que nos exames de imagem realizados não havia referência a envolvimento do apêndice iliocecal por endometriose profunda. A doente foi proposta para tratamento cirúrgico/laparoscopia exploradora, constatando-se endometriose profunda envolvendo o apêndice iliocecal. Foi realizada apendicectomia laparoscópica com utilização de duplo “endoloop”. Não foram relatadas complicações no intra ou pós operatório.\r\n\r\n<strong>Conclusão</strong>\r\nA avaliação sistemática da fossa ilíaca direita durante uma cirurgia de endometriose pélvica é crucial para exclusão de envolvimento endometriótico do apêndice iliocecal. A apendicectomia laparoscópica com utilização de duplo endoloop constitui uma técnica simples, segura e eficaz no tratamento e endometriose com envolvimento do apêndice iliocecal."
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video/991"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/video"
+                }
+            ],
+            "author": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/users/150"
+                }
+            ],
+            "replies": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/comments?post=991"
+                }
+            ],
+            "acf:term": [
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/68"
+                },
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/8"
+                },
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/67"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/996"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=991"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=991"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 986,
+        "date": "2021-02-19T23:18:57",
+        "date_gmt": "2021-02-19T23:18:57",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=video&#038;p=986"
+        },
+        "modified": "2022-07-26T23:31:30",
+        "modified_gmt": "2022-07-26T22:31:30",
+        "slug": "sobre-um-caso-de-lesao-vesical-em-histerectomia-laparoscopica-quais-os-cuidados-com-a-introducao-dos-trocares",
+        "status": "publish",
+        "type": "video",
+        "link": "https://spginecologia.pt/video/986/",
+        "title": {
+            "rendered": "Sobre um caso de lesão vesical em histerectomia laparoscópica: quais os cuidados com a introdução dos trocares?"
+        },
+        "author": 1,
+        "featured_media": 989,
+        "comment_status": "open",
+        "ping_status": "closed",
+        "template": "",
+        "categories": [
+            95,
+            29
+        ],
+        "class_list": [
+            "post-986",
+            "video",
+            "type-video",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry",
+            "category-lesao-iatrogenica-vesical",
+            "category-sutura-vesical-laparoscopica"
+        ],
+        "acf": {
+            "category_select_mode": "Search",
+            "post_category_search": [
+                29,
+                95
+            ],
+            "post_category_select": [
+                29,
+                95
+            ],
+            "video_file": 987,
+            "video_file_length": "6:44",
+            "video_featured": false,
+            "video_declaration_signed": 988,
+            "video_rgpd_confirmation": true,
+            "video_authors": "Inês Sá; Patrícia Alves; Cristina Alves; Ana Moreira; Miguel Brito",
+            "video_section": "endoscopia_ginecologica",
+            "video_introduction": "A histerectomia total abdominal por via laparoscópica tornou-se um procedimento cirúrgico cada vez mais comum, mas não isento de riscos. A bibliografia reporta a lesão vesical como o tipo de lesão iatrogénica mais comum relacionada com a histerectomia laparoscópica, com uma incidência entre 0,02-8,3%. A lesão vesical pode ocorrer aquando da dissecção da bexiga durante a técnica cirúrgica, ou durante a inserção dos trocares abdominais, sobretudo o trocar supra-púbico. Apenas 9,2% das lesões vesicais não são diagnosticadas intra-operatoriamente.",
+            "video_description": "Mulher de 66 anos, com um parto por cesariana, com cicatriz mediana infra-umbilical, aos 26 anos de idade. Proposta para histerectomia total e anexectomia bilateral laparoscópica, por quisto anexial simples com 9cm e pólipo endometrial a condicionar hemorragia uterina anómala. A cirurgia foi realizada recorrendo a manipulação uterina com manipulador de Clermont-ferrand e à colocação de 4 trocares abdominais: 2 trocares de 5mm em cada fossa ilíaca e 2 trocares de 12mm, um umbilical e outro colocado a 60mm da porta umbilical. Após o encerramento da cúpula vaginal, foi instilado azul de metileno através da sonda vesical, para exclusão de lesão iatrogénica vesical. Foi visualizada solução de continuidade na parede vesical a nível fúndico, através da perda de azul de metileno para a cavidade pélvica. À inspecção, a equipa cirúrgica concluiu tratar-se de uma laceração realizada aquando da inserção do trocar supra-púbico, devido à presença de aderências entre a parede vesical e o ligamento mediano. O trocar supra-púbico impediu a saída de gás para o saco colector, atrasando o diagnóstico da lesão iatrogénica. A laceração vesical foi corrigida através de pontos intra-corporais. A doente manteve-se algaliada durante 2 semanas. Actualmente, encontra-se sem queixas ginecológicas ou urinárias.\r\n\r\nO caso apresentado realça a importância da colocação dos trocares abdominais na cirurgia laparoscópica. Embora descrita, a lesão vesical com a introdução dos trocares é muito menos frequente do que a que ocorre na dissecção entre a bexiga e o colo uterino. Este risco está aumentado em distorções da anatomia pélvica. De forma a diminuir a probabilidade de lesões iatrogénicas vesicais aquando da introdução do trocar supra-púbico, as sociedades internacionais recomendam a introdução dos mesmos sob visualização, bem com a cateterização vesical prévia à cirurgia.\r\n\r\n<strong>Afiliações</strong>\r\n(1) Serviço de Ginecologia e Obstetrícia, Centro Hospitalar de Trás-os-Montes e Alto Douro, Vila Real\r\n(2) Ginecologia e Obstetrícia, Hospital CUF Viseu"
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video/986"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/video"
+                }
+            ],
+            "author": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/users/1"
+                }
+            ],
+            "replies": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/comments?post=986"
+                }
+            ],
+            "acf:term": [
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/95"
+                },
+                {
+                    "embeddable": true,
+                    "taxonomy": "category",
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/29"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/989"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=986"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=986"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    }
+]

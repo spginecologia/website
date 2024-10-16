@@ -1,0 +1,8 @@
+.editor-container{
+    height: 300px;
+    overflow-y: auto;
+    background-color: var(--theme-input-bg);
+    border: 1px solid var(--theme-elevation-150);
+    box-shadow: 0 2px 2px -1px #0000001a;
+    padding: 0 10px;
+}

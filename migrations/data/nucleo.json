@@ -1,0 +1,885 @@
+[
+    {
+        "id": 339,
+        "date": "2021-07-20T01:10:55",
+        "date_gmt": "2021-07-20T00:10:55",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=nucleo&#038;p=339"
+        },
+        "modified": "2021-08-27T02:00:57",
+        "modified_gmt": "2021-08-27T01:00:57",
+        "slug": "medicina-sexual",
+        "status": "publish",
+        "type": "nucleo",
+        "link": "https://spginecologia.pt/nucleo/medicina-sexual/",
+        "title": {
+            "rendered": "Medicina Sexual"
+        },
+        "featured_media": 138,
+        "template": "",
+        "class_list": [
+            "post-339",
+            "nucleo",
+            "type-nucleo",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry"
+        ],
+        "acf": {
+            "seccao_mission": "Viver a sexualidade de forma plena, segura e satisfatória",
+            "seccao_subheader_1": {
+                "seccao_subheader_1_title": "O nosso projeto",
+                "seccao_subheader_1_text": "O Núcleo de Medicina Sexual é composto por elementos com interesse nas áreas relacionadas com a sexualidade feminina e dedica-se aos temas relacionados com as disfunções sexuais femininas e suas implicações no bem-estar da mulher.\r\n\r\nA medicina sexual, sobretudo a feminina, foi durante muitos anos objecto de outras especialidades/áreas, nomeadamente da psiquiatria e da psicologia que por vezes atribuíram estigma à mulher com disfunção sexual. A busca por uma formação básica nesta área justifica-se pela proximidade do ginecologista como profissional de saúde responsável pelo bem-estar dos orgãos sexuais femininos e, muitas vezes, o primeiro a ser abordado na ocorrência de algum tipo de disfunção sexual."
+            },
+            "seccao_subheader_2": {
+                "seccao_subheader_2_title": "A nossa acção",
+                "seccao_subheader_2_text": "Entre as nossas acções destacam-se a organização de cursos, palestras e mesas redondas integradas nos eventos científicos da SPG; e palestras a adolescentes no âmbito da Educação Sexual."
+            },
+            "seccao_membros": [
+                {
+                    "seccao_membros_picture": 896,
+                    "seccao_membros_name": "Dr.ª Carla Rodrigues",
+                    "seccao_membros_position": "Coordenadora",
+                    "seccao_membros_location": "Coimbra"
+                },
+                {
+                    "seccao_membros_picture": 897,
+                    "seccao_membros_name": "Dr.ª Ana Rosa Costa",
+                    "seccao_membros_position": "",
+                    "seccao_membros_location": "Porto"
+                },
+                {
+                    "seccao_membros_picture": 892,
+                    "seccao_membros_name": "Dr.ª Joana Lima-silva",
+                    "seccao_membros_position": "",
+                    "seccao_membros_location": "Porto"
+                }
+            ],
+            "seccao_useful_links": [
+                {
+                    "seccao_useful_links_title": "Sociedade Portuguesa de Sexologia Clínica",
+                    "seccao_useful_links_url": "https://spsc.pt/"
+                },
+                {
+                    "seccao_useful_links_title": "European Federation of Sexology",
+                    "seccao_useful_links_url": "http://www.europeansexology.com/"
+                },
+                {
+                    "seccao_useful_links_title": "Word Association for Sexual Health",
+                    "seccao_useful_links_url": "https://worldsexualhealth.net/"
+                }
+            ],
+            "seccao_buttons": null,
+            "seccao_recommended_articles": null,
+            "seccao_workshops": null,
+            "seccao_contacts": null,
+            "seccao_content_types": {
+                "seccao_content_types_useful_links": true,
+                "seccao_content_types_recommended_articles": false,
+                "seccao_content_types_workshops": false,
+                "seccao_content_types_noticia": false,
+                "seccao_content_types_publicacao": false,
+                "seccao_content_types_curso": false,
+                "seccao_content_types_contacts": false
+            }
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/nucleo/339"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/nucleo"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/nucleo"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/138"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=339"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 338,
+        "date": "2021-07-20T01:10:49",
+        "date_gmt": "2021-07-20T00:10:49",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=nucleo&#038;p=338"
+        },
+        "modified": "2021-08-27T01:57:28",
+        "modified_gmt": "2021-08-27T00:57:28",
+        "slug": "mama",
+        "status": "publish",
+        "type": "nucleo",
+        "link": "https://spginecologia.pt/nucleo/mama/",
+        "title": {
+            "rendered": "Mama"
+        },
+        "featured_media": 137,
+        "template": "",
+        "class_list": [
+            "post-338",
+            "nucleo",
+            "type-nucleo",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry"
+        ],
+        "acf": {
+            "seccao_mission": "Estudo, diagnóstico e tratamento",
+            "seccao_subheader_1": {
+                "seccao_subheader_1_title": "O nosso projeto",
+                "seccao_subheader_1_text": "A patologia mamaria é um tema que sempre preocupou a mulher e o ginecologista.\r\n\r\nO Núcleo de Mama tem como objetivo principal sensibilizar, alertar e atualizar as condutas mais recentes na área da patologia mamária, tanto benigna como maligna.\r\n\r\nAssim, pretende contribuir para a formação e implementação do conhecimento e da melhoria da prática clínica na área da patologia da mama contribuindo assim para a promoção da qualidade de vida e da saúde da Mulher."
+            },
+            "seccao_subheader_2": {
+                "seccao_subheader_2_title": "A nossa acção",
+                "seccao_subheader_2_text": "De forma a cumprir os objetivos as nossas ações incluem:\r\n\r\n– A organização de palestras, e mesas redondas integradas em eventos científicos da SPG e a apresentação de trabalhos em Congressos Nacionais e Internacionais.\r\n\r\n– A organização de cursos e ações de formação dirigidas a internos de especialidade.\r\n\r\n– A divulgação de artigos científicos, normas de orientação clínica nacionais e internacionais assim como recomendação de Links de interesse, nacionais e internacionais.\r\n\r\n– A realização de ações de formação e de apoio a doentes e famílias assim como de ações de esclarecimento ao público."
+            },
+            "seccao_membros": [
+                {
+                    "seccao_membros_picture": 893,
+                    "seccao_membros_name": "Dr.ª Joana Belo",
+                    "seccao_membros_position": "Coordenadora",
+                    "seccao_membros_location": "Coimbra"
+                },
+                {
+                    "seccao_membros_picture": 894,
+                    "seccao_membros_name": "Dr.ª Maria José Rocha",
+                    "seccao_membros_position": "",
+                    "seccao_membros_location": "Braga"
+                },
+                {
+                    "seccao_membros_picture": 895,
+                    "seccao_membros_name": "Dr.ª Maria Lurdes Ramalho",
+                    "seccao_membros_position": "",
+                    "seccao_membros_location": "Barreiro"
+                }
+            ],
+            "seccao_useful_links": [
+                {
+                    "seccao_useful_links_title": "Sociedade Portuguesa de Senologia",
+                    "seccao_useful_links_url": "https://spsenologia.pt/"
+                },
+                {
+                    "seccao_useful_links_title": "Liga Portuguesa Contra o Cancro",
+                    "seccao_useful_links_url": "https://www.ligacontracancro.pt/"
+                },
+                {
+                    "seccao_useful_links_title": "American Society of Clinical Oncology",
+                    "seccao_useful_links_url": "https://www.asco.org/"
+                }
+            ],
+            "seccao_buttons": null,
+            "seccao_recommended_articles": null,
+            "seccao_workshops": null,
+            "seccao_contacts": null,
+            "seccao_content_types": {
+                "seccao_content_types_useful_links": true,
+                "seccao_content_types_recommended_articles": false,
+                "seccao_content_types_workshops": false,
+                "seccao_content_types_noticia": false,
+                "seccao_content_types_publicacao": false,
+                "seccao_content_types_curso": false,
+                "seccao_content_types_contacts": false
+            }
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/nucleo/338"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/nucleo"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/nucleo"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/137"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=338"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 337,
+        "date": "2021-07-20T01:10:44",
+        "date_gmt": "2021-07-20T00:10:44",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=nucleo&#038;p=337"
+        },
+        "modified": "2024-06-10T11:23:15",
+        "modified_gmt": "2024-06-10T10:23:15",
+        "slug": "ginecologia-psicossomatica",
+        "status": "publish",
+        "type": "nucleo",
+        "link": "https://spginecologia.pt/nucleo/ginecologia-psicossomatica/",
+        "title": {
+            "rendered": "Ginecologia Psicossomática"
+        },
+        "featured_media": 136,
+        "template": "",
+        "class_list": [
+            "post-337",
+            "nucleo",
+            "type-nucleo",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry"
+        ],
+        "acf": {
+            "seccao_mission": "Exercer e entender o acto clínico com compreensão e empatia",
+            "seccao_subheader_1": {
+                "seccao_subheader_1_title": "O nosso projeto",
+                "seccao_subheader_1_text": "Não excluindo a abordagem de áreas que se poderão já considerar clássicas nesta matéria, pretende-se dirigir particular esforço para duas vias específicas:\r\n\r\n– a da objectivação de respostas sintomáticas e sua sistematização, recorrendo à criação e ao desenvolvimento de e quipamentos e metodologias adequados;\r\n\r\n– a do enquadramento em sede da prática médica curativa e preventive de estratégies de promoção de bem-estar, não esquecendo quem tem de actuar, ou seja, os profissionais, os ginecologistas.\r\n\r\nCom a divulgação de temas menos percebidos espera-se angariar novos interessados e criar sinergias de estudo e de trabalho."
+            },
+            "seccao_subheader_2": {
+                "seccao_subheader_2_title": "A nossa acção",
+                "seccao_subheader_2_text": "Para além de trabalhos de pesquisa, fundamentalmente baseados em inquéritos de opinião, sobre temas psicossomáticos estão previstas sessões científicas, periódicas, dentro das reuniões da SPG, e mesmo eventuais actividades práticas temáticas, algumas das quais orientadas para grupos restrictos.\r\n\r\nProcurar-se-ão manter e desenvolver, mesmo que sem formalismos, as relações com organizações e instituições nacionais e estrangeiras afins.\r\nAos membros da SPG solicita-se a melhor das colaborações dando a resposta às solicitações que lhes formos encaminhando, e que desse já muito se agradece.\r\n\r\nColegas que pretendam apresentar planos de trabalho ou projectos de pesquisa que envolvam o Núcleo podem e devem abordar qualquer um dos elementos indicados na secção de contactos, preferencialmente por correio electrónico para facilitar a permute de conteúdos."
+            },
+            "seccao_membros": [
+                {
+                    "seccao_membros_picture": 834,
+                    "seccao_membros_name": "Prof. Doutor José Martinez De Oliveira",
+                    "seccao_membros_position": "Coordenador",
+                    "seccao_membros_location": "Covilhã"
+                },
+                {
+                    "seccao_membros_picture": 834,
+                    "seccao_membros_name": "Dr.ª Tereza Paula",
+                    "seccao_membros_position": "",
+                    "seccao_membros_location": "Lisboa"
+                },
+                {
+                    "seccao_membros_picture": 892,
+                    "seccao_membros_name": "Dr.ª Joana Lima-silva",
+                    "seccao_membros_position": "",
+                    "seccao_membros_location": "Porto"
+                }
+            ],
+            "seccao_useful_links": [
+                {
+                    "seccao_useful_links_title": "MOMENTOS DA PSICOSSOMÁTICA 01 (EPA, CAPAI)",
+                    "seccao_useful_links_url": "https://spginecologia.pt/wp-content/uploads/2024/06/mPS-01-02-Janeiro-2024.pdf"
+                },
+                {
+                    "seccao_useful_links_title": "MOMENTOS DA PSICOSSOMÁTICA 02 (Postura, AF)",
+                    "seccao_useful_links_url": "https://spginecologia.pt/wp-content/uploads/2024/06/mPS-03-04-Marco-2024.pdf"
+                }
+            ],
+            "seccao_buttons": null,
+            "seccao_recommended_articles": null,
+            "seccao_workshops": null,
+            "seccao_contacts": null,
+            "seccao_content_types": {
+                "seccao_content_types_useful_links": true,
+                "seccao_content_types_recommended_articles": false,
+                "seccao_content_types_workshops": false,
+                "seccao_content_types_noticia": false,
+                "seccao_content_types_publicacao": false,
+                "seccao_content_types_curso": false,
+                "seccao_content_types_contacts": false
+            }
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/nucleo/337"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/nucleo"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/nucleo"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/136"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=337"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 336,
+        "date": "2021-07-20T01:10:38",
+        "date_gmt": "2021-07-20T00:10:38",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=nucleo&#038;p=336"
+        },
+        "modified": "2024-01-12T01:13:18",
+        "modified_gmt": "2024-01-12T01:13:18",
+        "slug": "ginecologia-da-infancia-e-da-adolescencia",
+        "status": "publish",
+        "type": "nucleo",
+        "link": "https://spginecologia.pt/nucleo/ginecologia-da-infancia-e-da-adolescencia/",
+        "title": {
+            "rendered": "Ginecologia da Infância e da Adolescência"
+        },
+        "featured_media": 135,
+        "template": "",
+        "class_list": [
+            "post-336",
+            "nucleo",
+            "type-nucleo",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry"
+        ],
+        "acf": {
+            "seccao_mission": "Acompanhar as descobertas e os desafios",
+            "seccao_subheader_1": {
+                "seccao_subheader_1_title": "O nosso projeto",
+                "seccao_subheader_1_text": "O Núcleo de Ginecologia da Infância e da Adolescência (NGIA) tem como propósito desenvolver programas formativos relativos à prática clínica da Ginecologia nesta faixa etária e fomentar o debate dos profissionais neste âmbito.\r\n\r\nOs elementos que integram o Núcleo privilegiam a abordagem interdisciplinar, promotora da comunicação e articulação com outras especialidades que lidam com crianças e adolescentes, designadamente Pediatria, Pedopsiquiatria e Medicina Geral e Familiar, bem como com a Psicologia e o Serviço social."
+            },
+            "seccao_subheader_2": {
+                "seccao_subheader_2_title": "A nossa acção",
+                "seccao_subheader_2_text": "A sua atividade tem incidido na organização e participação de reuniões científicas, com palestrantes nacionais e internacionais com sessões relativas à Ginecologia da Infância e Adolescência, bem como na construção e divulgação de um blog pioneiro e interativo sobre Saúde Sexual e Reprodutiva, destinado a jovens de todo o país."
+            },
+            "seccao_membros": [
+                {
+                    "seccao_membros_picture": 875,
+                    "seccao_membros_name": "Dr.ª Filomena Sousa",
+                    "seccao_membros_position": "Coordenadora",
+                    "seccao_membros_location": "Lisboa"
+                },
+                {
+                    "seccao_membros_picture": 876,
+                    "seccao_membros_name": "Dr.ª Helena Solheiro",
+                    "seccao_membros_position": "Coordenadora",
+                    "seccao_membros_location": "Viseu"
+                },
+                {
+                    "seccao_membros_picture": 874,
+                    "seccao_membros_name": "Dr.ª Naiegal Mendes Pereira",
+                    "seccao_membros_position": "Tesoureira",
+                    "seccao_membros_location": "Lisboa"
+                }
+            ],
+            "seccao_useful_links": [
+                {
+                    "seccao_useful_links_title": "Informa Teen",
+                    "seccao_useful_links_url": "http://www.informa-teen.blogspot.com/"
+                }
+            ],
+            "seccao_buttons": [
+                {
+                    "seccao_buttons_title": "Sobre o NGIA",
+                    "seccao_buttons_type": "Ficheiro",
+                    "seccao_buttons_url": "",
+                    "seccao_buttons_file": 877
+                },
+                {
+                    "seccao_buttons_title": "Newsletter 2018",
+                    "seccao_buttons_type": "Ficheiro",
+                    "seccao_buttons_url": "",
+                    "seccao_buttons_file": 878
+                },
+                {
+                    "seccao_buttons_title": "Newsletter 2020",
+                    "seccao_buttons_type": "Ficheiro",
+                    "seccao_buttons_url": "",
+                    "seccao_buttons_file": 879
+                }
+            ],
+            "seccao_recommended_articles": null,
+            "seccao_workshops": [
+                {
+                    "seccao_workshops_title": "Workshop: Saúde reprodutiva das adolescentes",
+                    "seccao_workshops_type": "Ficheiro",
+                    "seccao_workshops_url": "",
+                    "seccao_workshops_file": 891
+                }
+            ],
+            "seccao_contacts": null,
+            "seccao_content_types": {
+                "seccao_content_types_useful_links": true,
+                "seccao_content_types_recommended_articles": false,
+                "seccao_content_types_workshops": true,
+                "seccao_content_types_noticia": true,
+                "seccao_content_types_publicacao": false,
+                "seccao_content_types_curso": true,
+                "seccao_content_types_contacts": false
+            }
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/nucleo/336"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/nucleo"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/nucleo"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/135"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=336"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 335,
+        "date": "2021-07-20T01:10:31",
+        "date_gmt": "2021-07-20T00:10:31",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=nucleo&#038;p=335"
+        },
+        "modified": "2021-10-14T18:07:08",
+        "modified_gmt": "2021-10-14T17:07:08",
+        "slug": "estudos-clinicos",
+        "status": "publish",
+        "type": "nucleo",
+        "link": "https://spginecologia.pt/nucleo/estudos-clinicos/",
+        "title": {
+            "rendered": "Estudos Clínicos"
+        },
+        "featured_media": 134,
+        "template": "",
+        "class_list": [
+            "post-335",
+            "nucleo",
+            "type-nucleo",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry"
+        ],
+        "acf": {
+            "seccao_mission": "Promover e facilitar a realização de estudos",
+            "seccao_subheader_1": {
+                "seccao_subheader_1_title": "O nosso projeto",
+                "seccao_subheader_1_text": "O Núcleo de Estudos Clínicos (NEC), foi criado em 2017, com o objetivo de promover e facilitar a realização de estudos de índole nacional. Cumprindo a finalidade estabelecida na sua constituição, foi iniciado, nesse mesmo ano, um projeto de criação de bases de dados digitais para registo e armazenamento de intervenções na área da ginecologia (GinBase). No futuro, para além da recolha e armazenamento da informação, pretende-se constituir um polo de apoio à preparação de estudos científicos, em particular na vertente da análise estatística especializada. Estão neste momento criadas, e ativas, três bases de dados de estudos clínicos: “Redes e Complicações” em Uroginecologia; “Agenesias müllerianas”; “Adesão e resultados da monitorização hepática, em doentes sob acetato de ulipristal”."
+            },
+            "seccao_subheader_2": {
+                "seccao_subheader_2_title": "A nossa acção",
+                "seccao_subheader_2_text": "Participar nestes registos é dar cumprimento às recomendações da Comissão Europeia e do seu Scientific Committee on Emerging and Newly Identified Health Risks (SCENIHR) sobre monitorização da segurança das redes em Uroginecologia. A representatividade dos resultados depende do número de participantes pelo que se apela à colaboração de todos os hospitais, públicos e privados.\r\n\r\nOs colegas interessados em integrar este projeto podem contactar o NEC para o endereço estudosclinicos@spginecologia.pt"
+            },
+            "seccao_membros": [
+                {
+                    "seccao_membros_picture": 870,
+                    "seccao_membros_name": "Dr.ª Fernanda Águas",
+                    "seccao_membros_position": "Coordenadora",
+                    "seccao_membros_location": "Coimbra"
+                },
+                {
+                    "seccao_membros_picture": 869,
+                    "seccao_membros_name": "Prof.ª Dr.ª Cristina Nogueira Da Silva",
+                    "seccao_membros_position": "",
+                    "seccao_membros_location": "Braga"
+                },
+                {
+                    "seccao_membros_picture": 868,
+                    "seccao_membros_name": "Prof.ª Dr.ª Maria João Carvalho",
+                    "seccao_membros_position": "",
+                    "seccao_membros_location": "Coimbra"
+                }
+            ],
+            "seccao_useful_links": null,
+            "seccao_buttons": [
+                {
+                    "seccao_buttons_title": "Regulamento",
+                    "seccao_buttons_type": "Ficheiro",
+                    "seccao_buttons_url": "",
+                    "seccao_buttons_file": 871
+                },
+                {
+                    "seccao_buttons_title": "Relatório 2019",
+                    "seccao_buttons_type": "Ficheiro",
+                    "seccao_buttons_url": "",
+                    "seccao_buttons_file": 872
+                },
+                {
+                    "seccao_buttons_title": "Formulário para Proposta de Projecto",
+                    "seccao_buttons_type": "Ficheiro",
+                    "seccao_buttons_url": "",
+                    "seccao_buttons_file": 873
+                }
+            ],
+            "seccao_recommended_articles": null,
+            "seccao_workshops": null,
+            "seccao_contacts": [
+                {
+                    "seccao_contacts_type": "Email",
+                    "seccao_contacts_email": "estudosclinicos@spginecologia.pt",
+                    "seccao_contacts_phone": "eruygfdskfus"
+                }
+            ],
+            "seccao_content_types": {
+                "seccao_content_types_useful_links": true,
+                "seccao_content_types_recommended_articles": false,
+                "seccao_content_types_workshops": false,
+                "seccao_content_types_noticia": false,
+                "seccao_content_types_publicacao": false,
+                "seccao_content_types_curso": false,
+                "seccao_content_types_contacts": true
+            }
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/nucleo/335"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/nucleo"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/nucleo"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/134"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=335"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 334,
+        "date": "2021-07-20T01:10:24",
+        "date_gmt": "2021-07-20T00:10:24",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=nucleo&#038;p=334"
+        },
+        "modified": "2023-05-02T15:53:58",
+        "modified_gmt": "2023-05-02T14:53:58",
+        "slug": "ecografia-ginecologica",
+        "status": "publish",
+        "type": "nucleo",
+        "link": "https://spginecologia.pt/nucleo/ecografia-ginecologica/",
+        "title": {
+            "rendered": "Ecografia Ginecológica"
+        },
+        "featured_media": 133,
+        "template": "",
+        "class_list": [
+            "post-334",
+            "nucleo",
+            "type-nucleo",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry"
+        ],
+        "acf": {
+            "seccao_mission": "Um exame que não apresenta quaisquer riscos ou complicações",
+            "seccao_subheader_1": {
+                "seccao_subheader_1_title": "O nosso projeto",
+                "seccao_subheader_1_text": "A criação do Núcleo de Ecografia Ginecológica surge da necessidade de representar e acompanhar a franca evolução e abrangência desta área. Estamos perante uma tecnologia cada vez mais sofisticada, com desenvolvimento de novas técnicas com auxílio ecográfico e evolução do conhecimento científico em diferentes áreas de aplicabilidade da ecografia. A endometriose, as disfunções do pavimento pélvico e a avaliação da doença oncológica ginecológica são alguns dos exemplos."
+            },
+            "seccao_subheader_2": {
+                "seccao_subheader_2_title": "A nossa acção",
+                "seccao_subheader_2_text": "Desenvolver/promover acções de formação nacionais e internacionais (cursos, reuniões e palestras com participação de especialistas internacionais em reuniões da especialidade) sobre ecografia ginecológica. Assim como a divulgação de artigos científicos e a divulgação dos consensos de interesse em ecografia ginecológica."
+            },
+            "seccao_membros": [
+                {
+                    "seccao_membros_picture": 862,
+                    "seccao_membros_name": "Dr.ª Ana Sofia Fernandes",
+                    "seccao_membros_position": "Coordenadora",
+                    "seccao_membros_location": "Porto"
+                },
+                {
+                    "seccao_membros_picture": 848,
+                    "seccao_membros_name": "Dr.ª Maria Geraldina Castro",
+                    "seccao_membros_position": "",
+                    "seccao_membros_location": "Coimbra"
+                },
+                {
+                    "seccao_membros_picture": 30838,
+                    "seccao_membros_name": "Prof. Doutor Dusan Djokovic",
+                    "seccao_membros_position": "",
+                    "seccao_membros_location": "Lisboa"
+                }
+            ],
+            "seccao_useful_links": [
+                {
+                    "seccao_useful_links_title": "International Society of Ultrasound in Obstetrics & Gynecology",
+                    "seccao_useful_links_url": "https://www.isuog.org/"
+                }
+            ],
+            "seccao_buttons": null,
+            "seccao_recommended_articles": [
+                {
+                    "seccao_recommended_articles_title": "Systematic approach to sonographic evaluation of the pelvis in women with suspected endometriosis, including terms, definitions and measurements: a consensus opinion from the International Deep Endometriosis Analysis (IDEA) group",
+                    "seccao_recommended_articles_type": "URL",
+                    "seccao_recommended_articles_url": "https://obgyn.onlinelibrary.wiley.com/doi/full/10.1002/uog.15955",
+                    "seccao_recommended_articles_file": null
+                },
+                {
+                    "seccao_recommended_articles_title": "The Thessaloniki ESHRE/ESGE consensus on diagnosis of female genital anomalies",
+                    "seccao_recommended_articles_type": "URL",
+                    "seccao_recommended_articles_url": "https://pubmed.ncbi.nlm.nih.gov/26918000/",
+                    "seccao_recommended_articles_file": null
+                },
+                {
+                    "seccao_recommended_articles_title": "Terms, definitions and measurements to describe sonographic features of myometrium and uterine masses: a consensus opinion from the Morphological Uterus Sonographic Assessment (MUSA) group",
+                    "seccao_recommended_articles_type": "URL",
+                    "seccao_recommended_articles_url": "https://pubmed.ncbi.nlm.nih.gov/25652685/",
+                    "seccao_recommended_articles_file": null
+                },
+                {
+                    "seccao_recommended_articles_title": "FIGO classification system (PALM-COEIN) for causes of abnormal uterine bleeding in nongravid women of reproductive age",
+                    "seccao_recommended_articles_type": "URL",
+                    "seccao_recommended_articles_url": "https://pubmed.ncbi.nlm.nih.gov/21345435/",
+                    "seccao_recommended_articles_file": null
+                },
+                {
+                    "seccao_recommended_articles_title": "Terms, definitions and measurements to describe the sonographic features of the endometrium and intrauterine lesions: a consensus opinion from the International Endometrial Tumor Analysis (IETA) group",
+                    "seccao_recommended_articles_type": "URL",
+                    "seccao_recommended_articles_url": "https://pubmed.ncbi.nlm.nih.gov/20014360/",
+                    "seccao_recommended_articles_file": null
+                }
+            ],
+            "seccao_workshops": null,
+            "seccao_contacts": null,
+            "seccao_content_types": {
+                "seccao_content_types_useful_links": true,
+                "seccao_content_types_recommended_articles": true,
+                "seccao_content_types_workshops": false,
+                "seccao_content_types_noticia": false,
+                "seccao_content_types_publicacao": false,
+                "seccao_content_types_curso": true,
+                "seccao_content_types_contacts": false
+            }
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/nucleo/334"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/nucleo"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/nucleo"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/133"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=334"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 333,
+        "date": "2021-07-20T01:10:17",
+        "date_gmt": "2021-07-20T00:10:17",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=nucleo&#038;p=333"
+        },
+        "modified": "2021-08-27T00:55:27",
+        "modified_gmt": "2021-08-26T23:55:27",
+        "slug": "comunicacao",
+        "status": "publish",
+        "type": "nucleo",
+        "link": "https://spginecologia.pt/nucleo/comunicacao/",
+        "title": {
+            "rendered": "Comunicação"
+        },
+        "featured_media": 132,
+        "template": "",
+        "class_list": [
+            "post-333",
+            "nucleo",
+            "type-nucleo",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry"
+        ],
+        "acf": {
+            "seccao_mission": "Uma comunicação mais próxima e eficaz",
+            "seccao_subheader_1": {
+                "seccao_subheader_1_title": "O nosso projecto",
+                "seccao_subheader_1_text": "O Núcleo de Comunicação da Sociedade Portuguesa de Ginecologia foi criado em 2020 com o intuito de promover uma comunicação mais próxima e eficaz da SPG não só com os seus sócios, mas também com toda a comunidade científica e população em geral.\r\n\r\nO objetivo inicial do Núcleo foi o de acompanhar a renovação visual da SPG e da sua presença no meio digital, assentando o seu trabalho em três pontos principais:\r\n\r\n1) Desenvolvimento de um novo website: mais contemporâneo e interativo, indo de encontro às necessidades dos seus util izadores.\r\n\r\n2) Criação da plataforma digital “Academia SPG”, que reunirá todo o material educativo produzido pela SPG e será também um local de excelência para a partilha de conteúdos produzidos pelos sócios.\r\n\r\n3)Criação e dinamização das redes sociais da SPG: ferramenta essencial na proximidade da Sociedade a toda a comunidade."
+            },
+            "seccao_subheader_2": {
+                "seccao_subheader_2_title": "A nossa acção",
+                "seccao_subheader_2_text": "O Núcleo espera assim impulsionar a participação ativa dos sócios na comunidade “Ginecológica” em Portugal e também ampliar a voz da SPG junto da população geral.\r\n\r\nProcuramos acima de tudo aproximar o acesso à informação da SPG, trazendo o que de mais moderno e produtivo a nova era das tecnologias nos traz."
+            },
+            "seccao_membros": [
+                {
+                    "seccao_membros_picture": 859,
+                    "seccao_membros_name": "Dr. João Cavaco Gomes",
+                    "seccao_membros_position": "Coordenador",
+                    "seccao_membros_location": ""
+                },
+                {
+                    "seccao_membros_picture": 858,
+                    "seccao_membros_name": "Dr.ª Cláudia Andrade",
+                    "seccao_membros_position": "",
+                    "seccao_membros_location": "Coimbra"
+                },
+                {
+                    "seccao_membros_picture": 860,
+                    "seccao_membros_name": "Dr.ª Tânia Ascensão",
+                    "seccao_membros_position": "",
+                    "seccao_membros_location": "Coimbra"
+                }
+            ],
+            "seccao_useful_links": null,
+            "seccao_buttons": null,
+            "seccao_recommended_articles": null,
+            "seccao_workshops": null,
+            "seccao_contacts": null,
+            "seccao_content_types": {
+                "seccao_content_types_useful_links": false,
+                "seccao_content_types_recommended_articles": false,
+                "seccao_content_types_workshops": false,
+                "seccao_content_types_noticia": false,
+                "seccao_content_types_publicacao": false,
+                "seccao_content_types_curso": false,
+                "seccao_content_types_contacts": false
+            }
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/nucleo/333"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/nucleo"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/nucleo"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/132"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=333"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    }
+]

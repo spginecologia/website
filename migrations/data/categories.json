@@ -1,0 +1,4838 @@
+[
+    {
+        "id": 96,
+        "count": 3,
+        "description": "",
+        "link": "https://spginecologia.pt/category/anatomia-pelvica/",
+        "name": "Anatomia Pélvica",
+        "slug": "anatomia-pelvica",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/96"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=96"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=96"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=96"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=96"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=96"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=96"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=96"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=96"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 82,
+        "count": 0,
+        "description": "",
+        "link": "https://spginecologia.pt/category/andropausa/",
+        "name": "Andropausa",
+        "slug": "andropausa",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/82"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=82"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=82"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=82"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=82"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=82"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=82"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=82"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=82"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 57,
+        "count": 1,
+        "description": "",
+        "link": "https://spginecologia.pt/category/anemia/",
+        "name": "Anemia",
+        "slug": "anemia",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/57"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=57"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=57"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=57"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=57"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=57"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=57"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=57"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=57"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 81,
+        "count": 3,
+        "description": "",
+        "link": "https://spginecologia.pt/category/anestesia-histeroscopica/",
+        "name": "Anestesia Histeroscópica",
+        "slug": "anestesia-histeroscopica",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/81"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=81"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=81"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=81"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=81"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=81"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=81"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=81"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=81"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 69,
+        "count": 2,
+        "description": "",
+        "link": "https://spginecologia.pt/category/anomalia-mulleriana/",
+        "name": "Anomalia mülleriana",
+        "slug": "anomalia-mulleriana",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/69"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=69"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=69"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=69"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=69"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=69"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=69"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=69"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=69"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 67,
+        "count": 1,
+        "description": "",
+        "link": "https://spginecologia.pt/category/apendicectomia/",
+        "name": "Apendicectomia",
+        "slug": "apendicectomia",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/67"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=67"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=67"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=67"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=67"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=67"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=67"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=67"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=67"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 76,
+        "count": 1,
+        "description": "",
+        "link": "https://spginecologia.pt/category/apresentacao-clinica/",
+        "name": "Apresentação Clínica",
+        "slug": "apresentacao-clinica",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/76"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=76"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=76"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=76"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=76"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=76"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=76"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=76"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=76"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 91,
+        "count": 1,
+        "description": "",
+        "link": "https://spginecologia.pt/category/canal-de-nuck/",
+        "name": "Canal de Nuck",
+        "slug": "canal-de-nuck",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/91"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=91"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=91"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=91"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=91"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=91"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=91"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=91"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=91"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 90,
+        "count": 1,
+        "description": "",
+        "link": "https://spginecologia.pt/category/canal-inguinal/",
+        "name": "canal inguinal",
+        "slug": "canal-inguinal",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/90"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=90"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=90"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=90"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=90"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=90"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=90"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=90"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=90"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 63,
+        "count": 4,
+        "description": "",
+        "link": "https://spginecologia.pt/category/cancro/",
+        "name": "Cancro",
+        "slug": "cancro",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/63"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=63"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=63"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=63"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=63"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=63"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=63"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=63"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=63"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 6,
+        "count": 1,
+        "description": "",
+        "link": "https://spginecologia.pt/category/cancro-da-prostata/",
+        "name": "Cancro da Próstata",
+        "slug": "cancro-da-prostata",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/6"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=6"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=6"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=6"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=6"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=6"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=6"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=6"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=6"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 104,
+        "count": 1,
+        "description": "",
+        "link": "https://spginecologia.pt/category/cancro-do-colo-do-utero/",
+        "name": "Cancro do Colo do Útero",
+        "slug": "cancro-do-colo-do-utero",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/104"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=104"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=104"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=104"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=104"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=104"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=104"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=104"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=104"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 72,
+        "count": 2,
+        "description": "",
+        "link": "https://spginecologia.pt/category/cancro-do-endometrio/",
+        "name": "Cancro do Endométrio",
+        "slug": "cancro-do-endometrio",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/72"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=72"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=72"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=72"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=72"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=72"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=72"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=72"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=72"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 52,
+        "count": 0,
+        "description": "",
+        "link": "https://spginecologia.pt/category/cancro-do-ovario/",
+        "name": "Cancro do Ovário",
+        "slug": "cancro-do-ovario",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/52"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=52"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=52"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=52"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=52"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=52"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=52"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=52"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=52"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 13,
+        "count": 2,
+        "description": "",
+        "link": "https://spginecologia.pt/category/cirurgia-vaginal/",
+        "name": "Cirurgia Vaginal",
+        "slug": "cirurgia-vaginal",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/13"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=13"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=13"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=13"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=13"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=13"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=13"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=13"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=13"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 12,
+        "count": 13,
+        "description": "",
+        "link": "https://spginecologia.pt/category/colposcopia/",
+        "name": "Colposcopia",
+        "slug": "colposcopia",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/12"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=12"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=12"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=12"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=12"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=12"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=12"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=12"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=12"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 50,
+        "count": 15,
+        "description": "",
+        "link": "https://spginecologia.pt/category/congresso/",
+        "name": "Congresso",
+        "slug": "congresso",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/50"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=50"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=50"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=50"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=50"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=50"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=50"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=50"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=50"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 5,
+        "count": 3,
+        "description": "",
+        "link": "https://spginecologia.pt/category/consenso/",
+        "name": "Consenso",
+        "slug": "consenso",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/5"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=5"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=5"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=5"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=5"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=5"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=5"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=5"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=5"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 7,
+        "count": 1,
+        "description": "",
+        "link": "https://spginecologia.pt/category/contracecao/",
+        "name": "Contraceção",
+        "slug": "contracecao",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/7"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=7"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=7"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=7"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=7"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=7"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=7"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=7"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=7"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 10,
+        "count": 2,
+        "description": "",
+        "link": "https://spginecologia.pt/category/covid-19/",
+        "name": "Covid 19",
+        "slug": "covid-19",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/10"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=10"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=10"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=10"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=10"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=10"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=10"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=10"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=10"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 53,
+        "count": 4,
+        "description": "",
+        "link": "https://spginecologia.pt/category/ecografia/",
+        "name": "Ecografia",
+        "slug": "ecografia",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/53"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=53"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=53"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=53"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=53"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=53"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=53"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=53"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=53"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 77,
+        "count": 0,
+        "description": "",
+        "link": "https://spginecologia.pt/category/emergencia/",
+        "name": "Emergência",
+        "slug": "emergencia",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/77"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=77"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=77"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=77"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=77"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=77"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=77"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=77"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=77"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 8,
+        "count": 13,
+        "description": "",
+        "link": "https://spginecologia.pt/category/endometriose/",
+        "name": "Endometriose",
+        "slug": "endometriose",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/8"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=8"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=8"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=8"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=8"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=8"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=8"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=8"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=8"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 75,
+        "count": 9,
+        "description": "",
+        "link": "https://spginecologia.pt/category/endoscopia-ginecologica/",
+        "name": "Endoscopia Ginecológica",
+        "slug": "endoscopia-ginecologica",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/75"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=75"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=75"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=75"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=75"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=75"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=75"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=75"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=75"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 32,
+        "count": 3,
+        "description": "",
+        "link": "https://spginecologia.pt/category/entrevista/",
+        "name": "Entrevista",
+        "slug": "entrevista",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/32"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=32"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=32"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=32"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=32"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=32"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=32"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=32"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=32"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 64,
+        "count": 1,
+        "description": "",
+        "link": "https://spginecologia.pt/category/eottd/",
+        "name": "EOTTD",
+        "slug": "eottd",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/64"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=64"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=64"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=64"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=64"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=64"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=64"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=64"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=64"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 62,
+        "count": 2,
+        "description": "",
+        "link": "https://spginecologia.pt/category/esge/",
+        "name": "ESGE",
+        "slug": "esge",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/62"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=62"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=62"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=62"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=62"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=62"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=62"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=62"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=62"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 54,
+        "count": 2,
+        "description": "",
+        "link": "https://spginecologia.pt/category/esgo/",
+        "name": "ESGO",
+        "slug": "esgo",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/54"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=54"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=54"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=54"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=54"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=54"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=54"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=54"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=54"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 73,
+        "count": 2,
+        "description": "",
+        "link": "https://spginecologia.pt/category/ganglio-sentinela/",
+        "name": "Gânglio Sentinela",
+        "slug": "ganglio-sentinela",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/73"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=73"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=73"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=73"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=73"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=73"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=73"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=73"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=73"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 19,
+        "count": 11,
+        "description": "",
+        "link": "https://spginecologia.pt/category/ginecologia/",
+        "name": "Ginecologia",
+        "slug": "ginecologia",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/19"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=19"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=19"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=19"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=19"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=19"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=19"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=19"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=19"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 25,
+        "count": 10,
+        "description": "",
+        "link": "https://spginecologia.pt/category/ginecologia-da-infancia-e-da-adolescencia/",
+        "name": "Ginecologia da Infância e da Adolescência",
+        "slug": "ginecologia-da-infancia-e-da-adolescencia",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/25"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=25"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=25"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=25"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=25"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=25"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=25"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=25"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=25"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 24,
+        "count": 11,
+        "description": "",
+        "link": "https://spginecologia.pt/category/ginecologia-oncologica/",
+        "name": "Ginecologia Oncológica",
+        "slug": "ginecologia-oncologica",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/24"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=24"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=24"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=24"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=24"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=24"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=24"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=24"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=24"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 70,
+        "count": 1,
+        "description": "",
+        "link": "https://spginecologia.pt/category/gravidez-ectopica/",
+        "name": "Gravidez Ectópica",
+        "slug": "gravidez-ectopica",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/70"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=70"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=70"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=70"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=70"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=70"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=70"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=70"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=70"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 9,
+        "count": 3,
+        "description": "",
+        "link": "https://spginecologia.pt/category/histerectomia/",
+        "name": "Histerectomia",
+        "slug": "histerectomia",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/9"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=9"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=9"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=9"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=9"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=9"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=9"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=9"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=9"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 26,
+        "count": 0,
+        "description": "",
+        "link": "https://spginecologia.pt/category/histerectomia-laparoscopica/",
+        "name": "Histerectomia Laparoscópica",
+        "slug": "histerectomia-laparoscopica",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/26"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=26"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=26"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=26"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=26"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=26"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=26"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=26"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=26"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 80,
+        "count": 3,
+        "description": "",
+        "link": "https://spginecologia.pt/category/histeroscopia-office/",
+        "name": "Histeroscopia Office",
+        "slug": "histeroscopia-office",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/80"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=80"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=80"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=80"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=80"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=80"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=80"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=80"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=80"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 58,
+        "count": 2,
+        "description": "",
+        "link": "https://spginecologia.pt/category/hpv/",
+        "name": "HPV",
+        "slug": "hpv",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/58"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=58"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=58"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=58"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=58"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=58"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=58"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=58"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=58"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 22,
+        "count": 5,
+        "description": "",
+        "link": "https://spginecologia.pt/category/incontinencia/",
+        "name": "Incontinência",
+        "slug": "incontinencia",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/22"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=22"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=22"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=22"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=22"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=22"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=22"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=22"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=22"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 17,
+        "count": 3,
+        "description": "",
+        "link": "https://spginecologia.pt/category/incontinencia-urinaria-de-esforco/",
+        "name": "Incontinência Urinária de Esforço",
+        "slug": "incontinencia-urinaria-de-esforco",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/17"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=17"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=17"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=17"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=17"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=17"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=17"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=17"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=17"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 106,
+        "count": 1,
+        "description": "",
+        "link": "https://spginecologia.pt/category/infertilidade/",
+        "name": "Infertilidade",
+        "slug": "infertilidade",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/106"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=106"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=106"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=106"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=106"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=106"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=106"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=106"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=106"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 27,
+        "count": 0,
+        "description": "",
+        "link": "https://spginecologia.pt/category/introducao-de-trocares/",
+        "name": "Introdução de Trocares",
+        "slug": "introducao-de-trocares",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/27"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=27"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=27"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=27"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=27"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=27"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=27"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=27"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=27"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 56,
+        "count": 6,
+        "description": "",
+        "link": "https://spginecologia.pt/category/investigacao/",
+        "name": "Investigação",
+        "slug": "investigacao",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/56"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=56"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=56"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=56"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=56"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=56"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=56"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=56"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=56"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 105,
+        "count": 1,
+        "description": "",
+        "link": "https://spginecologia.pt/category/ivg/",
+        "name": "IVG",
+        "slug": "ivg",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/105"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=105"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=105"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=105"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=105"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=105"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=105"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=105"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=105"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 68,
+        "count": 15,
+        "description": "",
+        "link": "https://spginecologia.pt/category/laparoscopia/",
+        "name": "Laparoscopia",
+        "slug": "laparoscopia",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/68"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=68"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=68"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=68"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=68"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=68"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=68"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=68"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=68"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 95,
+        "count": 1,
+        "description": "",
+        "link": "https://spginecologia.pt/category/lesao-iatrogenica-vesical/",
+        "name": "Lesao iatrogénica vesical",
+        "slug": "lesao-iatrogenica-vesical",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/95"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=95"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=95"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=95"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=95"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=95"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=95"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=95"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=95"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 28,
+        "count": 0,
+        "description": "",
+        "link": "https://spginecologia.pt/category/lesao-latrogenica-vesical/",
+        "name": "Lesão Latrogénica Vesical",
+        "slug": "lesao-latrogenica-vesical",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/28"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=28"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=28"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=28"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=28"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=28"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=28"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=28"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=28"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 23,
+        "count": 13,
+        "description": "",
+        "link": "https://spginecologia.pt/category/menopausa/",
+        "name": "Menopausa",
+        "slug": "menopausa",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/23"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=23"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=23"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=23"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=23"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=23"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=23"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=23"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=23"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 89,
+        "count": 1,
+        "description": "",
+        "link": "https://spginecologia.pt/category/miomas-uterinos/",
+        "name": "Miomas Uterinos",
+        "slug": "miomas-uterinos",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/89"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=89"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=89"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=89"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=89"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=89"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=89"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=89"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=89"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 78,
+        "count": 5,
+        "description": "",
+        "link": "https://spginecologia.pt/category/miomectomia/",
+        "name": "Miomectomia",
+        "slug": "miomectomia",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/78"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=78"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=78"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=78"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=78"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=78"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=78"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=78"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=78"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 97,
+        "count": 1,
+        "description": "",
+        "link": "https://spginecologia.pt/category/morcelador/",
+        "name": "Morcelador",
+        "slug": "morcelador",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/97"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=97"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=97"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=97"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=97"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=97"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=97"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=97"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=97"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 59,
+        "count": 2,
+        "description": "",
+        "link": "https://spginecologia.pt/category/neg/",
+        "name": "NEG",
+        "slug": "neg",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/59"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=59"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=59"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=59"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=59"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=59"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=59"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=59"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=59"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 103,
+        "count": 1,
+        "description": "",
+        "link": "https://spginecologia.pt/category/nose/",
+        "name": "NOSE",
+        "slug": "nose",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/103"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=103"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=103"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=103"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=103"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=103"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=103"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=103"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=103"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 79,
+        "count": 5,
+        "description": "",
+        "link": "https://spginecologia.pt/category/obstetricia/",
+        "name": "Obstetrícia",
+        "slug": "obstetricia",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/79"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=79"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=79"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=79"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=79"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=79"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=79"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=79"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=79"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 20,
+        "count": 5,
+        "description": "",
+        "link": "https://spginecologia.pt/category/oncologia/",
+        "name": "Oncologia",
+        "slug": "oncologia",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/20"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=20"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=20"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=20"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=20"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=20"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=20"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=20"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=20"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 11,
+        "count": 2,
+        "description": "",
+        "link": "https://spginecologia.pt/category/patologia-ginecologica/",
+        "name": "Patologia Ginecológica",
+        "slug": "patologia-ginecologica",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/11"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=11"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=11"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=11"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=11"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=11"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=11"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=11"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=11"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 98,
+        "count": 1,
+        "description": "",
+        "link": "https://spginecologia.pt/category/polipectomia/",
+        "name": "Polipectomia",
+        "slug": "polipectomia",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/98"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=98"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=98"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=98"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=98"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=98"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=98"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=98"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=98"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 51,
+        "count": 3,
+        "description": "",
+        "link": "https://spginecologia.pt/category/premio-spg/",
+        "name": "Prémio SPG",
+        "slug": "premio-spg",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/51"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=51"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=51"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=51"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=51"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=51"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=51"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=51"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=51"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 14,
+        "count": 2,
+        "description": "",
+        "link": "https://spginecologia.pt/category/prolapso-dos-orgaos-pelvicos/",
+        "name": "Prolapso dos Órgãos Pélvicos",
+        "slug": "prolapso-dos-orgaos-pelvicos",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/14"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=14"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=14"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=14"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=14"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=14"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=14"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=14"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=14"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 15,
+        "count": 1,
+        "description": "",
+        "link": "https://spginecologia.pt/category/proteses-e-implantes/",
+        "name": "Próteses e Implantes",
+        "slug": "proteses-e-implantes",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/15"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=15"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=15"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=15"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=15"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=15"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=15"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=15"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=15"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 85,
+        "count": 0,
+        "description": "",
+        "link": "https://spginecologia.pt/category/remocao-diu/",
+        "name": "Remoção DIU",
+        "slug": "remocao-diu",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/85"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=85"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=85"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=85"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=85"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=85"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=85"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=85"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=85"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 30,
+        "count": 1,
+        "description": "",
+        "link": "https://spginecologia.pt/category/saude-da-mulher/",
+        "name": "Saúde da Mulher",
+        "slug": "saude-da-mulher",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/30"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=30"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=30"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=30"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=30"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=30"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=30"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=30"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=30"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 49,
+        "count": 1,
+        "description": "",
+        "link": "https://spginecologia.pt/category/saude-feminina/",
+        "name": "Saúde Feminina",
+        "slug": "saude-feminina",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/49"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=49"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=49"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=49"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=49"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=49"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=49"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=49"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=49"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 33,
+        "count": 3,
+        "description": "",
+        "link": "https://spginecologia.pt/category/saude-sexual/",
+        "name": "Saúde Sexual",
+        "slug": "saude-sexual",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/33"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=33"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=33"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=33"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=33"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=33"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=33"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=33"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=33"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 31,
+        "count": 3,
+        "description": "",
+        "link": "https://spginecologia.pt/category/sensibilizacao/",
+        "name": "Sensibilização",
+        "slug": "sensibilizacao",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/31"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=31"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=31"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=31"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=31"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=31"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=31"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=31"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=31"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 84,
+        "count": 0,
+        "description": "",
+        "link": "https://spginecologia.pt/category/septoplastia/",
+        "name": "Septoplastia",
+        "slug": "septoplastia",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/84"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=84"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=84"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=84"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=84"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=84"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=84"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=84"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=84"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 18,
+        "count": 1,
+        "description": "",
+        "link": "https://spginecologia.pt/category/slings-suburetrais/",
+        "name": "Slings suburetrais",
+        "slug": "slings-suburetrais",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/18"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=18"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=18"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=18"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=18"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=18"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=18"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=18"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=18"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 55,
+        "count": 9,
+        "description": "",
+        "link": "https://spginecologia.pt/category/spcptgi/",
+        "name": "SPCPTGI",
+        "slug": "spcptgi",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/55"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=55"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=55"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=55"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=55"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=55"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=55"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=55"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=55"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 61,
+        "count": 1,
+        "description": "",
+        "link": "https://spginecologia.pt/category/speg/",
+        "name": "SPEG",
+        "slug": "speg",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/61"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=61"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=61"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=61"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=61"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=61"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=61"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=61"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=61"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 4,
+        "count": 38,
+        "description": "",
+        "link": "https://spginecologia.pt/category/spg/",
+        "name": "SPG",
+        "slug": "spg",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/4"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=4"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=4"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=4"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=4"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=4"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=4"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=4"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=4"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 21,
+        "count": 4,
+        "description": "",
+        "link": "https://spginecologia.pt/category/spgo/",
+        "name": "SPGO",
+        "slug": "spgo",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/21"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=21"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=21"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=21"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=21"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=21"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=21"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=21"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=21"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 60,
+        "count": 2,
+        "description": "",
+        "link": "https://spginecologia.pt/category/spm/",
+        "name": "SPM",
+        "slug": "spm",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/60"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=60"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=60"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=60"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=60"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=60"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=60"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=60"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=60"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 16,
+        "count": 6,
+        "description": "",
+        "link": "https://spginecologia.pt/category/spug/",
+        "name": "SPUG",
+        "slug": "spug",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/16"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=16"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=16"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=16"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=16"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=16"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=16"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=16"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=16"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 29,
+        "count": 1,
+        "description": "",
+        "link": "https://spginecologia.pt/category/sutura-vesical-laparoscopica/",
+        "name": "Sutura Vesical Laparoscópica",
+        "slug": "sutura-vesical-laparoscopica",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/29"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=29"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=29"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=29"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=29"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=29"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=29"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=29"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=29"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 83,
+        "count": 1,
+        "description": "",
+        "link": "https://spginecologia.pt/category/terapia-hormonal/",
+        "name": "Terapia Hormonal",
+        "slug": "terapia-hormonal",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/83"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=83"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=83"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=83"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=83"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=83"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=83"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=83"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=83"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 1,
+        "count": 0,
+        "description": "",
+        "link": "https://spginecologia.pt/category/uncategorized/",
+        "name": "Uncategorized",
+        "slug": "uncategorized",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/1"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=1"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=1"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=1"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=1"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=1"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=1"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=1"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=1"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 3,
+        "count": 13,
+        "description": "",
+        "link": "https://spginecologia.pt/category/uroginecologia/",
+        "name": "Uroginecologia",
+        "slug": "uroginecologia",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/3"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=3"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=3"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=3"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=3"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=3"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=3"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=3"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=3"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 71,
+        "count": 1,
+        "description": "",
+        "link": "https://spginecologia.pt/category/utero-rudimentar/",
+        "name": "Útero Rudimentar",
+        "slug": "utero-rudimentar",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/71"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=71"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=71"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=71"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=71"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=71"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=71"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=71"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=71"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 74,
+        "count": 1,
+        "description": "",
+        "link": "https://spginecologia.pt/category/verde-de-indocianina/",
+        "name": "Verde de Indocianina",
+        "slug": "verde-de-indocianina",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "acf": [],
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories/74"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/taxonomies/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/posts?categories=74"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/consenso?categories=74"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/video?categories=74"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/evento?categories=74"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/publicacao?categories=74"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/curso?categories=74"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao?categories=74"
+                },
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/noticia?categories=74"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    }
+]

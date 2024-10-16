@@ -1,0 +1,676 @@
+[
+    {
+        "id": 342,
+        "date": "2021-01-01T05:00:39",
+        "date_gmt": "2021-01-01T05:00:39",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=seccao&#038;p=342"
+        },
+        "modified": "2022-01-15T13:28:19",
+        "modified_gmt": "2022-01-15T13:28:19",
+        "slug": "spug",
+        "status": "publish",
+        "type": "seccao",
+        "link": "https://spginecologia.pt/seccao/spug/",
+        "title": {
+            "rendered": "Uroginecologia"
+        },
+        "featured_media": 140,
+        "template": "",
+        "categories": [
+            22,
+            17,
+            16,
+            3
+        ],
+        "class_list": [
+            "post-342",
+            "seccao",
+            "type-seccao",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry",
+            "category-incontinencia",
+            "category-incontinencia-urinaria-de-esforco",
+            "category-spug",
+            "category-uroginecologia"
+        ],
+        "acf": {
+            "seccao_mission": "Melhorar a qualidade de vida em todas as fases da vida da mulher",
+            "seccao_subheader_1": {
+                "seccao_subheader_1_title": "O nosso projecto",
+                "seccao_subheader_1_text": "Na Sociedade Portuguesa de Ginecologia, assim como em qualquer Serviço de Ginecologia, existem diversas áreas de subespecialização que visam uma diferenciação adequada de forma a prestar os melhores cuidados no diagnóstico e tratamento das doentes com o máximo de êxito e menor taxa de efeitos adversos /complicações.\r\n\r\nAo longo dos 17 anos de existência desta secção privilegiámos sempre a nossa missão educativa, promovendo reuniões de forma regular, onde se actualizaram e continuam a actualizar todas as teorias que nesta área se foram desenvolvendo e todos os avanços tecnológicos que esta subespecialidade foi apresentando de forma profícua. Temos também promovido a investigação e divulgação de resultados que contribuam para a melhoria da actividade assistencial dispensada às nossas utentes. Dentro da nossa missão formativa, ao longo destes anos, temos efectuado Cursos, nomeadamente de técnicas cirúrgicas e de ecografia do pavimento pélvico para Internos da Especialidade e Webinars para Internos de Especialidade e Médicos de Medicina Geral e Familiar.\r\n\r\nA Secção Portuguesa de Uroginecologia (SPUG) integra a SPG e é afiliada da EUGA (European Urogynaecology Association) e da IUGA (International Urogynaecology Association)."
+            },
+            "seccao_subheader_2": {
+                "seccao_subheader_2_title": "Para onde vamos",
+                "seccao_subheader_2_text": "O principal objectivo desta secção, como da própria SPG, é o de promover a qualidade de vida em todas as fases da vida da mulher. A secção tem também um papel muito importante na formação de Internos da Especialidade de Ginecologia e Obstetrícia e de Especialistas que se pretendam diferenciar nesta área.\r\n\r\nTem apoiado de forma sistemática de eventos organizados extra Secção, e participado de forma activa em reuniões de Associações ligadas à área da Uroginecologia e em todos os Congressos e Reuniões da Sociedade Portuguesa de Ginecologia. Também temos impulsionado a apresentação de trabalhos e conferências em eventos Internacionais organizados pela European Urogynaecology Association (EUGA), International Continence Society (ICS) e International Urogynaecology Association (IUGA)."
+            },
+            "seccao_membros": [
+                {
+                    "seccao_membros_picture": 850,
+                    "seccao_membros_name": "Dr.ª Bercina Candoso",
+                    "seccao_membros_position": "Presidente",
+                    "seccao_membros_location": "Porto"
+                },
+                {
+                    "seccao_membros_picture": 849,
+                    "seccao_membros_name": "Dr.ª Sofia Alegra",
+                    "seccao_membros_position": "Secretária",
+                    "seccao_membros_location": "Lisboa"
+                },
+                {
+                    "seccao_membros_picture": 848,
+                    "seccao_membros_name": "Dr.ª Maria Geraldina Castro",
+                    "seccao_membros_position": "Tesoureira",
+                    "seccao_membros_location": "Coimbra"
+                }
+            ],
+            "seccao_useful_links": null,
+            "seccao_buttons": [
+                {
+                    "seccao_buttons_title": "Regulamento",
+                    "seccao_buttons_type": "Ficheiro",
+                    "seccao_buttons_url": "",
+                    "seccao_buttons_file": 851
+                },
+                {
+                    "seccao_buttons_title": "Sobre a SPUG",
+                    "seccao_buttons_type": "Ficheiro",
+                    "seccao_buttons_url": "",
+                    "seccao_buttons_file": 852
+                }
+            ],
+            "seccao_recommended_articles": null,
+            "seccao_workshops": null,
+            "seccao_contacts": null,
+            "seccao_content_types": {
+                "seccao_content_types_useful_links": true,
+                "seccao_content_types_recommended_articles": false,
+                "seccao_content_types_workshops": false,
+                "seccao_content_types_noticia": true,
+                "seccao_content_types_publicacao": true,
+                "seccao_content_types_curso": false,
+                "seccao_content_types_contacts": false
+            }
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao/342"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/seccao"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/140"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=342"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=342"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 343,
+        "date": "2021-01-01T04:00:30",
+        "date_gmt": "2021-01-01T04:00:30",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=seccao&#038;p=343"
+        },
+        "modified": "2023-02-13T09:13:38",
+        "modified_gmt": "2023-02-13T09:13:38",
+        "slug": "spm",
+        "status": "publish",
+        "type": "seccao",
+        "link": "https://spginecologia.pt/seccao/spm/",
+        "title": {
+            "rendered": "Menopausa"
+        },
+        "featured_media": 131,
+        "template": "",
+        "categories": [
+            23,
+            60
+        ],
+        "class_list": [
+            "post-343",
+            "seccao",
+            "type-seccao",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry",
+            "category-menopausa",
+            "category-spm"
+        ],
+        "acf": {
+            "seccao_mission": "Para iniciar uma nova etapa da vida da mulher",
+            "seccao_subheader_1": {
+                "seccao_subheader_1_title": "O nosso projecto",
+                "seccao_subheader_1_text": "A Secção Portuguesa de Menopausa assume como objectivo principal a abordagem da saúde da Mulher após a menopausa e destaca-se pela sua interação com as especialidades da Medicina Geral e Familiar e Endocrinologia. Com foco na formação de profissionais e no esclarecimento e sensibilização da população em geral, a secção utiliza os meios de comunicação social para a promoção da saúde da mulher após a menopausa, desenvolvendo iniciativas nesse sentido.\r\n\r\nA partilha de conhecimentos e experiências com as sociedades congéneres internacionais é uma das características da secção, sendo esta reconhecida pela EMAS (European Menopause and Andropause Society) e faz parte do CAMS (Council of Affiliated Menopause Societies), assim como da IMS (International Menopause Society)."
+            },
+            "seccao_subheader_2": {
+                "seccao_subheader_2_title": "Para onde vamos",
+                "seccao_subheader_2_text": "Para cumprir os objectivos estabelecidos é fomentado o debate de ideias para chegar a consensos na melhor abordagem da menopausa em Portugal, quer dentro da especialidade de Ginecologia /Obstetrícia quer a nível da Medicina Geral e Familiar e outras.\r\n\r\nAs nossas acções definem-se pela organização de reuniões científicas inseridas no calendário da Sociedade Portuguesa de Ginecologia, assim como a realização de diversos cursos e workshops integrados no âmbito da formação de médicos da Medicina Geral e Familiar e ainda cursos para Internos de Ginecologia/Obstetrícia promovidos pela Ordem dos Médicos. A secção também atua através da Revisão do Consenso da Menopausa e finalmente, promovendo o constante apoio e avaliação de teses de mestrado na área da menopausa de alunos de medicina e de internos da especialidade em diversas áreas (medicina geral e familiar, medicina dentária)."
+            },
+            "seccao_membros": [
+                {
+                    "seccao_membros_picture": 845,
+                    "seccao_membros_name": "Dr. Cláudio Rebelo",
+                    "seccao_membros_position": "Presidente",
+                    "seccao_membros_location": "Porto"
+                },
+                {
+                    "seccao_membros_picture": 868,
+                    "seccao_membros_name": "Dr.ª Maria João Carvalho",
+                    "seccao_membros_position": "Secretária",
+                    "seccao_membros_location": "Coimbra"
+                },
+                {
+                    "seccao_membros_picture": 834,
+                    "seccao_membros_name": "Dr.ª Ana Fatela",
+                    "seccao_membros_position": "Tesoureira",
+                    "seccao_membros_location": "Lisboa"
+                }
+            ],
+            "seccao_useful_links": null,
+            "seccao_buttons": [
+                {
+                    "seccao_buttons_title": "Sobre a SPM",
+                    "seccao_buttons_type": "Ficheiro",
+                    "seccao_buttons_url": "",
+                    "seccao_buttons_file": 844
+                }
+            ],
+            "seccao_recommended_articles": null,
+            "seccao_workshops": null,
+            "seccao_contacts": null,
+            "seccao_content_types": {
+                "seccao_content_types_useful_links": true,
+                "seccao_content_types_recommended_articles": false,
+                "seccao_content_types_workshops": false,
+                "seccao_content_types_noticia": true,
+                "seccao_content_types_publicacao": false,
+                "seccao_content_types_curso": false,
+                "seccao_content_types_contacts": false
+            }
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao/343"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/seccao"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/131"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=343"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=343"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 344,
+        "date": "2021-01-01T03:00:30",
+        "date_gmt": "2021-01-01T03:00:30",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=seccao&#038;p=344"
+        },
+        "modified": "2023-08-13T22:20:56",
+        "modified_gmt": "2023-08-13T21:20:56",
+        "slug": "ginecologia-oncologica",
+        "status": "publish",
+        "type": "seccao",
+        "link": "https://spginecologia.pt/seccao/ginecologia-oncologica/",
+        "title": {
+            "rendered": "Ginecologia Oncológica"
+        },
+        "featured_media": 125,
+        "template": "",
+        "categories": [
+            52,
+            54,
+            24
+        ],
+        "class_list": [
+            "post-344",
+            "seccao",
+            "type-seccao",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry",
+            "category-cancro-do-ovario",
+            "category-esgo",
+            "category-ginecologia-oncologica"
+        ],
+        "acf": {
+            "seccao_mission": "O encontro das diversas especialidades dedicadas à ginecologia oncológica",
+            "seccao_subheader_1": {
+                "seccao_subheader_1_title": "O nosso projecto",
+                "seccao_subheader_1_text": "A Secção Portuguesa de Ginecologia Oncológica (SPGO) integra a SPG e é afiliada da ESGO (European Society of Gynaecological Oncology). A SPGO tem como objetivo principal a organização de reuniões, de carácter multidisciplinar, com vista a atualização de conhecimentos nas áreas do diagnóstico e tratamento da patologia maligna do trato genital e da mama."
+            },
+            "seccao_subheader_2": {
+                "seccao_subheader_2_title": "Para onde vamos",
+                "seccao_subheader_2_text": "Entre as nossas actividades constam a actualização dos Consensos de Ginecologia Oncológica a cada três anos, em colaboração com outras sociedades científicas nacionais e a viabilização de cursos teóricos. Realiza acções de formação dirigidas a internos da especialidade, assim como cursos práticos de técnica cirúrgica, dirigidos a especialistas dedicados à ginecologia oncológica."
+            },
+            "seccao_membros": [
+                {
+                    "seccao_membros_picture": 840,
+                    "seccao_membros_name": "Dr. Henrique Nabais",
+                    "seccao_membros_position": "Presidente",
+                    "seccao_membros_location": "Lisboa"
+                },
+                {
+                    "seccao_membros_picture": 28471,
+                    "seccao_membros_name": "Dr.ª Mónica Pires",
+                    "seccao_membros_position": "Secretária",
+                    "seccao_membros_location": "Porto"
+                },
+                {
+                    "seccao_membros_picture": 31037,
+                    "seccao_membros_name": "Dr.ª Lúcia Correia",
+                    "seccao_membros_position": "Tesoureira",
+                    "seccao_membros_location": "Lisboa"
+                }
+            ],
+            "seccao_useful_links": null,
+            "seccao_buttons": [
+                {
+                    "seccao_buttons_title": "Regulamento",
+                    "seccao_buttons_type": "Ficheiro",
+                    "seccao_buttons_url": "",
+                    "seccao_buttons_file": 843
+                }
+            ],
+            "seccao_recommended_articles": null,
+            "seccao_workshops": null,
+            "seccao_contacts": null,
+            "seccao_content_types": {
+                "seccao_content_types_useful_links": true,
+                "seccao_content_types_recommended_articles": false,
+                "seccao_content_types_workshops": false,
+                "seccao_content_types_noticia": true,
+                "seccao_content_types_publicacao": false,
+                "seccao_content_types_curso": false,
+                "seccao_content_types_contacts": false
+            }
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao/344"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/seccao"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/125"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=344"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=344"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 345,
+        "date": "2021-01-01T02:00:30",
+        "date_gmt": "2021-01-01T02:00:30",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=seccao&#038;p=345"
+        },
+        "modified": "2023-02-13T09:14:27",
+        "modified_gmt": "2023-02-13T09:14:27",
+        "slug": "speg",
+        "status": "publish",
+        "type": "seccao",
+        "link": "https://spginecologia.pt/seccao/speg/",
+        "title": {
+            "rendered": "Endoscopia Ginecológica"
+        },
+        "featured_media": 124,
+        "template": "",
+        "categories": [],
+        "class_list": [
+            "post-345",
+            "seccao",
+            "type-seccao",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry"
+        ],
+        "acf": {
+            "seccao_mission": "O treino efetivo em técnicas endoscópicas",
+            "seccao_subheader_1": {
+                "seccao_subheader_1_title": "O nosso projecto",
+                "seccao_subheader_1_text": "A Secção Portuguesa de Endoscopia Ginecológica tem como objetivo principal a promoção das técnicas endoscópicas ginecológicas entre os sócios da SPG.\r\n\r\nDesde a sua criação, tem vindo a promover o ensino e formação técnica dos médicos da especialidade, assim como tem procurado divulgar e debater os avanços sempre constantes nesta área e, desta forma, tem contribuído para a sua implementação no nosso país."
+            },
+            "seccao_subheader_2": {
+                "seccao_subheader_2_title": "Para onde vamos",
+                "seccao_subheader_2_text": "Mantém como objetivos prioritários a realização de eventos com carácter prático que permitam o treino efetivo em técnicas endoscópicas contribuindo assim, para a sua divulgação e para uma maior utilização destas nos Hospitais Portugueses.\r\n\r\nExternamente, a SPEG tem procurado consolidar o seu papel na Sociedade Europeia de Endoscopia Ginecológica como Sociedade Afiliada e com outras sociedades com os mesmos objetivos de promoção da cirurgia ginecológica minimamente invasiva."
+            },
+            "seccao_membros": [
+                {
+                    "seccao_membros_picture": 838,
+                    "seccao_membros_name": "Dr. Hugo Gaspar",
+                    "seccao_membros_position": "Presidente",
+                    "seccao_membros_location": "Funchal"
+                },
+                {
+                    "seccao_membros_picture": 28470,
+                    "seccao_membros_name": "Dr.ª  Filipa Osório",
+                    "seccao_membros_position": "Secretária",
+                    "seccao_membros_location": "Lisboa"
+                },
+                {
+                    "seccao_membros_picture": 28469,
+                    "seccao_membros_name": "Dr. Hélder Ferreira",
+                    "seccao_membros_position": "Tesoureiro",
+                    "seccao_membros_location": "Porto"
+                }
+            ],
+            "seccao_useful_links": null,
+            "seccao_buttons": [
+                {
+                    "seccao_buttons_title": "Direções Anteriores",
+                    "seccao_buttons_type": "Ficheiro",
+                    "seccao_buttons_url": "",
+                    "seccao_buttons_file": 839
+                }
+            ],
+            "seccao_recommended_articles": null,
+            "seccao_workshops": null,
+            "seccao_contacts": null,
+            "seccao_content_types": {
+                "seccao_content_types_useful_links": true,
+                "seccao_content_types_recommended_articles": false,
+                "seccao_content_types_workshops": false,
+                "seccao_content_types_noticia": false,
+                "seccao_content_types_publicacao": false,
+                "seccao_content_types_curso": false,
+                "seccao_content_types_contacts": false
+            }
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao/345"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/seccao"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/124"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=345"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=345"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 346,
+        "date": "2021-01-01T01:00:30",
+        "date_gmt": "2021-01-01T01:00:30",
+        "guid": {
+            "rendered": "https://spginecologia.pt/?post_type=seccao&#038;p=346"
+        },
+        "modified": "2023-08-09T19:35:32",
+        "modified_gmt": "2023-08-09T18:35:32",
+        "slug": "spcptgi",
+        "status": "publish",
+        "type": "seccao",
+        "link": "https://spginecologia.pt/seccao/spcptgi/",
+        "title": {
+            "rendered": "Colposcopia e Patologia do Tracto Genital Inferior"
+        },
+        "featured_media": 123,
+        "template": "",
+        "categories": [
+            12,
+            55
+        ],
+        "class_list": [
+            "post-346",
+            "seccao",
+            "type-seccao",
+            "status-publish",
+            "has-post-thumbnail",
+            "hentry",
+            "category-colposcopia",
+            "category-spcptgi"
+        ],
+        "acf": {
+            "seccao_mission": "Prevenção, diagnóstico e tratamento da patologia do trato genital inferior",
+            "seccao_subheader_1": {
+                "seccao_subheader_1_title": "O nosso projeto",
+                "seccao_subheader_1_text": "A Secção Portuguesa de Colposcopia e Patologia do Trato Genital Inferior é uma secção especializada da Sociedade Portuguesa de Ginecologia, que desenvolve a sua atividade no âmbito da sua área de diferenciação, a colposcopia e a patologia do trato genital inferior (PTGI).\r\n\r\nA sua missão principal é a de contribuir para a erradicação do cancro do colo do útero. A formação no âmbito da colposcopia e da patologia do trato genital inferior é outro dos pilares da sua missão.\r\n\r\nNesse sentido desenvolvemos ações de formação com os cuidados de saúde primários, no âmbito da vacinação, rastreios e tratamento, procurando sempre a promoção da saúde da mulher."
+            },
+            "seccao_subheader_2": {
+                "seccao_subheader_2_title": "Para onde vamos",
+                "seccao_subheader_2_text": "<strong>Formação e Acreditação</strong>\r\n\r\nA avaliação de conhecimentos é um pilar fundamental no processo de formação, pelo que a SPCPTGI elaborou um programa de Acreditação em Colposcopia, que visa o reconhecimento dos especialistas com diferenciação em colposcopia e PTGI, proporcionando uma formação diferenciada nesta área.\r\n\r\nRealizamos cursos básicos e cursos avançados com periodicidade anual.\r\nPromovemos a atualização das nossas condutas através da elaboração e atualização de consensos da área da colposcopia e PTGI.\r\n\r\nPromovemos o intercâmbio com instituições nacionais e internacionais no âmbito da Colposcopia e da PTGI, sendo afiliada da Federação Europeia de Colposcopia (EFC) e da Federação Internacional de Colposcopia e Patologia do Colo (IFCPC)."
+            },
+            "seccao_membros": [
+                {
+                    "seccao_membros_picture": 792,
+                    "seccao_membros_name": "Dr.ª Amélia Oliveira Pedro",
+                    "seccao_membros_position": "Presidente",
+                    "seccao_membros_location": "Lisboa"
+                },
+                {
+                    "seccao_membros_picture": 795,
+                    "seccao_membros_name": "Dr.ª Amália Pacheco",
+                    "seccao_membros_position": "Secretária",
+                    "seccao_membros_location": "Faro"
+                },
+                {
+                    "seccao_membros_picture": 28468,
+                    "seccao_membros_name": "Dr. Gustavo Mendinhos",
+                    "seccao_membros_position": "Tesoureiro",
+                    "seccao_membros_location": "Lisboa"
+                }
+            ],
+            "seccao_useful_links": [
+                {
+                    "seccao_useful_links_title": "International Federation of Cervical Pathology and Colposcopy",
+                    "seccao_useful_links_url": "https://ifcpc.org/"
+                },
+                {
+                    "seccao_useful_links_title": "European Federation for Colposcopy",
+                    "seccao_useful_links_url": "https://efcolposcopy.eu/"
+                }
+            ],
+            "seccao_buttons": [
+                {
+                    "seccao_buttons_title": "Consultar Regulamento",
+                    "seccao_buttons_type": "Ficheiro",
+                    "seccao_buttons_url": "",
+                    "seccao_buttons_file": 826
+                },
+                {
+                    "seccao_buttons_title": "Sobre a SPCPTGI",
+                    "seccao_buttons_type": "Ficheiro",
+                    "seccao_buttons_url": "",
+                    "seccao_buttons_file": 827
+                },
+                {
+                    "seccao_buttons_title": "Regulamento de Acreditação",
+                    "seccao_buttons_type": "Ficheiro",
+                    "seccao_buttons_url": "",
+                    "seccao_buttons_file": 828
+                },
+                {
+                    "seccao_buttons_title": "Formulário de Acreditação",
+                    "seccao_buttons_type": "Ficheiro",
+                    "seccao_buttons_url": "",
+                    "seccao_buttons_file": 829
+                }
+            ],
+            "seccao_recommended_articles": null,
+            "seccao_workshops": null,
+            "seccao_contacts": null,
+            "seccao_content_types": {
+                "seccao_content_types_useful_links": true,
+                "seccao_content_types_recommended_articles": false,
+                "seccao_content_types_workshops": false,
+                "seccao_content_types_noticia": true,
+                "seccao_content_types_publicacao": false,
+                "seccao_content_types_curso": false,
+                "seccao_content_types_contacts": false
+            }
+        },
+        "jetpack_sharing_enabled": true,
+        "_links": {
+            "self": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao/346"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/seccao"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/types/seccao"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media/123"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/media?parent=346"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https://spginecologia.pt/wp-json/wp/v2/categories?post=346"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    }
+]
