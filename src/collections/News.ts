@@ -1,3 +1,4 @@
+import { sidebarFields } from '@/fields/sidebar';
 import type { CollectionConfig } from 'payload'
 
 const News: CollectionConfig = {
@@ -31,27 +32,7 @@ const News: CollectionConfig = {
             type: "richText",
             required: true,
         },
-        {
-            name: "featured_image",
-            label: "Imagem",
-            type: "upload",
-            relationTo: "media",
-            admin: {
-                position: "sidebar",
-            },
-            required: false,
-        },
-        {
-            name: "categories",
-            label: "Categorias",
-            type: "relationship",
-            relationTo: "categories",
-            hasMany: true,
-            admin: {
-                position: "sidebar",
-            },
-            required: false,
-        }
+        ...sidebarFields,
     ]
 }
 

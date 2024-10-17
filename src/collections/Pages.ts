@@ -7,6 +7,9 @@ export const Pages: CollectionConfig = {
         plural: "Páginas",
     },
     slug: "paginas",
+    admin: {
+        useAsTitle: "titulo",
+    },
     fields: [
         {
             name: "titulo",

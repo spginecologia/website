@@ -1,3 +1,4 @@
+import { sidebarFields } from '@/fields/sidebar';
 import type { CollectionConfig } from 'payload'
 
 // #, Legenda, Nome, Tipo
@@ -108,30 +109,7 @@ const Videos: CollectionConfig = {
 			relationTo: "users",
 			required: true,
 		},
-		{
-			name: "categories",
-			label: "Categorias",
-			type: "relationship",
-			relationTo: "categories",
-			hasMany: true,
-			admin: {
-				position: "sidebar",
-			}
-		},
-		{
-			name: "slug",
-			label: "Slug",
-			type: "text",
-			required: true,
-			admin: { position: "sidebar" }
-		},
-		{
-			name: "featured_image",
-			label: "Imagem de Destaque",
-			type: "upload",
-			relationTo: "media",
-			admin: { position: "sidebar" }
-		}
+		...sidebarFields,
 	]
 }
 

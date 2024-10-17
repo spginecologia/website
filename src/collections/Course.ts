@@ -1,3 +1,4 @@
+import { sidebarFields } from '@/fields/sidebar'
 import { slugify } from '@/lib/utils'
 import type { CollectionConfig, FieldHook } from 'payload'
 
@@ -33,38 +34,12 @@ const Course: CollectionConfig = {
 			required: true,
 		},
 		{
-			name: "featured_image",
-			label: "Imagem de Destaque",
-			type: "upload",
-			relationTo: "media",
-			required: false,
-			admin: { position: "sidebar" },
-		},
-		{
-			name: "slug",
-			label: "Slug",
-			type: "text",
-			required: true,
-			unique: true,
-			admin: { position: "sidebar" },
-			hooks: {
-				beforeChange: [formatSlug("title")],
-			},
-		},
-		{
-			name: "categories",
-			label: "Categorias",
-			type: "relationship",
-			relationTo: "categories",
-			hasMany: true,
-			admin: { position: "sidebar" },
-		},
-		{
 			name: "description",
 			label: "Descrição",
 			type: "richText",
 			required: true,
 		},
+		...sidebarFields,
 	]
 }
 

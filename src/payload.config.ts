@@ -24,6 +24,7 @@ import Videos from './collections/Videos'
 import Footer from './collections/global/Footer'
 import Header from './collections/global/Header'
 import Events from './collections/Event'
+import Pages from './collections/Pages'
 /* * */
 
 const filename = fileURLToPath(import.meta.url)
@@ -37,6 +38,7 @@ export default buildConfig({
     },
   },
   collections: [
+    Pages,
     Events,
     Users,
     Media,

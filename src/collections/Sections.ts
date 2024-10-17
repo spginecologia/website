@@ -1,3 +1,4 @@
+import { sidebarFields } from '@/fields/sidebar';
 import { CollectionConfig } from 'payload';
 
 const Sections: CollectionConfig = {
@@ -10,35 +11,6 @@ const Sections: CollectionConfig = {
 		useAsTitle: "title",
 	},
 	fields: [
-		{
-			name: 'slug',
-			label: 'Slug',
-			type: 'text',
-			required: true,
-			unique: true,
-			admin: {
-				position: 'sidebar',
-			},
-		},
-		{
-			name: 'categories',
-			label: 'Categorias',
-			type: 'relationship',
-			relationTo: 'categories',
-			hasMany: true,
-			admin: {
-				position: 'sidebar',
-			},
-		},
-		{
-			name: "featured_image",
-			label: "Imagem Destacada",
-			type: "upload",
-			relationTo: "media",
-			admin: {
-				position: 'sidebar',
-			},
-		},
 		{
 			name: 'title',
 			label: 'Título',
@@ -327,7 +299,7 @@ const Sections: CollectionConfig = {
 				},
 			],
 		},
-
+		...sidebarFields,
 	],
 };
 

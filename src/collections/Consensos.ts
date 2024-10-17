@@ -1,3 +1,7 @@
+import { categoriesField } from '@/fields/categories'
+import { featuredImageField } from '@/fields/featured-image'
+import { sidebarFields } from '@/fields/sidebar'
+import { slugField } from '@/fields/slug'
 import { slugify } from '@/lib/utils'
 import type { CollectionConfig, FieldHook } from 'payload'
 
@@ -34,17 +38,6 @@ const Consensos: CollectionConfig = {
 			required: true,
 		},
 		{
-			name: "slug",
-			label: "Slug",
-			type: "text",
-			required: true,
-			unique: true,
-			admin: { position: "sidebar" },
-			hooks: {
-				beforeChange: [formatSlug("title")],
-			},
-		},
-		{
 			name: "consenso_type",
 			label: "Tipo de Conteúdo",
 			type: "radio",
@@ -78,25 +71,7 @@ const Consensos: CollectionConfig = {
 				condition: (_, siblingData) => siblingData?.consenso_type === "url",
 			},
 		},
-		{
-			name: "categories",
-			label: "Categorias",
-			type: "relationship",
-			relationTo: "categories",
-			hasMany: true,
-			admin: {
-				position: "sidebar",
-			},
-		},
-		{
-			name: "featured",
-			label: "Image de Destaque",
-			type: "upload",
-			relationTo: "media",
-			admin: {
-				position: "sidebar",
-			},
-		}
+		...sidebarFields,
 	],
 }
 

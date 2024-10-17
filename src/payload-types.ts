@@ -11,6 +11,7 @@ export interface Config {
     users: UserAuthOperations;
   };
   collections: {
+    paginas: Pagina;
     events: Event;
     users: User;
     media: Media;
@@ -59,16 +60,25 @@ export interface UserAuthOperations {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "paginas".
+ */
+export interface Pagina {
+  id: string;
+  titulo?: string | null;
+  slug?: string | null;
+  layout?: unknown[] | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "events".
  */
 export interface Event {
   id: string;
   title: string;
-  slug: string;
   is_featured?: boolean | null;
   event_type: 'spg' | 'patrocinado' | 'outros';
-  categories?: (string | Category)[] | null;
-  featured_image?: (string | null) | Media;
   start_date: string;
   end_date: string;
   links_group?: {
@@ -107,18 +117,9 @@ export interface Event {
         id?: string | null;
       }[]
     | null;
-  updatedAt: string;
-  createdAt: string;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "categories".
- */
-export interface Category {
-  id: string;
-  name: string;
   slug?: string | null;
-  description?: string | null;
+  categories?: (string | Category)[] | null;
+  featured?: (string | null) | Media;
   updatedAt: string;
   createdAt: string;
 }
@@ -140,6 +141,18 @@ export interface Media {
   height?: number | null;
   focalX?: number | null;
   focalY?: number | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "categories".
+ */
+export interface Category {
+  id: string;
+  name: string;
+  description?: string | null;
+  slug?: string | null;
+  updatedAt: string;
+  createdAt: string;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -165,10 +178,10 @@ export interface User {
 export interface Consenso {
   id: string;
   title: string;
-  slug: string;
   consenso_type: 'file' | 'url';
   consenso_file?: (string | null) | Media;
   consenso_url?: string | null;
+  slug?: string | null;
   categories?: (string | Category)[] | null;
   featured?: (string | null) | Media;
   updatedAt: string;
@@ -197,8 +210,9 @@ export interface Noticia {
     };
     [k: string]: unknown;
   };
-  featured_image?: (string | null) | Media;
+  slug?: string | null;
   categories?: (string | Category)[] | null;
+  featured?: (string | null) | Media;
   updatedAt: string;
   createdAt: string;
   _status?: ('draft' | 'published') | null;
@@ -211,9 +225,9 @@ export interface Publication {
   id: string;
   title: string;
   publication_file: string | Media;
+  slug?: string | null;
   categories?: (string | Category)[] | null;
-  slug: string;
-  featured_image?: (string | null) | Media;
+  featured?: (string | null) | Media;
   updatedAt: string;
   createdAt: string;
 }
@@ -224,9 +238,6 @@ export interface Publication {
 export interface Course {
   id: string;
   title: string;
-  featured_image?: (string | null) | Media;
-  slug: string;
-  categories?: (string | Category)[] | null;
   description: {
     root: {
       type: string;
@@ -242,6 +253,9 @@ export interface Course {
     };
     [k: string]: unknown;
   };
+  slug?: string | null;
+  categories?: (string | Category)[] | null;
+  featured?: (string | null) | Media;
   updatedAt: string;
   createdAt: string;
 }
@@ -251,9 +265,6 @@ export interface Course {
  */
 export interface Section {
   id: string;
-  slug: string;
-  categories?: (string | Category)[] | null;
-  featured_image?: (string | null) | Media;
   title: string;
   mission: string;
   first_column: {
@@ -343,6 +354,9 @@ export interface Section {
         id?: string | null;
       }[]
     | null;
+  slug?: string | null;
+  categories?: (string | Category)[] | null;
+  featured?: (string | null) | Media;
   updatedAt: string;
   createdAt: string;
 }
@@ -352,9 +366,6 @@ export interface Section {
  */
 export interface Nucleo {
   id: string;
-  slug: string;
-  categories?: (string | Category)[] | null;
-  featured_image?: (string | null) | Media;
   title: string;
   mission: string;
   first_column: {
@@ -444,6 +455,9 @@ export interface Nucleo {
         id?: string | null;
       }[]
     | null;
+  slug?: string | null;
+  categories?: (string | Category)[] | null;
+  featured?: (string | null) | Media;
   updatedAt: string;
   createdAt: string;
 }
@@ -497,9 +511,9 @@ export interface Video {
     [k: string]: unknown;
   };
   author: string | User;
+  slug?: string | null;
   categories?: (string | Category)[] | null;
-  slug: string;
-  featured_image?: (string | null) | Media;
+  featured?: (string | null) | Media;
   updatedAt: string;
   createdAt: string;
 }
@@ -510,6 +524,10 @@ export interface Video {
 export interface PayloadLockedDocument {
   id: string;
   document?:
+    | ({
+        relationTo: 'paginas';
+        value: string | Pagina;
+      } | null)
     | ({
         relationTo: 'events';
         value: string | Event;

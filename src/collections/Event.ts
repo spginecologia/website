@@ -1,4 +1,4 @@
-import { formatSlug } from "@/lib/utils"
+import { sidebarFields } from "@/fields/sidebar"
 import { CollectionConfig } from "payload"
 
 
@@ -17,16 +17,6 @@ const Events: CollectionConfig = {
 			label: "Titulo",
 			type: "text",
 			required: true,
-		},
-		{
-			name: "slug",
-			label: "Slug",
-			type: "text",
-			required: true,
-			admin: { position: "sidebar" },
-			hooks: {
-				beforeChange: [formatSlug("title")],
-			},
 		},
 		{
 			name: "is_featured",
@@ -49,22 +39,6 @@ const Events: CollectionConfig = {
 				value: "outros",
 			}],
 			required: true,
-		},
-		{
-			name: "categories",
-			label: "Categorias",
-			type: "relationship",
-			relationTo: "categories",
-			hasMany: true,
-			admin: { position: "sidebar" },
-		},
-		{
-			name: "featured_image",
-			label: "Imagem em destaque",
-			type: "upload",
-			relationTo: "media",
-			required: false,
-			admin: { position: "sidebar" },
 		},
 		{
 			type: "row",
@@ -180,7 +154,7 @@ const Events: CollectionConfig = {
 				},
 			]
 		},
-
+		...sidebarFields,
 	],
 }
 

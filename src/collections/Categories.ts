@@ -1,5 +1,6 @@
 import type { CollectionConfig, FieldHook } from "payload";
 import { slugify } from "@/lib/utils";
+import { slugField } from "@/fields/slug";
 
 const formatSlug =
 	(fallback: string): FieldHook =>
@@ -33,22 +34,12 @@ const Categories: CollectionConfig = {
 			required: true,
 		},
 		{
-			name: "slug",
-			label: "Slug",
-			type: "text",
-			admin: {
-				position: "sidebar",
-			},
-			hooks: {
-				beforeChange: [formatSlug("name")]
-			}
-		},
-		{
 			name: "description",
 			label: "Descrição",
 			type: "text",
 			required: false,
 		},
+		slugField(),
 	]
 }
 
