@@ -44,8 +44,6 @@ const seed = async () => {
                     recomended_articles: item.acf.seccao_recommended_articles,
                     workshops: item.acf.seccao_workshops,
                     contacts: item.acf.seccao_contacts,
-
-
                 },
             })
         } catch (error) {

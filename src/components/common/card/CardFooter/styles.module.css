@@ -1,0 +1,9 @@
+.container {
+    color: var(--color-foreground-300);
+}
+
+@media (min-width: 1024px) {
+    .container{
+        font-size: var(--text-xs);
+    }
+}

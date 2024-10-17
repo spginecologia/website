@@ -1,0 +1,25 @@
+.card {
+	display: flex;
+	flex-direction: column;
+
+    background-color: var(--color-background-100);
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    transition-property: all;
+    transition-delay: 0s;
+    
+    border: 1px solid transparent;
+
+    &:hover {
+        box-shadow: var(--box-shadow-md);
+    }
+}
+
+.row {
+    flex-direction: row;
+    align-items: center;
+}
+
+.primary:hover {
+    border: var(--border-brand)
+}

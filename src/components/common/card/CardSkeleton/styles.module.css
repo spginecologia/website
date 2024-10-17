@@ -1,0 +1,18 @@
+.card {
+	display: flex;
+	flex-direction: column;
+    height: fit-content;
+	gap: 5px;
+
+	border: var(--border-primary);
+	border-radius: var(--border-radius);
+
+    box-shadow: var(--shadow-sm);
+}
+
+.content {
+    display: flex;
+	flex-direction: column;
+    gap: 3px;
+	padding: 5px;
+}

@@ -21,6 +21,7 @@
     "@payloadcms/plugin-cloud": "beta",
     "@payloadcms/richtext-lexical": "beta",
     "cross-env": "^7.0.3",
+    "escape-html": "^1.0.3",
     "graphql": "^16.8.1",
     "next": "15.0.0-canary.173",
     "node": "payload/node",
@@ -30,6 +31,7 @@
     "sharp": "0.32.6"
   },
   "devDependencies": {
+    "@types/escape-html": "^1.0.4",
     "@types/jsdom": "^21.1.7",
     "@types/node": "^22.5.4",
     "@types/react": "npm:types-react@19.0.0-rc.1",

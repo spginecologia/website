@@ -1,7 +1,6 @@
 import { getPayload } from "payload"
 import config from '@payload-config'
-import data from './data/sections.json'
-import categoriesMap from './data/categories-map.json'
+import data from './data/nucleo.json'
 import { convertStringToLexical } from "./utils"
 
 const seed = async () => {
@@ -14,7 +13,6 @@ const seed = async () => {
                 collection: 'nucleos',
                 data: {
                     slug: item.slug,
-                    categories: Array.isArray(item.categories) ? item.categories.map(id => categoriesMap[id.toString() as keyof typeof categoriesMap]) : [categoriesMap[item.categories]],
                     featured_image: null,
                     title: item.title.rendered,
                     mission: item.acf.seccao_mission,
@@ -41,11 +39,23 @@ const seed = async () => {
                         type: "url",
                         url: "CHANGE_ME",
                     })),
-                    recomended_articles: item.acf.seccao_recommended_articles,
-                    workshops: item.acf.seccao_workshops,
-                    contacts: item.acf.seccao_contacts,
-
-
+                    recomended_articles: item.acf.seccao_recommended_articles && item.acf.seccao_recommended_articles.map((article: any) => ({
+                        title: article.seccao_recommended_articles_title,
+                        type: 'url',
+                        url: article.seccao_recommended_articles_url,
+                        file: article.seccao_recommended_articles_file,
+                    })),
+                    workshops: item.acf.seccao_workshops && item.acf.seccao_workshops.map((workshop: any) => ({
+                        title: workshop.seccao_workshops_title,
+                        type: 'file',
+                        url: workshop.seccao_workshops_url,
+                        file: '6710052a95e3cff04007c104',
+                    })),
+                    contacts: item.acf.seccao_contacts && item.acf.seccao_contacts.map((contact: any) => ({
+                        type: 'email',
+                        email: contact.seccao_contacts_email,
+                        phone: contact.seccao_contacts_phone,
+                    })),
                 },
             })
         } catch (error) {

@@ -1,0 +1,22 @@
+.card {
+    padding: var(--size-spacing-20) var(--size-spacing-40);
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .card {
+        flex-direction: row;
+        align-items: center;
+        text-align: start;
+        gap: 20%;
+        padding: var(--size-spacing-20) var(--size-spacing-70);
+
+        & img {
+            width: fit-content !important;
+        }
+
+        & h2 {
+            font-size: var(--text-5xl);
+        }
+    }
+}

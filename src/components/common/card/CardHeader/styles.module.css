@@ -1,0 +1,20 @@
+.default {
+    color: var(--color-foreground-100);
+    font-family: var(--font-family-secondary);
+}
+
+.primary {
+    color: var(--color-brand-secondary);
+    font-family: var(--font-family-secondary);
+}
+
+.secondary {
+    color: var(--color-foreground-100);
+    font-family: var(--font-family-secondary);
+}
+
+@media (min-width: 1024px) {
+    .container{
+        font-size: var(--text-base);
+    }
+}
