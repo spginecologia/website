@@ -99,36 +99,57 @@ const Events: CollectionConfig = {
 					name: "title",
 					label: "Título",
 					type: "text",
-					required: true,
 				},
 				{
 					name: "evento_section_type",
 					label: "Tipo de Secção",
 					type: "select",
-					options: [{
-						label: "Conteúdo",
-						value: "texto",
-					}, {
-						label: "Fotografias",
-						value: "Fotografias",
-					},
-					{
-						label: "Vídeo",
-						value: "Vídeo",
-					}
+					defaultValue: "text",
+					options: [
+						{
+							label: "Conteúdo",
+							value: "text",
+						}, {
+							label: "Fotografias",
+							value: "images",
+						},
+						{
+							label: "Vídeo",
+							value: "video",
+						},
+						{
+							label: "iFrame",
+							value: "iframe",
+						},
 					],
 				},
 				{
 					name: "content",
 					label: "Conteúdo",
 					type: "richText",
-					admin: { condition: (data, siblingData) => siblingData.evento_section_type === "texto" }
+					admin: { condition: (data, siblingData) => siblingData.evento_section_type === "text" }
+				},
+
+				{
+					name: "video",
+					label: "Url do Vídeo",
+					type: "text",
+					required: false,
+					admin: { condition: (data, siblingData) => siblingData.evento_section_type === "video" }
+				},
+				{
+					name: "iframe",
+					label: "iFrame",
+					type: "text",
+					required: false,
+					admin: { condition: (data, siblingData) => siblingData.evento_section_type === "iframe" }
 				},
 				{
 					name: "images",
 					label: "Fotografias",
 					type: "array",
 					required: false,
+					admin: { condition: (data, siblingData) => siblingData.evento_section_type === "images" },
 					fields: [
 						{
 							name: "image",
@@ -144,13 +165,6 @@ const Events: CollectionConfig = {
 							required: false,
 						},
 					]
-				},
-				{
-					name: "video",
-					label: "Url do Vídeo",
-					type: "text",
-					required: false,
-					admin: { condition: (data, siblingData) => siblingData.evento_section_type === "Vídeo" }
 				},
 			]
 		},

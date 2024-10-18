@@ -1,0 +1,19 @@
+.categories {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    text-transform: uppercase;
+    color: var(--color-brand-secondary);
+    font-size: var(--text-lg);
+    font-weight: 600;
+
+    & a {  
+        text-decoration: none;
+    }
+
+    
+    & * + * {
+        border-left: 2px solid var(--color-background-200);
+        padding-left: 1rem;
+    }
+}

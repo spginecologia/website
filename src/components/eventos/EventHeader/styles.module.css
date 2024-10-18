@@ -1,0 +1,54 @@
+.section {
+    display: flex;
+    flex-direction: row;
+    gap: var(--size-spacing-70);
+}
+
+.info {
+    grid-column: span 3;
+    margin-top: var(--size-spacing-40);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    & h1 {
+        margin: var(--size-spacing-20) 0;
+    }
+
+    & .date {
+        display: flex;
+        flex-direction: column;
+        gap: var(--size-spacing-10);
+        margin-bottom: var(--size-spacing-20);
+    }
+}
+
+.dateCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-brand-secondary);
+    height: fit-content;
+    color: white;
+    padding: 30px 10px 20px 10px;
+    width: fit-content;
+    text-transform: capitalize;
+
+    font-family: var(--font-family-secondary)
+}
+
+.dateCardDay {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.dateCardMonth {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.dateCardYear {
+    font-size: 20px;
+    line-height: 1.5;
+}

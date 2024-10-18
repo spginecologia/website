@@ -60,7 +60,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Sobre o curso",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "A prevalência de casais com infertilidade tem vindo a aumentar, sendo um motivo muito frequente de recurso à consulta de Ginecologia. O rápido desenvolvimento que tem ocorrido no conhecimento e nas técnicas desta área tem permitido dar uma resposta cada vez mais eficiente a estes casais.\r\n\r\nNeste curso pretendemos rever os aspetos essenciais no estudo e orientação do casal infértil com o objetivo de capacitar todos os participante com os conhecimentos e competências necessários para a melhor abordagem e orientação destes doentes.\r\n\r\nNuma abordagem eminentemente prática, centrada em casos clínicos, serão revistos os conhecimentos mais atuais em temas como a fisiologia do ciclo menstrual e da fecundação e como aumentar a fecundidade natural; as principais causas de anovulação e como realizar induções da ovulação; estudo imagiológico e abordagem cirúrgica da mulher em idade fértil; abortamentos de repetição; noções gerais sobre técnicas de Medicina da Reprodução e Diagnóstico Genético Pre-implantação, entre outros.\r\n\r\n<strong>O curso conta com o patrocínio científico da SPG</strong>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -71,7 +71,7 @@
                 },
                 {
                     "evento_section_title": "Destinatários",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Médicos internos e especialistas de Ginecologia-Obstetrícia e Medicina Geral e Familiar\r\n",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -82,7 +82,7 @@
                 },
                 {
                     "evento_section_title": "Inscrição",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Fee: 175 €\r\nA inscrição inclui documentação, certificado de participação, almoço e coffee breaks no decorrer do programa do curso.",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -93,7 +93,7 @@
                 },
                 {
                     "evento_section_title": "Localização",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "iframe",
                     "evento_section_content": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2985.2428686522376!2d-8.403935287655004!3d41.56398798490142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd24fe835cc3f65f%3A0xcf6ea214924874f6!2sSchool%20of%20Medicine!5e0!3m2!1sen!2spt!4v1728577398130!5m2!1sen!2spt\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -220,7 +220,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Sobre o Evento",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "O Serviço de Ginecologia e Obstetrícia do Hospital CUF Descobertas, em conjunto com a CUF Academic Center organizam a 4ª edição do curso avançado em Ecografia Ginecológica, que terá um formato exclusivamente presencial e a duração de 2 dias.\r\n\r\nO principal objetivo do curso é fornecer aos participantes as informações mais atualizadas, através de uma abordagem muito prática, sobre o diagnóstico ecográfico e tratamento minimamente invasivo de patologia ginecológica frequente em doentes com desejo de preservar a fertilidade. Com a participação de docentes nacionais e internacionais (Portugal, Bélgica, Holanda, Hungria e China), o curso incluirá, além de palestras teóricas, demonstração ao vivo de exames ecográficos e de procedimentos cirúrgicos. \r\n\r\nDependendo do número de interessados e da confirmação do International Ovarian Tumour Analysis (IOTA) Group, os participantes poderão ter uma nova oportunidade de certificação IOTA.\r\n\r\nEste curso conta com o <strong>patrocínio científico da SPG</strong> - Sociedade Portuguesa de Ginecologia.",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -231,7 +231,7 @@
                 },
                 {
                     "evento_section_title": "Destinatários",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Specialists and residents in Gynecology/Obstetrics and Radiology; \r\nspecialists involved in multidisciplinary groups (Endometriosis, Fertility Support, Gynecological Oncology)",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -242,7 +242,7 @@
                 },
                 {
                     "evento_section_title": "Valor de Participação",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Preços por participante\r\n\r\nAdvanced Course Gynecological Ultrasound | 4th Edition - 5 €\r\n\r\nIOTA Certification + 95 €\r\nIOTA Certification + Course + 245 €\r\nCourse + 170 €\r\n\r\nCondições de cancelamento: Os pedidos de cancelamento recebidos até 2 semanas antes do Curso/ Evento Científico terão reembolso de 100% do valor da inscrição. Após este período não será efetuada qualquer devolução.",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -253,7 +253,7 @@
                 },
                 {
                     "evento_section_title": "Localização",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "iframe",
                     "evento_section_content": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3111.2396368264467!2d-9.10207718774838!3d38.75820735478601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd19317755637063%3A0x1330671830f2b1d0!2sHospital%20CUF%20Descobertas!5e0!3m2!1sen!2spt!4v1728576494637!5m2!1sen!2spt\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -381,7 +381,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Sobre",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "O Conselho Português para a Saúde e Ambiente vai realizar o seu 1º Congresso Nacional de Saúde e Ambiente nos dias 7 e 8 de fevereiro de 2025 na Culturgest, em Lisboa.\r\nEste é o primeiro fórum dedicado à relação entre alterações climáticas, degradação ambiental e saúde das populações e pretende ser um marco na nossa história, uma oportunidade de networking e um momento de promoção da participação de todos para enfrentarmos este desafio, o mais importante da nossa vida colectiva.  ",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -392,7 +392,7 @@
                 },
                 {
                     "evento_section_title": "Público-Alvo",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "· Profissionais de Medicina, Farmácia, Medicina Veterinária, Psicologia, Enfermagem e Tecnologias de Saúde.\r\n· Profissionais de Gestão, Engenharia, Tecnologias de Informação e Comunicação da área da Saúde.\r\n· Quadros de empresas do sector da saúde. Dirigentes e membros de organizações relacionadas com o sector da saúde.\r\n· Decisores políticos e dirigentes da Administração Pública do sector da Saúde e do Ambiente.",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -403,7 +403,7 @@
                 },
                 {
                     "evento_section_title": "Inscrição",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Valores de inscrição: Até 30 Novembro 2024 / Após 30 Novembro 2024\r\nAssociado CPSA: 80€ / 100€\r\nEstudante Associado CPSA: 40€ / 50€\r\nNão Associado: 120€ / 150€\r\n\r\nA <a href=\"https://1cnsa.pcoveranatura.com/forms/index?menu=yes#page_emo_form\" rel=\"noopener\" target=\"_blank\">inscrição</a> inclui:\r\nPrograma científico\r\nDocumentação\r\nAlmoços e coffee breaks\r\nCertificado Digital de Presença",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -414,7 +414,7 @@
                 },
                 {
                     "evento_section_title": "Submissão de Resumos",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Prazo para submissão: 15 de outubro de 2024\r\n\r\nConheça o <a href=\"https://cpsa.pt/cnsa2025/submissao-de-resumos/\" rel=\"noopener\" target=\"_blank\">REGULAMENTO DE SUBMISSÃO DE RESUMOS</a>\r\n\r\n ",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -425,7 +425,7 @@
                 },
                 {
                     "evento_section_title": "LOCALIZAÇÃO",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "iframe",
                     "evento_section_content": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3111.9908291694856!2d-9.145245322637598!3d38.740972671757916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1933a706c9d109%3A0xe701a19fb84b38e!2sCulturgest!5e0!3m2!1sen!2spt!4v1726149965419!5m2!1sen!2spt\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -548,7 +548,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Sobre o Curso",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Os cursos básicos de Colposcopia são organizados desde 2012, com o patrocínio científico da Sociedade Portuguesa de Colposcopia e Patologia do Trato Genital Inferior (SPCPTGI), alternadamente pela Dra. Amélia Pedro, atual responsável da Unidade de Colposcopia e LASER do Hospital da CUF Sintra, e pela Dra. Amália Pacheco, responsável pela Unidade de Patologia do Colo e do trato genital Inferior / LASER do Centro Hospitalar Universitário do Algarve – Unidade de Faro. \r\n\r\nEstes cursos têm vindo a ser aperfeiçoados e atualmente estão estruturados de acordo com o programa de formação da Federação Europeia de Colposcopia (EFC), tendo em 2016 sido pela primeira vez aprovados e certificados pela EFC.\r\n\r\nEste curso conta também com o patrocínio científico da Sociedade Portugesa de Ginecologia (SPG).\r\n\r\nNúmero de Horas: 16\r\nIdioma de Lecionação: Português e Inglês\r\nFormação Livre / Diurno / Presencial\r\n\r\n",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -559,7 +559,7 @@
                 },
                 {
                     "evento_section_title": "Destinatários",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Médicos especialistas e internos de especialidade de Ginecologia e Obstetrícia\r\n",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -570,7 +570,7 @@
                 },
                 {
                     "evento_section_title": "Candidaturas ",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "<strong>Vagas</strong>: 30\r\n\r\n<strong>Propinas e taxas 2024/2025</strong>\r\nTaxa de Candidatura: 50€\r\nTaxa de Inscrição e seguro escolar: 10€\r\nPropina: 400€\r\n\r\n<strong>Calendário 2024/2025</strong>\r\nReceção de candidaturas - 20/09 a 04/10/24\r\nDivulgação dos resultados (após validação pelos SA)  - 14/10/24\r\nReclamação relativa à seriação por mail para a UO - 14 a 16/10/24\r\nResposta às reclamações - Até 18/10/24\r\nInscrições e matrículas - 18/10 a 31/10/24",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -581,7 +581,7 @@
                 },
                 {
                     "evento_section_title": "Localização",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Centro de Simulação Clínica da Faculdade de Medicina e Ciências Biomédicas\r\nUniversidade do Algarve - Campus de Gambelas\r\n\r\n<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3184.5130650952688!2d-7.974196822683891!3d37.04525497217845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ab37073ed2259%3A0xcfb1d647b00678d7!2sFMCB%20-%20Faculdade%20de%20Medicina%20e%20Ci%C3%AAncias%20Biom%C3%A9dicas%20da%20UAlg%20-%20Edif.%202!5e0!3m2!1sen!2spt!4v1726141864662!5m2!1sen!2spt\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -696,7 +696,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Organização",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Este webinar é uma iniciativa do <a href=\"https://spginecologia.pt/nucleo/ginecologia-da-infancia-e-da-adolescencia/\" rel=\"noopener\" target=\"_blank\">Núcleo de Ginecologia da Infância e Adolescência</a> da SPG.\r\n\r\n",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -707,7 +707,7 @@
                 },
                 {
                     "evento_section_title": "Sub-Temas",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Sub-temas a abordar e respetivas palestrantes:\r\n<strong>Diagnóstico diferencial</strong> - Dra. Filipa Espada\r\n<strong>Diagnóstico e avaliação do risco metabólico</strong> - Dra. Vanessa Silva\r\n<strong>Tratamento e evolução</strong> - Dra. Diana Monteiro",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -718,7 +718,7 @@
                 },
                 {
                     "evento_section_title": "inscrição ",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Webinar gratuito, mediante inscrição.\r\nExclusivo para profissionais de Saúde\r\nVagas limitadas a 500 inscrições.\r\n\r\n<a href=\"https://us06web.zoom.us/webinar/register/9617262817227/WN_xBycj6c1Q6u5sB8W5GucHA\" target=\"_blank\">Inscrever no Evento</a>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -841,7 +841,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Sobre o Congresso",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "TEMAS DO CONGRESSO\r\nBexiga hiperativa\r\nDisfunção de esvaziamento\r\nTraumatismo vertebromedular\r\nInfeções urinárias – Desafios\r\nLitíase urinária\r\nSexualidade, concepção e gravidez\r\nInteligência artificial\r\nProlapsos pélvicos e incontinência\r\nSessão conjunta APNUG com Associação Salvador\r\n\r\nCURSOS PRÉ-CONGRESSO\r\nUrologia funcional – Uma visão a 360º\r\nCurso prático de Neuro-urologia em Medicina Geral e Familiar",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -852,7 +852,7 @@
                 },
                 {
                     "evento_section_title": "Inscrições",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Valor das inscrições até 20 de agosto*\r\nMédicos Especialistas Associados da APNUG com quotas em dia - 120,00€\r\nInternos Associados APNUG com quotas em dia - 0,00€\r\nMédicos Especialistas - 160,00€\r\nInternos - 80,00€\r\nOutros profissionais de saúde - 80,00€\r\nStaff (DIM) - 70,00€\r\n\r\n*Após essa data acresce ao valor de inscrição 50,00€",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -863,7 +863,7 @@
                 },
                 {
                     "evento_section_title": "Submissão de Trabalhos",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Prazo para submissão: 15 de agosto de 2024\r\n\r\nComunicações Livres (Comunicações Orais e Posters) e Vídeos\r\nTema: “A NEURO-PELVE EM 2024”\r\n\r\nConsulte o Regulamento para a Submissão de Trabalhos <a href=\"https://www.admedic.pt/uploads/regulamento_xv-congresso-apnug.pdf\" rel=\"noopener\" target=\"_blank\">AQUI</a>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -874,7 +874,7 @@
                 },
                 {
                     "evento_section_title": "Localização",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "iframe",
                     "evento_section_content": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3004.088722961188!2d-8.652380487252858!3d41.15441531029245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2465782f35ca7f%3A0xd8c85266d2b12c20!2sHF%20Ipanema%20Park!5e0!3m2!1sen!2spt!4v1722622230367!5m2!1sen!2spt\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -997,7 +997,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Sobre o Evento",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "\"A Sociedade Portuguesa de Oncologia (SPO) volta a organizar mais uma edição da sua reunião magna anual, onde decorrerão sessões de discussão ativa, partilha e abordagem de novas perspetivas para a Oncologia. Apostando num programa científico atrativo orientado para a atualidade oncológica, contaremos com a presença de <em>experts</em> nacionais e internacionais.\r\nPelo segundo ano consecutivo, teremos a <em>joint symposia</em>, uma parceria estabelecida entre a SPO e a ASCO (American Society of Clinical Oncology) desde 2023.\r\nAcreditamos que este Congresso será um evento científico que pretende primar pela excelência e liderança, olhando para o futuro com esperança e determinação no tratamento do cancro.\"\r\n\r\nEste Congresso contará com o patrocínio científico da SPG.\r\n",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -1008,7 +1008,7 @@
                 },
                 {
                     "evento_section_title": "Submissão de Trabalhos ",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Período de Submissão de Trabalhos Científicos até ao dia 30 de setembro de 2024\r\n\r\nRegulamento <a href=\"https://cno.sponcologia.pt/2024/content.php?id=5&lg=1\" rel=\"noopener\" target=\"_blank\">AQUI</a>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -1019,7 +1019,7 @@
                 },
                 {
                     "evento_section_title": "Localização",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "iframe",
                     "evento_section_content": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3047.2526862568675!2d-8.438548087711116!3d40.20344176847311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd22f9aa14f41745%3A0x3f26f440bd4b86e6!2sConvento%20S%C3%A3o%20Francisco!5e0!3m2!1sen!2spt!4v1721845039404!5m2!1sen!2spt\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -1142,7 +1142,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Sobre o Curso",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "O <em>Advanced Laparoscopic Suturing Course</em> é constituído por uma parte teórica e uma parte prática.\r\n\r\n<strong>Objetivos</strong>\r\nNo final do curso, os participantes deverão saber realizar suturas laparoscópicas complexas.\r\n\r\n<strong>Certificação</strong>\r\nEste curso é certificado por Direção Geral do Emprego e das Relações de Trabalho (DGERT) e por The European Academy of Gynaecological Surgery.\r\n\r\n<a href=\"https://learninghealth.up.events/activities/view/10836#local\" rel=\"noopener\" target=\"_blank\">MAIS INFORMAÇÕES</a>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -1153,7 +1153,7 @@
                 },
                 {
                     "evento_section_title": "Público-Alvo",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "<strong>Destinatários</strong>\r\n\r\nEspecialistas, internos em Ginecologia;\r\nOutras especialidades cirúrgicas (Urologia, Cirurgia Pediatrica, Cirurgia Geral) que pretendam adquirir conhecimentos avançados nesta área",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -1164,7 +1164,7 @@
                 },
                 {
                     "evento_section_title": "Inscrições",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Preços por participante\r\n\r\nGeral — desde 350 €\r\nColaborador Luz Saúde — desde 250 €",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -1175,7 +1175,7 @@
                 },
                 {
                     "evento_section_title": "Localização",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "iframe",
                     "evento_section_content": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3111.3713343554373!2d-9.193915422743906!3d38.755186271754944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ecdb491a3ba9b%3A0x4240874c1a229d33!2sHospital%20da%20Luz%20Learning%20Health!5e0!3m2!1sen!2spt!4v1721219925603!5m2!1sen!2spt\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -1306,7 +1306,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Sobre",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "<strong>16º Congresso Mundial de Endometriose</strong>\r\n\r\nOrganizado pela World Endometriosis Society, este evento verdadeiramente global decorrerá em Sydney, Austrália e irá promover a compreensão do tratamento dos doentes, dos cuidados aos doentes e das causas e consequências da doença na vida de inúmeras mulheres.",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -1317,7 +1317,7 @@
                 },
                 {
                     "evento_section_title": "Workshops Pré-Congresso",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Workshops de meio-dia\r\n· Building interdisciplinary qualitative endometriosis research skills\r\n· Early and mid-career workshop: Guiding and mentoring the next generation\r\n· Harnessing psychology to improve healthcare for people with endometriosis\r\n· Nursing in endometriosis: Leading the way to better health\r\n· Relationship between exercise and endometriosis\r\n· The biological and psychosocial approach to pelvic pain associated with endometriosis\r\n· The surgical management of deeply invasive endometriosis: Evidence and techniques for optimised outcomes\r\n· Using ART and science for infertility\r\n\r\nWorkshops de dia completo\r\n· Improving laboratory skills: Embedding collaboration into research programs\r\n· Non-invasive diagnosis of endometriosis and planning endometriosis surgery\r\n\r\n<a href=\"https://www.wce2025.com.au/pre-congress-workshop\" rel=\"noopener\" target=\"_blank\">Mais informações</a>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -1328,7 +1328,7 @@
                 },
                 {
                     "evento_section_title": "Localização",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "iframe",
                     "evento_section_content": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.574381729666!2d151.1969340753941!3d-33.87485817322418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae38ab9a3ff3%3A0x19fc67061ce45a9!2sICC%20Sydney!5e0!3m2!1sen!2spt!4v1721174896606!5m2!1sen!2spt\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -1456,7 +1456,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Sobre",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "<strong>Masterclass em Uroginecologia - A formação do cirurgião pélvico, da anatomia à cirurgia</strong>\r\n\r\nComissão Científica: Rodolfo Milani, Maurizio Serati\r\nIdiomas: Inglês e Italiano",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -1467,7 +1467,7 @@
                 },
                 {
                     "evento_section_title": "Inscrição",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Prazo de inscrição: 10 de outubro de 2024.\r\n\r\nTaxas de inscrição\r\nAté 1 de agosto de 2024: Membro EUGA 400€ / Não Membro EUGA 500€ / Estagiários 190€.\r\nDe 1 de agosto a 10 de outubro de 2024: Membro EUGA 500€ / Não Membro EUGA 600€ / Estagiários 190€. \r\n\r\nO valor da inscrição é isento de IVA e inclui: Kit Participante, Certificado de Participação, Formulários CME, Almoço, Coffee Break.\r\n",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -1478,7 +1478,7 @@
                 },
                 {
                     "evento_section_title": "Localização",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "iframe",
                     "evento_section_content": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2791.9103896236347!2d9.250842077440112!3d45.592346124877714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786b9691645da57%3A0x2c0fd09ed9b65401!2sHelios%20Hotel!5e0!3m2!1sen!2sus!4v1720451370967!5m2!1sen!2sus\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -1605,7 +1605,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Informações Gerais",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Todas as informações sobre o evento (inscrições, alojamento, jantar da EUGA, UEMS/créditos CME) <a href=\"https://www.eugacongress.org/generalinfo2024\" rel=\"noopener\" target=\"_blank\">AQUI</a>\r\n",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -1616,7 +1616,7 @@
                 },
                 {
                     "evento_section_title": "Submissão de Abstracts",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Envio de abstracts até 8 de setembro de 2024\r\n\r\nSubmissão <a href=\"https://event.defoe.it/ABS_Login.asp?IDcommessa=F24018&Lang=EN\" rel=\"noopener\" target=\"_blank\">AQUI</a>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -1627,7 +1627,7 @@
                 },
                 {
                     "evento_section_title": "Workshops",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Workshops a decorrer no dia 5 de dezembro 2024:\r\n\r\nWS1 - Perineal Trauma Prevention Education Evaluation Repair and Scanning (PEERS)\r\nWS2 - Pelvic Floor Ultrasound\r\nWS3 - Female Sexual Health: How Urogynecology can help\r\nWS4 - Urinary retention in women: clinical scenarios, evaluation and treatment\r\nWS6 - Application of energy-based devices in urogynaecology\r\n\r\nMais informações <a href=\"https://www.eugacongress.org/workshops24\" rel=\"noopener\" target=\"_blank\">AQUI</a>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -1638,7 +1638,7 @@
                 },
                 {
                     "evento_section_title": "Localização",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "iframe",
                     "evento_section_content": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2559.0859449785466!2d14.490930077639105!3d50.10339827152803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470bed281a11d10f%3A0x129c70eaef62005f!2sO2%20universum!5e0!3m2!1sen!2sus!4v1720450627675!5m2!1sen!2sus\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -1766,7 +1766,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Destinatários",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Target participants:\r\nGynaecologists\r\nGynaecology trainees",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -1777,7 +1777,7 @@
                 },
                 {
                     "evento_section_title": "Valor de Inscrição",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Médico Especialistas - desde 150 €",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -1788,7 +1788,7 @@
                 },
                 {
                     "evento_section_title": "Comissão Organizadora",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Faculty:\r\n· Catarina Castro (Ginecologia-Obstetrícia, Hospital da Luz Lisboa)\r\n· Filipa Osório (Ginecologia-Obstetrícia, Hospital da Luz Lisboa)\r\n· Inês Reis (Ginecologia-Obstetrícia, Hospital da Luz Lisboa)\r\n· João Alves (Ginecologia-Obstetrícia, Hospital da Luz Lisboa)\r\n· João Lopes (Ginecologia-Obstetrícia, Hospital da Luz Lisboa)\r\n· José Reis (Ginecologia-Obstetrícia, Hospital da Luz Lisboa)\r\n· Sónia Barata (Ginecologia-Obstetrícia, Hospital da Luz Lisboa)\r\n· Susana Coutinho (Ginecologia-Obstetrícia, Hospital da Luz Lisboa)",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -1799,7 +1799,7 @@
                 },
                 {
                     "evento_section_title": "Localização",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "iframe",
                     "evento_section_content": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3111.327144046754!2d-9.196996511145002!3d38.75620000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ecdb491a3ba9b%3A0x4240874c1a229d33!2sHospital%20da%20Luz%20Learning%20Health!5e0!3m2!1sen!2spt!4v1717868704252!5m2!1sen!2spt\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -1922,7 +1922,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Destinatários",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Ginecologia / Obstetrícia\r\nDermatologia \r\nMedicina Geral e Familiar\r\nEnfermeiros\r\nEstudantes de Medicina",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -1933,7 +1933,7 @@
                 },
                 {
                     "evento_section_title": "Valor de Inscrição",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Colaborador Luz Saúde — desde 80 €\r\nGeral — desde 120 €",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -1944,7 +1944,7 @@
                 },
                 {
                     "evento_section_title": "Localização",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "iframe",
                     "evento_section_content": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3111.327144046754!2d-9.196996511145002!3d38.75620000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ecdb491a3ba9b%3A0x4240874c1a229d33!2sHospital%20da%20Luz%20Learning%20Health!5e0!3m2!1sen!2spt!4v1717868704252!5m2!1sen!2spt\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -2063,7 +2063,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Sobre o evento",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "O <strong>Primeiro Encontro de Menopausa</strong> da Unidade Local de Saúde de São José decorrerá no próximo dia <strong>20 de Maio</strong> na Maternidade Dr. Alfredo da Costa e tem como propósito debater temas dentro da área da Menopausa que sejam para “além do óbvio”, tendo para tal palestrantes convidados de diferentes áreas de atuação, como a ginecologia, reumatologia, psiquiatria e medicina anti-envelhecimento. \r\n\r\nEste encontro conta com o patrocínio científico da Sociedade Portuguesa de Ginecologia.",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -2074,7 +2074,7 @@
                 },
                 {
                     "evento_section_title": "Destinatários",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Médicos",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -2085,7 +2085,7 @@
                 },
                 {
                     "evento_section_title": "Inscrições",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Através de email para: <a href=\"mailto:formacao.hde@ulssjose.min-saude.pt\" rel=\"noopener\" target=\"_blank\">formacao.hde@ulssjose.min-saude.pt</a>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -2096,7 +2096,7 @@
                 },
                 {
                     "evento_section_title": "Localização",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Anfiteatro MAC\r\n\r\n<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3112.3541364751054!2d-9.150087524556902!3d38.73263495640985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd193375060c7faf%3A0x5dfb18de65b7f455!2sAlfredo%20da%20Costa%20Maternity%20Hospital!5e0!3m2!1sen!2spt!4v1713713847642!5m2!1sen!2spt\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -2107,7 +2107,7 @@
                 },
                 {
                     "evento_section_title": "",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -2222,7 +2222,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Aceder ao Evento",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "<a href=\"https://spginecologia.pt/webinar-20240514/\" rel=\"noopener\" target=\"_blank\">Clique aqui para aceder ao evento: https://spginecologia.pt/webinar-20240514/</a>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -2233,7 +2233,7 @@
                 },
                 {
                     "evento_section_title": "organização",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Este webinar é uma iniciativa do Núcleo de Ginecologia da Infância e Adolescência <a href=\"https://spginecologia.pt/nucleo/ginecologia-da-infancia-e-da-adolescencia/\" rel=\"noopener\" target=\"_blank\">(NGIA)</a> da SPG.",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -2244,7 +2244,7 @@
                 },
                 {
                     "evento_section_title": "Temas",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Temas a abordar e respetivas palestrantes:\r\n - Etiologia e Diagnóstico -  Dra. Inês Gil\r\n - Terapêutica - Dra. Flávia Ribeiro\r\n - Discussão - Dra. Eugénia Fernandes",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -2255,7 +2255,7 @@
                 },
                 {
                     "evento_section_title": "Destinatários",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Profissionais de Saúde",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -2266,7 +2266,7 @@
                 },
                 {
                     "evento_section_title": "Inscrição",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Webinar gratuito, mediante inscrição.\r\nVagas limitadas a 500 inscrições.",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -2382,7 +2382,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Sobre",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Numa iniciativa do Instituto de Saúde Baseado na Evidência (ISBE), do Instituto de Medicina Preventiva e Saúde Pública (IMP&SP), do Conselho Português Saúde e Ambiente (CPSA) e do Instituto de Saúde Ambiental (ISAMB), este evento procura olhar para planos, experiências e práticas de outros países para promover uma reflexão profunda sobre os desafios e oportunidades que o nosso sistema de saúde enfrenta quanto ao propósito de diminuir o seu impacto no ambiente.\r\n\r\nA inscrição é gratuita, mas o registo é obrigatório.\r\nTransmissão online disponível",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -2393,7 +2393,7 @@
                 },
                 {
                     "evento_section_title": "Localização",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "iframe",
                     "evento_section_content": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199219.95572740646!2d-9.522408042154154!3d38.722129471773336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd19330ddab493b5%3A0x7de5692fbde87e3!2sCalouste%20Gulbenkian%20Foundation!5e0!3m2!1sen!2spt!4v1713429660847!5m2!1sen!2spt\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -2509,7 +2509,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Sobre",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "<strong>Winners Meeting 2024 - A Decade of Innovatin: Transforming The Future of Minimally Invasive Surgery</strong>\r\n\r\nO que é a Winners Meeting?\r\nEste projeto foi lançado pelo Prof. Arnaud Wattiez e pelo Dr. Rudi Campo com o intuito de criar uma plataforma onde a prática e a teoria da endoscopia de alta qualidade pudessem ser acessíveis gratuitamente a todos, tanto à escala nacional como internacional.\r\n\r\nA reunião anual dos vencedores desenvolveu-se como uma progressão natural, na tentativa de criar uma reunião única, muito distante dos modelos clássicos de congressos. O conceito é reunir jovens com um interesse comum em cirurgia minimamente invasiva, onde partilhar ideias e experiências, ao mesmo tempo que se estabelecem as bases para a próxima geração de endoscopistas.",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -2520,7 +2520,7 @@
                 },
                 {
                     "evento_section_title": "Localização",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "iframe",
                     "evento_section_content": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12867.493062290505!2d23.144469571898966!3d37.328642718834104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x149f97c8e62e7125%3A0xd884334c8df9674b!2sAks%20Porto%20Heli!5e0!3m2!1sen!2spt!4v1713394030976!5m2!1sen!2spt\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -2757,7 +2757,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Informações Gerais",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "O Conselho Português para a Saúde e Ambiente (CPSA) e a NOVA Escola Nacional de Saúde Pública (ENSP) organizam este International Course on Health and Environment, que terá lugar em formato online, de 2 de abril a 18 de junho.\r\nO Curso consta de 12 sessões que terão lugar às terças-feiras das 17h00 às 18h30 (hora de Lisboa).\r\n\r\n<strong>Inscrições</strong> abertas até <strong>31 de março</strong>.\r\n\r\n\r\nMais informações nos sites da <a href=\"http://www.cpsa.pt\" rel=\"noopener\" target=\"_blank\">CPSA</a> e da <a href=\"http://www.ensp.unl.pt\" rel=\"noopener\" target=\"_blank\">ENSP</a>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -2873,7 +2873,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Sobre o evento",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Ginecologia para Medicina Geral e Familiar – Da menarca à menopausa\r\n\r\nPRESIDENTES\r\nCristina Nogueira-Silva\r\nMaria João Carvalho",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -2884,7 +2884,7 @@
                 },
                 {
                     "evento_section_title": "INSCRIÇÕES",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Valor de inscrição \r\n\r\naté dia 30 de março de 2024\r\nEspecialista - 120,00€\r\nInternos - 80,00€\r\n\r\napós dia 31 de março de 2024\r\nEspecialista - 170,00€\r\nInternos - 130,00€",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -2895,7 +2895,7 @@
                 },
                 {
                     "evento_section_title": "Localização",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "iframe",
                     "evento_section_content": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.645138784502!2d-9.172867174139519!3d38.702994871766236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1934a2f87d4ef1%3A0x34a6602e6cabf41a!2sFunda%C3%A7%C3%A3o%20Oriente%20-%20Sede!5e0!3m2!1sen!2sus!4v1710286117408!5m2!1sen!2sus\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -3030,7 +3030,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Sobre",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "32º Congresso Mundial sobre Controvérsias em Obstetrícia, Ginecologia e Infertilidade (COGI)",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -3041,7 +3041,7 @@
                 },
                 {
                     "evento_section_title": "destinatários",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "· Médicos e Cientistas\r\n· Enfermeiros, estudantes, residentes, bolseiros, e profissionais de saúde",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -3052,7 +3052,7 @@
                 },
                 {
                     "evento_section_title": "Inscrições",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Taxa Super Antecipada - até 22 de maio de 2024\r\nTaxa antecipada - de 23 de maio a 22 de agosto de 2024\r\nTaxa de atraso - de 23 de agosto a 14 de novembro de 2024\r\nTaxa de última hora - A partir de 15 de novembro de 2024",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -3063,7 +3063,7 @@
                 },
                 {
                     "evento_section_title": "Localização",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "iframe",
                     "evento_section_content": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.9711458407082!2d-9.210929122816873!3d38.69550705858938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ecb4342519d5b%3A0x36a4ec90864c9536!2sCentro%20Cultural%20de%20Bel%C3%A9m!5e0!3m2!1sen!2sus!4v1709767910445!5m2!1sen!2sus\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -3196,7 +3196,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Premiados",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Conheça os <strong>Prémios da 204ª Reunião da SPG</strong>, incluindo os <strong>Prémios Top 10</strong> \r\naqui > <a href=\"https://spginecologia.pt/wp-content/uploads/2024/08/Premios_204SPG.pdf\">Prémios_204SPG</a>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -3207,7 +3207,7 @@
                 },
                 {
                     "evento_section_title": "Galeria",
-                    "evento_section_type": "Fotografias",
+                    "evento_section_type": "images",
                     "evento_section_content": "",
                     "evento_section_gallery": [
                         38240,
@@ -3233,7 +3233,7 @@
                 },
                 {
                     "evento_section_title": "Localização",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "iframe",
                     "evento_section_content": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3182.664061192706!2d-8.215428423048731!3d37.08930725134768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1acc25c6ee128f%3A0xca1c4c519b463017!2sGrande%20Real%20Santa%20Eulalia%20Resort%20%26%20Hotel%20Spa!5e0!3m2!1sen!2sus!4v1709766106259!5m2!1sen!2sus\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -3348,7 +3348,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "SOBRE ",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "2º Webinar de Aprendizagem Interativa para Colposcopistas 2024 da EFC em colaboração com a Sociedade Suíça de Colposcopia: <strong>“Treatment strategies for vulvar and vaginal dysplasia”</strong>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -3359,7 +3359,7 @@
                 },
                 {
                     "evento_section_title": "Taxas de Inscrição",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Estagiários/Enfermeiros: 15€\r\nMédicos: 20€",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -3486,7 +3486,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Sobre o curso",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "<strong>Organização</strong>: Serviço de Ginecologia da ULS de Coimbra / Unidade de Ginecologia Oncológica dos CHUC\r\n\r\n<strong>Objetivo principal</strong>: Fornecer os conhecimentos teóricos básicos sobre ginecologia oncológica ministrado por profissionais experientes nesta área de conhecimento científico em Portugal.\r\n\r\n",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -3497,7 +3497,7 @@
                 },
                 {
                     "evento_section_title": "Destinatários",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Um curso dirigido particularmente a internos de formação específica de Ginecologia e Obstetrícia e a todas as especialidades dedicadas ao Cancro Ginecológico.",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -3508,7 +3508,7 @@
                 },
                 {
                     "evento_section_title": "Inscrição",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Vagas limitadas a 70 participantes\r\n\r\naté 22-03-2024: € 70,00\r\napós 22-03-2024: € 80,00\r\n\r\nInclui:\r\n· Almoços e coffee breaks de trabalho\r\n· Todos os materiais divulgados ao longo do curso\r\n· Certificado de participação",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -3519,7 +3519,7 @@
                 },
                 {
                     "evento_section_title": "Localização",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "iframe",
                     "evento_section_content": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3046.692794074854!2d-8.416353924112963!3d40.2158960714726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd22f97216e647a5%3A0xf80c03fef13b5cd7!2sHotel%20Coimbra%20Aeminium%2C%20Affiliated%20by%20Meli%C3%A1!5e0!3m2!1sen!2sus!4v1709512402944!5m2!1sen!2sus\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -3643,7 +3643,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Sobre o Curso",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "O <strong>Curso de Especialização em Sexologia Clínica</strong> da <strong>SPSC</strong> é uma oportunidade formativa assente em vários anos de experiência na formação de quadros superiores em matéria de sexualidade humana e seus desafios e, em particular, no reconhecimento do título de Terapeuta Sexual pela SPSC, em Portugal.\r\n",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -3654,7 +3654,7 @@
                 },
                 {
                     "evento_section_title": "Público Alvo",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "O <strong>tronco comum</strong> é aberto a profissionais de todas as áreas científicas, com interesse ou necessidade de adquirir e potenciar conhecimentos na área lata da sexualidade humana.\r\n\r\nOs <strong>ramos de especialidade</strong> (Terapia Sexual ou Medicina Sexual) destinam-se a profissionais da Psicologia e da Medicina (inscritos nas suas ordens profissionais), respetivamente.",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -3665,7 +3665,7 @@
                 },
                 {
                     "evento_section_title": "Informações gerais",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "As aulas do tronco comum serão realizadas online, em horário pós-laboral. Os ramos de especialidade serão em regime presencial (seja nos locais de estágio, seja nos seus seminários quinzenais).   \r\nTodas as componentes são lecionadas em língua Portuguesa (exceto eventuais seminários internacionais, dinamizados em língua Inglesa).\r\n\r\n<strong>Valor da propina:</strong>\r\nTronco comum: 1200 euros\r\nRamos de especialidade: 1600 euros\r\n\r\n<strong>NOTA</strong>: As datas aqui indicadas para início e fim do curso não são vinculativas e serão atualizadas assim que estiver estabelecida a calendarização do curso.",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -3676,7 +3676,7 @@
                 },
                 {
                     "evento_section_title": "Candidaturas",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Candidaturas abertas <strong>até 15 abril de 2024</strong> (1ª fase).\r\n\r\n(Fica ao critério da coordenação de curso a abertura de uma 2ª fase de candidaturas.)",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -3787,7 +3787,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Próximo Evento",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Agradecemos a todos os participantes neste Webinar.\r\nApresentamos o próximo, que será a 14/05/2024 com a colaboração da Dra. Eugénia Fernandes.\r\nSubscreva a nossa newsletter para saber mais.",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -3798,7 +3798,7 @@
                 },
                 {
                     "evento_section_title": "organização",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Este webinar é uma iniciativa do Núcleo de Ginecologia da Infância e Adolescência <a href=\"https://spginecologia.pt/nucleo/ginecologia-da-infancia-e-da-adolescencia/\" rel=\"noopener\" target=\"_blank\">(NGIA)</a> da SPG.",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -3809,7 +3809,7 @@
                 },
                 {
                     "evento_section_title": "Temas",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "1- Pertinência da Consulta de Ginecologia para Adolescentes - Dra. Tânia Ascensão \r\n2- Acesso, confidencialidade e aspetos legais - Dra. Naiegal Pereira\r\n3- Motivos de consulta mais frequentes - Dra. Filomena Sousa",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -3820,7 +3820,7 @@
                 },
                 {
                     "evento_section_title": "Destinatários",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Profissionais de Saúde",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -3831,7 +3831,7 @@
                 },
                 {
                     "evento_section_title": "Inscrição",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Webinar gratuito, mediante inscrição.",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -3954,7 +3954,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Sobre o Curso",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Este curso avançado tem como objetivo a diferenciação na área da patologia do trato genital inferior, necessária à certificação para a prática da colposcopia. O curso é da NOVA Medical School e conta com o Patrocínio Científico da SPG.\r\n\r\nCOORDENAÇÃO\r\nDra. Amélia Oliveira Pedro\r\nProfª. Doutora Fátima Serrano\r\nDra. Amália Pacheco\r\n2.ª EDIÇÃO\r\n\r\n3 ECTS",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -3965,7 +3965,7 @@
                 },
                 {
                     "evento_section_title": "Destinatários",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Médicos com especialidade em ginecologia e obstetrícia dedicados à área de patologia cervico vulvo vaginal",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -3976,7 +3976,7 @@
                 },
                 {
                     "evento_section_title": "Inscrição",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "CANDIDATURAS\r\nAté 9 de fevereiro de 2024\r\n\r\nPROPINA\r\nCandidatura – 51€\r\nPropina – 536,35€ (valor inclui matrícula, seguro, propina e catering)",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -3987,7 +3987,7 @@
                 },
                 {
                     "evento_section_title": "Localização",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "iframe",
                     "evento_section_content": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3112.9039791907376!2d-9.142220487117541!3d38.72001347164464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd19347a6b91c653%3A0x34754c7fa7c00c26!2sNOVA%20Medical%20School!5e0!3m2!1sen!2spt!4v1706626534184!5m2!1sen!2spt\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -4099,7 +4099,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "SOBRE ",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Webinar de Aprendizagem Interativa para Colposcopistas 2024 da EFC em colaboração com o Grupo de Trabalho Alemão para Patologia Cervical e Colposcopia (AG-CPC).\r\n\r\nTema: “Interventional colposcopy - essential skills state of the art 2024”\r\n(Colposcopia de intervenção - competências essenciais de última geração 2024)",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -4110,7 +4110,7 @@
                 },
                 {
                     "evento_section_title": "Destinatários",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Estagiários/Enfermeiros: 15€\r\nMédicos: 20€",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -4226,7 +4226,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "sobre o curso",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "<strong>Cirurgia Ginecológica Minimamente Invasiva - Curso Prático de Laboratório de Cadáver</strong>\r\nAhed - Advanced Health Education, da NOVA Medical School disponibiliza este curso intensivo e interativo para cirurgiões ginecológicos que tenham interesse em otimizar estratégias e aperfeiçoar habilidades, para a realização de cirurgias ginecológicas laparoscópicas com diferentes níveis de complexidade.\r\n\r\nCoordenadores do Curso: Hugo Gaspar, José Lourenço Reis e Fátima Faustino\r\n\r\nCréditos: 2 ECTs \r\nDuração: 24 Horas",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -4237,7 +4237,7 @@
                 },
                 {
                     "evento_section_title": "Destinatários",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Cirurgiões ginecológicos, residentes de obstetrícia/ginecologia e especialistas que já adquiriram alguma competência em laparoscopia ginecológica.",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -4248,7 +4248,7 @@
                 },
                 {
                     "evento_section_title": "Inscrição",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Critérios de admissão:\r\n· CV\r\n· Pelo menos 1 ano de prática/contato laparoscópico\r\n\r\nValor: 1,550€\r\n\r\nPrazo de inscrição: 12 de agosto de 2024\r\n\r\nIncreva-se <a href=\"https://www.ahed.pt/en/programmes/view/medical-practice-technical-challenges/24-m42-gynaecology-minimally-invasive-gynaecological-surgery-hands-on-cadaver-lab-course/register_online\" rel=\"noopener\" target=\"_blank\">AQUI</a>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -4380,7 +4380,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Sobre o Congresso",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "O tema do XIII Congresso da Secção de Endoscopia Ginecológica da SEGO (Sociedad Española de Ginecología y Obstetricia) é: “<strong>Levando a Excelência em Endoscopia para a Saúde da Mulher</strong>\".\r\nEste evento promete ser uma plataforma enriquecedora para partilhar conhecimento, discutir áreas de inovação e pesquisa, bem como conhecer novas técnicas cirúrgicas e tecnologias.\r\nDurante o congresso serão destacadas as últimas novidades em endoscopia ginecológica, abordando diversas áreas de interesse em diferentes blocos como: endometriose, miomas, técnicas de histerectomia, avanços em histeroscopia, procedimentos oncológicos e robóticos e\r\nas possíveis complicações associadas à cirurgia endoscópica. Serão exploradas as técnicas cirúrgicas mais avançadas e casos clínicos relevantes que ilustrarão a sua aplicação prática em cirurgia ao vivo. \r\n",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -4391,7 +4391,7 @@
                 },
                 {
                     "evento_section_title": "Informações Gerais",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Inscreva-se a preço reduzido até dia 26 de janeiro de 2024.\r\nConsulte <a href=\"https://segoendoscopia2024.com/inscripcion-y-alojamiento/\" rel=\"noopener\" target=\"_blank\">AQUI</a> os diferentes valores de inscrição no Congresso\r\n\r\nPedido de Informações <a href=\"https://barcelo.eventsair.com/base-de-datos--segoendoscopia-congreso-de-la-seccion-de-endoscopia-ginecologica-de-la-sego/infosego/Site/Register\" rel=\"noopener\" target=\"_blank\">AQUI</a>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -4402,7 +4402,7 @@
                 },
                 {
                     "evento_section_title": "Curso Pré-Congresso",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Tema: Histerectomia\r\nData: 10 de abril de 2024 \r\nLocal: Hospital Son Llátzer em Palma\r\nCoordenador: Albert Reyes\r\nDestinatários: Residentes e jovens assistentes\r\nMetodologia: Pela manhã cirurgia ao vivo em 2 salas cirúrgicas. À tarde sessões teóricas.\r\n\r\nValor de inscrição: 150€\r\n\r\nSaiba mais <a href=\"https://segoendoscopia2024.com/curso-precongreso/\" rel=\"noopener\" target=\"_blank\">AQUI</a>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -4413,7 +4413,7 @@
                 },
                 {
                     "evento_section_title": "Submissão de Trabalhos",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Envio de <em>abstracts</em> até 5 de fevereiro de 2024\r\nConsulte o Regulamento <a href=\"https://segoendoscopia2024.com/comunicaciones/\" rel=\"noopener\" target=\"_blank\">AQUI</a>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -4424,7 +4424,7 @@
                 },
                 {
                     "evento_section_title": "Localização",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "iframe",
                     "evento_section_content": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3075.8406134843226!2d2.6623726999999993!3d39.563201299999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x129793b72395b775%3A0x7bc6f39ea2244908!2sConvention%20Centre%20of%20Palma!5e0!3m2!1sen!2spt!4v1705573505242!5m2!1sen!2spt\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -4552,7 +4552,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Apresentação do Congresso",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "O Congresso ESGO 2024 será uma celebração das descobertas e pesquisas mais recentes, novas diretrizes, demonstrações práticas e transmissões exclusivas ao vivo de cirurgias hospitalares que não vai querer perder.\r\n\r\nO 25º Congresso da Sociedade Europeia de Oncologia Ginecológica reunirá mais de 2.000 participantes de todo o mundo para um encontro de 4 dias de aprendizagem, networking e partilha dos mais recentes desenvolvimentos no campo dos Cancros Ginecológicos - tudo com o objectivo de melhorar o seu conhecimento, avançando as suas competências nesta área.\r\n\r\nTem interesse em ficar por dentro dos avanços mais recentes na área da Oncologia Ginecológica?\r\nEntão o congresso ESGO é um evento imperdível, de 7 a 10 de março de 2024, em Barcelona, Espanha.",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -4563,7 +4563,7 @@
                 },
                 {
                     "evento_section_title": "Localização",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "iframe",
                     "evento_section_content": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d95780.58953734844!2d1.9843057595378126!3d41.392691554142786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a49816718e30e5%3A0x44b0fb3d4f47660a!2sBarcelona%2C%20Spain!5e0!3m2!1sen!2spt!4v1704979102708!5m2!1sen!2spt\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -4686,7 +4686,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "ORGANIZAÇÃO",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Unidade de Endometriose do Hospital CUF Descobertas\r\nComissão Organizadora: Rui Viana, João Colaço, Carlos Leichsenring, e Pedro Bargão Santos",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -4697,7 +4697,7 @@
                 },
                 {
                     "evento_section_title": "DESTINATÁRIOS",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Médicos Ginecologistas, Médicos de Cirurgia Geral e Médicos Urologistas",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -4708,7 +4708,7 @@
                 },
                 {
                     "evento_section_title": "Inscrição",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Valor da Inscrição:\r\nGeral — desde 150 €",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -4719,7 +4719,7 @@
                 },
                 {
                     "evento_section_title": "Localização",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "iframe",
                     "evento_section_content": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3111.239819182587!2d-9.102071824069865!3d38.75820317175405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd19317755637063%3A0x1330671830f2b1d0!2sHospital%20CUF%20Descobertas!5e0!3m2!1sen!2spt!4v1704300633319!5m2!1sen!2spt\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -4834,7 +4834,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Sobre o evento",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Este evento é promovido pela MSD e tem como objectivo a educação médica destinada a diferentes profissionais de saúde envolvidos no tratamento do cancro.\r\n\r\nA agenda deste ano conta com 9 workshops que decorrem em simultâneo cobrindo vários tumores: Cancro do pulmão, Cancros digestivos, Carcinoma de células renais, Cancro da mama, Cancros ginecológicos e Melanoma.",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -4845,7 +4845,7 @@
                 },
                 {
                     "evento_section_title": "Localização",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "iframe",
                     "evento_section_content": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3110.7895272481846!2d-9.096604624069382!3d38.76853117175181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd19318570a93b63%3A0x1c465f5bdc842e42!2sAltice%20Arena!5e0!3m2!1sen!2spt!4v1702839614260!5m2!1sen!2spt\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -4856,7 +4856,7 @@
                 },
                 {
                     "evento_section_title": "",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -4983,7 +4983,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Workshops Pré-Congresso",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "A decorrer no dia <strong>18 de Janeiro de 2024</strong>:\r\n14h - Workshop 1: Vida após cancro – Reabilitar o corpo\r\n16h - Workshop 2: Vida após cancro – Reabilitar a mente\r\n\r\nVagas limitadas. Workshops direcionados a Especialistas, Enfermeiros e Outros Profissionais de Saúde.\r\nA inscrição nos workshop’s obriga a inscrição no congresso.",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -4994,7 +4994,7 @@
                 },
                 {
                     "evento_section_title": "Inscrição",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "<strong>Até 20 de dezembro </strong>\r\nProfissionais de Saúde dos IPO’s 30,00 € \r\nInternos 60,00 €\r\nEspecialistas, Enfermeiros, e Outros Profissionais de Saúde 100,00 \r\n\r\n<strong>A partir de 20 de dezembro</strong>\r\nProfissionais de Saúde dos IPO’s 50,00 €\r\nInternos 100,00 €\r\nEspecialistas, Enfermeiros, e Outros Profissionais de Saúde 160,00 €\r\n\r\nInscreva-se <a href=\"https://www.eventbase.pt/EventBase/Inscricoes/PaginaInscricaoIndividual.aspx?Params=RXZlbnRvSUQ9ODI5\" rel=\"noopener\" target=\"_blank\">AQUI</a>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -5005,7 +5005,7 @@
                 },
                 {
                     "evento_section_title": "Submissão de Trabalhos",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Data limite para envio de resumos:\r\n18 de dezembro de 2023\r\n\r\nConsulte o <a href=\"https://www.admedic.pt/uploads/regulamento_2-congresso-nacional-de-oncosexologia.pdf\" rel=\"noopener\" target=\"_blank\">Regulamento para envio de <em>abstracts</em></a>\r\ne faça a sua <a href=\"https://www.eventbase.pt/Eventbase/Login/LoginAdmedic.aspx/Login.aspx?EventoID=829\" rel=\"noopener\" target=\"_blank\">Submissão de Trabalhos</a>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -5016,7 +5016,7 @@
                 },
                 {
                     "evento_section_title": "Localização",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "iframe",
                     "evento_section_content": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3003.267409145071!2d-8.613106723951221!3d41.17233437132803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd24644c2147cacb%3A0x550767b9a331ff0c!2sSec%C3%A7%C3%A3o%20Regional%20do%20Norte%20da%20Ordem%20dos%20M%C3%A9dicos!5e0!3m2!1sen!2spt!4v1702555805349!5m2!1sen!2spt\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -5144,7 +5144,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Galeria",
-                    "evento_section_type": "Fotografias",
+                    "evento_section_type": "images",
                     "evento_section_content": "Datas limite para inscrição:\r\n13-02-2024 - a preço reduzido\r\n01-03-2024 - a preço normal",
                     "evento_section_gallery": [
                         36993,
@@ -5232,7 +5232,7 @@
                 },
                 {
                     "evento_section_title": "Localização",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "iframe",
                     "evento_section_content": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3049.3844931999492!2d-8.869935787212158!3d40.15599227136373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2237bcf6af69a9%3A0xb45a8a3e636da2ef!2sEurostars%20Oasis%20Plaza!5e0!3m2!1sen!2spt!4v1701787417797!5m2!1sen!2spt\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -5353,7 +5353,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "CURSOS PRÉ-CONGRESSO",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Mediante a inscrição no congresso, pode escolher um dos seguintes cursos:\r\n\r\n• Curso 1 | Formação em investigação clínica\r\n\r\n• Curso 2 | Ecografia na tiroide\r\nReservado a Endocrinologistas e Internos de Endocrinologia\r\n\r\n• Curso 3 | Tecnologia em diabetes\r\nReservado a Endocrinologistas e Internos de Endocrinologia\r\n\r\n• Curso 4 | Endocrinologia da transição\r\nReservado a Endocrinologistas e Internos de Endocrinologia\r\n\r\n• Curso 5 | Nutrição",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -5364,7 +5364,7 @@
                 },
                 {
                     "evento_section_title": "SUBMISSÃO DE TRABALHOS",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Data limite para envio de abstracts: 27 de novembro de 2023\r\n\r\n• Prémio de Investigação Clínica\r\n• Prémio de Investigação Básica\r\n• Prémio Caso Clínico\r\n• Prémio de Casuística\r\n\r\nSubmissão de trabalhos <a href=\"https://www.eventbase.pt/Eventbase/Login/LoginAdmedic.aspx/Login.aspx?EventoID=863\" rel=\"noopener\" target=\"_blank\">AQUI</a>\r\n",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -5375,7 +5375,7 @@
                 },
                 {
                     "evento_section_title": "Localização",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "iframe",
                     "evento_section_content": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d203705.6489225599!2d-8.3860212667503!3d37.083670329075446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ab54c6a420d71%3A0x3bf3ec27474f01ec!2sCentro%20de%20Congressos%20do%20Algarve!5e0!3m2!1sen!2spt!4v1700149424883!5m2!1sen!2spt\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -5476,7 +5476,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Sobre",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "A reunião \"Prevenção das Complicações no Local Cirúrgico em Cirurgia abdominal – o papel da Pressão Negativa Incisional\" é um evento científico organizado pela Smith+Nephew Academy, com o patrocínio científico da Sociedade Portuguesa de Ginecologia e da Sociedade Portuguesa de Cirurgia.\r\n\r\n",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -5487,7 +5487,7 @@
                 },
                 {
                     "evento_section_title": "Destinatários",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "· Cirurgiões interessados na prevenção das Complicações do Local Cirúrgico em cirurgia abdominal\r\n· Enfermeiros do Bloco Operatório e de serviços Cirúrgicos",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -5498,7 +5498,7 @@
                 },
                 {
                     "evento_section_title": "Incrição",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Para se registar, entre em contato com seu representante Smith+Nephew, através deste <a href=\"mailto:Sonia.Albuquerque@smith-nephew.com\" rel=\"noopener\" target=\"_blank\">e-mail</a>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -5509,7 +5509,7 @@
                 },
                 {
                     "evento_section_title": "Localização",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "iframe",
                     "evento_section_content": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3005.4765482841426!2d-8.617343723953663!3d41.12412177133454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd246515a07cc691%3A0x2e28021027937399!2sHoliday%20Inn%20Porto%20-%20Gaia!5e0!3m2!1sen!2spt!4v1698753365568!5m2!1sen!2spt\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe><a href=\"https://spginecologia.pt/wp-content/uploads/2023/10/Reuniao-SN-Porto_13Dez2023.pdf\">Reunião S+N Porto_13Dez2023</a>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -5629,7 +5629,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "informações",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "10º Congresso Europeu de Colposcopia, organizado pela Federação Europeia de Colposcopia (EFC) em colaboração com a Associação de Obstetras e Ginecologistas da Letónia, subordinado ao tema <strong>\"Working towards the elimination of cervical and other HPV associated cancers in Europe.\"</strong>.",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -5640,7 +5640,7 @@
                 },
                 {
                     "evento_section_title": "Submissão de Abstracts",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Prazo de envio: 1 de junho de 2024\r\n\r\n<a href=\"https://congress2024.efcolposcopy.eu/wp-content/uploads/2024/02/EFC_ABSTRACT-GUIDELINES_X-CONGRESS.pdf\" rel=\"noopener\" target=\"_blank\">Regulamento ></a>\r\n<a href=\"https://congress2024.efcolposcopy.eu/abstracts/\" rel=\"noopener\" target=\"_blank\">Submissões ></a>\r\n",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -5651,7 +5651,7 @@
                 },
                 {
                     "evento_section_title": "Localização",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "iframe",
                     "evento_section_content": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2175.645153658564!2d24.1175502!3d56.954880599999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eecfce0d41abd7%3A0xb77b7d3e806511c8!2sRadisson%20Blu%20Latvija%20Conference%20%26%20Spa%20Hotel%2C%20Riga!5e0!3m2!1sfr!2spt!4v1709514621281!5m2!1sfr!2spt\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -5768,7 +5768,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Sobre a Sessão",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Tema: Histeropexia vs. Histerectomia no tratamento de prolapso apical\r\nModerador: Jorge Haddad\r\n",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -5779,7 +5779,7 @@
                 },
                 {
                     "evento_section_title": "Inscrição",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Sessão Interativa online, via Zoom.\r\nWebinar Gratuito mediante inscrição <a href=\"https://us02web.zoom.us/webinar/register/WN_SThg4ct5Ri6XS9ro0bE0EQ#/registration\">AQUI</a> \r\n",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -5790,7 +5790,7 @@
                 },
                 {
                     "evento_section_title": "Idioma",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "A sessão será conduzida em espanhol.",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -5895,7 +5895,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Público-Alvo",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Especialista e Estagiários em Ginecologia e Obstetrícia com especial interesse em Uroginecologia, Medicina Pélvica Feminina e Cirurgia reconstrutora.\r\nA língua oficial do curso é o inglês.",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -5906,7 +5906,7 @@
                 },
                 {
                     "evento_section_title": "Inscrições",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "O curso está limitado a um máximo de 60 participantes.\r\nTaxa do curso: 400 euros\r\nContacto para inscrição <a href=\"mailto:info@molipharma.com\" rel=\"noopener\" target=\"_blank\">AQUI</a>\r\n",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -5917,7 +5917,7 @@
                 },
                 {
                     "evento_section_title": "Localização",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "iframe",
                     "evento_section_content": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5936.539829843066!2d12.423304986860346!3d41.930051068555365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f5e24f7b7aaab%3A0xee4bdf67900ef16b!2sFondazione%20Policlinico%20Universitario%20A.%20Gemelli!5e0!3m2!1sen!2spt!4v1694645920977!5m2!1sen!2spt\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>\r\n",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -6026,7 +6026,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Inscrições",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "TAXAS DE INSCRIÇÃO\r\n\r\nCirurgião \r\nMembro da EUGA € 100,00\r\nNão membro da EUGA € 150,00\r\n\r\nFIO e especialistas em treinamento Membros da EUGA € 70,00\r\nFisioterapeutas, parteiras, enfermeiras, estagiários - Membro da EUGA\r\n\r\nFIO e Especialistas em Treinamento Membros Não-EUGA € 90,00\r\n\r\nFisioterapeutas, parteiras, enfermeiras, estagiários - não membros da EUGA",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -6037,7 +6037,7 @@
                 },
                 {
                     "evento_section_title": "Localização",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "iframe",
                     "evento_section_content": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2777.9336281417523!2d8.974182576296403!3d45.8726374710836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478429c8fb26b813%3A0xa7819b520769e173!2sCoronado!5e0!3m2!1sen!2spt!4v1694645140466!5m2!1sen!2spt\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -6146,7 +6146,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Informações gerais",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Toda as informações sobre o evento (inscrições, alojamento, jantar da EUGA, UEMS/créditos CME)\r\n <a href=\"https://www.eugacongress.org/generalinfo2023\" rel=\"noopener\" target=\"_blank\">AQUI</a>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -6157,7 +6157,7 @@
                 },
                 {
                     "evento_section_title": "Workshops",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Todos os workshops estão agendados para o dia 19 de outubro, das 14h30 às 16h30.\r\nSaiba mais <a href=\"https://www.eugacongress.org/workshops-23\" rel=\"noopener\" target=\"_blank\">AQUI</a>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -6168,7 +6168,7 @@
                 },
                 {
                     "evento_section_title": "Localização",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "iframe",
                     "evento_section_content": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2779.8586551801723!2d8.827314476294255!3d45.834111971082514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47867fd3db72380f%3A0x4d1cfe795b78cbaa!2sUNAHOTELS%20Varese!5e0!3m2!1sen!2spt!4v1694642962245!5m2!1sen!2spt\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -6277,7 +6277,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Destinatários",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "O Curso destina-se a internos e especialistas de Ginecologia e Obstetrícia, assim como internos e especialistas de Medicina Geral e Familiar.",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -6288,7 +6288,7 @@
                 },
                 {
                     "evento_section_title": "Inscrição",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Data limite: 26-01-2024\r\nValor: 130,00 €\r\n(Número de inscrições limitadas)",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -6299,7 +6299,7 @@
                 },
                 {
                     "evento_section_title": "Localização",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "iframe",
                     "evento_section_content": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3046.7601588508373!2d-8.438754723999002!3d40.21439777147279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd22f903380f501d%3A0x1fdbd485c47bb15c!2sHotel%20NH%20Coimbra%20Dona%20In%C3%AAs!5e0!3m2!1sen!2spt!4v1694640619165!5m2!1sen!2spt\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -6404,7 +6404,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Inscrição",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Evento online\r\nInscrições abertas até dia 2 de outubro às 16h (CET)\r\n\r\nEstagiários/Enfermeiros: 15€\r\nMédicos: 20€",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -6513,7 +6513,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Inscrições",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Data limite: 27 outubro 2023\r\nValor: 25€ ",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -6524,7 +6524,7 @@
                 },
                 {
                     "evento_section_title": "Submissão de Casos Clínicos",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Data limite: 30 de setembro 2023\r\nRegulamento: <a href=\"https://www.ipolisboa.min-saude.pt/wp-content/uploads/2023/08/REGULAMENTO_1as-JORNADAS-GINECOLOGIA-ONCOLOGICA-MEDICOS-FAMILIA.pdf\" rel=\"noopener\" target=\"_blank\">AQUI</a>\r\n\r\n",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -6535,7 +6535,7 @@
                 },
                 {
                     "evento_section_title": "Localização",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "iframe",
                     "evento_section_content": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6224.090381302096!2d-9.170381822290016!3d38.73972520000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd193311267fec85%3A0x17e36507b6c61cdf!2sOncology%20Institute%20Francisco%20Gentil!5e0!3m2!1sen!2spt!4v1694457969834!5m2!1sen!2spt\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -6640,7 +6640,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Destinatários",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Os estudantes a admitir devem ser Médicos Internos de Formação Específica e Jovens Especialistas.",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -6651,7 +6651,7 @@
                 },
                 {
                     "evento_section_title": "Candidaturas",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Período de candidatura: 6 de julho a 8 de setembro de 2023",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -6662,7 +6662,7 @@
                 },
                 {
                     "evento_section_title": "Horário",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "O curso decorrerá de 20 a 25 de novembro de 2023\r\nno seguinte horário: 9h-13h /14h-19h",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -6673,7 +6673,7 @@
                 },
                 {
                     "evento_section_title": "Localização",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "iframe",
                     "evento_section_content": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3046.5440743358763!2d-8.418231623998775!3d40.219203671472044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd22f96daa84978d%3A0x7c3e49aa685dcdea!2sFMUC%20-%20Subunidade%203!5e0!3m2!1sen!2spt!4v1691059666616!5m2!1sen!2spt\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -6684,7 +6684,7 @@
                 },
                 {
                     "evento_section_title": "Mais Informações",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "<strong>Gabinete de Estudos Avançados</strong>\r\nTelefone: +351 239 857 729\r\ne-mail: gea@fmed.uc.pt\r\n<strong>﻿Gestão Académica | Estudos Pós-Graduados</strong>\r\nTelefone: + 351 239 857 720\r\ne-mail: posgraduado@fmed.uc.pt\r\n\r\nMais informações sobre o curso <a href=\"https://apps.uc.pt/courses/PT/course/10981\" rel=\"noopener\" target=\"_blank\">AQUI</a>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -6804,7 +6804,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Galeria",
-                    "evento_section_type": "Fotografias",
+                    "evento_section_type": "images",
                     "evento_section_content": "Datas limite para inscrição: \r\n12 de dezembro 2023 - preço reduzido\r\n5 de janeiro de 2024 - preço normal",
                     "evento_section_gallery": [
                         36046,
@@ -6832,7 +6832,7 @@
                 },
                 {
                     "evento_section_title": "Localização",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "iframe",
                     "evento_section_content": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6228.290855471203!2d-9.428184615470057!3d38.691503606453004!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ec69d5e2b97b9%3A0x8c3ec8048184594b!2sGrande%20Real%20Villa%20It%C3%A1lia%20Hotel%20%26%20Spa!5e0!3m2!1sen!2spt!4v1691659675608!5m2!1sen!2spt\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -6953,7 +6953,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Destinatários",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Profissionais de saúde, voluntários, doentes oncológicos, cuidadores formais ou informais. \r\nComunidade em geral, todos quantos sentem o impacto da doença oncológica.",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -6964,7 +6964,7 @@
                 },
                 {
                     "evento_section_title": "Inscrições",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Profissionais de Saúde e Público em geral: 1 Dia - 35€   |   2 Dias - 50€\r\nEstudantes e Voluntários (área oncologia): 1 Dia - 20€   |   2 Dias - 30€\r\nDoentes Oncológicos e Voluntários LPCC: Gratuito\r\n",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -6975,7 +6975,7 @@
                 },
                 {
                     "evento_section_title": "Submissão de Abstracts",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Data limite para envio de <em>abstracts</em>: 18 de Setembro de 2023\r\n<a href=\"https://www.ligacontracancro.pt/cnpodd-2023-abstracts-cnpodd/\" rel=\"noopener\" target=\"_blank\">REGULAMENTO PARA SUBMISSÃO DE ABSTRACTS</a>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -7084,7 +7084,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Destinatários",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Profissionais de saúde (nomeadamente médicos, enfermeiros, nutricionistas, fisioterapeutas, assistentes sociais e psicólogos) ligados ao tratamento do doente com osteoporose e outras doenças ósseas metabólicas.",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -7095,7 +7095,7 @@
                 },
                 {
                     "evento_section_title": "Inscrições",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Sócio SPODOM: Inscrição Gratuita\r\nNão Sócio: 30,00€",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -7200,7 +7200,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Destinatários",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Médicos internos e especialistas em\r\nGinecologia/Obstetrícia e Radiologia.",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -7211,7 +7211,7 @@
                 },
                 {
                     "evento_section_title": "Inscrições",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Candidaturas até 02.10.2023\r\n\r\nCandidatura: 51€\r\nInscrição: 35€\r\nSeguro Escolar: 1.35€\r\nFrequência: 1000€",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -7222,7 +7222,7 @@
                 },
                 {
                     "evento_section_title": "Critérios de Seleção",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "1) Licenciatura em Medicina\r\n2) Ordem de inscrição para o curso",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -7233,7 +7233,7 @@
                 },
                 {
                     "evento_section_title": "Horários",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Formato Presencial\r\nSextas-feiras: 16h00 às 20h00\r\nSábados: 09h00 às 13h00\r\n",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -7244,7 +7244,7 @@
                 },
                 {
                     "evento_section_title": "Localização",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "iframe",
                     "evento_section_content": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3112.903978437818!2d-9.144146069884265!3d38.72001348893009!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd19347a6b91c653%3A0x34754c7fa7c00c26!2sNova%20Medical%20School!5e0!3m2!1sen!2spt!4v1688655757138!5m2!1sen!2spt\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -7353,7 +7353,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Localização",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "iframe",
                     "evento_section_content": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3111.3260816244438!2d-9.19521262361452!3d38.75622437175442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ecdb491a3ba9b%3A0x4240874c1a229d33!2sHospital%20da%20Luz%20Learning%20Health!5e0!3m2!1sen!2spt!4v1684272689968!5m2!1sen!2spt\" width=\"400\" height=\"300\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -7364,7 +7364,7 @@
                 },
                 {
                     "evento_section_title": "Destinatários",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Médicos Internos e Especialistas das Especialidades de:\r\n\r\nGinecologia / Obstetrícia\r\nDermatologia \r\nMedicina Geral e Familiar\r\nEnfermeiros\r\nEstudantes de Medicina",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -7375,7 +7375,7 @@
                 },
                 {
                     "evento_section_title": "Inscrições",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Médicos Internos, Médicos, Enfermeiros e Estudantes:\r\nDesde 120€",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -7682,8 +7682,8 @@
             "evento_section": [
                 {
                     "evento_section_title": "Apresentação do Curso",
-                    "evento_section_type": "Texto",
-                    "evento_section_content": "O curso SCIENCE COMMUNICATION: PEER REVIEW com coordenação de Helena Donato (MLS, MSIS) e João Subtil (MD, PhD), irá realizar-se no dia 23 de Maio, em Lisboa.\r\n\r\nPeer review é a base sobre a qual se constrói a credibilidade da comunicação científica e é baseada nos conhecimentos e experiência dos revisores em publicação científica. No entanto, é importante que os revisores saibam como ajudar os autores a aumentar o valor dos artigos submetidos, e como aumentar a importância da sua revista, identificando falhas (e corrigindo-as quando possível), algumas menores - como parcialidade, ou erros de escrita / cópia, erros estatísticos, ou corte do texto - e algumas mais graves - como fraude, conflitos de interesse, plágio, ou falsas alegações.\r\n\r\n",
+                    "evento_section_type": "text",
+                    "evento_section_content": "O curso SCIENCE COMMUNICATION: PEER REVIEW com coordenação de Helena Donato (MLS, MSIS) e João Subtil (MD, PhD), irá realizar-se no dia 23 de Maio, em Lisboa.\r\n\r\nPeer review é a base sobre a qual se constrói a credibilidade da comunicação científica e é baseada nos conhecimentos e experiência dos revisores em publicação científica. No entanto, é importante que os revisores saibam como ajudar os autores a aumentar o valor dos artigos submetidos, e como aumentar a importância da sua revista, identificando falhas (e corrigindo-as quando possível), algumas menores - como parcialidade, ou erros de escrita / cópia, erros estatísticos, ou corte do text - e algumas mais graves - como fraude, conflitos de interesse, plágio, ou falsas alegações.\r\n\r\n",
                     "evento_section_gallery": null,
                     "evento_section_video": {
                         "evento_section_video_source": "Ficheiro",
@@ -7693,7 +7693,7 @@
                 },
                 {
                     "evento_section_title": "Objetivos",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Este curso visa ensinar todas as ferramentas que um revisor deve dominar:\r\n- Trabalho geral (verificar o cumprimento das instruções das revistas por parte dos autores, qualidade da ortografia geral, relevância geral e admissibilidade, conformidade ética);\r\n- Ferramentas para excluir o plágio, manipulação de dados, uso indevido de fotografia ou imagem ou falsificação;\r\n- Avaliação da qualidade da análise estatística;\r\n- Excluir preconceitos e erros comuns.",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -7704,7 +7704,7 @@
                 },
                 {
                     "evento_section_title": "Inscrições",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Data limte: <strong>19 de Maio de 2023</strong>\r\nCusto: <strong>250€</strong>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -7813,7 +7813,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Localização",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "iframe",
                     "evento_section_content": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3111.3260816244438!2d-9.19521262361452!3d38.75622437175442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ecdb491a3ba9b%3A0x4240874c1a229d33!2sHospital%20da%20Luz%20Learning%20Health!5e0!3m2!1sen!2spt!4v1684272689968!5m2!1sen!2spt\" width=\"400\" height=\"300\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -7824,7 +7824,7 @@
                 },
                 {
                     "evento_section_title": "Destinatários",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "- Especialistas, internos em Ginecologia;\r\n- Outras especialidades cirúrgicas (Urologia, Cirurgia Pediatrica, Cirurgia Geral) que pretendam adquirir conhecimentos avançados nesta área.",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -7835,7 +7835,7 @@
                 },
                 {
                     "evento_section_title": "Inscrições",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Geral:  350€\r\nColaboradores da Luz Saúde: 250€",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -7944,7 +7944,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Localização",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "iframe",
                     "evento_section_content": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12110.540198079307!2d-8.6438331!3d40.6379297!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd239809607a20d1%3A0x4a72707a873fa292!2sAveiro%20Congress%20Center!5e0!3m2!1sen!2spt!4v1676289774151!5m2!1sen!2spt\" width=\"400\" height=\"300\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -8154,7 +8154,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Localização",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "iframe",
                     "evento_section_content": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2985.393296149506!2d-8.398425484568781!3d41.56073187924855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd24fc279db73165%3A0x753290b0d1b763f0!2sUniversity%20of%20Minho%20-%20Campus%20of%20Gualtar!5e0!3m2!1sen!2spt!4v1676288786769!5m2!1sen!2spt\" width=\"400\" height=\"300\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -8165,7 +8165,7 @@
                 },
                 {
                     "evento_section_title": "Grupo Alvo",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Residentes e especialistas interessados ​​em laparoscopia ginecológica.",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -8270,7 +8270,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Galeria",
-                    "evento_section_type": "Fotografias",
+                    "evento_section_type": "images",
                     "evento_section_content": "Data limite para Inscrições - <strong>30 de Abril de 2023</strong>\r\nData limite para Submissão de Trabalhos - <strong>04 de Maio de 2023</strong>\r\n\r\nRegulamento para Submissão de Comunicações Orais, Posters, Imagens e Vídeos <a href=\"https://www.admedic.pt/uploads/regulamento_201-reunia-o-da-sociedade-portuguesa-de-ginecologia.pdf\">AQUI</a>\r\n\r\n",
                     "evento_section_gallery": [
                         32484,
@@ -8388,7 +8388,7 @@
                 },
                 {
                     "evento_section_title": "Localização",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "iframe",
                     "evento_section_content": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3122.759253365809!2d-8.905391884592403!3d38.49319677827266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd193379f70018d3%3A0x1178cdc60daa0bce!2sTroia%20Design%20Hotel!5e0!3m2!1sen!2spt!4v1674745359237!5m2!1sen!2spt\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                     "evento_section_gallery": "",
                     "evento_section_video": {
@@ -8399,7 +8399,7 @@
                 },
                 {
                     "evento_section_title": "Inscrições e Submissão de Abstracts",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Data limite para Inscrições - <strong>30 de Abril de 2023</strong>\r\nData limite para Submissão de Trabalhos - <strong>04 de Maio de 2023</strong>\r\n\r\nRegulamento para Submissão de Comunicações Orais, Posters, Imagens e Vídeos <a href=\"https://www.admedic.pt/uploads/regulamento_201-reunia-o-da-sociedade-portuguesa-de-ginecologia.pdf\">AQUI</a>\r\n\r\n",
                     "evento_section_gallery": "",
                     "evento_section_video": {
@@ -8410,7 +8410,7 @@
                 },
                 {
                     "evento_section_title": "",
-                    "evento_section_type": "Fotografias",
+                    "evento_section_type": "images",
                     "evento_section_content": "",
                     "evento_section_gallery": "",
                     "evento_section_video": {
@@ -8519,8 +8519,8 @@
             "evento_section": [
                 {
                     "evento_section_title": "Sobre o Curso",
-                    "evento_section_type": "Texto",
-                    "evento_section_content": "O CETEC (Centro de Ensino e Treino Endoscópico e Cirúrgico) do Hospital CUF Porto vai organizar um curso de atualização em cirurgia reprodutiva, intitulado “How can surgery help fertility? Key questions in reproductive surgery” no dia 14 de Abril de 2023.\r\n\r\nO curso irá explorar a forma como a escolha criteriosa das indicações, do timing e das técnicas de cirurgia minimamente invasiva podem contribuir quer para a preservação da fertilidade quer para a melhoria da fecundidade, espontânea ou em contexto de reprodução medicamente assistida.\r\n",
+                    "evento_section_type": "text",
+                    "evento_section_content": "O CETEC (Centro de Ensino e Treino Endoscópico e Cirúrgico) do Hospital CUF Porto vai organizar um curso de atualização em cirurgia reprodutiva, intitulado “How can surgery help fertility? Key questions in reproductive surgery” no dia 14 de Abril de 2023.\r\n\r\nO curso irá explorar a forma como a escolha criteriosa das indicações, do timing e das técnicas de cirurgia minimamente invasiva podem contribuir quer para a preservação da fertilidade quer para a melhoria da fecundidade, espontânea ou em context de reprodução medicamente assistida.\r\n",
                     "evento_section_gallery": null,
                     "evento_section_video": {
                         "evento_section_video_source": "Ficheiro",
@@ -8530,7 +8530,7 @@
                 },
                 {
                     "evento_section_title": "Inscrições",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Valor de inscrição: <strong>120€</strong>.",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -8541,7 +8541,7 @@
                 },
                 {
                     "evento_section_title": "Localização",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "iframe",
                     "evento_section_content": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3412.2073697211235!2d-8.671385384580791!3d41.176214779284116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd246f5d11509baf%3A0x4c711cc7c64f3463!2sHospital%20CUF%20Porto!5e1!3m2!1sen!2spt!4v1674811887519!5m2!1sen!2spt\" width=\"400\" height=\"300\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -8650,7 +8650,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Inscrições",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "<strong>Data limite para inscrições:</strong> 20 de Fevereiro às 16:00h.\r\n\r\n<strong>Enfermeiros:</strong> 15€ \r\n<strong>Médicos:</strong> 20€\r\n \r\n\r\n<strong>Política de Cancelamento:</strong>\r\nO pedido de cancelamento deve ser feito até uma semana antes do evento.\r\nDepois desta data, é apenas devolvido 50% do valor total.",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -8751,7 +8751,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Informações",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Para mais informações: <strong>formacaofmcb@ualg.pt</strong>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -8856,7 +8856,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Data e Localização",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "O 9º Curso Teórico-Prático de Patologia Benigna da Vulva irá realizar-se nos dias 17 e 18 de Fevereiro de 2023, no Hotel Dona Inês, em Coimbra.\r\n\r\n<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3046.754776762983!2d-8.43832438434915!3d40.214517479389194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd22f903380f501d%3A0x1fdbd485c47bb15c!2sHotel%20Dona%20In%C3%AAs!5e0!3m2!1sen!2spt!4v1673300488232!5m2!1sen!2spt\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -8867,7 +8867,7 @@
                 },
                 {
                     "evento_section_title": "Inscrições",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Inscrição até ao dia 13 de Fevereiro de 2023, com um custo de 200€.\r\n\r\nLimite de 60 vagas.",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -8878,7 +8878,7 @@
                 },
                 {
                     "evento_section_title": "Outras informações",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "O Curso destina-se a internos e especialistas de Ginecologia e Obstetrícia, assim como para internos e especialistas de Medicina Geral e Familiar.",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -9080,7 +9080,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Data e localização",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "O Hospital da Luz Learning Health e o Hospital da Luz Lisboa vão realizar dias 26 e 27 de Janeiro de 2023 o 22nd Gynecological Endoscopy Course, no auditório do Hospital da Luz Lisboa e via Webinar.\r\n\r\n<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13660.670741830281!2d-9.1924904!3d38.7562!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe63132e07b20596e!2sHospital%20da%20Luz!5e1!3m2!1sen!2spt!4v1671655787979!5m2!1sen!2spt\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -9185,7 +9185,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Data e localização",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "A 200º Reunião da Sociedade Portuguesa de Ginecologia irá ter lugar nos dias 3 e 4 de Março de 2023, no Hotel Vila Galé Évora. \r\n\r\n<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3119.557286428904!2d-7.920019370138057!3d38.56701270879114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd19e526e1100f89%3A0x8391310d34486853!2sHotel%20Vila%20Gal%C3%A9%20%C3%89vora!5e0!3m2!1sen!2spt!4v1671656853169!5m2!1sen!2spt\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -9196,7 +9196,7 @@
                 },
                 {
                     "evento_section_title": "Inscrições e Submissões de Abstracts",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Data limite para inscrições: <strong>31 de Janeiro de 2023</strong>\r\n\r\nSócios da SPG com quotas em dia: 100€\r\nSócios sem quotas em dia ou Não sócios: 140€\r\n\r\n<a href=\"https://www.admedic.pt/eventos/200-reuniao-da-sociedade-portuguesa-de-ginecologia.html\"><strong>Regulamento para envio de abstracts</strong></a>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -9207,7 +9207,7 @@
                 },
                 {
                     "evento_section_title": "Cursos Pré-Reunião",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Irão realizar-se dois cursos pré-reunião, com inscrições limitadas.\r\n\r\n<strong>Curso 1 – </strong>Curso de Sutura\r\n\r\n<strong>Curso 2 – </strong>Curso de Técnicas cirúrgicas em 10 passos\r\n\r\n",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -9316,7 +9316,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Submissão de trabalhos",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Pode consultar o regulamento de envio dos abstracts <a href=\"https://www.spedm2023.pt/#Resumos\">AQUI</a></strong>\r\n\r\nData limite para submissões de trabalhos - <strong>22 de Novembro de 2022</strong>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -9327,7 +9327,7 @@
                 },
                 {
                     "evento_section_title": "Localização",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "<strong>Centro de Congressos do Algarve</strong>\r\nMarina de Vilamoura,\r\n8125-901 Quarteira\r\n\r\n<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12733.161789895199!2d-8.1214031!3d37.0743887!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ab54c6a420d71%3A0x3bf3ec27474f01ec!2sCentro%20de%20Congressos%20do%20Algarve!5e0!3m2!1sen!2spt!4v1667933912761!5m2!1sen!2spt\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -9432,7 +9432,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Localização",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "iframe",
                     "evento_section_content": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12447.964096157464!2d-9.1427027!3d38.7409682!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe701a19fb84b38e!2sCulturgest!5e0!3m2!1sen!2spt!4v1671657266254!5m2!1sen!2spt\" width=\"400\" height=\"300\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -9537,7 +9537,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Data e localização",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "A 199ª Reunião da SPG irá realizar-se nos dias <strong>13 e 14 de Janeiro de 2023 no Hotel Hilton Porto Gaia.</strong>\r\n\r\n<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12019.783519533641!2d-8.6185261!3d41.1357074!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd24657ccf99eb49%3A0x8352725ecb1cd8f5!2sHilton%20Porto%20Gaia!5e0!3m2!1sen!2spt!4v1667935813420!5m2!1sen!2spt\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -9548,7 +9548,7 @@
                 },
                 {
                     "evento_section_title": "Submissão de Trabalhos",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "<a href=\"https://www.admedic.pt/uploads/regulamento_199-reunia-o-da-spg.pdf\">Consulte aqui o regulamento</a> para submissão de comunicações orais, posters imagens. \r\n\r\nData limite para envio de abstracts - <strong>18 de Dezembro de 2022</strong>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -9559,7 +9559,7 @@
                 },
                 {
                     "evento_section_title": "Incrições",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Inscrições abertas até dia <strong>13 de Dezembro de 2022</strong>.\r\n\r\nEspecialistas com quotas em dia - 120€\r\nSócios Internos com quotas em dia - 50€\r\nSem quotas em dia ou Não Sócios - 200€\r\n\r\n",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -9570,7 +9570,7 @@
                 },
                 {
                     "evento_section_title": "Cursos e Workshops",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Incrições no curso <strong>Síndrome do ovário policístico (SOP)</strong> abertas até ao dia <strong>9 de Janeiro de 2023</strong>,\r\ncom um custo de <strong>80€</strong>.",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -9580,8 +9580,8 @@
                     }
                 },
                 {
-                    "evento_section_title": "Fotografias do evento",
-                    "evento_section_type": "Fotografias",
+                    "evento_section_title": "images do evento",
+                    "evento_section_type": "images",
                     "evento_section_content": "",
                     "evento_section_gallery": [
                         26353,
@@ -10016,7 +10016,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Informações",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Este webinar irá ser co-apresentado pela Sociedade Suéca de Colposcopia.\r\n\r\nTaxas de inscrições:\r\nEnfermeiras(os): 15€ \r\nMédicas(os): 20€\r\n\r\n\r\n\r\n\r\n",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -10129,7 +10129,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Informações",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Os cursos pré-congresso realizar-se-ão no dia 25 de Outubro de 2022 entre as 13:00h e as 18:00h, no Pestana Palace Hotel.\r\n\r\nEstes cursos não estão incluídos na taxa de inscrição. Para participar, terá de escolher apenas um, pois ocorrerão à mesma hora, e executar um pagamento extra de 90€ (custo do curso). \r\n\r\nExistem apenas 100 lugares disponíveis para cada curso.",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -10443,7 +10443,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Descrição",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "World-class gynaecologists come together for an intelectual Marathon to support Shanti Ashram, a center of development, learning and collaboration in India. Keynote Lectures and Live Scanning from all over the world.",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -10454,7 +10454,7 @@
                 },
                 {
                     "evento_section_title": "12 Pelvic Sites Contest",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "O Núcleo de Ecografia da Sociedade Portuguesa de Ginecologia tem o prazer de convidar todos os sócios a participar no concurso “<strong>12 Pelvic Sites Contest</strong>”, integrado no projeto científico internacional intitulado “<strong>Ultrasound Assessment of Pelvic Anatomy</strong>”, que reúne ginecologistas de todo o mundo.\r\n\r\nO objetivo final é a elaboração de uma biblioteca de vídeos de ecografia da anatomia pélvica feminina. Foram selecionados os seguintes 12 locais anatómicos pélvicos, normais ou com patologia, cuja anatomia deverá ser descrita em vídeo, de uma forma detalhada e com duração máxima de 3 minutos:\r\n\r\n<ol>\r\n<li>Bexiga e ureteres</li>\r\n<li>Retroperitoneu</li>\r\n<li>Colo uterino e paracervix</li>\r\n<li>Ligamentos uterossagrados</li>\r\n<li>Útero (endométrio)</li>\r\n<li>Útero (miométrio)</li>\r\n<li>Trompas</li>\r\n<li>Ovário</li>\r\n<li>Orgãos não ginecológicos</li>\r\n<li>Reto</li>\r\n<li>Pavimento pélvico</li>\r\n<li>Vascularização pélvica</li>\r\n</ol>\r\n\r\nOs vídeos deverão ser enviados para o email <a href=\"mailto:nucleo.ecografia.spg@gmail.com\">nucleo.ecografia.spg@gmail.com</a> até ao dia <strong><em>15 de Outubro de 2022</em></strong>. Será da responsabilidade do Núcleo de Ecografia a seleção final dos 24 melhores vídeos a colocar na plataforma e a submeter a concurso internacional (o nome e a foto do ginecologista autor do vídeo serão apresentados na plataforma, juntamente com o seu vídeo).\r\n\r\n<a href=\"https://spginecologia.pt/wp-content/uploads/2022/08/Regulamento-concurso_ECO.pdf\" rel=\"noopener\" target=\"_blank\">Consultar o regulamento do concurso ›</a>\r\n\r\nPalestrantes de renome mundial vão partilhar a sua experiência em duas mesas redondas, uma sobre a avaliação dos ligamentos úterossagrados e outra sobre a discriminação entre massas pélvicas ginecológicas e não-ginecológicas (<a href=\"https://spginecologia.pt/wp-content/uploads/2022/08/Pelvic-Anatomy_Preliminary-Program-Nov-2022.pdf\" target=\"_blank\">consultar programa</a>). Durante este evento serão anunciados os resultados do “12 Pelvic Site Contest” e os autores dos melhores vídeos selecionados terão a possibilidade de os partilhar durante a sessão de encerramento deste webinar.\r\n\r\nA participação no concurso é gratuita. No entanto, os membros da SPG que queiram assistir ao webinar online de 14 de novembro de 2022 e ter acesso à plataforma “12 pelvic sites” terão de se registar, mediante o pagamento de 90 euros. O lucro deste evento reverte a favor do projeto humanitário <a href=\"https://www.icphhealth.org/\" rel=\"noopener\" target=\"_blank\">Shanti Ashram</a>, uma organização na Índia envolvida em atividades na área da saúde, educação e socioeconómicas, no distrito de Coimbatore.",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -10670,7 +10670,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Localização",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "<strong>Hotel The Oitavos</strong>\r\nRua de Oitavos,\r\n2750-374 Cascais\r\n\r\n<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.634731905451!2d-9.469027448598146!3d38.70323387950097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ec5006d99bd5b%3A0xf35932337908a863!2sThe%20Oitavos!5e0!3m2!1sen!2spt!4v1667241814410!5m2!1sen!2spt\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -10681,7 +10681,7 @@
                 },
                 {
                     "evento_section_title": "Abstracts",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Consulte o regulamento para o envio do abstract: <a href=\"https://www.admedic.pt/uploads/regulamento_198-reunia-o-spg.pdf\" rel=\"noopener\" target=\"_blank\">Regulamento para envio de Abstract</a>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -11177,7 +11177,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "The ICS Meetings give centre-stage to cutting-edge continence research, putting a spotlight on the latest clinical practices, and providing a variety of career opportunities for those interested in continence related issues.\r\n\r\nThe Meeting is multidisciplinary and welcomes urologists, gynaecologists, physiotherapists, nurses, midwives, research scientists, and all those dedicated to improving the lives of patients suffering from continence conditions.\r\n\r\nThe abstract and workshop submissions are now open and will close on 4th April.\r\n\r\nIf you’re worried about submitting because of COVID-19, we will make sure that if your abstract is accepted, you will have some capacity to present your work whether you can attend or not.",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -11278,7 +11278,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Following the two IUGA International Symposia that were held in 2019 and 2021, we are excited to announce the IUGA International Symposium on Birth and Beyond: Management, Assessment, and Prevention of Pelvic Floor Dysfunction which will be held virtually on March 12-13, 2022.\r\n",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -11383,7 +11383,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Description",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "The EUGA Congress is a flagship conference for Urogynecologists in Europe and represents one of the largest gatherings of researchers and healthcare professionals in the field. EUGA 2022 conference will bring together delegates and key opinion leaders from around Europe to discuss on a wide range of topics. Lectures, debates, open questions, symposia, workshops and abstract sessions will keep you  up-to-date with the latest advances in urogynaecology, thanks to the contribution of renowned European experts.\r\n\r\nDon't miss the opportunity to take part!",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -11593,7 +11593,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Inscrições",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Data limite de inscrição a 13 de Maio de 2022",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -11706,7 +11706,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Meeting Fee",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "<strong>In Person</strong>\r\nExternal Professionals: 150€\r\nCUF Collaborators: 150€\r\n\r\n<strong>Online</strong>\r\nExternal Professionals: 125€\r\nCUF Collaborators: 100€",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -11811,7 +11811,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Submissão de Abstracts",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Data de abertura para envio de abstracts: Março de 2022\r\nData limite para envio de abstracts: 15 de Junho de 2022\r\n",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -12025,7 +12025,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Abstract Submission",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Aceda ao site da <a href=\"https://congress2022.efcolposcopy.eu/abstracts/\">European Federation for Colposcopy </a> para enviar o seu trabalho até 31 de Março de 2022.\r\n\r\n\r\n",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -12134,7 +12134,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Submissão de Abstracts",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Data de abertura para envio de Abstracts: 15 de Outubro de 2021\r\nData limite para envio de Abstracts: 31 de Janeiro de 2022",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -12145,7 +12145,7 @@
                 },
                 {
                     "evento_section_title": "",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -12250,7 +12250,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Welcomings",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Dear Colleagues and Friends\r\n\r\nBeing a geographically small country, Portugal has learnt from the past to broaden the horizons by travelling around the world, meeting New Worlds and New People. This spirit is represented in the congress’ image. This legacy persists nowadays in the way we welcome those who comes to visit us.\r\nLeaving lockdown times after the pandemic, we are recovering in 2022 the ESGE Annual Congress we have lost in 2020. Lisbon has been waiting for you for 2 years!\r\nMinimally Invasive Surgery will be an important keystone of high value care in health care systems. Gynecological Endoscopy must stand\r\nat its best in these challenging days. Therefore we all will have to make Excellence a habit!\r\nThe Scientific committee has planned a programme to contribute to the excellence of knowledge in Gynecological Endoscopy.\r\nThe Programme will include Pre-Congress Courses, live surgical sessions, GESEA Certification exams and some new and exciting additions to be announced later.\r\nBut, as we know that joining us and sharing your experience is truly essential to achieve the excellence that we expect for this meeting, we warmly welcome you in Lisbon.\r\n\r\nYours sincerely,\r\n\r\nProf. Giovanni Scambia, Dr. Luis Vicente, Dr. António Setúbal, Prof. Attilio Di Spiezio Sardo",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -12261,7 +12261,7 @@
                 },
                 {
                     "evento_section_title": "",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -12463,7 +12463,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Apresentação",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "O CETEC Endoscopic Weekend decorrerá nos dias 19 e 20 de novembro de 2021, no Hospital CUF Porto.\r\n\r\nO dia 19 de novembro será dedicado ao treino em simuladores, com duas sessões Hands-on: \"Hands-on 1: training for GESEA certification ” e “Hands-on 2: Suture training”.\r\n\r\nNo dia 20 teremos uma manhã teórica com o curso \"Update Course in Laparoscopic Hysterectomy: Do it as an expert\", seguido de sessões de certificação GESEA nos níveis 1 e 2.",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -12574,8 +12574,8 @@
             },
             "evento_section": [
                 {
-                    "evento_section_title": "Fotografias",
-                    "evento_section_type": "Fotografias",
+                    "evento_section_title": "images",
+                    "evento_section_type": "images",
                     "evento_section_content": "Aceda à sua área pessoal no <a href=\"https://www.admedic.pt/eventos/197-reunia-771-o-da-spg-ginecologia-oncolo-769-gica.html\">site da Admedic aqui</a> para enviar o seu trabalho até 21 de Dezembro de 2021.",
                     "evento_section_gallery": [
                         8720,
@@ -12865,7 +12865,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Imagem do Evento",
-                    "evento_section_type": "Fotografias",
+                    "evento_section_type": "images",
                     "evento_section_content": "<img src=\"https://spginecologia.pt/wp-content/uploads/2021/09/FSPOG2020_Marcador-digital_10Mar2021-2-300x98.webp\"/>",
                     "evento_section_gallery": [
                         1501
@@ -12988,7 +12988,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Informações e Candidaturas",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Contactar a <strong>Divisão Académica — Secção de Pós-Graduação da Universidade Nova de Lisboa</strong>\r\n\r\nEmail: posgraduacao@nms.unl.pt\r\nTel: +351 218 803 066\r\n\r\nCampo Mártires da Pátria 130,\r\n1169-056 Lisboa",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -13107,7 +13107,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Consulte todos os detalhes na Página Oficial do evento.",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -13230,7 +13230,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Localização",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "<strong>Centro de Congressos do Estoril</strong>\r\nAv. Amaral, 2765-192 Estoril\r\n\r\n<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.490724177962!2d-9.398421684666863!3d38.7065410796005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ec5c46c9ae475%3A0xd1d05a0a8e3af705!2sEstoril%20Convention%20Center!5e0!3m2!1sen!2spt!4v1653347519941!5m2!1sen!2spt\" width=\"100%\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -13241,7 +13241,7 @@
                 },
                 {
                     "evento_section_title": "Contactos Úteis",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "<strong>Secretariado AdMedic:</strong>\r\n+351 218 429 710\r\npaula.cordeiro@admedic.pt\r\nelsa.sousa@admedic.pt",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -13252,7 +13252,7 @@
                 },
                 {
                     "evento_section_title": "Cursos Pré-Congresso",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Consulte o <a href=\"https://www.admedic.pt/uploads/programa_xv-congresso-portugue-s-de-ginecologia.pdf\" rel=\"noopener\" target=\"_blank\">programa</a> para ver mais detalhes sobre os vários cursos que aconteceram no dia 2 de Junho:\r\n<ul>\r\n   <li>Ecografia e Endometriose</li>\r\n   <li>Infeções Vaginais</li>\r\n   <li>Disfunções Sexuais Femininas</li>\r\n   <li>Patologia Ginecológica na Adolescência</li>\r\n   <li>Suturas em Laparoscopia</li>\r\n   <li>Patologia Mamária - Aspetos Práticos</li>\r\n   <li>Impacto da dor vulvar crónica e do trauma na função sexual feminina</li>\r\n</ul>\r\n\r\n",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -13263,7 +13263,7 @@
                 },
                 {
                     "evento_section_title": "Submissão de Trabalhos",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Consulte o <a href=\"https://www.admedic.pt/uploads/regulamento_xv-congresso-portugue-s-de-ginecologia.pdf\">Regulamento para o envio de Abstracts</a>.\r\n\r\n<a class=\"button_muted\" target=\"_blank\" href=\"https://www.admedic.pt/uploads/regulamento_xv-congresso-portugue-s-de-ginecologia.pdf\">Regulamento para o envio de Abstracts</a>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -13273,8 +13273,8 @@
                     }
                 },
                 {
-                    "evento_section_title": "Fotografias do Congresso",
-                    "evento_section_type": "Fotografias",
+                    "evento_section_title": "images do Congresso",
+                    "evento_section_type": "images",
                     "evento_section_content": "<div class=\"message\"><strong>Submissões encerradas</strong></div>\r\n\r\nConsulte o <a href=\"https://www.admedic.pt/uploads/regulamento_xv-congresso-portugue-s-de-ginecologia.pdf\">Regulamento para o envio de Abstracts</a> e submeta o seu trabalho para apreciação.\r\n\r\n<a class=\"button_muted\" target=\"_blank\" href=\"https://www.admedic.pt/uploads/regulamento_xv-congresso-portugue-s-de-ginecologia.pdf\">Regulamento para o envio de Abstracts</a>\r\n\r\n<a class=\"button_muted\" target=\"_blank\" href=\"https://congressospg.admediceventos.pt/\">Submeter Trabalhos</a>",
                     "evento_section_gallery": [
                         16469,
@@ -13658,7 +13658,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Dear colleagues,\r\n\r\nWe are very pleased to announce this EOTTD online meeting. It is the first online meeting of this organization. Although, we would have loved to see you in real life in the beautiful city of Porto, the pandemic has forced us to organize this online meeting.\r\nNevertheless, we have an exciting and interactive program for you and we even will have digital online drinks and a pubquiz with nice prizes.\r\nDon’t miss out and attend this free but interesting meeting!\r\n\r\nWarm regards,\r\n\r\nOn behalf of the Organizing Committee and the EOTTD Board\r\n\r\nMiguel Abreu, Michael Seckl, Christianne Lok, Nienke van Trommel, Ulrika Joneborg, Matt Winter, Kamaljit Singh, Francois Golfier, Frederic Goffin, Leon Massuger, Isa Niemann, Pierre-Adrien Bolze",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -13769,7 +13769,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "1ª Sessão - 11 de Janeiro de 2020\r\n\r\n2ª Sessão - 8 de Fevereiro de 2020\r\n\r\n3ª Sessão - 14 de Março de 2020",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -14090,7 +14090,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Uroginecologia\r\nSubespecialidade, o futuro.",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -14205,7 +14205,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Endoscopia Ginecológica Global",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -14525,8 +14525,8 @@
             "evento_section": [
                 {
                     "evento_section_title": "",
-                    "evento_section_type": "Texto",
-                    "evento_section_content": "Participe no Webinar \"<strong>Juntos pelo HPV - Questões práticas sobre prevenção</strong>\", uma iniciativa da MSD Portugal dedicada ao debate sobre a vacinação contra o Papilomavírus Humano no contexto atual, com um painel de especialistas nacionais.",
+                    "evento_section_type": "text",
+                    "evento_section_content": "Participe no Webinar \"<strong>Juntos pelo HPV - Questões práticas sobre prevenção</strong>\", uma iniciativa da MSD Portugal dedicada ao debate sobre a vacinação contra o Papilomavírus Humano no context atual, com um painel de especialistas nacionais.",
                     "evento_section_gallery": null,
                     "evento_section_video": {
                         "evento_section_video_source": "Ficheiro",
@@ -14634,7 +14634,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Conferência Digital",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Comunicações:\r\n<ul>\r\n \t<li>Sessão de Abertura</li>\r\n \t<li>O desafio de não deixar nenhuma pessoa com cancro para trás</li>\r\n \t<li>Portugal e a Europa na resposta aos desafios particulares das doenças oncológicas</li>\r\n \t<li>A pessoa com cancro no centro da investigação oncológica</li>\r\n \t<li>Sessão de Encerramento</li>\r\n</ul>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -14761,7 +14761,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Advanced Colposcopy Course: Virtual Edition",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "<strong>Data:</strong> 6 e 7 de Maio de 2021 - <a href=\"https://efcolposcopy.eu/wp-content/uploads/2021/02/EFC-advanced-colposcopy-course-2021-rev04.pdf\" target=\"_blank\" rel=\"noopener\">Programa</a>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -14772,7 +14772,7 @@
                 },
                 {
                     "evento_section_title": "7th Satellite Meeting: Virtual Edition",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "<strong>Data:</strong> 8 de Maio de 2021 - <a href=\"https://efcolposcopy.eu/wp-content/uploads/2021/02/Programme-Satellite-rev04.pdf\" target=\"_blank\" rel=\"noopener\">Programa</a>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -14904,7 +14904,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "EFC is proud to announce its first edition of the EFC educational Webinars, a brand new <strong>interactive learning experience for colposcopists</strong>.",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -15028,7 +15028,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "The SIG Urogynaecology of the ESGE - in collaboration with Facts, Views and Vision in ObGyn - will organize a webinar on Alternatives to Laparoscopic Sacrocolpopexy. Laparoscopic Sacrocolpopexy is considered as the gold standard in management of pelvic organ prolapse.",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -15151,7 +15151,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "It is with great pleasure that we invite you to the largest conference on cervical cancer ever organized in Asia from 1st to 5th July on a Virtual Platform.\r\n\r\nThe theme “Eliminang Cervical Cancer - Call for acon“ is in line with the WHO call for Elimination of Cervical Cancer by 2030.",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -15274,7 +15274,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Comunicações Orais",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "<strong>O prazo para a submissão de Comunicações Orais foi estendido até ao dia 16 de Agosto, e já terminou.</strong>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -15285,7 +15285,7 @@
                 },
                 {
                     "evento_section_title": "Gravação do Curso",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Vídeo completo disponível nas Palestras & Cursos da Academia SPG.\r\n\r\n<a href=\"https://spginecologia.pt/curso/4612/\" rel=\"noopener\" target=\"_blank\">Assistir vídeo</a>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -15296,7 +15296,7 @@
                 },
                 {
                     "evento_section_title": "Informações",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "<strong><span style=\"color: #333333;\">A inscrição no webinar é gratuita mediante registo prévio no site da Ad Médic.</span></strong>\r\n\r\nInscrição e submissão de trabalhos disponível em <a href=\"https://www.admedic.pt\">www.admedic.pt</a>\r\n\r\nPoderá consultar o regulamento para a submissão de comunicações orais <a href=\"https://www.admedic.pt/uploads/regulamento_webinar-endoscopia-ginecologica-2021.pdf\">aqui</a>.",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -15415,7 +15415,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Assista ao Webinar",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "<span class=\"spg-notice bigger\">Apenas disponível para Sócios SPG</span>\r\n\r\nO Webinar está disponível nas Palestras &amp; Cursos da Academia SPG: <strong><a href=\"https://spginecologia.pt/curso/15485/\">Assistir Agora</a></strong>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -15426,7 +15426,7 @@
                 },
                 {
                     "evento_section_title": "Submissão de Casos Clínicos",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Os Casos Clínicos foram apresentados na sessão: <strong>“Falha de sling – E agora?”</strong>\r\n\r\nConsulte todas as informações no <a href=\"https://www.admedic.pt/uploads/regulamento_webinar-spug-uroginecologia-do-essencial-a-inovac-a-o.pdf\" target=\"_blank\" rel=\"noopener\">regulamento</a>.",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -15437,7 +15437,7 @@
                 },
                 {
                     "evento_section_title": "Certificados de Participação",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Os certificados de participação são enviados a todos os participantes nos 15 dias consequentes à realização do Webinar.\r\n\r\nO Secretariado só garante a reemissão de certificados durante 30 dias após o evento. A partir desta data não serão reenviados certificados.",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -15548,7 +15548,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Programa",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Programa educacional para a prevenção das doenças cardiovasculares na mulher portuguesa.\r\n\r\nPoderá consultar o programa <a href=\"https://spginecologia.pt/wp-content/uploads/2021/02/forum-de-Nem-estar-SPC.pdf\">aqui</a>.",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -15667,7 +15667,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Mensagem",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "<h6>Desafios para a Especialidade</h6>\r\n<a href=\"https://spginecologia.pt/resumo-da-1a-reuniao-geral-da-spg/\">Consulte a mensagem da Dra. Margarida Martinho sobre o evento ›</a>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -15678,7 +15678,7 @@
                 },
                 {
                     "evento_section_title": "Galeria",
-                    "evento_section_type": "Fotografias",
+                    "evento_section_type": "images",
                     "evento_section_content": "",
                     "evento_section_gallery": [
                         777,
@@ -15702,7 +15702,7 @@
                 },
                 {
                     "evento_section_title": "Gravação",
-                    "evento_section_type": "Vídeo",
+                    "evento_section_type": "video",
                     "evento_section_content": "Comunicações Orais . Posters . Imagens\r\n\r\nConsulte todas as informações no <a href=\"https://www.admedic.pt/uploads/regulamento_reunia-o-spg-ginecologia-desafios-para-a-especialidade.pdf\" target=\"_blank\" rel=\"noopener\">regulamento</a>.",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -15713,7 +15713,7 @@
                 },
                 {
                     "evento_section_title": "Comunicações Livres",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Comunicações Orais . Posters . Imagens\r\n\r\nConsulte todas as informações no <a href=\"https://www.admedic.pt/uploads/regulamento_reunia-o-spg-ginecologia-desafios-para-a-especialidade.pdf\" target=\"_blank\" rel=\"noopener\">regulamento</a>.",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -15724,7 +15724,7 @@
                 },
                 {
                     "evento_section_title": "Localização",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "O evento teve lugar no <a href=\"https://www.algarve.epic.sanahotels.com/en/photo-gallery\" target=\"_blank\" rel=\"noopener\">Epic Sana Algarve Hotel</a>, e foi também transmitido em directo online.",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -15843,7 +15843,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Galeria do Evento",
-                    "evento_section_type": "Fotografias",
+                    "evento_section_type": "images",
                     "evento_section_content": "<div class=\"page\" title=\"Page 2\">\r\n<div class=\"section\">\r\n<div class=\"layoutArea\">\r\n<div class=\"column\">\r\n\r\nCaros(as) Colegas\r\n\r\nA Sociedade Portuguesa de Ginecologia e a secção de Menopausa, dá-lhe as boas vindas a esta reunião cujo tema é “Novos desafios na menopausa” o que nos leva a refletir sobre o percurso efetuado mas sobretudo o que ainda poderemos fazer melhor para promover a saúde e a qualidade de vida da mulher em menopausa.\r\n\r\nTemos sido surpreendidos por algumas publicações nem sempre cientificamente válidas que levantam dúvidas e alguma desconfiança pondo em causa a promoção da qualidade de vida da mulher nesta fase da vida. Vamos ter oportunidade de debater com os especialistas vários temas associados a alguma controvérsia e assim podermos tirar algumas conclusões que nos poderão ser úteis para a nossa prática clínica.\r\n\r\nA par de um programa apelativo temos um grupo de palestrantes que com certeza nos irá surpreender e poderá ainda ser um momento de agradável encontro de Colegas e Amigos.\r\n\r\nBem haja!\r\n\r\nPresidente da SPG\r\n\r\n</div>\r\n</div>\r\n</div>\r\n</div>",
                     "evento_section_gallery": [
                         5317,
@@ -15866,7 +15866,7 @@
                 },
                 {
                     "evento_section_title": "Mensagem",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Caros(as) Colegas\r\n\r\nA Sociedade Portuguesa de Ginecologia e a secção de Menopausa, dá-lhe as boas vindas a esta reunião cujo tema é “Novos desafios na menopausa” o que nos leva a refletir sobre o percurso efetuado mas sobretudo o que ainda poderemos fazer melhor para promover a saúde e a qualidade de vida da mulher em menopausa.\r\n\r\nTemos sido surpreendidos por algumas publicações nem sempre cientificamente válidas que levantam dúvidas e alguma desconfiança pondo em causa a promoção da qualidade de vida da mulher nesta fase da vida. Vamos ter oportunidade de debater com os especialistas vários temas associados a alguma controvérsia e assim podermos tirar algumas conclusões que nos poderão ser úteis para a nossa prática clínica.\r\n\r\nA par de um programa apelativo temos um grupo de palestrantes que com certeza nos irá surpreender e poderá ainda ser um momento de agradável encontro de Colegas e Amigos.\r\n\r\nBem haja!\r\n\r\nPresidente da SPG",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -15998,7 +15998,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Assista na Academia SPG",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Pode visualizar este webinar na Academia SPG, na área Palestras & Cursos.\r\n\r\n<strong><a href=\"https://spginecologia.pt/curso/5951/\">Clique aqui para ver o Webinar: Curso de Ecografia</a></strong>\r\n\r\n<span class=\"muted\">Apenas disponível para Sócios SPG</span>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -16134,7 +16134,7 @@
             "evento_section": [
                 {
                     "evento_section_title": "Informações",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "A colposcopia é um exame indispensável na prática atual da ginecologia. A principal indicação deste exame é o diagnóstico precoce do cancro do colo do útero (CCU), atualmente o segundo cancro mais comum nas mulheres em idade jovem.A formação médica contínua nesta área deve constituir uma preocupação de todos os especialistas dedicados à colposcopia e ao rastreio do CCU. Em Portugal não existe atualmente um programa nacional de formação em coloposcopia e, o treino pós-graduado, opcional, acaba por ser insuficiente.\r\n\r\nO Curso Teórico-Prático avançado de Colposcopia, dirigido a especialistas em ginecologia e obstetrícia, tem como objetivo colmatar esta lacuna e consolidar as bases adquiridas no Curso básico de Colposcopia. A aprovação neste curso, certificado pela European Federation for Colposcopy, constitui uma das modalidades de acreditação em Colposcopia pela SPCPTGI.",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -16145,7 +16145,7 @@
                 },
                 {
                     "evento_section_title": "Objetivos",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "- Sedimentar os conhecimentos adquiridos no curso básico sobre: anatomia e histologia do colo do útero, doença pré-invasiva e benefício do seu rastreio\r\n- Compreender os benefícios e limitações da imunização contra o HPV\r\n- Compreender as técnicas de tratamento das lesões pré-malignas do Trato Genital Inferior\r\n- Conhecer os protocolos de atuação existentes e sua aplicação\r\n- Fornecer informação sobre desenvolvimento e diretrizes recentes (nacionais e internacionais)\r\n- Aperfeiçoar a técnica de Colposcopia\r\n- Aplicação de guidelines",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -16156,7 +16156,7 @@
                 },
                 {
                     "evento_section_title": "Corpo Docente",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "Amália Pacheco\r\nAmélia Oliveira Pedro Ana Quintas\r\nJosé Luis Enriquez Morera Rita Sousa\r\nTeresa Fraga\r\nTereza Paula\r\nVirgínia Monteiro",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -16167,7 +16167,7 @@
                 },
                 {
                     "evento_section_title": "Programa",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "<h4>Sexta-feira, 23 de outubro de 2020</h4>\r\n<strong>08:30 - 08:40 Sessão de abertura</strong>\r\n08:50 - 09:20 Infeção a HPV e Vacina - Amélia Pedro\r\n09:20 - 09:50 Rastreio do Cancro do Colo do Útero - atualização científica -Amália Pacheco\r\n09:50 - 10:20 Citologia e Histologia para Colposcopistas - José Luis Enriquez Morera\r\n10:20 - 10:50 Intervalo\r\n10:50 - 11:20 Terminologia colposcópica da IFCP; achados colposcópicos normais e anormais - Rita Sousa\r\n11:20 - 11:50 Colposcopia das lesões glandulares - Ana Quintas\r\n11:50 - 12:10 Achados colposcópicos da vagina e da vulva - Virgínia Monteiro\r\n12:10 - 14:00 Almoço\r\n\r\n<em><strong>Orientação, Tratamento, e Follow up I</strong></em>\r\n14:00 - 14:30 LSIL e HSIL - Amélia Pedro\r\n14:30 - 15:00 Lesões glandulares - Ana Quintas\r\n15:00 - 15:30 Micro invasivo - Rita Sousa\r\n15:30 - 16:00 Discrepância cito-colpo-histológica - Teresa Fraga\r\n16:00 - 16:30 Intervalo\r\n\r\n<em><strong>Orientação, Tratamento e Follow up II</strong></em>\r\n16:30 - 17:00 Colposcopia em situações particulares - Virgínia Monteiro\r\n17:00 - 17:30 Gravidez - Tereza Paula\r\n17:30 - 18:00 Patologia benigna e pré-maligna da vagina - Virgínia Monteiro 18:00 - 18:30 Lesões intraepiteliais da vulva - Teresa Fraga\r\n\r\n<em><strong>Discussão interativa (com anatomopatologista) - 1</strong></em>\r\n18:30 - 19:30 Imagens colposcópicas, citologia e histologia - Amália Pacheco,Ana Quintas, Rita Sousa, Virgínia Monteiro\r\n19:30 - 20:30 Casos Clínicos - Amélia Pedro, Teresa Fraga, Tereza Paula\r\n<h4>Sábado, 24 de outubro de 2020</h4>\r\n09:00 - 09:30 Técnicas, complicações e seu tratamento - Amélia Pedro\r\n09:30 - 10:30 Critérios de qualidade em unidades de colposcopia - Amália Pacheco\r\n10:30 - 11:00 Intervalo\r\n\r\n<em><strong>Discussão interativa (com anatomopatologista) - 2</strong></em>\r\n11:00 - 11:30 Imagens colposcópicas, citologia e histologia - Amélia Pedro,Teresa Fraga, Tereza Paula\r\n11:30 - 12:30 Casos clínicos - Amália Pacheco, Ana Quintas, Rita Sousa, VirgíniaMonteiro\r\n12:30 - 13:30 Teste\r\n\r\n<strong>Parte prática - 48 horas de prática de colposcopia em Unidades de Colposcopia</strong>",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -16178,7 +16178,7 @@
                 },
                 {
                     "evento_section_title": "Condições",
-                    "evento_section_type": "Texto",
+                    "evento_section_type": "text",
                     "evento_section_content": "<strong>Critérios de seleção do curso</strong>\r\nA seleção dos candidatos será efetuada com base na análise curricular dos mesmos.\r\n\r\n<strong>Regime de faltas do curso</strong>\r\nFrequência obrigatória das 60 horas de contacto.\r\n\r\n<strong>Língua de ensino</strong>\r\nPortuguês e Inglês\r\n\r\n<strong>Numerus Clausus</strong>\r\nMínimo de 8 e Máximo de 17\r\n\r\n<strong>Datas de realização</strong>\r\n23 e 24 de outubro de 2020\r\n\r\n<strong>Propinas</strong>\r\nCandidatura: 51€\r\nInscrição: 35€\r\nSeguro Escolar: 14€\r\n\r\n<strong>Frequência:</strong> 600€",
                     "evento_section_gallery": null,
                     "evento_section_video": {
@@ -16189,7 +16189,7 @@
                 },
                 {
                     "evento_section_title": "Galeria",
-                    "evento_section_type": "Fotografias",
+                    "evento_section_type": "images",
                     "evento_section_content": "",
                     "evento_section_gallery": "",
                     "evento_section_video": {

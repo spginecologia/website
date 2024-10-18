@@ -89,8 +89,8 @@ export interface Event {
   };
   sections?:
     | {
-        title: string;
-        evento_section_type?: ('texto' | 'Fotografias' | 'Vídeo') | null;
+        title?: string | null;
+        evento_section_type?: ('text' | 'images' | 'video' | 'iframe') | null;
         content?: {
           root: {
             type: string;
@@ -106,6 +106,8 @@ export interface Event {
           };
           [k: string]: unknown;
         } | null;
+        video?: string | null;
+        iframe?: string | null;
         images?:
           | {
               image: string | Media;
@@ -113,7 +115,6 @@ export interface Event {
               id?: string | null;
             }[]
           | null;
-        video?: string | null;
         id?: string | null;
       }[]
     | null;

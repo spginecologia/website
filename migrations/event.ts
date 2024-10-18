@@ -26,12 +26,15 @@ const seed = async () => {
                     },
                     sections: item.acf.evento_section ? await Promise.all(item.acf.evento_section.map(async (section: any) => ({
                         title: section.evento_section_title,
-                        content: await convertStringToLexical(section.evento_section_content) as LexicalNode,
-                        type: section.seccao_type,
+                        evento_section_type: section.evento_section_type,
+                        content: section.evento_section_content && section.evento_section_type != "iframe" ? await convertStringToLexical(section.evento_section_content) as LexicalNode : null,
+                        video: section.evento_section_type === "video" ? section.evento_section_video.evento_section_video_url : null,
+                        iframe: section.evento_section_type === "iframe" ? section.evento_section_content : null,
                     }))) : null,
                 },
             })
         } catch (error) {
+            console.error(item.title.rendered)
             console.error(JSON.stringify(error, null, 2))
         }
     }
