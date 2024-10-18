@@ -6,6 +6,7 @@
 }
 
 .image {
+    margin-right: 15px;
 	border-radius: 100%;
     
 	& img {
