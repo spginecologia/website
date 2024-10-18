@@ -1,3 +1,4 @@
+import { slugField } from '@/fields/slug';
 import { CollectionConfig } from 'payload';
 
 const Members: CollectionConfig = {
@@ -7,12 +8,12 @@ const Members: CollectionConfig = {
 		plural: 'Membros',
 	},
 	admin: {
-		useAsTitle: "title",
+		useAsTitle: "name",
 	},
 	fields: [
 		{
-			name: 'title',
-			label: 'Título',
+			name: 'name',
+			label: 'Nome',
 			type: 'text',
 			required: true,
 		},
@@ -35,9 +36,33 @@ const Members: CollectionConfig = {
 					name: 'location',
 					label: 'Localização',
 					type: 'text',
+				},
+				{
+					name: 'social_body',
+					label: 'Órgão Social',
+					type: 'select',
+					options: [
+						{
+							label: 'Direção',
+							value: 'direcao',
+						},
+						{
+							label: 'Assembleia Geral',
+							value: 'assembleia-geral',
+						},
+						{
+							label: 'Conselho Fiscal',
+							value: 'conselho-fiscal',
+						},
+						{
+							label: 'Conselho Consultivo',
+							value: 'conselho-consultivo',
+						},
+					],
 				}
 			]
-		}
+		},
+		slugField()
 	]
 };
 

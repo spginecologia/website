@@ -8,7 +8,7 @@ import Image from 'next/image';
 export default function Component() {
 	return (
 		<Section heading="A nossa missão" variant="primary">
-			<Grid columns="ab">
+			<Grid columns="ab" withGap>
 				<div>
 					<h2>O desenvolvimento de uma especialidade.</h2>
 					<br />
@@ -16,7 +16,7 @@ export default function Component() {
 					<br />
 					<p>Assumindo na plenitude o espírito empreendedor, dinâmico e seguramente inovador que sustentou a sua criação há já mais de 40 anos, a SPG mantém como missão o estímulo ao desenvolvimento da Especialidade nas suas diferentes e múltiplas facetas, como o exercício profissional, mas também com os aspectos relacionados com a dimensão ética, académica e social.</p>
 				</div>
-				<Image alt="Missão da SPG" height={10} src={"/placeholder.png"} style={{ height: 'auto', width: '100%' }} width={750} />
+				<Image alt="Missão da SPG" height={10} src={"/placeholder.png"} style={{ height: 'auto', width: '80%' }} width={50} />
 			</Grid>
 			<div>
 				<p>Assim tem como papel:</p>

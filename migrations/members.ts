@@ -11,10 +11,11 @@ const seed = async () => {
             await payload.create({
                 collection: 'members',
                 data: {
-                    title: item.title.rendered,
+                    name: item.title.rendered,
                     profile_picture: "6710052a95e3cff04007c104",
                     position: item.acf.membro_position,
                     location: item.acf.membro_location,
+                    social_body: item.acf.membro_social_body as "conselho-consultivo" | "direcao" | "conselho-fiscal" | "assembleia-geral" | null | undefined,
                 },
             })
         }

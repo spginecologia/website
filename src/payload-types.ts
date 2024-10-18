@@ -467,10 +467,12 @@ export interface Nucleo {
  */
 export interface Member {
   id: string;
-  title: string;
+  name: string;
   profile_picture: string | Media;
   position?: string | null;
   location?: string | null;
+  social_body?: ('direcao' | 'assembleia-geral' | 'conselho-fiscal' | 'conselho-consultivo') | null;
+  slug?: string | null;
   updatedAt: string;
   createdAt: string;
 }

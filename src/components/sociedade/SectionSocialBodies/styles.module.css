@@ -1,7 +1,13 @@
+.bodyGroupWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-spacing-70);
+}
+
 .bodyGroup {
     display: flex;
     flex-direction: column;
-    gap: var(--size-spacing-40);
+    gap: var(--size-spacing-20);
 
     & h2 {
         color: var(--color-foreground-100);
@@ -13,4 +19,22 @@
     display: flex;
     flex-direction: column;
     gap: var(--size-spacing-10);
+}
+
+.positionGroup {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-spacing-10);
+
+    &[aria-label="Secretário Geral"] {
+        margin-top: var(--size-spacing-30);
+    }
+
+    &:nth-child(5) {
+        margin-top: var(--size-spacing-30);
+    }
+   
+    &:nth-child(8) {
+        margin-top: var(--size-spacing-30);
+    }
 }

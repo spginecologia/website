@@ -3,8 +3,8 @@
 import Button from '@/components/common/Button';
 import { Grid } from '@/components/layout/Grid';
 import { Section } from '@/components/layout/Section';
-import { Media, Section as SectionItem } from '@/payload-types';
-import MemberCard from '../MemberCard';
+import { Media, Member, Section as SectionItem } from '@/payload-types';
+import MemberCard from '@/components/common/MemberCard';
 
 import styles from './styles.module.css';
 import Link from 'next/link';
@@ -20,7 +20,7 @@ export default function Component({ section }: { section: SectionItem }) {
 						<div className={styles.content}>
 							<h2>Órgãos Sociais</h2>
 							{section.members.map(member => (
-								<MemberCard key={member.name} member={member} />
+								<MemberCard key={member.name} member={member as Member} />
 							))}
 						</div>
 					)}

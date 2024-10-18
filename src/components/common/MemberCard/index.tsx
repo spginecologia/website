@@ -6,12 +6,12 @@ import styles from './styles.module.css';
 import { Media, Member } from '@/payload-types';
 
 /* * */
-export default function Component({ member }: { member: any }) {
+export default function Component({ member }: { member: Member }) {
 	return (
 		<div className={styles.container}>
 			<div className={styles.image}>
 				<Image
-					alt={member.title}
+					alt={member.name}
 					height={60}
 					src={(member.profile_picture as Media)?.url ?? ""}
 					width={60}

@@ -26,7 +26,8 @@
         "acf": {
             "membro_picture": 870,
             "membro_position": "",
-            "membro_location": "Coimbra"
+            "membro_location": "Coimbra",
+            "membro_social_body": "conselho-consultivo"
         },
         "jetpack_sharing_enabled": true,
         "_links": {
@@ -86,7 +87,8 @@
         "acf": {
             "membro_picture": 28452,
             "membro_position": "",
-            "membro_location": "Covilhã"
+            "membro_location": "Covilhã",
+            "membro_social_body": "conselho-consultivo"
         },
         "jetpack_sharing_enabled": true,
         "_links": {
@@ -146,7 +148,8 @@
         "acf": {
             "membro_picture": 28450,
             "membro_position": "",
-            "membro_location": "Coimbra"
+            "membro_location": "Coimbra",
+            "membro_social_body": "conselho-consultivo"
         },
         "jetpack_sharing_enabled": true,
         "_links": {
@@ -206,7 +209,8 @@
         "acf": {
             "membro_picture": 28447,
             "membro_position": "",
-            "membro_location": "Porto"
+            "membro_location": "Porto",
+            "membro_social_body": "conselho-consultivo"
         },
         "jetpack_sharing_enabled": true,
         "_links": {
@@ -266,7 +270,8 @@
         "acf": {
             "membro_picture": 28449,
             "membro_position": "",
-            "membro_location": "Coimbra"
+            "membro_location": "Coimbra",
+            "membro_social_body": "conselho-consultivo"
         },
         "jetpack_sharing_enabled": true,
         "_links": {
@@ -386,7 +391,8 @@
         "acf": {
             "membro_picture": 28451,
             "membro_position": "Vogal",
-            "membro_location": "Lisboa"
+            "membro_location": "Lisboa",
+            "membro_social_body": "direcao"
         },
         "jetpack_sharing_enabled": true,
         "_links": {
@@ -446,7 +452,8 @@
         "acf": {
             "membro_picture": 859,
             "membro_position": "Vogal",
-            "membro_location": "Porto"
+            "membro_location": "Porto",
+            "membro_social_body": "direcao"
         },
         "jetpack_sharing_enabled": true,
         "_links": {
@@ -506,7 +513,8 @@
         "acf": {
             "membro_picture": 846,
             "membro_position": "Vice-Presidente",
-            "membro_location": "Coimbra"
+            "membro_location": "Coimbra",
+            "membro_social_body": "direcao"
         },
         "jetpack_sharing_enabled": true,
         "_links": {
@@ -566,7 +574,8 @@
         "acf": {
             "membro_picture": 836,
             "membro_position": "Vice-Presidente",
-            "membro_location": "Lisboa"
+            "membro_location": "Lisboa",
+            "membro_social_body": "direcao"
         },
         "jetpack_sharing_enabled": true,
         "_links": {
@@ -806,7 +815,8 @@
         "acf": {
             "membro_picture": 307,
             "membro_position": "Vogal",
-            "membro_location": "Lisboa"
+            "membro_location": "Lisboa",
+            "membro_social_body": "conselho-fiscal"
         },
         "jetpack_sharing_enabled": true,
         "_links": {
@@ -866,7 +876,8 @@
         "acf": {
             "membro_picture": 315,
             "membro_position": "Vogal",
-            "membro_location": "Aveiro"
+            "membro_location": "Aveiro",
+            "membro_social_body": "conselho-fiscal"
         },
         "jetpack_sharing_enabled": true,
         "_links": {
@@ -926,7 +937,8 @@
         "acf": {
             "membro_picture": 305,
             "membro_position": "Presidente",
-            "membro_location": "Porto"
+            "membro_location": "Porto",
+            "membro_social_body": "conselho-fiscal"
         },
         "jetpack_sharing_enabled": true,
         "_links": {
@@ -986,7 +998,8 @@
         "acf": {
             "membro_picture": 308,
             "membro_position": "Secretária",
-            "membro_location": "Faro"
+            "membro_location": "Faro",
+            "membro_social_body": "assembleia-geral"
         },
         "jetpack_sharing_enabled": true,
         "_links": {
@@ -1046,7 +1059,8 @@
         "acf": {
             "membro_picture": 310,
             "membro_position": "Secretária",
-            "membro_location": "Vila Nova de Gaia"
+            "membro_location": "Vila Nova de Gaia",
+            "membro_social_body": "assembleia-geral"
         },
         "jetpack_sharing_enabled": true,
         "_links": {
@@ -1106,7 +1120,8 @@
         "acf": {
             "membro_picture": 28269,
             "membro_position": "Presidente",
-            "membro_location": "Covilhã"
+            "membro_location": "Covilhã",
+            "membro_social_body": "assembleia-geral"
         },
         "jetpack_sharing_enabled": true,
         "_links": {
@@ -1166,7 +1181,8 @@
         "acf": {
             "membro_picture": 28559,
             "membro_position": "Secretário Geral",
-            "membro_location": "Lisboa"
+            "membro_location": "Lisboa",
+            "membro_social_body": "direcao"
         },
         "jetpack_sharing_enabled": true,
         "_links": {
@@ -1286,7 +1302,8 @@
         "acf": {
             "membro_picture": 317,
             "membro_position": "Vogal",
-            "membro_location": "Porto"
+            "membro_location": "Porto",
+            "membro_social_body": "direcao"
         },
         "jetpack_sharing_enabled": true,
         "_links": {
@@ -1346,7 +1363,8 @@
         "acf": {
             "membro_picture": 309,
             "membro_position": "Presidente",
-            "membro_location": "Lisboa"
+            "membro_location": "Lisboa",
+            "membro_social_body": "direcao"
         },
         "jetpack_sharing_enabled": true,
         "_links": {
@@ -1526,7 +1544,8 @@
         "acf": {
             "membro_picture": 313,
             "membro_position": "Tesoureira",
-            "membro_location": "Coimbra"
+            "membro_location": "Coimbra",
+            "membro_social_body": "direcao"
         },
         "jetpack_sharing_enabled": true,
         "_links": {
@@ -1586,7 +1605,8 @@
         "acf": {
             "membro_picture": 314,
             "membro_position": "Vice-Presidente",
-            "membro_location": "Porto"
+            "membro_location": "Porto",
+            "membro_social_body": "direcao"
         },
         "jetpack_sharing_enabled": true,
         "_links": {
@@ -1646,7 +1666,8 @@
         "acf": {
             "membro_picture": 301,
             "membro_position": "",
-            "membro_location": "Porto"
+            "membro_location": "Porto",
+            "membro_social_body": "conselho-consultivo"
         },
         "jetpack_sharing_enabled": true,
         "_links": {
