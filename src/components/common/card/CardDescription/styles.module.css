@@ -4,6 +4,6 @@
 
 @media (min-width: 1024px) {
     .container{
-        font-size: var(--text-base);
+        font-size: var(--text-xl);
     }
 }

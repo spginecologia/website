@@ -3,7 +3,7 @@
 import { getPayloadHMR } from "@payloadcms/next/utilities"
 import config from "@/payload.config"
 import { notFound } from "next/navigation"
-import PageComponent from "@/components/noticias/Slug"
+import PageComponent from "@/components/news/Slug"
 
 export default async function Page({ params }: { params: { id: string } }) {
 

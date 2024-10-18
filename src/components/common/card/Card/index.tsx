@@ -10,6 +10,7 @@ interface ImageProps {
 	alt: string
 	size: number
 	src: string
+	objectFit?: 'contain' | 'cover'
 }
 
 export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -23,29 +24,32 @@ export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
 export default function Card({ children, className, direction = 'column', image, link, variant = 'default', ...props }: CardProps) {
 	const renderCardContent = () => {
 		return (
-			<div aria-label="Card" className={classNames(styles.card, styles[variant], styles[direction], className)} {...props}>
+			<>
 				{image && (
 					<Image
 						alt={image.alt}
 						className={styles.image}
 						height={image.size}
 						src={image.src}
-						style={{ objectFit: 'contain', width: '100%' }}
+						style={{ objectFit: image.objectFit ?? 'contain', width: '100%' }}
 						width={image.size}
 					/>
 				)}
 
 				<div className={styles.content}>{children}</div>
-			</div>
+			</>
 		);
 	};
 	return (
-		link
-			? (
-				<Link href={link ?? '#'} style={{ cursor: link ? 'pointer' : 'default' }}>
-					{renderCardContent()}
-				</Link>
-			)
-			: renderCardContent()
+		<div aria-label="Card" className={classNames(styles.card, styles[variant], styles[direction], className)} {...props}>
+			{link
+				? (
+					<Link href={link ?? '#'} style={{ cursor: link ? 'pointer' : 'default' }} className={styles.link}>
+						{renderCardContent()}
+					</Link>
+				)
+				: renderCardContent()
+			}
+		</div>
 	);
 }
