@@ -4,6 +4,7 @@ import Image from 'next/image';
 
 import styles from './styles.module.css';
 import { Media, Member } from '@/payload-types';
+import { Assets } from '@/lib/assets';
 
 /* * */
 export default function Component({ member }: { member: Member }) {
@@ -13,7 +14,7 @@ export default function Component({ member }: { member: Member }) {
 				<Image
 					alt={member.name}
 					height={60}
-					src={(member.profile_picture as Media)?.url ?? ""}
+					src={(member.profile_picture as Media)?.url ?? Assets.DOCTOR}
 					width={60}
 				/>
 			</div>

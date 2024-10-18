@@ -15,6 +15,7 @@ export const Assets = Object.freeze({
 	PLACEHOLDER: '/images/placeholder.png',
 	SOCIETY_BANNER: '/images/society/spg-people-banner.jpg',
 	SOCIETY_ILLUSTRATION: '/images/society/sociedade.png',
+	DOCTOR: '/images/doctor.png',
 	...AssetsSections,
 });
 
