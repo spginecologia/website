@@ -1,6 +1,8 @@
+'use client'
+
 import classNames from 'classnames';
 import Image from 'next/image';
-import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 import styles from './styles.module.css';
 
@@ -22,6 +24,15 @@ export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 export default function Card({ children, className, direction = 'column', image, link, variant = 'default', ...props }: CardProps) {
+
+	const router = useRouter()
+
+	const handleClick = () => {
+		if (link) {
+			router.push(link)
+		}
+	}
+
 	const renderCardContent = () => {
 		return (
 			<>
@@ -36,20 +47,15 @@ export default function Card({ children, className, direction = 'column', image,
 					/>
 				)}
 
-				<div className={styles.content}>{children}</div>
+				{children}
 			</>
 		);
 	};
+
+
 	return (
-		<div aria-label="Card" className={classNames(styles.card, styles[variant], styles[direction], className)} {...props}>
-			{link
-				? (
-					<Link href={link ?? '#'} style={{ cursor: link ? 'pointer' : 'default' }} className={styles.link}>
-						{renderCardContent()}
-					</Link>
-				)
-				: renderCardContent()
-			}
+		<div aria-label="Card" className={classNames(styles.card, styles[variant], styles[direction], link && styles.link, className)} {...props} onClick={handleClick}>
+			{renderCardContent()}
 		</div>
 	);
 }

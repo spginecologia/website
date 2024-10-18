@@ -7,6 +7,7 @@ import styles from "./styles.module.css"
 import { Card, CardDescription, CardFooter, CardHeader } from "@/components/common/card"
 import { Media } from "@/payload-types"
 import { serializeLexical } from "@/payload/lexical/serializeLexical"
+import reactNodeToString from "react-node-to-string"
 
 export default async function NewsList() {
 
@@ -21,11 +22,11 @@ export default async function NewsList() {
         <Section heading="Notícias">
             <Grid columns="abc" align="center" withGap>
                 {newsList.docs?.map((item) => (
-                    <Card key={item.id} image={{ src: (item.featured as Media)?.url ?? "/placeholder.png", alt: item.title, size: 200, objectFit: 'cover' }} className={styles.card} link={`/noticias/${item.slug}`}>
+                    <Card key={item.id} image={{ src: (item.featured as Media)?.url ?? "/placeholder.png", alt: item.title, size: 300, objectFit: 'cover' }} className={styles.card} link={`/noticias/${item.slug}`}>
                         <div className={styles.cardContent}>
                             <CardHeader variant="primary">{item.title}</CardHeader>
                             <div className={styles.cardDescription}>
-                                <CardDescription>No Dia Nacional da Sustentabilidade, o Conselho Português para a Saúde e Ambiente lançou um alerta sobre o problema dos plásticos no sector da s...</CardDescription>
+                                <CardDescription>{reactNodeToString(serializeLexical(item.content))}</CardDescription>
                                 <CardFooter>Publicado a {new Date(item.createdAt).toLocaleDateString()}</CardFooter>
                             </div>
                         </div>

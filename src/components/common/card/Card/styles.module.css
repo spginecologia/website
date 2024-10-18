@@ -1,7 +1,7 @@
 .card {
 	display: flex;
-	flex-direction: column;
-
+    flex-direction: column;
+    text-decoration: none;
     background-color: var(--color-background-100);
     transition-duration: 0.5s;
     transition-timing-function: ease;
@@ -16,7 +16,6 @@
 }
 
 .link {
-    text-decoration: none !important;
     cursor: pointer;
 }
 

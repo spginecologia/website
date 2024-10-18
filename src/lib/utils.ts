@@ -22,4 +22,3 @@ export const formatSlug =
 			return value
 		}
 
-
