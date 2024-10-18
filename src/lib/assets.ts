@@ -1,0 +1,46 @@
+export const AssetsSections = Object.freeze({
+	COLPOSCOPIA_PATOLOGIA_TRACTO_GENITAL_INFERIOR: '/images/sections/spg-colposcopia-patologia-tracto-genital-inferior.svg',
+	ENDOSCOPIA_GINECOLOGICA: '/images/sections/spg-endoscopia-ginecologica.svg',
+	GINECOLOGIA_ONCOLOGICA: '/images/sections/spg-ginecologia-oncologica.svg',
+	MENOPAUSA: '/images/sections/spg-menopausa.svg',
+	SECTION_ILLUSTRATION: '/images/sections/illustration.png',
+	UROGINECOLOGIA: '/images/sections/spg-uroginecologia.svg',
+});
+
+export const Assets = Object.freeze({
+	ACADEMY: '/icons/spg-academy.svg',
+	LOGO: '/icons/spg-logo.svg',
+	LOGO_COMPACT: '/icons/spg-logo-compact.svg',
+	LOGO_WHITE: '/icons/spg-logo-white.svg',
+	PLACEHOLDER: '/images/placeholder.png',
+	SOCIETY_BANNER: '/images/society/spg-people-banner.jpg',
+	SOCIETY_ILLUSTRATION: '/images/society/sociedade.png',
+	...AssetsSections,
+});
+
+export const PDFs = Object.freeze({
+	ANTERIORES_DIRECCOES_SPG: '/pdfs/Anteriores-Direccoes-SPG.pdf',
+	ESTATUTOS_SPG: '/pdfs/Estatutos-SPG.pdf',
+	FORMULARIO_REGISTO_NUCLEO_ESTUDOS_CLINICOS: '/pdfs/Formulario-de-Registo-SPG-N-EC.pdf',
+	MOMENTOS_PSICOSSOMATICA_01: '/pdfs/mPS-01-02-Janeiro-2024.pdf',
+	MOMENTOS_PSICOSSOMATICA_02: '/pdfs/mPS-03-04-Marco-2024.pdf',
+	NEWSLETTER_NUCLEOS_2018: '/pdfs/Newsletter-2018.pdf',
+	NEWSLETTER_NUCLEOS_2020: '/pdfs/Newsletter-2020.pdf',
+	NGIA_SOBRE: '/pdfs/Sobre-o-NGIA.pdf',
+	PRIMEIRA_ASSEMBLEIA_GERAL_SPG: '/pdfs/Primeira-Assembleia-Geral-SPG.pdf',
+	REGULAMENTO_ELEITORAL_SPG: '/pdfs/Regulamento-Eleitoral-SPG.pdf',
+	REGULAMENTO_GERAL_SECCOES_SPG: '/pdfs/Regulamento-Geral-Seccoes-SPG.pdf',
+	REGULAMENTO_NUCLEO_ESTUDOS_CLINICOS: '/pdfs/Regulamento-do-Nucleo-de-Estudos-Clinicos.pdf',
+	REGULAMENTO_PATROCINIOS_SPG: '/pdfs/Regulamento-Patrocinios-SPG.pdf',
+	RELATORIO_ATIVIDADES_NUCLEO_ESTUDOS_CLINICOS: '/pdfs/Relatorio-de-Atividades-do-Nucleo-de-Estudos-Clinicos-da-SPG-2.pdf',
+	RELATORIO_DE_ACTIVIDADES_SPG_2023: '/pdfs/Relatorio-de-actividades-SPG-2023.pdf',
+	SPCPTGI_Atividade_e_Definicao: '/pdfs/SPCPTGI-Atividade-e-Definicao.pdf',
+	SPCPTGI_Formulario_de_Acreditacao: '/pdfs/SPCPTGI-Formulario-de-Acreditacao.pdf',
+	SPCPTGI_REGULAMENTO: '/pdfs/REGULAMENTO-SPCPTGI.pdf',
+	SPCPTGI_Regulamento_de_Acreditacao: '/pdfs/Regulamento-de-Acreditacao.pdf',
+	SPEG_Direcoes: '/pdfs/Anteriores-Direccoes-SPEG.pdf',
+	SPM_SOBRE: '/pdfs/Sobre-a-SPM.pdf',
+	SPUG_REGULAMENTO: '/pdfs/Regulamento-da-SPUG.pdf',
+	SPUG_SOBRE: '/pdfs/Sobre-a-SPUG.pdf',
+	WORKSHOP_SAUDE_REPRODUTIVA_DAS_ADOLESCENTES: '/pdfs/workshop-saude-reprodutiva-das-adolescentes.pdf',
+});

@@ -8,6 +8,7 @@ import { Member } from '@/payload-types';
 import { getPayloadHMR } from '@payloadcms/next/utilities';
 import config from '@/payload.config';
 import MemberCard from '@/components/common/MemberCard';
+import { Assets } from '@/lib/assets';
 
 export default async function Component() {
 
@@ -34,7 +35,7 @@ export default async function Component() {
 				alt="Foto de grupo dos Orgãos Sociais"
 				height={0}
 				sizes="100vw"
-				src={"/placeholder.png"}
+				src={Assets.SOCIETY_BANNER ?? "/placeholder.png"}
 				style={{ height: 'auto', width: '100%' }}
 				width={0}
 			/>
