@@ -1,0 +1,43 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 5rem;
+}
+
+.date {
+    color: var(--color-foreground-300);
+    margin-left: auto;
+}
+
+.title {
+    font-family: var(--font-family-secondary);
+    font-size: var(--text-5xl);
+}
+
+.imageContainer {
+    width: 100%;
+    aspect-ratio: 26/9;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    position: relative;
+
+    & img {
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0;
+    }
+
+    .date {
+        margin-left: 0;
+    }
+
+    .imageContainer {
+        aspect-ratio: 10/5;
+    }
+}

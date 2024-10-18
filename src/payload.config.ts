@@ -1,6 +1,6 @@
 // storage-adapter-import-placeholder
 import { mongooseAdapter } from '@payloadcms/db-mongodb'
-import { FixedToolbarFeature, lexicalEditor } from '@payloadcms/richtext-lexical'
+import { EXPERIMENTAL_TableFeature, FixedToolbarFeature, HTMLConverterFeature, lexicalEditor } from '@payloadcms/richtext-lexical'
 import path from 'path'
 import { buildConfig } from 'payload'
 import { fileURLToPath } from 'url'
@@ -64,6 +64,10 @@ export default buildConfig({
     features: ({ defaultFeatures }) => [
       ...defaultFeatures,
       FixedToolbarFeature(),
+      EXPERIMENTAL_TableFeature(),
+      HTMLConverterFeature({
+        converters: ({ defaultConverters }) => [...defaultConverters],
+      }),
     ],
   }),
   secret: process.env.PAYLOAD_SECRET || '',

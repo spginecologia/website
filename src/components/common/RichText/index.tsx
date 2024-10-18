@@ -1,7 +1,8 @@
 import React from 'react'
 
-import { serializeLexical } from './serialize'
+import { serializeLexical } from '@/payload/lexical/serializeLexical'
 
+import styles from './styles.module.css'
 type Props = {
   className?: string
   content: Record<string, any>
@@ -15,15 +16,13 @@ const RichText: React.FC<Props> = ({
     return null
   }
 
+  const serializedContent = serializeLexical(content as any)
+
   return (
     <div
-      className={className}
+      className={`${className} ${styles.prose}`}
     >
-      {content &&
-        !Array.isArray(content) &&
-        typeof content === 'object' &&
-        'root' in content &&
-        serializeLexical({ nodes: content?.root?.children })}
+      {serializedContent}
     </div>
   )
 }

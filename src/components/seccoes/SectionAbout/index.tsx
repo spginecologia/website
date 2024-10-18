@@ -10,7 +10,7 @@ import RichText from '@/components/common/RichText';
 
 /* * */
 
-export default function Component({section}: {section: SectionItem}) {
+export default function Component({ section }: { section: SectionItem }) {
 	return (
 		<>
 			<Section variant="primary">
