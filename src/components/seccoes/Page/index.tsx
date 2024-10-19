@@ -15,7 +15,7 @@ export default function Component() {
 				<SectionCards />
 			</Section>
 			<Section>
-				<Grid align="center" columns="aab" withGap>
+				<Grid align="center" columns="aab" gap="md">
 					<div>
 						<h2>Juntos contribuímos para o avanço do conhecimento.</h2>
 						<br />

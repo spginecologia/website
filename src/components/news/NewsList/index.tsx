@@ -20,7 +20,7 @@ export default async function NewsList() {
 
     return (
         <Section heading="Notícias">
-            <Grid columns="abc" align="center" withGap>
+            <Grid columns="abc" align="center" gap="lg">
                 {newsList.docs?.map((item) => (
                     <Card key={item.id} image={{ src: (item.featured as Media)?.url ?? "/placeholder.png", alt: item.title, size: 300, objectFit: 'cover' }} className={styles.card} link={`/noticias/${item.slug}`}>
                         <div className={styles.cardContent}>

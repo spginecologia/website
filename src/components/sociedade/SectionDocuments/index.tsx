@@ -6,7 +6,7 @@ import { PDFs } from '@/lib/assets';
 export default function Component() {
 	return (
 		<Section variant="secondary">
-			<Grid columns="abc" withGap>
+			<Grid columns="abc" gap="md">
 				<Button link={PDFs.ESTATUTOS_SPG} fullWidth>Estatudos da Sociedade</Button>
 				<Button link={PDFs.REGULAMENTO_ELEITORAL_SPG} fullWidth>Regulamento eleitoral</Button>
 				<Button link={PDFs.REGULAMENTO_PATROCINIOS_SPG} fullWidth>Regulamento de Patrocínios</Button>

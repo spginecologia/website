@@ -39,7 +39,7 @@ export default async function Component() {
 				style={{ height: 'auto', width: '100%' }}
 				width={0}
 			/>
-			<Grid columns="ab" withGap>
+			<Grid columns="ab" gap="md">
 				<div className={styles.bodyGroup}>
 					<h2>Direção</h2>
 					{directors.map((member, index) => (

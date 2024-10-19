@@ -1,0 +1,40 @@
+.root {
+    width: 100%;
+}
+
+.inputWrapper {
+    width: 100%;
+}
+
+.input {
+    height: unset;
+    padding: calc(var(--size-spacing-5) + 3.5px) var(--size-spacing-5);
+    border: var(--border-primary);
+    border-radius: var(--border-radius);
+    font-size: var(--text-base);
+}
+
+.input:focus-within {
+    border-color: var(--color-brand-primary);
+}
+
+.levelsGroup {
+    width: 500px;
+
+    & * {
+        font-size: var(--text-lg);
+        text-align: center;
+    }
+
+    
+    & div,
+    & table {
+        font-size: var(--text-lg);
+        width: 100%;
+        max-width: unset;
+    }
+}
+
+.headerControls {
+    scale: 1.5;
+}

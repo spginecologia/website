@@ -25,7 +25,7 @@ export default function Component() {
 				</div>
 			</Section>
 			<Section>
-				<Grid align="center" columns="aab" withGap>
+				<Grid align="center" columns="aab" gap="md">
 					<div>
 						<h2>Promover a excelência científica.</h2>
 						<br />

@@ -15,7 +15,7 @@ export default function Component({ section }: { section: SectionItem }) {
 	return (
 		<>
 			<Section variant="secondary">
-				<Grid columns="ab" withGap>
+				<Grid columns="ab" gap="md">
 					{section.members && (
 						<div className={styles.content}>
 							<h2>Órgãos Sociais</h2>

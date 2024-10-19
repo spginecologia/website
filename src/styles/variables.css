@@ -37,7 +37,7 @@
 
   /* Border */
   --border-primary: 1px solid var(--color-foreground-300);
-  --border-brand: 1px solid var(--color-brand-secondary);
+  --border-brand: 1px solid var(--color-brand-primary);
   --border-brand-foreground: 1px solid var(--color-brand-primary-foreground);
   --border-radius: 0px; /* This should be in px, not rem */
 
@@ -67,7 +67,7 @@
   --size-spacing-70: 7rem;
 }
 
-@media only screen and (max-width: 1023px) {
+/* @media only screen and (max-width: 1023px) {
   :root {
     --root-size: 50%;
   }
@@ -77,7 +77,7 @@
   :root {
     --root-size: 65%;
   }
-}
+} */
 
 @media only screen and (max-width: 767px) {
 	only-mobile {

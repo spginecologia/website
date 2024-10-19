@@ -9,8 +9,14 @@
 /* * */
 /* CONTAINER / WITH GAP */
 
-.container.withGap  {
-	gap: var(--size-spacing-40);
+.container.gap-sm  {
+	gap: var(--size-spacing-10);
+}
+.container.gap-md  {
+	gap: var(--size-spacing-20);
+}
+.container.gap-lg  {
+	gap: var(--size-spacing-30);
 }
 
 /* * */

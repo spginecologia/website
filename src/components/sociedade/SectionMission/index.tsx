@@ -9,7 +9,7 @@ import Image from 'next/image';
 export default function Component() {
 	return (
 		<Section heading="A nossa missão" variant="primary">
-			<Grid columns="ab" withGap>
+			<Grid columns="ab" gap="md">
 				<div>
 					<h2>O desenvolvimento de uma especialidade.</h2>
 					<br />

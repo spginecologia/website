@@ -10,7 +10,7 @@ import { SectionRoutes } from '@/lib/routes';
 export default function Component() {
 	return (
 		<>
-			<Grid columns="abcde" withGap>
+			<Grid columns="abcde" gap="md">
 				<Card
 					link={SectionRoutes.SPCPTGI.path}
 					image={{

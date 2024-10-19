@@ -1,0 +1,69 @@
+.InputContainer {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%; 
+    border: var(--border-primary);
+    background-color: var(--color-background-100);
+    padding: var(--size-spacing-5) var(--size-spacing-5) calc(var(--size-spacing-5) - 1px) var(--size-spacing-5);
+    outline: none;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+    &:focus-within {
+        border-color: var(--color-brand-primary);
+        box-shadow: var(--box-shadow-md);
+    }
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    color: var(--color-background-300);
+    scale: 0.7;
+}
+
+.Input {
+    font-size: var(--text-base);
+    border: none;
+    color: var(--color-foreground-100);
+    font-weight: 400;
+}
+
+.Input:focus {
+  background-color: var(--color-background-100);
+  border: none;
+  color: var(--color-foreground-100);
+}
+
+.Input:-webkit-autofill {
+  background-color: var(--color-background-100);
+  border: none;
+  color: var(--color-foreground-100);
+}
+
+.Input::placeholder {
+    color: var(--color-background-300)
+}
+
+.Input:focus-visible {
+    border: none;
+    outline: none;
+}
+
+.Input:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.passwordButton {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  right:0;
+  bottom: 0;
+  margin:auto;
+  margin-right: 0.5rem;
+  z-index: 2;
+}

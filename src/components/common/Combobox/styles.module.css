@@ -1,0 +1,4 @@
+.Input {
+    font-size: var(--text-base);
+    padding: var(--size-spacing-20) var(--size-spacing-20);
+}

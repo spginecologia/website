@@ -22,3 +22,7 @@ export const formatSlug =
 			return value
 		}
 
+export function capitalizeDate(str: string) {
+	var reg = /\b([a-zÁ-ú]{3,})/g;
+	return str.replace(reg, (w) => w.charAt(0).toUpperCase() + w.slice(1));
+}

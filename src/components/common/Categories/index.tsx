@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import styles from './styles.module.css';
 
-export default function Component({ categories }: { categories: Category[] }) {
+export default function Categories({ categories }: { categories: Category[] }) {
     return (
         <div className={styles.categories}>
             {categories?.map((category, index) => (

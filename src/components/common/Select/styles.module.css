@@ -1,0 +1,44 @@
+.root {
+    width: 100%;
+}
+
+.inputWrapper {
+    width: 100%;
+}
+
+.input {
+    height: unset;
+    padding: calc(var(--size-spacing-5) + 3.5px) var(--size-spacing-5);
+    border: var(--border-primary);
+    border-radius: var(--border-radius);
+    font-size: var(--text-base);
+}
+
+.input:focus-within {
+    border-color: var(--color-brand-primary);
+}
+
+.pill {
+    font-size: var(--text-xs);
+    height: fit-content;
+    padding: var(--size-spacing-5) 0 var(--size-spacing-5) var(--size-spacing-10);
+    border: var(--border-brand);
+
+    & span {
+        overflow: unset;
+    }
+
+    & button {
+        color: var(--color-brand-secondary);
+    }
+}
+
+.option {
+    font-size: var(--text-sm);
+}
+
+.options {
+    & div {
+        max-height: 300px !important;
+    }
+}

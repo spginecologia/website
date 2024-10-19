@@ -10,15 +10,15 @@ interface Props {
 	align?: 'center' | 'end' | 'start'
 	children?: React.ReactNode
 	columns?: 'a' | 'aab' | 'ab' | 'abb' | 'abc' | 'abcd' | 'abcde'
-	withGap?: boolean
+	gap?: 'none' | 'sm' | 'md' | 'lg'
 	className?: string
 }
 
 /* * */
 
-export function Grid({ align = 'start', children, columns = 'a', withGap, className }: Props) {
+export function Grid({ align = 'start', children, columns = 'a', gap = 'none', className }: Props) {
 	return (
-		<div className={classNames(styles.container, styles[columns], withGap && styles.withGap, className)} style={{ alignItems: align }}>
+		<div className={classNames(styles.container, styles[columns], gap !== 'none' && styles[`gap-${gap}`], className)} style={{ alignItems: align }}>
 			{children}
 		</div>
 	);

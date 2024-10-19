@@ -26,7 +26,7 @@ export default function Component({ section }: { section: SectionItem }) {
 						<h2>Melhorar a qualidade de vida em todas as fases da vida da mulher</h2>
 					</CardContent>
 				</Card>
-				<Grid columns="ab" withGap>
+				<Grid columns="ab" gap="md">
 					<div>
 						<h2>{section.first_column.title}</h2>
 						<br />
