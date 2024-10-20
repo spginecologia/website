@@ -31,6 +31,7 @@
     "luxon": "^3.5.0",
     "next": "15.0.0-canary.173",
     "node": "payload/node",
+    "nuqs": "^1.20.0",
     "payload": "beta",
     "react": "19.0.0-rc-3edc000d-20240926",
     "react-day-picker": "^9.1.4",

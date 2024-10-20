@@ -3,12 +3,12 @@
 import { getPayloadHMR } from "@payloadcms/next/utilities"
 import config from "@/payload.config"
 import { notFound } from "next/navigation"
+import EventCard from "@/components/eventos/EventCard"
 import { Section } from "@/components/layout/Section"
+import { Grid } from "@/components/layout/Grid"
 import EventFilters from "@/components/eventos/EventFilters"
-import EventsList from "@/components/eventos/EventList"
-import Image from "next/image"
-import Link from "next/link"
 import CategoriesSelect from "@/components/common/CategoriesSelect"
+
 
 export default async function Page() {
 
@@ -17,7 +17,7 @@ export default async function Page() {
         collection: "events",
         where: {
             start_date: {
-                greater_than: new Date()
+                less_than: new Date()
             }
         },
     })
@@ -30,14 +30,13 @@ export default async function Page() {
 
     return (
         <>
-            <Section>
-                <Link href="/eventos-passados">
-                    <Image src={"/placeholder.png"} alt="Eventos SPG" width={1000} height={1000} style={{ width: "100%", height: "auto", aspectRatio: "31/9" }} />
-                </Link>
-            </Section>
-            <Section heading="Agenda">
+            <Section heading="Eventos Passados">
                 <EventFilters categoriesSelect={<CategoriesSelect />} />
-                <EventsList events={events} />
+                <Grid columns="ab" gap="lg">
+                    {events.map((event) => (
+                        <EventCard key={event.id} event={event} />
+                    ))}
+                </Grid>
             </Section>
         </>
     )

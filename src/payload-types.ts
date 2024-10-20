@@ -151,7 +151,7 @@ export interface Category {
   id: string;
   name: string;
   description?: string | null;
-  slug?: string | null;
+  slug: string;
   updatedAt: string;
   createdAt: string;
 }

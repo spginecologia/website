@@ -11,5 +11,5 @@ export default async function CategoriesSelect() {
         limit: 1000,
     })
 
-    return <CategoriesSelectClient categories={categories.docs.map((category) => category.name)} />
+    return <CategoriesSelectClient categories={categories.docs.map((category) => category)} />
 }

@@ -1,21 +1,17 @@
 "use client"
 
 import { MultiSelect } from "@mantine/core"
-import { useState } from "react"
 
 import styles from './styles.module.css'
+import { useQueryState, parseAsString, parseAsArrayOf } from "nuqs"
+import { Category } from "@/payload-types"
 
-export default function CategoriesSelectClient({ categories }: { categories: string[] }) {
+export default function CategoriesSelectClient({ categories }: { categories: Category[] }) {
 
-    const [value, setValue] = useState<string[]>([])
-
-    const handleChange = (value: string[]) => {
-        setValue(value)
-    }
-
+    const [value, setValue] = useQueryState<string[]>("category", parseAsArrayOf(parseAsString, ';'))
     return <MultiSelect
-        value={value}
-        onChange={handleChange}
+        value={value ?? undefined}
+        onChange={(value) => setValue(value ?? [])}
         classNames={{
             root: styles.root,
             wrapper: styles.inputWrapper,
@@ -27,7 +23,10 @@ export default function CategoriesSelectClient({ categories }: { categories: str
         }}
         searchable
         clearable
-        placeholder={value.length ? "" : "Todos os Tópicos"}
-        data={categories}
+        placeholder={value?.length ? "" : "Todos os Tópicos"}
+        data={categories.map((category) => ({
+            label: category.name,
+            value: category.slug
+        }))}
     />
 }

@@ -1,15 +1,13 @@
 'use client'
 import 'dayjs/locale/pt';
 
-
-import { useState } from 'react';
-import { DatePickerInput, DatesRangeValue, WeekdaysRow } from '@mantine/dates';
+import { DatePickerInput, DatesRangeValue } from '@mantine/dates';
 
 import "@mantine/dates/styles.css";
 import styles from "./styles.module.css";
 
-export default function DateRange() {
-    const [value, setValue] = useState<DatesRangeValue | undefined>(undefined);
+export default function DateRange({ value, onChange }: { value: DatesRangeValue | undefined, onChange: (value: DatesRangeValue | undefined) => void }) {
+
     return (
         <DatePickerInput
             classNames={{
@@ -23,7 +21,7 @@ export default function DateRange() {
             placeholder="Escolha um intervalo de datas"
             value={value}
             clearable
-            onChange={setValue}
+            onChange={onChange}
         />
     );
 }

@@ -39,7 +39,7 @@ const Categories: CollectionConfig = {
 			type: "text",
 			required: false,
 		},
-		slugField(),
+		slugField('name', { required: true }),
 	]
 }
 
