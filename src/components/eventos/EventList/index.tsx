@@ -33,7 +33,7 @@ export default function EventsList({ events }: { events: Event[] }) {
         }
 
         if (search) {
-            myEvents = myEvents.filter((event) => event.title.toLowerCase().includes(search.toLowerCase()))
+            myEvents = myEvents.filter((event) => event.title.replace(/\s+/g, '').toLowerCase().includes(search.replace(/\s+/g, '').toLowerCase()))
         }
 
         if (dateRange && dateRange[0] && dateRange[1]) {

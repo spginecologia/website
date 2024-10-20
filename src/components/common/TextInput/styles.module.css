@@ -27,6 +27,11 @@
     border: none;
     color: var(--color-foreground-100);
     font-weight: 400;
+    width: 100%;
+
+    & input {
+        width: 100%;
+    }
 }
 
 .Input:focus {

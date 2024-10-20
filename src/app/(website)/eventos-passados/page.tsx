@@ -3,11 +3,10 @@
 import { getPayloadHMR } from "@payloadcms/next/utilities"
 import config from "@/payload.config"
 import { notFound } from "next/navigation"
-import EventCard from "@/components/eventos/EventCard"
 import { Section } from "@/components/layout/Section"
-import { Grid } from "@/components/layout/Grid"
 import EventFilters from "@/components/eventos/EventFilters"
 import CategoriesSelect from "@/components/common/CategoriesSelect"
+import EventList from "@/components/eventos/EventList"
 
 
 export default async function Page() {
@@ -32,11 +31,7 @@ export default async function Page() {
         <>
             <Section heading="Eventos Passados">
                 <EventFilters categoriesSelect={<CategoriesSelect />} />
-                <Grid columns="ab" gap="lg">
-                    {events.map((event) => (
-                        <EventCard key={event.id} event={event} />
-                    ))}
-                </Grid>
+                <EventList events={events} />
             </Section>
         </>
     )
