@@ -20,16 +20,21 @@ export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
 	direction?: 'column' | 'row'
 	image?: ImageProps
 	link?: string
+	target?: "_blank" | "_self"
 	variant?: 'default' | 'primary'
 }
 
-export default function Card({ children, className, direction = 'column', image, link, variant = 'default', ...props }: CardProps) {
+export default function Card({ children, className, direction = 'column', image, link, target = "_self", variant = 'default', ...props }: CardProps) {
 
 	const router = useRouter()
 
 	const handleClick = () => {
 		if (link) {
-			router.push(link)
+			if (target === "_blank") {
+				window.open(link, target)
+			} else {
+				router.push(link)
+			}
 		}
 	}
 

@@ -20,7 +20,7 @@ import Sections from './collections/Sections'
 import Nucleos from './collections/Nucleos'
 import Members from './collections/Members'
 import Videos from './collections/Videos'
-
+import Prizes from './collections/Prizes'
 import Footer from './collections/global/Footer'
 import Header from './collections/global/Header'
 import Events from './collections/Event'
@@ -51,6 +51,7 @@ export default buildConfig({
     Nucleos,
     Members,
     Videos,
+    Prizes,
   ],
   globals: [
     Header,

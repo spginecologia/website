@@ -1,5 +1,4 @@
 import { sidebarFields } from '@/fields/sidebar';
-import { formatSlug } from '@/lib/utils';
 import type { CollectionConfig } from 'payload'
 
 const Publications: CollectionConfig = {
@@ -24,6 +23,7 @@ const Publications: CollectionConfig = {
 			type: "upload",
 			relationTo: "media",
 			required: true,
+
 		},
 		...sidebarFields,
 	]
