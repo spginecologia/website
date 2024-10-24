@@ -12,13 +12,14 @@ const seed = async () => {
             await payload.create({
                 collection: 'courses',
                 data: {
-                    slug: item.slug,
                     title: item.title.rendered,
                     categories: convertCategories(item.categories),
                     description: await convertStringToLexical(item.content.rendered ?? "ADD ME") as LexicalNode,
+                    createdAt: item.date_gmt,
                 },
             })
         } catch (error) {
+            console.log(item.title.rendered)
             console.error(JSON.stringify(error, null, 2))
         }
     }
