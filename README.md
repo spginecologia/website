@@ -12,13 +12,13 @@
 ## Academia
 
 - [ ] Home (dificil)
-- Submeter Video (Formulario)
+- [ ] Submeter Video (Formulario)
 - [ ] Videos (Medio)
 - [ ] Videos/id (Dificil)
 - [x] publicação (Facil)
 - [x] consensos (Facil)
 - [x] cursos (Facil)
-- [ ] cursos/id (Facil)
+- [x] cursos/id (Facil)
 - [ ] bolsa (Facil/ Formulario)
 - [ ] pesquisa tópico
 

@@ -13,7 +13,7 @@ export default function CourseCard({ course }: { course: Course }) {
 
 
     return (
-        <Card variant="primary" image={{ src: (course.featured as Media)?.url ?? "/placeholder.png", alt: course.title, size: 200, objectFit: 'cover' }} className={styles.card} link={`/courseos/${course.slug}`}>
+        <Card variant="primary" image={{ src: (course.featured as Media)?.url ?? "/placeholder.png", alt: course.title, size: 200, objectFit: 'cover' }} className={styles.card} link={`/academia/cursos/${course.slug}`}>
             <CardContent className={styles.cardContent}>
                 <CardHeader>{course.title}</CardHeader>
                 <Categories categories={course.categories?.slice(0, 1) as Category[]} />
