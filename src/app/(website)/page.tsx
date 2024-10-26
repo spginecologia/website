@@ -7,7 +7,7 @@ import EventsList from "@/components/eventos/EventList";
 import { Section } from "@/components/layout/Section";
 import SectionCards from "@/components/seccoes/SectionCards";
 import ConsensoList from "@/components/consensos/ConsensosList";
-import AcademySection from "@/components/home/AcademySection";
+import AcademySection from "@/components/Academy/AcademySection";
 
 export default async function Page() {
 

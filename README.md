@@ -1,5 +1,5 @@
 ## Main
-- [ ] Home
+- [x] Home - Falta Banner
 - [x] Seccoes 
 - [x] Sociedade
 - [x] núcleos
