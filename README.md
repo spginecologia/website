@@ -6,7 +6,7 @@
 - [x] noticias
 - [x] Agenda
 - [x] Agenda/id
-- [ ] premio/id
+- [/] premio/id
 - [ ] categorias
 
 ## Academia
