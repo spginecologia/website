@@ -21,7 +21,7 @@ export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
 	image?: ImageProps
 	link?: string
 	target?: "_blank" | "_self"
-	variant?: 'default' | 'primary'
+	variant?: 'default' | 'primary' | 'transparent'
 }
 
 export default function Card({ children, className, direction = 'column', image, link, target = "_self", variant = 'default', ...props }: CardProps) {

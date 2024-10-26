@@ -12,6 +12,7 @@ export default function Component() {
 		<>
 			<Grid columns="abcde" gap="md">
 				<Card
+					variant='transparent'
 					link={SectionRoutes.SPCPTGI.path}
 					image={{
 						alt: '',
@@ -20,6 +21,7 @@ export default function Component() {
 					}}
 				/>
 				<Card
+					variant='transparent'
 					link={SectionRoutes.SPEG.path}
 					image={{
 						alt: '',
@@ -28,6 +30,7 @@ export default function Component() {
 					}}
 				/>
 				<Card
+					variant='transparent'
 					link={SectionRoutes.GINECOLOGIA.path}
 					image={{
 						alt: '',
@@ -36,6 +39,7 @@ export default function Component() {
 					}}
 				/>
 				<Card
+					variant='transparent'
 					link={SectionRoutes.SPM.path}
 					image={{
 						alt: '',
@@ -44,6 +48,7 @@ export default function Component() {
 					}}
 				/>
 				<Card
+					variant='transparent'
 					link={SectionRoutes.SPUG.path}
 					image={{
 						alt: '',

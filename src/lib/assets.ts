@@ -9,6 +9,7 @@ export const AssetsSections = Object.freeze({
 
 export const Assets = Object.freeze({
 	ACADEMY: '/icons/spg-academy.svg',
+	ACADEMY_ILLUSTRATION: '/images/academy/ilustracao-academia-spg.svg',
 	LOGO: '/icons/spg-logo.svg',
 	LOGO_COMPACT: '/icons/spg-logo-compact.svg',
 	LOGO_WHITE: '/icons/spg-logo-white.svg',

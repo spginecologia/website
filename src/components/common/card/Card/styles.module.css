@@ -27,3 +27,11 @@
 .primary:hover {
     border: var(--border-brand)
 }
+
+.transparent {
+    background-color: transparent;
+    
+    &:hover {
+        background-color: var(--color-background-100);
+    }
+}

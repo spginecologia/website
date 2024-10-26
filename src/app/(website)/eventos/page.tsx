@@ -15,6 +15,7 @@ export default async function Page() {
     const payload = await getPayloadHMR({ config })
     const query = await payload.find({
         collection: "events",
+        sort: "start_date",
         where: {
             start_date: {
                 greater_than: new Date()
