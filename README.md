@@ -1,5 +1,5 @@
 ## Main
-- [x] Home - Falta Banner
+- [/] Home - Falta Banner
 - [x] Seccoes 
 - [x] Sociedade
 - [x] núcleos
@@ -11,7 +11,7 @@
 
 ## Academia
 
-- [ ] Home (dificil)
+- [/] Home (facil)
 - [ ] Submeter Video (Formulario)
 - [ ] Videos (Medio)
 - [ ] Videos/id (Dificil)

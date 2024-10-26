@@ -10,7 +10,7 @@ import { Card } from "@/components/common/card";
 
 export default function AcademySection() {
     return (
-        <Section heading="Academia SPG">
+        <Section>
             <Grid columns="abc" gap="lg" className={styles.grid}>
                 <div className={styles.illustration}>
                     <Image
