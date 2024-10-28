@@ -18,8 +18,6 @@ export default function Component({ header }: { header: Header }) {
 	const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 	const [linksMenu, setLinksMenu] = useState(false);
 
-	console.log(windowWidth)
-
 	useEffect(() => {
 		setIsClient(true);
 
@@ -53,7 +51,7 @@ export default function Component({ header }: { header: Header }) {
 							<Image
 								alt={(header.logo as Media)?.alt ?? ""}
 								height={40}
-								src={`http://localhost:3000${(header.logo as Media)?.url}`}
+								src={(header.logo as Media)?.url ?? "/placeholder.png"}
 								width={120}
 							/>
 						</Link>
@@ -82,7 +80,7 @@ export default function Component({ header }: { header: Header }) {
 									<Image
 										alt={(header.academiaDropdownLogo as Media)?.alt ?? ""}
 										height={19}
-										src={`http://localhost:3000${(header.academiaDropdownLogo as Media)?.url}`}
+										src={(header.academiaDropdownLogo as Media)?.url ?? "/placeholder.png"}
 										width={190}
 									/>
 									<div
@@ -94,7 +92,7 @@ export default function Component({ header }: { header: Header }) {
 											<Link href={`/${item.url}`} className={styles.dropdownItem} key={item.id}>
 												<Image
 													alt={(item.logo as Media)?.alt ?? ""}
-													src={`http://localhost:3000${(item.logo as Media)?.url}`}
+													src={(item.logo as Media)?.url ?? "/placeholder.png"}
 													height={30}
 													width={30}
 												/>
