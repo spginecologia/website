@@ -70,26 +70,18 @@
   --size-spacing-70: 7rem;
 }
 
-/* @media only screen and (max-width: 1023px) {
-  :root {
-    --root-size: 50%;
-  }
-}
+/* * */
 
-@media only screen and (max-width: 767px) {
-  :root {
-    --root-size: 65%;
-  }
-} */
-
-@media only screen and (max-width: 767px) {
-	only-mobile {
+@media only screen and (width <= 900px) {
+	format-desktop {
 		display: none;
 	}
 }
 
-@media only screen and (min-width: 768px) {
-	only-desktop {
+@media only screen and (width >= 901px) {
+	format-mobile {
 		display: none;
 	}
 }
+
+/* * */
