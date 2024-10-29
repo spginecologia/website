@@ -1,0 +1,9 @@
+.nav {
+	position: sticky;
+	top: 0;
+	height: 70px;
+	background-color: var(--color-background-100);
+	z-index: 20;
+	box-shadow: var(--box-shadow-sm);
+	border: 1px solid var(--color-background-200);
+}

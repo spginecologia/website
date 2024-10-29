@@ -3,7 +3,8 @@
   --color-brand-primary: #b46996;
   --color-brand-primary-foreground: #fff;
 
-  --color-brand-secondary: #870e51;
+  --color-brand-secondary: #a0285a;
+  --color-brand-secondary-darker: #580f2e;
   --color-brand-secondary-foreground: #fff;
 
   --color-background-100: #ffffff;
@@ -12,12 +13,14 @@
 
   --color-foreground-100: #000;
   --color-foreground-200: #645a69;
+  --color-foreground-250: #404040;
   --color-foreground-300: #9b8ca3;
 
   /* Typography */
   --font-family-primary: "lato", sans-serif;
   --font-family-secondary: "lemonde-journal", Times New Roman;
 
+  --text-xxs: 1.1rem;
   --text-xs: 1.4rem; /* 14px */
   --text-sm: 1.6rem; /* 16px */
   --text-base: 1.8rem; /* 18px */
@@ -67,26 +70,18 @@
   --size-spacing-70: 7rem;
 }
 
-/* @media only screen and (max-width: 1023px) {
-  :root {
-    --root-size: 50%;
-  }
-}
+/* * */
 
-@media only screen and (max-width: 767px) {
-  :root {
-    --root-size: 65%;
-  }
-} */
-
-@media only screen and (max-width: 767px) {
-	only-mobile {
+@media only screen and (width <= 900px) {
+	format-desktop {
 		display: none;
 	}
 }
 
-@media only screen and (min-width: 768px) {
-	only-desktop {
+@media only screen and (width >= 901px) {
+	format-mobile {
 		display: none;
 	}
 }
+
+/* * */
