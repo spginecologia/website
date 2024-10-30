@@ -35,6 +35,7 @@ export interface Config {
   globals: {
     header: Header;
     footer: Footer;
+    videosPage: VideosPage;
   };
   locale: null;
   user: User & {
@@ -488,16 +489,17 @@ export interface Video {
   video_featured?: boolean | null;
   video_rgpd_confirmation: boolean;
   video_file_length?: string | null;
+  views: number;
   video_file: string | Media;
   video_declaration_signed?: (string | null) | Media;
   video_authors: string;
   video_section:
-    | 'geral'
-    | 'colposcopia_patologia_tracto_genital_inferior'
-    | 'endoscopia_ginecologica'
-    | 'ginecologia_oncologica'
-    | 'menopausa'
-    | 'uroginecologia';
+    | 'Geral'
+    | 'Colposcopia Patologia Tracto Genital Inferior'
+    | 'Endoscopia Ginecológica'
+    | 'Ginecologia Oncológica'
+    | 'Menopausa'
+    | 'Uroginecologia';
   video_introduction: string;
   video_description: {
     root: {
@@ -683,6 +685,17 @@ export interface Footer {
         id?: string | null;
       }[]
     | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "videosPage".
+ */
+export interface VideosPage {
+  id: string;
+  image: string | Media;
+  logo_right: string | Media;
   updatedAt?: string | null;
   createdAt?: string | null;
 }

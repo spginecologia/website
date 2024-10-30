@@ -7,7 +7,6 @@ import { fileURLToPath } from 'url'
 import sharp from 'sharp'
 import { pt } from 'payload/i18n/pt'
 
-
 /* * */
 import { Users } from './collections/Users'
 import { Media } from './collections/Media'
@@ -25,6 +24,7 @@ import Footer from './collections/global/Footer'
 import Header from './collections/global/Header'
 import Events from './collections/Event'
 import Pages from './collections/Pages'
+import VideosPage from './collections/global/VideosPage'
 /* * */
 
 const filename = fileURLToPath(import.meta.url)
@@ -56,6 +56,7 @@ export default buildConfig({
   globals: [
     Header,
     Footer,
+    VideosPage,
   ],
   i18n: {
     supportedLanguages: { pt }

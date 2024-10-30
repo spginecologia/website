@@ -1,5 +1,5 @@
 import { sidebarFields } from '@/fields/sidebar';
-import type { CollectionConfig } from 'payload'
+import type { CollectionConfig, PayloadRequest } from 'payload'
 
 // #, Legenda, Nome, Tipo
 // 0, Título, video_title, Texto
@@ -29,7 +29,6 @@ const Videos: CollectionConfig = {
 			type: "text",
 			required: true,
 		},
-
 		{
 			type: "row",
 			fields: [
@@ -38,6 +37,20 @@ const Videos: CollectionConfig = {
 					label: "Destacar?",
 					type: "checkbox",
 					defaultValue: false,
+					validate: async (value, { req }) => {
+						if (value) {
+							const featuredCount = await req.payload.find({
+								collection: 'videos',
+								where: { video_featured: { equals: true } },
+								limit: 0,
+							});
+				
+							if (featuredCount.docs.length >= 6) {
+								return 'You can only have 6 featured video entries.';
+							}
+						}
+						return true;
+					},
 				},
 				{
 					name: "video_rgpd_confirmation",
@@ -48,7 +61,6 @@ const Videos: CollectionConfig = {
 			]
 		},
 		{
-			// Todo: Add a hook to get the video duration from the video file
 			name: "video_file_length",
 			label: "Duração do Vídeo",
 			type: "text",
@@ -56,6 +68,16 @@ const Videos: CollectionConfig = {
 			admin: {
 				position: "sidebar",
 			}
+		},
+		{
+			name: 'views',
+			label: 'Views',
+			type: 'number',
+			defaultValue: 0,
+			required: true,
+			admin: {
+				readOnly: true,
+			},
 		},
 		{
 			name: "video_file",
@@ -82,12 +104,12 @@ const Videos: CollectionConfig = {
 			type: "select",
 			required: true,
 			options: [
-				{ value: "geral", label: "Geral" },
-				{ value: "colposcopia_patologia_tracto_genital_inferior", label: "Colposcopia Patologia Tracto Genital Inferior" },
-				{ value: "endoscopia_ginecologica", label: "Endoscopia Ginecológica" },
-				{ value: "ginecologia_oncologica", label: "Ginecologia Oncológica" },
-				{ value: "menopausa", label: "Menopausa" },
-				{ value: "uroginecologia", label: "Uroginecologia" },
+				{ value: "Geral", label: "Geral" },
+				{ value: "Colposcopia Patologia Tracto Genital Inferior", label: "Colposcopia Patologia Tracto Genital Inferior" },
+				{ value: "Endoscopia Ginecológica", label: "Endoscopia Ginecológica" },
+				{ value: "Ginecologia Oncológica", label: "Ginecologia Oncológica" },
+				{ value: "Menopausa", label: "Menopausa" },
+				{ value: "Uroginecologia", label: "Uroginecologia" },
 			],
 		},
 		{
@@ -110,7 +132,6 @@ const Videos: CollectionConfig = {
 			required: true,
 		},
 		...sidebarFields,
-	]
+	],
 }
-
 export default Videos;
