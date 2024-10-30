@@ -10,20 +10,21 @@
   --color-background-100: #ffffff;
   --color-background-200: #eae9e6;
   --color-background-300: #bebebe;
+  --color-background-400: #a09696;
 
   --color-foreground-100: #000;
   --color-foreground-200: #645a69;
   --color-foreground-250: #404040;
   --color-foreground-300: #9b8ca3;
 
-  --color-deepPurple-100: #a0285a;
-
   /* Typography */
   --font-family-primary: "lato", sans-serif;
   --font-family-secondary: "lemonde-journal", Times New Roman;
 
-  --text-xxs: 1.1rem;
+  --text-xxxs: 1.1rem; /* 11px */
+  --text-xxs: 1.2rem; /* 12px */
   --text-xs: 1.4rem; /* 14px */
+  --text-s: 1.5rem; /* 15px */
   --text-sm: 1.6rem; /* 16px */
   --text-base: 1.8rem; /* 18px */
   --text-lg: 2rem; /* 20px */

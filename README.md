@@ -13,8 +13,8 @@
 
 - [/] Home (facil)
 - [ ] Submeter Video (Formulario)
-- [ ] Videos (Medio)
-- [ ] Videos/id (Dificil)
+- [x] Videos (Medio)
+- [x] Videos/id (Dificil)
 - [x] publicação (Facil)
 - [x] consensos (Facil)
 - [x] cursos (Facil)

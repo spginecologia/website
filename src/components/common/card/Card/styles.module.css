@@ -68,7 +68,7 @@
         padding: 0.5rem;
         font-size: 13px;
         font-weight: 700;
-        background-color: var(--color-deepPurple-100);
+        background-color: var(--color-brand-secondary);
     }
 
     .views {
@@ -79,7 +79,7 @@
         padding: 0.5rem;
         font-size: 13px;
         font-weight: 700;
-        background-color: var(--color-deepPurple-100);
+        background-color: var(--color-brand-secondary);
     }
 }
 
