@@ -661,10 +661,19 @@ export interface PayloadMigration {
 export interface Header {
   id: string;
   logo?: (string | null) | Media;
-  navigation_items?:
+  academiaDropdownLogo?: (string | null) | Media;
+  navigationItems?:
     | {
         label: string;
         url: string;
+        id?: string | null;
+      }[]
+    | null;
+  academyDropdownMenu?:
+    | {
+        label: string;
+        url: string;
+        logo?: (string | null) | Media;
         id?: string | null;
       }[]
     | null;
