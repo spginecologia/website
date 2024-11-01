@@ -12,7 +12,7 @@
 ## Academia
 
 - [/] Home (facil)
-- [ ] Submeter Video (Formulario)
+- [/] Submeter Video (Formulario)
 - [ ] Videos (Medio)
 - [ ] Videos/id (Dificil)
 - [x] publicação (Facil)

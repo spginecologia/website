@@ -40,8 +40,7 @@ export function Form() {
     const [isSubmitting, setIsSubmitting] = useState(false);
 
     return (
-        <form className={styles.form}>
-            {/* onSubmit={() => handleSubmit(title, authors, file, coverImage, introduction, description, interestArea, declarationFile, isPrivacyChecked, setIsSubmitting)} */}
+        <form className={styles.form} onSubmit={(event) => handleSubmit(event, title, authors, file, coverImage, introduction, description, interestArea, declarationFile, isPrivacyChecked, setIsSubmitting)}>
             <div className={styles.title}>Submeter Vídeo</div>
             <div className={styles.subtitle}>
                 Agradecemos o seu interesse em publicar na Academia SPG. Poderá encontrar as <a target="_blank" href="/academia/videos/new/help/">instruções de publicação aqui</a>. Para qualquer dúvida não hesite em contactar-nos para o email <a href="mailto:academia@spginecologia.pt">academia@spginecologia.pt</a>
