@@ -1,5 +1,69 @@
 .footer {
-	display: flex;
-    justify-content: center;
 	background-color: var(--color-brand-primary);
+	overflow: hidden;
+}
+
+.content {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 4rem;
+	padding: 4rem 2rem;
+	max-width: 1400px;
+	margin: 0 auto;
+}
+
+.logo {
+	margin: 0 auto;
+	height: max-content;
+	width: 300px;
+}
+
+.right {
+	text-align: center;
+	color: var(--color-background-100) !important;
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+}
+
+.contact {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.contactItem {
+	font-size: var(--text-lg);
+	color: var(--color-background-100);
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.social {
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+}
+
+.address {
+	font-size: var(--text-sm);
+}
+
+.addressTitle {
+	font-size: var(--text-base);
+	font-weight: 600;
+	font-family: var(--font-family-secondary);
+}
+
+@media (min-width: 768px) {
+	.content {
+		grid-template-columns: 1fr 1.5fr 1fr;
+	}
+
+	.right {
+		text-align: left;
+	}
 }
