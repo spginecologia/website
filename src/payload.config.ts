@@ -25,6 +25,7 @@ import Footer from './collections/global/Footer'
 import Header from './collections/global/Header'
 import Events from './collections/Event'
 import Pages from './collections/Pages'
+import NewVideoPage from './collections/global/NewVideoPage'
 /* * */
 
 const filename = fileURLToPath(import.meta.url)
@@ -56,6 +57,7 @@ export default buildConfig({
   globals: [
     Header,
     Footer,
+    NewVideoPage,
   ],
   i18n: {
     supportedLanguages: { pt }

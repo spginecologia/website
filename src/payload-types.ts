@@ -35,6 +35,7 @@ export interface Config {
   globals: {
     header: Header;
     footer: Footer;
+    newVideoPage: NewVideoPage;
   };
   locale: null;
   user: User & {
@@ -692,6 +693,16 @@ export interface Footer {
         id?: string | null;
       }[]
     | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "newVideoPage".
+ */
+export interface NewVideoPage {
+  id: string;
+  image?: (string | null) | Media;
   updatedAt?: string | null;
   createdAt?: string | null;
 }

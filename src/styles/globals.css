@@ -62,3 +62,8 @@ a {
 a:hover {
   text-decoration-style: double;
 }
+
+.ck-editor__editable_inline:not(.ck-comment__input *) {
+  height: 200px;
+  overflow-y: auto;
+}
