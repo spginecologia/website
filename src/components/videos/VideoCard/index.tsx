@@ -1,9 +1,10 @@
-import { Card, CardContent, CardHeader } from "@/components/common/card";
-import { Media, Video } from "@/payload-types";
+import { CardContent, CardHeader } from "@/components/common/card";
+import { Video } from "@/payload-types";
 
 import styles from "./styles.module.css"
 import RichText from "@/components/common/RichText";
 import { formatDate } from "@/functions/formatDate";
+import Card from "../Card";
 
 
 
