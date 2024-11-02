@@ -1,40 +1,52 @@
 .button {
+  background-color: transparent;
+  width: fit-content;
+  height: fit-content;
+  border: var(--border-brand);
+  border-width: 2px;
+  text-transform: uppercase;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: var(--text-sm);
+  padding: var(--size-spacing-5) var(--size-spacing-20);
+
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.button:disabled {
+  opacity: 0.3;
+  cursor: default;
+
+  &:hover {
     background-color: transparent;
-    width: fit-content;
-    height: fit-content;
-    border: var(--border-brand);
-    border-width: 2px;
-    text-transform: uppercase;
-    transition: background-color 0.3s, color 0.3s;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: var(--text-sm);
-    padding: var(--size-spacing-5) var(--size-spacing-20);
-    
-    overflow: hidden;
-    white-space: nowrap;
+    color: var(--color-brand-secondary);
+  }
 }
 
 .fullWidth {
-    width: 100%;
+  width: 100%;
 }
 
 .primary {
-    border-color: var(--color-brand-secondary);
-    color: var(--color-brand-secondary);
-    
-    &:hover {
-        background-color: var(--color-brand-secondary);
-        color: var(--color-background-100);
-    }
+  border-color: var(--color-brand-secondary);
+  color: var(--color-brand-secondary);
+
+  &:hover {
+    background-color: var(--color-brand-secondary);
+    color: var(--color-background-100);
+  }
 }
 
 .secondary {
-    border-color: var(--color-background-100);
-    color: var(--color-background-100);
+  border-color: var(--color-background-100);
+  color: var(--color-background-100);
 
-    &:hover {
-        background-color: var(--color-background-100);
-        color: var(--color-brand-secondary);
-    }
+  &:hover {
+    background-color: var(--color-background-100);
+    color: var(--color-brand-secondary);
+  }
 }

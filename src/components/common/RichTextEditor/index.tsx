@@ -1,31 +1,48 @@
-"use client";
+'use client'
 
-import React from 'react';
-import { CKEditor } from '@ckeditor/ckeditor5-react';
-import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+import React from 'react'
+import { AutoFocusPlugin } from '@lexical/react/LexicalAutoFocusPlugin'
+import { LexicalComposer } from '@lexical/react/LexicalComposer'
+import { ContentEditable } from '@lexical/react/LexicalContentEditable'
+import { HistoryPlugin } from '@lexical/react/LexicalHistoryPlugin'
+import { RichTextPlugin } from '@lexical/react/LexicalRichTextPlugin'
+import { LexicalErrorBoundary } from '@lexical/react/LexicalErrorBoundary'
+import ToolbarPlugin from './toolbar'
 
 interface RichTextEditorProps {
-    value: string;
-    onChange: (value: string) => void;
+  placeholder: string
+  onChange: (value: any) => void
 }
 
-const RichTextEditor: React.FC<RichTextEditorProps> = ({ value, onChange }) => {
-    return (
-        <CKEditor
-            editor={ClassicEditor}
-            data={value}
-            onChange={(event, editor) => {
-                const data = editor.getData();
-                onChange(data);
+const RichTextEditor: React.FC<RichTextEditorProps> = ({ placeholder, onChange }) => {
+  return (
+    <LexicalComposer
+      initialConfig={{
+        namespace: 'RichTextEditor',
+        onError: (error) => {
+          console.error(error)
+        },
+      }}
+    >
+      <ToolbarPlugin />
+      <RichTextPlugin
+        contentEditable={
+          <ContentEditable
+            className="editor-input"
+            aria-placeholder={placeholder}
+            onChange={(value) => {
+              console.log(value)
+              onChange(value)
             }}
-            config={{
-                toolbar: [
-                    'heading', '|', 'bold', 'italic', 'link', '|', 'bulletedList',
-                    'numberedList', '|', 'blockQuote', 'insertTable', '|', 'undo', 'redo'
-                ],
-            }}
-        />
-    );
-};
+            placeholder={<div className="editor-placeholder">{placeholder}</div>}
+          />
+        }
+        ErrorBoundary={LexicalErrorBoundary}
+      />
+      <HistoryPlugin />
+      <AutoFocusPlugin />
+    </LexicalComposer>
+  )
+}
 
-export default RichTextEditor;
+export default RichTextEditor
