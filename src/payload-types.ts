@@ -36,6 +36,7 @@ export interface Config {
     header: Header;
     footer: Footer;
     newVideoPage: NewVideoPage;
+    account: Account;
   };
   locale: null;
   user: User & {
@@ -163,6 +164,26 @@ export interface Category {
  */
 export interface User {
   id: string;
+  title?: ('sr' | 'sra' | 'dr' | 'dra' | 'professor' | 'professora' | 'exmo' | 'exma') | null;
+  name?: string | null;
+  last_name?: string | null;
+  full_name?: string | null;
+  cellphone?: number | null;
+  partner_number?: number | null;
+  tax_number?: number | null;
+  date?: string | null;
+  prime_workplace?: string | null;
+  secondary_workplace?: string | null;
+  colposcopia_patologia_tracto_genital_inferior?: boolean | null;
+  endoscopia_genecologica?: boolean | null;
+  ginecologia_oncologica?: boolean | null;
+  menopausa?: boolean | null;
+  uroginecologia?: boolean | null;
+  address?: string | null;
+  address_cont?: string | null;
+  post_code?: string | null;
+  city?: string | null;
+  country?: string | null;
   updatedAt: string;
   createdAt: string;
   email: string;
@@ -703,6 +724,16 @@ export interface Footer {
 export interface NewVideoPage {
   id: string;
   image?: (string | null) | Media;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "account".
+ */
+export interface Account {
+  id: string;
+  logo?: (string | null) | Media;
   updatedAt?: string | null;
   createdAt?: string | null;
 }

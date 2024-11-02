@@ -38,6 +38,15 @@ interface CheckboxProps {
   text: React.ReactNode
 }
 
+interface MultipleCheckboxProps {
+  options: {
+    value: string
+    label: React.ReactNode
+  }[]
+  label: string
+}
+
+
 /* Title */
 
 const FormTitle = React.forwardRef<HTMLDivElement, { children: React.ReactNode }>(
@@ -184,6 +193,23 @@ const FormCheckbox = React.forwardRef<HTMLDivElement, CheckboxProps>(({ text, ..
 })
 FormCheckbox.displayName = 'FormCheckbox'
 
+/* MultipleCheckbox */
+
+const MultipleCheckbox = React.forwardRef<HTMLDivElement, MultipleCheckboxProps>(({ options, label, ...props }, ref) => {
+  return (
+    <div ref={ref} className={styles.multipleCheckboxWrapper}>
+      <label className={styles.label}>{label}</label>
+      {options.map((item, index) => 
+        <div key={options[index].value} className={styles.multipleCheckbox}>
+          <input type="checkbox" {...props} />
+          <div className={styles.multipleCheckboxText}>{item.label}</div>
+        </div>
+      )}
+    </div>
+  )
+})
+MultipleCheckbox.displayName = 'MultipleCheckbox'
+
 /* Form */
 
 const Form = React.forwardRef<
@@ -198,6 +224,28 @@ const Form = React.forwardRef<
 })
 Form.displayName = 'Form'
 
+/* FormDateTimePicker */
+
+const FormDateTimePicker = React.forwardRef<HTMLInputElement, InputProps>(
+  ({ label, placeholder, type, className, leftSection, rightSection, error, ...props }, ref) => {
+    return (
+      <>
+        <label className={styles.label}>{label}</label>
+        <div className={styles.InputContainer}>
+          <input
+            ref={ref}
+            type='date'
+            className={`${styles.Input} ${className}`}
+            placeholder={placeholder}
+            {...props}
+          />
+        </div>
+      </>
+    )
+  },
+)
+FormDateTimePicker.displayName = 'FormDateTimePicker'
+
 export {
   Form,
   FormTitle,
@@ -208,4 +256,6 @@ export {
   FormRichTextEditor,
   FormSelect,
   FormCheckbox,
+  FormDateTimePicker,
+  MultipleCheckbox,
 }
