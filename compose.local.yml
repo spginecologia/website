@@ -1,0 +1,38 @@
+volumes:
+  websitedbdata:
+
+services:
+  #
+
+  # # # # # # # # # # # # # # # # # # # # #
+  # # # # # # # # # # # # # # # # # # # # #
+
+  backupd:
+    image: ghcr.io/spginecologia/website-backupd:production
+    restart: unless-stopped
+    logging:
+      options:
+        max-size: '1m'
+        max-file: '1'
+    volumes:
+      - ./backups/:/backups
+    environment:
+      - WEBSITEDB_MONGODB_URI=mongodb://websitedbuser:websitedbpassword@websitedb/production?authSource=admin
+
+  # # # # # # # # # # # # # # # # # # # # #
+  # # # # # # # # # # # # # # # # # # # # #
+
+  websitedb:
+    image: mongo
+    restart: unless-stopped
+    logging:
+      options:
+        max-size: '1m'
+        max-file: '1'
+    ports:
+      - 37005:27017
+    volumes:
+      - websitedbdata:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=websitedbuser
+      - MONGO_INITDB_ROOT_PASSWORD=websitedbpassword
