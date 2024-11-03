@@ -1,0 +1,31 @@
+.description {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    & p {
+        font-size: var(--text-base) !important;
+        line-height: 1.4;
+    }
+}
+
+.card {
+    padding: 25px;
+}
+
+.title {
+    line-height: 1.2;
+}
+
+.authors {
+    color: var(--color-foreground-200);
+    font-size: var(--text-sm);
+    line-height: 1.4;
+    font-style: italic;
+}
+
+.createdAt {
+    color: var(--color-foreground-200);
+    font-size: var(--text-sm);
+}

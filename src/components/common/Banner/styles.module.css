@@ -1,0 +1,18 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 280px;
+    background-color: var(--color-brand-secondary);
+
+    .image {
+        object-fit: contain;
+        max-width: 833px;
+        max-height: 280px;
+    }
+
+    .logo {
+        margin-top: 30px;
+    }
+}

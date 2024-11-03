@@ -37,6 +37,7 @@ export interface Config {
     footer: Footer;
     newVideoPage: NewVideoPage;
     account: Account;
+    videosPage: VideosPage;
   };
   locale: null;
   user: User & {
@@ -735,6 +736,17 @@ export interface Account {
   id: string;
   logo?: (string | null) | Media;
   logo_logged?: (string | null) | Media;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "videosPage".
+ */
+export interface VideosPage {
+  id: string;
+  image: string | Media;
+  logo_right: string | Media;
   updatedAt?: string | null;
   createdAt?: string | null;
 }
