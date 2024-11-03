@@ -13,7 +13,7 @@ export default async function Component() {
 	const header = await payload.findGlobal({
 		slug: 'header',
 	});
-
+	
 	return (
 		<>
 			<nav className={styles.nav}>

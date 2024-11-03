@@ -3,13 +3,31 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './styles.module.css';
-import { Header, Media } from '@/payload-types';
+import { Header, Media, User } from '@/payload-types';
 import { IoSearchSharp } from "react-icons/io5";
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import nookies from 'nookies';
+import { fetchUser } from '@/functions/fetchUser';
 
 export default function Desktop({ header }: { header: Header }) {
     const [isHovered, setIsHovered] = useState(false);
-    const [loggedIn, setLoggedIn] = useState(false);
+
+    const cookies = nookies.get();
+    const token = cookies.authToken;
+    
+	const [user, setUser] = useState<User | undefined>(undefined);
+    const [loggedIn, setLoggedIn] = useState(token ?? false);
+
+    const handleFetchUser = async () => {
+        if (token) {
+            const user = await fetchUser();
+            setUser(user?.user)
+        }
+    }
+    
+    useEffect(() => {
+        handleFetchUser();
+    }, []);
 
     return <div className={styles.container}>
         <div className={styles.logo}>
@@ -65,7 +83,7 @@ export default function Desktop({ header }: { header: Header }) {
             </div>
             <div className={styles.login}>
                 <Link href={'/account'}>
-                    {!loggedIn ? 'Login' : 'Exmo.'}
+                    {!loggedIn ? 'Login' : `${user?.title} ${user?.name}`}
                 </Link>
             </div>
         </div>
