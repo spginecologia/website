@@ -11,6 +11,7 @@
   --color-background-150: #f5cdcd;
   --color-background-200: #eae9e6;
   --color-background-300: #bebebe;
+  --color-background-400: #a09696;
 
   --color-foreground-100: #000;
   --color-foreground-200: #645a69;
@@ -21,8 +22,10 @@
   --font-family-primary: "lato", sans-serif;
   --font-family-secondary: "lemonde-journal", Times New Roman;
 
-  --text-xxs: 1.1rem;
+  --text-xxxs: 1.1rem; /* 11px */
+  --text-xxs: 1.2rem; /* 12px */
   --text-xs: 1.4rem; /* 14px */
+  --text-s: 1.5rem; /* 15px */
   --text-sm: 1.6rem; /* 16px */
   --text-base: 1.8rem; /* 18px */
   --text-lg: 2rem; /* 20px */

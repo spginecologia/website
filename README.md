@@ -12,9 +12,9 @@
 ## Academia
 
 - [/] Home (facil)
-- [/] Submeter Video (Formulario)
-- [ ] Videos (Medio)
-- [ ] Videos/id (Dificil)
+- [x] Submeter Video (Formulario)
+- [x] Videos (Medio)
+- [x] Videos/id (Dificil)
 - [x] publicação (Facil)
 - [x] consensos (Facil)
 - [x] cursos (Facil)
@@ -24,6 +24,6 @@
 
 ## Outros
 
-- [ ] Perfil Socio
+- [/] Perfil Socio
 - [ ] Privacidade
-- [ ] Footer
+- [x] Footer
