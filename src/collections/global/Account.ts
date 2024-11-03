@@ -9,6 +9,12 @@ const Account: GlobalConfig = {
             type: "upload",
             relationTo: "media",
         },
+        {
+            name: "logo_logged",
+            label: "Logo Logged",
+            type: "upload",
+            relationTo: "media",
+        },
     ],
 }
 

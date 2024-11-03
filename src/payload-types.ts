@@ -164,7 +164,7 @@ export interface Category {
  */
 export interface User {
   id: string;
-  title?: ('sr' | 'sra' | 'dr' | 'dra' | 'professor' | 'professora' | 'exmo' | 'exma') | null;
+  title?: ('Sr.' | 'Sr.ª' | 'Dr.' | 'Dr.ª' | 'Prof.' | 'Prof.ª' | 'Exmo.' | 'Exmo.ª') | null;
   name?: string | null;
   last_name?: string | null;
   full_name?: string | null;
@@ -734,6 +734,7 @@ export interface NewVideoPage {
 export interface Account {
   id: string;
   logo?: (string | null) | Media;
+  logo_logged?: (string | null) | Media;
   updatedAt?: string | null;
   createdAt?: string | null;
 }

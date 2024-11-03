@@ -9,6 +9,8 @@ import { useState } from 'react';
 
 export default function Desktop({ header }: { header: Header }) {
     const [isHovered, setIsHovered] = useState(false);
+    const [loggedIn, setLoggedIn] = useState(false);
+
     return <div className={styles.container}>
         <div className={styles.logo}>
             <Link href={'/'}>
@@ -63,7 +65,7 @@ export default function Desktop({ header }: { header: Header }) {
             </div>
             <div className={styles.login}>
                 <Link href={'/account'}>
-                    Login
+                    {!loggedIn ? 'Login' : 'Exmo.'}
                 </Link>
             </div>
         </div>

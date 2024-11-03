@@ -21,7 +21,7 @@ export default function Breadcrumbs({ header }: { header: Header }) {
                 Home
             </Link>
             {pathnames.map((_, index) => {
-                const routeTo = `${pathnames.slice(0, index + 1).join("/")}`;
+                const routeTo = `/${pathnames.slice(0, index + 1).join("/")}`;
                 const label = getLabelForPath(routeTo);
                 return (
                     <>
