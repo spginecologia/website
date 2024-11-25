@@ -4,10 +4,7 @@
 
 	"files.eol": "\n",
 
-	"eslint.workingDirectories": ["./nextjs"],
-
-	// Enable the ESlint flat config support
-	"eslint.useFlatConfig": true,
+	"eslint.workingDirectories": ["./frontend"],
 
 	// Disable the default formatter, use eslint instead
 	"prettier.enable": false,
@@ -16,55 +13,48 @@
 	"editor.defaultFormatter": "dbaeumer.vscode-eslint",
 
 	// Disable the default CSS formatter, use stylelint instead
-	  "css.validate": false,
-	  "less.validate": false,
-	  "scss.validate": false,
+	"css.validate": false,
+	"less.validate": false,
+	"scss.validate": false,
 
 	// Auto fix
 	"editor.codeActionsOnSave": {
-	  "source.fixAll.eslint": "explicit",
-	  "source.organizeImports": "never"
+		"source.fixAll.eslint": "explicit",
 	},
 
-	// Silent the stylistic rules in you IDE, but still auto fix them
-	"eslint.rules.customizations": [
-	  // { "rule": "style/*", "severity": "off" },
-	  // { "rule": "format/*", "severity": "off" },
-	  // { "rule": "*-indent", "severity": "off" },
-	  // { "rule": "*-spacing", "severity": "off" },
-	  // { "rule": "*-spaces", "severity": "off" },
-	  // { "rule": "*-order", "severity": "off" },
-	  // { "rule": "*-dangle", "severity": "off" },
-	  // { "rule": "*-newline", "severity": "off" },
-	  // { "rule": "*quotes", "severity": "off" },
-	  // { "rule": "*semi", "severity": "off" }
-	],
+	"[css]": {
+		"editor.defaultFormatter": "stylelint.vscode-stylelint",
+		"editor.codeActionsOnSave": {
+			"source.fixAll.stylelint": "explicit"
+		}
+	},
 
 	// Enable eslint for all supported languages
 	"eslint.validate": [
-	  "javascript",
-	  "javascriptreact",
-	  "typescript",
-	  "typescriptreact",
-	  "vue",
-	  "html",
-	  "markdown",
-	  "json",
-	  "jsonc",
-	  "yaml",
-	  "toml",
-	  "astro"
-	  ],
+		"javascript",
+		"javascriptreact",
+		"typescript",
+		"typescriptreact",
+		"vue",
+		"html",
+		"markdown",
+		"json",
+		"jsonc",
+		"yaml",
+		"toml",
+		"astro"
+	],
 
-	  "workbench.editor.customLabels.enabled": true,
+	"workbench.editor.customLabels.enabled": true,
 
-	  "workbench.editor.customLabels.patterns": {
-		  "**/components/**/*.js": "${dirname} (${extname})",
-		  "**/components/**/*.ts": "${dirname} (${extname})",
-		  "**/components/**/*.tsx": "${dirname} (${extname})",
-		  "**/components/**/*.css": "${dirname} (${extname})"
-	  },
+	"workbench.editor.customLabels.patterns": {
+		"**/components/**/*.js": "${dirname} (${extname})",
+		"**/components/**/*.ts": "${dirname} (${extname})",
+		"**/components/**/*.tsx": "${dirname} (${extname})",
+		"**/components/**/*.css": "${dirname} (${extname})"
+	},
 
-	"typescript.tsdk": "./nextjs/node_modules/typescript/lib"
+	"typescript.tsdk": "./frontend/node_modules/typescript/lib",
+	"svg.preview.background": "custom"
 
-  }
+}

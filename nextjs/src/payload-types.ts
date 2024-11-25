@@ -29,6 +29,26 @@ export interface Config {
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
   };
+  collectionsJoins: {};
+  collectionsSelect: {
+    paginas: PaginasSelect<false> | PaginasSelect<true>;
+    events: EventsSelect<false> | EventsSelect<true>;
+    users: UsersSelect<false> | UsersSelect<true>;
+    media: MediaSelect<false> | MediaSelect<true>;
+    categories: CategoriesSelect<false> | CategoriesSelect<true>;
+    consensos: ConsensosSelect<false> | ConsensosSelect<true>;
+    noticias: NoticiasSelect<false> | NoticiasSelect<true>;
+    publications: PublicationsSelect<false> | PublicationsSelect<true>;
+    courses: CoursesSelect<false> | CoursesSelect<true>;
+    sections: SectionsSelect<false> | SectionsSelect<true>;
+    nucleos: NucleosSelect<false> | NucleosSelect<true>;
+    members: MembersSelect<false> | MembersSelect<true>;
+    videos: VideosSelect<false> | VideosSelect<true>;
+    prizes: PrizesSelect<false> | PrizesSelect<true>;
+    'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
+    'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
+    'payload-migrations': PayloadMigrationsSelect<false> | PayloadMigrationsSelect<true>;
+  };
   db: {
     defaultIDType: string;
   };
@@ -39,9 +59,20 @@ export interface Config {
     account: Account;
     videosPage: VideosPage;
   };
+  globalsSelect: {
+    header: HeaderSelect<false> | HeaderSelect<true>;
+    footer: FooterSelect<false> | FooterSelect<true>;
+    newVideoPage: NewVideoPageSelect<false> | NewVideoPageSelect<true>;
+    account: AccountSelect<false> | AccountSelect<true>;
+    videosPage: VideosPageSelect<false> | VideosPageSelect<true>;
+  };
   locale: null;
   user: User & {
     collection: 'users';
+  };
+  jobs: {
+    tasks: unknown;
+    workflows: unknown;
   };
 }
 export interface UserAuthOperations {
@@ -677,6 +708,409 @@ export interface PayloadMigration {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "paginas_select".
+ */
+export interface PaginasSelect<T extends boolean = true> {
+  titulo?: T;
+  slug?: T;
+  layout?: T | {};
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "events_select".
+ */
+export interface EventsSelect<T extends boolean = true> {
+  title?: T;
+  is_featured?: T;
+  event_type?: T;
+  start_date?: T;
+  end_date?: T;
+  links_group?:
+    | T
+    | {
+        link_to_official_page?: T;
+        link_to_facebook?: T;
+        link_to_register?: T;
+        link_to_program?: T;
+      };
+  sections?:
+    | T
+    | {
+        title?: T;
+        evento_section_type?: T;
+        content?: T;
+        video?: T;
+        iframe?: T;
+        images?:
+          | T
+          | {
+              image?: T;
+              caption?: T;
+              id?: T;
+            };
+        id?: T;
+      };
+  slug?: T;
+  categories?: T;
+  featured?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "users_select".
+ */
+export interface UsersSelect<T extends boolean = true> {
+  title?: T;
+  name?: T;
+  last_name?: T;
+  full_name?: T;
+  cellphone?: T;
+  partner_number?: T;
+  tax_number?: T;
+  date?: T;
+  prime_workplace?: T;
+  secondary_workplace?: T;
+  colposcopia_patologia_tracto_genital_inferior?: T;
+  endoscopia_genecologica?: T;
+  ginecologia_oncologica?: T;
+  menopausa?: T;
+  uroginecologia?: T;
+  address?: T;
+  address_cont?: T;
+  post_code?: T;
+  city?: T;
+  country?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  email?: T;
+  resetPasswordToken?: T;
+  resetPasswordExpiration?: T;
+  salt?: T;
+  hash?: T;
+  loginAttempts?: T;
+  lockUntil?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "media_select".
+ */
+export interface MediaSelect<T extends boolean = true> {
+  alt?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  url?: T;
+  thumbnailURL?: T;
+  filename?: T;
+  mimeType?: T;
+  filesize?: T;
+  width?: T;
+  height?: T;
+  focalX?: T;
+  focalY?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "categories_select".
+ */
+export interface CategoriesSelect<T extends boolean = true> {
+  name?: T;
+  description?: T;
+  slug?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "consensos_select".
+ */
+export interface ConsensosSelect<T extends boolean = true> {
+  title?: T;
+  consenso_type?: T;
+  consenso_file?: T;
+  consenso_url?: T;
+  slug?: T;
+  categories?: T;
+  featured?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "noticias_select".
+ */
+export interface NoticiasSelect<T extends boolean = true> {
+  title?: T;
+  is_featured?: T;
+  content?: T;
+  slug?: T;
+  categories?: T;
+  featured?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  _status?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "publications_select".
+ */
+export interface PublicationsSelect<T extends boolean = true> {
+  title?: T;
+  publication_file?: T;
+  slug?: T;
+  categories?: T;
+  featured?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "courses_select".
+ */
+export interface CoursesSelect<T extends boolean = true> {
+  title?: T;
+  description?: T;
+  slug?: T;
+  categories?: T;
+  featured?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "sections_select".
+ */
+export interface SectionsSelect<T extends boolean = true> {
+  title?: T;
+  mission?: T;
+  first_column?:
+    | T
+    | {
+        title?: T;
+        message?: T;
+      };
+  second_column?:
+    | T
+    | {
+        title?: T;
+        message?: T;
+      };
+  members?:
+    | T
+    | {
+        picture?: T;
+        name?: T;
+        position?: T;
+        location?: T;
+        id?: T;
+      };
+  useful_links?:
+    | T
+    | {
+        title?: T;
+        url?: T;
+        id?: T;
+      };
+  buttons?:
+    | T
+    | {
+        title?: T;
+        type?: T;
+        url?: T;
+        file?: T;
+        id?: T;
+      };
+  recomended_articles?:
+    | T
+    | {
+        title?: T;
+        type?: T;
+        url?: T;
+        file?: T;
+        id?: T;
+      };
+  workshops?:
+    | T
+    | {
+        title?: T;
+        type?: T;
+        url?: T;
+        file?: T;
+        id?: T;
+      };
+  contacts?:
+    | T
+    | {
+        type?: T;
+        email?: T;
+        phone?: T;
+        id?: T;
+      };
+  slug?: T;
+  categories?: T;
+  featured?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "nucleos_select".
+ */
+export interface NucleosSelect<T extends boolean = true> {
+  title?: T;
+  mission?: T;
+  first_column?:
+    | T
+    | {
+        title?: T;
+        message?: T;
+      };
+  second_column?:
+    | T
+    | {
+        title?: T;
+        message?: T;
+      };
+  members?:
+    | T
+    | {
+        picture?: T;
+        name?: T;
+        position?: T;
+        location?: T;
+        id?: T;
+      };
+  useful_links?:
+    | T
+    | {
+        title?: T;
+        url?: T;
+        id?: T;
+      };
+  buttons?:
+    | T
+    | {
+        title?: T;
+        type?: T;
+        url?: T;
+        file?: T;
+        id?: T;
+      };
+  recomended_articles?:
+    | T
+    | {
+        title?: T;
+        type?: T;
+        url?: T;
+        file?: T;
+        id?: T;
+      };
+  workshops?:
+    | T
+    | {
+        title?: T;
+        type?: T;
+        url?: T;
+        file?: T;
+        id?: T;
+      };
+  contacts?:
+    | T
+    | {
+        type?: T;
+        email?: T;
+        phone?: T;
+        id?: T;
+      };
+  slug?: T;
+  categories?: T;
+  featured?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "members_select".
+ */
+export interface MembersSelect<T extends boolean = true> {
+  name?: T;
+  profile_picture?: T;
+  position?: T;
+  location?: T;
+  social_body?: T;
+  slug?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "videos_select".
+ */
+export interface VideosSelect<T extends boolean = true> {
+  title?: T;
+  video_featured?: T;
+  video_rgpd_confirmation?: T;
+  video_file_length?: T;
+  video_file?: T;
+  video_declaration_signed?: T;
+  video_authors?: T;
+  video_section?: T;
+  video_introduction?: T;
+  video_description?: T;
+  author?: T;
+  slug?: T;
+  categories?: T;
+  featured?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "prizes_select".
+ */
+export interface PrizesSelect<T extends boolean = true> {
+  title?: T;
+  content?: T;
+  slug?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "payload-locked-documents_select".
+ */
+export interface PayloadLockedDocumentsSelect<T extends boolean = true> {
+  document?: T;
+  globalSlug?: T;
+  user?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "payload-preferences_select".
+ */
+export interface PayloadPreferencesSelect<T extends boolean = true> {
+  user?: T;
+  key?: T;
+  value?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "payload-migrations_select".
+ */
+export interface PayloadMigrationsSelect<T extends boolean = true> {
+  name?: T;
+  batch?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "header".
  */
 export interface Header {
@@ -749,6 +1183,81 @@ export interface VideosPage {
   logo_right: string | Media;
   updatedAt?: string | null;
   createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "header_select".
+ */
+export interface HeaderSelect<T extends boolean = true> {
+  logo?: T;
+  academiaDropdownLogo?: T;
+  navigationItems?:
+    | T
+    | {
+        label?: T;
+        url?: T;
+        id?: T;
+      };
+  academyDropdownMenu?:
+    | T
+    | {
+        label?: T;
+        url?: T;
+        logo?: T;
+        id?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "footer_select".
+ */
+export interface FooterSelect<T extends boolean = true> {
+  logo?: T;
+  navigation_items?:
+    | T
+    | {
+        label?: T;
+        url?: T;
+        id?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "newVideoPage_select".
+ */
+export interface NewVideoPageSelect<T extends boolean = true> {
+  image?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "account_select".
+ */
+export interface AccountSelect<T extends boolean = true> {
+  logo?: T;
+  logo_logged?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "videosPage_select".
+ */
+export interface VideosPageSelect<T extends boolean = true> {
+  image?: T;
+  logo_right?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

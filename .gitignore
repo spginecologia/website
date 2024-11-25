@@ -44,3 +44,4 @@ nginx/uptime.conf
 
 # Backups
 spg-backup-*
+nextjs/pnpm-lock.yaml

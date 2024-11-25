@@ -1,5 +1,6 @@
 import Footer from '@/blocks/global/Footer';
 import Header from '@/blocks/global/Header';
+import { NuqsAdapter } from 'nuqs/adapters/next/app';
 
 import '@mantine/core/styles.css';
 import '@mantine/dates/styles.css';
@@ -17,9 +18,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 		<html lang="pt-PT">
 			<body>
 				<MantineProvider>
+				<NuqsAdapter>
 					<Header />
 					{children}
 					<Footer />
+				</NuqsAdapter>
 				</MantineProvider>
 			</body>
 		</html>
