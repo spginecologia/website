@@ -1,15 +1,16 @@
 /* * */
 
-import { Link } from '@/translations/navigation';
-import styles from './FrontendHeaderLogo.module.css';
 import { SpgLogoCompact } from '@/assets/spg';
+import Link from 'next/link';
+
+import styles from './FrontendHeaderLogo.module.css';
 
 /* * */
 
 export default function FrontendHeaderLogo() {
-  return (
-    <Link href="/" className={styles.container}>
-      <SpgLogoCompact />
-    </Link>
-  );
+	return (
+		<Link className={styles.container} href="/">
+			<SpgLogoCompact />
+		</Link>
+	);
 }

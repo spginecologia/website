@@ -1,6 +1,6 @@
 /* * */
 
-import { Link } from '@/translations/navigation';
+import Link from 'next/link';
 import Image from 'next/image';
 import styles from './FrontendNewsGridRegular.module.css';
 import Text from '@/components/Text/Text';

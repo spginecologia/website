@@ -5,7 +5,7 @@
 import useSWR from 'swr';
 import { useState } from 'react';
 import { useParams } from 'next/navigation';
-import { useRouter } from '@/translations/navigation';
+import { useRouter } from 'next/navigation';
 import { LinkFormProvider, useLinkForm } from '@/schemas/Link/form';
 import { yupResolver } from '@mantine/form';
 import API from '@/services/API';

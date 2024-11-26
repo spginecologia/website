@@ -1,7 +1,7 @@
 'use client';
 
 import { useSession } from 'next-auth/react';
-import { useRouter } from '@/translations/navigation';
+import { useRouter } from 'next/navigation';
 import { useEffect, useMemo } from 'react';
 
 export default function AppAuthenticationCheck({ scope = '', permission = '', redirect = false, children }) {

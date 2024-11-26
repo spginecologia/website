@@ -2,7 +2,7 @@
 
 /* * */
 
-import { Link } from '@/translations/navigation';
+import Link from 'next/link';
 import styles from './BackofficeSidebar.module.css';
 import AppAuthenticationCheck from '@/components/AppAuthenticationCheck/AppAuthenticationCheck';
 import { SpgLogoIcon } from '@/assets/spg';

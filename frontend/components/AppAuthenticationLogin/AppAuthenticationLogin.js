@@ -2,58 +2,59 @@
 
 /* * */
 
-import { signIn } from 'next-auth/react';
-import { Space } from '@mantine/core';
-import { useForm, yupResolver } from '@mantine/form';
+import Button from '@/components/common/Button';
+import Loader from '@/components/Loader/Loader';
+import Text from '@/components/Text/Text';
+import TextField from '@/components/TextField/TextField';
+import Title from '@/components/Title/Title';
 import { SignInDefault } from '@/schemas/SignIn/default';
 import { SignInValidation } from '@/schemas/SignIn/validation';
+import { Space } from '@mantine/core';
+import { useForm, yupResolver } from '@mantine/form';
+import { signIn } from 'next-auth/react';
 import { useTranslations } from 'next-intl';
-import styles from './AppAuthenticationLogin.module.css';
-import Title from '@/components/Title/Title';
-import Text from '@/components/Text/Text';
-import Button from '@/components/Button/Button';
-import TextField from '@/components/TextField/TextField';
 import { useState } from 'react';
-import Loader from '@/components/Loader/Loader';
+
+import styles from './AppAuthenticationLogin.module.css';
 
 /* * */
 
 export default function AppAuthenticationLogin() {
-  //
+	//
 
-  //
-  // A. Setup variables
+	//
+	// A. Setup variables
 
-  const t = useTranslations('AppAuthenticationLogin');
-  const [isLoading, setIsLoading] = useState(false);
+	const t = useTranslations('AppAuthenticationLogin');
+	const [isLoading, setIsLoading] = useState(false);
 
-  //
-  // B. Setup form
+	//
+	// B. Setup form
 
-  const form = useForm({
-    clearInputErrorOnChange: true,
-    validate: yupResolver(SignInValidation),
-    initialValues: SignInDefault,
-  });
+	const form = useForm({
+		clearInputErrorOnChange: true,
+		initialValues: SignInDefault,
+		validate: yupResolver(SignInValidation),
+	});
 
-  //
-  // C. Handle actions
+	//
+	// C. Handle actions
 
-  const handleSignIn = async () => {
-    setIsLoading(true);
-    signIn('email', { email: form.values.email, callbackUrl: '/' });
-  };
+	const handleSignIn = async () => {
+		setIsLoading(true);
+		signIn('email', { callbackUrl: '/', email: form.values.email });
+	};
 
-  //
-  // D. Render components
+	//
+	// D. Render components
 
-  return (
-    <form onSubmit={form.onSubmit(handleSignIn)} className={styles.container}>
-      <Title level="h2" text={t('title')} />
-      <Text text={t('subtitle')} />
-      <Space h={5} />
-      <TextField type="email" label={t('email.label')} placeholder={t('email.placeholder')} {...form.getInputProps('email')} />
-      {!isLoading ? <Button type={'submit'} label={t('submit.label')} /> : <Loader visible />}
-    </form>
-  );
+	return (
+		<form className={styles.container} onSubmit={form.onSubmit(handleSignIn)}>
+			<Title level="h2" text={t('title')} />
+			<Text text={t('subtitle')} />
+			<Space h={5} />
+			<TextField label={t('email.label')} placeholder={t('email.placeholder')} type="email" {...form.getInputProps('email')} />
+			{!isLoading ? <Button label={t('submit.label')} type="submit" /> : <Loader visible />}
+		</form>
+	);
 }

@@ -2,12 +2,12 @@
 
 /* * */
 
-import { useRouter } from '@/translations/navigation';
+import { useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import styles from './AppAuthenticationLoginVerify.module.css';
 import Title from '@/components/Title/Title';
 import Text from '@/components/Text/Text';
-import Button from '@/components/Button/Button';
+import Button from '@/components/common/Button';
 import { Space } from '@mantine/core';
 
 /* * */

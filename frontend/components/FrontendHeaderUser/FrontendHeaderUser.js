@@ -4,7 +4,7 @@
 
 import styles from './FrontendHeaderUser.module.css';
 import Loader from '@/components/Loader/Loader';
-import { Link } from '@/translations/navigation';
+import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { useSession } from 'next-auth/react';
 import { IconSettings, IconUserCircle } from '@tabler/icons-react';

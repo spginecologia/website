@@ -6,11 +6,11 @@
   flex-direction: column;
   gap: 15px;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.05);
-  text-align: left;
   padding: 20px;
+  text-align: left;
+  background-color: rgb(255 255 255 / 5%);
   border-radius: 2px;
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 5px 0 rgb(0 0 0 / 5%);
 }
 
 /* * */
@@ -23,18 +23,18 @@
 }
 
 .title {
-  font-family: 'lemonde-journal';
-  color: #ffffff;
+  font-family: lemonde-journal, sans-serif;
   font-size: 25px;
   font-weight: 700;
   line-height: 1;
+  color: #fff;
 }
 
 .subtitle {
-  color: #ffffff;
   font-size: 15px;
   font-weight: 500;
   line-height: 1;
+  color: #fff;
 }
 
 /* * */
