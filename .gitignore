@@ -44,3 +44,4 @@ nginx/uptime.conf
 
 # Backups
 spg-backup-*
+frontend/pnpm-lock.yaml

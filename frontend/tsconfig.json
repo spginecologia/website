@@ -17,6 +17,9 @@
 		"paths": {
 			"@/*": [
 				"./*"
+			],
+			"@payload-config": [
+				"./payload.config.ts"
 			]
 		},
 		"plugins": [
