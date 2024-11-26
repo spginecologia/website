@@ -1,20 +1,20 @@
-import { getPayloadHMR } from "@payloadcms/next/utilities";
-import config from "@/payload.config";
-
-import NewsBanner from "../NewsBanner";
-import NewsList from "../NewsList";
+import NewsBanner from '@/components/news/NewsBanner';
+import NewsList from '@/components/news/NewsList';
+import config from '@/payload.config';
+import { getPayload } from 'payload';
 
 export default async function Component() {
+	const payload = await getPayload({ config });
+	const newsList = await payload.find({
+		collection: 'noticias',
+		limit: 1000,
+		pagination: true,
+	});
 
-    const payload = await getPayloadHMR({ config })
-    const newsList = await payload.find({
-        collection: "noticias",
-        pagination: true,
-        limit: 1000,
-    })
-
-    return <>
-        <NewsBanner />
-        <NewsList news={newsList.docs} />
-    </>
+	return (
+		<>
+			<NewsBanner />
+			<NewsList news={newsList.docs} />
+		</>
+	);
 }

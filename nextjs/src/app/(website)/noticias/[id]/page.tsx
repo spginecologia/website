@@ -1,13 +1,13 @@
 /* * */
 
-import { getPayloadHMR } from "@payloadcms/next/utilities"
+import { getPayload } from 'payload'
 import config from "@/payload.config"
 import { notFound } from "next/navigation"
 import PageComponent from "@/components/news/Slug"
 
 export default async function Page({ params }: { params: { id: string } }) {
 
-	const payload = await getPayloadHMR({ config })
+	const payload = await getPayload({ config })
 	const query = await payload.find({
 		collection: "noticias",
 		where: {

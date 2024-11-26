@@ -1,132 +1,132 @@
-import type { CollectionConfig } from 'payload'
+import type { CollectionConfig } from 'payload';
 
 export const Users: CollectionConfig = {
-  slug: 'users',
-  admin: {
-    useAsTitle: 'email',
-  },
-  auth: true,
-  fields: [
-    {
-			name: 'title',
+	admin: {
+		useAsTitle: 'email',
+	},
+	auth: true,
+	fields: [
+		{
 			label: 'Título',
+			name: 'title',
+			options: [
+				{ label: 'Sr.', value: 'Sr.' },
+				{ label: 'Sr.ª', value: 'Sr.ª' },
+				{ label: 'Dr.', value: 'Dr.' },
+				{ label: 'Dr.ª', value: 'Dr.ª' },
+				{ label: 'Prof.', value: 'Prof.' },
+				{ label: 'Prof.ª', value: 'Prof.ª' },
+				{ label: 'Exmo.', value: 'Exmo.' },
+				{ label: 'Exmo.ª', value: 'Exmo.ª' },
+			],
 			type: 'select',
-      options: [
-        { value: 'Sr.', label: 'Sr.' },
-        { value: 'Sr.ª', label: 'Sr.ª' },
-        { value: 'Dr.', label: 'Dr.' },
-        { value: 'Dr.ª', label: 'Dr.ª' },
-        { value: 'Prof.', label: 'Prof.' },
-        { value: 'Prof.ª', label: 'Prof.ª' },
-        { value: 'Exmo.', label: 'Exmo.' },
-        { value: 'Exmo.ª', label: 'Exmo.ª' },
-      ],
 		},
-    {
-			name: 'name',
+		{
 			label: 'Nome',
+			name: 'name',
 			type: 'text',
 		},
-    {
-			name: 'last_name',
+		{
 			label: 'Apelido',
+			name: 'last_name',
 			type: 'text',
 		},
-    {
-			name: 'full_name',
+		{
 			label: 'Nome Completo',
+			name: 'full_name',
 			type: 'text',
 		},
-    {
-			name: 'cellphone',
+		{
 			label: 'Telefone',
+			name: 'cellphone',
 			type: 'number',
 		},
-    {
-			name: 'email',
+		{
 			label: 'Email',
+			name: 'email',
 			type: 'text',
 		},
-    {
-			name: 'partner_number',
+		{
 			label: 'Número de Sócio SPG',
+			name: 'partner_number',
 			type: 'number',
 		},
-    {
-			name: 'tax_number',
+		{
 			label: 'Número de Contribuinte',
+			name: 'tax_number',
 			type: 'number',
 		},
-    {
-			name: 'date',
+		{
 			label: 'Data de Nascimento',
+			name: 'date',
 			type: 'date',
 		},
-    {
-			name: 'prime_workplace',
+		{
 			label: 'Local de Trabalho Principal',
+			name: 'prime_workplace',
 			type: 'text',
 		},
-    {
-			name: 'secondary_workplace',
+		{
 			label: 'Local de Trabalho Secundário',
+			name: 'secondary_workplace',
 			type: 'text',
 		},
-    {
-      type: 'row',
-      fields: [
-        {
-          name: 'colposcopia_patologia_tracto_genital_inferior',
-          label: 'Colposcopia Patologia Tracto Genital Inferior',
-          type: 'checkbox',
-        },
-        {
-          name: 'endoscopia_genecologica',
-          label: 'Endoscopia Ginecológica',
-          type: 'checkbox',
-        },
-        {
-          name: 'ginecologia_oncologica',
-          label: 'Ginecologia Oncológica',
-          type: 'checkbox',
-        },
-        {
-          name: 'menopausa',
-          label: 'Menopausa',
-          type: 'checkbox',
-        },
-        {
-          name: 'uroginecologia',
-          label: 'Uroginecologia',
-          type: 'checkbox',
-        },
-      ]
-    },
-    {
-			name: 'address',
+		{
+			fields: [
+				{
+					label: 'Colposcopia Patologia Tracto Genital Inferior',
+					name: 'colposcopia_patologia_tracto_genital_inferior',
+					type: 'checkbox',
+				},
+				{
+					label: 'Endoscopia Ginecológica',
+					name: 'endoscopia_genecologica',
+					type: 'checkbox',
+				},
+				{
+					label: 'Ginecologia Oncológica',
+					name: 'ginecologia_oncologica',
+					type: 'checkbox',
+				},
+				{
+					label: 'Menopausa',
+					name: 'menopausa',
+					type: 'checkbox',
+				},
+				{
+					label: 'Uroginecologia',
+					name: 'uroginecologia',
+					type: 'checkbox',
+				},
+			],
+			type: 'row',
+		},
+		{
 			label: 'Morada',
+			name: 'address',
 			type: 'text',
 		},
-    {
-			name: 'address_cont',
+		{
 			label: 'Morada (Continuação)',
+			name: 'address_cont',
 			type: 'text',
 		},
-    {
-			name: 'post_code',
+		{
 			label: 'Código Postal',
+			name: 'post_code',
 			type: 'text',
 		},
-    {
-			name: 'city',
+		{
 			label: 'Cidade',
+			name: 'city',
 			type: 'text',
 		},
-    {
-			name: 'country',
+		{
+			defaultValue: 'Portugal',
 			label: 'País',
+			name: 'country',
 			type: 'text',
-      defaultValue: 'Portugal'
 		},
-  ],
-}
+	],
+	slug: 'users',
+};

@@ -1,32 +1,33 @@
+import type { CollectionConfig } from 'payload';
+
 import { sidebarFields } from '@/fields/sidebar';
-import type { CollectionConfig } from 'payload'
 
 const Publications: CollectionConfig = {
-	labels: {
-		singular: "Publicação",
-		plural: "Publicações",
-	},
 	admin: {
-		useAsTitle: "title",
+		useAsTitle: 'title',
 	},
-	slug: "publications",
 	fields: [
 		{
-			name: "title",
-			label: "Título",
-			type: "text",
+			label: 'Título',
+			name: 'title',
 			required: true,
+			type: 'text',
 		},
 		{
-			name: "publication_file",
-			label: "Ficheiro da publicação",
-			type: "upload",
-			relationTo: "media",
+			label: 'Ficheiro da publicação',
+			name: 'publication_file',
+			relationTo: 'media',
 			required: true,
+			type: 'upload',
 
 		},
 		...sidebarFields,
-	]
-}
+	],
+	labels: {
+		plural: 'Publicações',
+		singular: 'Publicação',
+	},
+	slug: 'publications',
+};
 
 export default Publications;

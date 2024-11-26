@@ -1,66 +1,66 @@
-import type { GlobalConfig } from 'payload'
+import type { GlobalConfig } from 'payload';
 
 const Header: GlobalConfig = {
-    slug: "header",
-    fields: [
-        {
-            name: "logo",
-            label: "Logo",
-            type: "upload",
-            relationTo: "media",
-        },
-        {
-            name: "academiaDropdownLogo",
-            label: "Academia Dropdown Logo",
-            type: "upload",
-            relationTo: "media",
-        },
-        {
-            name: "navigationItems",
-            label: "Links de Navegação",
-            type: "array",
-            fields: [
-                {
-                    name: "label",
-                    label: "Label",
-                    type: "text",
-                    required: true,
-                },
-                {
-                    name: "url",
-                    label: "URL",
-                    type: "text",
-                    required: true,
-                },
-            ],
-        },
-        {
-            name: "academyDropdownMenu",
-            label: "Academy Dropdown Menu",
-            type: "array",
-            fields: [
-                {
-                    name: "label",
-                    label: "Label",
-                    type: "text",
-                    required: true,
-                },
-                {
-                    name: "url",
-                    label: "URL",
-                    type: "text",
-                    required: true,
-                },
-                {
-                    name: "logo",
-                    label: "Logo",
-                    type: "upload",
-                    relationTo: "media",
-                },
-            ],
-        }
-    ],
+	fields: [
+		{
+			label: 'Logo',
+			name: 'logo',
+			relationTo: 'media',
+			type: 'upload',
+		},
+		{
+			label: 'Academia Dropdown Logo',
+			name: 'academiaDropdownLogo',
+			relationTo: 'media',
+			type: 'upload',
+		},
+		{
+			fields: [
+				{
+					label: 'Label',
+					name: 'label',
+					required: true,
+					type: 'text',
+				},
+				{
+					label: 'URL',
+					name: 'url',
+					required: true,
+					type: 'text',
+				},
+			],
+			label: 'Links de Navegação',
+			name: 'navigationItems',
+			type: 'array',
+		},
+		{
+			fields: [
+				{
+					label: 'Label',
+					name: 'label',
+					required: true,
+					type: 'text',
+				},
+				{
+					label: 'URL',
+					name: 'url',
+					required: true,
+					type: 'text',
+				},
+				{
+					label: 'Logo',
+					name: 'logo',
+					relationTo: 'media',
+					type: 'upload',
+				},
+			],
+			label: 'Academy Dropdown Menu',
+			name: 'academyDropdownMenu',
+			type: 'array',
+		},
+	],
+	slug: 'header',
 
-}
+};
 
 export default Header;

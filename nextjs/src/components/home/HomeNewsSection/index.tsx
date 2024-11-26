@@ -1,16 +1,15 @@
-
-import NewsSection from "@/components/news/NewsList";
-import { getPayloadHMR } from "@payloadcms/next/utilities";
-import config from "@/payload.config";
+import NewsSection from '@/components/news/NewsList';
+import config from '@/payload.config';
+import { getPayload } from 'payload';
 
 export default async function HomeNewsSection() {
-    const payload = await getPayloadHMR({ config })
-    const newsList = await payload.find({
-        collection: "noticias",
-        pagination: true,
-        limit: 3,
-        sort: "-createdAt",
-    })
+	const payload = await getPayload({ config });
+	const newsList = await payload.find({
+		collection: 'noticias',
+		limit: 3,
+		pagination: true,
+		sort: '-createdAt',
+	});
 
-    return <NewsSection news={newsList.docs} />
+	return <NewsSection news={newsList.docs} />;
 }

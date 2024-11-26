@@ -48,12 +48,12 @@ export const AccountRoutes = Object.freeze({
 
 // === Header Routes ===
 export const HeaderRoutes = Object.freeze({
-	SOCIETY: { label: 'Sociedade', path: '/sociedade' }, // Updated label
-	SECTIONS: { label: 'Secções', path: '/seccoes' }, // Updated label
-	WORKGROUPS: { label: 'Núcleos', path: '/nucleos' }, // Updated label
-	NEWS: { label: 'Notícias', path: '/noticias' }, // Updated label
 	AGENDA: { label: 'Agenda', path: '/agenda' }, // Updated label
 	AWARD: { label: 'Premios', path: '/premios' }, // Updated label
+	NEWS: { label: 'Notícias', path: '/noticias' }, // Updated label
+	SECTIONS: { label: 'Secções', path: '/seccoes' }, // Updated label
+	SOCIETY: { label: 'Sociedade', path: '/sociedade' }, // Updated label
+	WORKGROUPS: { label: 'Núcleos', path: '/nucleos' }, // Updated label
 });
 
 // === Section Routes ===

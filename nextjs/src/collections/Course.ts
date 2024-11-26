@@ -1,46 +1,31 @@
-import { sidebarFields } from '@/fields/sidebar'
-import { slugify } from '@/lib/utils'
-import type { CollectionConfig, FieldHook } from 'payload'
+import type { CollectionConfig } from 'payload';
 
-const formatSlug =
-	(fallback: string): FieldHook =>
-		({ value, originalDoc, data }) => {
-			if (typeof value === 'string') {
-				return slugify(value)
-			}
-			const fallbackData = data?.[fallback] || originalDoc?.[fallback]
-
-			if (fallbackData && typeof fallbackData === 'string') {
-				return slugify(fallbackData)
-			}
-
-			return value
-		}
+import { sidebarFields } from '@/fields/sidebar';
 
 const Course: CollectionConfig = {
-	slug: "courses",
-	labels: {
-		singular: "Curso",
-		plural: "Cursos",
-	},
 	admin: {
-		useAsTitle: "title",
+		useAsTitle: 'title',
 	},
 	fields: [
 		{
-			name: "title",
-			label: "Título",
-			type: "text",
+			label: 'Título',
+			name: 'title',
 			required: true,
+			type: 'text',
 		},
 		{
-			name: "description",
-			label: "Descrição",
-			type: "richText",
+			label: 'Descrição',
+			name: 'description',
 			required: true,
+			type: 'richText',
 		},
 		...sidebarFields,
-	]
-}
+	],
+	labels: {
+		plural: 'Cursos',
+		singular: 'Curso',
+	},
+	slug: 'courses',
+};
 
 export default Course;

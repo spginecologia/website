@@ -1,21 +1,21 @@
-import type { GlobalConfig } from 'payload'
+import type { GlobalConfig } from 'payload';
 
 const Account: GlobalConfig = {
-    slug: "account",
-    fields: [
-        {
-            name: "logo",
-            label: "Logo",
-            type: "upload",
-            relationTo: "media",
-        },
-        {
-            name: "logo_logged",
-            label: "Logo Logged",
-            type: "upload",
-            relationTo: "media",
-        },
-    ],
-}
+	fields: [
+		{
+			label: 'Logo',
+			name: 'logo',
+			relationTo: 'media',
+			type: 'upload',
+		},
+		{
+			label: 'Logo Logged',
+			name: 'logo_logged',
+			relationTo: 'media',
+			type: 'upload',
+		},
+	],
+	slug: 'account',
+};
 
 export default Account;

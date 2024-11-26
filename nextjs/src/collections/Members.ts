@@ -2,45 +2,38 @@ import { slugField } from '@/fields/slug';
 import { CollectionConfig } from 'payload';
 
 const Members: CollectionConfig = {
-	slug: 'members',
-	labels: {
-		singular: 'Membro',
-		plural: 'Membros',
-	},
 	admin: {
-		useAsTitle: "name",
+		useAsTitle: 'name',
 	},
 	fields: [
 		{
-			name: 'name',
 			label: 'Nome',
-			type: 'text',
+			name: 'name',
 			required: true,
+			type: 'text',
 		},
 		{
-			name: 'profile_picture',
 			label: 'Imagem de Perfil',
-			type: 'upload',
+			name: 'profile_picture',
 			relationTo: 'media',
 			required: true,
+			type: 'upload',
 		},
 		{
-			type: "row",
 			fields: [
 				{
-					name: 'position',
 					label: 'Cargo',
+					name: 'position',
 					type: 'text',
 				},
 				{
-					name: 'location',
 					label: 'Localização',
+					name: 'location',
 					type: 'text',
 				},
 				{
-					name: 'social_body',
 					label: 'Órgão Social',
-					type: 'select',
+					name: 'social_body',
 					options: [
 						{
 							label: 'Direção',
@@ -59,11 +52,18 @@ const Members: CollectionConfig = {
 							value: 'conselho-consultivo',
 						},
 					],
-				}
-			]
+					type: 'select',
+				},
+			],
+			type: 'row',
 		},
-		slugField()
-	]
+		slugField(),
+	],
+	labels: {
+		plural: 'Membros',
+		singular: 'Membro',
+	},
+	slug: 'members',
 };
 
 export default Members;

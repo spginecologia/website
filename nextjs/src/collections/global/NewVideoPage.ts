@@ -1,15 +1,15 @@
-import type { GlobalConfig } from 'payload'
+import type { GlobalConfig } from 'payload';
 
 const NewVideoPage: GlobalConfig = {
-    slug: "newVideoPage",
-    fields: [
-        {
-            name: "image",
-            label: "Imagem",
-            type: "upload",
-            relationTo: "media",
-        },
-    ],
-}
+	fields: [
+		{
+			label: 'Imagem',
+			name: 'image',
+			relationTo: 'media',
+			type: 'upload',
+		},
+	],
+	slug: 'newVideoPage',
+};
 
 export default NewVideoPage;

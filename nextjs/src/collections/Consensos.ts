@@ -1,78 +1,59 @@
-import { categoriesField } from '@/fields/categories'
-import { featuredImageField } from '@/fields/featured-image'
-import { sidebarFields } from '@/fields/sidebar'
-import { slugField } from '@/fields/slug'
-import { slugify } from '@/lib/utils'
-import type { CollectionConfig, FieldHook } from 'payload'
+import type { CollectionConfig } from 'payload';
 
-const formatSlug =
-	(fallback: string): FieldHook =>
-		({ value, originalDoc, data }) => {
-			if (typeof value === 'string') {
-				return slugify(value)
-			}
-			const fallbackData = data?.[fallback] || originalDoc?.[fallback]
-
-			if (fallbackData && typeof fallbackData === 'string') {
-				return slugify(fallbackData)
-			}
-
-			return value
-		}
-
+import { sidebarFields } from '@/fields/sidebar';
 
 const Consensos: CollectionConfig = {
-	labels: {
-		singular: "Consenso",
-		plural: "Consensos",
-	},
-	slug: "consensos",
 	admin: {
-		useAsTitle: "title",
+		useAsTitle: 'title',
 	},
 	fields: [
 		{
-			name: "title",
-			label: "Título",
-			type: "text",
+			label: 'Título',
+			name: 'title',
 			required: true,
+			type: 'text',
 		},
 		{
-			name: "consenso_type",
-			label: "Tipo de Conteúdo",
-			type: "radio",
-			defaultValue: "file",
-			required: true,
+			defaultValue: 'file',
+			label: 'Tipo de Conteúdo',
+			name: 'consenso_type',
 			options: [
 				{
-					label: "Ficheiro",
-					value: "file",
+					label: 'Ficheiro',
+					value: 'file',
 				},
 				{
-					label: "URL",
-					value: "url",
+					label: 'URL',
+					value: 'url',
 				},
 			],
+			required: true,
+			type: 'radio',
 		},
 		{
-			name: "consenso_file",
-			label: "Ficheiro deste Consenso",
-			type: "upload",
-			relationTo: "media",
 			admin: {
-				condition: (_, siblingData) => siblingData?.consenso_type === "file",
+				condition: (_, siblingData) => siblingData?.consenso_type === 'file',
 			},
+			label: 'Ficheiro deste Consenso',
+			name: 'consenso_file',
+			relationTo: 'media',
+			type: 'upload',
 		},
 		{
-			name: "consenso_url",
-			label: "URL deste Consenso",
-			type: "text",
 			admin: {
-				condition: (_, siblingData) => siblingData?.consenso_type === "url",
+				condition: (_, siblingData) => siblingData?.consenso_type === 'url',
 			},
+			label: 'URL deste Consenso',
+			name: 'consenso_url',
+			type: 'text',
 		},
 		...sidebarFields,
 	],
-}
+	labels: {
+		plural: 'Consensos',
+		singular: 'Consenso',
+	},
+	slug: 'consensos',
+};
 
 export default Consensos;

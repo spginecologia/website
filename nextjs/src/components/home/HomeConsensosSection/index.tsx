@@ -1,18 +1,19 @@
-import { getPayloadHMR } from "@payloadcms/next/utilities"
-import config from "@/payload.config"
-
-import { Section } from "@/components/layout/Section"
-import ConsensoList from "@/components/consensos/ConsensosList"
+import ConsensoList from '@/components/consensos/ConsensosList';
+import { Section } from '@/components/layout/Section';
+import config from '@/payload.config';
+import { getPayload } from 'payload';
 
 export default async function HomeConsensosSection() {
-    const payload = await getPayloadHMR({ config })
-    const consensos = await payload.find({
-        collection: "consensos",
-        sort: "createdAt",
-        limit: 4
-    })
+	const payload = await getPayload({ config });
+	const consensos = await payload.find({
+		collection: 'consensos',
+		limit: 4,
+		sort: 'createdAt',
+	});
 
-    return <Section heading="Consensos">
-        <ConsensoList consensos={consensos.docs} />
-    </Section>
+	return (
+		<Section heading="Consensos">
+			<ConsensoList consensos={consensos.docs} />
+		</Section>
+	);
 }

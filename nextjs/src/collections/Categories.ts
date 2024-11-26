@@ -1,47 +1,47 @@
-import type { CollectionConfig, FieldHook } from "payload";
-import { slugify } from "@/lib/utils";
-import { slugField } from "@/fields/slug";
+import type { CollectionConfig, FieldHook } from 'payload';
 
-const formatSlug =
-	(fallback: string): FieldHook =>
-		({ value, originalDoc, data }) => {
+import { slugField } from '@/fields/slug';
+import { slugify } from '@/lib/utils';
+
+const formatSlug
+	= (fallback: string): FieldHook =>
+		({ data, originalDoc, value }) => {
 			if (typeof value === 'string') {
-				return slugify(value)
+				return slugify(value);
 			}
-			const fallbackData = data?.[fallback] || originalDoc?.[fallback]
+			const fallbackData = data?.[fallback] || originalDoc?.[fallback];
 
 			if (fallbackData && typeof fallbackData === 'string') {
-				return slugify(fallbackData)
+				return slugify(fallbackData);
 			}
 
-			return value
-		}
+			return value;
+		};
 
 const Categories: CollectionConfig = {
-	labels: {
-		singular: "Categoria",
-		plural: "Categorias",
-	},
-	slug: "categories",
 	admin: {
-		useAsTitle: "name",
+		useAsTitle: 'name',
 	},
 	fields: [
 		{
-			name: "name",
-			label: "Nome",
-			type: "text",
+			label: 'Nome',
+			name: 'name',
 			required: true,
+			type: 'text',
 		},
 		{
-			name: "description",
-			label: "Descrição",
-			type: "text",
+			label: 'Descrição',
+			name: 'description',
 			required: false,
+			type: 'text',
 		},
 		slugField('name', { required: true }),
-	]
-}
+	],
+	labels: {
+		plural: 'Categorias',
+		singular: 'Categoria',
+	},
+	slug: 'categories',
+};
 
 export default Categories;
-

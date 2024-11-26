@@ -1,175 +1,174 @@
-import { sidebarFields } from "@/fields/sidebar"
-import { CollectionConfig } from "payload"
-
+import { sidebarFields } from '@/fields/sidebar';
+import { CollectionConfig } from 'payload';
 
 const Events: CollectionConfig = {
-	labels: {
-		singular: "Evento",
-		plural: "Eventos",
-	},
-	slug: "events",
 	admin: {
-		useAsTitle: "title",
+		useAsTitle: 'title',
 	},
 	fields: [
 		{
-			name: "title",
-			label: "Titulo",
-			type: "text",
+			label: 'Titulo',
+			name: 'title',
 			required: true,
+			type: 'text',
 		},
 		{
-			name: "is_featured",
-			label: "Evento em destaque",
-			type: "checkbox",
+			label: 'Evento em destaque',
+			name: 'is_featured',
 			required: false,
+			type: 'checkbox',
 		},
 		{
-			name: "event_type",
-			label: "Tipo de Evento",
-			type: "select",
+			label: 'Tipo de Evento',
+			name: 'event_type',
 			options: [{
-				label: "Eventos SPG",
-				value: "spg",
+				label: 'Eventos SPG',
+				value: 'spg',
 			}, {
-				label: "Eventos Patrocinados",
-				value: "patrocinado",
+				label: 'Eventos Patrocinados',
+				value: 'patrocinado',
 			}, {
-				label: "Outros",
-				value: "outros",
+				label: 'Outros',
+				value: 'outros',
 			}],
 			required: true,
+			type: 'select',
 		},
 		{
-			type: "row",
 			fields: [
 				{
-					name: "start_date",
-					label: "Data de início",
-					type: "date",
+					label: 'Data de início',
+					name: 'start_date',
 					required: true,
+					type: 'date',
 				},
 				{
-					name: "end_date",
-					label: "Data de fim",
-					type: "date",
+					label: 'Data de fim',
+					name: 'end_date',
 					required: true,
+					type: 'date',
 				},
-			]
+			],
+			type: 'row',
 		},
 		{
-			name: "links_group",
-			label: "Links do Evento",
-			type: "group",
 			fields: [
 				{
-					name: "link_to_official_page",
-					label: "Link da página Oficial",
-					type: "text",
+					label: 'Link da página Oficial',
+					name: 'link_to_official_page',
 					required: false,
+					type: 'text',
 				},
 
 				{
-					name: "link_to_facebook",
-					label: "Link do Evento no Facebook",
-					type: "text",
+					label: 'Link do Evento no Facebook',
+					name: 'link_to_facebook',
 					required: false,
+					type: 'text',
 				},
 				{
-					name: "link_to_register",
-					label: "Link para inscrição",
-					type: "text",
+					label: 'Link para inscrição',
+					name: 'link_to_register',
 					required: false,
+					type: 'text',
 				},
 				{
-					name: "link_to_program",
-					label: "Link para Programa",
-					type: "text",
+					label: 'Link para Programa',
+					name: 'link_to_program',
 					required: false,
-				}
-			]
+					type: 'text',
+				},
+			],
+			label: 'Links do Evento',
+			name: 'links_group',
+			type: 'group',
 		},
 		{
-			name: "sections",
-			label: "Secções",
-			type: "array",
-			required: false,
 			fields: [
 				{
-					name: "title",
-					label: "Título",
-					type: "text",
+					label: 'Título',
+					name: 'title',
+					type: 'text',
 				},
 				{
-					name: "evento_section_type",
-					label: "Tipo de Secção",
-					type: "select",
-					defaultValue: "text",
+					defaultValue: 'text',
+					label: 'Tipo de Secção',
+					name: 'evento_section_type',
 					options: [
 						{
-							label: "Conteúdo",
-							value: "text",
+							label: 'Conteúdo',
+							value: 'text',
 						}, {
-							label: "Fotografias",
-							value: "images",
+							label: 'Fotografias',
+							value: 'images',
 						},
 						{
-							label: "Vídeo",
-							value: "video",
+							label: 'Vídeo',
+							value: 'video',
 						},
 						{
-							label: "iFrame",
-							value: "iframe",
+							label: 'iFrame',
+							value: 'iframe',
 						},
 					],
+					type: 'select',
 				},
 				{
-					name: "content",
-					label: "Conteúdo",
-					type: "richText",
-					admin: { condition: (data, siblingData) => siblingData.evento_section_type === "text" }
+					admin: { condition: (data, siblingData) => siblingData.evento_section_type === 'text' },
+					label: 'Conteúdo',
+					name: 'content',
+					type: 'richText',
 				},
 
 				{
-					name: "video",
-					label: "Url do Vídeo",
-					type: "text",
+					admin: { condition: (data, siblingData) => siblingData.evento_section_type === 'video' },
+					label: 'Url do Vídeo',
+					name: 'video',
 					required: false,
-					admin: { condition: (data, siblingData) => siblingData.evento_section_type === "video" }
+					type: 'text',
 				},
 				{
-					name: "iframe",
-					label: "iFrame",
-					type: "text",
+					admin: { condition: (data, siblingData) => siblingData.evento_section_type === 'iframe' },
+					label: 'iFrame',
+					name: 'iframe',
 					required: false,
-					admin: { condition: (data, siblingData) => siblingData.evento_section_type === "iframe" }
+					type: 'text',
 				},
 				{
-					name: "images",
-					label: "Fotografias",
-					type: "array",
-					required: false,
-					admin: { condition: (data, siblingData) => siblingData.evento_section_type === "images" },
+					admin: { condition: (data, siblingData) => siblingData.evento_section_type === 'images' },
 					fields: [
 						{
-							name: "image",
-							label: "Imagem",
-							type: "upload",
-							relationTo: "media",
+							label: 'Imagem',
+							name: 'image',
+							relationTo: 'media',
 							required: true,
+							type: 'upload',
 						},
 						{
-							name: "caption",
-							label: "Legenda",
-							type: "text",
+							label: 'Legenda',
+							name: 'caption',
 							required: false,
+							type: 'text',
 						},
-					]
+					],
+					label: 'Fotografias',
+					name: 'images',
+					required: false,
+					type: 'array',
 				},
-			]
+			],
+			label: 'Secções',
+			name: 'sections',
+			required: false,
+			type: 'array',
 		},
 		...sidebarFields,
 	],
-}
+	labels: {
+		plural: 'Eventos',
+		singular: 'Evento',
+	},
+	slug: 'events',
+};
 
-export default Events
+export default Events;

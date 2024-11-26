@@ -93,11 +93,11 @@
     justify-content: center;
 
     .leftBlock {
-        & img {   
+        & img {
             object-fit: contain;
         }
     }
-    
+
     .rightBlock {
         width: 565px;
         background-color: var(--color-background-100);
@@ -144,7 +144,7 @@
             border: 2px solid var(--color-brand-secondary);
             padding: 5px 30px;
             margin: 10px 0;
-    
+
             &:hover {
                 background-color: var(--color-brand-secondary);
                 color: var(--color-background-100);

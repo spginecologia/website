@@ -5,14 +5,14 @@ import Image from 'next/image';
 
 import styles from './styles.module.css';
 import { Member } from '@/payload-types';
-import { getPayloadHMR } from '@payloadcms/next/utilities';
+import { getPayload } from 'payload';
 import config from '@/payload.config';
 import MemberCard from '@/components/common/MemberCard';
 import { Assets } from '@/lib/assets';
 
 export default async function Component() {
 
-	const payload = await getPayloadHMR({ config })
+	const payload = await getPayload({ config })
 	const socialBodies = await payload.find({
 		collection: "members",
 		limit: 1000,

@@ -1,25 +1,24 @@
+import config from '@/payload.config';
 import Image from 'next/image';
+import Link from 'next/link';
+import { getPayload } from 'payload';
 
 import styles from './styles.module.css';
-import Link from 'next/link';
-import config from '@/payload.config'
-import { getPayloadHMR } from '@payloadcms/next/utilities';
 
 /* * */
 
 export default async function Component() {
-
-	const payload = await getPayloadHMR({ config })
+	const payload = await getPayload({ config });
 	const footer = await payload.findGlobal({
 		slug: 'footer',
-	})
+	});
 
 	return (
 		<footer className={styles.footer}>
 			<div className={styles.content}>
-				<Image alt="Logotipo - Sociedade Portuguesa de Ginecologia" height={100} src={"/icons/spg-logo-white.svg"} width={100} className={styles.logo} />
+				<Image alt="Logotipo - Sociedade Portuguesa de Ginecologia" className={styles.logo} height={100} src="/icons/spg-logo-white.svg" width={100} />
 				{/* <NewsletterForm /> */}
-				<div></div>
+				<div />
 				<div className={styles.right}>
 					<div className={styles.contact}>
 						<Link className={styles.contactItem} href="tel:+351919494636">+351 919 494 636</Link>
@@ -27,9 +26,9 @@ export default async function Component() {
 						<Link className={styles.contactItem} href="mailto:academia@spginecologia.pt">academia@spginecologia.pt</Link>
 					</div>
 					<div className={styles.social}>
-						<Link href="https://www.facebook.com/spginecologia"><Image alt="Facebook" height={36} src={"/icons/facebook.svg"} width={36} /></Link>
-						<Link href="https://www.instagram.com/spginecologia"><Image alt="Instagram" height={36} src={"/icons/instagram.svg"} width={36} /></Link>
-						<Link href="https://www.linkedin.com/company/spginecologia"><Image alt="LinkedIn" height={36} src={"/icons/linkedin.svg"} width={36} /></Link>
+						<Link href="https://www.facebook.com/spginecologia"><Image alt="Facebook" height={36} src="/icons/facebook.svg" width={36} /></Link>
+						<Link href="https://www.instagram.com/spginecologia"><Image alt="Instagram" height={36} src="/icons/instagram.svg" width={36} /></Link>
+						<Link href="https://www.linkedin.com/company/spginecologia"><Image alt="LinkedIn" height={36} src="/icons/linkedin.svg" width={36} /></Link>
 					</div>
 					<div className={styles.address}>
 						<div className={styles.addressTitle}>Sede Social</div>

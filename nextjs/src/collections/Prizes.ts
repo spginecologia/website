@@ -1,28 +1,28 @@
-import { slugField } from "@/fields/slug";
-import { CollectionConfig } from "payload";
+import { slugField } from '@/fields/slug';
+import { CollectionConfig } from 'payload';
 
 const Prizes: CollectionConfig = {
-    slug: 'prizes',
-    labels: {
-        singular: 'Prémio',
-        plural: 'Prémios',
-    },
-    admin: {
-        useAsTitle: 'title',
-    },
-    fields: [
-        {
-            name: 'title',
-            label: 'Título',
-            type: 'text',
-        },
-        {
-            name: 'content',
-            label: 'Conteúdo',
-            type: 'richText',
-        },
-        slugField(),
-    ],
-}
+	admin: {
+		useAsTitle: 'title',
+	},
+	fields: [
+		{
+			label: 'Título',
+			name: 'title',
+			type: 'text',
+		},
+		{
+			label: 'Conteúdo',
+			name: 'content',
+			type: 'richText',
+		},
+		slugField(),
+	],
+	labels: {
+		plural: 'Prémios',
+		singular: 'Prémio',
+	},
+	slug: 'prizes',
+};
 
 export default Prizes;

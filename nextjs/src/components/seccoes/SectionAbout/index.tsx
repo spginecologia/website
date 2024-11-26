@@ -1,12 +1,12 @@
 /* * */
 
 import { Card, CardContent } from '@/components/common/card';
+import RichText from '@/components/common/RichText';
 import { Grid } from '@/components/layout/Grid';
 import { Section } from '@/components/layout/Section';
 import { Section as SectionItem } from '@/payload-types';
 
 import styles from './styles.module.css';
-import RichText from '@/components/common/RichText';
 
 /* * */
 

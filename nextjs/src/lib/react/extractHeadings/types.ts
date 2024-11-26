@@ -1,5 +1,5 @@
-export type HeadingElement = {
-  text: string;
-  level: number;
-  children: HeadingElement[];
-};
+export interface HeadingElement {
+	children: HeadingElement[]
+	level: number
+	text: string
+}

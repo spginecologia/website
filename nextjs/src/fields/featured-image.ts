@@ -1,11 +1,11 @@
-import type { Field } from 'payload'
+import type { Field } from 'payload';
 
 export const featuredImageField: Field = {
-    name: "featured",
-    label: "Image de Destaque",
-    type: "upload",
-    relationTo: "media",
-    admin: {
-        position: "sidebar",
-    },
-}
+	admin: {
+		position: 'sidebar',
+	},
+	label: 'Image de Destaque',
+	name: 'featured',
+	relationTo: 'media',
+	type: 'upload',
+};

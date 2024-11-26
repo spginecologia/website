@@ -1,4 +1,4 @@
-import { getPayloadHMR } from "@payloadcms/next/utilities"
+import { getPayload } from 'payload'
 import config from "@/payload.config"
 import { Section } from "@/components/layout/Section"
 import { Grid } from "@/components/layout/Grid"
@@ -8,7 +8,7 @@ import { VideoTitle } from "@/components/videos/Title"
 
 export default async function Page() {
 
-    const payload = await getPayloadHMR({ config });
+    const payload = await getPayload({ config });
     const query = await payload.find({
         collection: "videos",
         limit: 100,

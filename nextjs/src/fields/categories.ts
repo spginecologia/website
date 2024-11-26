@@ -1,12 +1,12 @@
-import type { Field } from 'payload'
+import type { Field } from 'payload';
 
 export const categoriesField: Field = {
-    name: "categories",
-    label: "Categorias",
-    type: "relationship",
-    relationTo: "categories",
-    hasMany: true,
-    admin: {
-        position: "sidebar",
-    },
-}
+	admin: {
+		position: 'sidebar',
+	},
+	hasMany: true,
+	label: 'Categorias',
+	name: 'categories',
+	relationTo: 'categories',
+	type: 'relationship',
+};

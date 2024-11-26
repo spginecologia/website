@@ -1,35 +1,34 @@
-import type { CollectionConfig } from 'payload'
+import type { CollectionConfig } from 'payload';
 
 export const Pages: CollectionConfig = {
 
-    labels: {
-        singular: "Página",
-        plural: "Páginas",
-    },
-    slug: "paginas",
-    admin: {
-        useAsTitle: "titulo",
-    },
-    fields: [
-        {
-            name: "titulo",
-            label: "Titulo",
-            type: "text",
-        },
-        {
-            name: "slug",
-            label: "Slug",
-            type: "text",
-        },
-        {
-            name: 'layout',
-            label: 'Layout',
-            type: "blocks",
-            blocks: [
-            ]
-        }
-    ],
+	admin: {
+		useAsTitle: 'titulo',
+	},
+	fields: [
+		{
+			label: 'Titulo',
+			name: 'titulo',
+			type: 'text',
+		},
+		{
+			label: 'Slug',
+			name: 'slug',
+			type: 'text',
+		},
+		{
+			blocks: [
+			],
+			label: 'Layout',
+			name: 'layout',
+			type: 'blocks',
+		},
+	],
+	labels: {
+		plural: 'Páginas',
+		singular: 'Página',
+	},
+	slug: 'paginas',
 };
 
 export default Pages;
-

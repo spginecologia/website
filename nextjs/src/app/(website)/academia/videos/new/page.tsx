@@ -1,10 +1,10 @@
 
-import { getPayloadHMR } from "@payloadcms/next/utilities"
+import { getPayload } from 'payload'
 import config from "@/payload.config"
 import { NewVideo } from "@/components/videos/New";
 
 export default async function Page() {
-    const payload = await getPayloadHMR({ config })
+    const payload = await getPayload({ config })
 	const newVideoPage = await payload.findGlobal({
 		slug: 'newVideoPage',
 	});

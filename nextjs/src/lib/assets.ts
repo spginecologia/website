@@ -10,13 +10,13 @@ export const AssetsSections = Object.freeze({
 export const Assets = Object.freeze({
 	ACADEMY: '/icons/spg-academy.svg',
 	ACADEMY_ILLUSTRATION: '/images/academy/ilustracao-academia-spg.svg',
+	DOCTOR: '/images/doctor.png',
 	LOGO: '/icons/spg-logo.svg',
 	LOGO_COMPACT: '/icons/spg-logo-compact.svg',
 	LOGO_WHITE: '/icons/spg-logo-white.svg',
 	PLACEHOLDER: '/images/placeholder.png',
 	SOCIETY_BANNER: '/images/society/spg-people-banner.jpg',
 	SOCIETY_ILLUSTRATION: '/images/society/sociedade.png',
-	DOCTOR: '/images/doctor.png',
 	...AssetsSections,
 });
 
