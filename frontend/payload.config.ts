@@ -7,6 +7,7 @@ import sharp from 'sharp';
 
 /* * */
 
+import { Admins } from '@/collections/Admins';
 import { Categories } from '@/collections/Categories';
 import { Media } from '@/collections/Media';
 import { Users } from '@/collections/Users';
@@ -15,12 +16,19 @@ import { Videos } from '@/collections/Videos';
 /* * */
 
 export default buildConfig({
+
+	// Only admins can access the CMS
+	admin: {
+		user: 'admins',
+	},
+
 	// Define and configure your collections in this array
 	collections: [
+		Admins,
+		Categories,
+		Media,
 		Users,
 		Videos,
-		Media,
-		Categories,
 	],
 
 	// Whichever Database Adapter you're using should go here
@@ -31,11 +39,14 @@ export default buildConfig({
 
 	// If you'd like to use Rich Text, pass your editor here
 	editor: lexicalEditor(),
+
 	// Your Payload secret - should be a complex and secure string, unguessable
 	secret: process.env.PAYLOAD_SECRET || '',
+
 	// If you want to resize images, crop, set focal point, etc.
 	// make sure to install it and pass it to the config.
 	// This is optional - if you don't need to do these things,
 	// you don't need it!
 	sharp,
+
 });

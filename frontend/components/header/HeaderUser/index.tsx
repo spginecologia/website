@@ -38,17 +38,25 @@ export function HeaderUser() {
 		(async () => {
 			try {
 				setIsLoading(true);
-				const response = await fetch('/api/users/me');
-				const data = await response.json();
-				if (data.user) {
-					setLoggedInUserData(data.user);
-					console.log(data);
+				// Search for users data
+				const usersResponse = await fetch('/api/users/me');
+				const usersData = await usersResponse.json();
+				if (usersData.user) {
+					setLoggedInUserData(usersData.user);
+					setIsLoading(false);
+					return;
+				}
+				// Search for admins data
+				const adminsResponse = await fetch('/api/admins/me');
+				const adminsData = await adminsResponse.json();
+				if (adminsData.user) {
+					setLoggedInUserData(adminsData.user);
+					setIsLoading(false);
+					return;
 				}
 			}
 			catch (error) {
 				console.error(error);
-			}
-			finally {
 				setIsLoading(false);
 			}
 		})();
