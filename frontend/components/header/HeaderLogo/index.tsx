@@ -3,11 +3,11 @@
 import { SpgLogoCompact } from '@/assets/spg';
 import Link from 'next/link';
 
-import styles from './FrontendHeaderLogo.module.css';
+import styles from './styles.module.css';
 
 /* * */
 
-export default function FrontendHeaderLogo() {
+export function HeaderLogo() {
 	return (
 		<Link className={styles.container} href="/">
 			<SpgLogoCompact />

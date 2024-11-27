@@ -1,11 +1,27 @@
+/* * */
+
 import { mongooseAdapter } from '@payloadcms/db-mongodb';
 import { lexicalEditor } from '@payloadcms/richtext-lexical';
 import { buildConfig } from 'payload';
 import sharp from 'sharp';
 
+/* * */
+
+import { Categories } from '@/collections/Categories';
+import { Media } from '@/collections/Media';
+import { Users } from '@/collections/Users';
+import { Videos } from '@/collections/Videos';
+
+/* * */
+
 export default buildConfig({
 	// Define and configure your collections in this array
-	collections: [],
+	collections: [
+		Users,
+		Videos,
+		Media,
+		Categories,
+	],
 
 	// Whichever Database Adapter you're using should go here
 	// Mongoose is shown as an example, but you can also use Postgres
