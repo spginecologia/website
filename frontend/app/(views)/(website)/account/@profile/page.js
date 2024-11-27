@@ -5,5 +5,5 @@ import FrontendAccountProfile from '@/components/FrontendAccountProfile/Frontend
 /* * */
 
 export default function Page() {
-  return <FrontendAccountProfile />;
+	return <FrontendAccountProfile />;
 }

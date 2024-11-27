@@ -1,7 +1,7 @@
 /* * */
 
 import styles from './Panel.module.css';
-import Loader from '@/components/Loader/Loader';
+import { Loader } from '@/components/common/Loader';
 
 /* * */
 

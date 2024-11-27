@@ -2,8 +2,9 @@
 
 /* * */
 
+import type { User } from '@/payload-types';
+
 import { Loader } from '@/components/common/Loader';
-import { User } from '@/payload-types';
 import { IconSettings, IconUserCircle } from '@tabler/icons-react';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
@@ -57,6 +58,8 @@ export function HeaderUser() {
 			}
 			catch (error) {
 				console.error(error);
+			}
+			finally {
 				setIsLoading(false);
 			}
 		})();

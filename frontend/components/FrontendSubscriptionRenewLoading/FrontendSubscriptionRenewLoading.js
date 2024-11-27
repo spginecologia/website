@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl';
 import styles from './FrontendSubscriptionRenewLoading.module.css';
 import Title from '@/components/Title/Title';
 import Text from '@/components/Text/Text';
-import Loader from '@/components/Loader/Loader';
+import { Loader } from '@/components/common/Loader';
 
 /* * */
 

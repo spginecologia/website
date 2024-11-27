@@ -1,7 +1,7 @@
 /* * */
 
 import styles from './BackofficeWrapperList.module.css';
-import Loader from '@/components/Loader/Loader';
+import { Loader } from '@/components/common/Loader';
 import SearchField from '@/components/SearchField/SearchField';
 import BackofficeWrapperButtonCreate from '@/components/BackofficeWrapperButtonCreate/BackofficeWrapperButtonCreate';
 

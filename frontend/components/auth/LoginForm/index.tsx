@@ -3,23 +3,21 @@
 /* * */
 
 import Button from '@/components/common/Button';
-import Loader from '@/components/Loader/Loader';
+import { Loader } from '@/components/common/Loader';
 import Text from '@/components/Text/Text';
-import TextField from '@/components/TextField/TextField';
 import Title from '@/components/Title/Title';
 import { SignInDefault } from '@/schemas/SignIn/default';
 import { SignInValidation } from '@/schemas/SignIn/validation';
-import { Space } from '@mantine/core';
+import { PasswordInput, Space, TextInput } from '@mantine/core';
 import { useForm, yupResolver } from '@mantine/form';
-import { signIn } from 'next-auth/react';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 
-import styles from './AppAuthenticationLogin.module.css';
+import styles from './styles.module.css';
 
 /* * */
 
-export default function AppAuthenticationLogin() {
+export function LoginForm() {
 	//
 
 	//
@@ -41,8 +39,30 @@ export default function AppAuthenticationLogin() {
 	// C. Handle actions
 
 	const handleSignIn = async () => {
-		setIsLoading(true);
-		signIn('email', { callbackUrl: '/', email: form.values.email });
+		try {
+			setIsLoading(true);
+			const loginResponse = await fetch('/api/users/login', {
+				body: JSON.stringify({
+					email: form.values.email,
+					password: form.values.password,
+				}),
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				method: 'POST',
+			});
+			const loginData = await loginResponse.json();
+			if (loginData.user) {
+				console.log('Login successful. Redirecting to account page...');
+				window.location.replace('/account');
+			}
+		}
+		catch (error) {
+			console.error(error);
+		}
+		finally {
+			setIsLoading(false);
+		}
 	};
 
 	//
@@ -53,7 +73,8 @@ export default function AppAuthenticationLogin() {
 			<Title level="h2" text={t('title')} />
 			<Text text={t('subtitle')} />
 			<Space h={5} />
-			<TextField label={t('email.label')} placeholder={t('email.placeholder')} type="email" {...form.getInputProps('email')} />
+			<TextInput label={t('email.label')} placeholder={t('email.placeholder')} type="email" {...form.getInputProps('email')} />
+			<PasswordInput label={t('email.label')} placeholder={t('email.placeholder')} {...form.getInputProps('password')} />
 			{!isLoading ? <Button label={t('submit.label')} type="submit" /> : <Loader visible />}
 		</form>
 	);

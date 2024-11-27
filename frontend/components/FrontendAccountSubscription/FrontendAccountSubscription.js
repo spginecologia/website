@@ -8,7 +8,7 @@ import styles from './FrontendAccountSubscription.module.css';
 import Title from '@/components/Title/Title';
 import Text from '@/components/Text/Text';
 import Panel from '@/components/Panel/Panel';
-import Loader from '@/components/Loader/Loader';
+import { Loader } from '@/components/common/Loader';
 import FrontendAccountSubscriptionInfoStatus from '@/components/FrontendAccountSubscriptionInfoStatus/FrontendAccountSubscriptionInfoStatus';
 import FrontendAccountSubscriptionInfoRenew from '@/components/FrontendAccountSubscriptionInfoRenew/FrontendAccountSubscriptionInfoRenew';
 import FrontendAccountSubscriptionManage from '@/components/FrontendAccountSubscriptionManage/FrontendAccountSubscriptionManage';

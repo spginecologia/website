@@ -1,6 +1,6 @@
 /* * */
 
-import Loader from '@/components/Loader/Loader';
+import { Loader } from '@/components/common/Loader';
 import Section from '@/components/FrontendSection/FrontendSection';
 
 /* * */

@@ -1,6 +1,7 @@
 /* * */
 
 import { mongooseAdapter } from '@payloadcms/db-mongodb';
+import { stripePlugin } from '@payloadcms/plugin-stripe';
 import { lexicalEditor } from '@payloadcms/richtext-lexical';
 import { buildConfig } from 'payload';
 import sharp from 'sharp';
@@ -39,6 +40,20 @@ export default buildConfig({
 
 	// If you'd like to use Rich Text, pass your editor here
 	editor: lexicalEditor(),
+
+	// Define plugins here to extend Payload's functionality
+	plugins: [
+		stripePlugin({
+			stripeSecretKey: process.env.STRIPE_SECRET_KEY ?? '',
+			stripeWebhooksEndpointSecret: process.env.STRIPE_WEBHOOKS_ENDPOINT_SECRET,
+			webhooks: {
+				'customer.subscription.updated': ({ event, stripe }) => {
+					console.log('customer.subscription.updated', event, stripe);
+					// do something...
+				},
+			},
+		}),
+	],
 
 	// Your Payload secret - should be a complex and secure string, unguessable
 	secret: process.env.PAYLOAD_SECRET || '',

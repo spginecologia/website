@@ -1,6 +1,6 @@
 /* * */
 
 export const SignInDefault = {
-  email: '',
-  password: '',
+	email: '',
+	password: '',
 };
