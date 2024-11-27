@@ -1,15 +1,15 @@
 /* * */
 
-import FrontendAccount from '@/components/FrontendAccount/FrontendAccount';
+import { AccountMain } from '@/components/account/AccountMain';
 
 /* * */
 
 export default function Layout({ profile, subscription, videos }) {
 	return (
-		<FrontendAccount>
+		<AccountMain>
 			{profile}
 			{subscription}
 			{videos}
-		</FrontendAccount>
+		</AccountMain>
 	);
 }

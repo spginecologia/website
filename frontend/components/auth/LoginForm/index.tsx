@@ -23,8 +23,10 @@ export function LoginForm() {
 	//
 	// A. Setup variables
 
-	const t = useTranslations('AppAuthenticationLogin');
+	const t = useTranslations('auth.LoginForm');
+
 	const [isLoading, setIsLoading] = useState(false);
+	const [isError, setIsError] = useState(false);
 
 	//
 	// B. Setup form
@@ -56,17 +58,37 @@ export function LoginForm() {
 				console.log('Login successful. Redirecting to account page...');
 				window.location.replace('/account');
 			}
+			else {
+				console.error('Login failed. Please try again.');
+				setIsLoading(false);
+				setIsError(true);
+			}
 		}
 		catch (error) {
 			console.error(error);
-		}
-		finally {
 			setIsLoading(false);
+			setIsError(true);
 		}
+	};
+
+	const handleRetry = () => {
+		window.location.reload();
 	};
 
 	//
 	// D. Render components
+
+	if (isError) {
+		return (
+			<div className={styles.container}>
+				<Title level="h2" text={t('title')} />
+				<Space />
+				<p className={styles.errorMessage}>{t('error.message')}</p>
+				<Space />
+				<Button label={t('error.retry')} onClick={handleRetry} />
+			</div>
+		);
+	}
 
 	return (
 		<form className={styles.container} onSubmit={form.onSubmit(handleSignIn)}>

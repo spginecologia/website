@@ -97,44 +97,6 @@
 			}
 		}
 	},
-	"AppAuthenticationLogin": {
-		"email": {
-			"label": "Email",
-			"placeholder": "email@exemplo.pt"
-		},
-		"submit": {
-			"label": "Iniciar Sessão"
-		},
-		"subtitle": "Se precisar de ajuda contacte-nos.",
-		"title": "Login"
-	},
-	"AppAuthenticationLoginError": {
-		"error_type": {
-			"AccessDenied": {
-				"action": "Tem a certeza que é com este email que está registado na SPG?",
-				"message": "Este email não existe nos nossos registos"
-			},
-			"Configuration": {
-				"action": "Por favor entre em contacto connosco.",
-				"message": "Existe um problema com a configuração do servidor"
-			},
-			"Verification": {
-				"action": "Por favor faça login novamente.",
-				"message": "O login expirou ou foi utilizado noutro browser"
-			},
-			"unknown": {
-				"action": "Por favor entre em contacto connosco.",
-				"message": "Erro Desconhecido"
-			}
-		},
-		"retry": "Tentar Novamente",
-		"title": "Login"
-	},
-	"AppAuthenticationLoginVerify": {
-		"retry": "Não recebi o email de login",
-		"subtitle": "Por favor verifique a sua caixa de email.",
-		"title": "Login"
-	},
 	"AppOptions": {
 		"auth": {
 			"logout": "Logout"
@@ -855,43 +817,6 @@
 		"no_data": "No Exports Available",
 		"title": "Available Exports"
 	},
-	"FrontendAccount": {
-		"subtitle": "Todas as suas informações",
-		"title": "A minha conta"
-	},
-	"FrontendAccountProfile": {
-		"subtitle": "Todas as suas informações",
-		"title": "Dados Pessoais"
-	},
-	"FrontendAccountSubscription": {
-		"subtitle": "Faça a gestão autónoma dos pagamentos da sua quota de sócio.",
-		"title": "Pagamentos & Faturas"
-	},
-	"FrontendAccountSubscriptionCheckout": {
-		"subtitle": "Todos os seus pagamentos",
-		"title": "Conta Corrente"
-	},
-	"FrontendAccountSubscriptionInfoRenew": {
-		"active": "Renova a {renew_date}",
-		"canceled": "Expirou a {canceled_date}",
-		"past_due": "Renova a {renew_date}"
-	},
-	"FrontendAccountSubscriptionInfoStatus": {
-		"active": "Pagamento de Quota regularizado",
-		"canceled": "A sua subscrição está desativada",
-		"not_found": "É necessário regularizar o pagamento da sua Quota",
-		"past_due": "Ainda não foi possível efetuar o pagamento."
-	},
-	"FrontendAccountSubscriptionManage": {
-		"active": "Gerir Métodos de Pagamento",
-		"canceled": "Renovar pagamento agora",
-		"not_found": "Efetuar pagamento de Quota agora",
-		"past_due": "Verificar Método de Pagamento"
-	},
-	"FrontendAccountVideos": {
-		"subtitle": "Todos os seus videos",
-		"title": "Videos"
-	},
 	"FrontendFooterContacts": {
 		"address": {
 			"title": "Sede Social"
@@ -1118,6 +1043,41 @@
 		"was_active": "Active {value}",
 		"was_never_active": "This user neved logged in"
 	},
+	"account": {
+		"AccountProfile": {
+			"subtitle": "Todas as suas informações",
+			"title": "Dados Pessoais"
+		},
+		"AccountSubscription": {
+			"subtitle": "Faça a gestão autónoma dos pagamentos da sua quota de sócio.",
+			"title": "Pagamentos & Faturas"
+		},
+		"AccountSubscriptionCheckout": {
+			"subtitle": "Todos os seus pagamentos",
+			"title": "Conta Corrente"
+		},
+		"AccountSubscriptionInfoRenew": {
+			"active": "Renova a {renew_date}",
+			"canceled": "Expirou a {canceled_date}",
+			"past_due": "Renova a {renew_date}"
+		},
+		"AccountSubscriptionInfoStatus": {
+			"active": "Pagamento de Quota regularizado",
+			"canceled": "A sua subscrição está desativada",
+			"not_found": "É necessário regularizar o pagamento da sua Quota",
+			"past_due": "Ainda não foi possível efetuar o pagamento."
+		},
+		"AccountSubscriptionManage": {
+			"active": "Gerir Métodos de Pagamento",
+			"canceled": "Renovar pagamento agora",
+			"not_found": "Efetuar pagamento de Quota agora",
+			"past_due": "Verificar Método de Pagamento"
+		},
+		"AccountVideos": {
+			"subtitle": "Todos os seus videos",
+			"title": "Videos"
+		}
+	},
 	"agencies": {
 		"form": {
 			"code": {
@@ -1192,6 +1152,28 @@
 			}
 		},
 		"untitled": "Untitled Agency"
+	},
+	"auth": {
+		"AppAuthenticationLoginVerify": {
+			"retry": "Não recebi o email de login",
+			"subtitle": "Por favor verifique a sua caixa de email.",
+			"title": "Login"
+		},
+		"LoginForm": {
+			"email": {
+				"label": "Email",
+				"placeholder": "email@exemplo.pt"
+			},
+			"error": {
+				"message": "Email ou password incorretos.",
+				"retry": "Tentar Novamente"
+			},
+			"submit": {
+				"label": "Iniciar Sessão"
+			},
+			"subtitle": "Se precisar de ajuda contacte-nos.",
+			"title": "Login"
+		}
 	},
 	"header": {
 		"HeaderAcademia": {
