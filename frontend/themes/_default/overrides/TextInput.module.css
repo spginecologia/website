@@ -1,20 +1,69 @@
 /* * */
-/* INPUT */
+/* ROOT */
+
+.root {
+	margin-bottom: 20px;
+}
+
+
+/* * */
+/* INPUT / DEFAULT */
 
 .input {
-	height: auto;
-	max-height: none;
-	font-size: 18px;
+	width: 100%;
+	padding: 4px 0 4px 1px;
+	font-size: 17px;
+	font-weight: 700;
 	line-height: 1;
-	padding: var(--size-spacing-15);
-	border: 1px solid var(--color-system-border-200);
-	border-radius: 5px;
-	background-color: var(--color-system-background-100);
+	color: var(--color-reference-black);
+	background: transparent;
+	border: none;
+	border-bottom: 2px solid var(--color-reference-black);
+	border-radius: 0;
+	outline: none;
 }
 
 .input::placeholder {
-	color: var(--color-system-text-300);
+	font-size: 15px;
+	color: var(--color-reference-black);
+	text-transform: uppercase;
 }
+
+/* * */
+/* VARIANT PRIMARY */
+
+.variantPrimary.input {
+	border-bottom-color: var(--color-brand-primary-200);
+}
+
+.variantPrimary.input:hover {
+	background: rgb(0 0 0 / 2%);
+}
+
+.variantPrimary.input:focus {
+	background: transparent;
+	border-bottom-color: var(--color-brand-support-100);
+}
+
+.variantPrimary.input::placeholder {
+	color: var(--color-brand-support-400);
+}
+
+.variantPrimary.input:focus::placeholder {
+  color: rgb(0 0 0 / 15%);
+}
+
+.variantPrimary.label {
+    font-size: 15px;
+    font-weight: 700;
+	color: var(--color-brand-primary-200);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+
+/* * */
+
 
 .wrapper[data-with-left-section="true"] .input {
 	padding-left: calc(var(--size-spacing-15) + 30px);
@@ -24,34 +73,9 @@
 	padding-right: calc(var(--size-spacing-15) + 30px);
 }
 
-.input.variantWhite {
-	color: var(--color-primary-black);
-	border-color: #bebec8;
-	background-color: var(--color-primary-white);
-}
-
 /* * */
 /* SECTION */
 
-.section {
-	display: flex;
-	width: auto;
-	padding: var(--size-spacing-15);
-	color: var(--color-system-text-300);
-}
-
 .section[data-position="left"] {
 	pointer-events: none;
-}
-
-.section.variantWhite {
-	color: var(--color-system-text-300);
-}
-
-.sizeSm{
-	height: auto;
-	max-height: none;
-	font-size: 18px;
-	line-height: 1;
-	font-size: var(--input-fz,var(--input-fz, var(--mantine-font-size-sm)));
 }

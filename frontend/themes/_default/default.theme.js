@@ -19,9 +19,11 @@ import ButtonOverride from '@/themes/_default/overrides/Button.module.css';
 import SegmentedControlOverride from '@/themes/_default/overrides/SegmentedControl.module.css';
 import SelectOverride from '@/themes/_default/overrides/Select.module.css';
 import SkeletonOverride from '@/themes/_default/overrides/Skeleton.module.css';
+import TextOverride from '@/themes/_default/overrides/Text.module.css';
 import TextInputOverride from '@/themes/_default/overrides/TextInput.module.css';
+import TitleOverride from '@/themes/_default/overrides/Title.module.css';
 import combineClasses from '@/utils/combineClasses';
-import { Accordion, Button, createTheme, SegmentedControl, Select, Skeleton, TextInput } from '@mantine/core';
+import { Accordion, Button, createTheme, SegmentedControl, Select, Skeleton, Text, TextInput, Title } from '@mantine/core';
 import { IconCaretLeftFilled } from '@tabler/icons-react';
 
 /* * */
@@ -57,9 +59,6 @@ export default createTheme({
 					root: ButtonOverride.root,
 					section: ButtonOverride.section,
 				};
-				if (props.variant === 'pill') {
-					defaultClasses = combineClasses(defaultClasses, [ButtonOverride.variantPill]);
-				}
 				if (props.variant === 'primary') {
 					defaultClasses = combineClasses(defaultClasses, [ButtonOverride.variantPrimary]);
 				}
@@ -70,6 +69,9 @@ export default createTheme({
 					defaultClasses = combineClasses(defaultClasses, [ButtonOverride.variantMuted]);
 				}
 				return defaultClasses;
+			},
+			defaultProps: {
+				variant: 'primary',
 			},
 		}),
 
@@ -112,18 +114,50 @@ export default createTheme({
 			},
 		}),
 
+		Text: Text.extend({
+			classNames: (_, props) => {
+				let defaultClasses = {
+					root: TextOverride.root,
+				};
+				if (props.variant === 'primary') {
+					defaultClasses = combineClasses(defaultClasses, [TextOverride.variantPrimary]);
+				}
+				return defaultClasses;
+			},
+			defaultProps: {
+				variant: 'primary',
+			},
+		}),
+
 		TextInput: TextInput.extend({
 			classNames: (_, props) => {
 				let defaultClasses = {
 					input: TextInputOverride.input,
+					label: TextInputOverride.label,
+					root: TextInputOverride.root,
 					section: TextInputOverride.section,
 					wrapper: TextInputOverride.wrapper,
 				};
-				if (props.size === 'sm') {
-					defaultClasses = combineClasses(defaultClasses, [TextInputOverride.sizeSm]);
+				if (props.variant === 'primary') {
+					defaultClasses = combineClasses(defaultClasses, [TextInputOverride.variantPrimary]);
 				}
-				if (props.variant === 'white') {
-					defaultClasses = combineClasses(defaultClasses, [TextInputOverride.variantWhite]);
+				return defaultClasses;
+			},
+			defaultProps: {
+				variant: 'primary',
+			},
+		}),
+
+		Title: Title.extend({
+			classNames: (_, props) => {
+				let defaultClasses = {
+					root: TitleOverride.root,
+				};
+				if (props.order === 1) {
+					defaultClasses = combineClasses(defaultClasses, [TitleOverride.orderH1]);
+				}
+				if (props.order === 2) {
+					defaultClasses = combineClasses(defaultClasses, [TitleOverride.orderH2]);
 				}
 				return defaultClasses;
 			},

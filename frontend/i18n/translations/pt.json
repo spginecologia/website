@@ -1044,6 +1044,20 @@
 		"was_never_active": "This user neved logged in"
 	},
 	"account": {
+		"AccountPaymentsPricesList": {
+			"body": {
+				"already_paid": {
+					"false": "Pendente",
+					"true": "OK"
+				},
+				"amount": "{value, number, currency}"
+			},
+			"head": {
+				"amount": "Valor",
+				"status": "Estado",
+				"title": "Quota"
+			}
+		},
 		"AccountProfile": {
 			"subtitle": "Todas as suas informações",
 			"title": "Dados Pessoais"
@@ -1167,6 +1181,10 @@
 			"error": {
 				"message": "Email ou password incorretos.",
 				"retry": "Tentar Novamente"
+			},
+			"password": {
+				"label": "Password",
+				"placeholder": "• • • • • •"
 			},
 			"submit": {
 				"label": "Iniciar Sessão"

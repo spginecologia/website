@@ -1,6 +1,13 @@
 import type { CollectionConfig } from 'payload';
 
 export const Users: CollectionConfig = {
+	access: {
+		// update: ({ id, req: { user } }) => {
+		// 	if (!user || !id) return false;
+		// 	if (user.id === id) return true;
+		// 	return false;
+		// },
+	},
 	admin: {
 		useAsTitle: 'email',
 	},

@@ -46,6 +46,20 @@ export default buildConfig({
 		stripePlugin({
 			stripeSecretKey: process.env.STRIPE_SECRET_KEY ?? '',
 			stripeWebhooksEndpointSecret: process.env.STRIPE_WEBHOOKS_ENDPOINT_SECRET,
+			sync: [
+				{
+					collection: 'users',
+					fields: [
+						{
+							fieldPath: 'email', // this is a field on your own Payload Config
+							stripeProperty: 'email', // use dot notation, if applicable
+						},
+					],
+					stripeResourceType: 'customers',
+					stripeResourceTypeSingular: 'customer',
+				},
+			],
+
 			webhooks: {
 				'customer.subscription.updated': ({ event, stripe }) => {
 					console.log('customer.subscription.updated', event, stripe);

@@ -160,6 +160,8 @@ export interface User {
   post_code?: string | null;
   city?: string | null;
   country?: string | null;
+  stripeID?: string | null;
+  skipSync?: boolean | null;
   updatedAt: string;
   createdAt: string;
   email: string;
@@ -361,6 +363,8 @@ export interface UsersSelect<T extends boolean = true> {
   post_code?: T;
   city?: T;
   country?: T;
+  stripeID?: T;
+  skipSync?: T;
   updatedAt?: T;
   createdAt?: T;
   email?: T;

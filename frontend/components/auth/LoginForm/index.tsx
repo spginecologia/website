@@ -2,13 +2,10 @@
 
 /* * */
 
-import Button from '@/components/common/Button';
 import { Loader } from '@/components/common/Loader';
-import Text from '@/components/Text/Text';
-import Title from '@/components/Title/Title';
 import { SignInDefault } from '@/schemas/SignIn/default';
 import { SignInValidation } from '@/schemas/SignIn/validation';
-import { PasswordInput, Space, TextInput } from '@mantine/core';
+import { Button, Space, Text, TextInput, Title } from '@mantine/core';
 import { useForm, yupResolver } from '@mantine/form';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
@@ -81,23 +78,24 @@ export function LoginForm() {
 	if (isError) {
 		return (
 			<div className={styles.container}>
-				<Title level="h2" text={t('title')} />
-				<Space />
+				<Title order={2}>{t('title')}</Title>
+				<Text>{t('subtitle')}</Text>
+				<Space h={5} />
 				<p className={styles.errorMessage}>{t('error.message')}</p>
 				<Space />
-				<Button label={t('error.retry')} onClick={handleRetry} />
+				<Button onClick={handleRetry}>{t('error.retry')}</Button>
 			</div>
 		);
 	}
 
 	return (
 		<form className={styles.container} onSubmit={form.onSubmit(handleSignIn)}>
-			<Title level="h2" text={t('title')} />
-			<Text text={t('subtitle')} />
+			<Title order={2}>{t('title')}</Title>
+			<Text>{t('subtitle')}</Text>
 			<Space h={5} />
 			<TextInput label={t('email.label')} placeholder={t('email.placeholder')} type="email" {...form.getInputProps('email')} />
-			<PasswordInput label={t('email.label')} placeholder={t('email.placeholder')} {...form.getInputProps('password')} />
-			{!isLoading ? <Button label={t('submit.label')} type="submit" /> : <Loader visible />}
+			<TextInput label={t('password.label')} placeholder={t('password.placeholder')} type="password" {...form.getInputProps('password')} />
+			{!isLoading ? <Button type="submit">{t('submit.label')}</Button> : <Loader visible />}
 		</form>
 	);
 }

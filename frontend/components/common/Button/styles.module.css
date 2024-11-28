@@ -11,8 +11,8 @@
   text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
-  background-color: transparent;
-  border: 2px solid var(--color-reference-1);
+  background-color: red;
+  border: 9px solid blue;
   transition: all 300ms ease;
 }
 

@@ -7,6 +7,7 @@ import TextField from '@/components/TextField/TextField';
 import { UserDefault } from '@/schemas/User/default';
 import { UserValidation } from '@/schemas/User/validation';
 import populate from '@/services/populate';
+import { TextInput } from '@mantine/core';
 import { useForm, yupResolver } from '@mantine/form';
 import { useTranslations } from 'next-intl';
 import useSWR from 'swr';
@@ -53,6 +54,7 @@ export function AccountProfileEdit() {
 	return (
 		<div className={styles.container}>
 			<AccountProfileEditSection description="Por favor mantenha os seus dados atualizados. Se pretender alterar o NIF ou Número da Ordem, deverá entrar em contacto com o Secretariado da SPG." title="Os Seus Dados">
+				<TextInput label="Nome" placeholder="hoen" {...form.getInputProps('email')} />
 				<TextField label="Nome" placeholder="hoen" type="email" {...form.getInputProps('email')} />
 				<TextField label="Nome" placeholder="hoen" type="email" {...form.getInputProps('email')} />
 				<TextField label="Nome" placeholder="hoen" type="email" {...form.getInputProps('email')} />
