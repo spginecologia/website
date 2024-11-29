@@ -93,8 +93,8 @@ export function LoginForm() {
 			<Title order={2}>{t('title')}</Title>
 			<Text>{t('subtitle')}</Text>
 			<Space h={5} />
-			<TextInput label={t('email.label')} placeholder={t('email.placeholder')} type="email" {...form.getInputProps('email')} />
-			<TextInput label={t('password.label')} placeholder={t('password.placeholder')} type="password" {...form.getInputProps('password')} />
+			<TextInput disabled={isLoading} label={t('email.label')} placeholder={t('email.placeholder')} type="email" {...form.getInputProps('email')} />
+			<TextInput disabled={isLoading}label={t('password.label')} placeholder={t('password.placeholder')} type="password" {...form.getInputProps('password')} />
 			{!isLoading ? <Button type="submit">{t('submit.label')}</Button> : <Loader visible />}
 		</form>
 	);

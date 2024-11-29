@@ -54,6 +54,10 @@ export default buildConfig({
 							fieldPath: 'email', // this is a field on your own Payload Config
 							stripeProperty: 'email', // use dot notation, if applicable
 						},
+						{
+							fieldPath: 'stripe_id', // this is a field on your own Payload Config
+							stripeProperty: 'id', // use dot notation, if applicable
+						},
 					],
 					stripeResourceType: 'customers',
 					stripeResourceTypeSingular: 'customer',

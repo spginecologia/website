@@ -14,30 +14,22 @@
 
 .label {
   font-size: 14px;
-  font-weight: 700;
-  text-transform: uppercase;
+  font-weight: var(--font-weight-bold);
   line-height: 1.4;
+  text-transform: uppercase;
 }
 
 /* * */
 /* STATUSES */
 
-.active {
+.paid {
   color: var(--color-state-success);
 }
 
-.expiringAutoRenew {
+.unpaid {
   color: var(--color-state-info);
 }
 
-.expiringCancelled {
-  color: var(--color-state-warning);
-}
-
-.expired {
-  color: var(--color-state-error);
-}
-
-.error {
+.unknown {
   color: var(--spg-support-4);
 }

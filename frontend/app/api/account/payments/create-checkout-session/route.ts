@@ -36,7 +36,13 @@ export async function POST(request: Request) {
 		}
 
 		try {
-			customerCheckoutSessions = await stripeApi.checkout.sessions.list({ customer: currentUser.user.id ?? '', expand: ['data.line_items'] });
+			if ('stripe_id' in currentUser.user) {
+				customerCheckoutSessions = await stripeApi.checkout.sessions.list({ customer: currentUser.user.stripe_id ?? '', expand: ['data.line_items'] });
+			}
+			else {
+				console.error('User does not have a stripe_id');
+				return Response.error();
+			}
 		}
 		catch (error) {
 			console.error('Error fetching customer checkout sessions');

@@ -36,10 +36,17 @@ export async function GET(request: Request) {
 		}
 
 		try {
-			customerCheckoutSessions = await stripeApi.checkout.sessions.list({ customer: currentUser.user.id ?? '', expand: ['data.line_items'] });
+			if ('stripe_id' in currentUser.user) {
+				customerCheckoutSessions = await stripeApi.checkout.sessions.list({ customer: currentUser.user.stripe_id ?? '', expand: ['data.line_items'] });
+			}
+			else {
+				console.error('User does not have a stripe_id');
+				return Response.error();
+			}
 		}
 		catch (error) {
 			console.error('Error fetching customer checkout sessions');
+			return Response.error();
 		}
 
 		//
@@ -55,13 +62,11 @@ export async function GET(request: Request) {
 
 			return {
 				already_paid: userHasPurchased ? true : false,
-				price_amount: priceDetails.unit_amount,
+				price_amount: (priceDetails.unit_amount ?? 0) / 100,
 				price_id: priceDetails.id,
 				product_name: activeProduct.name,
 			};
 		});
-
-		console.log('purchaseOptions', purchaseOptions);
 
 		return Response.json(purchaseOptions);
 

@@ -1,0 +1,27 @@
+/* * */
+/* ROOT */
+
+.table {
+	font-size: 16px;
+}
+
+.table[data-with-table-border="true"] {
+	border: 1px solid var(--color-brand-support-300);
+}
+
+.thead {
+	background-color: var(--color-brand-support-300);
+}
+
+.th {
+	font-weight: var(--font-weight-bold);
+	color: var(--color-brand-support-500);
+}
+
+.tr[data-with-row-border="true"] {
+	border-bottom: 1px solid var(--color-brand-support-300);
+}
+
+.tr[data-hover="true"]:hover {
+	background-color: var(--color-brand-support-300);
+}

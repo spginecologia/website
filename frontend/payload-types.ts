@@ -147,6 +147,7 @@ export interface User {
   cellphone?: number | null;
   partner_number?: number | null;
   tax_number?: number | null;
+  stripe_id?: string | null;
   date?: string | null;
   prime_workplace?: string | null;
   secondary_workplace?: string | null;
@@ -350,6 +351,7 @@ export interface UsersSelect<T extends boolean = true> {
   cellphone?: T;
   partner_number?: T;
   tax_number?: T;
+  stripe_id?: T;
   date?: T;
   prime_workplace?: T;
   secondary_workplace?: T;

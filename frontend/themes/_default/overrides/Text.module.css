@@ -9,3 +9,13 @@
 	color: var(--color-reference-black);
 	text-align: left;
 }
+
+.root.variantOverline {
+	font-family: lato, sans-serif;
+	font-size: 14px;
+	font-weight: var(--font-weight-bold);
+	line-height: 1;
+	color: var(--color-brand-support-400);
+	text-align: left;
+	text-transform: uppercase;
+}

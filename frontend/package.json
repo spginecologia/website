@@ -11,21 +11,21 @@
 		"start": "next start"
 	},
 	"dependencies": {
-		"@mantine/core": "7.14.2",
-		"@mantine/dates": "7.14.2",
-		"@mantine/dropzone": "7.14.2",
-		"@mantine/form": "7.14.2",
-		"@mantine/hooks": "7.14.2",
-		"@mantine/modals": "7.14.2",
+		"@mantine/core": "7.14.3",
+		"@mantine/dates": "7.14.3",
+		"@mantine/dropzone": "7.14.3",
+		"@mantine/form": "7.14.3",
+		"@mantine/hooks": "7.14.3",
+		"@mantine/modals": "7.14.3",
 		"@mantine/next": "6.0.22",
-		"@mantine/notifications": "7.14.2",
+		"@mantine/notifications": "7.14.3",
 		"@payloadcms/db-mongodb": "3.2.1",
 		"@payloadcms/next": "3.2.1",
 		"@payloadcms/plugin-stripe": "3.2.1",
 		"@payloadcms/richtext-lexical": "3.2.1",
 		"@stripe/react-stripe-js": "3.0.0",
 		"@stripe/stripe-js": "5.2.0",
-		"@tabler/icons-react": "3.22.0",
+		"@tabler/icons-react": "3.23.0",
 		"dayjs": "1.11.13",
 		"formidable": "3.5.2",
 		"graphql": "16.9.0",
@@ -52,7 +52,7 @@
 	"devDependencies": {
 		"@carrismetropolitana/eslint": "20241024.1600.5",
 		"@types/luxon": "3.4.2",
-		"@types/node": "22.10.0",
+		"@types/node": "22.10.1",
 		"@types/react": "18.3.12",
 		"@types/react-dom": "18.3.1",
 		"postcss": "8.4.49",
@@ -60,5 +60,6 @@
 		"postcss-simple-vars": "7.0.1",
 		"typescript": "5.7.2",
 		"typescript-plugin-css-modules": "5.1.0"
-	}
+	},
+	"packageManager": "pnpm@9.14.3"
 }

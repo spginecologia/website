@@ -64,6 +64,11 @@ export const Users: CollectionConfig = {
 			type: 'number',
 		},
 		{
+			label: 'Stripe ID',
+			name: 'stripe_id',
+			type: 'text',
+		},
+		{
 			label: 'Data de Nascimento',
 			name: 'date',
 			type: 'date',

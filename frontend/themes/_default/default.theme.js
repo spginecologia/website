@@ -19,11 +19,12 @@ import ButtonOverride from '@/themes/_default/overrides/Button.module.css';
 import SegmentedControlOverride from '@/themes/_default/overrides/SegmentedControl.module.css';
 import SelectOverride from '@/themes/_default/overrides/Select.module.css';
 import SkeletonOverride from '@/themes/_default/overrides/Skeleton.module.css';
+import TableOverride from '@/themes/_default/overrides/Table.module.css';
 import TextOverride from '@/themes/_default/overrides/Text.module.css';
 import TextInputOverride from '@/themes/_default/overrides/TextInput.module.css';
 import TitleOverride from '@/themes/_default/overrides/Title.module.css';
 import combineClasses from '@/utils/combineClasses';
-import { Accordion, Button, createTheme, SegmentedControl, Select, Skeleton, Text, TextInput, Title } from '@mantine/core';
+import { Accordion, Button, createTheme, SegmentedControl, Select, Skeleton, Table, Text, TextInput, Title } from '@mantine/core';
 import { IconCaretLeftFilled } from '@tabler/icons-react';
 
 /* * */
@@ -114,6 +115,18 @@ export default createTheme({
 			},
 		}),
 
+		Table: Table.extend({
+			classNames: () => {
+				let defaultClasses = {
+					table: TableOverride.table,
+					th: TableOverride.th,
+					thead: TableOverride.thead,
+					tr: TableOverride.tr,
+				};
+				return defaultClasses;
+			},
+		}),
+
 		Text: Text.extend({
 			classNames: (_, props) => {
 				let defaultClasses = {
@@ -121,6 +134,9 @@ export default createTheme({
 				};
 				if (props.variant === 'primary') {
 					defaultClasses = combineClasses(defaultClasses, [TextOverride.variantPrimary]);
+				}
+				if (props.variant === 'overline') {
+					defaultClasses = combineClasses(defaultClasses, [TextOverride.variantOverline]);
 				}
 				return defaultClasses;
 			},
