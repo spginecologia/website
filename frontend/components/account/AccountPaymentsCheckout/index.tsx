@@ -2,13 +2,12 @@
 
 /* * */
 
+import { PaymentStatus } from '@/components/account/PaymentStatus';
 import { Alert, Button, Space, Table, TableData, Text } from '@mantine/core';
 import { IconFlag3Filled } from '@tabler/icons-react';
 import { useTranslations } from 'next-intl';
 import { useMemo } from 'react';
 import useSWR from 'swr';
-
-import { PaymentStatus } from '../PaymentStatus';
 
 /* * */
 
@@ -47,7 +46,7 @@ export function AccountPaymentsCheckout() {
 	}, [optionsData]);
 
 	//
-	// E. Render components
+	// D. Render components
 
 	if (optionsLoading) {
 		return <Text variant="overline">{t('loading')}</Text>;
@@ -65,7 +64,7 @@ export function AccountPaymentsCheckout() {
 						<Text>{t('alert.message')}</Text>
 						<Space h="xs" />
 						<form action="/api/account/payments/create-checkout-session" method="POST">
-							<Button size="xs" type="submit">Regularizar pagamentos em falta</Button>
+							<Button size="xs" type="submit">{t('alert.action')}</Button>
 						</form>
 					</Alert>
 				</>

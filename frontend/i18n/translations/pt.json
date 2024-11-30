@@ -1050,6 +1050,7 @@
 		},
 		"AccountPaymentsCheckout": {
 			"alert": {
+				"action": "Regularizar Pagamentos",
 				"message": "O pagamento das suas quotas de sócio é o que permite à SPG evoluir e continuar a servir a comunidade médica.",
 				"title": "Tem pagamentos pendentes"
 			},
