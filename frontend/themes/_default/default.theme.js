@@ -15,7 +15,9 @@ import '@/themes/_default/styles/wordpress.css';
 /* * */
 
 import AccordionOverride from '@/themes/_default/overrides/Accordion.module.css';
+import AlertOverride from '@/themes/_default/overrides/Alert.module.css';
 import ButtonOverride from '@/themes/_default/overrides/Button.module.css';
+import PaperOverride from '@/themes/_default/overrides/Paper.module.css';
 import SegmentedControlOverride from '@/themes/_default/overrides/SegmentedControl.module.css';
 import SelectOverride from '@/themes/_default/overrides/Select.module.css';
 import SkeletonOverride from '@/themes/_default/overrides/Skeleton.module.css';
@@ -24,7 +26,7 @@ import TextOverride from '@/themes/_default/overrides/Text.module.css';
 import TextInputOverride from '@/themes/_default/overrides/TextInput.module.css';
 import TitleOverride from '@/themes/_default/overrides/Title.module.css';
 import combineClasses from '@/utils/combineClasses';
-import { Accordion, Button, createTheme, SegmentedControl, Select, Skeleton, Table, Text, TextInput, Title } from '@mantine/core';
+import { Accordion, Alert, Button, createTheme, Paper, SegmentedControl, Select, Skeleton, Table, Text, TextInput, Title } from '@mantine/core';
 import { IconCaretLeftFilled } from '@tabler/icons-react';
 
 /* * */
@@ -52,6 +54,26 @@ export default createTheme({
 			},
 		}),
 
+		Alert: Alert.extend({
+			classNames: (_, props) => {
+				let defaultClasses = {
+					closeButton: AlertOverride.closeButton,
+					icon: AlertOverride.icon,
+					label: AlertOverride.label,
+					message: AlertOverride.message,
+					root: AlertOverride.root,
+					title: AlertOverride.title,
+				};
+				if (props.variant === 'info') {
+					defaultClasses = combineClasses(defaultClasses, [AlertOverride.variantinfo]);
+				}
+				return defaultClasses;
+			},
+			defaultProps: {
+				variant: 'info',
+			},
+		}),
+
 		Button: Button.extend({
 			classNames: (_, props) => {
 				let defaultClasses = {
@@ -69,10 +91,22 @@ export default createTheme({
 				if (props.variant === 'muted') {
 					defaultClasses = combineClasses(defaultClasses, [ButtonOverride.variantMuted]);
 				}
+				if (props.variant === 'link') {
+					defaultClasses = combineClasses(defaultClasses, [ButtonOverride.variantLink]);
+				}
 				return defaultClasses;
 			},
 			defaultProps: {
 				variant: 'primary',
+			},
+		}),
+
+		Paper: Paper.extend({
+			classNames: () => {
+				let defaultClasses = {
+					root: PaperOverride.root,
+				};
+				return defaultClasses;
 			},
 		}),
 

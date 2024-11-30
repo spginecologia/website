@@ -2,7 +2,8 @@
 
 /* * */
 
-import { Button, Space, Table, TableData, Text } from '@mantine/core';
+import { Alert, Button, Space, Table, TableData, Text } from '@mantine/core';
+import { IconFlag3Filled } from '@tabler/icons-react';
 import { useTranslations } from 'next-intl';
 import { useMemo } from 'react';
 import useSWR from 'swr';
@@ -49,21 +50,27 @@ export function AccountPaymentsCheckout() {
 	// E. Render components
 
 	if (optionsLoading) {
-		return <Text variant="overline">Loading...</Text>;
+		return <Text variant="overline">{t('loading')}</Text>;
 	}
 
 	if (!optionsLoading && optionsError) {
-		return <Text variant="overline">Error loading data</Text>;
+		return <Text variant="overline">{t('error')}</Text>;
 	}
 
 	return (
 		<>
 			{hasUnpaidOptions && (
-				<form action="/api/account/payments/create-checkout-session" method="POST">
-					<Button type="submit">Regularizar pagamentos em falta</Button>
-					<Space h="md" />
-				</form>
+				<>
+					<Alert icon={<IconFlag3Filled />} title={t('alert.title')} w="100%">
+						<Text>{t('alert.message')}</Text>
+						<Space h="xs" />
+						<form action="/api/account/payments/create-checkout-session" method="POST">
+							<Button size="xs" type="submit">Regularizar pagamentos em falta</Button>
+						</form>
+					</Alert>
+				</>
 			)}
+			<Space h="md" />
 			<Table data={tableData} layout="fixed" withTableBorder />
 		</>
 	);

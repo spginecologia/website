@@ -19,7 +19,7 @@ export async function GET(request: Request) {
 		// Get the current logged in user
 
 		const currentUser = await payload.auth({ headers: request.headers });
-		if (!currentUser || !currentUser.user) return Response.error();
+		if (!currentUser || !currentUser.user) return new Response(null, { status: 400 });
 
 		//
 		// Get all active Stripe Products and Checkout Sessions for this user
@@ -31,8 +31,8 @@ export async function GET(request: Request) {
 			allActiveStripeProducts = await stripeApi.products.list({ active: true, expand: ['data.default_price'] });
 		}
 		catch (error) {
-			console.error('Error fetching active stripe products');
-			return Response.error();
+			console.error('Error fetching active stripe products', error);
+			return new Response(null, { status: 400 });
 		}
 
 		try {
@@ -45,7 +45,7 @@ export async function GET(request: Request) {
 			}
 		}
 		catch (error) {
-			console.error('Error fetching customer checkout sessions');
+			console.error('Error fetching customer checkout sessions', error);
 			return Response.error();
 		}
 

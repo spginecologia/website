@@ -25,7 +25,6 @@ export function AuthWrapper({ children }) {
 	useEffect(() => {
 		const checkAuthStatusTimeout = setTimeout(async () => {
 			try {
-				console.log('here');
 				setIsLoading(true);
 				// Search for users data
 				const usersResponse = await fetch('/api/users/me');
@@ -39,11 +38,10 @@ export function AuthWrapper({ children }) {
 				if (adminsData.user) {
 					window.location.replace('/account');
 				}
+				setIsLoading(false);
 			}
 			catch (error) {
 				console.error(error);
-			}
-			finally {
 				setIsLoading(false);
 			}
 		}, 500);

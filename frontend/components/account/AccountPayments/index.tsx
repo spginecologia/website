@@ -1,10 +1,7 @@
-'use client';
-
 /* * */
 
 import { AccountPaymentsCheckout } from '@/components/account/AccountPaymentsCheckout';
-import Panel from '@/components/Panel/Panel';
-import { Space, Text, Title } from '@mantine/core';
+import { Paper, Space, Text, Title } from '@mantine/core';
 import { useTranslations } from 'next-intl';
 
 /* * */
@@ -15,18 +12,18 @@ export function AccountPayments() {
 	//
 	// A. Setup variables
 
-	const t = useTranslations('account.AccountSubscription');
+	const t = useTranslations('account.AccountPayments');
 
 	//
 	// B. Render components
 
 	return (
-		<Panel>
+		<Paper>
 			<Title order={2}>{t('title')}</Title>
 			<Text>{t('subtitle')}</Text>
 			<Space h="md" />
 			<AccountPaymentsCheckout />
-		</Panel>
+		</Paper>
 	);
 
 	//

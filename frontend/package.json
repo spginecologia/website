@@ -19,10 +19,10 @@
 		"@mantine/modals": "7.14.3",
 		"@mantine/next": "6.0.22",
 		"@mantine/notifications": "7.14.3",
-		"@payloadcms/db-mongodb": "3.2.1",
-		"@payloadcms/next": "3.2.1",
-		"@payloadcms/plugin-stripe": "3.2.1",
-		"@payloadcms/richtext-lexical": "3.2.1",
+		"@payloadcms/db-mongodb": "3.2.2",
+		"@payloadcms/next": "3.2.2",
+		"@payloadcms/plugin-stripe": "3.2.2",
+		"@payloadcms/richtext-lexical": "3.2.2",
 		"@stripe/react-stripe-js": "3.0.0",
 		"@stripe/stripe-js": "5.2.0",
 		"@tabler/icons-react": "3.23.0",
@@ -38,7 +38,7 @@
 		"next-intl": "3.25.3",
 		"nodemailer": "6.9.16",
 		"nuqs": "2.2.3",
-		"payload": "3.2.1",
+		"payload": "3.2.2",
 		"react": "19.0.0-rc-65a56d0e-20241020",
 		"react-dom": "19.0.0-rc-65a56d0e-20241020",
 		"react-map-gl": "7.1.7",
@@ -61,5 +61,5 @@
 		"typescript": "5.7.2",
 		"typescript-plugin-css-modules": "5.1.0"
 	},
-	"packageManager": "pnpm@9.14.3"
+	"packageManager": "pnpm@9.14.4"
 }

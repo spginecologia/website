@@ -1,0 +1,41 @@
+/* * */
+/* DEFAULT */
+
+.root {
+	border-radius: 0;
+}
+
+.message {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+
+/* * */
+/* VARIANT / INFO */
+
+.variantinfo.root {
+	background-color: var(--color-brand-support-300);
+}
+
+.variantinfo.icon {
+	width: 24px;
+	height: 24px;
+	color: var(--color-brand-primary-100);
+}
+
+.variantinfo.icon svg {
+	width: 100%;
+	height: 100%;
+}
+
+.variantinfo.label {
+	font-size: 18px;
+	font-weight: var(--font-weight-bold);
+	color: var(--color-brand-primary-100);
+}
+
+.variantinfo.message {
+	font-size: 16px;
+}

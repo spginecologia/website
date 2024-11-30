@@ -1044,7 +1044,17 @@
 		"was_never_active": "This user neved logged in"
 	},
 	"account": {
+		"AccountPayments": {
+			"subtitle": "Faça a gestão autónoma dos pagamentos da sua quota de sócio.",
+			"title": "Pagamentos & Faturas"
+		},
 		"AccountPaymentsCheckout": {
+			"alert": {
+				"message": "O pagamento das suas quotas de sócio é o que permite à SPG evoluir e continuar a servir a comunidade médica.",
+				"title": "Tem pagamentos pendentes"
+			},
+			"error": "Erro ao carregar dados",
+			"loading": "Por favor aguarde...",
 			"table": {
 				"body": {
 					"already_paid": {
@@ -1063,25 +1073,6 @@
 		"AccountProfile": {
 			"subtitle": "Todas as suas informações",
 			"title": "Dados Pessoais"
-		},
-		"AccountSubscription": {
-			"subtitle": "Faça a gestão autónoma dos pagamentos da sua quota de sócio.",
-			"title": "Pagamentos & Faturas"
-		},
-		"AccountSubscriptionCheckout": {
-			"subtitle": "Todos os seus pagamentos",
-			"title": "Conta Corrente"
-		},
-		"AccountSubscriptionInfoRenew": {
-			"active": "Renova a {renew_date}",
-			"canceled": "Expirou a {canceled_date}",
-			"past_due": "Renova a {renew_date}"
-		},
-		"AccountSubscriptionManage": {
-			"active": "Gerir Métodos de Pagamento",
-			"canceled": "Renovar pagamento agora",
-			"not_found": "Efetuar pagamento de Quota agora",
-			"past_due": "Verificar Método de Pagamento"
 		},
 		"AccountVideos": {
 			"subtitle": "Todos os seus videos",

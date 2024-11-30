@@ -1,15 +1,8 @@
-'use client';
-
 /* * */
 
 import { AccountProfileEdit } from '@/components/account/AccountProfileEdit';
-import { AccountProfileView } from '@/components/account/AccountProfileView';
-import Panel from '@/components/Panel/Panel';
-import Text from '@/components/Text/Text';
-import Title from '@/components/Title/Title';
+import { Paper, Text, Title } from '@mantine/core';
 import { useTranslations } from 'next-intl';
-
-import styles from './styles.module.css';
 
 /* * */
 
@@ -25,12 +18,12 @@ export function AccountProfile() {
 	// B. Render components
 
 	return (
-		<Panel>
-			<div className={styles.container}>
-				<Title level="h2" text={t('title')} />
-				<Text text={t('subtitle')} />
-				<AccountProfileEdit />
-			</div>
-		</Panel>
+		<Paper>
+			<Title order={2}>{t('title')}</Title>
+			<Text>{t('subtitle')}</Text>
+			<AccountProfileEdit />
+		</Paper>
 	);
+
+	//
 }
