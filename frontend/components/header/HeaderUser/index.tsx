@@ -2,13 +2,11 @@
 
 /* * */
 
-import type { User } from '@/payload-types';
-
 import { Loader } from '@/components/common/Loader';
 import { IconSettings, IconUserCircle } from '@tabler/icons-react';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-import { useEffect, useState } from 'react';
+import useSWR from 'swr';
 
 import styles from './styles.module.css';
 
@@ -29,46 +27,15 @@ export function HeaderUser() {
 
 	const t = useTranslations('header.HeaderUser');
 
-	const [isLoading, setIsLoading] = useState(true);
-	const [loggedInUserData, setLoggedInUserData] = useState<undefined | User>();
-
 	//
 	// B. Fetch data
 
-	useEffect(() => {
-		(async () => {
-			try {
-				setIsLoading(true);
-				// Search for users data
-				const usersResponse = await fetch('/api/users/me');
-				const usersData = await usersResponse.json();
-				if (usersData.user) {
-					setLoggedInUserData(usersData.user);
-					setIsLoading(false);
-					return;
-				}
-				// Search for admins data
-				const adminsResponse = await fetch('/api/admins/me');
-				const adminsData = await adminsResponse.json();
-				if (adminsData.user) {
-					setLoggedInUserData(adminsData.user);
-					setIsLoading(false);
-					return;
-				}
-			}
-			catch (error) {
-				console.error(error);
-			}
-			finally {
-				setIsLoading(false);
-			}
-		})();
-	}, []);
+	const { data: userData, isLoading: userLoading } = useSWR('/api/users/me');
 
 	//
 	// C. Render components
 
-	if (isLoading) {
+	if (userLoading) {
 		return (
 			<div className={styles.container}>
 				<Loader size={20} full visible />
@@ -78,16 +45,16 @@ export function HeaderUser() {
 
 	return (
 		<div className={styles.container}>
-			{!loggedInUserData && (
+			{(!userData || !userData.user) && (
 				<Link className={styles.login} href="/login">
 					<span className={styles.userFirstName}>{t('login.label')}</span>
 				</Link>
 			)}
-			{loggedInUserData && (
+			{userData && userData.user && (
 				<>
 					<Link className={styles.target} href="/account">
-						{loggedInUserData.title && <span className={styles.userTitle}>{loggedInUserData.title}</span>}
-						{loggedInUserData.name && <span className={styles.userFirstName}>{loggedInUserData.name.substring(0, 12)}</span>}
+						{userData.user.title && <span className={styles.userTitle}>{userData.user.title}</span>}
+						{userData.user.name && <span className={styles.userFirstName}>{userData.user.name.substring(0, 12)}</span>}
 					</Link>
 					<div className={styles.dropdown}>
 						{PROFILE_PAGES.map(item => (

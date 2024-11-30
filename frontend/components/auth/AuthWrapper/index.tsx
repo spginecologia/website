@@ -4,7 +4,7 @@
 
 import { Loader } from '@/components/common/Loader';
 import Section from '@/components/FrontendSection/FrontendSection';
-import Panel from '@/components/Panel/Panel';
+import { Paper } from '@mantine/core';
 import { useEffect, useState } from 'react';
 
 import styles from './styles.module.css';
@@ -32,12 +32,6 @@ export function AuthWrapper({ children }) {
 				if (usersData.user) {
 					window.location.replace('/account');
 				}
-				// Search for admins data
-				const adminsResponse = await fetch('/api/admins/me');
-				const adminsData = await adminsResponse.json();
-				if (adminsData.user) {
-					window.location.replace('/account');
-				}
 				setIsLoading(false);
 			}
 			catch (error) {
@@ -63,7 +57,7 @@ export function AuthWrapper({ children }) {
 		<div className={styles.container}>
 			<Section first>
 				<div className={styles.grid}>
-					<Panel>{children}</Panel>
+					<Paper>{children}</Paper>
 					<div className={styles.advert} />
 				</div>
 			</Section>

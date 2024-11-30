@@ -6,4 +6,5 @@
 	background-color: var(--color-reference-white);
 	border-radius: 0;
 	box-shadow: 0 0 20px 0 rgb(0 0 0 / 15%);
+	height: auto;
 }

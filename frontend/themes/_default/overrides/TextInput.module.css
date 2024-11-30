@@ -29,6 +29,19 @@
 	text-transform: uppercase;
 }
 
+.description {
+    font-size: 12px;
+    font-weight: var(--font-weight-medium);
+    color: var(--color-brand-support-500);
+}
+
+.error {
+    font-size: 12px;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-state-error);
+    text-transform: uppercase;
+}
+
 /* * */
 /* VARIANT PRIMARY */
 
@@ -61,6 +74,10 @@
     cursor: pointer;
 }
 
+.variantPrimary.input[data-error="true"] {
+	background: var(--color-state-error-background);
+    border-bottom-color: var(--color-state-error);
+}
 
 /* * */
 

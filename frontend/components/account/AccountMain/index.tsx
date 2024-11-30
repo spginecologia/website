@@ -2,6 +2,9 @@
 
 /* * */
 
+import { AccountPayments } from '@/components/account/AccountPayments';
+import { AccountProfile } from '@/components/account/AccountProfile';
+import { AccountVideos } from '@/components/account/AccountVideos';
 import { Loader } from '@/components/common/Loader';
 import FrontendSection from '@/components/FrontendSection/FrontendSection';
 import FrontendWrapperInner from '@/components/FrontendWrapperInner/FrontendWrapperInner';
@@ -11,7 +14,7 @@ import styles from './styles.module.css';
 
 /* * */
 
-export function AccountMain({ children }) {
+export function AccountMain() {
 	//
 
 	//
@@ -29,10 +32,7 @@ export function AccountMain({ children }) {
 				// Search for users data
 				const usersResponse = await fetch('/api/users/me');
 				const usersData = await usersResponse.json();
-				// Search for admins data
-				const adminsResponse = await fetch('/api/admins/me');
-				const adminsData = await adminsResponse.json();
-				if (!usersData.user && !adminsData.user) {
+				if (!usersData.user) {
 					window.location.replace('/login');
 				}
 				setIsLoading(false);
@@ -60,7 +60,11 @@ export function AccountMain({ children }) {
 		<div className={styles.container}>
 			<FrontendWrapperInner>
 				<FrontendSection first>
-					<div className={styles.grid}>{children}</div>
+					<div className={styles.grid}>
+						<AccountPayments />
+						<AccountProfile />
+						<AccountVideos />
+					</div>
 				</FrontendSection>
 			</FrontendWrapperInner>
 		</div>

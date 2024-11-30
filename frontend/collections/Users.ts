@@ -45,7 +45,7 @@ export const Users: CollectionConfig = {
 		},
 		{
 			label: 'Telefone',
-			name: 'cellphone',
+			name: 'phone',
 			type: 'number',
 		},
 		{
@@ -60,7 +60,12 @@ export const Users: CollectionConfig = {
 		},
 		{
 			label: 'Número de Contribuinte',
-			name: 'tax_number',
+			name: 'tax_id',
+			type: 'number',
+		},
+		{
+			label: 'Número de Cédula Médica',
+			name: 'medical_id',
 			type: 'number',
 		},
 		{
@@ -70,17 +75,17 @@ export const Users: CollectionConfig = {
 		},
 		{
 			label: 'Data de Nascimento',
-			name: 'date',
+			name: 'birthday',
 			type: 'date',
 		},
 		{
 			label: 'Local de Trabalho Principal',
-			name: 'prime_workplace',
+			name: 'workplace_primary',
 			type: 'text',
 		},
 		{
 			label: 'Local de Trabalho Secundário',
-			name: 'secondary_workplace',
+			name: 'workplace_secondary',
 			type: 'text',
 		},
 		{
@@ -92,7 +97,7 @@ export const Users: CollectionConfig = {
 				},
 				{
 					label: 'Endoscopia Ginecológica',
-					name: 'endoscopia_genecologica',
+					name: 'endoscopia_ginecologica',
 					type: 'checkbox',
 				},
 				{
@@ -115,17 +120,17 @@ export const Users: CollectionConfig = {
 		},
 		{
 			label: 'Morada',
-			name: 'address',
+			name: 'address_1',
 			type: 'text',
 		},
 		{
 			label: 'Morada (Continuação)',
-			name: 'address_cont',
+			name: 'address_2',
 			type: 'text',
 		},
 		{
 			label: 'Código Postal',
-			name: 'post_code',
+			name: 'postal_code',
 			type: 'text',
 		},
 		{

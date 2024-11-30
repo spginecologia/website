@@ -535,18 +535,10 @@
 				"label": "Número de Telefone",
 				"placeholder": "+351 912 345 678"
 			},
-			"primary_workplace": {
-				"label": "Local de Trabalho Principal",
-				"placeholder": "Hospital Central"
-			},
 			"registration_date": {
 				"description": "Data do pedido de inclusão a sócio",
 				"label": "Data de Registo",
 				"placeholder": "10 de Fevereiro de 2023"
-			},
-			"secondary_workplace": {
-				"label": "Local de Trabalho Secundário",
-				"placeholder": "Clínica Local"
 			},
 			"send_mandatory_communications": {
 				"description": "Receção de comunicações obrigatórias não pode ser desativado.",
@@ -564,6 +556,14 @@
 				"label": "Título de Apresentação",
 				"nothingFound": "No Results Found",
 				"placeholder": "Choose an option..."
+			},
+			"workplace_primary": {
+				"label": "Local de Trabalho Principal",
+				"placeholder": "Hospital Central"
+			},
+			"workplace_secondary": {
+				"label": "Local de Trabalho Secundário",
+				"placeholder": "Clínica Local"
 			}
 		},
 		"operations": {
@@ -1073,6 +1073,115 @@
 		"AccountProfile": {
 			"subtitle": "Todas as suas informações",
 			"title": "Dados Pessoais"
+		},
+		"AccountProfileEdit": {
+			"actions": {
+				"has_errors": "Existem erros no preenchimento",
+				"submit": {
+					"label": "Atualizar dados"
+				}
+			},
+			"fields": {
+				"address_1": {
+					"label": "Morada",
+					"placeholder": "Rua de Santa Apolónia"
+				},
+				"address_2": {
+					"label": "Morada (Continuação)",
+					"placeholder": "Bloco 3"
+				},
+				"birthday": {
+					"label": "Data de Nascimento",
+					"placeholder": ""
+				},
+				"city": {
+					"label": "Cidade",
+					"placeholder": "Coimbra"
+				},
+				"colposcopia_patologia_tracto_genital_inferior": {
+					"label": "Colposcopia Patologia Tracto Genital Inferior"
+				},
+				"country": {
+					"label": "País",
+					"placeholder": "Portugal"
+				},
+				"email": {
+					"label": "Email",
+					"placeholder": "Escolha uma opção..."
+				},
+				"endoscopia_ginecologica": {
+					"label": "Endoscopia Ginecológica"
+				},
+				"full_name": {
+					"label": "Nome Completo",
+					"placeholder": ""
+				},
+				"ginecologia_oncologica": {
+					"label": "Ginecologia Oncológica"
+				},
+				"last_name": {
+					"label": "Apelido",
+					"placeholder": ""
+				},
+				"medical_id": {
+					"description": "Para alterar este campo por favor entre em contacto com o Secretariado SPG.",
+					"label": "Número de Cédula Médica",
+					"placeholder": "00000"
+				},
+				"menopausa": {
+					"label": "Menopausa"
+				},
+				"name": {
+					"label": "Nome",
+					"placeholder": ""
+				},
+				"phone": {
+					"label": "Telefone",
+					"placeholder": "+351 912 345 678"
+				},
+				"postal_code": {
+					"label": "Código Postal",
+					"placeholder": "1000-200"
+				},
+				"subscribed_sections": {
+					"label": "Secções de Interesse"
+				},
+				"tax_id": {
+					"description": "Por favor indique o seu NIF pessoal. Por motivos alheios não podemos aceitar NIFs institucionais. Pode pedir emissão de fatura com outro NIF. Para alterar este campo por favor entre em contacto com o Secretariado SPG.",
+					"label": "Número de Contribuinte",
+					"placeholder": "000 000 000"
+				},
+				"title": {
+					"label": "Título",
+					"nothingFound": "No Results Found",
+					"placeholder": "Escolha uma opção..."
+				},
+				"uroginecologia": {
+					"label": "Uroginecologia"
+				},
+				"workplace_primary": {
+					"label": "Local de Trabalho Principal",
+					"placeholder": "Hospital Central"
+				},
+				"workplace_secondary": {
+					"label": "Local de Trabalho Secundário",
+					"placeholder": ""
+				}
+			},
+			"sections": {
+				"activity": {
+					"description": "Por favor indique-nos qual a sua actividade.",
+					"title": "A Sua Actividade"
+				},
+				"basic": {
+					"description": "Por favor mantenha os seus dados atualizados. Se pretender alterar o NIF ou Número da Ordem, deverá entrar em contacto com o Secretariado da SPG.",
+					"title": "Os Seus Dados"
+				},
+				"correspondence": {
+					"description": "Por favor indique onde gostaria de receber correspondência da SPG.",
+					"title": "Correspondência"
+				}
+			}
 		},
 		"AccountVideos": {
 			"subtitle": "Todos os seus videos",

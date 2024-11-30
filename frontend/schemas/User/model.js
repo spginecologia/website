@@ -103,11 +103,11 @@ export const UserSchema = new mongoose.Schema({
     maxlength: 50,
   },
   //
-  primary_workplace: {
+  workplace_primary: {
     type: String,
     maxlength: 100,
   },
-  secondary_workplace: {
+  workplace_secondary: {
     type: String,
     maxlength: 100,
   },

@@ -19,14 +19,14 @@ import AlertOverride from '@/themes/_default/overrides/Alert.module.css';
 import ButtonOverride from '@/themes/_default/overrides/Button.module.css';
 import PaperOverride from '@/themes/_default/overrides/Paper.module.css';
 import SegmentedControlOverride from '@/themes/_default/overrides/SegmentedControl.module.css';
-import SelectOverride from '@/themes/_default/overrides/Select.module.css';
+// import SelectOverride from '@/themes/_default/overrides/Select.module.css';
 import SkeletonOverride from '@/themes/_default/overrides/Skeleton.module.css';
 import TableOverride from '@/themes/_default/overrides/Table.module.css';
 import TextOverride from '@/themes/_default/overrides/Text.module.css';
 import TextInputOverride from '@/themes/_default/overrides/TextInput.module.css';
 import TitleOverride from '@/themes/_default/overrides/Title.module.css';
 import combineClasses from '@/utils/combineClasses';
-import { Accordion, Alert, Button, createTheme, Paper, SegmentedControl, Select, Skeleton, Table, Text, TextInput, Title } from '@mantine/core';
+import { Accordion, Alert, Button, createTheme, Paper, SegmentedControl, Skeleton, Table, Text, TextInput, Title } from '@mantine/core';
 import { IconCaretLeftFilled } from '@tabler/icons-react';
 
 /* * */
@@ -126,18 +126,18 @@ export default createTheme({
 			},
 		}),
 
-		Select: Select.extend({
-			classNames: () => {
-				let defaultClasses = {
-					dropdown: SelectOverride.dropdown,
-					input: SelectOverride.input,
-					option: SelectOverride.option,
-					section: SelectOverride.section,
-					wrapper: SelectOverride.wrapper,
-				};
-				return defaultClasses;
-			},
-		}),
+		// Select: Select.extend({
+		// 	classNames: () => {
+		// 		let defaultClasses = {
+		// 			dropdown: SelectOverride.dropdown,
+		// 			input: SelectOverride.input,
+		// 			option: SelectOverride.option,
+		// 			section: SelectOverride.section,
+		// 			wrapper: SelectOverride.wrapper,
+		// 		};
+		// 		return defaultClasses;
+		// 	},
+		// }),
 
 		Skeleton: Skeleton.extend({
 			classNames: () => {
@@ -182,6 +182,8 @@ export default createTheme({
 		TextInput: TextInput.extend({
 			classNames: (_, props) => {
 				let defaultClasses = {
+					description: TextInputOverride.description,
+					error: TextInputOverride.error,
 					input: TextInputOverride.input,
 					label: TextInputOverride.label,
 					root: TextInputOverride.root,

@@ -261,8 +261,8 @@ export default function BackofficeUsersPage() {
 
           <BackofficeWrapperPageSection title={t('sections.activity_interests.title')} subtitle={t('sections.activity_interests.subtitle')}>
             <SimpleGrid cols={2}>
-              <TextInput label={t('fields.primary_workplace.label')} placeholder={t('fields.primary_workplace.placeholder')} {...userForm.getInputProps('primary_workplace')} readOnly={isReadOnly} />
-              <TextInput label={t('fields.secondary_workplace.label')} placeholder={t('fields.secondary_workplace.placeholder')} {...userForm.getInputProps('secondary_workplace')} readOnly={isReadOnly} />
+              <TextInput label={t('fields.workplace_primary.label')} placeholder={t('fields.workplace_primary.placeholder')} {...userForm.getInputProps('workplace_primary')} readOnly={isReadOnly} />
+              <TextInput label={t('fields.workplace_secondary.label')} placeholder={t('fields.workplace_secondary.placeholder')} {...userForm.getInputProps('workplace_secondary')} readOnly={isReadOnly} />
             </SimpleGrid>
             <SimpleGrid cols={2}>
               <MultiSelect label={t('fields.favorite_sections.label')} placeholder={t('fields.favorite_sections.placeholder')} nothingFoundMessage={t('fields.favorite_sections.nothingFound')} {...userForm.getInputProps('favorite_sections')} data={UserOptions.title} searchable clearable />

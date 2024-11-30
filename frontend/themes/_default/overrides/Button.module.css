@@ -40,15 +40,23 @@
 /* * */
 /* VARIANT / PRIMARY */
 
-.root.variantPrimary {
+.variantPrimary.root {
 	color: var(--spg-brand-1);
 	border-color: var(--spg-brand-1);
 }
 
-.root.variantPrimary:hover {
+.variantPrimary.root:hover {
 	color: var(--color-reference-0);
 	background-color: var(--spg-brand-1);
 	border-color: var(--spg-brand-1);
+}
+
+.variantPrimary.root[data-disabled='true'],
+.variantPrimary.root[data-disabled='true']:hover {
+	color: var(--color-brand-support-300);
+	border-color: var(--color-brand-support-300);
+	background-color: transparent;
+	cursor: not-allowed;
 }
 
 /* * */
