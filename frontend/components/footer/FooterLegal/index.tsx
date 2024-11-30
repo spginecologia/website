@@ -5,17 +5,17 @@
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 
-import styles from './FrontendFooterLegal.module.css';
+import styles from './styles.module.css';
 
 /* * */
 
-export default function FrontendFooterLegal() {
+export function FooterLegal() {
 	//
 
 	//
 	// A. Setup variables
 
-	const t = useTranslations('FrontendFooterLegal');
+	const t = useTranslations('footer.FooterLegal');
 
 	//
 	// B. Render components

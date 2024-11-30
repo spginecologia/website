@@ -1,9 +1,15 @@
 /* * */
 
 import { AccountMain } from '@/components/account/AccountMain';
+import { Footer } from '@/components/footer/Footer';
 
 /* * */
 
-export default function Layout() {
-	return <AccountMain />;
+export default function Page() {
+	return (
+		<>
+			<AccountMain />
+			<Footer />
+		</>
+	);
 }

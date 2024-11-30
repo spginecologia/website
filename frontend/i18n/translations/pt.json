@@ -817,34 +817,6 @@
 		"no_data": "No Exports Available",
 		"title": "Available Exports"
 	},
-	"FrontendFooterContacts": {
-		"address": {
-			"title": "Sede Social"
-		}
-	},
-	"FrontendFooterLegal": {
-		"brand_assets": "Brand Assets",
-		"copyright": "Sociedade Portuguesa de Ginecologia © {year}",
-		"credits": "Desenvolvido por Joao.Earth",
-		"privacy": "Privacidade"
-	},
-	"FrontendFooterNewsletter": {
-		"form": {
-			"email": {
-				"label": "Email",
-				"placeholder": "Email"
-			},
-			"name": {
-				"label": "Nome",
-				"placeholder": "Nome"
-			},
-			"submit": {
-				"label": "Subscrever"
-			}
-		},
-		"subtitle": "Subscreva a newsletter e fique a par das nossas atualizações.",
-		"title": "Newsletter"
-	},
 	"FrontendPublishDate": {
 		"label": "Publicado a {date}"
 	},
@@ -1293,6 +1265,36 @@
 			},
 			"subtitle": "Se precisar de ajuda contacte-nos.",
 			"title": "Login"
+		}
+	},
+	"footer": {
+		"FooterContacts": {
+			"address": {
+				"title": "Sede Social"
+			}
+		},
+		"FooterLegal": {
+			"brand_assets": "Brand Assets",
+			"copyright": "Sociedade Portuguesa de Ginecologia © {year}",
+			"credits": "Desenvolvido por Joao.Earth",
+			"privacy": "Privacidade"
+		},
+		"FooterNewsletter": {
+			"form": {
+				"email": {
+					"label": "Email",
+					"placeholder": "Email"
+				},
+				"name": {
+					"label": "Nome",
+					"placeholder": "Nome"
+				},
+				"submit": {
+					"label": "Subscrever"
+				}
+			},
+			"subtitle": "Subscreva a newsletter e fique a par das nossas atualizações.",
+			"title": "Newsletter"
 		}
 	},
 	"header": {
