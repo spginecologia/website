@@ -46,7 +46,7 @@ export const Users: CollectionConfig = {
 		{
 			label: 'Telefone',
 			name: 'phone',
-			type: 'number',
+			type: 'text',
 		},
 		{
 			label: 'Email',

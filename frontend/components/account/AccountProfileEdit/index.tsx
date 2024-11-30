@@ -8,7 +8,7 @@ import { UserDefault } from '@/schemas/User/default';
 import { UserValidation } from '@/schemas/User/validation';
 import { Button, Checkbox, Select, Space, Text, TextInput } from '@mantine/core';
 import { DateInput } from '@mantine/dates';
-import { useForm, yupResolver } from '@mantine/form';
+import { useForm, zodResolver } from '@mantine/form';
 import { useTranslations } from 'next-intl';
 import { useEffect, useMemo, useState } from 'react';
 import useSWR from 'swr';
@@ -23,13 +23,14 @@ export function AccountProfileEdit() {
 
 	const t = useTranslations('account.AccountProfileEdit');
 
+	const [isLoading, setIsLoading] = useState(false);
 	const [isDirty, setIsDirty] = useState(false);
 	const [isValid, setIsValid] = useState(false);
 
 	//
 	// B. Fetch data
 
-	const { data: userData } = useSWR('/api/users/me');
+	const { data: userData, mutate: userMutate } = useSWR('/api/users/me');
 
 	//
 	// C. Transform data
@@ -49,8 +50,8 @@ export function AccountProfileEdit() {
 		// Return if no form or form is dirty
 		if (!form || form.isDirty()) return;
 		// Update form with user data
-		form.setValues(userData.user);
-		form.resetDirty();
+		form.setInitialValues(userData.user);
+		form.reset();
 		//
 	}, [userData]);
 
@@ -61,9 +62,21 @@ export function AccountProfileEdit() {
 	};
 
 	const handleSubmit = async (data) => {
-		console.log(data);
-		// event.preventDefault();
-		// console.log(form.getValues());
+		try {
+			setIsLoading(true);
+			await fetch('/api/account/profile/edit', {
+				body: JSON.stringify(data),
+				headers: { 'Content-Type': 'application/json' },
+				method: 'POST',
+			});
+			form.reset();
+			userMutate();
+			setIsLoading(false);
+		}
+		catch (error) {
+			console.log(error);
+			setIsLoading(false);
+		}
 	};
 
 	//
@@ -74,7 +87,7 @@ export function AccountProfileEdit() {
 		initialValues: UserDefault,
 		mode: 'uncontrolled',
 		onValuesChange: handleValuesChange,
-		validate: yupResolver(UserValidation),
+		validate: zodResolver(UserValidation),
 	});
 
 	//
@@ -85,11 +98,11 @@ export function AccountProfileEdit() {
 
 			<AccountProfileEditSection>
 				<Select data={titleOptions} label={t('fields.title.label')} placeholder={t('fields.title.placeholder')} {...form.getInputProps('title')} />
-				<TextInput label={t('fields.name.label')} placeholder={t('fields.name.placeholder')} {...form.getInputProps('name')} />
-				<TextInput label={t('fields.last_name.label')} placeholder={t('fields.last_name.placeholder')} {...form.getInputProps('last_name')} />
-				<TextInput label={t('fields.full_name.label')} placeholder={t('fields.full_name.placeholder')} {...form.getInputProps('full_name')} />
-				<TextInput label={t('fields.phone.label')} placeholder={t('fields.phone.placeholder')} {...form.getInputProps('phone')} type="tel" />
-				<TextInput label={t('fields.email.label')} placeholder={t('fields.email.placeholder')} {...form.getInputProps('email')} type="email" />
+				<TextInput label={t('fields.name.label')} placeholder={t('fields.name.placeholder')} readOnly={isLoading} {...form.getInputProps('name')} />
+				<TextInput label={t('fields.last_name.label')} placeholder={t('fields.last_name.placeholder')} readOnly={isLoading} {...form.getInputProps('last_name')} />
+				<TextInput label={t('fields.full_name.label')} placeholder={t('fields.full_name.placeholder')} readOnly={isLoading} {...form.getInputProps('full_name')} />
+				<TextInput label={t('fields.phone.label')} placeholder={t('fields.phone.placeholder')} readOnly={isLoading} {...form.getInputProps('phone')} type="tel" />
+				<TextInput label={t('fields.email.label')} placeholder={t('fields.email.placeholder')} readOnly={isLoading} {...form.getInputProps('email')} type="email" />
 			</AccountProfileEditSection>
 
 			<AccountProfileEditSection description={t('sections.basic.description')} title={t('sections.basic.title')}>
@@ -99,8 +112,8 @@ export function AccountProfileEdit() {
 			</AccountProfileEditSection>
 
 			<AccountProfileEditSection description={t('sections.activity.description')} title={t('sections.activity.title')}>
-				<TextInput label={t('fields.workplace_primary.label')} placeholder={t('fields.workplace_primary.placeholder')} {...form.getInputProps('workplace_primary')} />
-				<TextInput label={t('fields.workplace_secondary.label')} placeholder={t('fields.workplace_secondary.placeholder')} {...form.getInputProps('workplace_secondary')} />
+				<TextInput label={t('fields.workplace_primary.label')} placeholder={t('fields.workplace_primary.placeholder')} readOnly={isLoading} {...form.getInputProps('workplace_primary')} />
+				<TextInput label={t('fields.workplace_secondary.label')} placeholder={t('fields.workplace_secondary.placeholder')} readOnly={isLoading} {...form.getInputProps('workplace_secondary')} />
 				<Checkbox.Group label={t('fields.subscribed_sections.label')}>
 					<Checkbox label={t('fields.colposcopia_patologia_tracto_genital_inferior.label')} {...form.getInputProps('colposcopia_patologia_tracto_genital_inferior', { type: 'checkbox' })} />
 					<Checkbox label={t('fields.endoscopia_ginecologica.label')} {...form.getInputProps('endoscopia_ginecologica', { type: 'checkbox' })} />
@@ -111,16 +124,16 @@ export function AccountProfileEdit() {
 			</AccountProfileEditSection>
 
 			<AccountProfileEditSection description={t('sections.correspondence.description')} title={t('sections.correspondence.title')}>
-				<TextInput label={t('fields.address_1.label')} placeholder={t('fields.address_1.placeholder')} {...form.getInputProps('address_1')} />
-				<TextInput label={t('fields.address_2.label')} placeholder={t('fields.address_2.placeholder')} {...form.getInputProps('address_2')} />
-				<TextInput label={t('fields.postal_code.label')} placeholder={t('fields.postal_code.placeholder')} {...form.getInputProps('postal_code')} />
-				<TextInput label={t('fields.city.label')} placeholder={t('fields.city.placeholder')} {...form.getInputProps('city')} />
-				<TextInput label={t('fields.country.label')} placeholder={t('fields.country.placeholder')} {...form.getInputProps('country')} />
+				<TextInput label={t('fields.address_1.label')} placeholder={t('fields.address_1.placeholder')} readOnly={isLoading} {...form.getInputProps('address_1')} />
+				<TextInput label={t('fields.address_2.label')} placeholder={t('fields.address_2.placeholder')} readOnly={isLoading} {...form.getInputProps('address_2')} />
+				<TextInput label={t('fields.postal_code.label')} placeholder={t('fields.postal_code.placeholder')} readOnly={isLoading} {...form.getInputProps('postal_code')} />
+				<TextInput label={t('fields.city.label')} placeholder={t('fields.city.placeholder')} readOnly={isLoading} {...form.getInputProps('city')} />
+				<TextInput label={t('fields.country.label')} placeholder={t('fields.country.placeholder')} readOnly={isLoading} {...form.getInputProps('country')} />
 			</AccountProfileEditSection>
 
-			{isDirty && <Button disabled={!isValid} type="submit">{t('actions.submit.label')}</Button>}
+			{isDirty && <Button disabled={!isValid} loading={isLoading} type="submit">{t('actions.submit.label')}</Button>}
 
-			{!isValid && (
+			{(isDirty && !isValid) && (
 				<>
 					<Space h={10} />
 					<Text variant="overline">{t('actions.has_errors')}</Text>

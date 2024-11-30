@@ -41,36 +41,44 @@
 /* VARIANT / PRIMARY */
 
 .variantPrimary.root {
-	color: var(--spg-brand-1);
-	border-color: var(--spg-brand-1);
+	color: var(--color-brand-primary-100);
+	border-color: var(--color-brand-primary-100);
 }
 
 .variantPrimary.root:hover {
-	color: var(--color-reference-0);
-	background-color: var(--spg-brand-1);
-	border-color: var(--spg-brand-1);
+	color: var(--color-reference-white);
+	background-color: var(--color-brand-primary-100);
+	border-color: var(--color-brand-primary-100);
 }
 
 .variantPrimary.root[data-disabled='true'],
 .variantPrimary.root[data-disabled='true']:hover {
 	color: var(--color-brand-support-300);
-	border-color: var(--color-brand-support-300);
-	background-color: transparent;
 	cursor: not-allowed;
+	background-color: transparent;
+	border-color: var(--color-brand-support-300);
+}
+
+.variantPrimary.root[data-loading='true'],
+.variantPrimary.root[data-loading='true']:hover {
+	color: var(--color-reference-white);
+	cursor: wait;
+	background-color: var(--color-brand-primary-100);
+	border-color: var(--color-brand-primary-100);
 }
 
 /* * */
 /* VARIANT / SECONDARY */
 
 .root.variantSecondary {
-	color: var(--spg-brand-1);
-	border-color: var(--spg-brand-1);
+	color: var(--color-brand-primary-100);
+	border-color: var(--color-brand-primary-100);
 }
 
 .root.variantSecondary:hover {
-	color: var(--color-reference-0);
-	background-color: var(--spg-brand-1);
-	border-color: var(--spg-brand-1);
+	color: var(--color-reference-white);
+	background-color: var(--color-brand-primary-100);
+	border-color: var(--color-brand-primary-100);
 }
 
 /* * */
@@ -82,7 +90,7 @@
 }
 
 .root.variantMuted:hover {
-	color: var(--color-reference-0);
+	color: var(--color-reference-white);
 	background-color: var(--spg-support-4);
 	border-color: var(--spg-support-4);
 }
@@ -92,7 +100,7 @@
 
 .variantLink.root {
 	padding: 0;
-	color: var(--spg-brand-1);
+	color: var(--color-brand-primary-100);
 	border: none;
 }
 

@@ -47,7 +47,8 @@
 		"sharp": "0.33.5",
 		"stripe": "17.4.0",
 		"swr": "2.2.5",
-		"yup": "1.4.0"
+		"yup": "1.4.0",
+		"zod": "3.23.8"
 	},
 	"devDependencies": {
 		"@carrismetropolitana/eslint": "20241024.1600.5",

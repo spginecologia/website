@@ -144,7 +144,7 @@ export interface User {
   name?: string | null;
   last_name?: string | null;
   full_name?: string | null;
-  phone?: number | null;
+  phone?: string | null;
   partner_number?: number | null;
   tax_id?: number | null;
   medical_id?: number | null;
