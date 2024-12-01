@@ -128,8 +128,9 @@ export async function POST(request: Request) {
 				featured_image: createFeaturedImageResult.id,
 				introduction: jsonDataValidationResult.introduction,
 				publisher: currentUser.user.id,
+				// @ts-expect-error - There is a mismatch between Payload types and the actual data
 				section: jsonDataValidationResult.section,
-				status: 'draft',
+				status: 'in_review',
 				title: jsonDataValidationResult.title,
 				topics: jsonDataValidationResult.topics,
 				updatedAt: new Date().toISOString(),

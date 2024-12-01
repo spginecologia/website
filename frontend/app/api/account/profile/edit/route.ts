@@ -36,7 +36,11 @@ export async function POST(request: Request) {
 
 		const updateResult = await payload.update({
 			collection: 'users',
-			data: validationResult,
+			data: {
+				...validationResult,
+				// @ts-expect-error - There is a mismatch between Payload types and the actual data
+				title: validationResult.title,
+			},
 			id: currentUser.user.id,
 		});
 
