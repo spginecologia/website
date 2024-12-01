@@ -13,7 +13,7 @@ export interface Config {
   };
   collections: {
     admins: Admin;
-    categories: Category;
+    topics: Topic;
     media: Media;
     users: User;
     videos: Video;
@@ -24,7 +24,7 @@ export interface Config {
   collectionsJoins: {};
   collectionsSelect: {
     admins: AdminsSelect<false> | AdminsSelect<true>;
-    categories: CategoriesSelect<false> | CategoriesSelect<true>;
+    topics: TopicsSelect<false> | TopicsSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
     users: UsersSelect<false> | UsersSelect<true>;
     videos: VideosSelect<false> | VideosSelect<true>;
@@ -106,11 +106,11 @@ export interface Admin {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "categories".
+ * via the `definition` "topics".
  */
-export interface Category {
+export interface Topic {
   id: string;
-  name: string;
+  title: string;
   description?: string | null;
   updatedAt: string;
   createdAt: string;
@@ -186,21 +186,21 @@ export interface User {
 export interface Video {
   id: string;
   title: string;
-  video_featured?: boolean | null;
-  video_rgpd_confirmation: boolean;
-  video_file_length?: string | null;
-  video_file: string | Media;
-  video_declaration_signed?: (string | null) | Media;
-  video_authors: string;
-  video_section:
+  featured?: boolean | null;
+  rgpd_confirmation: boolean;
+  file_length?: string | null;
+  file: string | Media;
+  declaration_file?: (string | null) | Media;
+  authors: string;
+  section:
     | 'geral'
     | 'colposcopia_patologia_tracto_genital_inferior'
     | 'endoscopia_ginecologica'
     | 'ginecologia_oncologica'
     | 'menopausa'
     | 'uroginecologia';
-  video_introduction: string;
-  video_description: {
+  introduction: string;
+  description: {
     root: {
       type: string;
       children: {
@@ -215,9 +215,9 @@ export interface Video {
     };
     [k: string]: unknown;
   };
-  author: string | User;
-  categories?: (string | Category)[] | null;
-  featured?: (string | null) | Media;
+  owner: string | User;
+  topics?: (string | Topic)[] | null;
+  featured_image?: (string | null) | Media;
   updatedAt: string;
   createdAt: string;
 }
@@ -233,8 +233,8 @@ export interface PayloadLockedDocument {
         value: string | Admin;
       } | null)
     | ({
-        relationTo: 'categories';
-        value: string | Category;
+        relationTo: 'topics';
+        value: string | Topic;
       } | null)
     | ({
         relationTo: 'media';
@@ -318,10 +318,10 @@ export interface AdminsSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "categories_select".
+ * via the `definition` "topics_select".
  */
-export interface CategoriesSelect<T extends boolean = true> {
-  name?: T;
+export interface TopicsSelect<T extends boolean = true> {
+  title?: T;
   description?: T;
   updatedAt?: T;
   createdAt?: T;
@@ -385,18 +385,18 @@ export interface UsersSelect<T extends boolean = true> {
  */
 export interface VideosSelect<T extends boolean = true> {
   title?: T;
-  video_featured?: T;
-  video_rgpd_confirmation?: T;
-  video_file_length?: T;
-  video_file?: T;
-  video_declaration_signed?: T;
-  video_authors?: T;
-  video_section?: T;
-  video_introduction?: T;
-  video_description?: T;
-  author?: T;
-  categories?: T;
   featured?: T;
+  rgpd_confirmation?: T;
+  file_length?: T;
+  file?: T;
+  declaration_file?: T;
+  authors?: T;
+  section?: T;
+  introduction?: T;
+  description?: T;
+  owner?: T;
+  topics?: T;
+  featured_image?: T;
   updatedAt?: T;
   createdAt?: T;
 }

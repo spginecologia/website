@@ -1,16 +1,16 @@
 'use client';
 
+import { Videos } from '@/collections/Videos';
 /* * */
 
-import { Videos } from '@/collections/Videos';
 import { FormSection } from '@/components/common/FormSection';
 import { VideoDefault } from '@/schemas/Video/default';
 import { VideoValidation } from '@/schemas/Video/validation';
 import { Button, Checkbox, FileInput, MultiSelect, Paper, Select, Space, Text, Textarea, TextInput, Title } from '@mantine/core';
-import { DateInput } from '@mantine/dates';
 import { useForm, zodResolver } from '@mantine/form';
 import { useTranslations } from 'next-intl';
 import { useMemo, useState } from 'react';
+import useSWR from 'swr';
 
 /* * */
 
@@ -27,10 +27,20 @@ export function VideosSubmitForm() {
 	const [isValid, setIsValid] = useState(false);
 
 	//
+	// B. Fetch data
+
+	const { data: allTopicsData } = useSWR('/api/topics');
+
+	//
 	// C. Transform data
 
-	const titleOptions = useMemo(() => {
-		const field = Videos.fields.find(field => field['name'] === 'title');
+	const topicOptions = useMemo(() => {
+		if (!allTopicsData || !allTopicsData.docs) return [];
+		return allTopicsData.docs.map(topic => ({ label: topic.title, value: topic.id }));
+	}, [allTopicsData]);
+
+	const sectionOptions = useMemo(() => {
+		const field = Videos.fields.find(field => field['name'] === 'section');
 		if (!field) return [];
 		return field['options'];
 	}, [Videos.fields]);
@@ -67,7 +77,7 @@ export function VideosSubmitForm() {
 	const form = useForm({
 		clearInputErrorOnChange: true,
 		initialValues: VideoDefault,
-		// mode: 'uncontrolled',
+		mode: 'uncontrolled',
 		onValuesChange: handleValuesChange,
 		validate: zodResolver(VideoValidation),
 	});
@@ -96,8 +106,8 @@ export function VideosSubmitForm() {
 				</FormSection>
 
 				<FormSection description={t('sections.metadata.description')} title={t('sections.metadata.title')}>
-					<MultiSelect label={t('fields.topics.label')} placeholder={t('fields.topics.placeholder')} readOnly={isLoading} {...form.getInputProps('topics')} />
-					<Select label={t('fields.section.label')} placeholder={t('fields.section.placeholder')} readOnly={isLoading} {...form.getInputProps('section')} />
+					<MultiSelect data={topicOptions} label={t('fields.topics.label')} placeholder={t('fields.topics.placeholder')} readOnly={isLoading} {...form.getInputProps('topics')} />
+					<Select data={sectionOptions} label={t('fields.section.label')} placeholder={t('fields.section.placeholder')} readOnly={isLoading} {...form.getInputProps('section')} />
 				</FormSection>
 
 				<FormSection description={t('sections.privacy.description')} title={t('sections.privacy.title')}>

@@ -4,14 +4,14 @@ import type { CollectionConfig } from 'payload';
 
 /* * */
 
-export const Categories: CollectionConfig = {
+export const Topics: CollectionConfig = {
 	admin: {
-		useAsTitle: 'name',
+		useAsTitle: 'title',
 	},
 	fields: [
 		{
-			label: 'Nome',
-			name: 'name',
+			label: 'Título',
+			name: 'title',
 			required: true,
 			type: 'text',
 		},
@@ -23,8 +23,8 @@ export const Categories: CollectionConfig = {
 		},
 	],
 	labels: {
-		plural: 'Categorias',
-		singular: 'Categoria',
+		plural: 'Tópicos',
+		singular: 'Tópico',
 	},
-	slug: 'categories',
+	slug: 'topics',
 };

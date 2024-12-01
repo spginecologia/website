@@ -9,7 +9,7 @@ export const featuredImageField: Field = {
 		position: 'sidebar',
 	},
 	label: 'Image de Destaque',
-	name: 'featured',
+	name: 'featured_image',
 	relationTo: 'media',
 	type: 'upload',
 };

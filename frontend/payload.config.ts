@@ -9,8 +9,8 @@ import sharp from 'sharp';
 /* * */
 
 import { Admins } from '@/collections/Admins';
-import { Categories } from '@/collections/Categories';
 import { Media } from '@/collections/Media';
+import { Topics } from '@/collections/Topics';
 import { Users } from '@/collections/Users';
 import { Videos } from '@/collections/Videos';
 
@@ -26,7 +26,7 @@ export default buildConfig({
 	// Define and configure your collections in this array
 	collections: [
 		Admins,
-		Categories,
+		Topics,
 		Media,
 		Users,
 		Videos,

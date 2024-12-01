@@ -1,7 +1,5 @@
 /* * */
 
-import { subscribe } from 'diagnostics_channel';
-
 export const UserDefault = {
 	// admin_observations: '',
 	// billing_address_1: '',

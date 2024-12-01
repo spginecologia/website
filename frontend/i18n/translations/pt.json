@@ -1750,7 +1750,7 @@
 					"placeholder": "Introduza o nome do vídeo"
 				},
 				"topics": {
-					"label": "Descrição",
+					"label": "Tópicos",
 					"placeholder": "Selecione ou crie tópicos relevantes..."
 				},
 				"video_file": {
