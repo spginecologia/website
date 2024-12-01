@@ -1071,9 +1071,6 @@
 					"label": "Cidade",
 					"placeholder": "Coimbra"
 				},
-				"colposcopia_patologia_tracto_genital_inferior": {
-					"label": "Colposcopia Patologia Tracto Genital Inferior"
-				},
 				"country": {
 					"label": "País",
 					"placeholder": "Portugal"
@@ -1082,15 +1079,9 @@
 					"label": "Email",
 					"placeholder": "Escolha uma opção..."
 				},
-				"endoscopia_ginecologica": {
-					"label": "Endoscopia Ginecológica"
-				},
 				"full_name": {
 					"label": "Nome Completo",
 					"placeholder": ""
-				},
-				"ginecologia_oncologica": {
-					"label": "Ginecologia Oncológica"
 				},
 				"last_name": {
 					"label": "Apelido",
@@ -1100,9 +1091,6 @@
 					"description": "Para alterar este campo por favor entre em contacto com o Secretariado SPG.",
 					"label": "Número de Cédula Médica",
 					"placeholder": "00000"
-				},
-				"menopausa": {
-					"label": "Menopausa"
 				},
 				"name": {
 					"label": "Nome",
@@ -1117,7 +1105,24 @@
 					"placeholder": "1000-200"
 				},
 				"subscribed_sections": {
-					"label": "Secções de Interesse"
+					"label": "Secções de Interesse",
+					"options": {
+						"colposcopia_patologia_tracto_genital_inferior": {
+							"label": "Colposcopia Patologia Tracto Genital Inferior"
+						},
+						"endoscopia_ginecologica": {
+							"label": "Endoscopia Ginecológica"
+						},
+						"ginecologia_oncologica": {
+							"label": "Ginecologia Oncológica"
+						},
+						"menopausa": {
+							"label": "Menopausa"
+						},
+						"uroginecologia": {
+							"label": "Uroginecologia"
+						}
+					}
 				},
 				"tax_id": {
 					"description": "Por favor indique o seu NIF pessoal. Por motivos alheios não podemos aceitar NIFs institucionais. Pode pedir emissão de fatura com outro NIF. Para alterar este campo por favor entre em contacto com o Secretariado SPG.",
@@ -1128,9 +1133,6 @@
 					"label": "Título",
 					"nothingFound": "No Results Found",
 					"placeholder": "Escolha uma opção..."
-				},
-				"uroginecologia": {
-					"label": "Uroginecologia"
 				},
 				"workplace_primary": {
 					"label": "Local de Trabalho Principal",
@@ -1702,5 +1704,75 @@
 			}
 		},
 		"untitled": "Untitled User"
+	},
+	"videos": {
+		"VideosSubmitForm": {
+			"actions": {
+				"has_errors": "Existem erros no preenchimento",
+				"submit": {
+					"label": "Publicar Vídeo"
+				}
+			},
+			"description": "Agradecemos o seu interesse em publicar na Academia SPG. Poderá encontrar as instruções de publicação aqui. Para qualquer dúvida não hesite em contactar-nos para o email academia@spginecologia.pt",
+			"fields": {
+				"authors": {
+					"label": "Autores",
+					"placeholder": "Nome Apelido; Nome Apelido; Nome Apelido; ..."
+				},
+				"cover_file": {
+					"label": "Imagem de capa",
+					"placeholder": "Selecione um ficheiro..."
+				},
+				"declaration_file": {
+					"label": "Declaração Assinada",
+					"placeholder": "Selecione um ficheiro..."
+				},
+				"description": {
+					"label": "Descrição",
+					"placeholder": ""
+				},
+				"introduction": {
+					"label": "Introdução",
+					"placeholder": ""
+				},
+				"rgpd": {
+					"label": "Confirmação RGPD"
+				},
+				"rgpd_toggle": {
+					"label": "Confirmo que possuo os direitos de imagem dos ficheiros enviados e estão ocultas as respectivas identificações pessoais, de acordo com o Regulamento Geral de Protecção de Dados (RGPD)."
+				},
+				"section": {
+					"label": "Secção",
+					"placeholder": "Selecione a secção responsável..."
+				},
+				"title": {
+					"label": "Título",
+					"placeholder": "Introduza o nome do vídeo"
+				},
+				"topics": {
+					"label": "Descrição",
+					"placeholder": "Selecione ou crie tópicos relevantes..."
+				},
+				"video_file": {
+					"label": "Ficheiro de Vídeo",
+					"placeholder": "Selecione um ficheiro..."
+				}
+			},
+			"sections": {
+				"about": {
+					"description": "Introduza uma pequena introdução que descreva o core do vídeo. Na descrição pode incluir detalhes mais vastos.",
+					"title": "Sobre este Vídeo"
+				},
+				"metadata": {
+					"description": "Escolha vários tópicos que se relacionam com o tema do seu vídeo.",
+					"title": "Metadados"
+				},
+				"privacy": {
+					"description": "A SPG valoriza os direitos de privacidade e a garantia de não existirem quaisquer conflitos de interesse inerentes à publicação de um vídeo científico. Pedimos ao autor do vídeo que assine a Declaração de Cedência de Direitos e faça o upload do ficheiro no campo seguinte. Pode encontrar a declaração aqui.",
+					"title": "Privacidade e Conflito de Interesses"
+				}
+			},
+			"title": "Submeter Vídeo"
+		}
 	}
 }

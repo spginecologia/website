@@ -1,5 +1,7 @@
 /* * */
 
+import { subscribe } from 'diagnostics_channel';
+
 export const UserDefault = {
 	// admin_observations: '',
 	// billing_address_1: '',
@@ -24,6 +26,7 @@ export const UserDefault = {
 	send_newsletter: true,
 	send_notifications: true,
 	stripe_id: null,
+	subscribed_sections: [],
 	tax_id: '',
 	title: '',
 	workplace_primary: '',

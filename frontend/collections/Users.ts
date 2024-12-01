@@ -89,34 +89,17 @@ export const Users: CollectionConfig = {
 			type: 'text',
 		},
 		{
-			fields: [
-				{
-					label: 'Colposcopia Patologia Tracto Genital Inferior',
-					name: 'colposcopia_patologia_tracto_genital_inferior',
-					type: 'checkbox',
-				},
-				{
-					label: 'Endoscopia Ginecológica',
-					name: 'endoscopia_ginecologica',
-					type: 'checkbox',
-				},
-				{
-					label: 'Ginecologia Oncológica',
-					name: 'ginecologia_oncologica',
-					type: 'checkbox',
-				},
-				{
-					label: 'Menopausa',
-					name: 'menopausa',
-					type: 'checkbox',
-				},
-				{
-					label: 'Uroginecologia',
-					name: 'uroginecologia',
-					type: 'checkbox',
-				},
+			hasMany: true,
+			label: 'Áreas de Interesse',
+			name: 'subscribed_sections',
+			options: [
+				{ label: 'Colposcopia Patologia Tracto Genital Inferior', value: 'colposcopia_patologia_tracto_genital_inferior' },
+				{ label: 'Endoscopia Ginecológica', value: 'endoscopia_ginecologica' },
+				{ label: 'Ginecologia Oncológica', value: 'ginecologia_oncologica' },
+				{ label: 'Menopausa', value: 'menopausa' },
+				{ label: 'Uroginecologia', value: 'uroginecologia' },
 			],
-			type: 'row',
+			type: 'select',
 		},
 		{
 			label: 'Morada',

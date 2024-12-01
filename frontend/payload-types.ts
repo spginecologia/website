@@ -152,11 +152,15 @@ export interface User {
   birthday?: string | null;
   workplace_primary?: string | null;
   workplace_secondary?: string | null;
-  colposcopia_patologia_tracto_genital_inferior?: boolean | null;
-  endoscopia_ginecologica?: boolean | null;
-  ginecologia_oncologica?: boolean | null;
-  menopausa?: boolean | null;
-  uroginecologia?: boolean | null;
+  subscribed_sections?:
+    | (
+        | 'colposcopia_patologia_tracto_genital_inferior'
+        | 'endoscopia_ginecologica'
+        | 'ginecologia_oncologica'
+        | 'menopausa'
+        | 'uroginecologia'
+      )[]
+    | null;
   address_1?: string | null;
   address_2?: string | null;
   postal_code?: string | null;
@@ -357,11 +361,7 @@ export interface UsersSelect<T extends boolean = true> {
   birthday?: T;
   workplace_primary?: T;
   workplace_secondary?: T;
-  colposcopia_patologia_tracto_genital_inferior?: T;
-  endoscopia_ginecologica?: T;
-  ginecologia_oncologica?: T;
-  menopausa?: T;
-  uroginecologia?: T;
+  subscribed_sections?: T;
   address_1?: T;
   address_2?: T;
   postal_code?: T;

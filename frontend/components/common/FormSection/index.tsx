@@ -13,7 +13,7 @@ interface Props {
 
 /* * */
 
-export function AccountProfileEditSection({ children, description, title }: Props) {
+export function FormSection({ children, description, title }: Props) {
 	return (
 		<div className={styles.container}>
 			{title && (
