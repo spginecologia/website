@@ -1719,7 +1719,7 @@
 					"label": "Autores",
 					"placeholder": "Nome Apelido; Nome Apelido; Nome Apelido; ..."
 				},
-				"cover_file": {
+				"featured_image": {
 					"label": "Imagem de capa",
 					"placeholder": "Selecione um ficheiro..."
 				},

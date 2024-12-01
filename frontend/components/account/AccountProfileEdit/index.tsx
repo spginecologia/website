@@ -2,7 +2,7 @@
 
 /* * */
 
-import { Users } from '@/collections/Users';
+import { Users } from '@/schemas/User/collection';
 import { FormSection } from '@/components/common/FormSection';
 import { UserDefault } from '@/schemas/User/default';
 import { UserValidation } from '@/schemas/User/validation';
@@ -85,7 +85,6 @@ export function AccountProfileEdit() {
 	const form = useForm({
 		clearInputErrorOnChange: true,
 		initialValues: UserDefault,
-		mode: 'uncontrolled',
 		onValuesChange: handleValuesChange,
 		validate: zodResolver(UserValidation),
 	});

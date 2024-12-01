@@ -2,22 +2,16 @@
 
 import { z } from 'zod';
 
+import { VideoOptions } from './options';
+
 /* * */
 
-export const VideoValidation = z.object({
+export const VideoValidationCommon = {
 
 	authors: z
 		.string({ message: 'Por favor coloque os autores do vídeo' })
 		.min(5, { message: 'Por favor coloque os autores do vídeo' })
 		.max(150, { message: 'Autores deve ser menor ou igual que 150 caracteres' }),
-
-	cover_file: z
-		.string({ message: 'Por favor selecione uma imagem' })
-		.max(25, { message: 'Último Nome deve ser menor ou igual que ${max} caracteres.' }),
-
-	declaration_file: z
-		.string({ message: 'Primeiro Nome é um campo obrigatório.' })
-		.max(25, { message: 'Primeiro Nome deve ser menor ou igual que ${max} caracteres.' }),
 
 	description: z
 		.string({ message: 'Telefone é um campo obrigatório.' })
@@ -32,19 +26,46 @@ export const VideoValidation = z.object({
 		.boolean({ message: 'Último Nome é um campo obrigatório.' }),
 
 	section: z
-		.string({ message: 'Último Nome é um campo obrigatório.' })
-		.max(25, { message: 'Último Nome deve ser menor ou igual que ${max} caracteres.' }),
+		.enum([...VideoOptions.section.map(item => item.value)] as [string, ...string[]], { message: 'Último Nome é um campo obrigatório.' }),
 
 	title: z
 		.string({ message: 'O vídeo precisa de um título' })
 		.min(10, { message: 'O título deve ser explicativo do conteúdo do vídeo' }),
 
 	topics: z
-		.string({ message: 'Último Nome é um campo obrigatório.' })
-		.max(25, { message: 'Último Nome deve ser menor ou igual que ${max} caracteres.' }),
+		.array(z.string(), { message: 'Selecione pelo menos 1 tópico' })
+		.min(1, { message: 'Selecione pelo menos 1 tópico' }),
+
+};
+
+/* * */
+
+export const VideoValidationClient = z.object({
+
+	...VideoValidationCommon,
+
+	declaration_file: z
+		.any()
+		.refine(file => !!file, { message: 'Selecione um PDF' }),
+
+	featured_image: z
+		.any()
+		.refine(file => !!file, { message: 'Selecione uma imagem de capa' }),
+
+	rgpd_toggle: z
+		.boolean()
+		.refine(rgpd_toggle => rgpd_toggle, { message: 'Aceite a declaração de privacidade' }),
 
 	video_file: z
-		.string({ message: 'Por favor selecione um ficheiro' })
-		.max(25, { message: 'Último Nome deve ser menor ou igual que ${max} caracteres.' }),
+		.any()
+		.refine(file => !!file, { message: 'Selecione um ficheiro de vídeo' }),
+
+});
+
+/* * */
+
+export const VideoValidationServer = z.object({
+
+	...VideoValidationCommon,
 
 });

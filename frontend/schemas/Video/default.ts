@@ -2,7 +2,7 @@
 
 export const VideoDefault = {
 	authors: '',
-	cover_file: '',
+	featured_image: '',
 	declaration_file: '',
 	description: '',
 	introduction: '',

@@ -1,11 +1,11 @@
 'use client';
 
-import { Videos } from '@/collections/Videos';
 /* * */
 
 import { FormSection } from '@/components/common/FormSection';
+import { Videos } from '@/schemas/Video/collection';
 import { VideoDefault } from '@/schemas/Video/default';
-import { VideoValidation } from '@/schemas/Video/validation';
+import { VideoValidationClient } from '@/schemas/Video/validation';
 import { Button, Checkbox, FileInput, MultiSelect, Paper, Select, Space, Text, Textarea, TextInput, Title } from '@mantine/core';
 import { useForm, zodResolver } from '@mantine/form';
 import { useTranslations } from 'next-intl';
@@ -57,12 +57,16 @@ export function VideosSubmitForm() {
 	const handleSubmit = async (data) => {
 		try {
 			setIsLoading(true);
-			await fetch('/api/account/profile/edit', {
-				body: JSON.stringify(data),
-				headers: { 'Content-Type': 'application/json' },
+			const formData = new FormData();
+			formData.append('_json_data', JSON.stringify(data));
+			formData.append('video_file', data.video_file);
+			formData.append('declaration_file', data.declaration_file);
+			formData.append('featured_image', data.featured_image);
+			await fetch('/api/account/videos/new', {
+				body: formData,
 				method: 'POST',
 			});
-			form.reset();
+			// form.reset();
 			setIsLoading(false);
 		}
 		catch (error) {
@@ -77,9 +81,8 @@ export function VideosSubmitForm() {
 	const form = useForm({
 		clearInputErrorOnChange: true,
 		initialValues: VideoDefault,
-		mode: 'uncontrolled',
 		onValuesChange: handleValuesChange,
-		validate: zodResolver(VideoValidation),
+		validate: zodResolver(VideoValidationClient),
 	});
 
 	//
@@ -97,7 +100,7 @@ export function VideosSubmitForm() {
 					<TextInput label={t('fields.title.label')} placeholder={t('fields.title.placeholder')} readOnly={isLoading} {...form.getInputProps('title')} />
 					<TextInput label={t('fields.authors.label')} placeholder={t('fields.authors.placeholder')} readOnly={isLoading} {...form.getInputProps('authors')} />
 					<FileInput label={t('fields.video_file.label')} placeholder={t('fields.video_file.placeholder')} readOnly={isLoading} {...form.getInputProps('video_file')} />
-					<FileInput label={t('fields.cover_file.label')} placeholder={t('fields.cover_file.placeholder')} readOnly={isLoading} {...form.getInputProps('cover_file')} />
+					<FileInput label={t('fields.featured_image.label')} placeholder={t('fields.featured_image.placeholder')} readOnly={isLoading} {...form.getInputProps('featured_image')} />
 				</FormSection>
 
 				<FormSection description={t('sections.about.description')} title={t('sections.about.title')}>

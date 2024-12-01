@@ -8,11 +8,12 @@ import sharp from 'sharp';
 
 /* * */
 
-import { Admins } from '@/collections/Admins';
-import { Media } from '@/collections/Media';
-import { Topics } from '@/collections/Topics';
-import { Users } from '@/collections/Users';
-import { Videos } from '@/collections/Videos';
+import { Admins } from '@/schemas/Admin/collection';
+import { Media } from '@/schemas/Media/collection';
+import { Topics } from '@/schemas/Topic/collection';
+import { Users } from '@/schemas/User/collection';
+import { Videos } from '@/schemas/Video/collection';
+import { VideoFiles } from '@/schemas/VideoFile/collection';
 
 /* * */
 
@@ -30,6 +31,7 @@ export default buildConfig({
 		Media,
 		Users,
 		Videos,
+		VideoFiles,
 	],
 
 	// Whichever Database Adapter you're using should go here

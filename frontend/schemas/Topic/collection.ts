@@ -5,9 +5,15 @@ import type { CollectionConfig } from 'payload';
 /* * */
 
 export const Topics: CollectionConfig = {
+
+	access: {
+		read: () => true,
+	},
+
 	admin: {
 		useAsTitle: 'title',
 	},
+
 	fields: [
 		{
 			label: 'Título',
@@ -22,9 +28,12 @@ export const Topics: CollectionConfig = {
 			type: 'text',
 		},
 	],
+
 	labels: {
 		plural: 'Tópicos',
 		singular: 'Tópico',
 	},
+
 	slug: 'topics',
+
 };

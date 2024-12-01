@@ -17,6 +17,7 @@ export interface Config {
     media: Media;
     users: User;
     videos: Video;
+    'video-files': VideoFile;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
@@ -28,6 +29,7 @@ export interface Config {
     media: MediaSelect<false> | MediaSelect<true>;
     users: UsersSelect<false> | UsersSelect<true>;
     videos: VideosSelect<false> | VideosSelect<true>;
+    'video-files': VideoFilesSelect<false> | VideoFilesSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
     'payload-migrations': PayloadMigrationsSelect<false> | PayloadMigrationsSelect<true>;
@@ -185,22 +187,24 @@ export interface User {
  */
 export interface Video {
   id: string;
-  title: string;
+  title?: string | null;
+  status?: ('draft' | 'in_review' | 'approved' | 'rejected') | null;
   featured?: boolean | null;
-  rgpd_confirmation: boolean;
-  file_length?: string | null;
-  file: string | Media;
+  video_file?: (string | null) | VideoFile;
   declaration_file?: (string | null) | Media;
-  authors: string;
-  section:
-    | 'geral'
-    | 'colposcopia_patologia_tracto_genital_inferior'
-    | 'endoscopia_ginecologica'
-    | 'ginecologia_oncologica'
-    | 'menopausa'
-    | 'uroginecologia';
-  introduction: string;
-  description: {
+  authors?: string | null;
+  section?:
+    | (
+        | 'geral'
+        | 'colposcopia_patologia_tracto_genital_inferior'
+        | 'endoscopia_ginecologica'
+        | 'ginecologia_oncologica'
+        | 'menopausa'
+        | 'uroginecologia'
+      )
+    | null;
+  introduction?: string | null;
+  description?: {
     root: {
       type: string;
       children: {
@@ -214,12 +218,31 @@ export interface Video {
       version: number;
     };
     [k: string]: unknown;
-  };
-  owner: string | User;
+  } | null;
+  publisher?: (string | null) | User;
   topics?: (string | Topic)[] | null;
   featured_image?: (string | null) | Media;
   updatedAt: string;
   createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "video-files".
+ */
+export interface VideoFile {
+  id: string;
+  duration?: number | null;
+  updatedAt: string;
+  createdAt: string;
+  url?: string | null;
+  thumbnailURL?: string | null;
+  filename?: string | null;
+  mimeType?: string | null;
+  filesize?: number | null;
+  width?: number | null;
+  height?: number | null;
+  focalX?: number | null;
+  focalY?: number | null;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -247,6 +270,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'videos';
         value: string | Video;
+      } | null)
+    | ({
+        relationTo: 'video-files';
+        value: string | VideoFile;
       } | null);
   globalSlug?: string | null;
   user:
@@ -385,20 +412,37 @@ export interface UsersSelect<T extends boolean = true> {
  */
 export interface VideosSelect<T extends boolean = true> {
   title?: T;
+  status?: T;
   featured?: T;
-  rgpd_confirmation?: T;
-  file_length?: T;
-  file?: T;
+  video_file?: T;
   declaration_file?: T;
   authors?: T;
   section?: T;
   introduction?: T;
   description?: T;
-  owner?: T;
+  publisher?: T;
   topics?: T;
   featured_image?: T;
   updatedAt?: T;
   createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "video-files_select".
+ */
+export interface VideoFilesSelect<T extends boolean = true> {
+  duration?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  url?: T;
+  thumbnailURL?: T;
+  filename?: T;
+  mimeType?: T;
+  filesize?: T;
+  width?: T;
+  height?: T;
+  focalX?: T;
+  focalY?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
