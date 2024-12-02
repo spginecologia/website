@@ -6,21 +6,32 @@ import Text from '@/components/Text/Text';
 import Title from '@/components/Title/Title';
 import { Paper } from '@mantine/core';
 import { useTranslations } from 'next-intl';
+import useSWR from 'swr';
 
 import styles from './styles.module.css';
 
 /* * */
 
-export function AccountVideos() {
+export function AccountVideosList() {
 	//
 
 	//
 	// A. Setup variables
 
-	const t = useTranslations('account.AccountVideos');
+	const t = useTranslations('account.AccountVideosList');
 
 	//
-	// B. Render components
+	// B. Fetch data
+
+	const { data: accountVideosData } = useSWR('/api/account/videos');
+
+	console.log(accountVideosData);
+
+	//
+	// C. Transform data
+
+	//
+	// C. Render components
 
 	return (
 		<Paper>

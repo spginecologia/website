@@ -61,9 +61,9 @@ export function AccountMain() {
 			<FrontendWrapperInner>
 				<FrontendSection first>
 					<div className={styles.grid}>
+						<AccountVideos />
 						<AccountPayments />
 						<AccountProfile />
-						<AccountVideos />
 					</div>
 				</FrontendSection>
 			</FrontendWrapperInner>

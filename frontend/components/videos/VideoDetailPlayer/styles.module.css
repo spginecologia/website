@@ -1,0 +1,18 @@
+/* * */
+/* PLAYER */
+
+.skeleton {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+/* * */
+/* PLAYER */
+
+.player {
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--color-brand-support-300);
+  border-radius: 5px;
+  box-shadow: 0 0 5px 0 var(--color-brand-support-300);
+}

@@ -1,16 +1,12 @@
 /* * */
 /* ROOT */
 
-.root:before {
-	background-color: var(--color-system-background-100);
+.root::before {
+	background-color: transparent;
 }
 
-.root:after {
-	background-color: var(--color-system-background-300);
-}
-
-@media (prefers-color-scheme: dark) {
-	.root:after {
-		background-color: var(--color-system-border-100);
-	}
+.root::after {
+	background-color: rgb(245 243 240);
+	border: 1px solid var(--color-brand-support-300);
+	border-radius: 5px;
 }

@@ -1,0 +1,14 @@
+/* * */
+/* GRID */
+
+.grid {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	grid-gap: 20px 40px;
+}
+
+
+.content {
+
+	/* grid-column: span 2; */
+}

@@ -1,0 +1,33 @@
+/* * */
+/* CONTAINER */
+
+.container {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+/* * */
+/* AUTHORS */
+
+.authors {
+	font-size: 20px;
+	font-style: italic;
+	font-weight: var(--font-weight-medium);
+	line-height: 1.4;
+	color: var(--color-brand-support-500);
+	text-align: left;
+}
+
+/* * */
+/* INTRODUCTION */
+
+.introduction {
+    margin-top: 10px;
+	font-family: freight-text-pro, serif;
+    font-size: 24px;
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.3;
+    color: var(--color-reference-black);
+    text-align: left;
+}
