@@ -1269,6 +1269,19 @@
 			"title": "Login"
 		}
 	},
+	"common": {
+		"Card": {
+			"publish_date": "Publicado a {value, date}"
+		},
+		"ErrorDisplay": {
+			"message": "Por favor, tente novamente.",
+			"title": "Ocorreu um erro"
+		},
+		"NoDataDisplay": {
+			"message": "Por favor, tente novamente.",
+			"title": "Sem dados disponíveis"
+		}
+	},
 	"footer": {
 		"FooterContacts": {
 			"address": {
@@ -1297,6 +1310,11 @@
 			},
 			"subtitle": "Subscreva a newsletter e fique a par das nossas atualizações.",
 			"title": "Newsletter"
+		}
+	},
+	"guidelines": {
+		"GuidelinesList": {
+			"title": "Consensos"
 		}
 	},
 	"header": {

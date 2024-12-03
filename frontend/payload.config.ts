@@ -9,6 +9,8 @@ import sharp from 'sharp';
 /* * */
 
 import { Admins } from '@/schemas/Admin/collection';
+import { Documents } from '@/schemas/Document/collection';
+import { Guidelines } from '@/schemas/Guideline/collection';
 import { Media } from '@/schemas/Media/collection';
 import { Topics } from '@/schemas/Topic/collection';
 import { Users } from '@/schemas/User/collection';
@@ -27,6 +29,8 @@ export default buildConfig({
 	// Define and configure your collections in this array
 	collections: [
 		Admins,
+		Documents,
+		Guidelines,
 		Topics,
 		Media,
 		Users,
