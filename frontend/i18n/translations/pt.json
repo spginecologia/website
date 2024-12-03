@@ -1706,6 +1706,17 @@
 		"untitled": "Untitled User"
 	},
 	"videos": {
+		"VideoDetailAdditionalInfo": {
+			"publish_date": {
+				"label": "Data de Publicação"
+			},
+			"topics": {
+				"label": "Tópicos"
+			},
+			"views": {
+				"label": "Visualizações"
+			}
+		},
 		"VideosSubmitForm": {
 			"actions": {
 				"has_errors": "Existem erros no preenchimento",
@@ -1719,10 +1730,6 @@
 					"label": "Autores",
 					"placeholder": "Nome Apelido; Nome Apelido; Nome Apelido; ..."
 				},
-				"featured_image": {
-					"label": "Imagem de capa",
-					"placeholder": "Selecione um ficheiro..."
-				},
 				"declaration_file": {
 					"label": "Declaração Assinada",
 					"placeholder": "Selecione um ficheiro..."
@@ -1730,6 +1737,10 @@
 				"description": {
 					"label": "Descrição",
 					"placeholder": ""
+				},
+				"featured_image": {
+					"label": "Imagem de capa",
+					"placeholder": "Selecione um ficheiro..."
 				},
 				"introduction": {
 					"label": "Introdução",

@@ -220,6 +220,7 @@ export interface Video {
     [k: string]: unknown;
   } | null;
   publisher?: (string | null) | User;
+  views?: number | null;
   topics?: (string | Topic)[] | null;
   featured_image?: (string | null) | Media;
   updatedAt: string;
@@ -421,6 +422,7 @@ export interface VideosSelect<T extends boolean = true> {
   introduction?: T;
   description?: T;
   publisher?: T;
+  views?: T;
   topics?: T;
   featured_image?: T;
   updatedAt?: T;

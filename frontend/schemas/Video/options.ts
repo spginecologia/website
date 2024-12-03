@@ -11,6 +11,4 @@ export const VideoOptions = Object.freeze({
 		{ label: 'Uroginecologia', value: 'uroginecologia' },
 	],
 
-	section_zod: ['sjdis'],
-
 });

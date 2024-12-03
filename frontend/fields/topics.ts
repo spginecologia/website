@@ -9,7 +9,7 @@ export const topicsField: Field = {
 		position: 'sidebar',
 	},
 	hasMany: true,
-	label: 'Categorias',
+	label: 'Tópicos',
 	name: 'topics',
 	relationTo: 'topics',
 	type: 'relationship',

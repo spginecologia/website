@@ -4,7 +4,11 @@
 
 import type { Topic } from '@/payload-types';
 
+import { TopicDisplay } from '@/components/topics/TopicDisplay';
 import { Skeleton } from '@mantine/core';
+import { DateTime } from 'luxon';
+import { useTranslations } from 'next-intl';
+import { useMemo } from 'react';
 
 import styles from './styles.module.css';
 
@@ -18,18 +22,51 @@ interface Props {
 
 /* * */
 
-export function VideoDetailAdditionalInfo({ publishDate, topics, views }: Props) {
+export function VideoDetailAdditionalInfo({ publishDate, topics, views = 1 }: Props) {
 	//
 
-	if (!publishDate || !topics || !views) {
+	//
+	// A. Setup variables
+
+	const t = useTranslations('videos.VideoDetailAdditionalInfo');
+
+	//
+	// B. Transform data
+
+	const publishDateFormatted = useMemo(() => {
+		if (!publishDate) return;
+		return DateTime.fromISO(publishDate).toFormat('dd-MM-yyyy');
+	}, [publishDate]);
+
+	//
+	// C. Render components
+
+	if (!publishDateFormatted || !topics || typeof views !== 'number') {
 		return <Skeleton h={250} animate />;
 	}
 
 	return (
 		<div className={styles.container}>
-			{/* <Title order={2}>{title}</Title>
-			<p className={styles.authors}>{authors}</p>
-			<p className={styles.introduction}>{introduction}</p> */}
+
+			<div className={styles.block}>
+				<p className={styles.label}>{t('views.label')}</p>
+				<p className={styles.value}>{views}</p>
+			</div>
+
+			<div className={styles.block}>
+				<p className={styles.label}>{t('publish_date.label')}</p>
+				<p className={styles.value}>{publishDateFormatted}</p>
+			</div>
+
+			<div className={styles.block}>
+				<p className={styles.label}>{t('topics.label')}</p>
+				<div className={styles.topicsWrapper}>
+					{topics?.map(topic => (
+						<TopicDisplay key={topic.id} description={topic.description} id={topic.id} title={topic.title} />
+					))}
+				</div>
+			</div>
+
 		</div>
 	);
 

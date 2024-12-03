@@ -169,6 +169,9 @@ export default createTheme({
 				if (props.variant === 'primary') {
 					defaultClasses = combineClasses(defaultClasses, [TextOverride.variantPrimary]);
 				}
+				if (props.variant === 'secondary') {
+					defaultClasses = combineClasses(defaultClasses, [TextOverride.variantSecondary]);
+				}
 				if (props.variant === 'overline') {
 					defaultClasses = combineClasses(defaultClasses, [TextOverride.variantOverline]);
 				}

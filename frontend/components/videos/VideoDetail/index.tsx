@@ -28,8 +28,6 @@ export function VideoDetail({ id }) {
 
 	const { data: videoData } = useSWR<Video>(`/api/videos/${id}`);
 
-	console.log(videoData);
-
 	//
 	// A. Render components
 
@@ -43,6 +41,11 @@ export function VideoDetail({ id }) {
 		if (!videoData || !videoData.topics || !videoData.topics.length) return;
 		if (videoData.topics.some(i => typeof i === 'string')) return;
 		return videoData.topics as Topic[];
+	}, [videoData]);
+
+	const relatedVideos = useMemo(() => {
+		if (!videoTopics) return;
+		console.log(videoTopics);
 	}, [videoData]);
 
 	//
@@ -60,7 +63,9 @@ export function VideoDetail({ id }) {
 					</div>
 
 					<div className={styles.sidebar}>
-						<VideoDetailAdditionalInfo publishDate={videoData?.createdAt} topics={videoTopics} views={0} />
+						<VideoDetailAdditionalInfo publishDate={videoData?.createdAt} topics={videoTopics} views={videoData?.views} />
+						{/* <VideoDetailPublishConfig /> */}
+						{/* <VideoDetailRelatedVideos /> */}
 					</div>
 
 				</div>

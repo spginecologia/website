@@ -2,8 +2,8 @@
 
 import type { CollectionConfig } from 'payload';
 
-import { topicsField } from '@/fields/categories';
 import { featuredImageField } from '@/fields/featured-image';
+import { topicsField } from '@/fields/topics';
 import { VideoOptions } from '@/schemas/Video/options';
 
 /* * */
@@ -92,6 +92,15 @@ export const Videos: CollectionConfig = {
 			relationTo: 'users',
 			// required: true,
 			type: 'relationship',
+		},
+		{
+			admin: {
+				position: 'sidebar',
+			},
+			defaultValue: 0,
+			label: 'Visualizações',
+			name: 'views',
+			type: 'number',
 		},
 		topicsField,
 		featuredImageField,
