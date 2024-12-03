@@ -2,7 +2,7 @@
 
 /* * */
 
-import type { Guideline, GuidelinesSelect } from '@/payload-types';
+import type { Guideline } from '@/payload-types';
 
 import Card from '@/components/common/Card';
 import { CardSkeleton } from '@/components/common/CardSkeleton';
@@ -10,7 +10,6 @@ import { ErrorDisplay } from '@/components/common/ErrorDisplay';
 import { NoDataDisplay } from '@/components/common/NoDataDisplay';
 import FrontendSection from '@/components/FrontendSection/FrontendSection';
 import FrontendWrapperInner from '@/components/FrontendWrapperInner/FrontendWrapperInner';
-import NoDataLabel from '@/components/NoDataLabel/NoDataLabel';
 import { PayloadAPIResponse } from '@/types/payload-api-response';
 import { Title } from '@mantine/core';
 import { useTranslations } from 'next-intl';
