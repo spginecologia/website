@@ -82,7 +82,7 @@ export function GuidelinesList() {
 							key={guideline.id}
 							coverAspectRatio="210 / 297"
 							coverSrc={typeof guideline.featured_image === 'object' ? guideline?.featured_image?.url : undefined}
-							href={`/guidelines/${guideline.id}`}
+							href={`/academia/guidelines/${guideline.id}`}
 							publishDate={new Date(guideline.createdAt)}
 							title={guideline.title}
 						/>
