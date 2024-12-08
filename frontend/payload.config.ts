@@ -12,6 +12,7 @@ import { Admins } from '@/schemas/Admin/collection';
 import { Documents } from '@/schemas/Document/collection';
 import { Guidelines } from '@/schemas/Guideline/collection';
 import { Media } from '@/schemas/Media/collection';
+import { Publications } from '@/schemas/Publication/collection';
 import { Topics } from '@/schemas/Topic/collection';
 import { Users } from '@/schemas/User/collection';
 import { Videos } from '@/schemas/Video/collection';
@@ -33,6 +34,7 @@ export default buildConfig({
 		Guidelines,
 		Topics,
 		Media,
+		Publications,
 		Users,
 		Videos,
 		VideoFiles,

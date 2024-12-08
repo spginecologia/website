@@ -17,6 +17,7 @@ export interface Config {
     guidelines: Guideline;
     topics: Topic;
     media: Media;
+    publications: Publication;
     users: User;
     videos: Video;
     'video-files': VideoFile;
@@ -31,6 +32,7 @@ export interface Config {
     guidelines: GuidelinesSelect<false> | GuidelinesSelect<true>;
     topics: TopicsSelect<false> | TopicsSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
+    publications: PublicationsSelect<false> | PublicationsSelect<true>;
     users: UsersSelect<false> | UsersSelect<true>;
     videos: VideosSelect<false> | VideosSelect<true>;
     'video-files': VideoFilesSelect<false> | VideoFilesSelect<true>;
@@ -175,6 +177,21 @@ export interface Media {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "publications".
+ */
+export interface Publication {
+  id: string;
+  title: string;
+  content_type: 'file' | 'url';
+  document?: (string | null) | Document;
+  url?: string | null;
+  topics?: (string | Topic)[] | null;
+  featured_image?: (string | null) | Media;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "users".
  */
 export interface User {
@@ -308,6 +325,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'media';
         value: string | Media;
+      } | null)
+    | ({
+        relationTo: 'publications';
+        value: string | Publication;
       } | null)
     | ({
         relationTo: 'users';
@@ -447,6 +468,20 @@ export interface MediaSelect<T extends boolean = true> {
   height?: T;
   focalX?: T;
   focalY?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "publications_select".
+ */
+export interface PublicationsSelect<T extends boolean = true> {
+  title?: T;
+  content_type?: T;
+  document?: T;
+  url?: T;
+  topics?: T;
+  featured_image?: T;
+  updatedAt?: T;
+  createdAt?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
