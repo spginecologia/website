@@ -1,0 +1,10 @@
+/* * */
+/* COVER */
+
+.cover {
+	width: 100%;
+	margin-bottom: 7px;
+	overflow: hidden;
+	border-radius: 2px;
+	box-shadow: 0 0 5px 0 rgb(100 90 105 / 15%);
+}

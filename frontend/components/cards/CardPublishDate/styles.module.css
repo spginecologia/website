@@ -1,0 +1,8 @@
+/* * */
+/* DATE */
+
+.date {
+    font-size: 15px;
+    font-weight: var(--font-weight-medium);
+    color: var(--color-brand-support-400);
+}

@@ -1270,7 +1270,7 @@
 		}
 	},
 	"common": {
-		"Card": {
+		"CardPublishDate": {
 			"publish_date": "Publicado a {value, date}"
 		},
 		"ErrorDisplay": {
@@ -1374,6 +1374,11 @@
 			"login": {
 				"label": "Login"
 			}
+		}
+	},
+	"news": {
+		"NewsList": {
+			"title": "Notícias"
 		}
 	},
 	"none-1": {},

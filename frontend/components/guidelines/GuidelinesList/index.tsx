@@ -4,8 +4,8 @@
 
 import type { Guideline } from '@/payload-types';
 
-import Card from '@/components/common/Card';
-import { CardSkeleton } from '@/components/common/CardSkeleton';
+import { Card } from '@/components/cards/Card';
+import { CardSkeleton } from '@/components/cards/CardSkeleton';
 import { ErrorDisplay } from '@/components/common/ErrorDisplay';
 import { NoDataDisplay } from '@/components/common/NoDataDisplay';
 import FrontendSection from '@/components/FrontendSection/FrontendSection';
@@ -31,8 +31,6 @@ export function GuidelinesList() {
 	// B. Fetch data
 
 	const { data: allGuidelinesData, error: allGuidelinesError, isLoading: allGuidelinesLoading } = useSWR<PayloadAPIResponse<Guideline>>(`/api/guidelines`);
-
-	console.log(allGuidelinesData);
 
 	//
 	// C. Render components

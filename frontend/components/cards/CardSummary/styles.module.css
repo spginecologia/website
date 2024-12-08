@@ -1,0 +1,8 @@
+/* * */
+/* SKELETON WRAPPER */
+
+.skeletonWrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
