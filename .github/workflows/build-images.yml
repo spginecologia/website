@@ -11,8 +11,8 @@ jobs:
   # # # # # # # # # # # # # # # # # # # # #
   # # # # # # # # # # # # # # # # # # # # #
 
-  website-nextjs:
-    name: nextjs (NextJS)
+  website-frontend:
+    name: frontend (NextJS)
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -23,7 +23,7 @@ jobs:
     steps:
       - name: Set module key
         run: |
-          echo "MODULE_KEY=nextjs" >> $GITHUB_ENV
+          echo "MODULE_KEY=frontend" >> $GITHUB_ENV
 
       - name: Checkout repository
         uses: actions/checkout@main
