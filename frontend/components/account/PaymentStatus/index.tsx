@@ -1,6 +1,7 @@
 /* * */
 
-import { IconCheck, IconFlag3Filled, IconInfoCircle } from '@tabler/icons-react';
+import { Purchase } from '@/types/payments';
+import { IconArrowForwardUp, IconCheck, IconFlag3Filled, IconInfoCircle } from '@tabler/icons-react';
 import { useTranslations } from 'next-intl';
 
 import styles from './styles.module.css';
@@ -8,7 +9,7 @@ import styles from './styles.module.css';
 /* * */
 
 interface Props {
-	status: 'paid' | 'unknown' | 'unpaid'
+	status: Purchase['status']
 }
 
 /* * */
@@ -30,6 +31,13 @@ export function PaymentStatus({ status }: Props) {
 				<div className={`${styles.container} ${styles.paid}`}>
 					<IconCheck size={16} />
 					<p className={styles.label}>{t('paid')}</p>
+				</div>
+			);
+		case 'refunded':
+			return (
+				<div className={`${styles.container} ${styles.refunded}`}>
+					<IconArrowForwardUp size={16} />
+					<p className={styles.label}>{t('refunded')}</p>
 				</div>
 			);
 		case 'unpaid':

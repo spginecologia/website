@@ -3,6 +3,7 @@
 /* * */
 
 import { PaymentStatus } from '@/components/account/PaymentStatus';
+import { Purchase } from '@/types/payments';
 import { Alert, Button, Space, Table, TableData, Text } from '@mantine/core';
 import { IconFlag3Filled } from '@tabler/icons-react';
 import { useTranslations } from 'next-intl';
@@ -22,38 +23,42 @@ export function AccountPaymentsCheckout() {
 	//
 	// B. Fetch data
 
-	const { data: optionsData, error: optionsError, isLoading: optionsLoading } = useSWR('/api/account/payments/list-options');
+	const { data: balanceStatusData, error: balanceStatusError, isLoading: balanceStatusLoading } = useSWR<Purchase[]>('/api/account/payments/balance-status');
 
 	//
 	// C. Transform data
 
 	const tableData = useMemo<TableData>(() => {
-		const bodyData = optionsData?.map((option) => {
+		const bodyData = balanceStatusData?.map((balanceItem) => {
 			return [
-				option.product_name,
-				t('table.body.price_amount', { value: option.price_amount }),
-				option.already_paid ? <PaymentStatus status="paid" /> : <PaymentStatus status="unpaid" />,
+				balanceItem.price_name,
+				t('table.body.amount', { value: balanceItem.amount / 100 }),
+				<PaymentStatus status={balanceItem.status} />,
 			];
 		});
 		return {
 			body: bodyData,
-			head: [t('table.head.product_name'), t('table.head.price_amount'), t('table.head.already_paid')],
+			head: [t('table.head.price_name'), t('table.head.amount'), t('table.head.status')],
 		};
-	}, [optionsData]);
+	}, [balanceStatusData]);
 
 	const hasUnpaidOptions = useMemo<boolean>(() => {
-		return optionsData?.some(option => !option.already_paid);
-	}, [optionsData]);
+		return balanceStatusData?.some(item => item.status === 'unpaid') ?? false;
+	}, [balanceStatusData]);
 
 	//
 	// D. Render components
 
-	if (optionsLoading) {
+	if (balanceStatusLoading) {
 		return <Text variant="overline">{t('loading')}</Text>;
 	}
 
-	if (!optionsLoading && optionsError) {
+	if (!balanceStatusLoading && balanceStatusError) {
 		return <Text variant="overline">{t('error')}</Text>;
+	}
+
+	if (!tableData.body?.length) {
+		return <Text variant="overline">{t('no_data')}</Text>;
 	}
 
 	return (

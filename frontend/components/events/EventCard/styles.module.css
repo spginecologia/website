@@ -1,0 +1,32 @@
+/* * */
+/* CONTAINER */
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: stretch stretch;
+  min-height: 300px;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* * */
+/* IMAGE WRAPPER */
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  background-color: blue;
+}
+
+/* * */
+/* CONTENT WRAPPER */
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 30px;
+}

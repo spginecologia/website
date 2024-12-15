@@ -1,5 +1,7 @@
 /* * */
 
+import { stripeGetBalanceStatus } from '@/scripts/stripe-get-balance-status';
+import { Purchase } from '@/types/payments';
 import config from '@payload-config';
 import { getPayload } from 'payload';
 import Stripe from 'stripe';
@@ -22,63 +24,73 @@ export async function POST(request: Request) {
 		if (!currentUser || !currentUser.user) return Response.error();
 
 		//
-		// Get all active Stripe Products and Checkout Sessions for this user
+		// Get balance status for current user
 
-		let allActiveStripeProducts: Stripe.ApiList<Stripe.Product>;
-		let customerCheckoutSessions: Stripe.ApiList<Stripe.Checkout.Session>;
+		let balanceStatus: Purchase[] = [];
 
-		try {
-			allActiveStripeProducts = await stripeApi.products.list({ active: true, expand: ['data.default_price'] });
+		if ('stripe_id' in currentUser.user) {
+			balanceStatus = await stripeGetBalanceStatus(currentUser.user.stripe_id);
 		}
-		catch (error) {
-			console.error('Error fetching active stripe products');
+		else {
+			console.error('No stripe_id property in user object');
 			return Response.error();
 		}
 
-		try {
-			if ('stripe_id' in currentUser.user) {
-				customerCheckoutSessions = await stripeApi.checkout.sessions.list({ customer: currentUser.user.stripe_id ?? '', expand: ['data.line_items'] });
-			}
-			else {
-				console.error('User does not have a stripe_id');
-				return Response.error();
+		//
+		// Setup the customer creation settings
+
+		const customerOptions: {
+			customer?: string
+			customer_creation?: 'always'
+			customer_email?: string
+		} = {};
+
+		const stripeCustomers = await stripeApi.customers.list({ email: currentUser.user.email });
+
+		if (!stripeCustomers.data?.length) {
+			delete customerOptions.customer;
+			customerOptions.customer_creation = 'always';
+			customerOptions.customer_email = currentUser.user.email;
+		}
+		else if (stripeCustomers.data.length > 1) {
+			console.warn('Multiple customers found with the same email address');
+			if ('stripe_id' in currentUser.user && currentUser.user.stripe_id) {
+				const savedStripeId = currentUser.user.stripe_id;
+				const matchingCustomerId = stripeCustomers.data.find(customer => customer.id === savedStripeId);
+				if (matchingCustomerId) {
+					customerOptions.customer = matchingCustomerId.id;
+					delete customerOptions.customer_creation;
+					delete customerOptions.customer_email;
+				}
+				else {
+					delete customerOptions.customer;
+					customerOptions.customer_creation = 'always';
+					customerOptions.customer_email = currentUser.user.email;
+				}
 			}
 		}
-		catch (error) {
-			console.error('Error fetching customer checkout sessions');
+		else {
+			customerOptions.customer = stripeCustomers.data[0].id;
+			delete customerOptions.customer_creation;
+			delete customerOptions.customer_email;
 		}
 
 		//
-		// For each active price, check if the user has purchased it before
+		// Filter out the unpaid items and create
+		// a Checkout Session to initiate payment.
 
-		const priceIdsToInclude = allActiveStripeProducts.data
-			.map((activeProduct) => {
-				const priceDetails: Stripe.Price = activeProduct.default_price as Stripe.Price;
-				if (!priceDetails) return;
+		const unpaidItems = balanceStatus.filter(item => item.status === 'unpaid');
 
-				const userHasPurchased = customerCheckoutSessions?.data?.some((checkoutSession) => {
-					return checkoutSession.line_items?.data.some(lineItem => lineItem.price?.id === priceDetails.id);
-				});
-
-				if (userHasPurchased) {
-					return null;
-				}
-				else {
-					return priceDetails.id;
-				}
-			})
-			.filter(priceId => priceId !== null);
-
-		// Create Checkout Sessions from body params.
 		const session = await stripeApi.checkout.sessions.create({
 			automatic_tax: { enabled: true },
 			cancel_url: `${request.headers.get('origin')}/account?canceled=true`,
-			customer_creation: 'always',
-			customer_email: currentUser.user?.email,
-			line_items: priceIdsToInclude.map(priceId => ({ price: priceId, quantity: 1 })),
+			client_reference_id: currentUser.user?.id,
+			line_items: unpaidItems.map(purchaseItem => ({ price: purchaseItem.price_id, quantity: 1 })),
 			mode: 'payment',
 			success_url: `${request.headers.get('origin')}/account?success=true`,
+			...customerOptions,
 		});
+
 		return Response.redirect(session.url ?? '');
 	}
 	catch (err) {

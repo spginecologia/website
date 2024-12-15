@@ -14,6 +14,7 @@ export interface Config {
   collections: {
     admins: Admin;
     document: Document;
+    events: Event;
     guidelines: Guideline;
     topics: Topic;
     media: Media;
@@ -30,6 +31,7 @@ export interface Config {
   collectionsSelect: {
     admins: AdminsSelect<false> | AdminsSelect<true>;
     document: DocumentSelect<false> | DocumentSelect<true>;
+    events: EventsSelect<false> | EventsSelect<true>;
     guidelines: GuidelinesSelect<false> | GuidelinesSelect<true>;
     topics: TopicsSelect<false> | TopicsSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
@@ -134,14 +136,21 @@ export interface Document {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "guidelines".
+ * via the `definition` "events".
  */
-export interface Guideline {
+export interface Event {
   id: string;
   title: string;
-  content_type: 'file' | 'url';
-  document?: (string | null) | Document;
-  url?: string | null;
+  event_type: '1st_party' | 'sponsored' | 'other';
+  start_date: string;
+  end_date?: string | null;
+  Links?: {
+    official_page_url?: string | null;
+    signup_url?: string | null;
+    programme_url?: string | null;
+  };
+  sections?: TextBlock[] | null;
+  is_featured?: boolean | null;
   topics?: (string | Topic)[] | null;
   featured_image?: (string | null) | Media;
   updatedAt: string;
@@ -149,14 +158,15 @@ export interface Guideline {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "topics".
+ * via the `definition` "TextBlock".
  */
-export interface Topic {
-  id: string;
-  title: string;
-  description?: string | null;
-  updatedAt: string;
-  createdAt: string;
+export interface TextBlock {
+  quoteHeader: string;
+  quoteText?: string | null;
+  djfsoks?: (string | Media)[] | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'Text';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -176,6 +186,32 @@ export interface Media {
   height?: number | null;
   focalX?: number | null;
   focalY?: number | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "topics".
+ */
+export interface Topic {
+  id: string;
+  title: string;
+  description?: string | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "guidelines".
+ */
+export interface Guideline {
+  id: string;
+  title: string;
+  content_type: 'file' | 'url';
+  document?: (string | null) | Document;
+  url?: string | null;
+  topics?: (string | Topic)[] | null;
+  featured_image?: (string | null) | Media;
+  updatedAt: string;
+  createdAt: string;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -231,12 +267,16 @@ export interface User {
   name?: string | null;
   last_name?: string | null;
   full_name?: string | null;
-  phone?: string | null;
-  partner_number?: number | null;
   tax_id?: number | null;
   medical_id?: number | null;
-  stripe_id?: string | null;
   birthday?: string | null;
+  phone?: string | null;
+  email: string;
+  address_1?: string | null;
+  address_2?: string | null;
+  postal_code?: string | null;
+  city?: string | null;
+  country?: string | null;
   workplace_primary?: string | null;
   workplace_secondary?: string | null;
   subscribed_sections?:
@@ -248,16 +288,10 @@ export interface User {
         | 'uroginecologia'
       )[]
     | null;
-  address_1?: string | null;
-  address_2?: string | null;
-  postal_code?: string | null;
-  city?: string | null;
-  country?: string | null;
-  stripeID?: string | null;
-  skipSync?: boolean | null;
+  stripe_id?: string | null;
+  account_status?: ('active' | 'pending') | null;
   updatedAt: string;
   createdAt: string;
-  email: string;
   resetPasswordToken?: string | null;
   resetPasswordExpiration?: string | null;
   salt?: string | null;
@@ -344,6 +378,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'document';
         value: string | Document;
+      } | null)
+    | ({
+        relationTo: 'events';
+        value: string | Event;
       } | null)
     | ({
         relationTo: 'guidelines';
@@ -464,6 +502,41 @@ export interface DocumentSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "events_select".
+ */
+export interface EventsSelect<T extends boolean = true> {
+  title?: T;
+  event_type?: T;
+  start_date?: T;
+  end_date?: T;
+  Links?:
+    | T
+    | {
+        official_page_url?: T;
+        signup_url?: T;
+        programme_url?: T;
+      };
+  sections?:
+    | T
+    | {
+        Text?:
+          | T
+          | {
+              quoteHeader?: T;
+              quoteText?: T;
+              djfsoks?: T;
+              id?: T;
+              blockName?: T;
+            };
+      };
+  is_featured?: T;
+  topics?: T;
+  featured_image?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "guidelines_select".
  */
 export interface GuidelinesSelect<T extends boolean = true> {
@@ -541,25 +614,23 @@ export interface UsersSelect<T extends boolean = true> {
   name?: T;
   last_name?: T;
   full_name?: T;
-  phone?: T;
-  partner_number?: T;
   tax_id?: T;
   medical_id?: T;
-  stripe_id?: T;
   birthday?: T;
-  workplace_primary?: T;
-  workplace_secondary?: T;
-  subscribed_sections?: T;
+  phone?: T;
+  email?: T;
   address_1?: T;
   address_2?: T;
   postal_code?: T;
   city?: T;
   country?: T;
-  stripeID?: T;
-  skipSync?: T;
+  workplace_primary?: T;
+  workplace_secondary?: T;
+  subscribed_sections?: T;
+  stripe_id?: T;
+  account_status?: T;
   updatedAt?: T;
   createdAt?: T;
-  email?: T;
   resetPasswordToken?: T;
   resetPasswordExpiration?: T;
   salt?: T;

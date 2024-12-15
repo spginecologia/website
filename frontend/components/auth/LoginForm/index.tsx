@@ -56,7 +56,7 @@ export function LoginForm() {
 				window.location.replace('/account');
 			}
 			else {
-				console.error('Login failed. Please try again.');
+				console.log('Login failed. Please try again.');
 				setIsLoading(false);
 				setIsError(true);
 			}

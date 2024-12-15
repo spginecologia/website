@@ -10,6 +10,7 @@ import sharp from 'sharp';
 
 import { Admins } from '@/schemas/Admin/collection';
 import { Documents } from '@/schemas/Document/collection';
+import { Event } from '@/schemas/Event/collection';
 import { Guidelines } from '@/schemas/Guideline/collection';
 import { Media } from '@/schemas/Media/collection';
 import { News } from '@/schemas/News/collection';
@@ -32,6 +33,7 @@ export default buildConfig({
 	collections: [
 		Admins,
 		Documents,
+		Event,
 		Guidelines,
 		Topics,
 		Media,
@@ -56,24 +58,6 @@ export default buildConfig({
 		stripePlugin({
 			stripeSecretKey: process.env.STRIPE_SECRET_KEY ?? '',
 			stripeWebhooksEndpointSecret: process.env.STRIPE_WEBHOOKS_ENDPOINT_SECRET,
-			sync: [
-				{
-					collection: 'users',
-					fields: [
-						{
-							fieldPath: 'email', // this is a field on your own Payload Config
-							stripeProperty: 'email', // use dot notation, if applicable
-						},
-						{
-							fieldPath: 'stripe_id', // this is a field on your own Payload Config
-							stripeProperty: 'id', // use dot notation, if applicable
-						},
-					],
-					stripeResourceType: 'customers',
-					stripeResourceTypeSingular: 'customer',
-				},
-			],
-
 			webhooks: {
 				'customer.subscription.updated': ({ event, stripe }) => {
 					console.log('customer.subscription.updated', event, stripe);

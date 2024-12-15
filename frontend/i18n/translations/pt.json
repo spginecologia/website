@@ -1028,18 +1028,19 @@
 			},
 			"error": "Erro ao carregar dados",
 			"loading": "Por favor aguarde...",
+			"no_data": "Nenhum Item Disponível",
 			"table": {
 				"body": {
-					"already_paid": {
+					"amount": "{value, number, currency_euro}",
+					"status": {
 						"false": "Pendente",
 						"true": "OK"
-					},
-					"price_amount": "{value, number, currency_euro}"
+					}
 				},
 				"head": {
-					"already_paid": "Estado",
-					"price_amount": "Valor",
-					"product_name": "Quota"
+					"amount": "Valor",
+					"price_name": "Quota",
+					"status": "Estado"
 				}
 			}
 		},
@@ -1164,6 +1165,7 @@
 		},
 		"PaymentStatus": {
 			"paid": "OK",
+			"refunded": "Reembolsado",
 			"unknown": "Desconhecido",
 			"unpaid": "Pendente"
 		}
