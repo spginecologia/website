@@ -47,7 +47,7 @@ export default buildConfig({
 	// Whichever Database Adapter you're using should go here
 	// Mongoose is shown as an example, but you can also use Postgres
 	db: mongooseAdapter({
-		url: process.env.WEBSITEDB_MONGODB_URI || '',
+		url: process.env.SPGDB_MONGODB_URI || '',
 	}),
 
 	// If you'd like to use Rich Text, pass your editor here

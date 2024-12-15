@@ -4,6 +4,6 @@ WORKDIR /backupd
 
 COPY . .
 
-RUN chmod +x backupd.sh websitedb.sh
+RUN chmod +x backupd.sh spgdb.sh
 
 CMD ["sh", "backupd.sh"]

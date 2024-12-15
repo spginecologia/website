@@ -1,6 +1,6 @@
 volumes:
   certbotdata:
-  websitedbdata:
+  spgdbdata:
 
 services:
   #
@@ -53,7 +53,7 @@ services:
   # # # # # # # # # # # # # # # # # # # # #
   # # # # # # # # # # # # # # # # # # # # #
 
-  websitedb:
+  spgdb:
     image: mongo
     restart: unless-stopped
     logging:
@@ -61,10 +61,10 @@ services:
         max-size: '1m'
         max-file: '1'
     volumes:
-      - websitedbdata:/data/db
+      - spgdbdata:/data/db
     environment:
-      - MONGO_INITDB_ROOT_USERNAME=websitedbuser
-      - MONGO_INITDB_ROOT_PASSWORD=websitedbpassword
+      - MONGO_INITDB_ROOT_USERNAME=spgdbuser
+      - MONGO_INITDB_ROOT_PASSWORD=spgdbpassword
 
   # # # # # # # # # # # # # # # # # # # # #
   # # # # # # # # # # # # # # # # # # # # #

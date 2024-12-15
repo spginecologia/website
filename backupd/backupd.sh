@@ -14,7 +14,7 @@ while true; do
   echo ""
 
   # RUN WEBSITEDB BACKUP
-  sh websitedb.sh
+  sh spgdb.sh
 
   echo ""
   echo ""

@@ -4,7 +4,7 @@
 directory="backups"
 
 # BACKUP MODULE
-module="websitedb"
+module="spgdb"
 
 # BACKUP HISTORYS
 # Only keep the 300 most recent files
@@ -14,12 +14,12 @@ files_to_keep=100
 
 # Backup the database to an archive
 echo "Starting backup for "$module"..."
-mongodump --uri="$WEBSITEDB_MONGODB_URI" --gzip --archive="/$directory/$module/spg-backup-$module-$(date +\%Y\%m\%d\%H\%M\%S)"
+mongodump --uri="$SPGDB_MONGODB_URI" --gzip --archive="/$directory/$module/spg-backup-$module-$(date +\%Y\%m\%d\%H\%M\%S)"
 echo "Backup complete!"
 
 # Restore the database from backup
 # echo "Starting restore..."
-# mongorestore --uri="$WEBSITEDB_MONGODB_URI" --drop --preserveUUID --gzip --archive="/$directory/$module/initdb"
+# mongorestore --uri="$SPGDB_MONGODB_URI" --drop --preserveUUID --gzip --archive="/$directory/$module/initdb"
 # echo "Restore complete!"
 
 # Only keep the most recent files
