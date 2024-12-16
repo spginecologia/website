@@ -1,7 +1,6 @@
 /* * */
 
 import { mongooseAdapter } from '@payloadcms/db-mongodb';
-import { stripePlugin } from '@payloadcms/plugin-stripe';
 import { lexicalEditor } from '@payloadcms/richtext-lexical';
 import { buildConfig } from 'payload';
 import sharp from 'sharp';
@@ -47,7 +46,7 @@ export default buildConfig({
 	// Whichever Database Adapter you're using should go here
 	// Mongoose is shown as an example, but you can also use Postgres
 	db: mongooseAdapter({
-		url: process.env.SPGDB_MONGODB_URI || '',
+		url: process.env.SPGDB_MONGODB_URI || 'mongodb://placeholder:placeholder@localhost:27017/placeholder',
 	}),
 
 	// If you'd like to use Rich Text, pass your editor here

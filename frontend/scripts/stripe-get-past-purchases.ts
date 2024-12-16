@@ -79,7 +79,7 @@ export async function stripeGetPastPurchases(stripeCustomerId: string): Promise<
 			const purchaseData: Purchase = {
 				amount: lineItemData.price.unit_amount ?? -1,
 				price_id: lineItemData.price.id,
-				price_name: lineItemData.description,
+				price_name: lineItemData.description ?? 'sem nome',
 				status: 'unpaid',
 				timestamp: checkoutSessionData.payment_intent.created,
 				vendus_invoice_id: '',
