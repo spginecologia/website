@@ -3,5 +3,5 @@
 /* * */
 
 export default function Error() {
-  return <div>error on (other)</div>;
+	return <div>error on (other)</div>;
 }

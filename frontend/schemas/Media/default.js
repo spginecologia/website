@@ -1,16 +1,16 @@
 /* * */
 
 export const MediaDefault = {
-  //
-  created_by: '',
-  created_at: '',
-  //
-  title: '',
-  description: '',
-  //
-  storage_scope: '',
-  //
-  file_size: '',
-  file_mime_type: '',
-  //
+	created_at: '',
+	//
+	created_by: '',
+	description: '',
+	file_mime_type: '',
+	//
+	file_size: '',
+	//
+	storage_scope: '',
+	//
+	title: '',
+	//
 };

@@ -2,37 +2,38 @@
 
 /* * */
 
-import Link from 'next/link';
-import styles from './FrontendTopicTag.module.css';
 import { Loader } from '@/components/common/Loader';
+import Link from 'next/link';
+
+import styles from './FrontendTopicTag.module.css';
 
 /* * */
 
 export default function FrontendTopicTag({ _id, noLink = false }) {
-  //
+	//
 
-  //
-  // A. Setup variables
+	//
+	// A. Setup variables
 
-  const topicData = {
-    _id: '398hhify2987b8ebn',
-    title: 'Menopausa',
-  };
+	const topicData = {
+		_id: '398hhify2987b8ebn',
+		title: 'Menopausa',
+	};
 
-  const topicLoading = false;
+	const topicLoading = false;
 
-  //
-  // B. Render components
+	//
+	// B. Render components
 
-  if (topicLoading) return <Loader visible />;
+	if (topicLoading) return <Loader visible />;
 
-  if (noLink) return <div className={styles.tag}>{topicData.title}</div>;
+	if (noLink) return <div className={styles.tag}>{topicData.title}</div>;
 
-  return (
-    <Link href={`/topics/${topicData._id}`} className={styles.link}>
-      {topicData.title}
-    </Link>
-  );
+	return (
+		<Link className={styles.link} href={`/topics/${topicData._id}`}>
+			{topicData.title}
+		</Link>
+	);
 
-  //
+	//
 }

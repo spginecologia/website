@@ -6,10 +6,9 @@ import type { Event } from '@/payload-types';
 
 import { ErrorDisplay } from '@/components/common/ErrorDisplay';
 import { NoDataDisplay } from '@/components/common/NoDataDisplay';
+import { EventCard } from '@/components/events/EventCard';
 import FrontendSection from '@/components/FrontendSection/FrontendSection';
 import FrontendWrapperInner from '@/components/FrontendWrapperInner/FrontendWrapperInner';
-import { EventsCard } from '@/components/news/EventsCard';
-import { EventsCardFeatured } from '@/components/news/EventsCardFeatured';
 import { PayloadAPIResponse } from '@/types/payload-api-response';
 import { Title } from '@mantine/core';
 import { useTranslations } from 'next-intl';
@@ -31,7 +30,7 @@ export function EventsList() {
 	//
 	// B. Fetch data
 
-	const { data: allEventsData, error: allEventsError, isLoading: allEventsLoading } = useSWR<PayloadAPIResponse<Events>>(`/api/news`);
+	const { data: allEventsData, error: allEventsError, isLoading: allEventsLoading } = useSWR<PayloadAPIResponse<Event>>(`/api/news`);
 
 	//
 	// C. Transform data
@@ -60,7 +59,7 @@ export function EventsList() {
 				<FrontendSection first>
 					<Title order={1}>{t('title')}</Title>
 					<div className={styles.grid}>
-						{[...Array(10)].map((_, i) => <EventsCard key={i} />)}
+						{[...Array(10)].map((_, i) => <EventCard key={i} />)}
 					</div>
 				</FrontendSection>
 			</FrontendWrapperInner>
@@ -91,7 +90,7 @@ export function EventsList() {
 
 	return (
 		<FrontendWrapperInner>
-			<FrontendSection first>
+			{/* <FrontendSection first>
 				{featuredEventsItem && (
 					<EventsCardFeatured
 						coverSrc={typeof featuredEventsItem.featured_image === 'object' ? featuredEventsItem?.featured_image?.url : undefined}
@@ -102,17 +101,16 @@ export function EventsList() {
 						topic={featuredEventsItem.topics && typeof featuredEventsItem.topics[0] === 'object' ? featuredEventsItem.topics[0] : undefined}
 					/>
 				)}
-			</FrontendSection>
-			<FrontendSection>
+			</FrontendSection> */}
+			<FrontendSection first>
 				<Title order={1}>{t('title')}</Title>
 				<div className={styles.grid}>
 					{regularEventsItems.map(news => (
-						<EventsCard
+						<EventCard
 							key={news.id}
 							coverSrc={typeof news.featured_image === 'object' ? news?.featured_image?.url : undefined}
 							href={`/news/${news.id}`}
 							publishDate={new Date(news.createdAt)}
-							summary={news.summary}
 							title={news.title}
 							topic={news.topics && typeof news.topics[0] === 'object' ? news.topics[0] : undefined}
 						/>

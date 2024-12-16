@@ -4,7 +4,7 @@
 
 import type { Publication } from '@/payload-types';
 
-import Card from '@/components/cards/Card';
+import { Card } from '@/components/cards/Card';
 import { CardSkeleton } from '@/components/cards/CardSkeleton';
 import { ErrorDisplay } from '@/components/common/ErrorDisplay';
 import { NoDataDisplay } from '@/components/common/NoDataDisplay';

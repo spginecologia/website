@@ -5,35 +5,35 @@ import mongoose from 'mongoose';
 /* * */
 
 export const GuidelineSchema = new mongoose.Schema({
-  title: {
-    type: String,
-    maxlength: 50,
-  },
-  document_type: {
-    type: String,
-    maxlength: 500,
-  },
-  document_url: {
-    type: String,
-    maxlength: 500,
-  },
-  document_document: {
-    type: Number,
-  },
-  topics: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'Topic',
-    },
-  ],
-  cover_image: {
-    type: Boolean,
-    default: false,
-  },
-  is_featured: {
-    type: Boolean,
-    default: false,
-  },
+	cover_image: {
+		default: false,
+		type: Boolean,
+	},
+	document_document: {
+		type: Number,
+	},
+	document_type: {
+		maxlength: 500,
+		type: String,
+	},
+	document_url: {
+		maxlength: 500,
+		type: String,
+	},
+	is_featured: {
+		default: false,
+		type: Boolean,
+	},
+	title: {
+		maxlength: 50,
+		type: String,
+	},
+	topics: [
+		{
+			ref: 'Topic',
+			type: mongoose.Schema.Types.ObjectId,
+		},
+	],
 });
 
 /* * */

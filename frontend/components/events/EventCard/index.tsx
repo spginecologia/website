@@ -23,7 +23,7 @@ interface Props {
 
 /* * */
 
-export function NewsCardFeatured({ coverSrc, href, publishDate, summary, title, topic }: Props) {
+export function EventCard({ coverSrc, href, publishDate, summary, title, topic }: Props) {
 	return (
 		<CardWrapper className={styles.container} href={href} variant="featured">
 			<div className={styles.imageWrapper}>

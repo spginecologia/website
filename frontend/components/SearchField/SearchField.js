@@ -2,52 +2,53 @@
 
 /* * */
 
-import styles from './SearchField.module.css';
 import { ActionIcon, TextInput } from '@mantine/core';
 import { IconSearch, IconX } from '@tabler/icons-react';
 import { useTranslations } from 'next-intl';
 
+import styles from './SearchField.module.css';
+
 /* * */
 
-export default function SearchField({ query, onChange, placeholder }) {
-  //
+export default function SearchField({ onChange, placeholder, query }) {
+	//
 
-  //
-  // A. Setup variables
+	//
+	// A. Setup variables
 
-  const t = useTranslations('SearchField');
+	const t = useTranslations('SearchField');
 
-  //
-  // B. Handle actions
+	//
+	// B. Handle actions
 
-  const handleChange = ({ target }) => {
-    onChange(target.value);
-  };
+	const handleChange = ({ target }) => {
+		onChange(target.value);
+	};
 
-  const handleClear = () => {
-    onChange('');
-  };
+	const handleClear = () => {
+		onChange('');
+	};
 
-  //
-  // C. Render components
+	//
+	// C. Render components
 
-  return (
-    <div className={styles.container}>
-      <TextInput
-        value={query}
-        placeholder={placeholder || t('placeholder')}
-        leftSection={<IconSearch size={16} />}
-        onChange={handleChange}
-        rightSection={
-          query && (
-            <ActionIcon color="gray" variant="subtle" onClick={handleClear}>
-              <IconX size={16} />
-            </ActionIcon>
-          )
-        }
-      />
-    </div>
-  );
+	return (
+		<div className={styles.container}>
+			<TextInput
+				leftSection={<IconSearch size={16} />}
+				onChange={handleChange}
+				placeholder={placeholder || t('placeholder')}
+				value={query}
+				rightSection={
+					query && (
+						<ActionIcon color="gray" onClick={handleClear} variant="subtle">
+							<IconX size={16} />
+						</ActionIcon>
+					)
+				}
+			/>
+		</div>
+	);
 
-  //
+	//
 }

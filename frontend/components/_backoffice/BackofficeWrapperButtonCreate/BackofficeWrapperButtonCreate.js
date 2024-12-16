@@ -2,30 +2,30 @@
 
 /* * */
 
-import { useTranslations } from 'next-intl';
-import { Tooltip, ActionIcon } from '@mantine/core';
+import { ActionIcon, Tooltip } from '@mantine/core';
 import { IconPlus } from '@tabler/icons-react';
+import { useTranslations } from 'next-intl';
 
 /* * */
 
 export default function BackofficeWrapperButtonCreate({ isLoading, onClick }) {
-  //
+	//
 
-  //
-  // A. Setup variables
+	//
+	// A. Setup variables
 
-  const t = useTranslations('BackofficeWrapperButtonCreate');
+	const t = useTranslations('BackofficeWrapperButtonCreate');
 
-  //
-  // B. Render components
+	//
+	// B. Render components
 
-  return (
-    <Tooltip label={isLoading ? t('loading') : t('label')} position="bottom" onClick={onClick} withArrow>
-      <ActionIcon size="lg" color="gray" variant="subtle" loading={isLoading}>
-        <IconPlus size={20} />
-      </ActionIcon>
-    </Tooltip>
-  );
+	return (
+		<Tooltip label={isLoading ? t('loading') : t('label')} onClick={onClick} position="bottom" withArrow>
+			<ActionIcon color="gray" loading={isLoading} size="lg" variant="subtle">
+				<IconPlus size={20} />
+			</ActionIcon>
+		</Tooltip>
+	);
 
-  //
+	//
 }

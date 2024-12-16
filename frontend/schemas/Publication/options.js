@@ -1,19 +1,19 @@
 /* * */
 
 export const GuidelineOptions = {
-  //
+	//
 
-  /*
+	/*
    * STORAGE SCOPE
    */
 
-  storage_scope: 'guidelines',
+	document_type: ['file', 'url'],
 
-  /*
+	/*
    * DOCUMENT TYPE
    */
 
-  document_type: ['file', 'url'],
+	storage_scope: 'guidelines',
 
-  //
+	//
 };

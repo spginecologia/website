@@ -1,10 +1,10 @@
 /* * */
 
 export const LinkDefault = {
-  title: '',
-  subtitle: '',
-  href: '',
-  sort_order: 0,
-  is_active: false,
-  is_featured: 0,
+	href: '',
+	is_active: false,
+	is_featured: 0,
+	sort_order: 0,
+	subtitle: '',
+	title: '',
 };

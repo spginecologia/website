@@ -1,42 +1,48 @@
 'use client';
 
-import { useSession } from 'next-auth/react';
-import { useRouter } from 'next/navigation';
-import { useEffect, useMemo } from 'react';
+/* * */
 
-export default function AppAuthenticationCheck({ scope = '', permission = '', redirect = false, children }) {
-  //
+// import { useRouter } from 'next/navigation';
+// import { useSession } from 'next-auth/react';
+// import { useEffect, useMemo } from 'react';
 
-  return children;
+/* * */
 
-  const router = useRouter();
-  const { data: session, status } = useSession();
+export default function AppAuthenticationCheck({ children, permission = '', redirect = false, scope = '' }) {
+	//
 
-  const hasPermission = useMemo(() => {
-    try {
-      return session?.user?.permissions[scope][permission] === true;
-    } catch (err) {
-      return false;
-    }
-  }, [permission, scope, session?.user?.permissions]);
+	return children;
 
-  useEffect(() => {
-    if (status === 'authenticated') {
-      if (!hasPermission && redirect) router.push('/dashboard');
-    }
-  }, [hasPermission, redirect, router, status]);
+	// const router = useRouter();
+	// const { data: session, status } = useSession();
 
-  //   return children;
-  if (hasPermission) return children;
-  else return <></>;
+	// const hasPermission = useMemo(() => {
+	// 	try {
+	// 		return session?.user?.permissions[scope][permission] === true;
+	// 	}
+	// 	catch (err) {
+	// 		return false;
+	// 	}
+	// }, [permission, scope, session?.user?.permissions]);
 
-  //
+	// useEffect(() => {
+	// 	if (status === 'authenticated') {
+	// 		if (!hasPermission && redirect) router.push('/dashboard');
+	// 	}
+	// }, [hasPermission, redirect, router, status]);
+
+	// //   return children;
+	// if (hasPermission) return children;
+	// else return <></>;
+
+	//
 }
 
 export function isAllowed(session, scope, permission) {
-  try {
-    return session?.user?.permissions[scope][permission] === true;
-  } catch (error) {
-    return false;
-  }
+	try {
+		return session?.user?.permissions[scope][permission] === true;
+	}
+	catch (error) {
+		return false;
+	}
 }

@@ -12,6 +12,8 @@ export default [
       'public/',
       'assets/',
       'public/',
+      'node_modules/',
+      'app/(payload)/',
     ],
   },
 ]

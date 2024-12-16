@@ -2,8 +2,8 @@
 
 /* * */
 
-import { Users } from '@/schemas/User/collection';
 import { FormSection } from '@/components/common/FormSection';
+import { Users } from '@/schemas/User/collection';
 import { UserDefault } from '@/schemas/User/default';
 import { UserValidation } from '@/schemas/User/validation';
 import { Button, Checkbox, Select, Space, Text, TextInput } from '@mantine/core';

@@ -5,25 +5,25 @@ import mongoose from 'mongoose';
 /* * */
 
 export const NewsSchema = new mongoose.Schema({
-  //
-  is_featured: { type: Boolean, default: false },
-  //
-  title: { type: String, maxlength: 100 },
-  introduction: { type: String, maxlength: 500 },
-  html_body: { type: String, maxlength: 5000 },
-  //
-  topics: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Topic' }],
-  //
-  featured_image_url: { type: String, maxlength: 200 },
-  featured_image_filename: { type: String, maxlength: 200 },
-  //
-  created_at: { type: Date },
-  created_by: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
-  updated_at: { type: Date },
-  updated_by: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
-  published_at: { type: Date },
-  published_by: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
-  //
+	//
+	created_at: { type: Date },
+	created_by: { ref: 'User', type: mongoose.Schema.Types.ObjectId },
+	featured_image_filename: { maxlength: 200, type: String },
+	//
+	featured_image_url: { maxlength: 200, type: String },
+	html_body: { maxlength: 5000, type: String },
+	introduction: { maxlength: 500, type: String },
+	//
+	is_featured: { default: false, type: Boolean },
+	published_at: { type: Date },
+	published_by: { ref: 'User', type: mongoose.Schema.Types.ObjectId },
+	//
+	title: { maxlength: 100, type: String },
+	//
+	topics: [{ ref: 'Topic', type: mongoose.Schema.Types.ObjectId }],
+	updated_at: { type: Date },
+	updated_by: { ref: 'User', type: mongoose.Schema.Types.ObjectId },
+	//
 });
 
 /* * */

@@ -2,43 +2,44 @@
 
 /* * */
 
-import useSWR from 'swr';
-import { useMemo } from 'react';
-import styles from './OtherLinks.module.css';
 import NoDataLabel from '@/components/NoDataLabel/NoDataLabel';
-import OtherLinksHeader from '@/components/OtherLinksHeader/OtherLinksHeader';
 import OtherLinksFooter from '@/components/OtherLinksFooter/OtherLinksFooter';
+import OtherLinksHeader from '@/components/OtherLinksHeader/OtherLinksHeader';
 import OtherLinksLink from '@/components/OtherLinksLink/OtherLinksLink';
+import { useMemo } from 'react';
+import useSWR from 'swr';
+
 import Loader from '../Loader/Loader';
+import styles from './OtherLinks.module.css';
 
 /* * */
 
 export default function OtherLinks() {
-  //
+	//
 
-  //
-  // A. Fetch data
+	//
+	// A. Fetch data
 
-  const { data: allActiveLinksData, isLoading: allActiveLinksLoading } = useSWR('/api/links/active');
+	const { data: allActiveLinksData, isLoading: allActiveLinksLoading } = useSWR('/api/links/active');
 
-  //
-  // B. Transform data
+	//
+	// B. Transform data
 
-  const allActiveLinksDataSorted = useMemo(() => {
-    if (!allActiveLinksData) return [];
-    return allActiveLinksData.filter((item) => item.is_active === true);
-  });
+	const allActiveLinksDataSorted = useMemo(() => {
+		if (!allActiveLinksData) return [];
+		return allActiveLinksData.filter(item => item.is_active === true);
+	});
 
-  //
-  // C. Render components
+	//
+	// C. Render components
 
-  return (
-    <div className={styles.container}>
-      <OtherLinksHeader />
-      {allActiveLinksLoading ? <Loader visible /> : allActiveLinksDataSorted && allActiveLinksDataSorted.length > 0 ? allActiveLinksDataSorted.map((item) => <OtherLinksLink key={item._id} linkData={item} />) : <NoDataLabel />}
-      <OtherLinksFooter />
-    </div>
-  );
+	return (
+		<div className={styles.container}>
+			<OtherLinksHeader />
+			{allActiveLinksLoading ? <Loader visible /> : allActiveLinksDataSorted && allActiveLinksDataSorted.length > 0 ? allActiveLinksDataSorted.map(item => <OtherLinksLink key={item._id} linkData={item} />) : <NoDataLabel />}
+			<OtherLinksFooter />
+		</div>
+	);
 
-  //
+	//
 }

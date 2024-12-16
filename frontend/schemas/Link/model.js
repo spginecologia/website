@@ -5,29 +5,29 @@ import mongoose from 'mongoose';
 /* * */
 
 export const LinkSchema = new mongoose.Schema({
-  title: {
-    type: String,
-    maxlength: 50,
-  },
-  subtitle: {
-    type: String,
-    maxlength: 500,
-  },
-  href: {
-    type: String,
-    maxlength: 500,
-  },
-  sort_order: {
-    type: Number,
-  },
-  is_active: {
-    type: Boolean,
-    default: false,
-  },
-  is_featured: {
-    type: Boolean,
-    default: false,
-  },
+	href: {
+		maxlength: 500,
+		type: String,
+	},
+	is_active: {
+		default: false,
+		type: Boolean,
+	},
+	is_featured: {
+		default: false,
+		type: Boolean,
+	},
+	sort_order: {
+		type: Number,
+	},
+	subtitle: {
+		maxlength: 500,
+		type: String,
+	},
+	title: {
+		maxlength: 50,
+		type: String,
+	},
 });
 
 /* * */
