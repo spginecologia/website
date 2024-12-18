@@ -1,6 +1,6 @@
 /* * */
 
-export async function GEET(request: Request) {
+export async function GET(request: Request) {
 	try {
 		//
 

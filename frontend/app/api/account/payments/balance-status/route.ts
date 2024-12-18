@@ -6,13 +6,11 @@ import { getPayload } from 'payload';
 
 /* * */
 
-const payload = await getPayload({ config });
-
-/* * */
-
 export async function GET(request: Request) {
 	try {
 		//
+
+		const payload = await getPayload({ config });
 
 		//
 		// Get the current logged in user

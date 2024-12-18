@@ -8,14 +8,12 @@ import Stripe from 'stripe';
 
 /* * */
 
-const payload = await getPayload({ config });
-const stripeApi = new Stripe(process.env.STRIPE_SECRET_KEY ?? '', {});
-
-/* * */
-
 export async function POST(request: Request) {
 	try {
 		//
+
+		const payload = await getPayload({ config });
+		const stripeApi = new Stripe(process.env.STRIPE_SECRET_KEY ?? '', {});
 
 		//
 		// Get the current logged in user
