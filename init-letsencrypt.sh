@@ -41,9 +41,9 @@ echo ">>> Deleting dummy certificate..."
 docker compose run --rm --entrypoint "rm -Rf /etc/letsencrypt/live/$domain_1 && rm -Rf /etc/letsencrypt/archive/$domain_1 && rm -Rf /etc/letsencrypt/renewal/$domain_1.conf" certbot
 echo
 
-echo ">>> Requesting Let's Encrypt certificate for "$domain_1" (+ "www.$domain_1") ..."
+echo ">>> Requesting Let's Encrypt certificate for "$domain_1" ..."
 if [ $staging != "0" ]; then staging_arg="--staging"; fi # Enable staging mode if needed
-docker compose run --rm --entrypoint "certbot certonly --webroot -w /var/www/certbot $staging_arg -d $domain_1 -d www.$domain_1 --email $email --rsa-key-size 4096 --agree-tos --noninteractive --verbose --force-renewal" certbot
+docker compose run --rm --entrypoint "certbot certonly --webroot -w /var/www/certbot $staging_arg -d $domain_1 --email $email --rsa-key-size 4096 --agree-tos --noninteractive --verbose --force-renewal" certbot
 echo
 
 
