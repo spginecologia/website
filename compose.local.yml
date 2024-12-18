@@ -1,3 +1,5 @@
+name: spg-dev
+
 volumes:
   spgdbdata:
 

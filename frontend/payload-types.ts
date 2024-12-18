@@ -519,21 +519,24 @@ export interface EventsSelect<T extends boolean = true> {
   sections?:
     | T
     | {
-        Text?:
-          | T
-          | {
-              quoteHeader?: T;
-              quoteText?: T;
-              djfsoks?: T;
-              id?: T;
-              blockName?: T;
-            };
+        Text?: T | TextBlockSelect<T>;
       };
   is_featured?: T;
   topics?: T;
   featured_image?: T;
   updatedAt?: T;
   createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "TextBlock_select".
+ */
+export interface TextBlockSelect<T extends boolean = true> {
+  quoteHeader?: T;
+  quoteText?: T;
+  djfsoks?: T;
+  id?: T;
+  blockName?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
