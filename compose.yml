@@ -84,8 +84,8 @@ services:
   # # # # # # # # # # # # # # # # # # # # #
   # # # # # # # # # # # # # # # # # # # # #
 
-  nextjs:
-    image: ghcr.io/spginecologia/website-nextjs:production
+  frontend:
+    image: ghcr.io/spginecologia/website-frontend:production
     restart: unless-stopped
     logging:
       options:
