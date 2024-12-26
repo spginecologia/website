@@ -6,7 +6,7 @@ import { CardCoverImage } from '@/components/cards/CardCoverImage';
 import { CardPublishDate } from '@/components/cards/CardPublishDate';
 import { CardWrapper } from '@/components/cards/CardWrapper';
 import { TopicDisplay } from '@/components/topics/TopicDisplay';
-import { Text, Title } from '@mantine/core';
+import { Title } from '@mantine/core';
 
 import styles from './styles.module.css';
 
