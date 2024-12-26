@@ -13,6 +13,7 @@ export interface Config {
   };
   collections: {
     admins: Admin;
+    courses: Course;
     document: Document;
     events: Event;
     guidelines: Guideline;
@@ -30,6 +31,7 @@ export interface Config {
   collectionsJoins: {};
   collectionsSelect: {
     admins: AdminsSelect<false> | AdminsSelect<true>;
+    courses: CoursesSelect<false> | CoursesSelect<true>;
     document: DocumentSelect<false> | DocumentSelect<true>;
     events: EventsSelect<false> | EventsSelect<true>;
     guidelines: GuidelinesSelect<false> | GuidelinesSelect<true>;
@@ -118,10 +120,55 @@ export interface Admin {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "courses".
+ */
+export interface Course {
+  id: string;
+  title: string;
+  content_type: 'file' | 'url';
+  document?: (string | null) | Document;
+  url?: string | null;
+  topics?: (string | Topic)[] | null;
+  featured_image?: (string | null) | Media;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "document".
  */
 export interface Document {
   id: string;
+  updatedAt: string;
+  createdAt: string;
+  url?: string | null;
+  thumbnailURL?: string | null;
+  filename?: string | null;
+  mimeType?: string | null;
+  filesize?: number | null;
+  width?: number | null;
+  height?: number | null;
+  focalX?: number | null;
+  focalY?: number | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "topics".
+ */
+export interface Topic {
+  id: string;
+  title: string;
+  description?: string | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "media".
+ */
+export interface Media {
+  id: string;
+  alt?: string | null;
   updatedAt: string;
   createdAt: string;
   url?: string | null;
@@ -167,36 +214,6 @@ export interface TextBlock {
   id?: string | null;
   blockName?: string | null;
   blockType: 'Text';
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "media".
- */
-export interface Media {
-  id: string;
-  alt?: string | null;
-  updatedAt: string;
-  createdAt: string;
-  url?: string | null;
-  thumbnailURL?: string | null;
-  filename?: string | null;
-  mimeType?: string | null;
-  filesize?: number | null;
-  width?: number | null;
-  height?: number | null;
-  focalX?: number | null;
-  focalY?: number | null;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "topics".
- */
-export interface Topic {
-  id: string;
-  title: string;
-  description?: string | null;
-  updatedAt: string;
-  createdAt: string;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -376,6 +393,10 @@ export interface PayloadLockedDocument {
         value: string | Admin;
       } | null)
     | ({
+        relationTo: 'courses';
+        value: string | Course;
+      } | null)
+    | ({
         relationTo: 'document';
         value: string | Document;
       } | null)
@@ -482,6 +503,20 @@ export interface AdminsSelect<T extends boolean = true> {
   hash?: T;
   loginAttempts?: T;
   lockUntil?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "courses_select".
+ */
+export interface CoursesSelect<T extends boolean = true> {
+  title?: T;
+  content_type?: T;
+  document?: T;
+  url?: T;
+  topics?: T;
+  featured_image?: T;
+  updatedAt?: T;
+  createdAt?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

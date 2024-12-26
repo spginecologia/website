@@ -214,6 +214,9 @@ export default createTheme({
 				if (props.order === 2) {
 					defaultClasses = combineClasses(defaultClasses, [TitleOverride.orderH2]);
 				}
+				if (props.size === 'sm') {
+					defaultClasses = combineClasses(defaultClasses, [TitleOverride.sizeSm]);
+				}
 				return defaultClasses;
 			},
 		}),

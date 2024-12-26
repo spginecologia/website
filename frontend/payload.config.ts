@@ -8,6 +8,7 @@ import sharp from 'sharp';
 /* * */
 
 import { Admins } from '@/schemas/Admin/collection';
+import { Courses } from '@/schemas/Course/collection';
 import { Documents } from '@/schemas/Document/collection';
 import { Event } from '@/schemas/Event/collection';
 import { Guidelines } from '@/schemas/Guideline/collection';
@@ -31,6 +32,7 @@ export default buildConfig({
 	// Define and configure your collections in this array
 	collections: [
 		Admins,
+		Courses,
 		Documents,
 		Event,
 		Guidelines,

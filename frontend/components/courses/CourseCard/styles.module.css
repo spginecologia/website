@@ -1,0 +1,27 @@
+/* * */
+/* CONTAINER */
+
+.container {
+	padding: 0;
+}
+
+/* * */
+/* CONTENT WRAPPER */
+
+.contentWrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	align-items: flex-start;
+	justify-content: center;
+	width: 100%;
+	padding: 30px;
+	padding-top: 0;
+}
+
+/* * */
+/* TITLE */
+
+.title {
+	font-size: 10px;
+}
