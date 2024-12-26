@@ -1,5 +1,5 @@
 /* * */
-/* ROOT */
+/* VARIANTS */
 
 .root.variantPrimary {
 	font-family: lato, sans-serif;
@@ -27,4 +27,19 @@
 	color: var(--color-brand-support-400);
 	text-align: left;
 	text-transform: uppercase;
+}
+
+/* * */
+/* SIZES */
+
+.root.sizeMd {
+	font-size: 20px;
+}
+
+.root.sizeSm {
+	font-size: 18px;
+}
+
+.root.sizeXs {
+	font-size: 14px;
 }

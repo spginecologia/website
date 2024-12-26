@@ -2,11 +2,12 @@
 
 import type { Topic } from '@/payload-types';
 
-import { CardPublishDate } from '@/components/cards/CardPublishDate';
+import { CardCoverImage } from '@/components/cards/CardCoverImage';
 import { CardWrapper } from '@/components/cards/CardWrapper';
+import { DateRibbon } from '@/components/events/DateRibbon';
 import { TopicDisplay } from '@/components/topics/TopicDisplay';
 import { Text, Title } from '@mantine/core';
-import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 import styles from './styles.module.css';
 
@@ -14,27 +15,42 @@ import styles from './styles.module.css';
 
 interface Props {
 	coverSrc?: null | string
+	endDate?: Date | null
 	href?: string
-	publishDate?: Date | null
-	summary?: null | string
+	startDate?: Date | null
 	title?: null | string
 	topic?: null | Topic
 }
 
 /* * */
 
-export function EventCard({ coverSrc, href, publishDate, summary, title, topic }: Props) {
+export function EventCard({ coverSrc, endDate, href, startDate, title, topic }: Props) {
+	//
+
+	//
+	// A. Setup variables
+
+	const t = useTranslations('events.EventCard');
+
+	//
+	// B. Render components
+
 	return (
 		<CardWrapper className={styles.container} href={href} variant="featured">
-			<div className={styles.imageWrapper}>
-				{coverSrc && <Image alt="" src={coverSrc} style={{ objectFit: 'cover' }} fill />}
-			</div>
-			<div className={styles.contentWrapper}>
-				{topic && <TopicDisplay id={topic.id} title={topic.title} noLink />}
-				<Title order={2}>{title}</Title>
-				<Text>{summary}</Text>
-				<CardPublishDate date={publishDate} />
+			<CardCoverImage aspectRatio="900 / 400" src={coverSrc} />
+			<div className={styles.bottomWrapper}>
+				<DateRibbon date={startDate} />
+				<div className={styles.contentWrapper}>
+					{topic && <TopicDisplay id={topic.id} title={topic.title} noLink />}
+					<Title order={2} size="sm">{title}</Title>
+					<div className={styles.datesWrapper}>
+						{startDate && <Text size="sm">{t('start_date', { value: startDate })}</Text>}
+						{endDate && <Text size="sm">{t('end_date', { value: endDate })}</Text>}
+					</div>
+				</div>
 			</div>
 		</CardWrapper>
 	);
+
+	//
 }

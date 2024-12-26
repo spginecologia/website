@@ -175,6 +175,15 @@ export default createTheme({
 				if (props.variant === 'overline') {
 					defaultClasses = combineClasses(defaultClasses, [TextOverride.variantOverline]);
 				}
+				if (props.size === 'md') {
+					defaultClasses = combineClasses(defaultClasses, [TextOverride.sizeMd]);
+				}
+				if (props.size === 'sm') {
+					defaultClasses = combineClasses(defaultClasses, [TextOverride.sizeSm]);
+				}
+				if (props.size === 'xs') {
+					defaultClasses = combineClasses(defaultClasses, [TextOverride.sizeXs]);
+				}
 				return defaultClasses;
 			},
 			defaultProps: {

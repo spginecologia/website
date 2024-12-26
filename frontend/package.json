@@ -34,7 +34,7 @@
 		"luxon": "^3.5.0",
 		"mongodb": "6.12.0",
 		"mongoose": "8.9.2",
-		"next": "15.1.2",
+		"next": "15.1.3",
 		"next-intl": "3.26.3",
 		"nodemailer": "6.9.16",
 		"nuqs": "2.2.3",

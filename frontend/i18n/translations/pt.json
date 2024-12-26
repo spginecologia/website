@@ -479,6 +479,20 @@
 			"title": "Palestras & Cursos"
 		}
 	},
+	"events": {
+		"DateRibbon": {
+			"day": "{value, date, dayShort}",
+			"month": "{value, date, monthLong}",
+			"year": "{value, date, yearLong}"
+		},
+		"EventCard": {
+			"end_date": "Fim: {value, date, full}",
+			"start_date": "Início: {value, date, full}"
+		},
+		"EventsList": {
+			"title": "Agenda"
+		}
+	},
 	"footer": {
 		"FooterContacts": {
 			"address": {

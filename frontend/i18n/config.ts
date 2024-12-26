@@ -27,6 +27,12 @@ export const availableFormats: Partial<Formats> = {
 		dayShort: {
 			day: 'numeric',
 		},
+		full: {
+			day: '2-digit',
+			month: 'long',
+			weekday: 'long',
+			year: 'numeric',
+		},
 		monthLong: {
 			month: 'long',
 		},

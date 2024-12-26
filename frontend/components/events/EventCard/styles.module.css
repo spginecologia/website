@@ -2,31 +2,48 @@
 /* CONTAINER */
 
 .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  place-items: stretch stretch;
-  min-height: 300px;
-  padding: 0;
-  overflow: hidden;
+	gap: 0;
+	padding: 0;
 }
 
 /* * */
-/* IMAGE WRAPPER */
+/* BOTTOM WRAPPER */
 
-.imageWrapper {
-  position: relative;
-  width: 100%;
-  background-color: blue;
+.bottomWrapper {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	gap: 30px;
+	align-items: flex-start;
+	justify-content: flex-start;
+	width: 100%;
+	padding: 30px;
+	padding-top: 0;
 }
 
 /* * */
 /* CONTENT WRAPPER */
 
 .contentWrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 30px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	align-items: flex-start;
+	justify-content: center;
+	width: 100%;
+	padding-top: 25px;
+}
+
+/* * */
+/* DATES */
+
+.datesWrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+
+.date {
+	font-size: 18px;
 }

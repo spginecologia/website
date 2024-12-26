@@ -41,7 +41,7 @@ export function CoursesList() {
 				<FrontendSection first>
 					<Title order={1}>{t('title')}</Title>
 					<div className={styles.grid}>
-						{[...Array(10)].map((_, i) => <CardSkeleton key={i} coverAspectRatio="585 / 320" />)}
+						{[...Array(10)].map((_, i) => <CardSkeleton key={i} coverAspectRatio="600 / 300" />)}
 					</div>
 				</FrontendSection>
 			</FrontendWrapperInner>

@@ -1,0 +1,44 @@
+/* * */
+/* SKELETON */
+
+.skeleton {
+	width: 90px;
+	aspect-ratio: 90 / 130;
+}
+
+.skeleton::after {
+	border-radius: 0;
+}
+
+
+/* * */
+/* CONTAINER */
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+    width: 90px;
+    max-width: 90px;
+    padding: 20px 5px 10px;
+    color: var(--color-reference-white);
+	text-align: center;
+    background-color: var(--color-brand-primary-100);
+}
+
+/* * */
+/* DATE COMPONENTS */
+
+.day {
+	font-family: var(--font-dm-serif-display), serif;
+	font-size: 55px;
+    line-height: 55px;
+}
+
+.month, .year {
+    font-size: 12px;
+	font-weight: var(--font-weight-bold);
+	line-height: 1.5 !important;
+	text-transform: uppercase;
+}
