@@ -205,10 +205,6 @@
 			"placeholder": "Choose an option..."
 		}
 	},
-	"UserActivityBadge": {
-		"was_active": "Active {value}",
-		"was_never_active": "This user neved logged in"
-	},
 	"account": {
 		"AccountPayments": {
 			"subtitle": "Faça a gestão autónoma dos pagamentos da sua quota de sócio.",
