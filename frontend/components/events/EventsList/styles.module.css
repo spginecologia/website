@@ -1,4 +1,14 @@
 /* * */
+/* FEATURED EVENT WRAPPER */
+
+.featuredEventWrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+	place-items: start stretch;
+}
+
+/* * */
 /* GRID */
 
 .grid {

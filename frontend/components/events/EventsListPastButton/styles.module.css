@@ -1,0 +1,47 @@
+/* * */
+/* TITLE */
+
+.container {
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-columns: 1fr;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+    background-color: var(--color-brand-primary-200);
+	border: 1px solid transparent;
+	transition: all 300ms ease;
+}
+
+.container:hover {
+	background-color: var(--color-brand-primary-100);
+	border-color: var(--color-brand-support-100);
+	box-shadow: 0 0 10px 0 rgb(100 90 105 / 20%);
+}
+
+/* * */
+/* TITLE */
+
+#title {
+	color: var(--color-reference-white);
+    text-align: center;
+}
+
+/* * */
+/* IMAGES */
+
+.topImage, .bottomImage {
+    width: 100%;
+    height: 180px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+.topImage {
+	background-image: url("http://spginecologia.pt/wp-content/uploads/2021/08/agenda-eventos-anteriores-1.png");
+}
+
+.bottomImage {
+	background-image: url("http://spginecologia.pt/wp-content/uploads/2021/08/agenda-eventos-anteriores-2.jpg");
+}

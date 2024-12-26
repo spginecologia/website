@@ -15,6 +15,7 @@ import { useTranslations } from 'next-intl';
 import { useMemo } from 'react';
 import useSWR from 'swr';
 
+import { EventsListPastButton } from '../EventsListPastButton';
 import styles from './styles.module.css';
 
 /* * */
@@ -35,7 +36,7 @@ export function EventsList() {
 	//
 	// C. Transform data
 
-	const featuredEventsItem = useMemo(() => {
+	const featuredEventItem = useMemo(() => {
 		if (!allEventsData) return null;
 		return allEventsData.docs
 			.sort((a, b) => b.createdAt.localeCompare(a.createdAt))
@@ -46,9 +47,9 @@ export function EventsList() {
 	const regularEventsItems = useMemo(() => {
 		if (!allEventsData) return [];
 		return allEventsData.docs
-			.filter(event => event.id !== featuredEventsItem?.id)
+			.filter(event => event.id !== featuredEventItem?.id)
 			.sort((a, b) => b.createdAt.localeCompare(a.createdAt));
-	}, [allEventsData, featuredEventsItem]);
+	}, [allEventsData, featuredEventItem]);
 
 	//
 	// D. Render components
@@ -90,18 +91,22 @@ export function EventsList() {
 
 	return (
 		<FrontendWrapperInner>
-			{/* <FrontendSection first>
-				{featuredEventsItem && (
-					<EventsCardFeatured
-						coverSrc={typeof featuredEventsItem.featured_image === 'object' ? featuredEventsItem?.featured_image?.url : undefined}
-						href={`/event/${featuredEventsItem.id}`}
-						publishDate={new Date(featuredEventsItem.createdAt)}
-						summary={featuredEventsItem.summary}
-						title={featuredEventsItem.title}
-						topic={featuredEventsItem.topics && typeof featuredEventsItem.topics[0] === 'object' ? featuredEventsItem.topics[0] : undefined}
-					/>
-				)}
-			</FrontendSection> */}
+			{featuredEventItem && (
+				<FrontendSection first>
+					<div className={styles.featuredEventWrapper}>
+						<EventCard
+							key={featuredEventItem.id}
+							coverSrc={typeof featuredEventItem.featured_image === 'object' ? featuredEventItem?.featured_image?.url : undefined}
+							endDate={featuredEventItem.end_date ? new Date(featuredEventItem.end_date) : null}
+							href={`/event/${featuredEventItem.id}`}
+							startDate={new Date(featuredEventItem.start_date)}
+							title={featuredEventItem.title}
+							topic={featuredEventItem.topics && typeof featuredEventItem.topics[0] === 'object' ? featuredEventItem.topics[0] : undefined}
+						/>
+						<EventsListPastButton />
+					</div>
+				</FrontendSection>
+			)}
 			<FrontendSection first>
 				<Title order={1}>{t('title')}</Title>
 				<div className={styles.grid}>
