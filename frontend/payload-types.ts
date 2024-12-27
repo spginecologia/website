@@ -325,7 +325,6 @@ export interface Video {
   id: string;
   title?: string | null;
   status?: ('draft' | 'in_review' | 'approved' | 'rejected') | null;
-  featured?: boolean | null;
   video_file?: (string | null) | VideoFile;
   declaration_file?: (string | null) | Media;
   authors?: string | null;
@@ -357,6 +356,7 @@ export interface Video {
   } | null;
   publisher?: (string | null) | User;
   views?: number | null;
+  is_featured?: boolean | null;
   topics?: (string | Topic)[] | null;
   featured_image?: (string | null) | Media;
   updatedAt: string;
@@ -683,7 +683,6 @@ export interface UsersSelect<T extends boolean = true> {
 export interface VideosSelect<T extends boolean = true> {
   title?: T;
   status?: T;
-  featured?: T;
   video_file?: T;
   declaration_file?: T;
   authors?: T;
@@ -692,6 +691,7 @@ export interface VideosSelect<T extends boolean = true> {
   description?: T;
   publisher?: T;
   views?: T;
+  is_featured?: T;
   topics?: T;
   featured_image?: T;
   updatedAt?: T;

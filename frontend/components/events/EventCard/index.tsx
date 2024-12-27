@@ -36,7 +36,7 @@ export function EventCard({ coverSrc, endDate, href, startDate, title, topic }: 
 	// B. Render components
 
 	return (
-		<CardWrapper className={styles.container} href={href} variant="featured">
+		<CardWrapper className={styles.container} href={href} variant="featured" fullHeight>
 			<CardCoverImage aspectRatio="900 / 400" src={coverSrc} />
 			<div className={styles.bottomWrapper}>
 				<DateRibbon date={startDate} />

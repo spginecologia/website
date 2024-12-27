@@ -20,7 +20,11 @@ export function CardCoverImage({ aspectRatio, src }: Props) {
 		return <Skeleton style={{ aspectRatio: aspectRatio }} animate />;
 	}
 
-	return <Image className={styles.cover} src={src} style={{ aspectRatio: aspectRatio }} />;
+	return (
+		<div>
+			<Image className={styles.cover} src={src} style={{ aspectRatio: aspectRatio }} />
+		</div>
+	);
 
 	//
 }

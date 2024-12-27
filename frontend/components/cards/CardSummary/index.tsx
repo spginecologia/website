@@ -7,12 +7,13 @@ import styles from './styles.module.css';
 /* * */
 
 interface Props {
+	size?: 'md' | 'sm'
 	text?: null | string
 }
 
 /* * */
 
-export function CardSummary({ text }: Props) {
+export function CardSummary({ size = 'md', text }: Props) {
 	//
 
 	if (!text) {
@@ -26,10 +27,10 @@ export function CardSummary({ text }: Props) {
 	}
 
 	if (text.length > 153) {
-		return <Text>{text.substring(0, 150)}...</Text>;
+		return <Text size={size}>{text.substring(0, 150)}...</Text>;
 	}
 
-	return <Text>{text}</Text>;
+	return <Text size={size}>{text}</Text>;
 
 	//
 }

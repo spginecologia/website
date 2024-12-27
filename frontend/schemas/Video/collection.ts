@@ -3,6 +3,7 @@
 import type { CollectionConfig } from 'payload';
 
 import { featuredImageField } from '@/fields/featured-image';
+import { isFeaturedField } from '@/fields/is-featured';
 import { topicsField } from '@/fields/topics';
 import { VideoOptions } from '@/schemas/Video/options';
 
@@ -37,17 +38,6 @@ export const Videos: CollectionConfig = {
 			],
 			// required: true,
 			type: 'select',
-		},
-		{
-			fields: [
-				{
-					defaultValue: false,
-					label: 'Destacar?',
-					name: 'featured',
-					type: 'checkbox',
-				},
-			],
-			type: 'row',
 		},
 		{
 			label: 'Ficheiro do Vídeo',
@@ -102,6 +92,7 @@ export const Videos: CollectionConfig = {
 			name: 'views',
 			type: 'number',
 		},
+		isFeaturedField,
 		topicsField,
 		featuredImageField,
 	],

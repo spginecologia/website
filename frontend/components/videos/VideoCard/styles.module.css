@@ -1,0 +1,11 @@
+/* * */
+/* AUTHORS */
+
+.authors {
+	font-size: 16px;
+	font-style: italic;
+	font-weight: var(--font-weight-medium);
+	line-height: 1.4;
+	color: var(--color-brand-support-500);
+	text-align: left;
+}

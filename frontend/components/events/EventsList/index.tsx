@@ -7,6 +7,7 @@ import type { Event } from '@/payload-types';
 import { ErrorDisplay } from '@/components/common/ErrorDisplay';
 import { NoDataDisplay } from '@/components/common/NoDataDisplay';
 import { EventCard } from '@/components/events/EventCard';
+import { EventsListPastButton } from '@/components/events/EventsListPastButton';
 import FrontendSection from '@/components/FrontendSection/FrontendSection';
 import FrontendWrapperInner from '@/components/FrontendWrapperInner/FrontendWrapperInner';
 import { PayloadAPIResponse } from '@/types/payload-api-response';
@@ -15,7 +16,6 @@ import { useTranslations } from 'next-intl';
 import { useMemo } from 'react';
 import useSWR from 'swr';
 
-import { EventsListPastButton } from '../EventsListPastButton';
 import styles from './styles.module.css';
 
 /* * */
@@ -115,7 +115,7 @@ export function EventsList() {
 							key={event.id}
 							coverSrc={typeof event.featured_image === 'object' ? event?.featured_image?.url : undefined}
 							endDate={event.end_date ? new Date(event.end_date) : null}
-							href={`/event/${event.id}`}
+							href={`/events/${event.id}`}
 							startDate={new Date(event.start_date)}
 							title={event.title}
 							topic={event.topics && typeof event.topics[0] === 'object' ? event.topics[0] : undefined}

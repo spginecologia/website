@@ -2,6 +2,7 @@
 
 import { mongooseAdapter } from '@payloadcms/db-mongodb';
 import { lexicalEditor } from '@payloadcms/richtext-lexical';
+import { s3Storage } from '@payloadcms/storage-s3';
 import { buildConfig } from 'payload';
 import sharp from 'sharp';
 
@@ -51,8 +52,30 @@ export default buildConfig({
 		url: process.env.SPGDB_MONGODB_URI || 'mongodb://placeholder:placeholder@localhost:27017/placeholder',
 	}),
 
-	// If you'd like to use Rich Text, pass your editor here
+	// If you'd like to use Rich Text,
+	// pass your editor here.
 	editor: lexicalEditor(),
+
+	// If you'd like to use S3 for file uploads,
+	// pass your S3 configuration here.
+	plugins: [
+		s3Storage({
+			bucket: process.env.CLOUDFLARE_R2_BUCKET ?? 'placeholder',
+			collections: {
+				'document': true,
+				'media': true,
+				'video-files': true,
+			},
+			config: {
+				bucketEndpoint: true,
+				credentials: {
+					accessKeyId: process.env.CLOUDFLARE_R2_ACCESS_KEY_ID ?? 'placeholder',
+					secretAccessKey: process.env.CLOUDFLARE_R2_SECRET_ACCESS_KEY ?? 'placeholder',
+				},
+				region: 'auto',
+			},
+		}),
+	],
 
 	// Your Payload secret - should be a complex and secure string, unguessable
 	secret: process.env.PAYLOAD_SECRET || 'placeholder',
