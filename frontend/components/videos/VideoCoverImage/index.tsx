@@ -17,7 +17,7 @@ interface Props {
 
 /* * */
 
-export function VideoCoverImage({ coverSrc, duration, views = 0 }: Props) {
+export function VideoCoverImage({ coverSrc, duration, views }: Props) {
 	//
 
 	//
@@ -44,7 +44,7 @@ export function VideoCoverImage({ coverSrc, duration, views = 0 }: Props) {
 		<div className={styles.container}>
 			<CardCoverImage aspectRatio="16 / 9" src={coverSrc} />
 			{durationString && <p className={styles.duration}>{durationString}</p>}
-			<p className={styles.views}>{views} visualizações</p>
+			{!!views && <p className={styles.views}>{views} visualizações</p>}
 		</div>
 	);
 

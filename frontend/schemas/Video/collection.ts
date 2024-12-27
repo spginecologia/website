@@ -5,7 +5,10 @@ import type { CollectionConfig } from 'payload';
 import { featuredImageField } from '@/fields/featured-image';
 import { isFeaturedField } from '@/fields/is-featured';
 import { topicsField } from '@/fields/topics';
+import { Video } from '@/payload-types';
 import { VideoOptions } from '@/schemas/Video/options';
+import config from '@payload-config';
+import { getPayload } from 'payload';
 
 /* * */
 
@@ -96,6 +99,17 @@ export const Videos: CollectionConfig = {
 		topicsField,
 		featuredImageField,
 	],
+
+	hooks: {
+		beforeRead: [
+			async ({ doc }: { doc: Video }) => {
+				doc.views = (doc.views ?? 0) + 1;
+				const payload = await getPayload({ config });
+				await payload.update({ collection: 'videos', data: { views: doc.views }, id: doc.id });
+				return doc;
+			},
+		],
+	},
 
 	labels: {
 		plural: 'Videos',
