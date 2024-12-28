@@ -1,12 +1,22 @@
 /* * */
 
 import { vendusGetInvoicePdf } from '@/scripts/vendus-get-invoice-pdf';
+import payloadConfig from '@payload-config';
+import { getPayload } from 'payload';
 
 /* * */
 
 export async function GET(request: Request, { params }: { params: Promise<{ invoice_id: string }> }) {
 	try {
 		//
+
+		const payload = await getPayload({ config: payloadConfig });
+
+		//
+		// Get the current logged in user
+
+		const currentUser = await payload.auth({ headers: request.headers });
+		if (!currentUser || !currentUser.user) return new Response(null, { status: 400 });
 
 		//
 		// Get the invoice ID from the request query

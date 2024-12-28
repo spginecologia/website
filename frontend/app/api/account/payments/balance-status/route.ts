@@ -1,7 +1,7 @@
 /* * */
 
 import { stripeGetBalanceStatus } from '@/scripts/stripe-get-balance-status';
-import config from '@payload-config';
+import payloadConfig from '@payload-config';
 import { getPayload } from 'payload';
 
 /* * */
@@ -10,7 +10,7 @@ export async function GET(request: Request) {
 	try {
 		//
 
-		const payload = await getPayload({ config });
+		const payload = await getPayload({ config: payloadConfig });
 
 		//
 		// Get the current logged in user
