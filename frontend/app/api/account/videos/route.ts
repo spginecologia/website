@@ -15,7 +15,7 @@ export async function GET(request: Request) {
 		// Get the current logged in user
 
 		const currentUser = await payload.auth({ headers: request.headers });
-		if (!currentUser || !currentUser.user) return new Response(null, { status: 400 });
+		if (!currentUser || !currentUser.user) return new Response(null, { status: 401 });
 
 		//
 		// Search videos for the current user

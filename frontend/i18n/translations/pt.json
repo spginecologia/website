@@ -253,13 +253,14 @@
 			"subtitle": "Aceda e atualize os seus dados pessoais.",
 			"title": "Perfil de Sócio"
 		},
-		"AccountProfileEdit": {
+		"AccountProfileForm": {
 			"actions": {
 				"has_errors": "Existem erros no preenchimento",
 				"submit": {
 					"label": "Atualizar dados"
 				}
 			},
+			"error": "Não foi possível carregar o seu perfil",
 			"fields": {
 				"address_1": {
 					"label": "Morada",
@@ -376,6 +377,7 @@
 					"placeholder": ""
 				}
 			},
+			"loading": "A carregar o seu perfil...",
 			"sections": {
 				"activity": {
 					"description": "Por favor indique-nos qual a sua actividade.",

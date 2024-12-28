@@ -51,7 +51,7 @@ export function AccountPaymentsInvoices() {
 		return <Text variant="overline">{t('loading')}</Text>;
 	}
 
-	if (!userDataLoading && userDataError) {
+	if (userDataError) {
 		return <Text variant="overline">{t('error')}</Text>;
 	}
 

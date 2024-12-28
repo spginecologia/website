@@ -18,13 +18,13 @@ import useSWR from 'swr';
 
 /* * */
 
-export function AccountProfileEdit() {
+export function AccountProfileForm() {
 	//
 
 	//
 	// A. Setup variables
 
-	const t = useTranslations('account.AccountProfileEdit');
+	const t = useTranslations('account.AccountProfileForm');
 
 	const [isLoading, setIsLoading] = useState(false);
 	const [isDirty, setIsDirty] = useState(false);
@@ -33,10 +33,10 @@ export function AccountProfileEdit() {
 	//
 	// B. Fetch data
 
-	const { data: userData, mutate: userMutate } = useSWR<PayloadMeResponse>('/api/users/me');
+	const { data: userData, error: userDataError, isLoading: userDataLoading, mutate: userMutate } = useSWR<PayloadMeResponse>('/api/users/me');
 
 	//
-	// D. Handle actions
+	// C. Handle actions
 
 	useEffect(() => {
 		// Return if no data
@@ -80,7 +80,7 @@ export function AccountProfileEdit() {
 	};
 
 	//
-	// E. Setup form
+	// D. Setup form
 
 	const form = useForm({
 		clearInputErrorOnChange: true,
@@ -96,7 +96,15 @@ export function AccountProfileEdit() {
 	});
 
 	//
-	// F. Render components
+	// E. Render components
+
+	if (userDataLoading) {
+		return <Text variant="overline">{t('loading')}</Text>;
+	}
+
+	if (userDataError || (!userDataLoading && !userData?.user)) {
+		return <Text variant="overline">{t('error')}</Text>;
+	}
 
 	return (
 		<form onSubmit={form.onSubmit(handleSubmit)}>
@@ -156,4 +164,6 @@ export function AccountProfileEdit() {
 
 		</form>
 	);
+
+	//
 }

@@ -17,7 +17,7 @@ export async function POST(request: Request) {
 		// Get the current logged in user
 
 		const currentUser = await payload.auth({ headers: request.headers });
-		if (!currentUser || !currentUser.user) return new Response('This action is only available for authenticated users.', { status: 400 });
+		if (!currentUser || !currentUser.user) return new Response(null, { status: 401 });
 
 		//
 		// Get the form data

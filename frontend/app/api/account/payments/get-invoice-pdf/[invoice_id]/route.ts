@@ -16,7 +16,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ invo
 		// Get the current logged in user
 
 		const currentUser = await payload.auth({ headers: request.headers });
-		if (!currentUser || !currentUser.user) return new Response(null, { status: 400 });
+		if (!currentUser || !currentUser.user) return new Response(null, { status: 401 });
 
 		//
 		// Get the invoice ID from the request query

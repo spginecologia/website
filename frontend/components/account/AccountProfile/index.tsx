@@ -1,6 +1,6 @@
 /* * */
 
-import { AccountProfileEdit } from '@/components/account/AccountProfileEdit';
+import { AccountProfileForm } from '@/components/account/AccountProfileForm';
 import { Paper, Space, Text, Title } from '@mantine/core';
 import { useTranslations } from 'next-intl';
 
@@ -23,7 +23,7 @@ export function AccountProfile() {
 			<Space h="xs" />
 			<Text>{t('subtitle')}</Text>
 			<Space h="xl" />
-			<AccountProfileEdit />
+			<AccountProfileForm />
 		</Paper>
 	);
 
