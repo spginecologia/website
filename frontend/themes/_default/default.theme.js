@@ -184,6 +184,9 @@ export default createTheme({
 				if (props.variant === 'overline') {
 					defaultClasses = combineClasses(defaultClasses, [TextOverride.variantOverline]);
 				}
+				if (props.variant === 'error') {
+					defaultClasses = combineClasses(defaultClasses, [TextOverride.variantError]);
+				}
 				if (props.size === 'md') {
 					defaultClasses = combineClasses(defaultClasses, [TextOverride.sizeMd]);
 				}
@@ -213,6 +216,9 @@ export default createTheme({
 				};
 				if (props.variant === 'primary') {
 					defaultClasses = combineClasses(defaultClasses, [TextInputOverride.variantPrimary]);
+				}
+				if (props.variant === 'contrast') {
+					defaultClasses = combineClasses(defaultClasses, [TextInputOverride.variantContrast]);
 				}
 				return defaultClasses;
 			},

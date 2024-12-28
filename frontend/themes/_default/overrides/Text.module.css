@@ -29,6 +29,16 @@
 	text-transform: uppercase;
 }
 
+.root.variantError {
+	font-family: lato, sans-serif;
+	font-size: 14px;
+	font-weight: var(--font-weight-bold);
+	line-height: 1;
+	color: var(--color-state-error);
+	text-align: left;
+	text-transform: uppercase;
+}
+
 /* * */
 /* SIZES */
 

@@ -1,10 +1,17 @@
 /* * */
 
-import * as yup from 'yup';
+import { z } from 'zod';
 
 /* * */
 
-export const SignInValidation = yup.object({
-	email: yup.string().email('Please provide a valid email address.').required('Please enter your TML email.'),
-	password: yup.string().required('A password é um campo obrigatório.'),
+export const SignInValidation = z.object({
+
+	email: z
+		.string()
+		.email('Por favor introduza um email válido.'),
+
+	password: z
+		.string()
+		.min(5, 'A password deve ter pelo menos 5 caracteres.'),
+
 });

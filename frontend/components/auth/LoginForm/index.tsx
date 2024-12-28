@@ -6,7 +6,7 @@ import { Loader } from '@/components/common/Loader';
 import { SignInDefault } from '@/schemas/SignIn/default';
 import { SignInValidation } from '@/schemas/SignIn/validation';
 import { Button, Space, Text, TextInput, Title } from '@mantine/core';
-import { useForm, yupResolver } from '@mantine/form';
+import { useForm, zodResolver } from '@mantine/form';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 
@@ -31,7 +31,10 @@ export function LoginForm() {
 	const form = useForm({
 		clearInputErrorOnChange: true,
 		initialValues: SignInDefault,
-		validate: yupResolver(SignInValidation),
+		onValuesChange: () => {
+			setIsError(false);
+		},
+		validate: zodResolver(SignInValidation),
 	});
 
 	//
@@ -57,45 +60,31 @@ export function LoginForm() {
 			}
 			else {
 				console.log('Login failed. Please try again.');
+				form.setFieldValue('password', '');
 				setIsLoading(false);
 				setIsError(true);
 			}
 		}
 		catch (error) {
-			console.error(error);
+			console.error(error.message);
 			setIsLoading(false);
 			setIsError(true);
 		}
 	};
 
-	const handleRetry = () => {
-		window.location.reload();
-	};
-
 	//
 	// D. Render components
-
-	if (isError) {
-		return (
-			<div className={styles.container}>
-				<Title order={2}>{t('title')}</Title>
-				<Text>{t('subtitle')}</Text>
-				<Space h={5} />
-				<p className={styles.errorMessage}>{t('error.message')}</p>
-				<Space />
-				<Button onClick={handleRetry}>{t('error.retry')}</Button>
-			</div>
-		);
-	}
 
 	return (
 		<form className={styles.container} onSubmit={form.onSubmit(handleSignIn)}>
 			<Title order={2}>{t('title')}</Title>
 			<Text>{t('subtitle')}</Text>
 			<Space h={5} />
-			<TextInput disabled={isLoading} label={t('email.label')} placeholder={t('email.placeholder')} type="email" {...form.getInputProps('email')} />
-			<TextInput disabled={isLoading}label={t('password.label')} placeholder={t('password.placeholder')} type="password" {...form.getInputProps('password')} />
-			{!isLoading ? <Button type="submit">{t('submit.label')}</Button> : <Loader visible />}
+			<TextInput disabled={isLoading} label={t('email.label')} placeholder={t('email.placeholder')} type="email" w="100%" {...form.getInputProps('email')} />
+			<TextInput disabled={isLoading} label={t('password.label')}placeholder={t('password.placeholder')} type="password" w="100%" {...form.getInputProps('password')} />
+			{isLoading && <Loader visible />}
+			{(!isLoading && form.values.password.length > 0) && <Button type="submit">{t('submit.label')}</Button>}
+			{(!isLoading && isError) && <Text variant="error">{t('error.message')}</Text>}
 		</form>
 	);
 }

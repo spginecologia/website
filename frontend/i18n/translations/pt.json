@@ -493,12 +493,12 @@
 				"placeholder": "email@exemplo.pt"
 			},
 			"error": {
-				"message": "Email ou password incorretos.",
+				"message": "Login falhou. Email ou password incorretos.",
 				"retry": "Tentar Novamente"
 			},
 			"password": {
 				"label": "Password",
-				"placeholder": "• • • • • •"
+				"placeholder": "Introduza a sua password"
 			},
 			"submit": {
 				"label": "Iniciar Sessão"

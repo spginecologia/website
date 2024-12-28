@@ -65,8 +65,8 @@ export function FooterNewsletter() {
 				<h3 className={styles.subtitle}>{t('subtitle')}</h3>
 			</div>
 			<form className={styles.form} onSubmit={form.onSubmit(handleFormSubmit)}>
-				<TextInput aria-label={t('form.name.label')} placeholder={t('form.name.placeholder')} {...form.getInputProps('name')} />
-				<TextInput aria-label={t('form.email.label')} placeholder={t('form.email.placeholder')} {...form.getInputProps('email')} />
+				<TextInput aria-label={t('form.name.label')} placeholder={t('form.name.placeholder')} variant="contrast" {...form.getInputProps('name')} />
+				<TextInput aria-label={t('form.email.label')} placeholder={t('form.email.placeholder')} variant="contrast" {...form.getInputProps('email')} />
 			</form>
 		</div>
 	);

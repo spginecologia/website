@@ -42,8 +42,21 @@
     text-transform: uppercase;
 }
 
+.wrapper[data-with-left-section="true"] .input {
+	padding-left: calc(var(--size-spacing-15) + 30px);
+}
+
+.wrapper[data-with-right-section="true"] .input {
+	padding-right: calc(var(--size-spacing-15) + 30px);
+}
+
+.section[data-position="left"] {
+	pointer-events: none;
+}
+
+
 /* * */
-/* VARIANT PRIMARY */
+/* VARIANT / PRIMARY */
 
 .variantPrimary.input {
 	border-bottom-color: var(--color-brand-primary-200);
@@ -79,20 +92,41 @@
     border-bottom-color: var(--color-state-error);
 }
 
-/* * */
-
-
-.wrapper[data-with-left-section="true"] .input {
-	padding-left: calc(var(--size-spacing-15) + 30px);
-}
-
-.wrapper[data-with-right-section="true"] .input {
-	padding-right: calc(var(--size-spacing-15) + 30px);
-}
 
 /* * */
-/* SECTION */
+/* VARIANT / CONTRAST */
 
-.section[data-position="left"] {
-	pointer-events: none;
+.variantContrast.input {
+	color: var(--color-reference-white);
+	border-bottom-color: rgb(255 255 255 / 75%);;
+}
+
+.variantContrast.input:hover {
+	background: rgb(255 255 255 / 5%);
+}
+
+.variantContrast.input:focus {
+	background: transparent;
+	border-bottom-color: var(--color-reference-white);
+}
+
+.variantContrast.input::placeholder {
+	color: rgb(255 255 255 / 50%);
+}
+
+.variantContrast.input:focus::placeholder {
+  color: rgb(255 255 255 / 15%);
+}
+
+.variantContrast.label {
+    font-size: 15px;
+    font-weight: 700;
+	color: var(--color-reference-white);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.variantContrast.input[data-error="true"] {
+	background: var(--color-state-error-background);
+    border-bottom-color: var(--color-state-error);
 }

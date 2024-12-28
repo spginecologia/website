@@ -2,9 +2,8 @@
 
 /* * */
 
-import { Loader } from '@/components/common/Loader';
 import Section from '@/components/FrontendSection/FrontendSection';
-import { Paper } from '@mantine/core';
+import { Paper, Skeleton } from '@mantine/core';
 import { useEffect, useState } from 'react';
 
 import styles from './styles.module.css';
@@ -48,7 +47,12 @@ export function AuthWrapper({ children }) {
 	if (isLoading) {
 		return (
 			<div className={styles.container}>
-				<Loader fixed visible />
+				<Section first>
+					<div className={styles.grid}>
+						<Skeleton height={350} />
+						<div className={styles.advert} />
+					</div>
+				</Section>
 			</div>
 		);
 	}
