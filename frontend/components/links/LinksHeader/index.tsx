@@ -2,11 +2,11 @@
 
 import { SpgLogoCompact } from '@/assets/spg';
 
-import styles from './OtherLinksHeader.module.css';
+import styles from './styles.module.css';
 
 /* * */
 
-export default function OtherLinksHeader() {
+export function LinksHeader() {
 	return (
 		<div className={styles.container}>
 			<div className={styles.logoWrapper}>

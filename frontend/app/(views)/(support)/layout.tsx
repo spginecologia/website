@@ -2,20 +2,20 @@
 
 /* * */
 
-import { WebsiteViewport } from '@/components/viewport/WebsiteViewport';
+import { SupportViewport } from '@/components/viewport/SupportViewport';
 import { ThemeProviders } from '@/providers/theme-providers';
-import { websiteTheme } from '@/themes/website/website.theme';
+import { supportTheme } from '@/themes/support/support.theme';
 import { Notifications } from '@mantine/notifications';
 
 /* * */
 
 export default function Providers({ children }) {
 	return (
-		<ThemeProviders themeData={websiteTheme}>
+		<ThemeProviders themeData={supportTheme}>
 			<Notifications styles={{ root: { marginTop: '60px' } }} />
-			<WebsiteViewport>
+			<SupportViewport>
 				{children}
-			</WebsiteViewport>
+			</SupportViewport>
 		</ThemeProviders>
 	);
 }

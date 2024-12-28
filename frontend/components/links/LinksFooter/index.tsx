@@ -1,10 +1,10 @@
 /* * */
 
-import styles from './OtherLinksFooter.module.css';
+import styles from './styles.module.css';
 
 /* * */
 
-export default function OtherLinksFooter() {
+export function LinksFooter() {
 	return (
 		<div className={styles.container}>
 			<p className={styles.disclaimer}>SPG @ 2024</p>

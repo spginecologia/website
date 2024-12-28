@@ -4,7 +4,7 @@
 .container {
 	display: flex;
 	flex-direction: column;
-	gap: 50px;
 	width: 100%;
-	padding-bottom: 60px;
+	height: 100%;
+	background-color: var(--color-reference-0);
 }

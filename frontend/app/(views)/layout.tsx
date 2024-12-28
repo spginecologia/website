@@ -1,6 +1,7 @@
 /* * */
 
 import { availableFormats } from '@/i18n/config';
+import { ConfigProviders } from '@/providers/config-providers';
 import { DM_Serif_Display } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages } from 'next-intl/server';
@@ -50,7 +51,9 @@ export default async function RootLayout({ children }) {
 					messages={messages}
 				>
 					<NuqsAdapter>
-						{children}
+						<ConfigProviders>
+							{children}
+						</ConfigProviders>
 					</NuqsAdapter>
 				</NextIntlClientProvider>
 			</body>

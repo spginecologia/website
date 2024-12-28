@@ -10,11 +10,7 @@ import { createTheme } from '@mantine/core';
 export const websiteTheme = createTheme({
 	//
 
-	components: {
-
-		...defaultTheme.components,
-
-	},
+	...defaultTheme,
 
 	//
 });
