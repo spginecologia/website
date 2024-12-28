@@ -211,7 +211,7 @@
 			"title": "Olá {name}"
 		},
 		"AccountPayments": {
-			"subtitle": "Faça a gestão autónoma dos pagamentos da sua quota de sócio.",
+			"subtitle": "Faça a gestão autónoma das suas quotas de sócio.",
 			"title": "Pagamentos & Faturas"
 		},
 		"AccountPaymentsCheckout": {
@@ -222,7 +222,7 @@
 			},
 			"error": "Erro ao carregar histórico",
 			"loading": "A carregar histórico...",
-			"no_data": "Nenhum Item Disponível",
+			"no_data": "Nenhum item disponível",
 			"table": {
 				"body": {
 					"amount": "{value, number, currency_euro}",
@@ -250,8 +250,8 @@
 			}
 		},
 		"AccountProfile": {
-			"subtitle": "Todas as suas informações",
-			"title": "Dados Pessoais"
+			"subtitle": "Aceda e atualize os seus dados pessoais.",
+			"title": "Perfil de Sócio"
 		},
 		"AccountProfileEdit": {
 			"actions": {
@@ -358,7 +358,7 @@
 					}
 				},
 				"tax_id": {
-					"description": "Por favor indique o seu NIF pessoal. Por motivos alheios não podemos aceitar NIFs institucionais. Pode pedir emissão de fatura com outro NIF. Para alterar este campo por favor entre em contacto com o Secretariado SPG.",
+					"description": "O seu NIF pessoal. Por motivos alheios não podemos aceitar NIFs institucionais. Pode pedir emissão de fatura com outro NIF. Para alterar este campo por favor entre em contacto com o Secretariado SPG.",
 					"label": "Número de Contribuinte",
 					"placeholder": "000 000 000"
 				},
@@ -396,8 +396,13 @@
 			}
 		},
 		"AccountVideos": {
-			"subtitle": "Todos os seus videos",
-			"title": "Videos"
+			"subtitle": "Todos os vídeos cirúrgicos que publicou.",
+			"title": "Vídeos Cirúrgicos"
+		},
+		"AccountVideosList": {
+			"error": "Erro ao carregar vídeos",
+			"loading": "A carregar vídeos...",
+			"no_data": "Ainda não publicou nenhum vídeo cirúrgico"
 		},
 		"PaymentStatus": {
 			"paid": "OK",

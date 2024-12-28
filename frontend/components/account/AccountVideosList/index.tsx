@@ -6,6 +6,8 @@ import type { Video } from '@/payload-types';
 import type { PayloadAPIResponse } from '@/types/payload-api-response';
 
 import { VideoCardRelated } from '@/components/videos/VideoCardRelated';
+import { Text } from '@mantine/core';
+import { useTranslations } from 'next-intl';
 import { useMemo } from 'react';
 import useSWR from 'swr';
 
@@ -17,12 +19,17 @@ export function AccountVideosList() {
 	//
 
 	//
-	// A. Fetch data
+	// A. Setup variables
 
-	const { data: accountVideosData } = useSWR<PayloadAPIResponse<Video>>('/api/account/videos');
+	const t = useTranslations('account.AccountVideosList');
 
 	//
-	// B. Transform data
+	// B. Fetch data
+
+	const { data: accountVideosData, error: accountVideosError, isLoading: accountVideosLoading } = useSWR<PayloadAPIResponse<Video>>('/api/account/videos');
+
+	//
+	// C. Transform data
 
 	const videosListData = useMemo<Video[]>(() => {
 		if (!accountVideosData) return [];
@@ -30,7 +37,19 @@ export function AccountVideosList() {
 	}, [accountVideosData]);
 
 	//
-	// C. Render components
+	// D. Render components
+
+	if (accountVideosLoading) {
+		return <Text variant="overline">{t('loading')}</Text>;
+	}
+
+	if (accountVideosError) {
+		return <Text variant="overline">{t('error')}</Text>;
+	}
+
+	if (!videosListData.length) {
+		return <Text variant="overline">{t('no_data')}</Text>;
+	}
 
 	return (
 		<div className={styles.container}>

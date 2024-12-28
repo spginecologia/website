@@ -7,6 +7,7 @@ import { UserOptions } from '@/schemas/User/options';
 /* * */
 
 export const Users: CollectionConfig = {
+
 	access: {
 		// update: ({ id, req: { user } }) => {
 		// 	if (!user || !id) return false;
@@ -14,10 +15,13 @@ export const Users: CollectionConfig = {
 		// 	return false;
 		// },
 	},
+
 	admin: {
 		useAsTitle: 'email',
 	},
+
 	auth: true,
+
 	fields: [
 		{
 			tabs: [
@@ -249,5 +253,7 @@ export const Users: CollectionConfig = {
 			type: 'select',
 		},
 	],
+
 	slug: 'users',
+
 };

@@ -11,6 +11,7 @@ import { UserValidation } from '@/schemas/User/validation';
 import { Button, Checkbox, Select, Space, Text, TextInput } from '@mantine/core';
 import { DateInput } from '@mantine/dates';
 import { useForm, zodResolver } from '@mantine/form';
+import { notifications } from '@mantine/notifications';
 import { useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';
 import useSWR from 'swr';
@@ -43,7 +44,12 @@ export function AccountProfileEdit() {
 		// Return if no form or form is dirty
 		if (!form || form.isDirty()) return;
 		// Update form with user data
-		form.setInitialValues(userData.user);
+		form.setInitialValues({
+			...UserDefault,
+			...userData.user,
+			billing_tax_id: String(userData.user.billing_tax_id),
+			birthday: userData.user.birthday ? new Date(userData.user.birthday) : null,
+		});
 		form.reset();
 		//
 	}, [userData]);
@@ -65,6 +71,7 @@ export function AccountProfileEdit() {
 			form.reset();
 			userMutate();
 			setIsLoading(false);
+			notifications.show({ color: 'teal', message: 'O seu perfil foi atualizado com sucesso', title: 'Dados Atualizados!' });
 		}
 		catch (error) {
 			console.log(error);
@@ -79,6 +86,12 @@ export function AccountProfileEdit() {
 		clearInputErrorOnChange: true,
 		initialValues: UserDefault,
 		onValuesChange: handleValuesChange,
+		transformValues: (values) => {
+			console.log(values.birthday);
+			const birthday = values.birthday ? new Date(values.birthday) : null;
+			const subscribed_sections = values.subscribed_sections || [];
+			return { ...values, birthday, subscribed_sections };
+		},
 		validate: zodResolver(UserValidation),
 	});
 
@@ -98,14 +111,14 @@ export function AccountProfileEdit() {
 			</FormSection>
 
 			<FormSection description={t('sections.basic.description')} title={t('sections.basic.title')}>
-				<TextInput description={t('fields.tax_id.description')} label={t('fields.tax_id.label')} placeholder={t('fields.tax_id.placeholder')} disabled readOnly {...form.getInputProps('tax_id')} />
-				<TextInput description={t('fields.medical_id.description')} label={t('fields.medical_id.label')} placeholder={t('fields.medical_id.placeholder')} disabled readOnly {...form.getInputProps('medical_id')} />
+				<TextInput description={t('fields.tax_id.description')} label={t('fields.tax_id.label')} placeholder={t('fields.tax_id.placeholder')} value={userData?.user.tax_id || ''} disabled readOnly />
+				<TextInput description={t('fields.medical_id.description')} label={t('fields.medical_id.label')} placeholder={t('fields.medical_id.placeholder')} value={userData?.user.medical_id || ''} disabled readOnly />
 				<DateInput label={t('fields.birthday.label')} placeholder={t('fields.birthday.placeholder')} {...form.getInputProps('birthday')} />
 			</FormSection>
 
 			<FormSection description={t('sections.billing.description')} title={t('sections.billing.title')}>
 				<TextInput description={t('fields.billing_name.description')} label={t('fields.billing_name.label')} placeholder={t('fields.billing_name.placeholder')} {...form.getInputProps('billing_name')} />
-				<TextInput description={t('fields.billing_tax_id.description')} label={t('fields.billing_tax_id.label')} placeholder={t('fields.billing_tax_id.placeholder')} {...form.getInputProps('billing_tax_id')} />
+				<TextInput description={t('fields.billing_tax_id.description')} label={t('fields.billing_tax_id.label')} placeholder={t('fields.billing_tax_id.placeholder')} type="number" {...form.getInputProps('billing_tax_id')} />
 				<TextInput description={t('fields.billing_address_1.description')} label={t('fields.billing_address_1.label')} placeholder={t('fields.billing_address_1.placeholder')} {...form.getInputProps('billing_address_1')} />
 				<TextInput label={t('fields.billing_address_2.label')} placeholder={t('fields.billing_address_2.placeholder')} {...form.getInputProps('billing_address_2')} />
 				<TextInput label={t('fields.billing_postal_code.label')} placeholder={t('fields.billing_postal_code.placeholder')} {...form.getInputProps('billing_postal_code')} />

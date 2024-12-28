@@ -27,7 +27,10 @@ export async function POST(request: Request) {
 		//
 		// Validate the form data
 
-		const validationResult = UserValidation.parse(data);
+		const validationResult = UserValidation.parse({
+			...data,
+			birthday: data.birthday ? new Date(data.birthday) : null,
+		});
 
 		//
 		// Update the user
