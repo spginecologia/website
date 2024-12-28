@@ -2,6 +2,8 @@
 
 /* * */
 
+import type { PayloadMeResponse } from '@/types/payload-api-response';
+
 import { FormSection } from '@/components/common/FormSection';
 import { UserDefault } from '@/schemas/User/default';
 import { UserOptions } from '@/schemas/User/options';
@@ -30,7 +32,7 @@ export function AccountProfileEdit() {
 	//
 	// B. Fetch data
 
-	const { data: userData, mutate: userMutate } = useSWR('/api/users/me');
+	const { data: userData, mutate: userMutate } = useSWR<PayloadMeResponse>('/api/users/me');
 
 	//
 	// D. Handle actions

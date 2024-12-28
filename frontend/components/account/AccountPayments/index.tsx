@@ -1,6 +1,7 @@
 /* * */
 
 import { AccountPaymentsCheckout } from '@/components/account/AccountPaymentsCheckout';
+import { AccountPaymentsInvoices } from '@/components/account/AccountPaymentsInvoices';
 import { Paper, Space, Text, Title } from '@mantine/core';
 import { useTranslations } from 'next-intl';
 
@@ -23,6 +24,8 @@ export function AccountPayments() {
 			<Text>{t('subtitle')}</Text>
 			<Space h="md" />
 			<AccountPaymentsCheckout />
+			<Space h="md" />
+			<AccountPaymentsInvoices />
 		</Paper>
 	);
 
