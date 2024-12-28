@@ -31,7 +31,7 @@ export function AccountPaymentsInvoices() {
 	// C. Transform data
 
 	const tableData = useMemo<TableData>(() => {
-		const bodyData = userData?.user.invoices?.map((invoiceItem) => {
+		const bodyData = userData?.user?.invoices?.map((invoiceItem) => {
 			return [
 				invoiceItem.invoice_number,
 				invoiceItem.invoice_date,
@@ -39,7 +39,7 @@ export function AccountPaymentsInvoices() {
 			];
 		});
 		return {
-			body: bodyData,
+			body: bodyData || [],
 			head: [t('table.head.invoice_number'), t('table.head.invoice_date'), ''],
 		};
 	}, [userData]);
