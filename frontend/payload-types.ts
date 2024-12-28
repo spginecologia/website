@@ -17,6 +17,7 @@ export interface Config {
     document: Document;
     events: Event;
     guidelines: Guideline;
+    links: Link;
     topics: Topic;
     media: Media;
     news: News;
@@ -35,6 +36,7 @@ export interface Config {
     document: DocumentSelect<false> | DocumentSelect<true>;
     events: EventsSelect<false> | EventsSelect<true>;
     guidelines: GuidelinesSelect<false> | GuidelinesSelect<true>;
+    links: LinksSelect<false> | LinksSelect<true>;
     topics: TopicsSelect<false> | TopicsSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
     news: NewsSelect<false> | NewsSelect<true>;
@@ -232,6 +234,21 @@ export interface Guideline {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "links".
+ */
+export interface Link {
+  id: string;
+  title: string;
+  subtitle?: string | null;
+  href: string;
+  sort_order: number;
+  is_active?: boolean | null;
+  is_featured?: boolean | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "news".
  */
 export interface News {
@@ -424,6 +441,10 @@ export interface PayloadLockedDocument {
         value: string | Guideline;
       } | null)
     | ({
+        relationTo: 'links';
+        value: string | Link;
+      } | null)
+    | ({
         relationTo: 'topics';
         value: string | Topic;
       } | null)
@@ -599,6 +620,20 @@ export interface GuidelinesSelect<T extends boolean = true> {
   url?: T;
   topics?: T;
   featured_image?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "links_select".
+ */
+export interface LinksSelect<T extends boolean = true> {
+  title?: T;
+  subtitle?: T;
+  href?: T;
+  sort_order?: T;
+  is_active?: T;
+  is_featured?: T;
   updatedAt?: T;
   createdAt?: T;
 }

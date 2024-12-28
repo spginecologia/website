@@ -1,10 +1,10 @@
 .title {
-  font-family: 'lemonde-journal';
-  color: var(--color-reference-1);
+  font-family: lemonde-journal;
   font-weight: 700;
   line-height: 1.2;
+  color: var(--color-reference-black);
   text-align: left;
-  letter-spacing: 0px;
+  letter-spacing: 0;
 }
 
 h1.title {

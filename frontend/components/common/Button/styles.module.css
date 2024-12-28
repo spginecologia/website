@@ -7,7 +7,7 @@
   font-size: 14px;
   font-weight: 700;
   line-height: 1.3;
-  color: var(--color-reference-1);
+  color: var(--color-reference-black);
   text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
@@ -20,26 +20,26 @@
 /* DEFAULT */
 
 .default {
-  color: var(--spg-brand-1);
-  border-color: var(--spg-brand-1);
+  color: var(--color-brand-primary-100);
+  border-color: var(--color-brand-primary-100);
 }
 
 .default:hover {
-  color: var(--color-reference-0);
-  background-color: var(--spg-brand-1);
-  border-color: var(--spg-brand-1);
+  color: var(--color-reference-white);
+  background-color: var(--color-brand-primary-100);
+  border-color: var(--color-brand-primary-100);
 }
 
 /* * */
 /* MUTED */
 
 .muted {
-  color: var(--spg-support-4);
-  border-color: var(--spg-support-4);
+  color: var(--color-brand-support-400);
+  border-color: var(--color-brand-support-400);
 }
 
 .muted:hover {
-  color: var(--color-reference-0);
-  background-color: var(--spg-support-4);
-  border-color: var(--spg-support-4);
+  color: var(--color-reference-white);
+  background-color: var(--color-brand-support-400);
+  border-color: var(--color-brand-support-400);
 }

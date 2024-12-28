@@ -6,9 +6,6 @@
 	--color-brand-primary-100: #a0285a;
 	--color-brand-primary-200: #b46996;
 	--color-brand-primary-300: #f5cdcd;
-	--spg-brand-1: #a0285a;
-	--spg-brand-2: #b46996;
-	--spg-brand-3: #f5cdcd;
 
 	/* * */
 	/* COLOR / BRAND / SUPPORT */
@@ -18,20 +15,14 @@
 	--color-brand-support-300: #ebe9e6;
 	--color-brand-support-400: #a09696;
 	--color-brand-support-500: #645a69;
-	--spg-support-1: #870f50;
-	--spg-support-2: #64003c;
-	--spg-support-3: #ebe9e6;
-	--spg-support-4: #a09696;
-	--spg-support-5: #645a69;
 
 	/* * */
 	/* COLOR / REFERENCE */
 
 	--color-reference-white: #fff;
 	--color-reference-black: #000;
-	--color-reference-0: #fff;
-	--color-reference-1: #000;
 
+	/* * */
 	/* COLOR / STATE */
 
 	--color-state-success: #3ca06e;

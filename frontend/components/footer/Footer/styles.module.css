@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color: var(--spg-brand-2);
+  background-color: var(--color-brand-primary-200);
 }
 
 /* * */
@@ -13,15 +13,15 @@
 
 .primaryWrapper {
   width: 100%;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgb(255 255 255 / 20%);
 }
 
 .primary {
   display: grid;
   grid-template-columns: 200px 1fr minmax(200px, auto);
+  gap: 75px;
   align-items: flex-start;
   justify-content: stretch;
-  gap: 75px;
   width: 100%;
   max-width: var(--frontend-global-width);
   padding: 50px var(--frontend-global-padding);
@@ -38,9 +38,9 @@
 .secondary {
   display: flex;
   flex-direction: row;
+  gap: 30px;
   align-items: center;
   justify-content: space-between;
-  gap: 30px;
   width: 100%;
   max-width: var(--frontend-global-width);
   padding: 20px var(--frontend-global-padding);

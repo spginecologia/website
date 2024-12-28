@@ -2,7 +2,7 @@
 /* TEXT */
 
 .text {
-  color: var(--spg-support-4);
   font-size: 15px;
   font-weight: 500;
+  color: var(--color-brand-support-400);
 }

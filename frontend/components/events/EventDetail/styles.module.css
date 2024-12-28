@@ -61,13 +61,13 @@
   font-size: 23px;
   font-weight: 600;
   line-height: 1.5;
-  color: var(--color-reference-1);
+  color: var(--color-reference-black);
   text-align: left;
 }
 
 .newsBody a {
   font-weight: 700;
-  color: var(--spg-brand-1);
+  color: var(--color-brand-primary-100);
 }
 
 .newsBody a:hover {

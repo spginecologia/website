@@ -8,12 +8,12 @@
 	font-size: 14px;
 	font-weight: var(--font-weight-bold);
 	line-height: 1.3;
-	color: var(--color-reference-1);
+	color: var(--color-reference-black);
 	text-decoration: none;
 	text-transform: uppercase;
 	cursor: pointer;
 	background-color: transparent;
-	border: 2px solid var(--color-reference-1);
+	border: 2px solid var(--color-reference-black);
 	border-radius: 0;
 	transition: all 300ms ease;
 }
@@ -86,14 +86,14 @@
 /* VARIANT / MUTED */
 
 .root.variantMuted {
-	color: var(--spg-support-4);
-	border-color: var(--spg-support-4);
+	color: var(--color-brand-support-400);
+	border-color: var(--color-brand-support-400);
 }
 
 .root.variantMuted:hover {
 	color: var(--color-reference-white);
-	background-color: var(--spg-support-4);
-	border-color: var(--spg-support-4);
+	background-color: var(--color-brand-support-400);
+	border-color: var(--color-brand-support-400);
 }
 
 /* * */

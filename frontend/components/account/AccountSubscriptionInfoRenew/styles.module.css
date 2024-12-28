@@ -7,7 +7,7 @@
   gap: 5px;
   align-items: center;
   justify-content: flex-start;
-  color: var(--spg-support-5);
+  color: var(--color-brand-support-500);
 }
 
 /* * */
@@ -16,6 +16,6 @@
 .label {
   font-size: 14px;
   font-weight: 700;
-  text-transform: uppercase;
   line-height: 1.4;
+  text-transform: uppercase;
 }

@@ -2,22 +2,21 @@
 /* CONTAINER */
 
 .container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  background-color: var(--color-reference-0);
-
-  padding: var(--size-xl);
-  align-items: center;
-  justify-content: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	padding: var(--size-xl);
+	background-color: var(--color-reference-white);
 }
 
 /* * */
 /* DISCLAIMER */
 
 .disclaimer {
-  color: var(--color-reference-1);
-  opacity: 0.3;
-  font-size: 12px;
-  font-weight: 600;
+	font-size: 12px;
+	font-weight: 600;
+	color: var(--color-reference-black);
+	opacity: 0.3;
 }

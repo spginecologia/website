@@ -13,6 +13,7 @@ import { Courses } from '@/schemas/Course/collection';
 import { Documents } from '@/schemas/Document/collection';
 import { Event } from '@/schemas/Event/collection';
 import { Guidelines } from '@/schemas/Guideline/collection';
+import { Links } from '@/schemas/Link/collection';
 import { Media } from '@/schemas/Media/collection';
 import { News } from '@/schemas/News/collection';
 import { Publications } from '@/schemas/Publication/collection';
@@ -37,6 +38,7 @@ export default buildConfig({
 		Documents,
 		Event,
 		Guidelines,
+		Links,
 		Topics,
 		Media,
 		News,
