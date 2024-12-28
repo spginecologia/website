@@ -72,9 +72,9 @@ export function AccountPaymentsCheckout() {
 							<Button size="xs" type="submit">{t('alert.action')}</Button>
 						</form>
 					</Alert>
+					<Space h="md" />
 				</>
 			)}
-			<Space h="md" />
 			<Table data={tableData} layout="fixed" withTableBorder />
 		</>
 	);

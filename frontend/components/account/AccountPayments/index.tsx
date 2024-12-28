@@ -22,9 +22,9 @@ export function AccountPayments() {
 		<Paper>
 			<Title order={2}>{t('title')}</Title>
 			<Text>{t('subtitle')}</Text>
-			<Space h="md" />
+			<Space h="xl" />
 			<AccountPaymentsCheckout />
-			<Space h="md" />
+			<Space h="xl" />
 			<AccountPaymentsInvoices />
 		</Paper>
 	);
