@@ -8,7 +8,7 @@ import { Space } from '@mantine/core';
 
 export default function Page() {
 	return (
-		<Section topSpacerType='transparent'>
+		<Section topSpacerType="transparent">
 			<NoDataLabel text="Prémio SPG" />
 			<Space h={300} />
 		</Section>
