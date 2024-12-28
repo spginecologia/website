@@ -40,25 +40,25 @@ export async function POST(request: Request) {
 		// This associates the Stripe customer ID with the website user,
 		// allowing the website to display the user's purchase history.
 
-		// if (event.type === 'checkout.session.completed') {
-		// 	// Ensure the event has a user ID
-		// 	const userId = event.data.object.client_reference_id;
-		// 	if (!userId) throw new Error('Event has no user ID');
-		// 	// Find the user in the database
-		// 	const userData = await payload.findByID({ collection: 'users', id: userId });
-		// 	if (!userData) throw new Error('User not found');
-		// 	// Update the user's Stripe ID
-		// 	if (!event.data.object.customer) throw new Error('Event has no customer ID');
-		// 	await payload.update({
-		// 		collection: 'users',
-		// 		data: {
-		// 			stripe_id: event.data.object.customer.toString(),
-		// 		},
-		// 		id: userData.id,
-		// 	});
-		// 	// console.log('checkout.session.completed', event);
-		// 	return Response.json({ received: true });
-		// }
+		if (event.type === 'checkout.session.completed') {
+			// Ensure the event has a user ID
+			const userId = event.data.object.client_reference_id;
+			if (!userId) throw new Error('Event has no user ID');
+			// Find the user in the database
+			const userData = await payload.findByID({ collection: 'users', id: userId });
+			if (!userData) throw new Error('User not found');
+			// Update the user's Stripe ID
+			if (!event.data.object.customer) throw new Error('Event has no customer ID');
+			await payload.update({
+				collection: 'users',
+				data: {
+					stripe_id: event.data.object.customer.toString(),
+				},
+				id: userData.id,
+			});
+			// console.log('checkout.session.completed', event);
+			return Response.json({ received: true });
+		}
 
 		//
 		// Handle the "charge.succeeded" event.
@@ -89,8 +89,8 @@ export async function POST(request: Request) {
 			const payloadResponse = await payload.find({ collection: 'users', where: { email: { equals: stripeCustomerData.email } } });
 			if (!payloadResponse || !payloadResponse.docs.length) throw new Error(`User not found for email: ${stripeCustomerData.email}`);
 			const userData = payloadResponse.docs[0];
-			// Prepare invoice client
-			const invoiceClient: VendusTransactionClient = {
+			// Prepare transaction client
+			const transactionClient: VendusTransactionClient = {
 				address: `${userData.billing_address_1 || userData.address_1 || ''} ${userData.billing_address_2 || userData.address_2 || ''}`,
 				city: userData.billing_city || userData.city || undefined,
 				country: 'PT',
@@ -98,10 +98,10 @@ export async function POST(request: Request) {
 				name: userData.billing_name || userData.full_name || undefined,
 				postalcode: userData.billing_postal_code || userData.postal_code || undefined,
 			};
-			// Prepare invoice items
-			const invoiceItems: VendusTransactionItem[] = foundCheckoutSessions.data[0].line_items.data.map((lineItem) => {
+			// Prepare transaction items
+			const transactionItems: VendusTransactionItem[] = foundCheckoutSessions.data[0].line_items.data.map((lineItem) => {
 				return {
-					gross_price: lineItem.amount_total,
+					gross_price: lineItem.amount_total / 100,
 					qty: lineItem.quantity || 1,
 					reference: lineItem.id,
 					tax_id: 'NOR',
@@ -109,13 +109,29 @@ export async function POST(request: Request) {
 				};
 			});
 			// Generate the invoice
-			const invoice = await vendusCreateInvoice({
-				client: invoiceClient,
-				items: invoiceItems,
+			const invoiceData = await vendusCreateInvoice({
+				client: transactionClient,
+				external_reference: `Charge ID: ${event.data.object.id}`,
+				items: transactionItems,
+				notes: `Método de pagamento: ${event.data.object.payment_method_details?.type || 'Desconhecido'}`,
 			});
-
-			console.log(invoice);
-			//
+			// Save the invoice to the user's account
+			await payload.update({
+				collection: 'users',
+				data: {
+					invoices: [
+						...userData.invoices || [],
+						{
+							invoice_date: invoiceData.date,
+							invoice_id: invoiceData.id,
+							invoice_number: invoiceData.number,
+							invoice_system_time: invoiceData.system_time,
+						},
+					],
+				},
+				id: userData.id,
+			});
+			// Acknowledge the event
 			return Response.json({ received: true });
 		}
 

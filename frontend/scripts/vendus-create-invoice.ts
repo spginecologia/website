@@ -19,11 +19,14 @@ export interface VendusTransactionClient {
 
 export interface VendusTransaction {
 	client?: VendusTransactionClient
+	external_reference?: string
 	items: VendusTransactionItem[]
+	notes?: string
 }
 
 interface VendusInvoiceableTransaction extends VendusTransaction {
 	mode: 'normal' | 'tests'
+	output: 'auto' | 'html' | 'pdf'
 	payments: { id: string }[]
 	register_id: string
 	type: 'FT'
@@ -66,6 +69,7 @@ export async function vendusCreateInvoice(transactionData: VendusTransaction): P
 	const invoiceableTransactionData: VendusInvoiceableTransaction = {
 		...transactionData,
 		mode: process.env.VENDUS_WORKMODE as VendusInvoiceableTransaction['mode'] || 'tests',
+		output: 'auto',
 		payments: [{ id: process.env.VENDUS_PAYMENT_ID }],
 		register_id: process.env.VENDUS_REGISTER_ID,
 		type: 'FT',

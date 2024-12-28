@@ -312,6 +312,15 @@ export interface User {
   billing_postal_code?: string | null;
   billing_city?: string | null;
   stripe_id?: string | null;
+  invoices?:
+    | {
+        invoice_number?: string | null;
+        invoice_date?: string | null;
+        invoice_id?: string | null;
+        invoice_system_time?: string | null;
+        id?: string | null;
+      }[]
+    | null;
   account_status?: ('active' | 'pending') | null;
   updatedAt: string;
   createdAt: string;
@@ -678,6 +687,15 @@ export interface UsersSelect<T extends boolean = true> {
   billing_postal_code?: T;
   billing_city?: T;
   stripe_id?: T;
+  invoices?:
+    | T
+    | {
+        invoice_number?: T;
+        invoice_date?: T;
+        invoice_id?: T;
+        invoice_system_time?: T;
+        id?: T;
+      };
   account_status?: T;
   updatedAt?: T;
   createdAt?: T;

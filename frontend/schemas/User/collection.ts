@@ -188,6 +188,47 @@ export const Users: CollectionConfig = {
 							name: 'stripe_id',
 							type: 'text',
 						},
+						{
+							fields: [
+								{
+									fields: [
+										{
+											label: 'Nº da Fatura',
+											name: 'invoice_number',
+											type: 'text',
+										},
+										{
+											label: 'Data de Emissão',
+											name: 'invoice_date',
+											type: 'text',
+										},
+										{
+											label: 'ID de Sistema',
+											name: 'invoice_id',
+											type: 'text',
+										},
+										{
+											label: 'Hora de Sistema',
+											name: 'invoice_system_time',
+											type: 'text',
+										},
+									],
+									type: 'row',
+								},
+								{
+									admin: {
+										components: {
+											Field: '@/components/payload/OpenInvoiceButton',
+										},
+									},
+									name: 'open_pdf',
+									type: 'ui',
+								},
+							],
+							label: 'Faturas',
+							name: 'invoices',
+							type: 'array',
+						},
 					],
 					label: 'Faturação',
 				},
