@@ -41,6 +41,7 @@ export default async function RootLayout({ children }) {
 	return (
 		<html className={dmSerifDisplay.variable} lang={locale}>
 			<head>
+				<meta content="SPG" name="apple-mobile-web-app-title" />
 				<meta content="transparent" name="theme-color" />
 				<link href="https://use.typekit.net/xgs1heq.css" rel="stylesheet" />
 			</head>
