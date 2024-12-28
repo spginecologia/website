@@ -26,6 +26,13 @@
     letter-spacing: 0;
 }
 
+/* * */
+/* SIZES */
+
 .root.sizeSm {
     font-size: 22px;
+}
+
+.root.sizeXs {
+    font-size: 18px;
 }

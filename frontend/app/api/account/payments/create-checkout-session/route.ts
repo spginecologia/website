@@ -2,7 +2,7 @@
 
 import { stripeGetBalanceStatus } from '@/scripts/stripe-get-balance-status';
 import { Purchase } from '@/types/payments';
-import config from '@payload-config';
+import payloadConfig from '@payload-config';
 import { getPayload } from 'payload';
 import Stripe from 'stripe';
 
@@ -12,7 +12,7 @@ export async function POST(request: Request) {
 	try {
 		//
 
-		const payload = await getPayload({ config });
+		const payload = await getPayload({ config: payloadConfig });
 		const stripeApi = new Stripe(process.env.STRIPE_SECRET_KEY ?? '', {});
 
 		//

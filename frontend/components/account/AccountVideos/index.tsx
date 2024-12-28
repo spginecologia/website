@@ -1,13 +1,8 @@
-'use client';
-
 /* * */
 
-import Text from '@/components/Text/Text';
-import Title from '@/components/Title/Title';
-import { Paper } from '@mantine/core';
+import { AccountVideosList } from '@/components/account/AccountVideosList';
+import { Paper, Space, Text, Title } from '@mantine/core';
 import { useTranslations } from 'next-intl';
-
-import styles from './styles.module.css';
 
 /* * */
 
@@ -24,10 +19,13 @@ export function AccountVideos() {
 
 	return (
 		<Paper>
-			<div className={styles.container}>
-				<Title level="h2" text={t('title')} />
-				<Text text={t('subtitle')} />
-			</div>
+			<Title order={2}>{t('title')}</Title>
+			<Space h="xs" />
+			<Text>{t('subtitle')}</Text>
+			<Space h="xl" />
+			<AccountVideosList />
 		</Paper>
 	);
+
+	//
 }

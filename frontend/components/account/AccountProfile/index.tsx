@@ -1,7 +1,7 @@
 /* * */
 
 import { AccountProfileEdit } from '@/components/account/AccountProfileEdit';
-import { Paper, Text, Title } from '@mantine/core';
+import { Paper, Space, Text, Title } from '@mantine/core';
 import { useTranslations } from 'next-intl';
 
 /* * */
@@ -20,7 +20,9 @@ export function AccountProfile() {
 	return (
 		<Paper>
 			<Title order={2}>{t('title')}</Title>
+			<Space h="xs" />
 			<Text>{t('subtitle')}</Text>
+			<Space h="xl" />
 			<AccountProfileEdit />
 		</Paper>
 	);

@@ -241,6 +241,9 @@ export default createTheme({
 				if (props.size === 'sm') {
 					defaultClasses = combineClasses(defaultClasses, [TitleOverride.sizeSm]);
 				}
+				if (props.size === 'xs') {
+					defaultClasses = combineClasses(defaultClasses, [TitleOverride.sizeXs]);
+				}
 				return defaultClasses;
 			},
 		}),

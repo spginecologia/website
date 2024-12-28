@@ -12,7 +12,7 @@ interface Props {
 	fullHeight?: boolean
 	href?: null | string
 	target?: '_blank' | '_self'
-	variant?: 'default' | 'featured'
+	variant?: 'compact' | 'default' | 'featured'
 }
 
 /* * */

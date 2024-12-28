@@ -55,3 +55,26 @@
 	border-color: var(--color-brand-primary-100);
 	box-shadow: 0 0 15px 0 rgb(0 0 0 / 15%);
 }
+
+/* * */
+/* VARIANT / COMPACT */
+
+.compact {
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	padding: 10px;
+	padding-right: 15px;
+	background-color: var(--color-reference-white);
+}
+
+.compact.asLink {
+	border: 1px solid transparent;
+	box-shadow: 0 0 15px 0 rgb(0 0 0 / 0%);
+	transition: all 300ms ease;
+}
+
+.compact.asLink:hover {
+	border-color: var(--color-brand-support-400);
+	box-shadow: 0 0 15px 0 rgb(0 0 0 / 5%);
+}

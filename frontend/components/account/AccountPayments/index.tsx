@@ -21,6 +21,7 @@ export function AccountPayments() {
 	return (
 		<Paper>
 			<Title order={2}>{t('title')}</Title>
+			<Space h="xs" />
 			<Text>{t('subtitle')}</Text>
 			<Space h="xl" />
 			<AccountPaymentsCheckout />

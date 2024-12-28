@@ -1,0 +1,20 @@
+/* * */
+/* CONTAINEER */
+
+.container {
+	display: grid;
+	grid-template-columns: 180px 1fr;
+	gap: 20px;
+}
+
+/* * */
+/* AUTHORS */
+
+.authors {
+	font-size: 14px;
+	font-style: italic;
+	font-weight: var(--font-weight-medium);
+	line-height: 1.4;
+	color: var(--color-brand-support-500);
+	text-align: left;
+}
