@@ -47,7 +47,6 @@ export async function stripeGetPastPurchases(stripeCustomerId: string): Promise<
 		return purchases;
 	}
 
-	console.log('customerCheckoutSessions.data.length', customerCheckoutSessions.data.length);
 	for (const checkoutSessionData of customerCheckoutSessions.data) {
 		//
 

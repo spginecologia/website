@@ -66,7 +66,7 @@ export function AccountPaymentsCheckout() {
 			{hasUnpaidOptions && (
 				<>
 					<Alert icon={<IconFlag3Filled />} title={t('alert.title')} w="100%">
-						<Text>{t('alert.message')}</Text>
+						<Text size="sm">{t('alert.message')}</Text>
 						<Space h="xs" />
 						<form action="/api/account/payments/create-checkout-session" method="POST">
 							<Button size="xs" type="submit">{t('alert.action')}</Button>

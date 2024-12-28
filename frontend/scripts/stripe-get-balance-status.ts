@@ -1,11 +1,8 @@
 /* * */
 
+import { stripeGetActiveProducts } from '@/scripts/stripe-get-active-products';
 import { stripeGetPastPurchases } from '@/scripts/stripe-get-past-purchases';
 import { Purchase } from '@/types/payments';
-
-import { stripeGetActiveProducts } from './stripe-get-active-products';
-
-/* * */
 
 /**
  * To return the balance status, we need to fetch the active products
@@ -36,11 +33,6 @@ export async function stripeGetBalanceStatus(stripeCustomerId?: null | string): 
 	catch (error) {
 		console.error('Error fetching active stripe products', error);
 		throw new Error('Error fetching active stripe products');
-	}
-
-	if (!stripeCustomerId) {
-		console.warn('No stripeCustomerId provided to stripeGetPastPurchases()');
-		return [];
 	}
 
 	//
