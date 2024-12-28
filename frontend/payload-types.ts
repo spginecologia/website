@@ -305,6 +305,12 @@ export interface User {
         | 'uroginecologia'
       )[]
     | null;
+  billing_name?: string | null;
+  billing_tax_id?: number | null;
+  billing_address_1?: string | null;
+  billing_address_2?: string | null;
+  billing_postal_code?: string | null;
+  billing_city?: string | null;
   stripe_id?: string | null;
   account_status?: ('active' | 'pending') | null;
   updatedAt: string;
@@ -665,6 +671,12 @@ export interface UsersSelect<T extends boolean = true> {
   workplace_primary?: T;
   workplace_secondary?: T;
   subscribed_sections?: T;
+  billing_name?: T;
+  billing_tax_id?: T;
+  billing_address_1?: T;
+  billing_address_2?: T;
+  billing_postal_code?: T;
+  billing_city?: T;
   stripe_id?: T;
   account_status?: T;
   updatedAt?: T;

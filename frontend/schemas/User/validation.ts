@@ -1,5 +1,6 @@
 /* * */
 
+import { UserOptions } from '@/schemas/User/options';
 import { z } from 'zod';
 
 /* * */
@@ -29,7 +30,7 @@ export const UserValidation = z.object({
 		.max(13, { message: 'Phone deve ser menor ou igual que 13 caracteres.' }),
 
 	title: z
-		.string()
+		.enum([...UserOptions.title] as [string, ...string[]])
 		.nullable(),
 
 });

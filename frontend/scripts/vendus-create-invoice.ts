@@ -9,16 +9,16 @@ export interface VendusTransactionItem {
 }
 
 export interface VendusTransactionClient {
-	address: string
-	country: string
-	email: string
-	fiscal_id: string
-	name: string
-	send_email: 'no' | 'yes'
+	address?: string
+	city?: string
+	country: 'PT'
+	fiscal_id?: string
+	name?: string
+	postalcode?: string
 }
 
 export interface VendusTransaction {
-	client: VendusTransactionClient
+	client?: VendusTransactionClient
 	items: VendusTransactionItem[]
 }
 
@@ -70,6 +70,15 @@ export async function vendusCreateInvoice(transactionData: VendusTransaction): P
 		register_id: process.env.VENDUS_REGISTER_ID,
 		type: 'FT',
 	};
+
+	// Remove the client object if it has no fiscal_id
+	if (!invoiceableTransactionData.client?.fiscal_id) {
+		delete invoiceableTransactionData.client;
+	}
+
+	console.log('-----------------------------');
+	console.log('invoiceableTransactionData', invoiceableTransactionData);
+	console.log('-----------------------------');
 
 	//
 	// Send the invoiceable transaction object to the Vendus API

@@ -1,25 +1,89 @@
 /* * */
-/* INPUT */
+/* ROOT */
+
+.root {
+	margin-bottom: 20px;
+}
+
+
+/* * */
+/* INPUT / DEFAULT */
 
 .input {
-	height: auto;
-	max-height: none;
-	font-size: 18px;
+	width: 100%;
+	padding: 4px 0 4px 1px;
+	font-size: 17px;
+	font-weight: 700;
 	line-height: 1;
-	padding: var(--size-spacing-15);
-	border-radius: 5px;
-	font-weight: var(--font-weight-medium);
-	border: 1px solid var(--color-system-border-200);
-	cursor: pointer;
-	background-color: var(--color-system-background-100);
+	color: var(--color-reference-black);
+	background: transparent;
+	border: none;
+	border-bottom: 2px solid var(--color-reference-black);
+	border-radius: 0;
+	outline: none;
 }
 
 .input::placeholder {
-	color: var(--color-system-text-300);
+	font-size: 15px;
+	color: var(--color-reference-black);
+	text-transform: uppercase;
 }
 
+.description {
+    font-size: 12px;
+    font-weight: var(--font-weight-medium);
+    color: var(--color-brand-support-500);
+}
+
+.error {
+    font-size: 12px;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-state-error);
+    text-transform: uppercase;
+}
+
+/* * */
+/* VARIANT PRIMARY */
+
+.variantPrimary.input {
+	border-bottom-color: var(--color-brand-primary-200);
+}
+
+.variantPrimary.input:hover {
+	background: rgb(0 0 0 / 2%);
+}
+
+.variantPrimary.input:focus {
+	background: transparent;
+	border-bottom-color: var(--color-brand-support-100);
+}
+
+.variantPrimary.input::placeholder {
+	color: var(--color-brand-support-400);
+}
+
+.variantPrimary.input:focus::placeholder {
+  color: rgb(0 0 0 / 15%);
+}
+
+.variantPrimary.label {
+    font-size: 15px;
+    font-weight: 700;
+	color: var(--color-brand-primary-200);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.variantPrimary.input[data-error="true"] {
+	background: var(--color-state-error-background);
+    border-bottom-color: var(--color-state-error);
+}
+
+/* * */
+
+
 .wrapper[data-with-left-section="true"] .input {
-	padding-left: calc(var(--size-spacing-15) + 33px);
+	padding-left: calc(var(--size-spacing-15) + 30px);
 }
 
 .wrapper[data-with-right-section="true"] .input {
@@ -29,55 +93,6 @@
 /* * */
 /* SECTION */
 
-.section {
-	display: flex;
-	width: auto;
-	padding: var(--size-spacing-15);
-	color: var(--color-system-text-300);
-}
-
 .section[data-position="left"] {
 	pointer-events: none;
-}
-
-.section.variantWhite {
-	color: var(--color-system-text-300);
-}
-
-/* * */
-/* DROPDOWN */
-
-.dropdown {
-	padding: 6px var(--size-spacing-5);
-	color: var(--color-system-text-300);
-	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
-	border-radius: 5px;
-	border: 1px solid var(--color-system-border-200);
-	background-color: var(--color-system-background-100);
-	overflow: hidden;
-}
-
-/* * */
-/* OPTION */
-
-.option {
-	font-size: 16px;
-	font-weight: var(--font-weight-medium);
-	padding: var(--size-spacing-10);
-	border-radius: 3px;
-	color: var(--color-system-text-200);
-}
-
-.option:hover {
-	color: var(--color-system-text-100);
-	background-color: var(--color-system-background-200);
-}
-
-.option[data-combobox-selected="true"] {
-	color: var(--color-system-text-100);
-	background-color: var(--color-system-background-300);
-}
-
-.option[data-checked="true"] {
-	color: var(--color-system-text-100);
 }

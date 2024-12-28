@@ -1,4 +1,10 @@
+/* * */
+
 import type { CollectionConfig } from 'payload';
+
+import { UserOptions } from '@/schemas/User/options';
+
+/* * */
 
 export const Users: CollectionConfig = {
 	access: {
@@ -20,16 +26,7 @@ export const Users: CollectionConfig = {
 						{
 							label: 'Título',
 							name: 'title',
-							options: [
-								{ label: 'Sr.', value: 'Sr.' },
-								{ label: 'Sr.ª', value: 'Sr.ª' },
-								{ label: 'Dr.', value: 'Dr.' },
-								{ label: 'Dr.ª', value: 'Dr.ª' },
-								{ label: 'Prof.', value: 'Prof.' },
-								{ label: 'Prof.ª', value: 'Prof.ª' },
-								{ label: 'Exmo.', value: 'Exmo.' },
-								{ label: 'Exmo.ª', value: 'Exmo.ª' },
-							],
+							options: UserOptions.title,
 							type: 'select',
 						},
 						{
@@ -141,6 +138,52 @@ export const Users: CollectionConfig = {
 				{
 					fields: [
 						{
+							fields: [
+								{
+									label: 'Nome na Fatura',
+									name: 'billing_name',
+									type: 'text',
+								},
+								{
+									label: 'Número de Contribuinte (Fatura)',
+									name: 'billing_tax_id',
+									type: 'number',
+								},
+							],
+							type: 'row',
+						},
+						{
+							label: 'Morada (Fatura)',
+							name: 'billing_address_1',
+							type: 'text',
+						},
+						{
+							label: 'Morada Cont. (Fatura)',
+							name: 'billing_address_2',
+							type: 'text',
+						},
+						{
+							fields: [
+								{
+									label: 'Código Postal (Fatura)',
+									name: 'billing_postal_code',
+									type: 'text',
+								},
+								{
+									label: 'Cidade (Fatura)',
+									name: 'billing_city',
+									type: 'text',
+								},
+							],
+							type: 'row',
+						},
+						{
+							access: {
+								update: ({ req }) => {
+									if (req.user?.email === 'admin@spginecologia.pt') return true;
+									return false;
+								},
+							},
 							label: 'Stripe ID',
 							name: 'stripe_id',
 							type: 'text',
