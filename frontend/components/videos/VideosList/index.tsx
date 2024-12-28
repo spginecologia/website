@@ -4,18 +4,18 @@
 
 import type { Video } from '@/payload-types';
 
+import { ContentWrapper } from '@/components/common/ContentWrapper';
 import { ErrorDisplay } from '@/components/common/ErrorDisplay';
 import { NoDataDisplay } from '@/components/common/NoDataDisplay';
-import FrontendSection from '@/components/FrontendSection/FrontendSection';
-import FrontendWrapperInner from '@/components/FrontendWrapperInner/FrontendWrapperInner';
+import { Section } from '@/components/common/Section';
 import { VideoCard } from '@/components/videos/VideoCard';
+import { VideoCardFeatured } from '@/components/videos/VideoCardFeatured';
 import { PayloadAPIResponse } from '@/types/payload-api-response';
 import { Title } from '@mantine/core';
 import { useTranslations } from 'next-intl';
 import { useMemo } from 'react';
 import useSWR from 'swr';
 
-import { VideoCardFeatured } from '../VideoCardFeatured';
 import styles from './styles.module.css';
 
 /* * */
@@ -57,43 +57,43 @@ export function VideosList() {
 
 	if (allVideosLoading) {
 		return (
-			<FrontendWrapperInner>
-				<FrontendSection first>
+			<ContentWrapper>
+				<Section topSpacerType="transparent">
 					<Title order={1}>{t('title')}</Title>
 					<div className={styles.grid}>
 						{[...Array(10)].map((_, i) => <VideoCard key={i} />)}
 					</div>
-				</FrontendSection>
-			</FrontendWrapperInner>
+				</Section>
+			</ContentWrapper>
 		);
 	}
 
 	if (allVideosError) {
 		return (
-			<FrontendWrapperInner>
-				<FrontendSection first>
+			<ContentWrapper>
+				<Section topSpacerType="transparent">
 					<Title order={1}>{t('title')}</Title>
 					<ErrorDisplay />
-				</FrontendSection>
-			</FrontendWrapperInner>
+				</Section>
+			</ContentWrapper>
 		);
 	}
 
 	if (!allVideosData?.docs.length) {
 		return (
-			<FrontendWrapperInner>
-				<FrontendSection first>
+			<ContentWrapper>
+				<Section topSpacerType="transparent">
 					<Title order={1}>{t('title')}</Title>
 					<NoDataDisplay />
-				</FrontendSection>
-			</FrontendWrapperInner>
+				</Section>
+			</ContentWrapper>
 		);
 	}
 
 	return (
-		<FrontendWrapperInner>
+		<ContentWrapper>
 			{featuredVideosItems.length > 0 && (
-				<FrontendSection first>
+				<Section topSpacerType="academia">
 					<div className={styles.featuredWrapper}>
 						{featuredVideosItems.map(video => (
 							<VideoCardFeatured
@@ -109,9 +109,9 @@ export function VideosList() {
 							/>
 						))}
 					</div>
-				</FrontendSection>
+				</Section>
 			)}
-			<FrontendSection first>
+			<Section>
 				<Title order={1}>{t('title')}</Title>
 				<div className={styles.grid}>
 					{regularVideosItems.map(video => (
@@ -128,8 +128,8 @@ export function VideosList() {
 						/>
 					))}
 				</div>
-			</FrontendSection>
-		</FrontendWrapperInner>
+			</Section>
+		</ContentWrapper>
 	);
 
 	//

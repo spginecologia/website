@@ -4,10 +4,10 @@
 
 import type { News } from '@/payload-types';
 
+import { ContentWrapper } from '@/components/common/ContentWrapper';
 import { ErrorDisplay } from '@/components/common/ErrorDisplay';
 import { NoDataDisplay } from '@/components/common/NoDataDisplay';
-import FrontendSection from '@/components/FrontendSection/FrontendSection';
-import FrontendWrapperInner from '@/components/FrontendWrapperInner/FrontendWrapperInner';
+import { Section } from '@/components/common/Section';
 import { NewsCard } from '@/components/news/NewsCard';
 import { NewsCardFeatured } from '@/components/news/NewsCardFeatured';
 import { PayloadAPIResponse } from '@/types/payload-api-response';
@@ -56,42 +56,42 @@ export function NewsList() {
 
 	if (allNewsLoading) {
 		return (
-			<FrontendWrapperInner>
-				<FrontendSection first>
+			<ContentWrapper>
+				<Section topSpacerType="transparent">
 					<Title order={1}>{t('title')}</Title>
 					<div className={styles.grid}>
 						{[...Array(10)].map((_, i) => <NewsCard key={i} />)}
 					</div>
-				</FrontendSection>
-			</FrontendWrapperInner>
+				</Section>
+			</ContentWrapper>
 		);
 	}
 
 	if (allNewsError) {
 		return (
-			<FrontendWrapperInner>
-				<FrontendSection first>
+			<ContentWrapper>
+				<Section topSpacerType="transparent">
 					<Title order={1}>{t('title')}</Title>
 					<ErrorDisplay />
-				</FrontendSection>
-			</FrontendWrapperInner>
+				</Section>
+			</ContentWrapper>
 		);
 	}
 
 	if (!allNewsData?.docs.length) {
 		return (
-			<FrontendWrapperInner>
-				<FrontendSection first>
+			<ContentWrapper>
+				<Section topSpacerType="transparent">
 					<Title order={1}>{t('title')}</Title>
 					<NoDataDisplay />
-				</FrontendSection>
-			</FrontendWrapperInner>
+				</Section>
+			</ContentWrapper>
 		);
 	}
 
 	return (
-		<FrontendWrapperInner>
-			<FrontendSection first>
+		<ContentWrapper>
+			<Section topSpacerType="transparent">
 				{featuredNewsItem && (
 					<NewsCardFeatured
 						coverSrc={typeof featuredNewsItem.featured_image === 'object' ? featuredNewsItem?.featured_image?.url : undefined}
@@ -102,8 +102,8 @@ export function NewsList() {
 						topic={featuredNewsItem.topics && typeof featuredNewsItem.topics[0] === 'object' ? featuredNewsItem.topics[0] : undefined}
 					/>
 				)}
-			</FrontendSection>
-			<FrontendSection>
+			</Section>
+			<Section>
 				<Title order={1}>{t('title')}</Title>
 				<div className={styles.grid}>
 					{regularNewsItems.map(news => (
@@ -118,8 +118,8 @@ export function NewsList() {
 						/>
 					))}
 				</div>
-			</FrontendSection>
-		</FrontendWrapperInner>
+			</Section>
+		</ContentWrapper>
 	);
 
 	//

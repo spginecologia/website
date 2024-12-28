@@ -1,9 +1,15 @@
 /* * */
 
-import { LoginForm } from '@/components/auth/LoginForm';
+import { AppAuthentication } from '@/components/auth/AppAuthentication';
+import { Footer } from '@/components/footer/Footer';
 
 /* * */
 
 export default function Page() {
-	return <LoginForm />;
+	return (
+		<>
+			<AppAuthentication />
+			<Footer />
+		</>
+	);
 }

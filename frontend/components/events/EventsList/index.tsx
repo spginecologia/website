@@ -4,12 +4,12 @@
 
 import type { Event } from '@/payload-types';
 
+import { ContentWrapper } from '@/components/common/ContentWrapper';
 import { ErrorDisplay } from '@/components/common/ErrorDisplay';
 import { NoDataDisplay } from '@/components/common/NoDataDisplay';
+import { Section } from '@/components/common/Section';
 import { EventCard } from '@/components/events/EventCard';
 import { EventsListPastButton } from '@/components/events/EventsListPastButton';
-import FrontendSection from '@/components/FrontendSection/FrontendSection';
-import FrontendWrapperInner from '@/components/FrontendWrapperInner/FrontendWrapperInner';
 import { PayloadAPIResponse } from '@/types/payload-api-response';
 import { Title } from '@mantine/core';
 import { useTranslations } from 'next-intl';
@@ -56,43 +56,43 @@ export function EventsList() {
 
 	if (allEventsLoading) {
 		return (
-			<FrontendWrapperInner>
-				<FrontendSection first>
+			<ContentWrapper>
+				<Section topSpacerType="transparent">
 					<Title order={1}>{t('title')}</Title>
 					<div className={styles.grid}>
 						{[...Array(10)].map((_, i) => <EventCard key={i} />)}
 					</div>
-				</FrontendSection>
-			</FrontendWrapperInner>
+				</Section>
+			</ContentWrapper>
 		);
 	}
 
 	if (allEventsError) {
 		return (
-			<FrontendWrapperInner>
-				<FrontendSection first>
+			<ContentWrapper>
+				<Section topSpacerType="transparent">
 					<Title order={1}>{t('title')}</Title>
 					<ErrorDisplay />
-				</FrontendSection>
-			</FrontendWrapperInner>
+				</Section>
+			</ContentWrapper>
 		);
 	}
 
 	if (!allEventsData?.docs.length) {
 		return (
-			<FrontendWrapperInner>
-				<FrontendSection first>
+			<ContentWrapper>
+				<Section topSpacerType="transparent">
 					<Title order={1}>{t('title')}</Title>
 					<NoDataDisplay />
-				</FrontendSection>
-			</FrontendWrapperInner>
+				</Section>
+			</ContentWrapper>
 		);
 	}
 
 	return (
-		<FrontendWrapperInner>
+		<ContentWrapper>
 			{featuredEventItem && (
-				<FrontendSection first>
+				<Section topSpacerType="transparent">
 					<div className={styles.featuredEventWrapper}>
 						<EventCard
 							key={featuredEventItem.id}
@@ -105,9 +105,9 @@ export function EventsList() {
 						/>
 						<EventsListPastButton />
 					</div>
-				</FrontendSection>
+				</Section>
 			)}
-			<FrontendSection first>
+			<Section topSpacerType="transparent">
 				<Title order={1}>{t('title')}</Title>
 				<div className={styles.grid}>
 					{regularEventsItems.map(event => (
@@ -122,8 +122,8 @@ export function EventsList() {
 						/>
 					))}
 				</div>
-			</FrontendSection>
-		</FrontendWrapperInner>
+			</Section>
+		</ContentWrapper>
 	);
 
 	//

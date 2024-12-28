@@ -5,11 +5,11 @@
 import type { Course } from '@/payload-types';
 
 import { CardSkeleton } from '@/components/cards/CardSkeleton';
+import { ContentWrapper } from '@/components/common/ContentWrapper';
 import { ErrorDisplay } from '@/components/common/ErrorDisplay';
 import { NoDataDisplay } from '@/components/common/NoDataDisplay';
+import { Section } from '@/components/common/Section';
 import { CourseCard } from '@/components/courses/CourseCard';
-import FrontendSection from '@/components/FrontendSection/FrontendSection';
-import FrontendWrapperInner from '@/components/FrontendWrapperInner/FrontendWrapperInner';
 import { PayloadAPIResponse } from '@/types/payload-api-response';
 import { Title } from '@mantine/core';
 import { useTranslations } from 'next-intl';
@@ -37,42 +37,42 @@ export function CoursesList() {
 
 	if (allCoursesLoading) {
 		return (
-			<FrontendWrapperInner>
-				<FrontendSection first>
+			<ContentWrapper>
+				<Section topSpacerType="academia">
 					<Title order={1}>{t('title')}</Title>
 					<div className={styles.grid}>
 						{[...Array(10)].map((_, i) => <CardSkeleton key={i} coverAspectRatio="600 / 300" />)}
 					</div>
-				</FrontendSection>
-			</FrontendWrapperInner>
+				</Section>
+			</ContentWrapper>
 		);
 	}
 
 	if (allCoursesError) {
 		return (
-			<FrontendWrapperInner>
-				<FrontendSection first>
+			<ContentWrapper>
+				<Section topSpacerType="academia">
 					<Title order={1}>{t('title')}</Title>
 					<ErrorDisplay />
-				</FrontendSection>
-			</FrontendWrapperInner>
+				</Section>
+			</ContentWrapper>
 		);
 	}
 
 	if (!allCoursesData?.docs.length) {
 		return (
-			<FrontendWrapperInner>
-				<FrontendSection first>
+			<ContentWrapper>
+				<Section topSpacerType="academia">
 					<Title order={1}>{t('title')}</Title>
 					<NoDataDisplay />
-				</FrontendSection>
-			</FrontendWrapperInner>
+				</Section>
+			</ContentWrapper>
 		);
 	}
 
 	return (
-		<FrontendWrapperInner>
-			<FrontendSection first>
+		<ContentWrapper>
+			<Section topSpacerType="academia">
 				<Title order={1}>{t('title')}</Title>
 				<div className={styles.grid}>
 					{allCoursesData?.docs.map(courseData => (
@@ -86,8 +86,8 @@ export function CoursesList() {
 						/>
 					))}
 				</div>
-			</FrontendSection>
-		</FrontendWrapperInner>
+			</Section>
+		</ContentWrapper>
 	);
 
 	//

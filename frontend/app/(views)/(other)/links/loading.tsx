@@ -1,13 +1,13 @@
 /* * */
 
 import { Loader } from '@/components/common/Loader';
-import Section from '@/components/FrontendSection/FrontendSection';
+import { Section } from '@/components/common/Section';
 
 /* * */
 
 export default function Loading() {
 	return (
-		<Section first>
+		<Section topSpacerType="transparent">
 			<Loader full visible />
 		</Section>
 	);

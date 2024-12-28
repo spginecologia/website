@@ -5,8 +5,8 @@
 import { AccountPayments } from '@/components/account/AccountPayments';
 import { AccountProfile } from '@/components/account/AccountProfile';
 import { AccountVideos } from '@/components/account/AccountVideos';
-import FrontendSection from '@/components/FrontendSection/FrontendSection';
-import FrontendWrapperInner from '@/components/FrontendWrapperInner/FrontendWrapperInner';
+import { ContentWrapper } from '@/components/common/ContentWrapper';
+import { Section } from '@/components/common/Section';
 import { Skeleton } from '@mantine/core';
 import { useEffect, useState } from 'react';
 
@@ -50,32 +50,28 @@ export function AccountMain() {
 
 	if (isLoading) {
 		return (
-			<div className={styles.container}>
-				<FrontendWrapperInner>
-					<FrontendSection first>
-						<div className={styles.grid}>
-							<Skeleton h={200} w="100%" />
-							<Skeleton h={200} w="100%" />
-							<Skeleton h={200} w="100%" />
-						</div>
-					</FrontendSection>
-				</FrontendWrapperInner>
-			</div>
+			<ContentWrapper className={styles.contentWrapperOverride}>
+				<Section topSpacerType="transparent">
+					<div className={styles.grid}>
+						<Skeleton h={200} w="100%" />
+						<Skeleton h={200} w="100%" />
+						<Skeleton h={200} w="100%" />
+					</div>
+				</Section>
+			</ContentWrapper>
 		);
 	}
 
 	return (
-		<div className={styles.container}>
-			<FrontendWrapperInner>
-				<FrontendSection first>
-					<div className={styles.grid}>
-						<AccountPayments />
-						<AccountVideos />
-						<AccountProfile />
-					</div>
-				</FrontendSection>
-			</FrontendWrapperInner>
-		</div>
+		<ContentWrapper className={styles.contentWrapperOverride}>
+			<Section topSpacerType="transparent">
+				<div className={styles.grid}>
+					<AccountPayments />
+					<AccountVideos />
+					<AccountProfile />
+				</div>
+			</Section>
+		</ContentWrapper>
 	);
 
 	//

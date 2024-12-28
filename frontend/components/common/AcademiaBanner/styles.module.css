@@ -1,0 +1,49 @@
+/* * */
+/* CONTAINER */
+
+.container {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 350px;
+	text-align: justify;
+	background-color: #a0285a;
+	background-size: contain;
+}
+
+/* * */
+/* INNER WRAPPER */
+
+.innerWrapper {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	max-width: var(--frontend-global-width);
+	height: 100%;
+	padding: 0 var(--frontend-global-padding);
+	margin: auto;
+}
+
+/* * */
+/* DECORATIVE IMAGE */
+
+.decorativeImage {
+    width: 100%;
+    max-width: 70%;
+	height: 100%;
+    background-image: url("/brand/academia/banner-academia.svg");
+    background-repeat: no-repeat;
+    background-position: 0% 85%;
+    background-size: cover;
+}
+
+/* * */
+/* ACADEMIA LOGO */
+
+.academiaLogo {
+	width: 250px;
+    margin-top: 50px;
+}

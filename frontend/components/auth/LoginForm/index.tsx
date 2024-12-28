@@ -5,7 +5,7 @@
 import { Loader } from '@/components/common/Loader';
 import { SignInDefault } from '@/schemas/SignIn/default';
 import { SignInValidation } from '@/schemas/SignIn/validation';
-import { Button, Space, Text, TextInput, Title } from '@mantine/core';
+import { Button, Paper, Space, Text, TextInput, Title } from '@mantine/core';
 import { useForm, zodResolver } from '@mantine/form';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
@@ -76,7 +76,7 @@ export function LoginForm() {
 	// D. Render components
 
 	return (
-		<form className={styles.container} onSubmit={form.onSubmit(handleSignIn)}>
+		<Paper className={styles.container} component="form" onSubmit={form.onSubmit(handleSignIn)}>
 			<Title order={2}>{t('title')}</Title>
 			<Text>{t('subtitle')}</Text>
 			<Space h={5} />
@@ -85,6 +85,6 @@ export function LoginForm() {
 			{isLoading && <Loader visible />}
 			{(!isLoading && form.values.password.length > 0) && <Button type="submit">{t('submit.label')}</Button>}
 			{(!isLoading && isError) && <Text variant="error">{t('error.message')}</Text>}
-		</form>
+		</Paper>
 	);
 }

@@ -6,10 +6,10 @@ import type { Publication } from '@/payload-types';
 
 import { Card } from '@/components/cards/Card';
 import { CardSkeleton } from '@/components/cards/CardSkeleton';
+import { ContentWrapper } from '@/components/common/ContentWrapper';
 import { ErrorDisplay } from '@/components/common/ErrorDisplay';
 import { NoDataDisplay } from '@/components/common/NoDataDisplay';
-import FrontendSection from '@/components/FrontendSection/FrontendSection';
-import FrontendWrapperInner from '@/components/FrontendWrapperInner/FrontendWrapperInner';
+import { Section } from '@/components/common/Section';
 import { PayloadAPIResponse } from '@/types/payload-api-response';
 import { Title } from '@mantine/core';
 import { useTranslations } from 'next-intl';
@@ -32,49 +32,47 @@ export function PublicationsList() {
 
 	const { data: allPublicationsData, error: allPublicationsError, isLoading: allPublicationsLoading } = useSWR<PayloadAPIResponse<Publication>>(`/api/publications`);
 
-	console.log(allPublicationsData);
-
 	//
 	// C. Render components
 
 	if (allPublicationsLoading) {
 		return (
-			<FrontendWrapperInner>
-				<FrontendSection first>
+			<ContentWrapper>
+				<Section topSpacerType="academia">
 					<Title order={1}>{t('title')}</Title>
 					<div className={styles.grid}>
 						{[...Array(10)].map((_, i) => <CardSkeleton key={i} coverAspectRatio="210 / 297" />)}
 					</div>
-				</FrontendSection>
-			</FrontendWrapperInner>
+				</Section>
+			</ContentWrapper>
 		);
 	}
 
 	if (allPublicationsError) {
 		return (
-			<FrontendWrapperInner>
-				<FrontendSection first>
+			<ContentWrapper>
+				<Section topSpacerType="academia">
 					<Title order={1}>{t('title')}</Title>
 					<ErrorDisplay />
-				</FrontendSection>
-			</FrontendWrapperInner>
+				</Section>
+			</ContentWrapper>
 		);
 	}
 
 	if (!allPublicationsData?.docs.length) {
 		return (
-			<FrontendWrapperInner>
-				<FrontendSection first>
+			<ContentWrapper>
+				<Section topSpacerType="academia">
 					<Title order={1}>{t('title')}</Title>
 					<NoDataDisplay />
-				</FrontendSection>
-			</FrontendWrapperInner>
+				</Section>
+			</ContentWrapper>
 		);
 	}
 
 	return (
-		<FrontendWrapperInner>
-			<FrontendSection first>
+		<ContentWrapper>
+			<Section topSpacerType="academia">
 				<Title order={1}>{t('title')}</Title>
 				<div className={styles.grid}>
 					{allPublicationsData?.docs.map(guideline => (
@@ -88,8 +86,8 @@ export function PublicationsList() {
 						/>
 					))}
 				</div>
-			</FrontendSection>
-		</FrontendWrapperInner>
+			</Section>
+		</ContentWrapper>
 	);
 
 	//

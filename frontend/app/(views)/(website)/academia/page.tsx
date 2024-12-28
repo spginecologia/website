@@ -1,6 +1,6 @@
 /* * */
 
-import Section from '@/components/FrontendSection/FrontendSection';
+import { Section } from '@/components/common/Section';
 import NoDataLabel from '@/components/NoDataLabel/NoDataLabel';
 import { Space } from '@mantine/core';
 
@@ -8,8 +8,8 @@ import { Space } from '@mantine/core';
 
 export default function Page() {
 	return (
-		<Section first>
-			<NoDataLabel text="Prémio SPG" />
+		<Section topSpacerType="academia">
+			<NoDataLabel text="Academia SPG" />
 			<Space h={300} />
 		</Section>
 	);

@@ -1,20 +1,19 @@
 /* * */
-/* CONTAINER */
+/* CONTENT WRAPPER OVERRIDE */
 
-.container {
-  width: 100%;
-  background-color: var(--spg-support-3);
+.contentWrapperOverride {
+	background-color: var(--spg-support-3);
 }
 
 /* * */
 /* GRID */
 
 .grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 30px;
-  width: 100%;
+	display: grid;
+	grid-template-rows: auto;
+	grid-template-columns: 1fr 1fr;
+	gap: 30px;
+	align-items: flex-start;
+	justify-content: flex-start;
+	width: 100%;
 }

@@ -1,8 +1,8 @@
 /* * */
 
+import { ContentWrapper } from '@/components/common/ContentWrapper';
+import { Section } from '@/components/common/Section';
 import FrontendPublishDate from '@/components/FrontendPublishDate/FrontendPublishDate';
-import FrontendSection from '@/components/FrontendSection/FrontendSection';
-import FrontendWrapperInner from '@/components/FrontendWrapperInner/FrontendWrapperInner';
 import Title from '@/components/Title/Title';
 import Image from 'next/image';
 
@@ -34,13 +34,13 @@ export function EventDetail({ id }) {
 	// B. Render components
 
 	return (
-		<FrontendWrapperInner>
-			<FrontendSection first>
+		<ContentWrapper>
+			<Section topSpacerType="transparent">
 				<div className={styles.imageWrapper}>
 					<Image alt="" src={newsData.image_url} style={{ objectFit: 'cover' }} fill />
 				</div>
-			</FrontendSection>
-			<FrontendSection>
+			</Section>
+			<Section>
 				<div className={styles.contentWrapper}>
 					<FrontendTopicTag _id="" />
 					<Title text={newsData.title} />
@@ -50,8 +50,8 @@ export function EventDetail({ id }) {
 					</div>
 					<div className={styles.newsBody} dangerouslySetInnerHTML={{ __html: newsData.text }} />
 				</div>
-			</FrontendSection>
-		</FrontendWrapperInner>
+			</Section>
+		</ContentWrapper>
 	);
 
 	//

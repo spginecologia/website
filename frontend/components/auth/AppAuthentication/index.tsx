@@ -2,15 +2,17 @@
 
 /* * */
 
-import Section from '@/components/FrontendSection/FrontendSection';
-import { Paper, Skeleton } from '@mantine/core';
+import { LoginForm } from '@/components/auth/LoginForm';
+import { ContentWrapper } from '@/components/common/ContentWrapper';
+import { Section } from '@/components/common/Section';
+import { Skeleton } from '@mantine/core';
 import { useEffect, useState } from 'react';
 
 import styles from './styles.module.css';
 
 /* * */
 
-export function AuthWrapper({ children }) {
+export function AppAuthentication() {
 	//
 
 	//
@@ -46,26 +48,26 @@ export function AuthWrapper({ children }) {
 
 	if (isLoading) {
 		return (
-			<div className={styles.container}>
-				<Section first>
+			<ContentWrapper className={styles.contentWrapperOverride}>
+				<Section topSpacerType="transparent">
 					<div className={styles.grid}>
 						<Skeleton height={350} />
 						<div className={styles.advert} />
 					</div>
 				</Section>
-			</div>
+			</ContentWrapper>
 		);
 	}
 
 	return (
-		<div className={styles.container}>
-			<Section first>
+		<ContentWrapper className={styles.contentWrapperOverride}>
+			<Section topSpacerType="transparent">
 				<div className={styles.grid}>
-					<Paper>{children}</Paper>
+					<LoginForm />
 					<div className={styles.advert} />
 				</div>
 			</Section>
-		</div>
+		</ContentWrapper>
 	);
 
 	//

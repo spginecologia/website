@@ -4,8 +4,8 @@
 
 import type { Topic, Video } from '@/payload-types';
 
-import FrontendSection from '@/components/FrontendSection/FrontendSection';
-import FrontendWrapperInner from '@/components/FrontendWrapperInner/FrontendWrapperInner';
+import { ContentWrapper } from '@/components/common/ContentWrapper';
+import { Section } from '@/components/common/Section';
 import { VideoDetailAdditionalInfo } from '@/components/videos/VideoDetailAdditionalInfo';
 // import { VideoDetailDescription } from '@/components/videos/VideoDetailDescription';
 import { VideoDetailMetadata } from '@/components/videos/VideoDetailMetadata';
@@ -52,8 +52,8 @@ export function VideoDetail({ id }) {
 	// A. Render components
 
 	return (
-		<FrontendWrapperInner>
-			<FrontendSection first>
+		<ContentWrapper>
+			<Section topSpacerType="transparent">
 				<div className={styles.grid}>
 
 					<div className={styles.content}>
@@ -69,8 +69,8 @@ export function VideoDetail({ id }) {
 					</div>
 
 				</div>
-			</FrontendSection>
-		</FrontendWrapperInner>
+			</Section>
+		</ContentWrapper>
 	);
 
 	//

@@ -4,9 +4,9 @@
 
 import type { Guideline } from '@/payload-types';
 
+import { ContentWrapper } from '@/components/common/ContentWrapper';
 import { RedirectDisplay } from '@/components/common/RedirectDisplay';
-import FrontendSection from '@/components/FrontendSection/FrontendSection';
-import FrontendWrapperInner from '@/components/FrontendWrapperInner/FrontendWrapperInner';
+import { Section } from '@/components/common/Section';
 import { useMemo } from 'react';
 import useSWR from 'swr';
 
@@ -37,11 +37,11 @@ export function GuidelineDetail({ id }) {
 	// C. Render components
 
 	return (
-		<FrontendWrapperInner>
-			<FrontendSection first>
+		<ContentWrapper>
+			<Section topSpacerType="academia">
 				<RedirectDisplay href={guidelineHref} />
-			</FrontendSection>
-		</FrontendWrapperInner>
+			</Section>
+		</ContentWrapper>
 	);
 
 	//

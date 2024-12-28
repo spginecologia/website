@@ -1,0 +1,74 @@
+/* * */
+/* CONTAINER */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.withTopSpacer {
+  padding-top: 140px;
+}
+
+/* * */
+/* TITLE */
+
+.title {
+  width: 100%;
+  margin: 20px 0;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--spg-brand-2);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 1px solid var(--spg-brand-2);
+}
+
+/* * */
+/* INNER WRAPPER */
+
+.innerWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: var(--frontend-global-width);
+  padding: 0 var(--frontend-global-padding);
+  margin: auto;
+}
+
+
+
+/* * */
+/* ACADEMIA BANNER */
+
+.academiaBanner {
+    height: 280px;
+    text-align: justify;
+    background-color: #a0285a;
+	background-size: contain;
+}
+
+.academiaBannerInnerWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.academiaBannerImage {
+    width: 100%;
+    max-width: 70%;
+    background-image: url("https://spginecologia.pt/wp-content/uploads/2021/07/banner-academia.svg");
+    background-repeat: no-repeat;
+    background-position: 0% 85%;
+    background-size: cover;
+}
+
+.academiaLogo {
+	width: 250px;
+    margin-top: 30px;
+}
