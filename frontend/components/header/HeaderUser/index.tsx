@@ -3,6 +3,7 @@
 /* * */
 
 import { Loader } from '@/components/common/Loader';
+import { PayloadMeResponse } from '@/types/payload-api-response';
 import { IconSettings, IconUserCircle } from '@tabler/icons-react';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
@@ -30,7 +31,7 @@ export function HeaderUser() {
 	//
 	// B. Fetch data
 
-	const { data: userData, isLoading: userLoading } = useSWR('/api/users/me');
+	const { data: userData, isLoading: userLoading } = useSWR<PayloadMeResponse>('/api/users/me');
 
 	//
 	// C. Render components

@@ -5,9 +5,9 @@
 import { AccountPayments } from '@/components/account/AccountPayments';
 import { AccountProfile } from '@/components/account/AccountProfile';
 import { AccountVideos } from '@/components/account/AccountVideos';
-import { Loader } from '@/components/common/Loader';
 import FrontendSection from '@/components/FrontendSection/FrontendSection';
 import FrontendWrapperInner from '@/components/FrontendWrapperInner/FrontendWrapperInner';
+import { Skeleton } from '@mantine/core';
 import { useEffect, useState } from 'react';
 
 import styles from './styles.module.css';
@@ -51,7 +51,15 @@ export function AccountMain() {
 	if (isLoading) {
 		return (
 			<div className={styles.container}>
-				<Loader fixed visible />
+				<FrontendWrapperInner>
+					<FrontendSection first>
+						<div className={styles.grid}>
+							<Skeleton h={200} w="100%" />
+							<Skeleton h={200} w="100%" />
+							<Skeleton h={200} w="100%" />
+						</div>
+					</FrontendSection>
+				</FrontendWrapperInner>
 			</div>
 		);
 	}
@@ -61,8 +69,8 @@ export function AccountMain() {
 			<FrontendWrapperInner>
 				<FrontendSection first>
 					<div className={styles.grid}>
-						<AccountVideos />
 						<AccountPayments />
+						<AccountVideos />
 						<AccountProfile />
 					</div>
 				</FrontendSection>

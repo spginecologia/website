@@ -206,6 +206,10 @@
 		}
 	},
 	"account": {
+		"AccountIntro": {
+			"subtitle": "Faça a gestão autónoma dos pagamentos da sua quota de sócio.",
+			"title": "Olá {name}"
+		},
 		"AccountPayments": {
 			"subtitle": "Faça a gestão autónoma dos pagamentos da sua quota de sócio.",
 			"title": "Pagamentos & Faturas"

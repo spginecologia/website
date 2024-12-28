@@ -17,7 +17,7 @@ export async function POST(request: Request) {
 		// Extract the webhook event from the request and verify the event
 		// by passing the raw request and the stripe signature to the constructEvent function.
 
-		let event;
+		let event: Stripe.Event;
 
 		try {
 			const stripeSignature = request.headers['stripe-signature'];
@@ -26,7 +26,7 @@ export async function POST(request: Request) {
 		}
 		catch (err) {
 			console.log(err);
-			Response.error();
+			return Response.error();
 		}
 
 		//
@@ -35,27 +35,29 @@ export async function POST(request: Request) {
 		// allowing the website to display the user's purchase history.
 
 		if (event.type === 'checkout.session.completed') {
-			const userData = await payload.findByID({ collection: 'users', id: event.data.object.client_reference_id });
+			// Ensure the event has a user ID
+			const userId = event.data.object.client_reference_id;
+			if (!userId) throw new Error('Event has no user ID');
+			// Find the user in the database
+			const userData = await payload.findByID({ collection: 'users', id: userId });
 			if (!userData) throw new Error('User not found');
+			// Update the user's Stripe ID
 			if (!event.data.object.customer) throw new Error('Event has no customer ID');
 			await payload.update({
 				collection: 'users',
 				data: {
-					stripe_id: event.data.object.customer,
+					stripe_id: event.data.object.customer.toString(),
 				},
 				id: userData.id,
 			});
-			console.log('charge.succeeded', event);
+			console.log('checkout.session.completed', event);
 			return Response.json({ received: true });
-		}
-		else {
-			console.log(`Unhandled event type ${event.type}`);
 		}
 
 		//
-		// Acknowledge receipt of the event
+		// In all other cases return an error.
 
-		return Response.json({ received: true });
+		throw new Error(`Unhandled event type: ${event.type}`);
 
 		//
 	}
