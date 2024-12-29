@@ -2,7 +2,7 @@
 
 import type { CollectionConfig } from 'payload';
 
-import { getVideoFileDurationInSeconds } from '@/utils/getVideoDuration';
+import { getVideoDurationInSeconds } from '@/utils/get-video-duration-in-seconds';
 
 /* * */
 
@@ -24,7 +24,7 @@ export const VideoFiles: CollectionConfig = {
 		beforeOperation: [
 			({ args, collection, operation, req }) => {
 				if ((operation === 'create' || operation === 'update') && req.file) {
-					const videoDuration = req.file.data ? getVideoFileDurationInSeconds(req.file.data) : null;
+					const videoDuration = req.file.data ? getVideoDurationInSeconds(req.file.data) : null;
 					if (videoDuration) args.data.duration = videoDuration;
 					req.file.name = `${collection.slug}-${Date.now()}-${req.file.name.replace(/[^a-z0-9.]/gi, '_').slice(-30).toLowerCase()}`;
 				}

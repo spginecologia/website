@@ -1,13 +1,9 @@
 /* * */
-/* ROOT */
+/* DEFAULT */
 
 .root {
 	margin-bottom: 10px;
 }
-
-
-/* * */
-/* INPUT / DEFAULT */
 
 .input {
 	color: var(--color-reference-black);
@@ -15,6 +11,13 @@
 	border: 2px solid var(--color-reference-black);
 	border-radius: 0;
 	outline: none;
+}
+
+.label {
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
 }
 
 .description {
@@ -54,11 +57,7 @@
 }
 
 .variantPrimary.label {
-    font-size: 15px;
-    font-weight: 700;
-	color: var(--color-brand-primary-200);
-    text-transform: uppercase;
-    cursor: pointer;
+	color: var(--color-reference-black);
 }
 
 .variantPrimary.input[data-error="true"] {

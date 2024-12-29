@@ -300,7 +300,7 @@ export interface User {
   title?: ('Sr.' | 'Sr.ª' | 'Dr.' | 'Dr.ª' | 'Prof.' | 'Prof.ª' | 'Exmo.' | 'Exmo.ª') | null;
   first_name?: string | null;
   last_name?: string | null;
-  tax_id?: number | null;
+  tax_id: string;
   medical_id?: number | null;
   birthday?: string | null;
   phone?: string | null;
@@ -322,7 +322,7 @@ export interface User {
       )[]
     | null;
   billing_name?: string | null;
-  billing_tax_id?: number | null;
+  billing_tax_id?: string | null;
   billing_address_1?: string | null;
   billing_address_2?: string | null;
   billing_postal_code?: string | null;

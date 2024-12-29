@@ -20,6 +20,7 @@ import ButtonOverride from '@/themes/_default/overrides/Button.module.css';
 import CheckboxOverride from '@/themes/_default/overrides/Checkbox.module.css';
 import CheckboxGroupOverride from '@/themes/_default/overrides/CheckboxGroup.module.css';
 import DateInputOverride from '@/themes/_default/overrides/DateInput.module.css';
+import NotificationOverride from '@/themes/_default/overrides/Notification.module.css';
 import PaperOverride from '@/themes/_default/overrides/Paper.module.css';
 import SegmentedControlOverride from '@/themes/_default/overrides/SegmentedControl.module.css';
 import SelectOverride from '@/themes/_default/overrides/Select.module.css';
@@ -29,7 +30,7 @@ import TextOverride from '@/themes/_default/overrides/Text.module.css';
 import TextInputOverride from '@/themes/_default/overrides/TextInput.module.css';
 import TitleOverride from '@/themes/_default/overrides/Title.module.css';
 import combineClasses from '@/utils/combineClasses';
-import { Accordion, Alert, Button, Checkbox, createTheme, Paper, SegmentedControl, Select, Skeleton, Table, Text, TextInput, Title } from '@mantine/core';
+import { Accordion, Alert, Button, Checkbox, createTheme, Notification, Paper, SegmentedControl, Select, Skeleton, Table, Text, TextInput, Title } from '@mantine/core';
 import { DateInput } from '@mantine/dates';
 import { IconCaretLeftFilled } from '@tabler/icons-react';
 
@@ -162,6 +163,20 @@ export default createTheme({
 			},
 			defaultProps: {
 				variant: 'primary',
+			},
+		}),
+
+		Notification: Notification.extend({
+			classNames: () => {
+				let defaultClasses = {
+					body: NotificationOverride.body,
+					description: NotificationOverride.description,
+					icon: NotificationOverride.icon,
+					loader: NotificationOverride.loader,
+					root: NotificationOverride.root,
+					title: NotificationOverride.title,
+				};
+				return defaultClasses;
 			},
 		}),
 

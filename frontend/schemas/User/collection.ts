@@ -3,6 +3,7 @@
 import type { CollectionConfig } from 'payload';
 
 import { UserOptions } from '@/schemas/User/options';
+import { validateTaxId } from '@/utils/validate-tax-id';
 
 /* * */
 
@@ -51,7 +52,10 @@ export const Users: CollectionConfig = {
 						{
 							label: 'Número de Contribuinte',
 							name: 'tax_id',
-							type: 'number',
+							required: true,
+							type: 'text',
+							unique: true,
+							validate: value => validateTaxId(value, true) || 'Número de Contribuinte deve ser um número de 9 caracteres.',
 						},
 						{
 							label: 'Número de Cédula Médica',
@@ -124,13 +128,7 @@ export const Users: CollectionConfig = {
 							hasMany: true,
 							label: 'Áreas de Interesse',
 							name: 'subscribed_sections',
-							options: [
-								{ label: 'Colposcopia Patologia Tracto Genital Inferior', value: 'colposcopia_patologia_tracto_genital_inferior' },
-								{ label: 'Endoscopia Ginecológica', value: 'endoscopia_ginecologica' },
-								{ label: 'Ginecologia Oncológica', value: 'ginecologia_oncologica' },
-								{ label: 'Menopausa', value: 'menopausa' },
-								{ label: 'Uroginecologia', value: 'uroginecologia' },
-							],
+							options: UserOptions.subscribed_sections,
 							type: 'select',
 						},
 					],
@@ -152,7 +150,8 @@ export const Users: CollectionConfig = {
 								{
 									label: 'Número de Contribuinte (Fatura)',
 									name: 'billing_tax_id',
-									type: 'number',
+									type: 'text',
+									validate: value => validateTaxId(value, true) || 'NIF (Faturação) deve ser um número de 9 caracteres.',
 								},
 							],
 							type: 'row',

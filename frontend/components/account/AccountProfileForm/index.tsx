@@ -8,10 +8,10 @@ import { FormSection } from '@/components/common/FormSection';
 import { UserEditableProfileDefault } from '@/schemas/User/default';
 import { UserOptions } from '@/schemas/User/options';
 import { UserEditableProfileValidation } from '@/schemas/User/validation';
+import { showNotification } from '@/utils/show-notification';
 import { Button, Checkbox, Select, Space, Text, TextInput } from '@mantine/core';
 import { DateInput } from '@mantine/dates';
 import { useForm, zodResolver } from '@mantine/form';
-import { notifications } from '@mantine/notifications';
 import { mergekit } from 'mergekit';
 import { useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';
@@ -44,17 +44,18 @@ export function AccountProfileForm() {
 		if (!userData || !userData.user) return;
 		// Return if no form or form is dirty
 		if (!form || form.isDirty()) return;
-		// merge
+		// Merge server data with form schema
 		const mergedData = mergekit(
 			[UserEditableProfileDefault, userData.user],
 			{ onlyKeys: Object.keys(UserEditableProfileDefault) },
 		);
-		// Update form with user data
+		// Update form with merged data,
+		// and apply additional type transformations.
 		form.setInitialValues({
 			...mergedData,
-			billing_tax_id: userData.user.billing_tax_id ? String(userData.user.billing_tax_id) : '',
 			birthday: userData.user.birthday ? new Date(userData.user.birthday) : new Date(1900, 0, 1),
 		});
+		// Reset form state
 		form.reset();
 		//
 	}, [userData]);
@@ -68,18 +69,23 @@ export function AccountProfileForm() {
 	const handleSubmit = async (data) => {
 		try {
 			setIsLoading(true);
-			await fetch('/api/account/profile/edit', {
+			showNotification({ id: 'submit-profile', message: 'Por favor aguarde...', title: 'A atualizar o seu perfil', type: 'loading' });
+			const response = await fetch('/api/account/profile/edit', {
 				body: JSON.stringify(data),
 				headers: { 'Content-Type': 'application/json' },
 				method: 'POST',
 			});
+			if (!response.ok) {
+				throw new Error(response.statusText);
+			}
+			userMutate({ ...userData, user: await response.json() });
 			form.reset();
-			userMutate();
 			setIsLoading(false);
-			notifications.show({ color: 'teal', message: 'O seu perfil foi atualizado com sucesso', title: 'Dados Atualizados!' });
+			showNotification({ action: 'update', id: 'submit-profile', message: 'Os seus dados foram atualizados com sucesso!', title: 'Dados Atualizados!', type: 'success' });
 		}
 		catch (error) {
 			console.log(error);
+			showNotification({ action: 'update', id: 'submit-profile', message: 'Ocorreu um erro ao atualizar os dados do seu perfil.', title: 'Perfil não atualizado', type: 'error' });
 			setIsLoading(false);
 		}
 	};
@@ -125,7 +131,7 @@ export function AccountProfileForm() {
 			<FormSection description={t('sections.basic.description')} title={t('sections.basic.title')}>
 				<TextInput description={t('fields.tax_id.description')} label={t('fields.tax_id.label')} placeholder={t('fields.tax_id.placeholder')} value={userData?.user.tax_id || ''} disabled readOnly />
 				<TextInput description={t('fields.medical_id.description')} label={t('fields.medical_id.label')} placeholder={t('fields.medical_id.placeholder')} value={userData?.user.medical_id || ''} disabled readOnly />
-				<DateInput label={t('fields.birthday.label')} placeholder={t('fields.birthday.placeholder')} {...form.getInputProps('birthday')} />
+				<DateInput label={t('fields.birthday.label')} placeholder={t('fields.birthday.placeholder')} {...form.getInputProps('birthday')} valueFormat="YYYY-MM-DD" />
 			</FormSection>
 
 			<FormSection description={t('sections.billing.description')} title={t('sections.billing.title')}>
@@ -141,11 +147,9 @@ export function AccountProfileForm() {
 				<TextInput label={t('fields.workplace_primary.label')} placeholder={t('fields.workplace_primary.placeholder')} readOnly={isLoading} {...form.getInputProps('workplace_primary')} />
 				<TextInput label={t('fields.workplace_secondary.label')} placeholder={t('fields.workplace_secondary.placeholder')} readOnly={isLoading} {...form.getInputProps('workplace_secondary')} />
 				<Checkbox.Group label={t('fields.subscribed_sections.label')} {...form.getInputProps('subscribed_sections')}>
-					<Checkbox label={t('fields.subscribed_sections.options.colposcopia_patologia_tracto_genital_inferior.label')} value="colposcopia_patologia_tracto_genital_inferior" />
-					<Checkbox label={t('fields.subscribed_sections.options.endoscopia_ginecologica.label')} value="endoscopia_ginecologica" />
-					<Checkbox label={t('fields.subscribed_sections.options.ginecologia_oncologica.label')} value="ginecologia_oncologica" />
-					<Checkbox label={t('fields.subscribed_sections.options.menopausa.label')} value="menopausa" />
-					<Checkbox label={t('fields.subscribed_sections.options.uroginecologia.label')} value="uroginecologia" />
+					{UserOptions.subscribed_sections.map(section => (
+						<Checkbox key={section.value} label={section.label} value={section.value} />
+					))}
 				</Checkbox.Group>
 			</FormSection>
 

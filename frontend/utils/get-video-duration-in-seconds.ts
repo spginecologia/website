@@ -6,7 +6,7 @@
  * @param bufferData - buffer data of the video file
  * @returns {number} - duration in seconds
  */
-export function getVideoFileDurationInSeconds(bufferData: Buffer): number {
+export function getVideoDurationInSeconds(bufferData: Buffer): number {
 	//
 
 	const header = Buffer.from('mvhd');

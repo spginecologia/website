@@ -47,7 +47,7 @@ export async function POST(request: Request) {
 		//
 	}
 	catch (err) {
-		console.log(err);
-		return new Response(null, { status: 500 });
+		console.log(err.message);
+		return new Response(`API route error: ${err.message}`, { status: 500 });
 	}
 }

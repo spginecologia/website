@@ -47,10 +47,10 @@ export function AccountMain() {
 				<div className={styles.grid}>
 					<div className={styles.columnA}>
 						<AccountPayments />
-						<AccountProfile />
+						<AccountVideos />
 					</div>
 					<div className={styles.columnB}>
-						<AccountVideos />
+						<AccountProfile />
 					</div>
 				</div>
 			</Section>

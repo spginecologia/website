@@ -1,7 +1,7 @@
 /* * */
 
 import { VideoValidationServer } from '@/schemas/Video/validation';
-import { getVideoFileDurationInSeconds } from '@/utils/getVideoDuration';
+import { getVideoDurationInSeconds } from '@/utils/get-video-duration-in-seconds';
 import payloadConfig from '@payload-config';
 import { getPayload } from 'payload';
 
@@ -53,7 +53,7 @@ export async function POST(request: Request) {
 		const createVideoFileResult = await payload.create({
 			collection: 'video-files',
 			data: {
-				duration: getVideoFileDurationInSeconds(videoFileData),
+				duration: getVideoDurationInSeconds(videoFileData),
 			},
 			file: {
 				data: videoFileData,

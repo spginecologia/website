@@ -1,0 +1,95 @@
+/* * */
+/* ROOT */
+
+.root {
+	background-color: var(--color-reference-white);
+	border: 2px solid transparent;
+	box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%);
+}
+
+.loader::after {
+	--loader-color: var(--color-brand-primary-100);
+}
+
+.body {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.title {
+	padding: 0;
+	margin: 0;
+	font-family: lato, sans-serif;
+	font-size: 16px;
+	font-weight: var(--font-weight-bold);
+	line-height: 1;
+	color: var(--color-brand-support-500);
+	text-transform: uppercase;
+}
+
+.description {
+	font-family: lato, sans-serif;
+	font-size: 14px;
+	font-weight: var(--font-weight-medium);
+	line-height: 1;
+	color: var(--color-brand-support-400);
+}
+
+
+/* * */
+/* STATE / LOADING */
+
+.root[data-state="loading"] {
+	border-color: var(--color-brand-primary-200);
+}
+
+.root[data-state="loading"] .loader::after {
+	--loader-color: var(--color-brand-primary-200);
+}
+
+.root[data-state="loading"] .title {
+	color: var(--color-brand-primary-200);
+}
+
+.root[data-state="loading"] .description {
+	color: var(--color-brand-support-400);
+}
+
+/* * */
+/* STATE / ERROR */
+
+.root[data-state="error"] {
+	border-color: var(--color-state-error);
+}
+
+.root[data-state="error"] .icon {
+	background-color: var(--color-state-error);
+}
+
+.root[data-state="error"] .title {
+	color: var(--color-state-error);
+}
+
+.root[data-state="error"] .description {
+	color: var(--color-brand-support-500);
+}
+
+/* * */
+/* STATE / SUCCESS */
+
+.root[data-state="success"] {
+	border-color: var(--color-state-success);
+}
+
+.root[data-state="success"] .icon {
+	background-color: var(--color-state-success);
+}
+
+.root[data-state="success"] .title {
+	color: var(--color-state-success);
+}
+
+.root[data-state="success"] .description {
+	color: var(--color-brand-support-500);
+}

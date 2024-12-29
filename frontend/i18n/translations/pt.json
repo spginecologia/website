@@ -211,7 +211,7 @@
 			"member_since": {
 				"female": "Sócia desde {value, date, long}",
 				"male": "Sócio desde {value, date, long}",
-				"other": "Com a SPG desde {value, date, long}"
+				"other": "Está com a SPG desde {value, date, long}"
 			},
 			"title": "Olá {name}"
 		},
@@ -340,24 +340,7 @@
 					"placeholder": "1000-200"
 				},
 				"subscribed_sections": {
-					"label": "Secções de Interesse",
-					"options": {
-						"colposcopia_patologia_tracto_genital_inferior": {
-							"label": "Colposcopia Patologia Tracto Genital Inferior"
-						},
-						"endoscopia_ginecologica": {
-							"label": "Endoscopia Ginecológica"
-						},
-						"ginecologia_oncologica": {
-							"label": "Ginecologia Oncológica"
-						},
-						"menopausa": {
-							"label": "Menopausa"
-						},
-						"uroginecologia": {
-							"label": "Uroginecologia"
-						}
-					}
+					"label": "Secções de Interesse"
 				},
 				"tax_id": {
 					"description": "O seu NIF pessoal. Por motivos alheios não podemos aceitar NIFs institucionais. Pode pedir emissão de fatura com outro NIF. Para alterar este campo por favor entre em contacto com o Secretariado SPG.",

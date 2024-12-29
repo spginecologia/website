@@ -18,10 +18,10 @@ export interface PayloadAPIResponse<T> {
 };
 
 export interface PayloadMeResponse {
-	collection: 'users'
-	exp: number
-	message: string
-	strategy: 'local-jwt'
-	token: string
+	collection?: 'users'
+	exp?: number | undefined
+	message?: string
+	strategy?: 'local-jwt'
+	token?: string
 	user: User
 };
