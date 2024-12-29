@@ -1,7 +1,9 @@
 /* * */
 
-import { UserValidation } from '@/schemas/User/validation';
+import { UserEditableProfileDefault } from '@/schemas/User/default';
+import { UserEditableProfileValidation } from '@/schemas/User/validation';
 import payloadConfig from '@payload-config';
+import { mergekit } from 'mergekit';
 import { getPayload } from 'payload';
 
 /* * */
@@ -27,21 +29,16 @@ export async function POST(request: Request) {
 		//
 		// Validate the form data
 
-		const validationResult = UserValidation.parse({
-			...data,
-			birthday: data.birthday ? new Date(data.birthday) : null,
-		});
+		const validationResult = UserEditableProfileValidation.parse(data);
+
+		const mergedData = mergekit([validationResult], { onlyKeys: Object.keys(UserEditableProfileDefault) });
 
 		//
 		// Update the user
 
 		const updateResult = await payload.update({
 			collection: 'users',
-			data: {
-				...validationResult,
-				// @ts-expect-error - There is a mismatch between Payload types and the actual data
-				title: validationResult.title,
-			},
+			data: mergedData,
 			id: currentUser.user.id,
 		});
 
@@ -51,6 +48,6 @@ export async function POST(request: Request) {
 	}
 	catch (err) {
 		console.log(err);
-		return Response.error();
+		return new Response(null, { status: 500 });
 	}
 }

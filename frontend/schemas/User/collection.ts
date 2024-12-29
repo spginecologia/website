@@ -77,6 +77,7 @@ export const Users: CollectionConfig = {
 							label: 'Email',
 							name: 'email',
 							type: 'text',
+							unique: true,
 						},
 						{
 							label: 'Morada',

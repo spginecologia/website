@@ -318,22 +318,18 @@
 					"label": "Email",
 					"placeholder": "Escolha uma opção..."
 				},
-				"full_name": {
-					"label": "Nome Completo",
+				"first_name": {
+					"label": "Nome",
 					"placeholder": ""
 				},
 				"last_name": {
-					"label": "Apelido",
+					"label": "Apelido(s)",
 					"placeholder": ""
 				},
 				"medical_id": {
 					"description": "Para alterar este campo por favor entre em contacto com o Secretariado SPG.",
 					"label": "Número de Cédula Médica",
 					"placeholder": "00000"
-				},
-				"name": {
-					"label": "Nome",
-					"placeholder": ""
 				},
 				"phone": {
 					"label": "Telefone",

@@ -5,13 +5,14 @@
 import type { PayloadMeResponse } from '@/types/payload-api-response';
 
 import { FormSection } from '@/components/common/FormSection';
-import { UserDefault } from '@/schemas/User/default';
+import { UserEditableProfileDefault } from '@/schemas/User/default';
 import { UserOptions } from '@/schemas/User/options';
-import { UserValidation } from '@/schemas/User/validation';
+import { UserEditableProfileValidation } from '@/schemas/User/validation';
 import { Button, Checkbox, Select, Space, Text, TextInput } from '@mantine/core';
 import { DateInput } from '@mantine/dates';
 import { useForm, zodResolver } from '@mantine/form';
 import { notifications } from '@mantine/notifications';
+import { mergekit } from 'mergekit';
 import { useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';
 import useSWR from 'swr';
@@ -43,12 +44,16 @@ export function AccountProfileForm() {
 		if (!userData || !userData.user) return;
 		// Return if no form or form is dirty
 		if (!form || form.isDirty()) return;
+		// merge
+		const mergedData = mergekit(
+			[UserEditableProfileDefault, userData.user],
+			{ onlyKeys: Object.keys(UserEditableProfileDefault) },
+		);
 		// Update form with user data
 		form.setInitialValues({
-			...UserDefault,
-			...userData.user,
-			billing_tax_id: String(userData.user.billing_tax_id),
-			birthday: userData.user.birthday ? new Date(userData.user.birthday) : null,
+			...mergedData,
+			billing_tax_id: userData.user.billing_tax_id ? String(userData.user.billing_tax_id) : '',
+			birthday: userData.user.birthday ? new Date(userData.user.birthday) : new Date(1900, 0, 1),
 		});
 		form.reset();
 		//
@@ -84,15 +89,13 @@ export function AccountProfileForm() {
 
 	const form = useForm({
 		clearInputErrorOnChange: true,
-		initialValues: UserDefault,
+		initialValues: UserEditableProfileDefault,
 		onValuesChange: handleValuesChange,
 		transformValues: (values) => {
-			console.log(values.birthday);
 			const birthday = values.birthday ? new Date(values.birthday) : null;
-			const subscribed_sections = values.subscribed_sections || [];
-			return { ...values, birthday, subscribed_sections };
+			return { ...values, birthday };
 		},
-		validate: zodResolver(UserValidation),
+		validate: zodResolver(UserEditableProfileValidation),
 	});
 
 	//
@@ -110,10 +113,11 @@ export function AccountProfileForm() {
 		<form onSubmit={form.onSubmit(handleSubmit)}>
 
 			<FormSection>
-				<Select data={UserOptions.title} label={t('fields.title.label')} placeholder={t('fields.title.placeholder')} {...form.getInputProps('title')} />
-				<TextInput label={t('fields.name.label')} placeholder={t('fields.name.placeholder')} readOnly={isLoading} {...form.getInputProps('name')} />
+				<div style={{ display: 'grid', gap: 10, gridTemplateColumns: '1fr 2fr' }}>
+					<Select data={UserOptions.title} label={t('fields.title.label')} placeholder={t('fields.title.placeholder')} {...form.getInputProps('title')} />
+					<TextInput label={t('fields.first_name.label')} placeholder={t('fields.first_name.placeholder')} readOnly={isLoading} {...form.getInputProps('first_name')} />
+				</div>
 				<TextInput label={t('fields.last_name.label')} placeholder={t('fields.last_name.placeholder')} readOnly={isLoading} {...form.getInputProps('last_name')} />
-				<TextInput label={t('fields.full_name.label')} placeholder={t('fields.full_name.placeholder')} readOnly={isLoading} {...form.getInputProps('full_name')} />
 				<TextInput label={t('fields.phone.label')} placeholder={t('fields.phone.placeholder')} readOnly={isLoading} {...form.getInputProps('phone')} type="tel" />
 				<TextInput label={t('fields.email.label')} placeholder={t('fields.email.placeholder')} readOnly={isLoading} {...form.getInputProps('email')} type="email" />
 			</FormSection>

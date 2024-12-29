@@ -1,6 +1,10 @@
 /* * */
 
-export const UserDefault = {
+import { UserEditableProfile } from '@/schemas/User/validation';
+
+/* * */
+
+export const UserEditableProfileDefault: UserEditableProfile = {
 	address_1: '',
 	address_2: '',
 	billing_address_1: '',
@@ -9,19 +13,18 @@ export const UserDefault = {
 	billing_name: '',
 	billing_postal_code: '',
 	billing_tax_id: '',
-	birthday: null,
+	birthday: new Date(1900, 0, 1),
 	city: '',
 	country: 'Portugal',
 	email: '',
-	full_name: '',
+	first_name: '',
 	last_name: '',
-	name: '',
 	phone: '',
 	postal_code: '',
 	send_newsletter: true,
 	send_notifications: true,
 	subscribed_sections: [],
-	title: null,
+	title: '',
 	workplace_primary: '',
 	workplace_secondary: '',
 };
