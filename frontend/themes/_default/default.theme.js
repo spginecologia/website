@@ -17,6 +17,9 @@ import '@/themes/_default/styles/wordpress.css';
 import AccordionOverride from '@/themes/_default/overrides/Accordion.module.css';
 import AlertOverride from '@/themes/_default/overrides/Alert.module.css';
 import ButtonOverride from '@/themes/_default/overrides/Button.module.css';
+import CheckboxOverride from '@/themes/_default/overrides/Checkbox.module.css';
+import CheckboxGroupOverride from '@/themes/_default/overrides/CheckboxGroup.module.css';
+import DateInputOverride from '@/themes/_default/overrides/DateInput.module.css';
 import PaperOverride from '@/themes/_default/overrides/Paper.module.css';
 import SegmentedControlOverride from '@/themes/_default/overrides/SegmentedControl.module.css';
 import SelectOverride from '@/themes/_default/overrides/Select.module.css';
@@ -26,7 +29,8 @@ import TextOverride from '@/themes/_default/overrides/Text.module.css';
 import TextInputOverride from '@/themes/_default/overrides/TextInput.module.css';
 import TitleOverride from '@/themes/_default/overrides/Title.module.css';
 import combineClasses from '@/utils/combineClasses';
-import { Accordion, Alert, Button, createTheme, Paper, SegmentedControl, Select, Skeleton, Table, Text, TextInput, Title } from '@mantine/core';
+import { Accordion, Alert, Button, Checkbox, createTheme, Paper, SegmentedControl, Select, Skeleton, Table, Text, TextInput, Title } from '@mantine/core';
+import { DateInput } from '@mantine/dates';
 import { IconCaretLeftFilled } from '@tabler/icons-react';
 
 /* * */
@@ -93,6 +97,66 @@ export default createTheme({
 				}
 				if (props.variant === 'link') {
 					defaultClasses = combineClasses(defaultClasses, [ButtonOverride.variantLink]);
+				}
+				return defaultClasses;
+			},
+			defaultProps: {
+				variant: 'primary',
+			},
+		}),
+
+		Checkbox: Checkbox.extend({
+			classNames: (_, props) => {
+				let defaultClasses = {
+					description: CheckboxOverride.description,
+					error: CheckboxOverride.error,
+					inner: CheckboxOverride.inner,
+					input: CheckboxOverride.input,
+					label: CheckboxOverride.label,
+					root: CheckboxOverride.root,
+					wrapper: CheckboxOverride.wrapper,
+				};
+				if (props.variant === 'primary') {
+					defaultClasses = combineClasses(defaultClasses, [CheckboxOverride.variantPrimary]);
+				}
+				return defaultClasses;
+			},
+			defaultProps: {
+				variant: 'primary',
+			},
+		}),
+
+		CheckboxGroup: Checkbox.Group.extend({
+			classNames: (_, props) => {
+				let defaultClasses = {
+					label: CheckboxGroupOverride.label,
+				};
+				if (props.variant === 'primary') {
+					defaultClasses = combineClasses(defaultClasses, [CheckboxGroupOverride.variantPrimary]);
+				}
+				return defaultClasses;
+			},
+			defaultProps: {
+				variant: 'primary',
+			},
+		}),
+
+		DateInput: DateInput.extend({
+			classNames: (_, props) => {
+				let defaultClasses = {
+					description: DateInputOverride.description,
+					error: DateInputOverride.error,
+					input: DateInputOverride.input,
+					label: DateInputOverride.label,
+					root: DateInputOverride.root,
+					section: DateInputOverride.section,
+					wrapper: DateInputOverride.wrapper,
+				};
+				if (props.variant === 'primary') {
+					defaultClasses = combineClasses(defaultClasses, [DateInputOverride.variantPrimary]);
+				}
+				if (props.variant === 'contrast') {
+					defaultClasses = combineClasses(defaultClasses, [DateInputOverride.variantContrast]);
 				}
 				return defaultClasses;
 			},

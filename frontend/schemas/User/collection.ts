@@ -28,25 +28,25 @@ export const Users: CollectionConfig = {
 				{
 					fields: [
 						{
-							label: 'Título',
-							name: 'title',
-							options: UserOptions.title,
-							type: 'select',
-						},
-						{
-							label: 'Nome',
-							name: 'name',
-							type: 'text',
-						},
-						{
-							label: 'Apelido',
-							name: 'last_name',
-							type: 'text',
-						},
-						{
-							label: 'Nome Completo',
-							name: 'full_name',
-							type: 'text',
+							fields: [
+								{
+									label: 'Título',
+									name: 'title',
+									options: UserOptions.title,
+									type: 'select',
+								},
+								{
+									label: 'Primeiro Nome',
+									name: 'first_name',
+									type: 'text',
+								},
+								{
+									label: 'Apelido(s)',
+									name: 'last_name',
+									type: 'text',
+								},
+							],
+							type: 'row',
 						},
 						{
 							label: 'Número de Contribuinte',

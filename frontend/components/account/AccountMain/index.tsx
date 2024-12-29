@@ -12,6 +12,7 @@ import { Section } from '@/components/common/Section';
 import { useEffect } from 'react';
 import useSWR from 'swr';
 
+import { AccountIntro } from '../AccountIntro';
 import styles from './styles.module.css';
 
 /* * */
@@ -40,10 +41,17 @@ export function AccountMain() {
 	return (
 		<ContentWrapper className={styles.contentWrapperOverride}>
 			<Section topSpacerType="transparent">
+				<AccountIntro />
+			</Section>
+			<Section>
 				<div className={styles.grid}>
-					<AccountPayments />
-					<AccountVideos />
-					<AccountProfile />
+					<div className={styles.columnA}>
+						<AccountPayments />
+						<AccountProfile />
+					</div>
+					<div className={styles.columnB}>
+						<AccountVideos />
+					</div>
 				</div>
 			</Section>
 		</ContentWrapper>

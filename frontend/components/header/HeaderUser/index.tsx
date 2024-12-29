@@ -55,7 +55,7 @@ export function HeaderUser() {
 				<>
 					<Link className={styles.target} href="/account">
 						{userData.user.title && <span className={styles.userTitle}>{userData.user.title}</span>}
-						{userData.user.name && <span className={styles.userFirstName}>{userData.user.name.substring(0, 12)}</span>}
+						{userData.user.first_name && <span className={styles.userFirstName}>{userData.user.first_name.substring(0, 12)}</span>}
 					</Link>
 					<div className={styles.dropdown}>
 						{PROFILE_PAGES.map(item => (

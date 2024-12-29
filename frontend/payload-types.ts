@@ -298,9 +298,8 @@ export interface Publication {
 export interface User {
   id: string;
   title?: ('Sr.' | 'Sr.ª' | 'Dr.' | 'Dr.ª' | 'Prof.' | 'Prof.ª' | 'Exmo.' | 'Exmo.ª') | null;
-  name?: string | null;
+  first_name?: string | null;
   last_name?: string | null;
-  full_name?: string | null;
   tax_id?: number | null;
   medical_id?: number | null;
   birthday?: string | null;
@@ -699,9 +698,8 @@ export interface PublicationsSelect<T extends boolean = true> {
  */
 export interface UsersSelect<T extends boolean = true> {
   title?: T;
-  name?: T;
+  first_name?: T;
   last_name?: T;
-  full_name?: T;
   tax_id?: T;
   medical_id?: T;
   birthday?: T;

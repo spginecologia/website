@@ -8,12 +8,20 @@
 /* * */
 /* GRID */
 
-.grid {
+.grid,
+.columnA,
+.columnB {
 	display: grid;
-	grid-template-rows: auto;
-	grid-template-columns: 1fr 1fr;
 	gap: 30px;
 	align-items: flex-start;
 	justify-content: flex-start;
 	width: 100%;
+}
+
+.grid {
+	grid-template-columns: 1fr 1fr;
+}
+
+.columnA, .columnB {
+	grid-template-columns: 1fr;
 }

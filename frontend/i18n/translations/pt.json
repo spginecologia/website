@@ -207,7 +207,12 @@
 	},
 	"account": {
 		"AccountIntro": {
-			"subtitle": "Faça a gestão autónoma dos pagamentos da sua quota de sócio.",
+			"error": "Não foi possível carregar o seu perfil",
+			"member_since": {
+				"female": "Sócia desde {value, date, long}",
+				"male": "Sócio desde {value, date, long}",
+				"other": "Com a SPG desde {value, date, long}"
+			},
 			"title": "Olá {name}"
 		},
 		"AccountPayments": {
