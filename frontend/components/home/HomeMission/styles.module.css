@@ -1,0 +1,51 @@
+/* * */
+/* CONTAINER */
+
+.container {
+	width: 100%;
+	padding: 30px;
+	background-color: var(--color-brand-primary-200);
+}
+
+/* * */
+/* TITLE */
+
+#title {
+	color: var(--color-reference-white);
+	border-color: var(--color-reference-white);
+}
+
+/* * */
+/* GRID */
+
+.grid {
+	display: grid;
+	grid-template:
+		"a b" auto
+		"c c" auto / 1fr 1fr;
+	gap: 20px 50px;
+	padding: 20px;
+	padding-right: 0;
+}
+
+.cellA {
+	display: flex;
+	flex-direction: column;
+	grid-area: a;
+	gap: 20px;
+}
+
+.cellB {
+	grid-area: b;
+}
+
+.cellC {
+	grid-area: c;
+}
+
+/* * */
+/* TEXT */
+
+.grid .whiteText {
+	color: var(--color-reference-white);
+}

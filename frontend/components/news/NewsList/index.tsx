@@ -106,15 +106,15 @@ export function NewsList() {
 			<Section>
 				<Title order={1}>{t('title')}</Title>
 				<div className={styles.grid}>
-					{regularNewsItems.map(news => (
+					{regularNewsItems.map(newsData => (
 						<NewsCard
-							key={news.id}
-							coverSrc={typeof news.featured_image === 'object' ? news?.featured_image?.url : undefined}
-							href={`/news/${news.id}`}
-							publishDate={new Date(news.createdAt)}
-							summary={news.summary}
-							title={news.title}
-							topic={news.topics && typeof news.topics[0] === 'object' ? news.topics[0] : undefined}
+							key={newsData.id}
+							coverSrc={typeof newsData.featured_image === 'object' ? newsData.featured_image?.url : undefined}
+							href={`/news/${newsData.id}`}
+							publishDate={new Date(newsData.createdAt)}
+							summary={newsData.summary}
+							title={newsData.title}
+							topic={newsData.topics && typeof newsData.topics[0] === 'object' ? newsData.topics[0] : undefined}
 						/>
 					))}
 				</div>

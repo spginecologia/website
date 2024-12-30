@@ -273,8 +273,8 @@ export interface News {
   is_featured?: boolean | null;
   topics?: (string | Topic)[] | null;
   featured_image?: (string | null) | Media;
-  updatedAt: string;
   createdAt: string;
+  updatedAt: string;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -675,8 +675,8 @@ export interface NewsSelect<T extends boolean = true> {
   is_featured?: T;
   topics?: T;
   featured_image?: T;
-  updatedAt?: T;
   createdAt?: T;
+  updatedAt?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

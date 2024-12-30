@@ -110,15 +110,15 @@ export function EventsList() {
 			<Section topSpacerType="transparent">
 				<Title order={1}>{t('title')}</Title>
 				<div className={styles.grid}>
-					{regularEventsItems.map(event => (
+					{regularEventsItems.map(eventData => (
 						<EventCard
-							key={event.id}
-							coverSrc={typeof event.featured_image === 'object' ? event?.featured_image?.url : undefined}
-							endDate={event.end_date ? new Date(event.end_date) : null}
-							href={`/events/${event.id}`}
-							startDate={new Date(event.start_date)}
-							title={event.title}
-							topic={event.topics && typeof event.topics[0] === 'object' ? event.topics[0] : undefined}
+							key={eventData.id}
+							coverSrc={typeof eventData.featured_image === 'object' ? eventData.featured_image?.url : undefined}
+							endDate={eventData.end_date ? new Date(eventData.end_date) : null}
+							href={`/events/${eventData.id}`}
+							startDate={new Date(eventData.start_date)}
+							title={eventData.title}
+							topic={eventData.topics && typeof eventData.topics[0] === 'object' ? eventData.topics[0] : undefined}
 						/>
 					))}
 				</div>

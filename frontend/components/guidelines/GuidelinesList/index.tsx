@@ -75,14 +75,14 @@ export function GuidelinesList() {
 			<Section topSpacerType="academia">
 				<Title order={1}>{t('title')}</Title>
 				<div className={styles.grid}>
-					{allGuidelinesData?.docs.map(guideline => (
+					{allGuidelinesData?.docs.map(guidelineData => (
 						<Card
-							key={guideline.id}
+							key={guidelineData.id}
 							coverAspectRatio="210 / 297"
-							coverSrc={typeof guideline.featured_image === 'object' ? guideline?.featured_image?.url : undefined}
-							href={`/academia/guidelines/${guideline.id}`}
-							publishDate={new Date(guideline.createdAt)}
-							title={guideline.title}
+							coverSrc={typeof guidelineData.featured_image === 'object' ? guidelineData.featured_image?.url : undefined}
+							href={`/academia/guidelines/${guidelineData.id}`}
+							publishDate={new Date(guidelineData.createdAt)}
+							title={guidelineData.title}
 						/>
 					))}
 				</div>

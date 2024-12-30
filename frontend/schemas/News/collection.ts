@@ -2,19 +2,24 @@
 
 import type { CollectionConfig } from 'payload';
 
+import { createdAtField } from '@/fields/created-at';
 import { featuredImageField } from '@/fields/featured-image';
 import { isFeaturedField } from '@/fields/is-featured';
 import { topicsField } from '@/fields/topics';
+import { updatedAtField } from '@/fields/updated-at';
 
 /* * */
 
 export const News: CollectionConfig = {
+
 	access: {
 		read: () => true,
 	},
+
 	admin: {
 		useAsTitle: 'title',
 	},
+
 	fields: [
 		{
 			label: 'Título',
@@ -37,10 +42,17 @@ export const News: CollectionConfig = {
 		isFeaturedField,
 		topicsField,
 		featuredImageField,
+		createdAtField,
+		updatedAtField,
 	],
+
 	labels: {
 		plural: 'Notícias',
 		singular: 'Notícia',
 	},
+
 	slug: 'news',
+
+	timestamps: false,
+
 };
