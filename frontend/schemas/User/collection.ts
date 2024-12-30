@@ -21,7 +21,14 @@ export const Users: CollectionConfig = {
 		useAsTitle: 'email',
 	},
 
-	auth: true,
+	auth: {
+		cookies: {
+			domain: process.env.NEXT_PUBLIC_COOKIE_DOMAIN,
+			sameSite: 'Strict',
+			secure: true,
+		},
+		tokenExpiration: 3600 * 24 * 30, // 30 days
+	},
 
 	fields: [
 		{
@@ -76,12 +83,6 @@ export const Users: CollectionConfig = {
 							label: 'Telefone',
 							name: 'phone',
 							type: 'text',
-						},
-						{
-							label: 'Email',
-							name: 'email',
-							type: 'text',
-							unique: true,
 						},
 						{
 							label: 'Morada',

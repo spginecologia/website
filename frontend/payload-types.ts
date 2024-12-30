@@ -304,7 +304,6 @@ export interface User {
   medical_id?: number | null;
   birthday?: string | null;
   phone?: string | null;
-  email: string;
   address_1?: string | null;
   address_2?: string | null;
   postal_code?: string | null;
@@ -340,6 +339,7 @@ export interface User {
   account_status?: ('active' | 'pending') | null;
   updatedAt: string;
   createdAt: string;
+  email: string;
   resetPasswordToken?: string | null;
   resetPasswordExpiration?: string | null;
   salt?: string | null;
@@ -704,7 +704,6 @@ export interface UsersSelect<T extends boolean = true> {
   medical_id?: T;
   birthday?: T;
   phone?: T;
-  email?: T;
   address_1?: T;
   address_2?: T;
   postal_code?: T;
@@ -732,6 +731,7 @@ export interface UsersSelect<T extends boolean = true> {
   account_status?: T;
   updatedAt?: T;
   createdAt?: T;
+  email?: T;
   resetPasswordToken?: T;
   resetPasswordExpiration?: T;
   salt?: T;
