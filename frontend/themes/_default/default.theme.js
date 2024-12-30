@@ -317,6 +317,12 @@ export default createTheme({
 				if (props.order === 2) {
 					defaultClasses = combineClasses(defaultClasses, [TitleOverride.orderH2]);
 				}
+				if (props.order === 3) {
+					defaultClasses = combineClasses(defaultClasses, [TitleOverride.orderH3]);
+				}
+				if (props.order === 4) {
+					defaultClasses = combineClasses(defaultClasses, [TitleOverride.orderH4]);
+				}
 				if (props.size === 'sm') {
 					defaultClasses = combineClasses(defaultClasses, [TitleOverride.sizeSm]);
 				}

@@ -11,9 +11,6 @@
 			"label": "Version {version}"
 		}
 	},
-	"FrontendPublishDate": {
-		"label": "Publicado a {date}"
-	},
 	"FrontendSubscriptionRenewError": {
 		"subtitle": "Ocorreu um erro",
 		"title": "Erro"
@@ -155,9 +152,6 @@
 			"label": "Start Time",
 			"placeholder": "00:00"
 		}
-	},
-	"SearchField": {
-		"placeholder": "Procurar..."
 	},
 	"StopSequenceTable": {
 		"allow_drop_off": {

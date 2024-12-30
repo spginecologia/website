@@ -1,9 +1,9 @@
 /* * */
 
+import { CardPublishDate } from '@/components/cards/CardPublishDate';
 import { ContentWrapper } from '@/components/common/ContentWrapper';
 import { Section } from '@/components/common/Section';
-import FrontendPublishDate from '@/components/FrontendPublishDate/FrontendPublishDate';
-import Title from '@/components/Title/Title';
+import { Title } from '@mantine/core';
 import Image from 'next/image';
 
 import FrontendTopicTag from '../../FrontendTopicTag/FrontendTopicTag';
@@ -43,10 +43,10 @@ export function NewsDetail({ id }) {
 			<Section>
 				<div className={styles.contentWrapper}>
 					<FrontendTopicTag _id="" />
-					<Title text={newsData.title} />
+					<Title order={2}>{newsData.title}</Title>
 					<div className={styles.actionsWrapper}>
 						<div className={styles.shareStrip}>share strip</div>
-						<FrontendPublishDate date={newsData.publish_date} />
+						<CardPublishDate date={new Date(newsData.publish_date)} />
 					</div>
 					<div className={styles.newsBody} dangerouslySetInnerHTML={{ __html: newsData.text }} />
 				</div>

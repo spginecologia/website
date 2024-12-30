@@ -1,6 +1,7 @@
 /* * */
 
-import Text from '../../Text/Text';
+import { Text, Title } from '@mantine/core';
+
 import styles from './styles.module.css';
 
 /* * */
@@ -18,8 +19,8 @@ export function FormSection({ children, description, title }: Props) {
 		<div className={styles.container}>
 			{title && (
 				<div className={styles.formHeader}>
-					<Text text={title} variant="form_section_title" />
-					{description && <Text text={description} variant="form_section_description" />}
+					<Title order={4}>{title}</Title>
+					{description && <Text size="xs">{description}</Text>}
 				</div>
 			)}
 			<div className={styles.children}>{children}</div>
