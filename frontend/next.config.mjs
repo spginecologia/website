@@ -5,10 +5,6 @@ import createNextIntlPlugin from 'next-intl/plugin'
 
 /* * */
 
-const withNextIntl = createNextIntlPlugin()
-
-/* * */
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
@@ -30,5 +26,7 @@ const nextConfig = {
 }
 
 /* * */
+
+const withNextIntl = createNextIntlPlugin()
 
 export default withPayload(withNextIntl(nextConfig))
