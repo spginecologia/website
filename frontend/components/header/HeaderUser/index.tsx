@@ -5,8 +5,8 @@
 import { Loader } from '@/components/common/Loader';
 import { PayloadMeResponse } from '@/types/payload-api-response';
 import { IconSettings, IconUserCircle } from '@tabler/icons-react';
-import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+import Link from 'next/link';
 import useSWR from 'swr';
 
 import styles from './styles.module.css';

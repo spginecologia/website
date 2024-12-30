@@ -6,8 +6,8 @@ import Button from '@/components/common/Button';
 import Text from '@/components/Text/Text';
 import Title from '@/components/Title/Title';
 import { Space } from '@mantine/core';
-import { useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
+import { useRouter } from 'next/navigation';
 
 import styles from './AppAuthenticationLoginVerify.module.css';
 

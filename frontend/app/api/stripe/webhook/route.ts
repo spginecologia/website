@@ -95,7 +95,7 @@ export async function POST(request: Request) {
 				city: userData.billing_city || userData.city || undefined,
 				country: 'PT',
 				fiscal_id: (userData.billing_tax_id ? String(userData.billing_tax_id) : undefined) || (userData.tax_id ? String(userData.tax_id) : undefined),
-				name: userData.billing_name || userData.full_name || undefined,
+				name: userData.billing_name || userData.first_name || undefined,
 				postalcode: userData.billing_postal_code || userData.postal_code || undefined,
 			};
 			// Prepare transaction items

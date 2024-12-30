@@ -2,9 +2,9 @@
 
 import { availableFormats } from '@/i18n/config';
 import { ConfigProviders } from '@/providers/config-providers';
-import { DM_Serif_Display } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages } from 'next-intl/server';
+import { DM_Serif_Display } from 'next/font/google';
 import { NuqsAdapter } from 'nuqs/adapters/next/app';
 
 /* * */
