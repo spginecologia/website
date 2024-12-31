@@ -30,7 +30,7 @@ import TableOverride from '@/themes/_default/overrides/Table.module.css';
 import TextOverride from '@/themes/_default/overrides/Text.module.css';
 import TextInputOverride from '@/themes/_default/overrides/TextInput.module.css';
 import TitleOverride from '@/themes/_default/overrides/Title.module.css';
-import combineClasses from '@/utils/combineClasses';
+import { combineClassNames } from '@/utils/combine-class-names';
 import { Accordion, Alert, Button, Checkbox, createTheme, Loader, Notification, Paper, SegmentedControl, Select, Skeleton, Table, Text, TextInput, Title } from '@mantine/core';
 import { DateInput } from '@mantine/dates';
 import { IconCaretLeftFilled } from '@tabler/icons-react';
@@ -71,7 +71,7 @@ export default createTheme({
 					title: AlertOverride.title,
 				};
 				if (props.variant === 'info') {
-					defaultClasses = combineClasses(defaultClasses, [AlertOverride.variantinfo]);
+					defaultClasses = combineClassNames(defaultClasses, [AlertOverride.variantinfo]);
 				}
 				return defaultClasses;
 			},
@@ -89,19 +89,19 @@ export default createTheme({
 					section: ButtonOverride.section,
 				};
 				if (props.variant === 'primary') {
-					defaultClasses = combineClasses(defaultClasses, [ButtonOverride.variantPrimary]);
+					defaultClasses = combineClassNames(defaultClasses, [ButtonOverride.variantPrimary]);
 				}
 				if (props.variant === 'secondary') {
-					defaultClasses = combineClasses(defaultClasses, [ButtonOverride.variantSecondary]);
+					defaultClasses = combineClassNames(defaultClasses, [ButtonOverride.variantSecondary]);
 				}
 				if (props.variant === 'muted') {
-					defaultClasses = combineClasses(defaultClasses, [ButtonOverride.variantMuted]);
+					defaultClasses = combineClassNames(defaultClasses, [ButtonOverride.variantMuted]);
 				}
 				if (props.variant === 'contrast') {
-					defaultClasses = combineClasses(defaultClasses, [ButtonOverride.variantContrast]);
+					defaultClasses = combineClassNames(defaultClasses, [ButtonOverride.variantContrast]);
 				}
 				if (props.variant === 'link') {
-					defaultClasses = combineClasses(defaultClasses, [ButtonOverride.variantLink]);
+					defaultClasses = combineClassNames(defaultClasses, [ButtonOverride.variantLink]);
 				}
 				return defaultClasses;
 			},
@@ -122,7 +122,7 @@ export default createTheme({
 					wrapper: CheckboxOverride.wrapper,
 				};
 				if (props.variant === 'primary') {
-					defaultClasses = combineClasses(defaultClasses, [CheckboxOverride.variantPrimary]);
+					defaultClasses = combineClassNames(defaultClasses, [CheckboxOverride.variantPrimary]);
 				}
 				return defaultClasses;
 			},
@@ -137,7 +137,7 @@ export default createTheme({
 					label: CheckboxGroupOverride.label,
 				};
 				if (props.variant === 'primary') {
-					defaultClasses = combineClasses(defaultClasses, [CheckboxGroupOverride.variantPrimary]);
+					defaultClasses = combineClassNames(defaultClasses, [CheckboxGroupOverride.variantPrimary]);
 				}
 				return defaultClasses;
 			},
@@ -158,10 +158,10 @@ export default createTheme({
 					wrapper: DateInputOverride.wrapper,
 				};
 				if (props.variant === 'primary') {
-					defaultClasses = combineClasses(defaultClasses, [DateInputOverride.variantPrimary]);
+					defaultClasses = combineClassNames(defaultClasses, [DateInputOverride.variantPrimary]);
 				}
 				if (props.variant === 'contrast') {
-					defaultClasses = combineClasses(defaultClasses, [DateInputOverride.variantContrast]);
+					defaultClasses = combineClassNames(defaultClasses, [DateInputOverride.variantContrast]);
 				}
 				return defaultClasses;
 			},
@@ -177,7 +177,7 @@ export default createTheme({
 
 				};
 				if (props.variant === 'contrast') {
-					defaultClasses = combineClasses(defaultClasses, [LoaderOverride.variantContrast]);
+					defaultClasses = combineClassNames(defaultClasses, [LoaderOverride.variantContrast]);
 				}
 				return defaultClasses;
 			},
@@ -216,7 +216,7 @@ export default createTheme({
 					root: SegmentedControlOverride.root,
 				};
 				if (props.variant === 'white') {
-					defaultClasses = combineClasses(defaultClasses, [SegmentedControlOverride.variantWhite]);
+					defaultClasses = combineClassNames(defaultClasses, [SegmentedControlOverride.variantWhite]);
 				}
 				return defaultClasses;
 			},
@@ -235,7 +235,7 @@ export default createTheme({
 					wrapper: SelectOverride.wrapper,
 				};
 				if (props.variant === 'primary') {
-					defaultClasses = combineClasses(defaultClasses, [SelectOverride.variantPrimary]);
+					defaultClasses = combineClassNames(defaultClasses, [SelectOverride.variantPrimary]);
 				}
 				return defaultClasses;
 			},
@@ -272,25 +272,25 @@ export default createTheme({
 					root: TextOverride.root,
 				};
 				if (props.variant === 'primary') {
-					defaultClasses = combineClasses(defaultClasses, [TextOverride.variantPrimary]);
+					defaultClasses = combineClassNames(defaultClasses, [TextOverride.variantPrimary]);
 				}
 				if (props.variant === 'secondary') {
-					defaultClasses = combineClasses(defaultClasses, [TextOverride.variantSecondary]);
+					defaultClasses = combineClassNames(defaultClasses, [TextOverride.variantSecondary]);
 				}
 				if (props.variant === 'overline') {
-					defaultClasses = combineClasses(defaultClasses, [TextOverride.variantOverline]);
+					defaultClasses = combineClassNames(defaultClasses, [TextOverride.variantOverline]);
 				}
 				if (props.variant === 'error') {
-					defaultClasses = combineClasses(defaultClasses, [TextOverride.variantError]);
+					defaultClasses = combineClassNames(defaultClasses, [TextOverride.variantError]);
 				}
 				if (props.size === 'md') {
-					defaultClasses = combineClasses(defaultClasses, [TextOverride.sizeMd]);
+					defaultClasses = combineClassNames(defaultClasses, [TextOverride.sizeMd]);
 				}
 				if (props.size === 'sm') {
-					defaultClasses = combineClasses(defaultClasses, [TextOverride.sizeSm]);
+					defaultClasses = combineClassNames(defaultClasses, [TextOverride.sizeSm]);
 				}
 				if (props.size === 'xs') {
-					defaultClasses = combineClasses(defaultClasses, [TextOverride.sizeXs]);
+					defaultClasses = combineClassNames(defaultClasses, [TextOverride.sizeXs]);
 				}
 				return defaultClasses;
 			},
@@ -311,10 +311,10 @@ export default createTheme({
 					wrapper: TextInputOverride.wrapper,
 				};
 				if (props.variant === 'primary') {
-					defaultClasses = combineClasses(defaultClasses, [TextInputOverride.variantPrimary]);
+					defaultClasses = combineClassNames(defaultClasses, [TextInputOverride.variantPrimary]);
 				}
 				if (props.variant === 'contrast') {
-					defaultClasses = combineClasses(defaultClasses, [TextInputOverride.variantContrast]);
+					defaultClasses = combineClassNames(defaultClasses, [TextInputOverride.variantContrast]);
 				}
 				return defaultClasses;
 			},
@@ -329,22 +329,22 @@ export default createTheme({
 					root: TitleOverride.root,
 				};
 				if (props.order === 1) {
-					defaultClasses = combineClasses(defaultClasses, [TitleOverride.orderH1]);
+					defaultClasses = combineClassNames(defaultClasses, [TitleOverride.orderH1]);
 				}
 				if (props.order === 2) {
-					defaultClasses = combineClasses(defaultClasses, [TitleOverride.orderH2]);
+					defaultClasses = combineClassNames(defaultClasses, [TitleOverride.orderH2]);
 				}
 				if (props.order === 3) {
-					defaultClasses = combineClasses(defaultClasses, [TitleOverride.orderH3]);
+					defaultClasses = combineClassNames(defaultClasses, [TitleOverride.orderH3]);
 				}
 				if (props.order === 4) {
-					defaultClasses = combineClasses(defaultClasses, [TitleOverride.orderH4]);
+					defaultClasses = combineClassNames(defaultClasses, [TitleOverride.orderH4]);
 				}
 				if (props.size === 'sm') {
-					defaultClasses = combineClasses(defaultClasses, [TitleOverride.sizeSm]);
+					defaultClasses = combineClassNames(defaultClasses, [TitleOverride.sizeSm]);
 				}
 				if (props.size === 'xs') {
-					defaultClasses = combineClasses(defaultClasses, [TitleOverride.sizeXs]);
+					defaultClasses = combineClassNames(defaultClasses, [TitleOverride.sizeXs]);
 				}
 				return defaultClasses;
 			},

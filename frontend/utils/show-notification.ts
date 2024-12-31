@@ -2,6 +2,7 @@
 
 import { NotificationData, notifications } from '@mantine/notifications';
 import { IconCheck, IconX } from '@tabler/icons-react';
+import React from 'react';
 
 /* * */
 
@@ -30,7 +31,7 @@ export async function showNotification({ action = 'show', id, message, title, ty
 		case 'error':
 			notificationOptions.loading = false;
 			notificationOptions.autoClose = 7000;
-			notificationOptions.icon = <IconX />;
+			notificationOptions.icon = React.createElement(IconX);
 			notificationOptions.mod = { state: 'error' };
 			break;
 
@@ -43,7 +44,7 @@ export async function showNotification({ action = 'show', id, message, title, ty
 		case 'success':
 			notificationOptions.loading = false;
 			notificationOptions.autoClose = 3000;
-			notificationOptions.icon = <IconCheck />;
+			notificationOptions.icon = React.createElement(IconCheck);
 			notificationOptions.className = 'success';
 			notificationOptions.mod = { state: 'success' };
 			break;
