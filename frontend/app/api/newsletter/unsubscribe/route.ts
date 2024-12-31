@@ -17,7 +17,7 @@ export async function POST(request: Request) {
 
 		const requestBody = await request.json();
 
-		console.log(requestBody);
+		console.log('webhook', requestBody);
 
 		// //
 		// // Verify the Turnstile token to prevent spam
