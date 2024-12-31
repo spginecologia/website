@@ -550,6 +550,7 @@
 			"privacy": "Privacidade"
 		},
 		"FooterNewsletter": {
+			"error_message": "Não foi possível subscrever.",
 			"form": {
 				"email": {
 					"label": "Email",
@@ -565,6 +566,7 @@
 			},
 			"subscribe": "Subscrever",
 			"subtitle": "Subscreva a newsletter e fique a par das nossas atualizações.",
+			"success_message": "Subscrição com sucesso!",
 			"title": "Newsletter"
 		}
 	},

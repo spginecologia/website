@@ -8,7 +8,7 @@ import { Button, Loader, Space, Text, TextInput, Title } from '@mantine/core';
 import { useForm, zodResolver } from '@mantine/form';
 import { Turnstile } from '@marsidev/react-turnstile';
 import { useTranslations } from 'next-intl';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import styles from './styles.module.css';
 
@@ -41,6 +41,16 @@ export function FooterNewsletter() {
 	//
 	// C. Handle actions
 
+	useEffect(() => {
+		if (!isSuccess) return;
+		const timeout = setTimeout(() => {
+			setIsSuccess(false);
+			setIsError(false);
+			setIsLoading(false);
+		}, 10000);
+		return () => clearTimeout(timeout);
+	}, [isSuccess]);
+
 	const handleSubscribe = async () => {
 		try {
 			setIsLoading(true);
@@ -68,6 +78,18 @@ export function FooterNewsletter() {
 	//
 	// D. Render components
 
+	if (isSuccess) {
+		return (
+			<div className={styles.container}>
+				<div className={styles.header}>
+					<Title id={styles.title} order={2}>{t('title')}</Title>
+					<Text id={styles.subtitle}>{t('subtitle')}</Text>
+				</div>
+				<Text id={styles.successMessage} variant="overline">{t('success_message')}</Text>
+			</div>
+		);
+	}
+
 	return (
 		<div className={styles.container}>
 			<div className={styles.header}>
@@ -86,7 +108,7 @@ export function FooterNewsletter() {
 				{(!isLoading && isError) && (
 					<>
 						<Space h={5} />
-						<Text variant="error">{t('error.message')}</Text>
+						<Text variant="error">{t('error_message')}</Text>
 					</>
 				)}
 
