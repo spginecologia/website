@@ -3,6 +3,7 @@
 import type { CollectionConfig } from 'payload';
 
 import { UserOptions } from '@/schemas/User/options';
+import { brevoUpdateNewsletterSubscription } from '@/utils/brevo-update-newsletter-subscription';
 import { validateTaxId } from '@/utils/validate-tax-id';
 
 /* * */
@@ -57,22 +58,37 @@ export const Users: CollectionConfig = {
 							type: 'row',
 						},
 						{
-							label: 'Número de Contribuinte',
-							name: 'tax_id',
-							required: true,
-							type: 'text',
-							unique: true,
-							validate: value => validateTaxId(value, true) || 'Número de Contribuinte deve ser um número de 9 caracteres.',
+							fields: [
+								{
+									label: 'Número de Contribuinte',
+									name: 'tax_id',
+									required: true,
+									type: 'text',
+									unique: true,
+									validate: value => validateTaxId(value, true) || 'Número de Contribuinte deve ser um número de 9 caracteres.',
+								},
+								{
+									label: 'Número de Cédula Médica',
+									name: 'medical_id',
+									type: 'number',
+								},
+							],
+							type: 'row',
 						},
 						{
-							label: 'Número de Cédula Médica',
-							name: 'medical_id',
-							type: 'number',
-						},
-						{
-							label: 'Data de Nascimento',
-							name: 'birthday',
-							type: 'date',
+							fields: [
+								{
+									label: 'Data de Nascimento',
+									name: 'birthday',
+									type: 'date',
+								},
+								{
+									label: 'Sócio SPG desde',
+									name: 'member_since',
+									type: 'date',
+								},
+							],
+							type: 'row',
 						},
 					],
 					label: 'Referências',
@@ -80,9 +96,25 @@ export const Users: CollectionConfig = {
 				{
 					fields: [
 						{
-							label: 'Telefone',
-							name: 'phone',
-							type: 'text',
+							fields: [
+								{
+									defaultValue: true,
+									label: 'Enviar Newsletter',
+									name: 'send_newsletter',
+									type: 'checkbox',
+								},
+							],
+							type: 'row',
+						},
+						{
+							fields: [
+								{
+									label: 'Telefone',
+									name: 'phone',
+									type: 'text',
+								},
+							],
+							type: 'row',
 						},
 						{
 							label: 'Morada',
@@ -95,20 +127,25 @@ export const Users: CollectionConfig = {
 							type: 'text',
 						},
 						{
-							label: 'Código Postal',
-							name: 'postal_code',
-							type: 'text',
-						},
-						{
-							label: 'Cidade',
-							name: 'city',
-							type: 'text',
-						},
-						{
-							defaultValue: 'Portugal',
-							label: 'País',
-							name: 'country',
-							type: 'text',
+							fields: [
+								{
+									label: 'Código Postal',
+									name: 'postal_code',
+									type: 'text',
+								},
+								{
+									label: 'Cidade',
+									name: 'city',
+									type: 'text',
+								},
+								{
+									defaultValue: 'Portugal',
+									label: 'País',
+									name: 'country',
+									type: 'text',
+								},
+							],
+							type: 'row',
 						},
 					],
 					label: 'Contactos',
@@ -235,7 +272,7 @@ export const Users: CollectionConfig = {
 							type: 'array',
 						},
 					],
-					label: 'Faturação',
+					label: 'Pagamentos & Faturas',
 				},
 			],
 			type: 'tabs',
@@ -254,6 +291,14 @@ export const Users: CollectionConfig = {
 			type: 'select',
 		},
 	],
+
+	hooks: {
+		afterChange: [
+			async ({ doc }) => {
+				await brevoUpdateNewsletterSubscription(doc);
+			},
+		],
+	},
 
 	slug: 'users',
 

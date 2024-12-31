@@ -43,7 +43,7 @@ export function LoginForm() {
 	const handleSignIn = async () => {
 		try {
 			setIsLoading(true);
-			const loginResponse = await fetch('/api/account/login', {
+			const response = await fetch('/api/account/login', {
 				body: JSON.stringify({
 					email: form.values.email,
 					password: form.values.password,
@@ -53,8 +53,8 @@ export function LoginForm() {
 				},
 				method: 'POST',
 			});
-			if (!loginResponse.ok) {
-				throw new Error(`Failed to login. Status: ${loginResponse.status}`);
+			if (!response.ok) {
+				throw new Error(`Failed to login. Status: ${response.status}`);
 			}
 			console.log('Login successful. Redirecting to account page...');
 			navigationHandleRedirectParam({ fallback: '/account' });

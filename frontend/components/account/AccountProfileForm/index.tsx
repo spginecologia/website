@@ -156,9 +156,12 @@ export function AccountProfileForm() {
 			<FormSection description={t('sections.correspondence.description')} title={t('sections.correspondence.title')}>
 				<TextInput label={t('fields.address_1.label')} placeholder={t('fields.address_1.placeholder')} readOnly={isLoading} {...form.getInputProps('address_1')} />
 				<TextInput label={t('fields.address_2.label')} placeholder={t('fields.address_2.placeholder')} readOnly={isLoading} {...form.getInputProps('address_2')} />
-				<TextInput label={t('fields.postal_code.label')} placeholder={t('fields.postal_code.placeholder')} readOnly={isLoading} {...form.getInputProps('postal_code')} />
-				<TextInput label={t('fields.city.label')} placeholder={t('fields.city.placeholder')} readOnly={isLoading} {...form.getInputProps('city')} />
+				<div style={{ display: 'grid', gap: 10, gridTemplateColumns: '1fr 2fr' }}>
+					<TextInput label={t('fields.postal_code.label')} placeholder={t('fields.postal_code.placeholder')} readOnly={isLoading} {...form.getInputProps('postal_code')} />
+					<TextInput label={t('fields.city.label')} placeholder={t('fields.city.placeholder')} readOnly={isLoading} {...form.getInputProps('city')} />
+				</div>
 				<TextInput label={t('fields.country.label')} placeholder={t('fields.country.placeholder')} readOnly={isLoading} {...form.getInputProps('country')} />
+				<Checkbox label={t('fields.send_newsletter.label')} readOnly={isLoading} {...form.getInputProps('send_newsletter', { type: 'checkbox' })} />
 			</FormSection>
 
 			{isDirty && <Button disabled={!isValid} loading={isLoading} type="submit">{t('actions.submit.label')}</Button>}

@@ -6,6 +6,7 @@ import { NewsletterDefault } from '@/schemas/Newsletter/default';
 import { NewsletterValidation } from '@/schemas/Newsletter/validation';
 import { Button, Loader, Space, Text, TextInput, Title } from '@mantine/core';
 import { useForm, zodResolver } from '@mantine/form';
+import { Turnstile } from '@marsidev/react-turnstile';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 
@@ -22,6 +23,7 @@ export function FooterNewsletter() {
 	const t = useTranslations('footer.FooterNewsletter');
 
 	const [isLoading, setIsLoading] = useState(false);
+	const [isSuccess, setIsSuccess] = useState(false);
 	const [isError, setIsError] = useState(false);
 
 	//
@@ -42,25 +44,23 @@ export function FooterNewsletter() {
 	const handleSubscribe = async () => {
 		try {
 			setIsLoading(true);
-			// const loginResponse = await fetch('/api/account/login', {
-			// 	body: JSON.stringify({
-			// 		email: form.values.email,
-			// 		password: form.values.password,
-			// 	}),
-			// 	headers: {
-			// 		'Content-Type': 'application/json',
-			// 	},
-			// 	method: 'POST',
-			// });
-			// if (!loginResponse.ok) {
-			// 	throw new Error(`Failed to login. Status: ${loginResponse.status}`);
-			// }
-			console.log('Login successful. Redirecting to account page...');
-		}
-		catch (error) {
-			console.log(error.message);
-			form.setFieldValue('password', '');
+			const response = await fetch('/api/newsletter/subscribe', {
+				body: JSON.stringify(form.getValues()),
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				method: 'POST',
+			});
+			if (!response.ok) {
+				throw new Error(`Failed to subscribe. Status: ${response.status}`);
+			}
 			setIsLoading(false);
+			setIsSuccess(true);
+		}
+		catch (err) {
+			console.log(err.message);
+			setIsLoading(false);
+			setIsSuccess(false);
 			setIsError(true);
 		}
 	};
@@ -77,6 +77,9 @@ export function FooterNewsletter() {
 			<form className={styles.form} onSubmit={form.onSubmit(handleSubscribe)}>
 				<TextInput aria-label={t('form.name.label')} placeholder={t('form.name.placeholder')} variant="contrast" w="100%" {...form.getInputProps('name')} />
 				<TextInput aria-label={t('form.email.label')}placeholder={t('form.email.placeholder')} variant="contrast" w="100%" {...form.getInputProps('email')} />
+				<Turnstile onSuccess={token => form.setFieldValue('turnstile_token', token)} siteKey={process.env.NEXT_PUBLIC_CLOUDFLARE_TURNSTILE_SITE_KEY ?? ''} />
+
+				{isSuccess && <Text variant="success">SUCESSO</Text>}
 
 				{isLoading && <Loader />}
 				{(!isLoading && form.isDirty()) && <Button disabled={!form.isValid()} type="submit" variant="contrast" w="100%">{t('subscribe')}</Button>}

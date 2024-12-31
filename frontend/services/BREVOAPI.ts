@@ -1,9 +1,5 @@
 /* * */
 
-const BASE_URL = 'https://api.brevo.com/v3';
-
-/* * */
-
 interface BrevoApiData {
 
 	/**
@@ -25,25 +21,58 @@ interface BrevoApiData {
 
 /* * */
 
-export async function brevoApi({ data, method, service }: BrevoApiData) {
-	//
+export async function BREVOAPI({ data, method, service }: BrevoApiData) {
+	try {
+		//
 
-	const url = `${BASE_URL}/${service}`;
+		//
+		// Ensure the API key is available
 
-	const options = {
-		body: data,
-		headers: {
-			'accept': 'application/json',
-			'api-key': process.env.BREVO_API_KEY || 'placeholder',
-			'content-type': 'application/json',
-		},
-		method: method,
-	};
+		const apiKey = process.env.BREVO_API_KEY;
 
-	fetch(url, options)
-		.then(res => res.json())
-		.then(json => console.log(json))
-		.catch(err => console.error(err));
+		if (!apiKey) {
+			throw new Error('The BREVO API key is missing.');
+		}
 
-	//
+		//
+		// Setup the request options
+
+		const url = `https://api.brevo.com/v3/${service}`;
+
+		const options = {
+			body: data,
+			headers: {
+				'accept': 'application/json',
+				'api-key': process.env.BREVO_API_KEY || 'placeholder',
+				'content-type': 'application/json',
+			},
+			method: method,
+		};
+
+		//
+		// Make the request to the API
+
+		const response = await fetch(url, options);
+
+		//
+		// Handle the response statuses
+
+		if (!response.ok) {
+			throw new Error(`The BREVO API returned an error: ${response.status} ${response.statusText}`);
+		}
+
+		if (response.status === 204) {
+			// 204 means "No content" and has no body to parse.
+			// Consider as a successful request.
+			return;
+		}
+
+		return await response.json();
+
+		//
+	}
+	catch (err) {
+		console.log(err);
+		throw new Error(err.message || 'An error occurred while trying to contact the BREVO API.');
+	}
 }

@@ -94,10 +94,6 @@ export const UserEditableProfileValidation = z
 			.coerce
 			.boolean(),
 
-		send_notifications: z
-			.coerce
-			.boolean(),
-
 		subscribed_sections: z
 			.array(z.coerce.string()),
 

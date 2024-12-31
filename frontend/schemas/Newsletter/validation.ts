@@ -16,5 +16,8 @@ export const NewsletterValidation = z
 			.string()
 			.optional(),
 
+		turnstile_token: z
+			.string(),
+
 	})
 	.strict();

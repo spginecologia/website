@@ -303,6 +303,8 @@ export interface User {
   tax_id: string;
   medical_id?: number | null;
   birthday?: string | null;
+  member_since?: string | null;
+  send_newsletter?: boolean | null;
   phone?: string | null;
   address_1?: string | null;
   address_2?: string | null;
@@ -703,6 +705,8 @@ export interface UsersSelect<T extends boolean = true> {
   tax_id?: T;
   medical_id?: T;
   birthday?: T;
+  member_since?: T;
+  send_newsletter?: T;
   phone?: T;
   address_1?: T;
   address_2?: T;

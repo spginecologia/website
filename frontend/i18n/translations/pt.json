@@ -333,6 +333,9 @@
 					"label": "Código Postal",
 					"placeholder": "1000-200"
 				},
+				"send_newsletter": {
+					"label": "Receber Newsletter"
+				},
 				"subscribed_sections": {
 					"label": "Secções de Interesse"
 				},

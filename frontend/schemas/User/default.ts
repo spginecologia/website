@@ -22,7 +22,6 @@ export const UserEditableProfileDefault: UserEditableProfile = {
 	phone: '',
 	postal_code: '',
 	send_newsletter: true,
-	send_notifications: true,
 	subscribed_sections: [],
 	title: '',
 	workplace_primary: '',
