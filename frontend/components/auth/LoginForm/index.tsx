@@ -4,6 +4,7 @@
 
 import { SignInDefault } from '@/schemas/SignIn/default';
 import { SignInValidation } from '@/schemas/SignIn/validation';
+import { navigationHandleRedirectParam } from '@/utils/navigation-handle-redirect-param';
 import { Button, Loader, Paper, Space, Text, TextInput, Title } from '@mantine/core';
 import { useForm, zodResolver } from '@mantine/form';
 import { useTranslations } from 'next-intl';
@@ -56,7 +57,7 @@ export function LoginForm() {
 				throw new Error(`Failed to login. Status: ${loginResponse.status}`);
 			}
 			console.log('Login successful. Redirecting to account page...');
-			window.location.replace('/account');
+			navigationHandleRedirectParam({ fallback: '/account' });
 		}
 		catch (error) {
 			console.log(error.message);

@@ -8,6 +8,7 @@ import { ContentWrapper } from '@/components/common/ContentWrapper';
 import { Section } from '@/components/common/Section';
 import { VideoDetailAdditionalInfo } from '@/components/videos/VideoDetailAdditionalInfo';
 // import { VideoDetailDescription } from '@/components/videos/VideoDetailDescription';
+import { AuthWall } from '@/components/auth/AuthWall';
 import { VideoDetailMetadata } from '@/components/videos/VideoDetailMetadata';
 import { VideoDetailPlayer } from '@/components/videos/VideoDetailPlayer';
 import { useMemo } from 'react';
@@ -43,10 +44,10 @@ export function VideoDetail({ id }) {
 		return videoData.topics as Topic[];
 	}, [videoData]);
 
-	const relatedVideos = useMemo(() => {
-		if (!videoTopics) return;
-		console.log(videoTopics);
-	}, [videoData]);
+	// const relatedVideos = useMemo(() => {
+	// 	if (!videoTopics) return;
+	// 	console.log(videoTopics);
+	// }, [videoData]);
 
 	//
 	// A. Render components
@@ -54,21 +55,23 @@ export function VideoDetail({ id }) {
 	return (
 		<ContentWrapper>
 			<Section topSpacerType="transparent">
-				<div className={styles.grid}>
+				<AuthWall>
+					<div className={styles.grid}>
 
-					<div className={styles.content}>
-						<VideoDetailPlayer url={videoFileUrl} />
-						<VideoDetailMetadata authors={videoData?.authors} introduction={videoData?.introduction} title={videoData?.title} />
-						{/* <VideoDetailDescription description={videoData.description} /> */}
+						<div className={styles.content}>
+							<VideoDetailPlayer url={videoFileUrl} />
+							<VideoDetailMetadata authors={videoData?.authors} introduction={videoData?.introduction} title={videoData?.title} />
+							{/* <VideoDetailDescription description={videoData.description} /> */}
+						</div>
+
+						<div className={styles.sidebar}>
+							<VideoDetailAdditionalInfo publishDate={videoData?.createdAt} topics={videoTopics} views={videoData?.views} />
+							{/* <VideoDetailPublishConfig /> */}
+							{/* <VideoDetailRelatedVideos /> */}
+						</div>
+
 					</div>
-
-					<div className={styles.sidebar}>
-						<VideoDetailAdditionalInfo publishDate={videoData?.createdAt} topics={videoTopics} views={videoData?.views} />
-						{/* <VideoDetailPublishConfig /> */}
-						{/* <VideoDetailRelatedVideos /> */}
-					</div>
-
-				</div>
+				</AuthWall>
 			</Section>
 		</ContentWrapper>
 	);

@@ -1,0 +1,59 @@
+/* * */
+/* CONTAINER */
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+
+/* * */
+/* WALL WRAPPER */
+
+.wallWrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	width: 100%;
+	max-width: 600px;
+	background-color: var(--color-reference-white);
+	box-shadow: 0 0 15px rgb(0 0 0 / 15%);
+}
+
+/* * */
+/* HEADER */
+
+.header {
+	display: flex;
+    align-items: center;
+	justify-content: center;
+	width: 100%;
+    padding: 30px;
+    text-align: center;
+    background-color: var(--color-brand-primary-100);
+	background-image: url("/generic/paywall-pattern.svg");
+    background-repeat: repeat;
+    background-size: 50% auto;
+}
+
+.headerLogo {
+	width: 100%;
+	max-width: 300px;
+}
+
+/* * */
+/* CONTENT */
+
+.content {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	padding: 30px;
+	padding-top: 20px;
+}
