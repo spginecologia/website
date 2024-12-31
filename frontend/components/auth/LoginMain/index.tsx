@@ -2,8 +2,8 @@
 
 /* * */
 
-import { AppAuthenticationAdvert } from '@/components/auth/AppAuthenticationAdvert';
 import { LoginForm } from '@/components/auth/LoginForm';
+import { LoginSignupAd } from '@/components/auth/LoginSignupAd';
 import { ContentWrapper } from '@/components/common/ContentWrapper';
 import { Section } from '@/components/common/Section';
 import { Skeleton } from '@mantine/core';
@@ -13,7 +13,7 @@ import styles from './styles.module.css';
 
 /* * */
 
-export function AppAuthentication() {
+export function LoginMain() {
 	//
 
 	//
@@ -53,7 +53,7 @@ export function AppAuthentication() {
 				<Section topSpacerType="transparent">
 					<div className={styles.grid}>
 						<Skeleton height={350} />
-						<AppAuthenticationAdvert />
+						<LoginSignupAd />
 					</div>
 				</Section>
 			</ContentWrapper>
@@ -65,7 +65,7 @@ export function AppAuthentication() {
 			<Section topSpacerType="transparent">
 				<div className={styles.grid}>
 					<LoginForm />
-					<AppAuthenticationAdvert />
+					<LoginSignupAd />
 				</div>
 			</Section>
 		</ContentWrapper>

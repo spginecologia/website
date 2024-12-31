@@ -8,7 +8,7 @@
 
 /* * */
 
-export default function AppAuthenticationCheck({ children, permission = '', redirect = false, scope = '' }) {
+export default function AuthWall({ children, permission = '', redirect = false, scope = '' }) {
 	//
 
 	return children;

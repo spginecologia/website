@@ -1,9 +1,9 @@
 /* * */
 
-import { AppAuthentication } from '@/components/auth/AppAuthentication';
+import { LoginMain } from '@/components/auth/LoginMain';
 
 /* * */
 
 export default function Page() {
-	return <AppAuthentication />;
+	return <LoginMain />;
 }

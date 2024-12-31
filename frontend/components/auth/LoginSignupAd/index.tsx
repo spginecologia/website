@@ -2,20 +2,20 @@
 
 /* * */
 
-import { Button, Image, Text, Title } from '@mantine/core';
+import { Button, Image, Space, Text, Title } from '@mantine/core';
 import { useTranslations } from 'next-intl';
 
 import styles from './styles.module.css';
 
 /* * */
 
-export function AppAuthenticationAdvert() {
+export function LoginSignupAd() {
 	//
 
 	//
 	// A. Setup variables
 
-	const t = useTranslations('auth.AppAuthenticationAdvert');
+	const t = useTranslations('auth.LoginSignupAd');
 
 	//
 	// B. Render components
@@ -26,6 +26,7 @@ export function AppAuthenticationAdvert() {
 			<Title id={styles.title} order={2}>{t('title')}</Title>
 			<Text>{t('paragraph_1')}</Text>
 			<Text>{t('paragraph_2')}</Text>
+			<Space h="xs" />
 			<Button>{t('signup')}</Button>
 		</div>
 	);
