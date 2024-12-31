@@ -1,6 +1,6 @@
 /* * */
 
-import { stripeApi } from '@/services/STRIPEAPI';
+import { STRIPEAPI } from '@/services/STRIPEAPI';
 import { Purchase } from '@/types/payments';
 
 /* * */
@@ -11,7 +11,7 @@ export async function stripeGetActiveProducts(): Promise<Purchase[]> {
 	const activeProducts: Purchase[] = [];
 
 	try {
-		const stripeProducts = await stripeApi.products.list({ active: true, expand: ['data.default_price'] });
+		const stripeProducts = await STRIPEAPI.products.list({ active: true, expand: ['data.default_price'] });
 		if (!stripeProducts.data) return activeProducts;
 		stripeProducts.data.forEach((stripeProduct) => {
 			if (!stripeProduct.default_price || typeof stripeProduct.default_price !== 'object') return;

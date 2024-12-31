@@ -1,6 +1,7 @@
 /* * */
 
 import { vendusCreateInvoice, VendusTransactionClient, VendusTransactionItem } from '@/scripts/vendus-create-invoice';
+import { STRIPEAPI } from '@/services/STRIPEAPI';
 import payloadConfig from '@payload-config';
 import { getPayload } from 'payload';
 import Stripe from 'stripe';
@@ -16,7 +17,6 @@ export async function POST(request: Request) {
 		//
 
 		const payload = await getPayload({ config: payloadConfig });
-		const stripeApi = new Stripe(process.env.STRIPE_SECRET_KEY ?? '', {});
 
 		//
 		// Extract the webhook event from the request and verify the event
@@ -28,7 +28,7 @@ export async function POST(request: Request) {
 			const stripeSignature = request.headers.get('stripe-signature');
 			if (!stripeSignature) throw new Error('No stripe signature');
 			const rawBody = await request.text();
-			event = stripeApi.webhooks.constructEvent(rawBody, stripeSignature, process.env.STRIPE_WEBHOOKS_ENDPOINT_SECRET ?? '');
+			event = STRIPEAPI.webhooks.constructEvent(rawBody, stripeSignature, process.env.STRIPE_WEBHOOKS_ENDPOINT_SECRET ?? '');
 		}
 		catch (err) {
 			console.log(err);
@@ -77,12 +77,12 @@ export async function POST(request: Request) {
 			// Ensure charge has a customer ID
 			if (typeof event.data.object.customer !== 'string') throw new Error('Charge has no customer ID or customer ID is not a string');
 			// Fetch corresponding checkout session
-			const foundCheckoutSessions = await stripeApi.checkout.sessions.list({ expand: ['data.line_items'], payment_intent: event.data.object.payment_intent });
+			const foundCheckoutSessions = await STRIPEAPI.checkout.sessions.list({ expand: ['data.line_items'], payment_intent: event.data.object.payment_intent });
 			if (!foundCheckoutSessions || !foundCheckoutSessions.data.length) throw new Error('No checkout session found for payment intent');
 			if (foundCheckoutSessions.data.length > 1) throw new Error('Multiple checkout sessions found for payment intent');
 			if (!foundCheckoutSessions.data[0].line_items) throw new Error('Checkout session has no line items');
 			// Fetch stripe customer details
-			const stripeCustomerData = await stripeApi.customers.retrieve(event.data.object.customer);
+			const stripeCustomerData = await STRIPEAPI.customers.retrieve(event.data.object.customer);
 			if (!stripeCustomerData || stripeCustomerData.deleted) throw new Error('Stripe customer not found or is deleted');
 			if (!stripeCustomerData.email) throw new Error('Stripe customer has no email');
 			// Find the user in the payload database

@@ -1,10 +1,10 @@
 /* * */
 
 import { stripeGetBalanceStatus } from '@/scripts/stripe-get-balance-status';
+import { STRIPEAPI } from '@/services/STRIPEAPI';
 import { Purchase } from '@/types/payments';
 import payloadConfig from '@payload-config';
 import { getPayload } from 'payload';
-import Stripe from 'stripe';
 
 /* * */
 
@@ -13,7 +13,6 @@ export async function POST(request: Request) {
 		//
 
 		const payload = await getPayload({ config: payloadConfig });
-		const stripeApi = new Stripe(process.env.STRIPE_SECRET_KEY ?? '', {});
 
 		//
 		// Get the current logged in user
@@ -43,7 +42,7 @@ export async function POST(request: Request) {
 			customer_email?: string
 		} = {};
 
-		const stripeCustomers = await stripeApi.customers.list({ email: currentUser.user.email });
+		const stripeCustomers = await STRIPEAPI.customers.list({ email: currentUser.user.email });
 
 		if (!stripeCustomers.data?.length) {
 			delete customerOptions.customer;
@@ -79,7 +78,7 @@ export async function POST(request: Request) {
 
 		const unpaidItems = balanceStatus.filter(item => item.status === 'unpaid');
 
-		const session = await stripeApi.checkout.sessions.create({
+		const session = await STRIPEAPI.checkout.sessions.create({
 			automatic_tax: { enabled: true },
 			cancel_url: `${request.headers.get('origin')}/account?canceled=true`,
 			client_reference_id: currentUser.user?.id,

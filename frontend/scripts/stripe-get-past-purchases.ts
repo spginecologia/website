@@ -1,6 +1,6 @@
 /* * */
 
-import { stripeApi } from '@/services/STRIPEAPI';
+import { STRIPEAPI } from '@/services/STRIPEAPI';
 import { Purchase } from '@/types/payments';
 import Stripe from 'stripe';
 
@@ -31,7 +31,7 @@ export async function stripeGetPastPurchases(stripeCustomerId: string): Promise<
 	let customerCheckoutSessions: Stripe.ApiList<Stripe.Checkout.Session>;
 
 	try {
-		customerCheckoutSessions = await stripeApi.checkout.sessions.list({ customer: stripeCustomerId, expand: ['data.line_items', 'data.payment_intent'] });
+		customerCheckoutSessions = await STRIPEAPI.checkout.sessions.list({ customer: stripeCustomerId, expand: ['data.line_items', 'data.payment_intent'] });
 	}
 	catch (error) {
 		throw new Error('Error fetching customer checkout sessions.', error);
@@ -61,8 +61,8 @@ export async function stripeGetPastPurchases(stripeCustomerId: string): Promise<
 		//
 		// Requet the refunds for this payment intent
 
-		const chargesForThisPaymentIntent = await stripeApi.charges.list({ payment_intent: checkoutSessionData.payment_intent.id });
-		const refundsForThisPaymentIntent = await stripeApi.refunds.list({ payment_intent: checkoutSessionData.payment_intent.id });
+		const chargesForThisPaymentIntent = await STRIPEAPI.charges.list({ payment_intent: checkoutSessionData.payment_intent.id });
+		const refundsForThisPaymentIntent = await STRIPEAPI.refunds.list({ payment_intent: checkoutSessionData.payment_intent.id });
 
 		//
 		// Check if the product has already been paid, is pending, or was refunded
