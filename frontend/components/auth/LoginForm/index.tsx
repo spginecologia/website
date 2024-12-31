@@ -2,10 +2,9 @@
 
 /* * */
 
-import { Loader } from '@/components/common/Loader';
 import { SignInDefault } from '@/schemas/SignIn/default';
 import { SignInValidation } from '@/schemas/SignIn/validation';
-import { Button, Paper, Space, Text, TextInput, Title } from '@mantine/core';
+import { Button, Loader, Paper, Space, Text, TextInput, Title } from '@mantine/core';
 import { useForm, zodResolver } from '@mantine/form';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
@@ -77,7 +76,7 @@ export function LoginForm() {
 			<Space h={5} />
 			<TextInput disabled={isLoading} label={t('email.label')} placeholder={t('email.placeholder')} w="100%" {...form.getInputProps('email')} />
 			<TextInput disabled={isLoading} label={t('password.label')}placeholder={t('password.placeholder')} type="password" w="100%" {...form.getInputProps('password')} />
-			{isLoading && <Loader visible />}
+			{!isLoading && <Loader />}
 			{(!isLoading && form.isDirty()) && <Button disabled={!form.isValid()} type="submit">{t('submit.label')}</Button>}
 			{(!isLoading && isError) && (
 				<>
