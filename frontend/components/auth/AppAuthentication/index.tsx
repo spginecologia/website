@@ -2,6 +2,7 @@
 
 /* * */
 
+import { AppAuthenticationAdvert } from '@/components/auth/AppAuthenticationAdvert';
 import { LoginForm } from '@/components/auth/LoginForm';
 import { ContentWrapper } from '@/components/common/ContentWrapper';
 import { Section } from '@/components/common/Section';
@@ -52,7 +53,7 @@ export function AppAuthentication() {
 				<Section topSpacerType="transparent">
 					<div className={styles.grid}>
 						<Skeleton height={350} />
-						<div className={styles.advert} />
+						<AppAuthenticationAdvert />
 					</div>
 				</Section>
 			</ContentWrapper>
@@ -64,7 +65,7 @@ export function AppAuthentication() {
 			<Section topSpacerType="transparent">
 				<div className={styles.grid}>
 					<LoginForm />
-					<div className={styles.advert} />
+					<AppAuthenticationAdvert />
 				</div>
 			</Section>
 		</ContentWrapper>

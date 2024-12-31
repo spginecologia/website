@@ -43,7 +43,7 @@ export function LoginForm() {
 	const handleSignIn = async () => {
 		try {
 			setIsLoading(true);
-			const loginResponse = await fetch('/api/users/login', {
+			const loginResponse = await fetch('/api/account/login', {
 				body: JSON.stringify({
 					email: form.values.email,
 					password: form.values.password,
@@ -53,20 +53,15 @@ export function LoginForm() {
 				},
 				method: 'POST',
 			});
-			const loginData = await loginResponse.json();
-			if (loginData.user) {
-				console.log('Login successful. Redirecting to account page...');
-				window.location.replace('/account');
+			if (!loginResponse.ok) {
+				throw new Error(`Failed to login. Status: ${loginResponse.status}`);
 			}
-			else {
-				console.log('Login failed. Please try again.');
-				form.setFieldValue('password', '');
-				setIsLoading(false);
-				setIsError(true);
-			}
+			console.log('Login successful. Redirecting to account page...');
+			window.location.replace('/account');
 		}
 		catch (error) {
-			console.error(error.message);
+			console.log(error.message);
+			form.setFieldValue('password', '');
 			setIsLoading(false);
 			setIsError(true);
 		}
@@ -80,11 +75,18 @@ export function LoginForm() {
 			<Title order={2}>{t('title')}</Title>
 			<Text>{t('subtitle')}</Text>
 			<Space h={5} />
-			<TextInput disabled={isLoading} label={t('email.label')} placeholder={t('email.placeholder')} type="email" w="100%" {...form.getInputProps('email')} />
+			<TextInput disabled={isLoading} label={t('email.label')} placeholder={t('email.placeholder')} w="100%" {...form.getInputProps('email')} />
 			<TextInput disabled={isLoading} label={t('password.label')}placeholder={t('password.placeholder')} type="password" w="100%" {...form.getInputProps('password')} />
 			{isLoading && <Loader visible />}
-			{(!isLoading && form.values.password.length > 0) && <Button type="submit">{t('submit.label')}</Button>}
-			{(!isLoading && isError) && <Text variant="error">{t('error.message')}</Text>}
+			{(!isLoading && form.isDirty()) && <Button disabled={!form.isValid()} type="submit">{t('submit.label')}</Button>}
+			{(!isLoading && isError) && (
+				<>
+					<Space h={5} />
+					<Text variant="error">{t('error.message')}</Text>
+				</>
+			)}
+			<Space h={5} />
+			<Button id={styles.resetPassword} variant="link">{t('reset_password.label')}</Button>
 		</Paper>
 	);
 }

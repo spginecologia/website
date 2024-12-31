@@ -24,6 +24,8 @@
 	gap: var(--size-spacing-10);
 	align-items: center;
 	justify-content: center;
+	font-size: 16px;
+    font-weight: var(--font-weight-semibold);
 }
 
 .section {
@@ -33,8 +35,8 @@
 
 .label {
 	margin-right: 3px;
-	font-size: 16px;
-    font-weight: var(--font-weight-semibold);
+	font-size: inherit;
+	font-weight: inherit;
 	line-height: 1;
 }
 
@@ -43,7 +45,7 @@
 
 .variantPrimary.root {
 	color: var(--color-brand-primary-100);
-	border-color: var(--color-brand-primary-100);
+	border-color: inherit;
 }
 
 .variantPrimary.root:hover {
@@ -57,7 +59,7 @@
 	color: var(--color-brand-support-300);
 	cursor: not-allowed;
 	background-color: transparent;
-	border-color: var(--color-brand-support-300);
+	border-color: inherit;
 }
 
 .variantPrimary.root[data-loading='true'],
@@ -73,7 +75,7 @@
 
 .root.variantSecondary {
 	color: var(--color-brand-primary-100);
-	border-color: var(--color-brand-primary-100);
+	border-color: inherit;
 }
 
 .root.variantSecondary:hover {
@@ -87,7 +89,7 @@
 
 .root.variantMuted {
 	color: var(--color-brand-support-400);
-	border-color: var(--color-brand-support-400);
+	border-color: inherit;
 }
 
 .root.variantMuted:hover {
@@ -101,16 +103,17 @@
 
 .variantLink.root {
 	padding: 0;
+	font-size: 14px;
+	font-weight: var(--font-weight-bold);
 	color: var(--color-brand-primary-100);
 	border: none;
+	border-bottom: 2px solid transparent;
 }
 
 .variantLink.root:hover {
-	text-decoration: underline;
+	border-bottom-color: inherit;
 }
 
 .variantLink.label {
 	margin: 0;
-	font-size: 14px;
-	font-weight: var(--font-weight-bold);
 }

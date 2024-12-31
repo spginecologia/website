@@ -1,0 +1,18 @@
+/* * */
+/* CONTAINER */
+
+.container {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	align-items: flex-start;
+	justify-content: flex-start;
+	width: 100%;
+}
+
+/* * */
+/* TITLE */
+
+#title {
+	color: var(--color-brand-primary-100);
+}

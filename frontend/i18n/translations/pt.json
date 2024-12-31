@@ -467,15 +467,16 @@
 		"untitled": "Untitled Agency"
 	},
 	"auth": {
-		"AppAuthenticationLoginVerify": {
-			"retry": "Não recebi o email de login",
-			"subtitle": "Por favor verifique a sua caixa de email.",
-			"title": "Login"
+		"AppAuthenticationAdvert": {
+			"paragraph_1": "Usufrua das tecnologias que colocamos à sua disposição para consultar, discutir e partilhar documentos, vídeos e cursos científicos relacionados com a especialidade.",
+			"paragraph_2": "Se já é Sócio SPG, basta que nos envie os seus dados para que possamos confirmar e activar a sua conta. Se ainda não é Sócio SPG, preencha o formulário para formalizar a sua candidatura, que será submetida a aprovação em Assembleia Geral.",
+			"signup": "Começar Agora",
+			"title": "Ainda não tem conta SPG?"
 		},
 		"LoginForm": {
 			"email": {
-				"label": "Email",
-				"placeholder": "email@exemplo.pt"
+				"label": "Email ou NIF",
+				"placeholder": "Introduza o seu email ou NIF"
 			},
 			"error": {
 				"message": "Login falhou. Email ou password incorretos.",
@@ -485,10 +486,13 @@
 				"label": "Password",
 				"placeholder": "Introduza a sua password"
 			},
+			"reset_password": {
+				"label": "Recuperar Password"
+			},
 			"submit": {
 				"label": "Iniciar Sessão"
 			},
-			"subtitle": "Se precisar de ajuda contacte-nos.",
+			"subtitle": "Já é possível entrar na sua conta SPG através do seu Número de Contribuinte pessoal.",
 			"title": "Login"
 		}
 	},
