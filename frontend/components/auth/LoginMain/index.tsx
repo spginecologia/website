@@ -2,12 +2,15 @@
 
 /* * */
 
+import type { PayloadMeResponse } from '@/types/payload-api-response';
+
 import { LoginForm } from '@/components/auth/LoginForm';
 import { LoginSignupAd } from '@/components/auth/LoginSignupAd';
 import { ContentWrapper } from '@/components/common/ContentWrapper';
 import { Section } from '@/components/common/Section';
 import { Skeleton } from '@mantine/core';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
+import useSWR from 'swr';
 
 import styles from './styles.module.css';
 
@@ -17,37 +20,24 @@ export function LoginMain() {
 	//
 
 	//
-	// A. Setup variables
+	// A. Fetch data
 
-	const [isLoading, setIsLoading] = useState(true);
+	const { data: userData, isLoading: userLoading } = useSWR<PayloadMeResponse>('/api/users/me');
 
 	//
 	// B. Handle actions
 
 	useEffect(() => {
-		const checkAuthStatusTimeout = setTimeout(async () => {
-			try {
-				setIsLoading(true);
-				// Search for users data
-				const usersResponse = await fetch('/api/users/me');
-				const usersData = await usersResponse.json();
-				if (usersData.user) {
-					window.location.replace('/account');
-				}
-				setIsLoading(false);
-			}
-			catch (error) {
-				console.error(error);
-				setIsLoading(false);
-			}
-		}, 500);
-		return () => clearTimeout(checkAuthStatusTimeout);
-	}, []);
+		if (userLoading) return;
+		if (userData && userData.user) {
+			window.location.replace('/account');
+		}
+	}, [userData, userLoading]);
 
 	//
 	// C. Render components
 
-	if (isLoading) {
+	if (userLoading) {
 		return (
 			<ContentWrapper className={styles.contentWrapperOverride}>
 				<Section topSpacerType="transparent">

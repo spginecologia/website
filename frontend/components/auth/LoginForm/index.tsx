@@ -76,7 +76,7 @@ export function LoginForm() {
 			<Space h={5} />
 			<TextInput disabled={isLoading} label={t('email.label')} placeholder={t('email.placeholder')} w="100%" {...form.getInputProps('email')} />
 			<TextInput disabled={isLoading} label={t('password.label')}placeholder={t('password.placeholder')} type="password" w="100%" {...form.getInputProps('password')} />
-			{!isLoading && <Loader />}
+			{isLoading && <Loader />}
 			{(!isLoading && form.isDirty()) && <Button disabled={!form.isValid()} type="submit">{t('submit.label')}</Button>}
 			{(!isLoading && isError) && (
 				<>
