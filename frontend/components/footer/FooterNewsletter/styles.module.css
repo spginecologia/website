@@ -2,54 +2,42 @@
 /* CONTAINER */
 
 .container {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  width: 100%;
-  padding: 20px;
-  text-align: left;
-  background-color: rgb(255 255 255 / 5%);
-  border-radius: 2px;
-  box-shadow: 0 0 5px 0 rgb(0 0 0 / 5%);
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	width: 100%;
+	padding: 20px;
+	text-align: left;
+	background-color: rgb(255 255 255 / 5%);
+	border-radius: 2px;
+	box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%);
 }
 
 /* * */
 /* HEADER, TITLE & SUBTITLE */
 
 .header {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
 }
 
-.title {
-  font-family: lemonde-journal, sans-serif;
-  font-size: 25px;
-  font-weight: 700;
-  line-height: 1;
-  color: #fff;
+#title {
+	font-size: 25px;
+	color: var(--color-reference-white);
 }
 
-.subtitle {
-  font-size: 15px;
-  font-weight: 500;
-  line-height: 1;
-  color: #fff;
+#subtitle {
+	font-size: 18px;
+	color: var(--color-reference-white);
 }
 
 /* * */
 /* FORM */
 
 .form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-/* * */
-/* INPUTS */
-
-.input {
-  font-size: 20px;
-  outline: none;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
 }

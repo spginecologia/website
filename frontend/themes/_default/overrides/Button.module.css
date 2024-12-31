@@ -99,6 +99,20 @@
 }
 
 /* * */
+/* VARIANT / CONTRAST */
+
+.root.variantContrast {
+	color: var(--color-reference-white);
+	border-color: inherit;
+}
+
+.root.variantContrast:hover {
+	color: var(--color-brand-primary-200);
+	background-color: var(--color-reference-white);
+	border-color: var(--color-reference-white);
+}
+
+/* * */
 /* VARIANT / LINK */
 
 .variantLink.root {

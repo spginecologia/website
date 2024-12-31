@@ -97,6 +97,9 @@ export default createTheme({
 				if (props.variant === 'muted') {
 					defaultClasses = combineClasses(defaultClasses, [ButtonOverride.variantMuted]);
 				}
+				if (props.variant === 'contrast') {
+					defaultClasses = combineClasses(defaultClasses, [ButtonOverride.variantContrast]);
+				}
 				if (props.variant === 'link') {
 					defaultClasses = combineClasses(defaultClasses, [ButtonOverride.variantLink]);
 				}
@@ -168,11 +171,14 @@ export default createTheme({
 		}),
 
 		Loader: Loader.extend({
-			classNames: () => {
+			classNames: (_, props) => {
 				let defaultClasses = {
 					root: LoaderOverride.root,
 
 				};
+				if (props.variant === 'contrast') {
+					defaultClasses = combineClasses(defaultClasses, [LoaderOverride.variantContrast]);
+				}
 				return defaultClasses;
 			},
 		}),

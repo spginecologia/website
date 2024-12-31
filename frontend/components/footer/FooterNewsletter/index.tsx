@@ -2,9 +2,12 @@
 
 /* * */
 
-import { TextInput } from '@mantine/core';
-import { useForm } from '@mantine/form';
+import { NewsletterDefault } from '@/schemas/Newsletter/default';
+import { NewsletterValidation } from '@/schemas/Newsletter/validation';
+import { Button, Loader, Space, Text, TextInput, Title } from '@mantine/core';
+import { useForm, zodResolver } from '@mantine/form';
 import { useTranslations } from 'next-intl';
+import { useState } from 'react';
 
 import styles from './styles.module.css';
 
@@ -18,55 +21,72 @@ export function FooterNewsletter() {
 
 	const t = useTranslations('footer.FooterNewsletter');
 
+	const [isLoading, setIsLoading] = useState(false);
+	const [isError, setIsError] = useState(false);
+
 	//
-	// C. Setup form
+	// B. Setup form
 
 	const form = useForm({
 		clearInputErrorOnChange: true,
-		validateInputOnBlur: true,
-		validateInputOnChange: true,
-		// validate: yupResolver(AgencyValidation),
-		// initialValues: AgencyDefault,
+		initialValues: NewsletterDefault,
+		onValuesChange: () => {
+			setIsError(false);
+		},
+		validate: zodResolver(NewsletterValidation),
 	});
 
 	//
-	// B. Handle actions
+	// C. Handle actions
 
-	const handleFormValidate = () => {
-		form.validate();
-	};
-
-	const handleFormSubmit = async () => {
+	const handleSubscribe = async () => {
 		try {
-			//   setIsSaving(true);
-			//   //   await API({ service: 'agencies', resourceId: agency_id, operation: 'edit', method: 'PUT', body: form.values });
-			//   agencyMutate();
-			//   allAgenciesMutate();
-			//   form.resetDirty();
-			//   setIsSaving(false);
-			//   setIsLocking(false);
-			//   setHasErrorSaving(false);
+			setIsLoading(true);
+			// const loginResponse = await fetch('/api/account/login', {
+			// 	body: JSON.stringify({
+			// 		email: form.values.email,
+			// 		password: form.values.password,
+			// 	}),
+			// 	headers: {
+			// 		'Content-Type': 'application/json',
+			// 	},
+			// 	method: 'POST',
+			// });
+			// if (!loginResponse.ok) {
+			// 	throw new Error(`Failed to login. Status: ${loginResponse.status}`);
+			// }
+			console.log('Login successful. Redirecting to account page...');
 		}
-		catch (err) {
-			console.log(err);
-			//   setIsSaving(false);
-			//   setIsLocking(false);
-			//   setHasErrorSaving(err);
+		catch (error) {
+			console.log(error.message);
+			form.setFieldValue('password', '');
+			setIsLoading(false);
+			setIsError(true);
 		}
 	};
 
 	//
-	// C. Render components
+	// D. Render components
 
 	return (
 		<div className={styles.container}>
 			<div className={styles.header}>
-				<h3 className={styles.title}>{t('title')}</h3>
-				<h3 className={styles.subtitle}>{t('subtitle')}</h3>
+				<Title id={styles.title} order={2}>{t('title')}</Title>
+				<Text id={styles.subtitle}>{t('subtitle')}</Text>
 			</div>
-			<form className={styles.form} onSubmit={form.onSubmit(handleFormSubmit)}>
-				<TextInput aria-label={t('form.name.label')} placeholder={t('form.name.placeholder')} variant="contrast" {...form.getInputProps('name')} />
-				<TextInput aria-label={t('form.email.label')} placeholder={t('form.email.placeholder')} variant="contrast" {...form.getInputProps('email')} />
+			<form className={styles.form} onSubmit={form.onSubmit(handleSubscribe)}>
+				<TextInput aria-label={t('form.name.label')} placeholder={t('form.name.placeholder')} variant="contrast" w="100%" {...form.getInputProps('name')} />
+				<TextInput aria-label={t('form.email.label')}placeholder={t('form.email.placeholder')} variant="contrast" w="100%" {...form.getInputProps('email')} />
+
+				{isLoading && <Loader />}
+				{(!isLoading && form.isDirty()) && <Button disabled={!form.isValid()} type="submit" variant="contrast" w="100%">{t('subscribe')}</Button>}
+				{(!isLoading && isError) && (
+					<>
+						<Space h={5} />
+						<Text variant="error">{t('error.message')}</Text>
+					</>
+				)}
+
 			</form>
 		</div>
 	);

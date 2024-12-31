@@ -21,6 +21,7 @@
 	border-bottom: 2px solid var(--color-reference-black);
 	border-radius: 0;
 	outline: none;
+	transition: all 300ms ease;
 }
 
 .input::placeholder {
@@ -102,12 +103,14 @@
 }
 
 .variantContrast.input:hover {
-	background: rgb(255 255 255 / 5%);
+	background-color: rgb(255 255 255 / 10%);
 }
 
 .variantContrast.input:focus {
-	background: transparent;
+	color: var(--color-reference-black);
+	background-color: var(--color-reference-white);
 	border-bottom-color: var(--color-reference-white);
+	border-radius: 3px;
 }
 
 .variantContrast.input::placeholder {
@@ -115,7 +118,7 @@
 }
 
 .variantContrast.input:focus::placeholder {
-  color: rgb(255 255 255 / 15%);
+	color: var(--color-brand-primary-200);
 }
 
 .variantContrast.label {

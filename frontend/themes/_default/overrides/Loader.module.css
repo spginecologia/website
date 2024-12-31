@@ -4,3 +4,10 @@
 .root {
 	--loader-color: var(--color-brand-primary-100);
 }
+
+/* * */
+/* VARIANT / CONTRAST */
+
+.variantContrast.root {
+	--loader-color: var(--color-reference-white);
+}
