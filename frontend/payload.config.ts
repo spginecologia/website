@@ -24,6 +24,10 @@ import { VideoFiles } from '@/schemas/VideoFile/collection';
 
 /* * */
 
+import { SocialBodies } from '@/schemas/SocialBody/global';
+
+/* * */
+
 export default buildConfig({
 
 	// Only admins can access the CMS
@@ -57,6 +61,11 @@ export default buildConfig({
 	// If you'd like to use Rich Text,
 	// pass your editor here.
 	editor: lexicalEditor(),
+
+	// Define and configure your globals in this array
+	globals: [
+		SocialBodies,
+	],
 
 	// If you'd like to use S3 for file uploads,
 	// pass your S3 configuration here.

@@ -3,9 +3,9 @@
 import { ContentWrapper } from '@/components/common/ContentWrapper';
 import { HomeEvents } from '@/components/home/HomeEvents';
 import { HomeGuidelines } from '@/components/home/HomeGuidelines';
-import { HomeMission } from '@/components/home/HomeMission';
 import { HomeNews } from '@/components/home/HomeNews';
 import { HomeSlider } from '@/components/home/HomeSlider';
+import { SocietyMission } from '@/components/society/SocietyMission';
 
 /* * */
 
@@ -14,7 +14,7 @@ export function HomeMain() {
 		<ContentWrapper>
 			<HomeSlider />
 			<HomeNews />
-			<HomeMission />
+			<SocietyMission />
 			<HomeEvents />
 			{/* <HomeSections /> */}
 			{/* <HomeAcademia /> */}

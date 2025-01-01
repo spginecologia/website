@@ -51,8 +51,12 @@ export interface Config {
   db: {
     defaultIDType: string;
   };
-  globals: {};
-  globalsSelect: {};
+  globals: {
+    'social-bodies': SocialBody;
+  };
+  globalsSelect: {
+    'social-bodies': SocialBodiesSelect<false> | SocialBodiesSelect<true>;
+  };
   locale: null;
   user:
     | (Admin & {
@@ -813,6 +817,96 @@ export interface PayloadMigrationsSelect<T extends boolean = true> {
   batch?: T;
   updatedAt?: T;
   createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "social-bodies".
+ */
+export interface SocialBody {
+  id: string;
+  direction?:
+    | {
+        name: string;
+        position?: string | null;
+        city?: string | null;
+        photo?: (string | null) | Media;
+        id?: string | null;
+      }[]
+    | null;
+  general_assembly?:
+    | {
+        name: string;
+        position?: string | null;
+        city?: string | null;
+        photo?: (string | null) | Media;
+        id?: string | null;
+      }[]
+    | null;
+  fiscal_council?:
+    | {
+        name: string;
+        position?: string | null;
+        city?: string | null;
+        photo?: (string | null) | Media;
+        id?: string | null;
+      }[]
+    | null;
+  consultive_council?:
+    | {
+        name: string;
+        position?: string | null;
+        city?: string | null;
+        photo?: (string | null) | Media;
+        id?: string | null;
+      }[]
+    | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "social-bodies_select".
+ */
+export interface SocialBodiesSelect<T extends boolean = true> {
+  direction?:
+    | T
+    | {
+        name?: T;
+        position?: T;
+        city?: T;
+        photo?: T;
+        id?: T;
+      };
+  general_assembly?:
+    | T
+    | {
+        name?: T;
+        position?: T;
+        city?: T;
+        photo?: T;
+        id?: T;
+      };
+  fiscal_council?:
+    | T
+    | {
+        name?: T;
+        position?: T;
+        city?: T;
+        photo?: T;
+        id?: T;
+      };
+  consultive_council?:
+    | T
+    | {
+        name?: T;
+        position?: T;
+        city?: T;
+        photo?: T;
+        id?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

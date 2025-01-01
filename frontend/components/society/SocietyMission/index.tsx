@@ -8,20 +8,20 @@ import styles from './styles.module.css';
 
 /* * */
 
-export function HomeMission() {
+export function SocietyMission({ withTopSpacer = false }) {
 	//
 
 	//
 	// A. Setup variables
 
-	const t = useTranslations('home.HomeMission');
+	const t = useTranslations('society.SocietyMission');
 
 	//
 	// B. Render components
 
 	return (
 		<div className={styles.container}>
-			<Section>
+			<Section topSpacerType={withTopSpacer ? 'transparent' : 'none'}>
 				<Title id={styles.title} order={1}>{t('title')}</Title>
 				<div className={styles.grid}>
 					<div className={styles.cellA}>

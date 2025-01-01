@@ -8,12 +8,12 @@ import styles from './styles.module.css';
 interface Props {
 	children: React.ReactNode
 	title?: string
-	topSpacerType?: 'academia' | 'transparent'
+	topSpacerType?: 'academia' | 'none' | 'transparent'
 }
 
 /* * */
 
-export function Section({ children, title = '', topSpacerType }: Props) {
+export function Section({ children, title = '', topSpacerType = 'none' }: Props) {
 	return (
 		<>
 			{topSpacerType === 'academia' && <AcademiaBanner />}

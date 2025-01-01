@@ -5,7 +5,7 @@
 	"type": "module",
 	"scripts": {
 		"build": "next build",
-		"dev": "next dev -p 3005",
+		"dev": "npx payload generate:types && npx payload generate:importmap && next dev -p 3005",
 		"lint": "eslint .",
 		"lint:fix": "eslint . --fix && npx stylelint . --fix",
 		"start": "next start"
@@ -43,7 +43,7 @@
 	"devDependencies": {
 		"@carrismetropolitana/eslint": "20241229.44.47",
 		"@types/luxon": "3.4.2",
-		"@types/node": "22.10.2",
+		"@types/node": "22.10.3",
 		"@types/react": "19.0.2",
 		"@types/react-dom": "19.0.2",
 		"postcss": "8.4.49",
@@ -51,5 +51,9 @@
 		"postcss-simple-vars": "7.0.1",
 		"typescript": "5.7.2",
 		"typescript-plugin-css-modules": "5.1.0"
+	},
+	"overrides": {
+		"react": "$react",
+		"react-dom": "$react-dom"
 	}
 }

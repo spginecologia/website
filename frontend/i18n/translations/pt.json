@@ -641,21 +641,6 @@
 		"HomeGuidelines": {
 			"title": "Consensos"
 		},
-		"HomeMission": {
-			"paragraph_1": "A SPG é uma associação científica, sem fins lucrativos e de utilidade pública, comprometida com a promoção da Saúde em geral e da Mulher em particular e com a defesa e concertação de todos os Ginecologistas Portugueses.",
-			"paragraph_2": "Assumindo na plenitude o espírito empreendedor, dinâmico e seguramente inovador que sustentou a sua criação há já mais de 40 anos, a SPG mantém como missão o estímulo ao desenvolvimento da Especialidade nas suas diferentes e múltiplas facetas, como o exercício profissional, mas também com os aspectos relacionados com a dimensão ética, académica e social.",
-			"paragraph_3": "Assim tem como papel:",
-			"paragraph_3_points": {
-				"1": "• Promover o desenvolvimento da Ginecologia ao serviço da saúde da mulher;",
-				"2": "• Estimular a investigação no domínio da Ginecologia;",
-				"3": "• Difundir ideias, promover a atualização de conhecimentos e trabalhos de Ginecologia;",
-				"4": "• Promover contactos e o intercâmbio nacional e internacional entre os diversos profissionais ligados à especialidade;",
-				"5": "• Desenvolver atividades educacionais no domínio da Ginecologia;",
-				"6": "• Exercer atividades de consultadoria no campo da Ginecologia."
-			},
-			"subtitle": "O desenvolvimento de uma especialidade.",
-			"title": "A Nossa Missão"
-		},
 		"HomeNews": {
 			"title": "Notícias"
 		}
@@ -672,6 +657,40 @@
 	"publications": {
 		"PublicationsList": {
 			"title": "Publicações Científicas"
+		}
+	},
+	"society": {
+		"SocietyMission": {
+			"paragraph_1": "A SPG é uma associação científica, sem fins lucrativos e de utilidade pública, comprometida com a promoção da Saúde em geral e da Mulher em particular e com a defesa e concertação de todos os Ginecologistas Portugueses.",
+			"paragraph_2": "Assumindo na plenitude o espírito empreendedor, dinâmico e seguramente inovador que sustentou a sua criação há já mais de 40 anos, a SPG mantém como missão o estímulo ao desenvolvimento da Especialidade nas suas diferentes e múltiplas facetas, como o exercício profissional, mas também com os aspectos relacionados com a dimensão ética, académica e social.",
+			"paragraph_3": "Assim tem como papel:",
+			"paragraph_3_points": {
+				"1": "• Promover o desenvolvimento da Ginecologia ao serviço da saúde da mulher;",
+				"2": "• Estimular a investigação no domínio da Ginecologia;",
+				"3": "• Difundir ideias, promover a atualização de conhecimentos e trabalhos de Ginecologia;",
+				"4": "• Promover contactos e o intercâmbio nacional e internacional entre os diversos profissionais ligados à especialidade;",
+				"5": "• Desenvolver atividades educacionais no domínio da Ginecologia;",
+				"6": "• Exercer atividades de consultadoria no campo da Ginecologia."
+			},
+			"subtitle": "O desenvolvimento de uma especialidade.",
+			"title": "A Nossa Missão"
+		},
+		"SocietySocialBodies": {
+			"org": {
+				"consultive_council": {
+					"title": "Conselho Consultivo"
+				},
+				"direction": {
+					"title": "Direção"
+				},
+				"fiscal_council": {
+					"title": "Conselho Fiscal"
+				},
+				"general_assembly": {
+					"title": "Assembleia Geral"
+				}
+			},
+			"title": "Órgãos Sociais"
 		}
 	},
 	"users": {
