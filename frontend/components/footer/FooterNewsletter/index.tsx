@@ -100,15 +100,12 @@ export function FooterNewsletter() {
 				<TextInput aria-label={t('form.name.label')} placeholder={t('form.name.placeholder')} variant="contrast" w="100%" {...form.getInputProps('name')} />
 				<TextInput aria-label={t('form.email.label')}placeholder={t('form.email.placeholder')} variant="contrast" w="100%" {...form.getInputProps('email')} />
 				<Turnstile onSuccess={token => form.setFieldValue('turnstile_token', token)} siteKey={process.env.NEXT_PUBLIC_CLOUDFLARE_TURNSTILE_SITE_KEY ?? ''} />
-
-				{isSuccess && <Text variant="success">SUCESSO</Text>}
-
 				{isLoading && <Loader />}
-				{(!isLoading && form.isDirty()) && <Button disabled={!form.isValid()} type="submit" variant="contrast" w="100%">{t('subscribe')}</Button>}
+				{(!isLoading && form.values.email.length > 0) && <Button disabled={!form.isValid()} type="submit" variant="contrast" w="100%">{t('subscribe')}</Button>}
 				{(!isLoading && isError) && (
 					<>
-						<Space h={5} />
-						<Text variant="error">{t('error_message')}</Text>
+						<Space h={20} />
+						<Text id={styles.errorMessage} variant="error">{t('error_message')}</Text>
 					</>
 				)}
 

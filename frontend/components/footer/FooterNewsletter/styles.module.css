@@ -51,3 +51,10 @@
 	color: var(--color-reference-white);
 	border-top: 1px solid var(--color-reference-white);
 }
+
+/* * */
+/* ERROR MESSAGE */
+
+#errorMessage {
+	color: var(--color-reference-white);
+}

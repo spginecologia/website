@@ -101,15 +101,24 @@
 /* * */
 /* VARIANT / CONTRAST */
 
-.root.variantContrast {
+.variantContrast.root {
 	color: var(--color-reference-white);
 	border-color: inherit;
 }
 
-.root.variantContrast:hover {
+.variantContrast.root:hover {
 	color: var(--color-brand-primary-200);
 	background-color: var(--color-reference-white);
 	border-color: var(--color-reference-white);
+}
+
+.variantContrast.root[data-disabled='true'],
+.variantContrast.root[data-disabled='true']:hover {
+	color: var(--color-reference-white);
+	cursor: not-allowed;
+	background-color: rgb(255 255 255 / 10%);
+	border-color: inherit;
+	opacity: 0.5;
 }
 
 /* * */

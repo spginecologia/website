@@ -13,7 +13,7 @@ export function validateEmail(value: string, isOptional: boolean): boolean {
 		return true;
 	}
 
-	const isValidEmail = value.includes('@');
+	const isValidEmail = /.+@[^@]+\.[^@]{2,}$/.test(value);
 
 	return isValidEmail;
 
