@@ -13,6 +13,9 @@ export const LegalDocuments: GlobalConfig = {
 	fields: [
 		{
 			admin: {
+				components: {
+					RowLabel: '@/schemas/_globals/LegalDocuments/components#LegalDocumentRowLabel',
+				},
 				initCollapsed: true,
 			},
 			fields: [

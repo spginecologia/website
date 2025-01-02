@@ -21,6 +21,7 @@ import { UnderlineFeatureClient as UnderlineFeatureClient_e70f5e05f09f93e00b997e
 import { BoldFeatureClient as BoldFeatureClient_e70f5e05f09f93e00b997edb1ef0c864 } from '@payloadcms/richtext-lexical/client'
 import { ItalicFeatureClient as ItalicFeatureClient_e70f5e05f09f93e00b997edb1ef0c864 } from '@payloadcms/richtext-lexical/client'
 import { default as default_2d396b3b4e2acc22085bee2dd0d9a7e4 } from '@/components/payload/OpenInvoiceButton'
+import { LegalDocumentRowLabel as LegalDocumentRowLabel_706478d9c72bcb03f5fa64f94b3ddf6f } from '@/schemas/_globals/LegalDocuments/components'
 import { SocialBodyRowLabel as SocialBodyRowLabel_644727180187aeb1f82822e76468a429 } from '@/schemas/_globals/SocialBodies/components'
 
 export const importMap = {
@@ -47,5 +48,6 @@ export const importMap = {
   "@payloadcms/richtext-lexical/client#BoldFeatureClient": BoldFeatureClient_e70f5e05f09f93e00b997edb1ef0c864,
   "@payloadcms/richtext-lexical/client#ItalicFeatureClient": ItalicFeatureClient_e70f5e05f09f93e00b997edb1ef0c864,
   "@/components/payload/OpenInvoiceButton#default": default_2d396b3b4e2acc22085bee2dd0d9a7e4,
+  "@/schemas/_globals/LegalDocuments/components#LegalDocumentRowLabel": LegalDocumentRowLabel_706478d9c72bcb03f5fa64f94b3ddf6f,
   "@/schemas/_globals/SocialBodies/components#SocialBodyRowLabel": SocialBodyRowLabel_644727180187aeb1f82822e76468a429
 }
