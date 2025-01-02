@@ -2,26 +2,25 @@
 
 import type { GlobalConfig } from 'payload';
 
-import { SocialBodyMemberMetadata, SocialBodyMemberPhoto } from '@/schemas/SocialBody/fields';
+import { SocialBodyMember } from '@/schemas/_globals/SocialBodies/fields';
 
 /* * */
 
 export const SocialBodies: GlobalConfig = {
+
 	access: {
 		read: () => true,
 	},
+
 	fields: [
 		{
 			admin: {
 				components: {
-					RowLabel: '@/schemas/SocialBody/components#SocialBodyRowLabel',
+					RowLabel: '@/schemas/_globals/SocialBodies/components#SocialBodyRowLabel',
 				},
 				initCollapsed: true,
 			},
-			fields: [
-				SocialBodyMemberMetadata,
-				SocialBodyMemberPhoto,
-			],
+			fields: SocialBodyMember,
 			label: 'Membros da Direção',
 			labels: {
 				plural: 'Membros da Direção',
@@ -33,14 +32,11 @@ export const SocialBodies: GlobalConfig = {
 		{
 			admin: {
 				components: {
-					RowLabel: '@/schemas/SocialBody/components#SocialBodyRowLabel',
+					RowLabel: '@/schemas/_globals/SocialBodies/components#SocialBodyRowLabel',
 				},
 				initCollapsed: true,
 			},
-			fields: [
-				SocialBodyMemberMetadata,
-				SocialBodyMemberPhoto,
-			],
+			fields: SocialBodyMember,
 			label: 'Membros da Assembleia Geral',
 			labels: {
 				plural: 'Membros da Assembleia Geral',
@@ -52,14 +48,11 @@ export const SocialBodies: GlobalConfig = {
 		{
 			admin: {
 				components: {
-					RowLabel: '@/schemas/SocialBody/components#SocialBodyRowLabel',
+					RowLabel: '@/schemas/_globals/SocialBodies/components#SocialBodyRowLabel',
 				},
 				initCollapsed: true,
 			},
-			fields: [
-				SocialBodyMemberMetadata,
-				SocialBodyMemberPhoto,
-			],
+			fields: SocialBodyMember,
 			label: 'Membros do Conselho Fiscal',
 			labels: {
 				plural: 'Membros do Conselho Fiscal',
@@ -71,14 +64,11 @@ export const SocialBodies: GlobalConfig = {
 		{
 			admin: {
 				components: {
-					RowLabel: '@/schemas/SocialBody/components#SocialBodyRowLabel',
+					RowLabel: '@/schemas/_globals/SocialBodies/components#SocialBodyRowLabel',
 				},
 				initCollapsed: true,
 			},
-			fields: [
-				SocialBodyMemberMetadata,
-				SocialBodyMemberPhoto,
-			],
+			fields: SocialBodyMember,
 			label: 'Membros do Conselho Consultivo',
 			labels: {
 				plural: 'Membros do Conselho Consultivo',
@@ -88,5 +78,12 @@ export const SocialBodies: GlobalConfig = {
 			type: 'array',
 		},
 	],
+
+	label: {
+		plural: 'Órgãos Sociais',
+		singular: 'Órgãos Sociais',
+	},
+
 	slug: 'social-bodies',
+
 };

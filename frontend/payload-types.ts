@@ -52,9 +52,11 @@ export interface Config {
     defaultIDType: string;
   };
   globals: {
+    'legal-documents': LegalDocument;
     'social-bodies': SocialBody;
   };
   globalsSelect: {
+    'legal-documents': LegalDocumentsSelect<false> | LegalDocumentsSelect<true>;
     'social-bodies': SocialBodiesSelect<false> | SocialBodiesSelect<true>;
   };
   locale: null;
@@ -820,6 +822,24 @@ export interface PayloadMigrationsSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "legal-documents".
+ */
+export interface LegalDocument {
+  id: string;
+  docs?:
+    | {
+        title: string;
+        content_type: 'file' | 'url';
+        document?: (string | null) | Document;
+        url?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "social-bodies".
  */
 export interface SocialBody {
@@ -830,6 +850,7 @@ export interface SocialBody {
         position?: string | null;
         city?: string | null;
         photo?: (string | null) | Media;
+        separated_from_next?: boolean | null;
         id?: string | null;
       }[]
     | null;
@@ -839,6 +860,7 @@ export interface SocialBody {
         position?: string | null;
         city?: string | null;
         photo?: (string | null) | Media;
+        separated_from_next?: boolean | null;
         id?: string | null;
       }[]
     | null;
@@ -848,6 +870,7 @@ export interface SocialBody {
         position?: string | null;
         city?: string | null;
         photo?: (string | null) | Media;
+        separated_from_next?: boolean | null;
         id?: string | null;
       }[]
     | null;
@@ -857,11 +880,30 @@ export interface SocialBody {
         position?: string | null;
         city?: string | null;
         photo?: (string | null) | Media;
+        separated_from_next?: boolean | null;
         id?: string | null;
       }[]
     | null;
   updatedAt?: string | null;
   createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "legal-documents_select".
+ */
+export interface LegalDocumentsSelect<T extends boolean = true> {
+  docs?:
+    | T
+    | {
+        title?: T;
+        content_type?: T;
+        document?: T;
+        url?: T;
+        id?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -875,6 +917,7 @@ export interface SocialBodiesSelect<T extends boolean = true> {
         position?: T;
         city?: T;
         photo?: T;
+        separated_from_next?: T;
         id?: T;
       };
   general_assembly?:
@@ -884,6 +927,7 @@ export interface SocialBodiesSelect<T extends boolean = true> {
         position?: T;
         city?: T;
         photo?: T;
+        separated_from_next?: T;
         id?: T;
       };
   fiscal_council?:
@@ -893,6 +937,7 @@ export interface SocialBodiesSelect<T extends boolean = true> {
         position?: T;
         city?: T;
         photo?: T;
+        separated_from_next?: T;
         id?: T;
       };
   consultive_council?:
@@ -902,6 +947,7 @@ export interface SocialBodiesSelect<T extends boolean = true> {
         position?: T;
         city?: T;
         photo?: T;
+        separated_from_next?: T;
         id?: T;
       };
   updatedAt?: T;

@@ -12,32 +12,28 @@
 
 .grid {
 	display: grid;
-	grid-template:
-		"a b" auto
-		"c c" auto / 1fr 1fr;
-	gap: 20px 50px;
-	padding: 20px;
-	padding-right: 0;
+	grid-template-columns: 1fr 1fr;
+	gap: 40px;
+	padding-top: 40px;
 }
 
-.cellA {
+.column {
 	display: flex;
 	flex-direction: column;
-	grid-area: a;
-	gap: 20px;
-}
-
-.cellB {
-	grid-area: b;
-}
-
-.cellC {
-	grid-area: c;
+	gap: 50px;
 }
 
 /* * */
-/* TEXT */
+/* ORG GROUP */
 
-.grid .whiteText {
-	color: var(--color-reference-white);
+.orgGroup {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.orgGroupTitle {
+	padding-bottom: 3px;
+	font-size: 20px;
+	border-bottom: 1px solid var(--color-brand-support-400);
 }

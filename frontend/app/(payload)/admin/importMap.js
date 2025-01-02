@@ -21,7 +21,7 @@ import { UnderlineFeatureClient as UnderlineFeatureClient_e70f5e05f09f93e00b997e
 import { BoldFeatureClient as BoldFeatureClient_e70f5e05f09f93e00b997edb1ef0c864 } from '@payloadcms/richtext-lexical/client'
 import { ItalicFeatureClient as ItalicFeatureClient_e70f5e05f09f93e00b997edb1ef0c864 } from '@payloadcms/richtext-lexical/client'
 import { default as default_2d396b3b4e2acc22085bee2dd0d9a7e4 } from '@/components/payload/OpenInvoiceButton'
-import { SocialBodyRowLabel as SocialBodyRowLabel_43f12101586a86e29d4ac86aff52c33e } from '@/schemas/SocialBody/components'
+import { SocialBodyRowLabel as SocialBodyRowLabel_644727180187aeb1f82822e76468a429 } from '@/schemas/_globals/SocialBodies/components'
 
 export const importMap = {
   "@payloadcms/richtext-lexical/rsc#RscEntryLexicalCell": RscEntryLexicalCell_44fe37237e0ebf4470c9990d8cb7b07e,
@@ -47,5 +47,5 @@ export const importMap = {
   "@payloadcms/richtext-lexical/client#BoldFeatureClient": BoldFeatureClient_e70f5e05f09f93e00b997edb1ef0c864,
   "@payloadcms/richtext-lexical/client#ItalicFeatureClient": ItalicFeatureClient_e70f5e05f09f93e00b997edb1ef0c864,
   "@/components/payload/OpenInvoiceButton#default": default_2d396b3b4e2acc22085bee2dd0d9a7e4,
-  "@/schemas/SocialBody/components#SocialBodyRowLabel": SocialBodyRowLabel_43f12101586a86e29d4ac86aff52c33e
+  "@/schemas/_globals/SocialBodies/components#SocialBodyRowLabel": SocialBodyRowLabel_644727180187aeb1f82822e76468a429
 }

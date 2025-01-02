@@ -24,7 +24,8 @@ import { VideoFiles } from '@/schemas/VideoFile/collection';
 
 /* * */
 
-import { SocialBodies } from '@/schemas/SocialBody/global';
+import { LegalDocuments } from '@/schemas/_globals/LegalDocuments/global';
+import { SocialBodies } from '@/schemas/_globals/SocialBodies/global';
 
 /* * */
 
@@ -64,6 +65,7 @@ export default buildConfig({
 
 	// Define and configure your globals in this array
 	globals: [
+		LegalDocuments,
 		SocialBodies,
 	],
 
