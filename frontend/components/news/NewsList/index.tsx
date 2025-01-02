@@ -57,7 +57,7 @@ export function NewsList() {
 	if (allNewsLoading) {
 		return (
 			<ContentWrapper>
-				<Section topSpacerType="transparent">
+				<Section withTopSpacer="transparent">
 					<Title order={1}>{t('title')}</Title>
 					<div className={styles.grid}>
 						{[...Array(10)].map((_, i) => <NewsCard key={i} />)}
@@ -70,7 +70,7 @@ export function NewsList() {
 	if (allNewsError) {
 		return (
 			<ContentWrapper>
-				<Section topSpacerType="transparent">
+				<Section withTopSpacer="transparent">
 					<Title order={1}>{t('title')}</Title>
 					<ErrorDisplay />
 				</Section>
@@ -81,7 +81,7 @@ export function NewsList() {
 	if (!allNewsData?.docs.length) {
 		return (
 			<ContentWrapper>
-				<Section topSpacerType="transparent">
+				<Section withTopSpacer="transparent">
 					<Title order={1}>{t('title')}</Title>
 					<NoDataDisplay />
 				</Section>
@@ -91,7 +91,7 @@ export function NewsList() {
 
 	return (
 		<ContentWrapper>
-			<Section topSpacerType="transparent">
+			<Section withTopSpacer="transparent">
 				{featuredNewsItem && (
 					<NewsCardFeatured
 						coverSrc={typeof featuredNewsItem.featured_image === 'object' ? featuredNewsItem?.featured_image?.url : undefined}

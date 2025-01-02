@@ -57,7 +57,7 @@ export function EventsList() {
 	if (allEventsLoading) {
 		return (
 			<ContentWrapper>
-				<Section topSpacerType="transparent">
+				<Section withTopSpacer="transparent">
 					<Title order={1}>{t('title')}</Title>
 					<div className={styles.grid}>
 						{[...Array(10)].map((_, i) => <EventCard key={i} />)}
@@ -70,7 +70,7 @@ export function EventsList() {
 	if (allEventsError) {
 		return (
 			<ContentWrapper>
-				<Section topSpacerType="transparent">
+				<Section withTopSpacer="transparent">
 					<Title order={1}>{t('title')}</Title>
 					<ErrorDisplay />
 				</Section>
@@ -81,7 +81,7 @@ export function EventsList() {
 	if (!allEventsData?.docs.length) {
 		return (
 			<ContentWrapper>
-				<Section topSpacerType="transparent">
+				<Section withTopSpacer="transparent">
 					<Title order={1}>{t('title')}</Title>
 					<NoDataDisplay />
 				</Section>
@@ -92,7 +92,7 @@ export function EventsList() {
 	return (
 		<ContentWrapper>
 			{featuredEventItem && (
-				<Section topSpacerType="transparent">
+				<Section withTopSpacer="transparent">
 					<div className={styles.featuredEventWrapper}>
 						<EventCard
 							key={featuredEventItem.id}
@@ -107,7 +107,7 @@ export function EventsList() {
 					</div>
 				</Section>
 			)}
-			<Section topSpacerType="transparent">
+			<Section withTopSpacer="transparent">
 				<Title order={1}>{t('title')}</Title>
 				<div className={styles.grid}>
 					{regularEventsItems.map(eventData => (

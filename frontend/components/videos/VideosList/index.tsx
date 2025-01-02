@@ -58,7 +58,7 @@ export function VideosList() {
 	if (allVideosLoading) {
 		return (
 			<ContentWrapper>
-				<Section topSpacerType="transparent">
+				<Section withTopSpacer="transparent">
 					<Title order={1}>{t('title')}</Title>
 					<div className={styles.grid}>
 						{[...Array(10)].map((_, i) => <VideoCard key={i} />)}
@@ -71,7 +71,7 @@ export function VideosList() {
 	if (allVideosError) {
 		return (
 			<ContentWrapper>
-				<Section topSpacerType="transparent">
+				<Section withTopSpacer="transparent">
 					<Title order={1}>{t('title')}</Title>
 					<ErrorDisplay />
 				</Section>
@@ -82,7 +82,7 @@ export function VideosList() {
 	if (!allVideosData?.docs.length) {
 		return (
 			<ContentWrapper>
-				<Section topSpacerType="transparent">
+				<Section withTopSpacer="transparent">
 					<Title order={1}>{t('title')}</Title>
 					<NoDataDisplay />
 				</Section>
@@ -93,7 +93,7 @@ export function VideosList() {
 	return (
 		<ContentWrapper>
 			{featuredVideosItems.length > 0 && (
-				<Section topSpacerType="academia">
+				<Section withTopSpacer="academia">
 					<div className={styles.featuredWrapper}>
 						{featuredVideosItems.map(video => (
 							<VideoCardFeatured

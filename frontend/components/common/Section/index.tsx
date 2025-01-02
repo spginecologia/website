@@ -8,16 +8,17 @@ import styles from './styles.module.css';
 interface Props {
 	children: React.ReactNode
 	title?: string
-	topSpacerType?: 'academia' | 'none' | 'transparent'
+	withPadding?: boolean
+	withTopSpacer?: 'academia' | 'none' | 'transparent'
 }
 
 /* * */
 
-export function Section({ children, title = '', topSpacerType = 'none' }: Props) {
+export function Section({ children, title = '', withPadding, withTopSpacer = 'none' }: Props) {
 	return (
 		<>
-			{topSpacerType === 'academia' && <AcademiaBanner />}
-			<div className={`${styles.container} ${topSpacerType === 'transparent' && styles.withTopSpacer}`}>
+			{withTopSpacer === 'academia' && <AcademiaBanner />}
+			<div className={`${styles.container} ${withTopSpacer === 'transparent' && styles.withTopSpacer} ${withPadding && styles.withPadding}`}>
 				<div className={styles.innerWrapper}>
 					{title && <h1 className={styles.title}>{title}</h1>}
 					{children}

@@ -40,7 +40,7 @@ export function LoginMain() {
 	if (userLoading) {
 		return (
 			<ContentWrapper className={styles.contentWrapperOverride}>
-				<Section topSpacerType="transparent">
+				<Section withTopSpacer="transparent">
 					<div className={styles.grid}>
 						<Skeleton height={350} />
 						<LoginSignupAd />
@@ -52,7 +52,7 @@ export function LoginMain() {
 
 	return (
 		<ContentWrapper className={styles.contentWrapperOverride}>
-			<Section topSpacerType="transparent">
+			<Section withTopSpacer="transparent">
 				<div className={styles.grid}>
 					<LoginForm />
 					<LoginSignupAd />

@@ -38,7 +38,7 @@ export function CoursesList() {
 	if (allCoursesLoading) {
 		return (
 			<ContentWrapper>
-				<Section topSpacerType="academia">
+				<Section withTopSpacer="academia">
 					<Title order={1}>{t('title')}</Title>
 					<div className={styles.grid}>
 						{[...Array(10)].map((_, i) => <CardSkeleton key={i} coverAspectRatio="600 / 300" />)}
@@ -51,7 +51,7 @@ export function CoursesList() {
 	if (allCoursesError) {
 		return (
 			<ContentWrapper>
-				<Section topSpacerType="academia">
+				<Section withTopSpacer="academia">
 					<Title order={1}>{t('title')}</Title>
 					<ErrorDisplay />
 				</Section>
@@ -62,7 +62,7 @@ export function CoursesList() {
 	if (!allCoursesData?.docs.length) {
 		return (
 			<ContentWrapper>
-				<Section topSpacerType="academia">
+				<Section withTopSpacer="academia">
 					<Title order={1}>{t('title')}</Title>
 					<NoDataDisplay />
 				</Section>
@@ -72,7 +72,7 @@ export function CoursesList() {
 
 	return (
 		<ContentWrapper>
-			<Section topSpacerType="academia">
+			<Section withTopSpacer="academia">
 				<Title order={1}>{t('title')}</Title>
 				<div className={styles.grid}>
 					{allCoursesData?.docs.map(courseData => (

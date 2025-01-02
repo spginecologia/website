@@ -38,7 +38,7 @@ export function GuidelinesList() {
 	if (allGuidelinesLoading) {
 		return (
 			<ContentWrapper>
-				<Section topSpacerType="academia">
+				<Section withTopSpacer="academia">
 					<Title order={1}>{t('title')}</Title>
 					<div className={styles.grid}>
 						{[...Array(10)].map((_, i) => <CardSkeleton key={i} coverAspectRatio="210 / 297" />)}
@@ -51,7 +51,7 @@ export function GuidelinesList() {
 	if (allGuidelinesError) {
 		return (
 			<ContentWrapper>
-				<Section topSpacerType="academia">
+				<Section withTopSpacer="academia">
 					<Title order={1}>{t('title')}</Title>
 					<ErrorDisplay />
 				</Section>
@@ -62,7 +62,7 @@ export function GuidelinesList() {
 	if (!allGuidelinesData?.docs.length) {
 		return (
 			<ContentWrapper>
-				<Section topSpacerType="academia">
+				<Section withTopSpacer="academia">
 					<Title order={1}>{t('title')}</Title>
 					<NoDataDisplay />
 				</Section>
@@ -72,7 +72,7 @@ export function GuidelinesList() {
 
 	return (
 		<ContentWrapper>
-			<Section topSpacerType="academia">
+			<Section withTopSpacer="academia">
 				<Title order={1}>{t('title')}</Title>
 				<div className={styles.grid}>
 					{allGuidelinesData?.docs.map(guidelineData => (

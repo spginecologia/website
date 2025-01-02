@@ -35,7 +35,7 @@ export function EventDetail({ id }) {
 
 	return (
 		<ContentWrapper>
-			<Section topSpacerType="transparent">
+			<Section withTopSpacer="transparent">
 				<div className={styles.imageWrapper}>
 					<Image alt="" src={newsData.image_url} style={{ objectFit: 'cover' }} fill />
 				</div>

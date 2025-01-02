@@ -38,7 +38,7 @@ export function GuidelineDetail({ id }) {
 
 	return (
 		<ContentWrapper>
-			<Section topSpacerType="transparent">
+			<Section withTopSpacer="transparent">
 				<RedirectDisplay href={guidelineHref} />
 			</Section>
 		</ContentWrapper>

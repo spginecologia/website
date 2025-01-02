@@ -40,7 +40,7 @@ export function AccountMain() {
 
 	return (
 		<ContentWrapper className={styles.contentWrapperOverride}>
-			<Section topSpacerType="transparent">
+			<Section withTopSpacer="transparent">
 				<AccountIntro />
 			</Section>
 			<Section>

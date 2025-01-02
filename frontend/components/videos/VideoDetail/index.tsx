@@ -54,7 +54,7 @@ export function VideoDetail({ id }) {
 
 	return (
 		<ContentWrapper>
-			<Section topSpacerType="transparent">
+			<Section withTopSpacer="transparent">
 				<AuthWall>
 					<div className={styles.grid}>
 

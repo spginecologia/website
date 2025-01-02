@@ -7,6 +7,11 @@
   width: 100%;
 }
 
+.withPadding {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
 .withTopSpacer {
   padding-top: 150px;
 }

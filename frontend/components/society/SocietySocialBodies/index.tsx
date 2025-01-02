@@ -32,7 +32,7 @@ export function SocietySocialBodies() {
 
 	return (
 		<div className={styles.container}>
-			<Section>
+			<Section withPadding>
 
 				<Title order={1}>{t('title')}</Title>
 				<Image src="/generic/orgaos-sociais-spg-2023.jpg" />

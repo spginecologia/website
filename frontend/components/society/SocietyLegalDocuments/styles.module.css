@@ -1,0 +1,19 @@
+/* * */
+/* CONTAINER */
+
+.container {
+	width: 100%;
+	padding-bottom: 50px;
+	background-color: var(--color-brand-support-300);
+}
+
+/* * */
+/* FLEX */
+
+.flex {
+	display: flex;
+	flex-flow: row wrap;
+	gap: 20px;
+	align-items: flex-start;
+	justify-content: center;
+}

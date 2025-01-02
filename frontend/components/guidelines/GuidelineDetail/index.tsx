@@ -38,7 +38,7 @@ export function GuidelineDetail({ id }) {
 
 	return (
 		<ContentWrapper>
-			<Section topSpacerType="academia">
+			<Section withTopSpacer="academia">
 				<RedirectDisplay href={guidelineHref} />
 			</Section>
 		</ContentWrapper>
