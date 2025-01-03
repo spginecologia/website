@@ -43,6 +43,7 @@ export function SocietyLegalDocuments() {
 				<div className={styles.flex}>
 					{legalDocumentsData?.docs?.map(legalDocData => (
 						<Button
+							key={legalDocData.id}
 							component={Link}
 							href={getHref(legalDocData)}
 							target="_blank"
