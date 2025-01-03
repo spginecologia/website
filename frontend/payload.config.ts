@@ -8,24 +8,25 @@ import sharp from 'sharp';
 
 /* * */
 
-import { Admins } from '@/schemas/Admin/collection';
-import { Courses } from '@/schemas/Course/collection';
-import { Documents } from '@/schemas/Document/collection';
-import { Event } from '@/schemas/Event/collection';
-import { Guidelines } from '@/schemas/Guideline/collection';
-import { Links } from '@/schemas/Link/collection';
-import { Media } from '@/schemas/Media/collection';
-import { News } from '@/schemas/News/collection';
-import { Publications } from '@/schemas/Publication/collection';
-import { Topics } from '@/schemas/Topic/collection';
-import { Users } from '@/schemas/User/collection';
-import { Videos } from '@/schemas/Video/collection';
-import { VideoFiles } from '@/schemas/VideoFile/collection';
+import { Admins } from '@/schemas/collections/Admin/collection';
+import { Courses } from '@/schemas/collections/Course/collection';
+import { Documents } from '@/schemas/collections/Document/collection';
+import { Event } from '@/schemas/collections/Event/collection';
+import { Guidelines } from '@/schemas/collections/Guideline/collection';
+import { Links } from '@/schemas/collections/Link/collection';
+import { Media } from '@/schemas/collections/Media/collection';
+import { News } from '@/schemas/collections/News/collection';
+import { Publications } from '@/schemas/collections/Publication/collection';
+import { Sections } from '@/schemas/collections/Section/collection';
+import { Topics } from '@/schemas/collections/Topic/collection';
+import { Users } from '@/schemas/collections/User/collection';
+import { Videos } from '@/schemas/collections/Video/collection';
+import { VideoFiles } from '@/schemas/collections/VideoFile/collection';
 
 /* * */
 
-import { LegalDocuments } from '@/schemas/_globals/LegalDocuments/global';
-import { SocialBodies } from '@/schemas/_globals/SocialBodies/global';
+import { LegalDocuments } from '@/schemas/globals/LegalDocuments/global';
+import { SocialBodies } from '@/schemas/globals/SocialBodies/global';
 
 /* * */
 
@@ -48,6 +49,7 @@ export default buildConfig({
 		Media,
 		News,
 		Publications,
+		Sections,
 		Users,
 		Videos,
 		VideoFiles,

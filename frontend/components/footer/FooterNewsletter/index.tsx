@@ -2,8 +2,8 @@
 
 /* * */
 
-import { NewsletterDefault } from '@/schemas/Newsletter/default';
-import { NewsletterValidation } from '@/schemas/Newsletter/validation';
+import { NewsletterDefault } from '@/schemas/collections/Newsletter/default';
+import { NewsletterValidation } from '@/schemas/collections/Newsletter/validation';
 import { Button, Loader, Space, Text, TextInput, Title } from '@mantine/core';
 import { useForm, zodResolver } from '@mantine/form';
 import { Turnstile } from '@marsidev/react-turnstile';

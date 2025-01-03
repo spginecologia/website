@@ -1,6 +1,6 @@
 /* * */
 
-import { UserEditableProfile } from '@/schemas/User/validation';
+import { UserEditableProfile } from '@/schemas/collections/User/validation';
 
 /* * */
 

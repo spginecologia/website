@@ -1,6 +1,6 @@
 /* * */
 
-import { VideoValidationServer } from '@/schemas/Video/validation';
+import { VideoValidationServer } from '@/schemas/collections/Video/validation';
 import { getVideoDurationInSeconds } from '@/utils/get-video-duration-in-seconds';
 import payloadConfig from '@payload-config';
 import { getPayload } from 'payload';

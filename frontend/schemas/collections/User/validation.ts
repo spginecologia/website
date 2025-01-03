@@ -1,6 +1,6 @@
 /* * */
 
-import { UserOptions } from '@/schemas/User/options';
+import { UserOptions } from '@/schemas/collections/User/options';
 import { validateTaxId } from '@/utils/validate-tax-id';
 import { z } from 'zod';
 

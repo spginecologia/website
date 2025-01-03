@@ -2,7 +2,7 @@
 
 import type { GlobalConfig } from 'payload';
 
-import { SocialBodyMember } from '@/schemas/_globals/SocialBodies/fields';
+import { SocialBodyMember } from '@/schemas/globals/SocialBodies/fields';
 
 /* * */
 
@@ -16,7 +16,7 @@ export const SocialBodies: GlobalConfig = {
 		{
 			admin: {
 				components: {
-					RowLabel: '@/schemas/_globals/SocialBodies/components#SocialBodyRowLabel',
+					RowLabel: '@/schemas/globals/SocialBodies/components#SocialBodyRowLabel',
 				},
 				initCollapsed: true,
 			},
@@ -32,7 +32,7 @@ export const SocialBodies: GlobalConfig = {
 		{
 			admin: {
 				components: {
-					RowLabel: '@/schemas/_globals/SocialBodies/components#SocialBodyRowLabel',
+					RowLabel: '@/schemas/globals/SocialBodies/components#SocialBodyRowLabel',
 				},
 				initCollapsed: true,
 			},
@@ -48,7 +48,7 @@ export const SocialBodies: GlobalConfig = {
 		{
 			admin: {
 				components: {
-					RowLabel: '@/schemas/_globals/SocialBodies/components#SocialBodyRowLabel',
+					RowLabel: '@/schemas/globals/SocialBodies/components#SocialBodyRowLabel',
 				},
 				initCollapsed: true,
 			},
@@ -64,7 +64,7 @@ export const SocialBodies: GlobalConfig = {
 		{
 			admin: {
 				components: {
-					RowLabel: '@/schemas/_globals/SocialBodies/components#SocialBodyRowLabel',
+					RowLabel: '@/schemas/globals/SocialBodies/components#SocialBodyRowLabel',
 				},
 				initCollapsed: true,
 			},

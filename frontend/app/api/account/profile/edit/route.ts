@@ -1,7 +1,7 @@
 /* * */
 
-import { UserEditableProfileDefault } from '@/schemas/User/default';
-import { UserEditableProfileValidation } from '@/schemas/User/validation';
+import { UserEditableProfileDefault } from '@/schemas/collections/User/default';
+import { UserEditableProfileValidation } from '@/schemas/collections/User/validation';
 import payloadConfig from '@payload-config';
 import { mergekit } from 'mergekit';
 import { getPayload } from 'payload';

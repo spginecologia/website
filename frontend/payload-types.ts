@@ -22,6 +22,7 @@ export interface Config {
     media: Media;
     news: News;
     publications: Publication;
+    sections: Section;
     users: User;
     videos: Video;
     'video-files': VideoFile;
@@ -41,6 +42,7 @@ export interface Config {
     media: MediaSelect<false> | MediaSelect<true>;
     news: NewsSelect<false> | NewsSelect<true>;
     publications: PublicationsSelect<false> | PublicationsSelect<true>;
+    sections: SectionsSelect<false> | SectionsSelect<true>;
     users: UsersSelect<false> | UsersSelect<true>;
     videos: VideosSelect<false> | VideosSelect<true>;
     'video-files': VideoFilesSelect<false> | VideoFilesSelect<true>;
@@ -299,6 +301,18 @@ export interface Publication {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "sections".
+ */
+export interface Section {
+  id: string;
+  title: string;
+  topics?: (string | Topic)[] | null;
+  featured_image?: (string | null) | Media;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "users".
  */
 export interface User {
@@ -466,6 +480,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'publications';
         value: string | Publication;
+      } | null)
+    | ({
+        relationTo: 'sections';
+        value: string | Section;
       } | null)
     | ({
         relationTo: 'users';
@@ -695,6 +713,17 @@ export interface PublicationsSelect<T extends boolean = true> {
   content_type?: T;
   document?: T;
   url?: T;
+  topics?: T;
+  featured_image?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "sections_select".
+ */
+export interface SectionsSelect<T extends boolean = true> {
+  title?: T;
   topics?: T;
   featured_image?: T;
   updatedAt?: T;

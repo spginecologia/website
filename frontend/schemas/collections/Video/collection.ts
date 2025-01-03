@@ -5,7 +5,7 @@ import type { CollectionConfig } from 'payload';
 import { featuredImageField } from '@/fields/featured-image';
 import { isFeaturedField } from '@/fields/is-featured';
 import { topicsField } from '@/fields/topics';
-import { VideoOptions } from '@/schemas/Video/options';
+import { VideoOptions } from '@/schemas/collections/Video/options';
 
 /* * */
 

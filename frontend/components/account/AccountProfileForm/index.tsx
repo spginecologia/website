@@ -5,9 +5,9 @@
 import type { PayloadMeResponse } from '@/types/payload-api-response';
 
 import { FormSection } from '@/components/common/FormSection';
-import { UserEditableProfileDefault } from '@/schemas/User/default';
-import { UserOptions } from '@/schemas/User/options';
-import { UserEditableProfileValidation } from '@/schemas/User/validation';
+import { UserEditableProfileDefault } from '@/schemas/collections/User/default';
+import { UserOptions } from '@/schemas/collections/User/options';
+import { UserEditableProfileValidation } from '@/schemas/collections/User/validation';
 import { showNotification } from '@/utils/show-notification';
 import { Button, Checkbox, Select, Space, Text, TextInput } from '@mantine/core';
 import { DateInput } from '@mantine/dates';

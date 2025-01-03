@@ -2,7 +2,7 @@
 
 import type { CollectionConfig } from 'payload';
 
-import { UserOptions } from '@/schemas/User/options';
+import { UserOptions } from '@/schemas/collections/User/options';
 import { brevoUpdateNewsletterSubscription } from '@/utils/brevo-update-newsletter-subscription';
 import { validateTaxId } from '@/utils/validate-tax-id';
 
