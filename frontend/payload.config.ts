@@ -8,25 +8,25 @@ import sharp from 'sharp';
 
 /* * */
 
-import { Admins } from '@/schemas/collections/Admin/collection';
-import { Courses } from '@/schemas/collections/Course/collection';
-import { Documents } from '@/schemas/collections/Document/collection';
-import { Event } from '@/schemas/collections/Event/collection';
-import { Guidelines } from '@/schemas/collections/Guideline/collection';
-import { Links } from '@/schemas/collections/Link/collection';
-import { Media } from '@/schemas/collections/Media/collection';
-import { News } from '@/schemas/collections/News/collection';
-import { Publications } from '@/schemas/collections/Publication/collection';
-import { Sections } from '@/schemas/collections/Section/collection';
-import { Topics } from '@/schemas/collections/Topic/collection';
-import { Users } from '@/schemas/collections/User/collection';
-import { Videos } from '@/schemas/collections/Video/collection';
-import { VideoFiles } from '@/schemas/collections/VideoFile/collection';
+import { Admins } from '@/payload/collections/Admin/collection';
+import { Courses } from '@/payload/collections/Course/collection';
+import { Documents } from '@/payload/collections/Document/collection';
+import { Event } from '@/payload/collections/Event/collection';
+import { Guidelines } from '@/payload/collections/Guideline/collection';
+import { Links } from '@/payload/collections/Link/collection';
+import { Media } from '@/payload/collections/Media/collection';
+import { News } from '@/payload/collections/News/collection';
+import { Publications } from '@/payload/collections/Publication/collection';
+import { Sections } from '@/payload/collections/Section/collection';
+import { Topics } from '@/payload/collections/Topic/collection';
+import { Users } from '@/payload/collections/User/collection';
+import { Videos } from '@/payload/collections/Video/collection';
+import { VideoFiles } from '@/payload/collections/VideoFile/collection';
 
 /* * */
 
-import { LegalDocuments } from '@/schemas/globals/LegalDocuments/global';
-import { SocialBodies } from '@/schemas/globals/SocialBodies/global';
+import { LegalDocuments } from '@/payload/globals/LegalDocuments/global';
+import { SocialBodies } from '@/payload/globals/SocialBodies/global';
 
 /* * */
 

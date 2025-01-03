@@ -2,8 +2,8 @@
 
 /* * */
 
-import { SignInDefault } from '@/schemas/collections/SignIn/default';
-import { SignInValidation } from '@/schemas/collections/SignIn/validation';
+import { SignInDefault } from '@/payload/collections/SignIn/default';
+import { SignInValidation } from '@/payload/collections/SignIn/validation';
 import { navigationHandleRedirectParam } from '@/utils/navigation-handle-redirect-param';
 import { Button, Loader, Paper, Space, Text, TextInput, Title } from '@mantine/core';
 import { useForm, zodResolver } from '@mantine/form';

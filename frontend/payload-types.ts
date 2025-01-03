@@ -306,6 +306,28 @@ export interface Publication {
 export interface Section {
   id: string;
   title: string;
+  intro_text: string;
+  project_description: string;
+  goal_description: string;
+  social_bodies?:
+    | {
+        name: string;
+        position?: string | null;
+        city?: string | null;
+        photo?: (string | null) | Media;
+        separated_from_next?: boolean | null;
+        id?: string | null;
+      }[]
+    | null;
+  useful_links?:
+    | {
+        title: string;
+        content_type: 'file' | 'url';
+        document?: (string | null) | Document;
+        url?: string | null;
+        id?: string | null;
+      }[]
+    | null;
   topics?: (string | Topic)[] | null;
   featured_image?: (string | null) | Media;
   updatedAt: string;
@@ -724,6 +746,28 @@ export interface PublicationsSelect<T extends boolean = true> {
  */
 export interface SectionsSelect<T extends boolean = true> {
   title?: T;
+  intro_text?: T;
+  project_description?: T;
+  goal_description?: T;
+  social_bodies?:
+    | T
+    | {
+        name?: T;
+        position?: T;
+        city?: T;
+        photo?: T;
+        separated_from_next?: T;
+        id?: T;
+      };
+  useful_links?:
+    | T
+    | {
+        title?: T;
+        content_type?: T;
+        document?: T;
+        url?: T;
+        id?: T;
+      };
   topics?: T;
   featured_image?: T;
   updatedAt?: T;
