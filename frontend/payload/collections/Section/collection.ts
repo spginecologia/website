@@ -78,6 +78,15 @@ export const Sections: CollectionConfig = {
 			name: 'useful_links',
 			type: 'array',
 		},
+		{
+			admin: {
+				position: 'sidebar',
+			},
+			label: 'Abreviatura (slug)',
+			name: 'slug',
+			required: true,
+			type: 'text',
+		},
 		topicsField,
 		featuredImageField,
 	],

@@ -1,16 +1,9 @@
 /* * */
 
-import { Section } from '@/components/common/Section';
-import NoDataLabel from '@/components/NoDataLabel/NoDataLabel';
-import { Space } from '@mantine/core';
+import { SectionsMain } from '@/components/sections/SectionsMain';
 
 /* * */
 
 export default function Page() {
-	return (
-		<Section withTopSpacer="transparent">
-			<NoDataLabel text="Secções" />
-			<Space h={300} />
-		</Section>
-	);
+	return <SectionsMain />;
 }
