@@ -3,7 +3,7 @@
 /* * */
 
 import { CardWrapper } from '@/components/cards/CardWrapper';
-import { Image } from '@mantine/core';
+import { Image, Skeleton } from '@mantine/core';
 
 import styles from './styles.module.css';
 
@@ -19,8 +19,8 @@ interface Props {
 export function SectionsSelectorItem({ imageSrc, slug }: Props) {
 	//
 
-	if (!imageSrc) {
-		return null;
+	if (!imageSrc || !slug) {
+		return <Skeleton style={{ aspectRatio: '3 / 4' }} />;
 	}
 
 	return (

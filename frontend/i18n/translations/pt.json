@@ -659,6 +659,12 @@
 			"title": "Publicações Científicas"
 		}
 	},
+	"sections": {
+		"SectionsIntro": {
+			"paragraph_1": "As Secções da SPG surgem no contexto da subespecialização dos conhecimentos e competências no âmbito da Especialidade. Destinados ao estudo aprofundado de temas específicos, pretendem agrupar os membros da SPG com especial interesse nessa temática.",
+			"title": "Juntos contribuímos para o avanço do conhecimento."
+		}
+	},
 	"society": {
 		"SocietyMission": {
 			"paragraph_1": "A SPG é uma associação científica, sem fins lucrativos e de utilidade pública, comprometida com a promoção da Saúde em geral e da Mulher em particular e com a defesa e concertação de todos os Ginecologistas Portugueses.",

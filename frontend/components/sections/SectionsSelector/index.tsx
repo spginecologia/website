@@ -4,6 +4,8 @@
 
 import type { Section } from '@/payload-types';
 
+import { ErrorDisplay } from '@/components/common/ErrorDisplay';
+import { NoDataDisplay } from '@/components/common/NoDataDisplay';
 import { Section as LayoutSection } from '@/components/common/Section';
 import { SectionsSelectorItem } from '@/components/sections/SectionsSelectorItem';
 import { PayloadAPIResponse } from '@/types/payload-api-response';
@@ -19,15 +21,41 @@ export function SectionsSelector({ withTopSpacer = false }) {
 	//
 	// A. Fetch data
 
-	const { data: sectionsData } = useSWR<PayloadAPIResponse<Section>>('/api/sections');
+	const { data: allSectionsData, error: allSectionsError, isLoading: allSectionsLoading } = useSWR<PayloadAPIResponse<Section>>('/api/sections');
 
 	//
-	// C. Render components
+	// B. Render components
+
+	if (allSectionsLoading) {
+		return (
+			<LayoutSection withTopSpacer={withTopSpacer ? 'transparent' : 'none'} withPadding>
+				<div className={styles.grid}>
+					{[...Array(5)].map((_, i) => <SectionsSelectorItem key={i} />)}
+				</div>
+			</LayoutSection>
+		);
+	}
+
+	if (allSectionsError) {
+		return (
+			<LayoutSection withTopSpacer={withTopSpacer ? 'transparent' : 'none'} withPadding>
+				<ErrorDisplay />
+			</LayoutSection>
+		);
+	}
+
+	if (!allSectionsData?.docs.length) {
+		return (
+			<LayoutSection withTopSpacer={withTopSpacer ? 'transparent' : 'none'} withPadding>
+				<NoDataDisplay />
+			</LayoutSection>
+		);
+	}
 
 	return (
 		<LayoutSection withTopSpacer={withTopSpacer ? 'transparent' : 'none'} withPadding>
 			<div className={styles.grid}>
-				{sectionsData?.docs?.map(sectionData => (
+				{allSectionsData?.docs?.map(sectionData => (
 					<SectionsSelectorItem
 						key={sectionData.id}
 						imageSrc={typeof sectionData.featured_image === 'object' ? sectionData.featured_image?.url : ''}
