@@ -35,7 +35,7 @@ export function SectionDetail({ slug }: Props) {
 		<ContentWrapper withGap={false}>
 			<SectionDetailIntro
 				goalDescription={sectionData?.goal_description}
-				imageSrc={typeof sectionData?.featured_image === 'object' ? sectionData.featured_image?.url : ''}
+				imageSrc={typeof sectionData?.featured_image === 'object' ? sectionData.featured_image?.url : null}
 				introText={sectionData?.intro_text}
 				projectDescription={sectionData?.project_description}
 			/>
