@@ -58,7 +58,7 @@ export function VideosList() {
 	if (allVideosLoading) {
 		return (
 			<ContentWrapper>
-				<Section withTopSpacer="transparent">
+				<Section withTopSpacer="academia">
 					<Title order={1}>{t('title')}</Title>
 					<div className={styles.grid}>
 						{[...Array(10)].map((_, i) => <VideoCard key={i} />)}
@@ -71,7 +71,7 @@ export function VideosList() {
 	if (allVideosError) {
 		return (
 			<ContentWrapper>
-				<Section withTopSpacer="transparent">
+				<Section withTopSpacer="academia">
 					<Title order={1}>{t('title')}</Title>
 					<ErrorDisplay />
 				</Section>
@@ -82,7 +82,7 @@ export function VideosList() {
 	if (!allVideosData?.docs.length) {
 		return (
 			<ContentWrapper>
-				<Section withTopSpacer="transparent">
+				<Section withTopSpacer="academia">
 					<Title order={1}>{t('title')}</Title>
 					<NoDataDisplay />
 				</Section>
