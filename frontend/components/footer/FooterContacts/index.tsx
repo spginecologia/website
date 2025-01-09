@@ -23,8 +23,8 @@ export function FooterContacts() {
 	return (
 		<div className={styles.container}>
 			<div className={styles.contacts}>
-				<a className={styles.contactItem} href="tel:+351919494636">
-					+351 919 494 636
+				<a className={styles.contactItem} href="tel:+351218429710">
+					+351 218 429 710
 				</a>
 				<a className={styles.contactItem} href="mailto:secretariado@spginecologia.pt">
 					secretariado@spginecologia.pt
