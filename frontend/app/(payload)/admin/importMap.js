@@ -23,6 +23,7 @@ import { ItalicFeatureClient as ItalicFeatureClient_e70f5e05f09f93e00b997edb1ef0
 import { SpgMemberRowLabel as SpgMemberRowLabel_ef24b43a8ae7fb128de8e4029b3a4094 } from '@/payload/components/SpgMemberRowLabel/index'
 import { FileOrUrlRowLabel as FileOrUrlRowLabel_a2948c35ea015ac0e9690fd4289a2141 } from '@/payload/components/FileOrUrlRowLabel/index'
 import { OpenInvoiceButton as OpenInvoiceButton_4c1d823374f6647bff3da4d7d4b5e2ae } from '@/payload/components/OpenInvoiceButton/index'
+import { S3ClientUploadHandler as S3ClientUploadHandler_f97aa6c64367fa259c5bc0567239ef24 } from '@payloadcms/storage-s3/client'
 
 export const importMap = {
   "@payloadcms/richtext-lexical/rsc#RscEntryLexicalCell": RscEntryLexicalCell_44fe37237e0ebf4470c9990d8cb7b07e,
@@ -49,5 +50,6 @@ export const importMap = {
   "@payloadcms/richtext-lexical/client#ItalicFeatureClient": ItalicFeatureClient_e70f5e05f09f93e00b997edb1ef0c864,
   "@/payload/components/SpgMemberRowLabel/index#SpgMemberRowLabel": SpgMemberRowLabel_ef24b43a8ae7fb128de8e4029b3a4094,
   "@/payload/components/FileOrUrlRowLabel/index#FileOrUrlRowLabel": FileOrUrlRowLabel_a2948c35ea015ac0e9690fd4289a2141,
-  "@/payload/components/OpenInvoiceButton/index#OpenInvoiceButton": OpenInvoiceButton_4c1d823374f6647bff3da4d7d4b5e2ae
+  "@/payload/components/OpenInvoiceButton/index#OpenInvoiceButton": OpenInvoiceButton_4c1d823374f6647bff3da4d7d4b5e2ae,
+  "@payloadcms/storage-s3/client#S3ClientUploadHandler": S3ClientUploadHandler_f97aa6c64367fa259c5bc0567239ef24
 }
