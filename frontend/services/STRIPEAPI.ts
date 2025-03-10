@@ -5,6 +5,6 @@ import Stripe from 'stripe';
 /* * */
 
 export const STRIPEAPI = new Stripe(process.env.STRIPE_SECRET_KEY || 'placeholder', {
-	apiVersion: '2024-12-18.acacia',
+	apiVersion: '2025-02-24.acacia',
 	typescript: true,
 });
