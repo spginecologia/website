@@ -1,11 +1,10 @@
 /* * */
 
-import type { CollectionConfig } from 'payload';
-
+import { VideoOptions } from '@/payload/collections/Video/options';
 import { featuredImageField } from '@/payload/fields/featured-image';
 import { isFeaturedField } from '@/payload/fields/is-featured';
 import { topicsField } from '@/payload/fields/topics';
-import { VideoOptions } from '@/payload/collections/Video/options';
+import { type CollectionConfig } from 'payload';
 
 /* * */
 

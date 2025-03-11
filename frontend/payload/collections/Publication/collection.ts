@@ -1,19 +1,21 @@
 /* * */
 
-import type { CollectionConfig } from 'payload';
-
 import { featuredImageField } from '@/payload/fields/featured-image';
 import { topicsField } from '@/payload/fields/topics';
+import { type CollectionConfig } from 'payload';
 
 /* * */
 
 export const Publications: CollectionConfig = {
+
 	access: {
 		read: () => true,
 	},
+
 	admin: {
 		useAsTitle: 'title',
 	},
+
 	fields: [
 		{
 			label: 'Título',
@@ -58,9 +60,12 @@ export const Publications: CollectionConfig = {
 		topicsField,
 		featuredImageField,
 	],
+
 	labels: {
 		plural: 'Publicações',
 		singular: 'Publicação',
 	},
+
 	slug: 'publications',
+
 };

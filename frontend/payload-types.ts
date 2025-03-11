@@ -77,6 +77,7 @@ export interface Config {
     media: Media;
     news: News;
     publications: Publication;
+    quotas: Quota;
     sections: Section;
     users: User;
     videos: Video;
@@ -97,6 +98,7 @@ export interface Config {
     media: MediaSelect<false> | MediaSelect<true>;
     news: NewsSelect<false> | NewsSelect<true>;
     publications: PublicationsSelect<false> | PublicationsSelect<true>;
+    quotas: QuotasSelect<false> | QuotasSelect<true>;
     sections: SectionsSelect<false> | SectionsSelect<true>;
     users: UsersSelect<false> | UsersSelect<true>;
     videos: VideosSelect<false> | VideosSelect<true>;
@@ -109,12 +111,10 @@ export interface Config {
     defaultIDType: string;
   };
   globals: {
-    'quota-products': QuotaProduct;
     'legal-documents': LegalDocument;
     'social-bodies': SocialBody;
   };
   globalsSelect: {
-    'quota-products': QuotaProductsSelect<false> | QuotaProductsSelect<true>;
     'legal-documents': LegalDocumentsSelect<false> | LegalDocumentsSelect<true>;
     'social-bodies': SocialBodiesSelect<false> | SocialBodiesSelect<true>;
   };
@@ -358,6 +358,18 @@ export interface Publication {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "quotas".
+ */
+export interface Quota {
+  id: string;
+  title: string;
+  amount: number;
+  is_enabled: boolean;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "sections".
  */
 export interface Section {
@@ -435,6 +447,7 @@ export interface User {
         invoice_date?: string | null;
         invoice_id?: string | null;
         invoice_system_time?: string | null;
+        paid_quotas?: (string | Quota)[] | null;
         id?: string | null;
       }[]
     | null;
@@ -560,6 +573,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'publications';
         value: string | Publication;
+      } | null)
+    | ({
+        relationTo: 'quotas';
+        value: string | Quota;
       } | null)
     | ({
         relationTo: 'sections';
@@ -800,6 +817,17 @@ export interface PublicationsSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "quotas_select".
+ */
+export interface QuotasSelect<T extends boolean = true> {
+  title?: T;
+  amount?: T;
+  is_enabled?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "sections_select".
  */
 export interface SectionsSelect<T extends boolean = true> {
@@ -868,6 +896,7 @@ export interface UsersSelect<T extends boolean = true> {
         invoice_date?: T;
         invoice_id?: T;
         invoice_system_time?: T;
+        paid_quotas?: T;
         id?: T;
       };
   account_status?: T;
@@ -954,23 +983,6 @@ export interface PayloadMigrationsSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "quota-products".
- */
-export interface QuotaProduct {
-  id: string;
-  docs?:
-    | {
-        title: string;
-        amount: number;
-        is_enabled: boolean;
-        id?: string | null;
-      }[]
-    | null;
-  updatedAt?: string | null;
-  createdAt?: string | null;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "legal-documents".
  */
 export interface LegalDocument {
@@ -1035,23 +1047,6 @@ export interface SocialBody {
     | null;
   updatedAt?: string | null;
   createdAt?: string | null;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "quota-products_select".
- */
-export interface QuotaProductsSelect<T extends boolean = true> {
-  docs?:
-    | T
-    | {
-        title?: T;
-        amount?: T;
-        is_enabled?: T;
-        id?: T;
-      };
-  updatedAt?: T;
-  createdAt?: T;
-  globalType?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

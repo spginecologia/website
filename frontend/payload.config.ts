@@ -17,6 +17,7 @@ import { Links } from '@/payload/collections/Link/collection';
 import { Media } from '@/payload/collections/Media/collection';
 import { News } from '@/payload/collections/News/collection';
 import { Publications } from '@/payload/collections/Publication/collection';
+import { Quotas } from '@/payload/collections/Quota/collection';
 import { Sections } from '@/payload/collections/Section/collection';
 import { Topics } from '@/payload/collections/Topic/collection';
 import { Users } from '@/payload/collections/User/collection';
@@ -26,7 +27,6 @@ import { VideoFiles } from '@/payload/collections/VideoFile/collection';
 /* * */
 
 import { LegalDocuments } from '@/payload/globals/LegalDocuments/global';
-import { QuotaProducts } from '@/payload/globals/QuotaProducts/global';
 import { SocialBodies } from '@/payload/globals/SocialBodies/global';
 
 /* * */
@@ -50,6 +50,7 @@ export default buildConfig({
 		Media,
 		News,
 		Publications,
+		Quotas,
 		Sections,
 		Users,
 		Videos,
@@ -68,7 +69,6 @@ export default buildConfig({
 
 	// Define and configure your globals in this array
 	globals: [
-		QuotaProducts,
 		LegalDocuments,
 		SocialBodies,
 	],

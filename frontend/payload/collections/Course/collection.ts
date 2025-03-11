@@ -1,9 +1,8 @@
 /* * */
 
-import type { CollectionConfig } from 'payload';
-
 import { featuredImageField } from '@/payload/fields/featured-image';
 import { topicsField } from '@/payload/fields/topics';
+import { type CollectionConfig } from 'payload';
 
 /* * */
 

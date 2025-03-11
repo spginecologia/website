@@ -1,10 +1,9 @@
 /* * */
 
-import type { CollectionConfig } from 'payload';
-
 import { accessIsActiveUser } from '@/utils/access-is-active-user';
 import { accessIsAdmin } from '@/utils/access-is-admin';
 import { getVideoDurationInSeconds } from '@/utils/get-video-duration-in-seconds';
+import { type CollectionConfig } from 'payload';
 
 /* * */
 

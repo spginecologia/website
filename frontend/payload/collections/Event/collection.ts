@@ -1,11 +1,10 @@
 /* * */
 
-import type { CollectionConfig } from 'payload';
-
 import { TextBlock } from '@/blocks/TextBlock';
 import { featuredImageField } from '@/payload/fields/featured-image';
 import { isFeaturedField } from '@/payload/fields/is-featured';
 import { topicsField } from '@/payload/fields/topics';
+import { type CollectionConfig } from 'payload';
 
 /* * */
 

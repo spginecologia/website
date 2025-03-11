@@ -1,11 +1,10 @@
 /* * */
 
-import type { CollectionConfig } from 'payload';
-
 import { featuredImageField } from '@/payload/fields/featured-image';
 import { fileOrUrlFieldSet } from '@/payload/fields/file-or-url';
 import { spgMemberFieldSet } from '@/payload/fields/spg-member';
 import { topicsField } from '@/payload/fields/topics';
+import { type CollectionConfig } from 'payload';
 
 /* * */
 

@@ -1,9 +1,8 @@
 /* * */
 
-import type { CollectionConfig } from 'payload';
-
 import { isActiveField } from '@/payload/fields/is-active';
 import { isFeaturedField } from '@/payload/fields/is-featured';
+import { type CollectionConfig } from 'payload';
 
 /* * */
 

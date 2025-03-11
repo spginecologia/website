@@ -1,10 +1,9 @@
 /* * */
 
-import type { CollectionConfig } from 'payload';
-
 import { UserOptions } from '@/payload/collections/User/options';
 import { brevoUpdateNewsletterSubscription } from '@/utils/brevo-update-newsletter-subscription';
 import { validateTaxId } from '@/utils/validate-tax-id';
+import { type CollectionConfig } from 'payload';
 
 /* * */
 
@@ -256,6 +255,13 @@ export const Users: CollectionConfig = {
 										},
 									],
 									type: 'row',
+								},
+								{
+									hasMany: true,
+									label: 'Quotas pagas com esta fatura',
+									name: 'paid_quotas',
+									relationTo: 'quotas',
+									type: 'relationship',
 								},
 								{
 									admin: {
