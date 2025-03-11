@@ -76,8 +76,8 @@ export interface Config {
     topics: Topic;
     media: Media;
     news: News;
+    products: Product;
     publications: Publication;
-    quotas: Quota;
     sections: Section;
     users: User;
     videos: Video;
@@ -97,8 +97,8 @@ export interface Config {
     topics: TopicsSelect<false> | TopicsSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
     news: NewsSelect<false> | NewsSelect<true>;
+    products: ProductsSelect<false> | ProductsSelect<true>;
     publications: PublicationsSelect<false> | PublicationsSelect<true>;
-    quotas: QuotasSelect<false> | QuotasSelect<true>;
     sections: SectionsSelect<false> | SectionsSelect<true>;
     users: UsersSelect<false> | UsersSelect<true>;
     videos: VideosSelect<false> | VideosSelect<true>;
@@ -343,6 +343,18 @@ export interface News {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "products".
+ */
+export interface Product {
+  id: string;
+  title: string;
+  amount: number;
+  is_enabled: boolean;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "publications".
  */
 export interface Publication {
@@ -353,18 +365,6 @@ export interface Publication {
   url?: string | null;
   topics?: (string | Topic)[] | null;
   featured_image?: (string | null) | Media;
-  updatedAt: string;
-  createdAt: string;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "quotas".
- */
-export interface Quota {
-  id: string;
-  title: string;
-  amount: number;
-  is_enabled: boolean;
   updatedAt: string;
   createdAt: string;
 }
@@ -449,7 +449,7 @@ export interface User {
         doc_number?: string | null;
         doc_id?: string | null;
         doc_system_time?: string | null;
-        associated_quotas?: (string | Quota)[] | null;
+        associated_products?: (string | Product)[] | null;
         id?: string | null;
       }[]
     | null;
@@ -573,12 +573,12 @@ export interface PayloadLockedDocument {
         value: string | News;
       } | null)
     | ({
-        relationTo: 'publications';
-        value: string | Publication;
+        relationTo: 'products';
+        value: string | Product;
       } | null)
     | ({
-        relationTo: 'quotas';
-        value: string | Quota;
+        relationTo: 'publications';
+        value: string | Publication;
       } | null)
     | ({
         relationTo: 'sections';
@@ -805,6 +805,17 @@ export interface NewsSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "products_select".
+ */
+export interface ProductsSelect<T extends boolean = true> {
+  title?: T;
+  amount?: T;
+  is_enabled?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "publications_select".
  */
 export interface PublicationsSelect<T extends boolean = true> {
@@ -814,17 +825,6 @@ export interface PublicationsSelect<T extends boolean = true> {
   url?: T;
   topics?: T;
   featured_image?: T;
-  updatedAt?: T;
-  createdAt?: T;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "quotas_select".
- */
-export interface QuotasSelect<T extends boolean = true> {
-  title?: T;
-  amount?: T;
-  is_enabled?: T;
   updatedAt?: T;
   createdAt?: T;
 }
@@ -900,7 +900,7 @@ export interface UsersSelect<T extends boolean = true> {
         doc_number?: T;
         doc_id?: T;
         doc_system_time?: T;
-        associated_quotas?: T;
+        associated_products?: T;
         id?: T;
       };
   account_status?: T;

@@ -16,8 +16,8 @@ import { Guidelines } from '@/payload/collections/Guideline/collection';
 import { Links } from '@/payload/collections/Link/collection';
 import { Media } from '@/payload/collections/Media/collection';
 import { News } from '@/payload/collections/News/collection';
+import { Products } from '@/payload/collections/Product/collection';
 import { Publications } from '@/payload/collections/Publication/collection';
-import { Quotas } from '@/payload/collections/Quota/collection';
 import { Sections } from '@/payload/collections/Section/collection';
 import { Topics } from '@/payload/collections/Topic/collection';
 import { Users } from '@/payload/collections/User/collection';
@@ -49,8 +49,8 @@ export default buildConfig({
 		Topics,
 		Media,
 		News,
+		Products,
 		Publications,
-		Quotas,
 		Sections,
 		Users,
 		Videos,

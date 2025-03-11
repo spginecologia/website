@@ -9,3 +9,10 @@ export interface Purchase {
 	vendus_credit_note_id?: string
 	vendus_invoice_id?: string
 }
+
+export interface ProductStatus {
+	amount: number
+	id: string
+	status: 'paid' | 'refunded'	| 'unpaid'
+	title: string
+}

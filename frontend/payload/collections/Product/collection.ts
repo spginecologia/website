@@ -4,7 +4,7 @@ import { type CollectionConfig } from 'payload';
 
 /* * */
 
-export const Quotas: CollectionConfig = {
+export const Products: CollectionConfig = {
 
 	access: {
 		read: () => true,
@@ -37,10 +37,10 @@ export const Quotas: CollectionConfig = {
 	],
 
 	labels: {
-		plural: 'Configuração de Quotas',
-		singular: 'Quota a Pagamento',
+		plural: 'Configuração de Produtos',
+		singular: 'Produto',
 	},
 
-	slug: 'quotas',
+	slug: 'products',
 
 };

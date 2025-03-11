@@ -278,8 +278,8 @@ export const Users: CollectionConfig = {
 								{
 									hasMany: true,
 									label: 'Quotas associadas a esta transação',
-									name: 'associated_quotas',
-									relationTo: 'quotas',
+									name: 'associated_products',
+									relationTo: 'products',
 									type: 'relationship',
 								},
 								{

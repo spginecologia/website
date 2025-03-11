@@ -1,7 +1,7 @@
 /* * */
 
-import { payloadGetActiveQuotas } from '@/scripts/payload-get-active-quotas';
-import { stripeGetBalanceStatus } from '@/scripts/stripe-get-balance-status';
+import { payloadGetActiveProducts } from '@/scripts/payload-get-active-products';
+import { type ProductStatus } from '@/types/payments';
 import payloadConfig from '@payload-config';
 import { getPayload } from 'payload';
 
@@ -25,34 +25,43 @@ export async function GET(request: Request) {
 		// Get all active quotas. This will be the base upon which
 		// past payments will be checked against.
 
-		// const allActiveQuotas = await payloadGetActiveQuotas();
+		const allActiveProducts = await payloadGetActiveProducts();
 
-		//
-		// Extract all previously purchased quotas from the user object
-
-		// const previouslyPurchasedQuotas = currentUser.user.transactions?.flatMap((invoice) => {
-		// 	return invoice.associated_quotas?.map((paidQuota) => {
-		// 		if (typeof paidQuota !== 'string') {
-		// 			return paidQuota.id;
-		// 		}
-		// 	});
-		// });
+		const userTransactions = currentUser.user.transactions;
 
 		//
 		// Build an array of Purchases
 
-		// console.log('previouslyPurchasedQuotas', previouslyPurchasedQuotas);
+		const result: ProductStatus[] = allActiveProducts.map((productData) => {
+			// Check if the current product was purchased
+			const wasCurrentProductPurchased = userTransactions?.some((transactionData) => {
+				const matchesCurrentProductId = transactionData.associated_products?.some(associatedProduct => typeof associatedProduct === 'object' && associatedProduct.id === productData.id);
+				const transactionIsOfTypeInvoice = transactionData.doc_type === 'invoice';
+				return matchesCurrentProductId && transactionIsOfTypeInvoice;
+			});
+			// Check if the current product was refunded
+			const wasCurrentProductRefunded = userTransactions?.some((transactionData) => {
+				const matchesCurrentProductId = transactionData.associated_products?.some(associatedProduct => typeof associatedProduct === 'object' && associatedProduct.id === productData.id);
+				const transactionIsOfTypeCreditNote = transactionData.doc_type === 'credit_note';
+				return matchesCurrentProductId && transactionIsOfTypeCreditNote;
+			});
+			// Set the status of the current product
+			let currentStatus: ProductStatus['status'] = 'unpaid';
+			if (wasCurrentProductPurchased) currentStatus = 'paid';
+			if (wasCurrentProductRefunded) currentStatus = 'refunded';
+			// Return the current product status
+			return {
+				amount: productData.amount,
+				id: productData.id,
+				status: currentStatus,
+				title: productData.title,
+			};
+		});
 
 		//
 		// Get balance status for current user
 
-		if ('stripe_id' in currentUser.user) {
-			const result = await stripeGetBalanceStatus(currentUser.user.stripe_id);
-			return Response.json(result);
-		}
-
-		console.error('No stripe_id property in user object');
-		return new Response(null, { status: 400 });
+		return Response.json(result);
 
 		//
 	}

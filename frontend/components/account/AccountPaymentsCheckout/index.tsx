@@ -3,7 +3,7 @@
 /* * */
 
 import { PaymentStatus } from '@/components/account/PaymentStatus';
-import { Purchase } from '@/types/payments';
+import { type ProductStatus } from '@/types/payments';
 import { Alert, Button, Space, Table, TableData, Text } from '@mantine/core';
 import { IconFlag3Filled } from '@tabler/icons-react';
 import { useTranslations } from 'next-intl';
@@ -23,7 +23,7 @@ export function AccountPaymentsCheckout() {
 	//
 	// B. Fetch data
 
-	const { data: balanceStatusData, error: balanceStatusError, isLoading: balanceStatusLoading } = useSWR<Purchase[]>('/api/account/payments/balance-status');
+	const { data: balanceStatusData, error: balanceStatusError, isLoading: balanceStatusLoading } = useSWR<ProductStatus[]>('/api/account/payments/balance-status');
 
 	//
 	// C. Transform data
@@ -31,8 +31,8 @@ export function AccountPaymentsCheckout() {
 	const tableData = useMemo<TableData>(() => {
 		const bodyData = balanceStatusData?.map((balanceItem) => {
 			return [
-				balanceItem.price_name,
-				t('table.body.amount', { value: balanceItem.amount / 100 }),
+				balanceItem.title,
+				t('table.body.amount', { value: balanceItem.amount }),
 				<PaymentStatus status={balanceItem.status} />,
 			];
 		});
