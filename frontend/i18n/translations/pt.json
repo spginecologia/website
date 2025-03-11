@@ -237,14 +237,14 @@
 				}
 			}
 		},
-		"AccountPaymentsInvoices": {
+		"AccountPaymentsTransactions": {
 			"error": "Erro ao carregar faturas",
 			"loading": "A carregar faturas...",
 			"no_data": "Nenhum Item Disponível",
 			"table": {
 				"head": {
-					"invoice_date": "Data de Emissão",
-					"invoice_number": "Nº Documento"
+					"doc_date": "Data de Emissão",
+					"doc_number": "Nº Documento"
 				}
 			}
 		},

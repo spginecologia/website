@@ -2,8 +2,7 @@
 
 /* * */
 
-import type { PayloadMeResponse } from '@/types/payload-api-response';
-
+import { type PayloadMeResponse } from '@/types/payload-api-response';
 import { Table, TableData, Text } from '@mantine/core';
 import { IconExternalLink } from '@tabler/icons-react';
 import { useTranslations } from 'next-intl';
@@ -14,13 +13,13 @@ import styles from './styles.module.css';
 
 /* * */
 
-export function AccountPaymentsInvoices() {
+export function AccountPaymentsTransactions() {
 	//
 
 	//
 	// A. Setup variables
 
-	const t = useTranslations('account.AccountPaymentsInvoices');
+	const t = useTranslations('account.AccountPaymentsTransactions');
 
 	//
 	// B. Fetch data
@@ -31,16 +30,16 @@ export function AccountPaymentsInvoices() {
 	// C. Transform data
 
 	const tableData = useMemo<TableData>(() => {
-		const bodyData = userData?.user?.invoices?.map((invoiceItem) => {
+		const bodyData = userData?.user?.transactions?.map((transactionItem) => {
 			return [
-				invoiceItem.invoice_number,
-				invoiceItem.invoice_date,
-				<a className={styles.openPdf} href={`/api/account/payments/get-invoice-pdf/${invoiceItem.invoice_id}`} target="_blank">Abrir PDF <IconExternalLink size={14} /></a>,
+				transactionItem.doc_number,
+				transactionItem.doc_date,
+				<a className={styles.openPdf} href={`/api/account/payments/get-transaction-pdf/${transactionItem.doc_id}`} target="_blank">Abrir PDF <IconExternalLink size={14} /></a>,
 			];
 		});
 		return {
 			body: bodyData || [],
-			head: [t('table.head.invoice_number'), t('table.head.invoice_date'), ''],
+			head: [t('table.head.doc_number'), t('table.head.doc_date'), ''],
 		};
 	}, [userData]);
 
