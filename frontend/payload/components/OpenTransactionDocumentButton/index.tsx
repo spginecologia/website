@@ -6,13 +6,13 @@ import { useField } from '@payloadcms/ui';
 
 /* * */
 
-export function OpenInvoiceButton({ path }) {
+export function OpenTransactionDocumentButton({ path }) {
 	//
 
 	//
 	// A. Fetch data
 
-	const { value: invoiceId } = useField({ path: path.replace('open_pdf', 'invoice_id') });
+	const { value: docId } = useField({ path: path.replace('open_pdf', 'doc_id') });
 
 	//
 	// B. Render components
@@ -20,7 +20,7 @@ export function OpenInvoiceButton({ path }) {
 	return (
 		<a
 			className="btn btn--size-medium btn--style-primary"
-			href={`/api/account/payments/get-invoice-pdf/${invoiceId}`}
+			href={`/api/account/payments/get-invoice-pdf/${docId}`}
 			style={{ textAlign: 'center' }}
 			target="_blank"
 		>

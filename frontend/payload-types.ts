@@ -441,13 +441,15 @@ export interface User {
   billing_postal_code?: string | null;
   billing_city?: string | null;
   stripe_id?: string | null;
-  invoices?:
+  transactions?:
     | {
-        invoice_number?: string | null;
-        invoice_date?: string | null;
-        invoice_id?: string | null;
-        invoice_system_time?: string | null;
-        paid_quotas?: (string | Quota)[] | null;
+        doc_type?: ('invoice' | 'credit_note') | null;
+        doc_date?: string | null;
+        doc_amount?: number | null;
+        doc_number?: string | null;
+        doc_id?: string | null;
+        doc_system_time?: string | null;
+        associated_quotas?: (string | Quota)[] | null;
         id?: string | null;
       }[]
     | null;
@@ -889,14 +891,16 @@ export interface UsersSelect<T extends boolean = true> {
   billing_postal_code?: T;
   billing_city?: T;
   stripe_id?: T;
-  invoices?:
+  transactions?:
     | T
     | {
-        invoice_number?: T;
-        invoice_date?: T;
-        invoice_id?: T;
-        invoice_system_time?: T;
-        paid_quotas?: T;
+        doc_type?: T;
+        doc_date?: T;
+        doc_amount?: T;
+        doc_number?: T;
+        doc_id?: T;
+        doc_system_time?: T;
+        associated_quotas?: T;
         id?: T;
       };
   account_status?: T;

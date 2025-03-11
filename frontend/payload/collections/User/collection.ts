@@ -234,23 +234,42 @@ export const Users: CollectionConfig = {
 								{
 									fields: [
 										{
-											label: 'Nº da Fatura',
-											name: 'invoice_number',
-											type: 'text',
+											label: 'Tipo de Documento',
+											name: 'doc_type',
+											options: [
+												{ label: 'Fatura', value: 'invoice' },
+												{ label: 'Nota de Crédito', value: 'credit_note' },
+											],
+											type: 'select',
 										},
 										{
 											label: 'Data de Emissão',
-											name: 'invoice_date',
+											name: 'doc_date',
+											type: 'text',
+										},
+										{
+											label: 'Valor',
+											name: 'doc_amount',
+											type: 'number',
+										},
+									],
+									type: 'row',
+								},
+								{
+									fields: [
+										{
+											label: 'Nº do Documento',
+											name: 'doc_number',
 											type: 'text',
 										},
 										{
 											label: 'ID de Sistema',
-											name: 'invoice_id',
+											name: 'doc_id',
 											type: 'text',
 										},
 										{
 											label: 'Hora de Sistema',
-											name: 'invoice_system_time',
+											name: 'doc_system_time',
 											type: 'text',
 										},
 									],
@@ -258,23 +277,23 @@ export const Users: CollectionConfig = {
 								},
 								{
 									hasMany: true,
-									label: 'Quotas pagas com esta fatura',
-									name: 'paid_quotas',
+									label: 'Quotas associadas a esta transação',
+									name: 'associated_quotas',
 									relationTo: 'quotas',
 									type: 'relationship',
 								},
 								{
 									admin: {
 										components: {
-											Field: '@/payload/components/OpenInvoiceButton/index#OpenInvoiceButton',
+											Field: '@/payload/components/OpenTransactionDocumentButton/index#OpenTransactionDocumentButton',
 										},
 									},
 									name: 'open_pdf',
 									type: 'ui',
 								},
 							],
-							label: 'Faturas',
-							name: 'invoices',
+							label: 'Transações',
+							name: 'transactions',
 							type: 'array',
 						},
 					],
