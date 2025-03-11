@@ -26,6 +26,7 @@ import { VideoFiles } from '@/payload/collections/VideoFile/collection';
 /* * */
 
 import { LegalDocuments } from '@/payload/globals/LegalDocuments/global';
+import { QuotaProducts } from '@/payload/globals/QuotaProducts/global';
 import { SocialBodies } from '@/payload/globals/SocialBodies/global';
 
 /* * */
@@ -67,6 +68,7 @@ export default buildConfig({
 
 	// Define and configure your globals in this array
 	globals: [
+		QuotaProducts,
 		LegalDocuments,
 		SocialBodies,
 	],

@@ -1,8 +1,7 @@
 /* * */
 
-import type { GlobalConfig } from 'payload';
-
 import { fileOrUrlFieldSet } from '@/payload/fields/file-or-url';
+import { type GlobalConfig } from 'payload';
 
 /* * */
 

@@ -109,10 +109,12 @@ export interface Config {
     defaultIDType: string;
   };
   globals: {
+    'quota-products': QuotaProduct;
     'legal-documents': LegalDocument;
     'social-bodies': SocialBody;
   };
   globalsSelect: {
+    'quota-products': QuotaProductsSelect<false> | QuotaProductsSelect<true>;
     'legal-documents': LegalDocumentsSelect<false> | LegalDocumentsSelect<true>;
     'social-bodies': SocialBodiesSelect<false> | SocialBodiesSelect<true>;
   };
@@ -952,6 +954,23 @@ export interface PayloadMigrationsSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "quota-products".
+ */
+export interface QuotaProduct {
+  id: string;
+  docs?:
+    | {
+        title: string;
+        amount: number;
+        is_enabled: boolean;
+        id?: string | null;
+      }[]
+    | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "legal-documents".
  */
 export interface LegalDocument {
@@ -1016,6 +1035,23 @@ export interface SocialBody {
     | null;
   updatedAt?: string | null;
   createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "quota-products_select".
+ */
+export interface QuotaProductsSelect<T extends boolean = true> {
+  docs?:
+    | T
+    | {
+        title?: T;
+        amount?: T;
+        is_enabled?: T;
+        id?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
