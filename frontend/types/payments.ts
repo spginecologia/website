@@ -10,7 +10,7 @@ export interface Purchase {
 	vendus_invoice_id?: string
 }
 
-export interface ProductStatus {
+export interface BalanceStatus {
 	amount: number
 	id: string
 	status: 'paid' | 'refunded'	| 'unpaid'
