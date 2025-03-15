@@ -23,9 +23,9 @@ export async function GET(request: Request) {
 		//
 		// Get balance status for current user
 
-		const result = await payloadGetBalanceStatus(currentUser.user);
+		const balanceStatus = await payloadGetBalanceStatus(currentUser.user);
 
-		return Response.json(result);
+		return Response.json(balanceStatus);
 
 		//
 	}

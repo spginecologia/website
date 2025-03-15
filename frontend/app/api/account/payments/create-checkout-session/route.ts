@@ -1,5 +1,6 @@
 /* * */
 
+import { payloadGetBalanceStatus } from '@/scripts/payload-get-balance-status';
 import { stripeGetBalanceStatus } from '@/scripts/stripe-get-balance-status';
 import { STRIPEAPI } from '@/services/STRIPEAPI';
 import { Purchase } from '@/types/payments';
@@ -18,23 +19,17 @@ export async function POST(request: Request) {
 		// Get the current logged in user
 
 		const currentUser = await payload.auth({ headers: request.headers });
-		if (!currentUser || !currentUser.user) return new Response(null, { status: 401 });
+		if (!currentUser || !currentUser.user || currentUser.user.collection !== 'users') {
+			return new Response(null, { status: 401 });
+		}
 
 		//
 		// Get balance status for current user
 
-		let balanceStatus: Purchase[] = [];
-
-		if ('stripe_id' in currentUser.user) {
-			balanceStatus = await stripeGetBalanceStatus(currentUser.user.stripe_id);
-		}
-		else {
-			console.error('No stripe_id property in user object');
-			return Response.error();
-		}
+		const balanceStatus = await payloadGetBalanceStatus(currentUser.user);
 
 		//
-		// Setup the customer creation settings
+		// Setup the customer creation settings for Stripe
 
 		const customerOptions: {
 			customer?: string
@@ -82,7 +77,7 @@ export async function POST(request: Request) {
 			automatic_tax: { enabled: true },
 			cancel_url: `${request.headers.get('origin')}/account?canceled=true`,
 			client_reference_id: currentUser.user?.id,
-			line_items: unpaidItems.map(purchaseItem => ({ price: purchaseItem.price_id, quantity: 1 })),
+			line_items: unpaidItems.map(purchaseItem => ({ price: purchaseItem.amount, quantity: 1 })),
 			mode: 'payment',
 			success_url: `${request.headers.get('origin')}/account?success=true`,
 			...customerOptions,
