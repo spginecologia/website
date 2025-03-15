@@ -20,6 +20,7 @@
 		"@mantine/notifications": "7.17.1",
 		"@marsidev/react-turnstile": "1.1.0",
 		"@payloadcms/db-mongodb": "3.28.1",
+		"@payloadcms/email-nodemailer": "3.28.1",
 		"@payloadcms/next": "3.28.1",
 		"@payloadcms/richtext-lexical": "3.28.1",
 		"@payloadcms/storage-s3": "3.28.1",

@@ -1,6 +1,7 @@
 /* * */
 
 import { mongooseAdapter } from '@payloadcms/db-mongodb';
+import { nodemailerAdapter } from '@payloadcms/email-nodemailer';
 import { lexicalEditor } from '@payloadcms/richtext-lexical';
 import { s3Storage } from '@payloadcms/storage-s3';
 import { buildConfig } from 'payload';
@@ -67,6 +68,21 @@ export default buildConfig({
 	// pass your editor here.
 	editor: lexicalEditor(),
 
+	// If you'd like to send emails from Payload,
+	// pass your email configuration here.
+	email: nodemailerAdapter({
+		defaultFromAddress: process.env.EMAIL_FROM_ADDRESS ?? '',
+		defaultFromName: process.env.EMAIL_FROM_NAME ?? '',
+		transportOptions: {
+			auth: {
+				pass: process.env.EMAIL_SERVER_PASSWORD,
+				user: process.env.EMAIL_SERVER_USER,
+			},
+			host: process.env.EMAIL_SERVER_HOST,
+			port: process.env.EMAIL_SERVER_PORT,
+		},
+	}),
+
 	// Define and configure your globals in this array
 	globals: [
 		LegalDocuments,
@@ -101,6 +117,7 @@ export default buildConfig({
 	// make sure to install it and pass it to the config.
 	// This is optional - if you don't need to do these things,
 	// you don't need it!
+
 	sharp,
 
 });
