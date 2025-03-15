@@ -654,6 +654,17 @@
 	"none-2": {},
 	"none-3": {},
 	"none-4": {},
+	"privacy": {
+		"PrivacyMain": {
+			"paragraph_1": "Este documento contém informações sobre como são coletados, registados e utilizados dados dos visitantes do site da SPG. Se tiver perguntas adicionais ou precisar de mais informações sobre a nossa Política de Privacidade, não hesite em contactar-nos.",
+			"paragraph_2": "Este site utiliza cookies para permitir a estabilidade e a melhoria de desempenho das várias funcionalidades do site. As informações recolhidas de cada visitante são genéricas e a SPG apenas consegue visualizar o seu valor agregado. Pode consultar a Política de Privacidade do nosso fornecedor de métricas aqui: https://automattic.com/cookies/",
+			"paragraph_3": "A nossa newsletter periódica é enviada apenas aos subscritores que introduziram o seu email no website. Utilizamos o MailChimp para o envio da newsletter. São recolhidos dados sobre os utilizadores subscritos, (ex.: se ou quando abriu o email), sendo que a SPG consegue visualizar apenas o agregado. A SPG não irá utilizar a lista de contactos para outros fins a não ser o envio periódico de notícias ou avisos que considere relevantes para os seus utilizadores. Se pretender cancelar a subscrição pode clicar no link no fim de cada email, ou entrar em contacto connosco. Pode consultar a Política de Privacidade do MailChimp aqui: https://mailchimp.com/legal/privacy/",
+			"subtitle_1": "Na SPG valorizamos a privacidade dos nossos sócios e visitantes.",
+			"subtitle_2": "Cookies",
+			"subtitle_3": "Newsletter",
+			"title": "Privacidade"
+		}
+	},
 	"publications": {
 		"PublicationsList": {
 			"title": "Publicações Científicas"
