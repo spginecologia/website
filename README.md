@@ -1,6 +1,6 @@
 # website
 
-1. Run `docker compose -f compose.local.yml up -d --build --force-recreate --remove-orphans --pull=always` para servid BD
+1. Run `docker compose -f compose.local.yml up -d --build --force-recreate --remove-orphans --pull=always` to serve BD
 
 2. `cd frontend`
 
