@@ -5,11 +5,11 @@
 import { ForgotPasswordDefault } from '@/payload/collections/ForgotPassword/default';
 import { ForgotPasswordValidation } from '@/payload/collections/ForgotPassword/validation';
 import { navigationGetRedirectParam } from '@/utils/navigation-handle-redirect-param';
-import { Alert, Button, Loader, Paper, Space, Text, TextInput, Title } from '@mantine/core';
+import { Alert, Anchor, Button, Loader, Paper, Space, Text, TextInput, Title } from '@mantine/core';
 import { useForm, zodResolver } from '@mantine/form';
 import { IconMailFast } from '@tabler/icons-react';
 import { useTranslations } from 'next-intl';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import styles from './styles.module.css';
 
@@ -42,12 +42,18 @@ export function ForgotPasswordForm() {
 	//
 	// C. Handle actions
 
+	useEffect(() => {
+		if (typeof window === 'undefined') return;
+		const username = new URLSearchParams(window.location.search).get('username');
+		if (username) form.setFieldValue('username', username);
+	}, []);
+
 	const handleForgotPassword = async () => {
 		try {
 			setIsLoading(true);
 			setIsSuccess(false);
 			setIsError(false);
-			const response = await fetch('/api/account/forgot', {
+			const response = await fetch('/api/auth/forgot', {
 				body: JSON.stringify({
 					redirect: navigationGetRedirectParam(),
 					username: form.values.username,
@@ -103,6 +109,8 @@ export function ForgotPasswordForm() {
 					<Text variant="error">{t('error.message')}</Text>
 				</>
 			)}
+			<Space h={5} />
+			<Anchor href="/login" id={styles.anchor} variant="link">{t('back_to_login')}</Anchor>
 		</Paper>
 	);
 }

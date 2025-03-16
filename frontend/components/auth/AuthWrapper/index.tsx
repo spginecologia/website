@@ -2,7 +2,7 @@
 
 /* * */
 
-import { ForgotPasswordForm } from '@/components/auth/ForgotPasswordForm';
+import { LoginSignupAd } from '@/components/auth/LoginSignupAd';
 import { ContentWrapper } from '@/components/common/ContentWrapper';
 import { Section } from '@/components/common/Section';
 import { type PayloadMeResponse } from '@/types/payload-api-response';
@@ -14,7 +14,7 @@ import styles from './styles.module.css';
 
 /* * */
 
-export function ForgotPasswordMain() {
+export function AuthWrapper({ children }) {
 	//
 
 	//
@@ -41,6 +41,7 @@ export function ForgotPasswordMain() {
 				<Section withTopSpacer="transparent">
 					<div className={styles.grid}>
 						<Skeleton height={350} />
+						<div />
 					</div>
 				</Section>
 			</ContentWrapper>
@@ -51,7 +52,8 @@ export function ForgotPasswordMain() {
 		<ContentWrapper className={styles.contentWrapperOverride}>
 			<Section withTopSpacer="transparent">
 				<div className={styles.grid}>
-					<ForgotPasswordForm />
+					{children}
+					<LoginSignupAd />
 				</div>
 			</Section>
 		</ContentWrapper>

@@ -43,7 +43,7 @@ export function LoginForm() {
 	const handleLogin = async () => {
 		try {
 			setIsLoading(true);
-			const response = await fetch('/api/account/login', {
+			const response = await fetch('/api/auth/login', {
 				body: JSON.stringify({
 					password: form.values.password,
 					username: form.values.username,
@@ -57,7 +57,7 @@ export function LoginForm() {
 				throw new Error(`Failed to login. Status: ${response.status}`);
 			}
 			console.log('Login successful. Redirecting to account page...');
-			navigationHandleRedirectParam({ fallback: '/account' });
+			navigationHandleRedirectParam('/account');
 		}
 		catch (error) {
 			console.log(error.message);
@@ -86,7 +86,7 @@ export function LoginForm() {
 				</>
 			)}
 			<Space h={5} />
-			<Anchor href="/login/forgot" id={styles.resetPassword} variant="link">{t('reset_password.label')}</Anchor>
+			<Anchor href={`/forgot?username=${form.values.username}`} id={styles.anchor} variant="link">{t('reset_password')}</Anchor>
 		</Paper>
 	);
 }

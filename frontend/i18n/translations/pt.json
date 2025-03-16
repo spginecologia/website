@@ -477,6 +477,7 @@
 			"message": "Para aceder a este conteúdo terá de fazer login com as suas credenciais SPG."
 		},
 		"ForgotPasswordForm": {
+			"back_to_login": "Voltar ao Login",
 			"error": {
 				"message": "Login falhou. Email ou password incorretos.",
 				"retry": "Tentar Novamente"
@@ -504,9 +505,7 @@
 				"label": "Password",
 				"placeholder": "Introduza a sua password"
 			},
-			"reset_password": {
-				"label": "Recuperar Password"
-			},
+			"reset_password": "Recuperar Password",
 			"submit": {
 				"label": "Iniciar Sessão"
 			},

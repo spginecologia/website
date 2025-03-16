@@ -1,6 +1,6 @@
 /* * */
 
 export const LoginDefault = {
-	email: '',
 	password: '',
+	username: '',
 };
