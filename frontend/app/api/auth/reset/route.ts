@@ -13,17 +13,19 @@ export async function POST(request: Request) {
 		const payload = await getPayload({ config: payloadConfig });
 
 		//
-		// Extract the password and password confirmation fields from the request body
+		// Extract the password, password confirmation and reset token fields
+		// from the request body, and validate their presence.
 
 		const requestBody = await request.json();
 
 		const newPassword = requestBody.password;
+		if (!newPassword) throw new Error('Password not provided.');
+
 		const newPasswordConfirmation = requestBody.password_confirmation;
+		if (!newPasswordConfirmation) throw new Error('Password confirmation not provided.');
 
 		const resetToken = requestBody.token;
 		if (!resetToken) throw new Error('Token not provided.');
-
-		console.log('Token:', resetToken);
 
 		//
 		// Check if the password and password confirmation fields match
@@ -38,9 +40,9 @@ export async function POST(request: Request) {
 		}
 
 		//
-		// Now, using the found user object, we can request an email with
-		// a reset pasword token to be sent to the user using the
-		// Payload API forgot password method.
+		// Reset the password for the user using the reset password token
+		// and the new password value. The reset password method will
+		// return the user object with the updated password.
 
 		const resetResult = await payload.resetPassword({
 			collection: 'users',
@@ -53,8 +55,8 @@ export async function POST(request: Request) {
 		});
 
 		//
-		// Now, using the found user object, we can login the user using the
-		// Payload API login method. This method will return the user object
+		// Now, using the result object, we can login the user using the
+		// regular Payload API login method. This method will return the user object
 		// with the user's data and the auth token. Pass the request object
 		// to the login method to automatically set the auth cookie.
 

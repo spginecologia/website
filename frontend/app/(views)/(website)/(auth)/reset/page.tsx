@@ -1,9 +1,9 @@
 /* * */
 
-import { ResetPasswordMain } from '@/components/auth/ResetPasswordMain';
+import { ResetPasswordForm } from '@/components/auth/ResetPasswordForm';
 
 /* * */
 
 export default function Page() {
-	return <ResetPasswordMain />;
+	return <ResetPasswordForm />;
 }

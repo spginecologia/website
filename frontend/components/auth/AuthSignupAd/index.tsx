@@ -9,13 +9,13 @@ import styles from './styles.module.css';
 
 /* * */
 
-export function LoginSignupAd() {
+export function AuthSignupAd() {
 	//
 
 	//
 	// A. Setup variables
 
-	const t = useTranslations('auth.LoginSignupAd');
+	const t = useTranslations('auth.AuthSignupAd');
 
 	//
 	// B. Render components

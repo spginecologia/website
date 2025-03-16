@@ -40,17 +40,17 @@ export function ResetPasswordForm() {
 	});
 
 	//
-	// C. Handle actions
+	// C. Transform data
 
 	const resetToken = useMemo(() => {
 		const urlParams = new URLSearchParams(window.location.search);
 		const token = urlParams.get('token');
-		if (!token) window.location.replace('/account');
+		if (!token) window.location.replace('/forgot');
 		return token;
 	}, []);
 
 	//
-	// C. Handle actions
+	// D. Handle actions
 
 	const handleResetPassword = async () => {
 		try {
@@ -80,7 +80,7 @@ export function ResetPasswordForm() {
 	};
 
 	//
-	// D. Render components
+	// E. Render components
 
 	return (
 		<Paper className={styles.container} component="form" onSubmit={form.onSubmit(handleResetPassword)}>

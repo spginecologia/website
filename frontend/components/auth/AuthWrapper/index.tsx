@@ -2,7 +2,7 @@
 
 /* * */
 
-import { LoginSignupAd } from '@/components/auth/LoginSignupAd';
+import { AuthSignupAd } from '@/components/auth/AuthSignupAd';
 import { ContentWrapper } from '@/components/common/ContentWrapper';
 import { Section } from '@/components/common/Section';
 import { type PayloadMeResponse } from '@/types/payload-api-response';
@@ -53,7 +53,7 @@ export function AuthWrapper({ children }) {
 			<Section withTopSpacer="transparent">
 				<div className={styles.grid}>
 					{children}
-					<LoginSignupAd />
+					<AuthSignupAd />
 				</div>
 			</Section>
 		</ContentWrapper>
