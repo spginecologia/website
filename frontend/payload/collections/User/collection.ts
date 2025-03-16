@@ -1,7 +1,8 @@
 /* * */
 
-import { afterChangeUser } from '@/payload/collections/User/hooks';
+import { afterChangeUser } from '@/payload/collections/User/actions';
 import { UserOptions } from '@/payload/collections/User/options';
+import { getNotificationActionTemplate } from '@/payload/email/notification-action.template';
 import { validateTaxId } from '@/utils/validate-tax-id';
 import { type CollectionConfig } from 'payload';
 
@@ -22,12 +23,28 @@ export const Users: CollectionConfig = {
 	},
 
 	auth: {
+
 		cookies: {
 			domain: process.env.NEXT_PUBLIC_COOKIE_DOMAIN,
 			sameSite: 'Strict',
 			secure: true,
 		},
+
+		forgotPassword: {
+			generateEmailHTML: (params) => {
+				if (!params) throw new Error('Params are required to generate email HTML.');
+				return getNotificationActionTemplate({
+					action_title: 'Definir Nova Password',
+					action_url: `https://yourfrontend.com/reset-password?token=${params.token}`,
+					content: 'Clique no botão abaixo para redefinir a sua password.',
+					title: 'Escolha uma nova Password',
+				});
+			},
+			generateEmailSubject: () => 'Recuperação de Password SPG',
+		},
+
 		tokenExpiration: 3600 * 24 * 30, // 30 days
+
 	},
 
 	fields: [
