@@ -1,6 +1,6 @@
 /* * */
 
-import { NotificationData, notifications } from '@mantine/notifications';
+import { type NotificationData, notifications } from '@mantine/notifications';
 import { IconCheck, IconX } from '@tabler/icons-react';
 import React from 'react';
 

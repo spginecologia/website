@@ -54,6 +54,18 @@ export function AuthWrapper({ children, sidebar }: Props) {
 		);
 	}
 
+	if (!sidebar) {
+		return (
+			<ContentWrapper className={styles.contentWrapperOverride}>
+				<Section withTopSpacer="transparent">
+					<div className={styles.grid} data-full-width>
+						{children}
+					</div>
+				</Section>
+			</ContentWrapper>
+		);
+	}
+
 	return (
 		<ContentWrapper className={styles.contentWrapperOverride}>
 			<Section withTopSpacer="transparent">

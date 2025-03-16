@@ -1,7 +1,7 @@
 /* * */
 
-import type { User } from '@/payload-types';
-import type { PayloadRequest } from 'payload';
+import { type User } from '@/payload-types';
+import { type PayloadRequest } from 'payload';
 
 /* * */
 

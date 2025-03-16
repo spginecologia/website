@@ -1,14 +1,9 @@
 /* * */
 
 import { AuthWrapper } from '@/components/auth/AuthWrapper';
-import { SignupAd } from '@/components/auth/SignupAd';
 
 /* * */
 
 export default function Layout({ children }) {
-	return (
-		<AuthWrapper sidebar={<SignupAd />}>
-			{children}
-		</AuthWrapper>
-	);
+	return <AuthWrapper>{children}</AuthWrapper>;
 }

@@ -1,11 +1,9 @@
 /* * */
 
-import { type User } from '@/payload-types';
-import { getNotificationActionTemplate } from '@/payload/email/notification-action.template';
-import { navigationGetUrlWithRedirectParam } from '@/utils/navigation-handle-redirect-param';
-import { validateTaxId } from '@/utils/validate-tax-id';
-import payloadConfig from '@payload-config';
-import { getPayload } from 'payload';
+import { type ForgotPasswordResponse } from '@/payload/collections/ForgotPassword/types';
+import { getAnonymizedEmail } from '@/utils/get-anonymized-email';
+import { payloadGetUser } from '@/utils/payload-get-user';
+import { payloadSendResetPasswordEmail } from '@/utils/payload-send-reset-password-email';
 
 /* * */
 
@@ -13,85 +11,38 @@ export async function POST(request: Request) {
 	try {
 		//
 
-		const payload = await getPayload({ config: payloadConfig });
-
-		//
-		// Extract the username (email or NIF) and redirect param from the request body
-
 		const requestBody = await request.json();
 
-		const emailOrTaxId = requestBody.username;
-		const redirectParam = requestBody.redirect;
-
 		//
-		// Check if the user is trying to login with Tax ID instead of email.
-		// If the user is trying to login with Tax ID, we need to find
-		// the email associated with that Tax ID first.
+		// If no user is found, send a 200 response.
+		// If the user is found but has no email, send a 200 response but with
+		// a flag indicating that the user has no email.
 
-		const isTaxId = validateTaxId(emailOrTaxId, false);
+		const foundUser = await payloadGetUser(requestBody.username);
 
-		let foundUser: User;
-
-		if (isTaxId) {
-			const result = await payload.find({
-				collection: 'users',
-				where: { tax_id: { equals: emailOrTaxId } },
-			});
-			if (result.docs.length === 0) {
-				throw new Error(`User not found for given Tax ID: ${emailOrTaxId}`);
-			}
-			foundUser = result.docs[0];
+		if (!foundUser) {
+			const response: ForgotPasswordResponse = { has_email: false, user_found: false };
+			return new Response(JSON.stringify(response), { status: 200 });
 		}
-		else {
-			const result = await payload.find({
-				collection: 'users',
-				where: { email: { equals: emailOrTaxId } },
-			});
-			if (result.docs.length === 0) {
-				throw new Error(`User not found for given email: ${emailOrTaxId}`);
-			}
-			foundUser = result.docs[0];
+
+		if (!foundUser.email) {
+			const response: ForgotPasswordResponse = { has_email: false, user_found: true };
+			return new Response(JSON.stringify(response), { status: 200 });
 		}
 
 		//
-		// Now, using the found user object, we can request an email with
-		// a reset pasword token to be sent to the user using the
-		// Payload API forgot password method.
+		// If the user is found and has an email, we can now request an email with
+		// a reset pasword token to be sent to the user using the Payload API.
 
-		const tokenresult = await payload.forgotPassword({
-			collection: 'users',
-			data: {
-				email: foundUser.email,
-			},
-			disableEmail: true, // Do Not send the email
-			req: request,
-		});
+		await payloadSendResetPasswordEmail(foundUser, requestBody.redirect);
 
 		//
-		// Send an email to the user with the reset password token.
+		// Return a 200 response with the user's email, but anonymized.
 
-		const actionUrl = navigationGetUrlWithRedirectParam(`${process.env.NEXT_PUBLIC_URL}/reset?token=${tokenresult}`, redirectParam);
+		const anonymizedEmail = getAnonymizedEmail(foundUser.email);
 
-		await payload.sendEmail({
-			html: getNotificationActionTemplate({
-				action_title: 'Definir Nova Password',
-				action_url: actionUrl,
-				content: 'Clique no botão abaixo para redefinir a sua password.',
-				title: 'Escolha uma nova Password',
-			}),
-			subject: 'Recuperação de Password SPG',
-			to: foundUser.email,
-		});
-
-		//
-		// Ensure we have a valid login result and build the response object.
-		// Set the auth token as a cookie in the response object.
-
-		if (!tokenresult) {
-			throw new Error('Reset password failed due to missing token.');
-		}
-
-		return new Response(JSON.stringify({ status: 'success' }), { status: 200 });
+		const response: ForgotPasswordResponse = { has_email: anonymizedEmail, user_found: true };
+		return new Response(JSON.stringify(response), { status: 200 });
 
 		//
 	}

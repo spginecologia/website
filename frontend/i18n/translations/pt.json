@@ -477,24 +477,42 @@
 			"message": "Para aceder a este conteúdo terá de fazer login com as suas credenciais SPG."
 		},
 		"ForgotPasswordForm": {
-			"back_to_login": "Voltar ao Login",
 			"error": {
 				"message": "Login falhou. Email ou password incorretos.",
 				"retry": "Tentar Novamente"
 			},
+			"fields": {
+				"username": {
+					"label": "NIF ou Email",
+					"placeholder": "Introduza o seu NIF ou Email"
+				}
+			},
+			"status": {
+				"has_user_has_email": {
+					"alert": {
+						"message": "Este é o email que temos associado à sua ficha de sócio. Enviámos uma mensagem com instruções para redefenir a sua password. Caso não reconheça este email, por favor contacte o Secretariado SPG.",
+						"title": "Encontrámos uma conta associada a este NIF"
+					}
+				},
+				"has_user_no_email": {
+					"alert": {
+						"message": "A conta associada a este NIF não tem email disponível. Por favor contacte o Secretariado SPG para atualizar os seus dados.",
+						"title": "Encontrámos uma conta associada a este NIF"
+					}
+				},
+				"no_user": {
+					"alert": {
+						"action": "Iniciar Candidatura",
+						"message": "Clique em continuar para criar a sua conta SPG.",
+						"title": "Nenhuma conta encontrada"
+					}
+				}
+			},
 			"submit": {
-				"label": "Iniciar Sessão"
+				"label": "Verificar"
 			},
-			"subtitle": "Introduza o seu email ou NIF. Irá receber um email com instruções para a recuperação da sua password.",
-			"success": {
-				"message": "As instruções foram enviadas para o seu email. Por favor verifique a sua caixa de entrada.",
-				"title": "Pedido enviado"
-			},
-			"title": "Recuperar Password",
-			"username": {
-				"label": "Email ou NIF",
-				"placeholder": "Introduza o seu email ou NIF"
-			}
+			"subtitle": "Antes de avançar, por favor indique o seu NIF ou Email para verificar se existe uma Conta SPG associada a esses dados.",
+			"title": "Verificação de Conta"
 		},
 		"LoginForm": {
 			"error": {

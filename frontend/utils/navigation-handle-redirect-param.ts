@@ -54,10 +54,10 @@ export function navigationGetRedirectParam(): string {
  * @param redirectTo The redirect param value.
  * @returns The URL with the redirect parameter added.
  */
-export function navigationGetUrlWithRedirectParam(url: string, redirectTo: string): string {
+export function navigationGetUrlWithRedirectParam(url: string, redirectTo?: string): string {
 	//
 
-	if (!url) return url;
+	if (!redirectTo) return url;
 
 	const urlObject = new URL(url);
 
