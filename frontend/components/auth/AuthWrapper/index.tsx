@@ -2,7 +2,6 @@
 
 /* * */
 
-import { AuthSignupAd } from '@/components/auth/AuthSignupAd';
 import { ContentWrapper } from '@/components/common/ContentWrapper';
 import { Section } from '@/components/common/Section';
 import { type PayloadMeResponse } from '@/types/payload-api-response';
@@ -14,7 +13,14 @@ import styles from './styles.module.css';
 
 /* * */
 
-export function AuthWrapper({ children }) {
+interface Props {
+	children: React.ReactNode
+	sidebar?: React.ReactNode
+}
+
+/* * */
+
+export function AuthWrapper({ children, sidebar }: Props) {
 	//
 
 	//
@@ -53,7 +59,7 @@ export function AuthWrapper({ children }) {
 			<Section withTopSpacer="transparent">
 				<div className={styles.grid}>
 					{children}
-					<AuthSignupAd />
+					{sidebar}
 				</div>
 			</Section>
 		</ContentWrapper>
