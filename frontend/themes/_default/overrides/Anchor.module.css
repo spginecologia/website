@@ -1,0 +1,17 @@
+/* * */
+/* VARIANT / LINK */
+
+.root {
+	padding: 0;
+	margin: 0;
+	font-size: 14px;
+	font-weight: var(--font-weight-semibold);
+	color: var(--color-brand-primary-100);
+	text-transform: uppercase;
+	border: none;
+	border-bottom: 2px solid transparent;
+}
+
+.root:hover {
+	border-bottom-color: inherit;
+}

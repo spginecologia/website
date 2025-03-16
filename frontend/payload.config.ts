@@ -113,6 +113,9 @@ export default buildConfig({
 	// Your Payload secret - should be a complex and secure string, unguessable
 	secret: process.env.PAYLOAD_SECRET || 'placeholder',
 
+	// The URL where Payload is hosted
+	serverURL: process.env.NEXT_PUBLIC_URL || 'http://localhost:3005',
+
 	// If you want to resize images, crop, set focal point, etc.
 	// make sure to install it and pass it to the config.
 	// This is optional - if you don't need to do these things,

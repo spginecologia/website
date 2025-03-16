@@ -2,7 +2,7 @@
 
 /* * */
 
-import type { PayloadMeResponse } from '@/types/payload-api-response';
+import { type PayloadMeResponse } from '@/types/payload-api-response';
 
 import { Button, Image, Skeleton, Text } from '@mantine/core';
 import { useTranslations } from 'next-intl';

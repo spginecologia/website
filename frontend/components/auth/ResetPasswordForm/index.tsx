@@ -2,11 +2,11 @@
 
 /* * */
 
-import { SignInDefault } from '@/payload/collections/SignIn/default';
-import { SignInValidation } from '@/payload/collections/SignIn/validation';
-import { navigationHandleRedirectParam } from '@/utils/navigation-handle-redirect-param';
-import { Anchor, Button, Loader, Paper, Space, Text, TextInput, Title } from '@mantine/core';
+import { ResetPasswordDefault } from '@/payload/collections/ResetPassword/default';
+import { ResetPasswordValidation } from '@/payload/collections/ResetPassword/validation';
+import { Alert, Button, Loader, Paper, Space, Text, TextInput, Title } from '@mantine/core';
 import { useForm, zodResolver } from '@mantine/form';
+import { IconMailFast } from '@tabler/icons-react';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 
@@ -14,15 +14,16 @@ import styles from './styles.module.css';
 
 /* * */
 
-export function LoginForm() {
+export function ResetPasswordForm() {
 	//
 
 	//
 	// A. Setup variables
 
-	const t = useTranslations('auth.LoginForm');
+	const t = useTranslations('auth.ResetPasswordForm');
 
 	const [isLoading, setIsLoading] = useState(false);
+	const [isSuccess, setIsSuccess] = useState(false);
 	const [isError, setIsError] = useState(false);
 
 	//
@@ -30,23 +31,24 @@ export function LoginForm() {
 
 	const form = useForm({
 		clearInputErrorOnChange: true,
-		initialValues: SignInDefault,
+		initialValues: ResetPasswordDefault,
 		onValuesChange: () => {
 			setIsError(false);
 		},
-		validate: zodResolver(SignInValidation),
+		validate: zodResolver(ResetPasswordValidation),
 	});
 
 	//
 	// C. Handle actions
 
-	const handleSignIn = async () => {
+	const handleResetPassword = async () => {
 		try {
 			setIsLoading(true);
-			const response = await fetch('/api/account/login', {
+			setIsSuccess(false);
+			setIsError(false);
+			const response = await fetch('/api/users/forgot-password', {
 				body: JSON.stringify({
 					email: form.values.email,
-					password: form.values.password,
 				}),
 				headers: {
 					'Content-Type': 'application/json',
@@ -54,15 +56,17 @@ export function LoginForm() {
 				method: 'POST',
 			});
 			if (!response.ok) {
-				throw new Error(`Failed to login. Status: ${response.status}`);
+				throw new Error(`Failed to reset password. Status: ${response.status}`);
 			}
-			console.log('Login successful. Redirecting to account page...');
-			navigationHandleRedirectParam({ fallback: '/account' });
+			console.log('Reset password successful!');
+			setIsLoading(false);
+			setIsSuccess(true);
 		}
 		catch (error) {
 			console.log(error.message);
 			form.setFieldValue('password', '');
 			setIsLoading(false);
+			setIsSuccess(false);
 			setIsError(true);
 		}
 	};
@@ -70,13 +74,25 @@ export function LoginForm() {
 	//
 	// D. Render components
 
+	if (isSuccess) {
+		return (
+			<Paper className={styles.container} component="form" onSubmit={form.onSubmit(handleResetPassword)}>
+				<Title order={2}>{t('title')}</Title>
+				<Text>{t('subtitle')}</Text>
+				<Space h={5} />
+				<Alert icon={<IconMailFast />} title={t('success.title')} w="100%">
+					<Text size="sm">{t('success.message')}</Text>
+				</Alert>
+			</Paper>
+		);
+	}
+
 	return (
-		<Paper className={styles.container} component="form" onSubmit={form.onSubmit(handleSignIn)}>
+		<Paper className={styles.container} component="form" onSubmit={form.onSubmit(handleResetPassword)}>
 			<Title order={2}>{t('title')}</Title>
 			<Text>{t('subtitle')}</Text>
 			<Space h={5} />
 			<TextInput disabled={isLoading} label={t('email.label')} placeholder={t('email.placeholder')} w="100%" {...form.getInputProps('email')} />
-			<TextInput disabled={isLoading} label={t('password.label')}placeholder={t('password.placeholder')} type="password" w="100%" {...form.getInputProps('password')} />
 			{isLoading && <Loader />}
 			{(!isLoading && form.isDirty()) && <Button disabled={!form.isValid()} type="submit">{t('submit.label')}</Button>}
 			{(!isLoading && isError) && (
@@ -85,8 +101,6 @@ export function LoginForm() {
 					<Text variant="error">{t('error.message')}</Text>
 				</>
 			)}
-			<Space h={5} />
-			<Anchor href="/login/forgot" id={styles.resetPassword} variant="link">{t('reset_password.label')}</Anchor>
 		</Paper>
 	);
 }

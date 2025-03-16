@@ -14,8 +14,16 @@ import '@/themes/_default/styles/wordpress.css';
 
 /* * */
 
+import { combineClassNames } from '@/utils/combine-class-names';
+import { Accordion, Alert, Anchor, Button, Checkbox, createTheme, Loader, Notification, Paper, SegmentedControl, Select, Skeleton, Table, Text, TextInput, Title } from '@mantine/core';
+import { DateInput } from '@mantine/dates';
+import { IconCaretLeftFilled } from '@tabler/icons-react';
+
+/* * */
+
 import AccordionOverride from '@/themes/_default/overrides/Accordion.module.css';
 import AlertOverride from '@/themes/_default/overrides/Alert.module.css';
+import AnchorOverride from '@/themes/_default/overrides/Anchor.module.css';
 import ButtonOverride from '@/themes/_default/overrides/Button.module.css';
 import CheckboxOverride from '@/themes/_default/overrides/Checkbox.module.css';
 import CheckboxGroupOverride from '@/themes/_default/overrides/CheckboxGroup.module.css';
@@ -30,10 +38,7 @@ import TableOverride from '@/themes/_default/overrides/Table.module.css';
 import TextOverride from '@/themes/_default/overrides/Text.module.css';
 import TextInputOverride from '@/themes/_default/overrides/TextInput.module.css';
 import TitleOverride from '@/themes/_default/overrides/Title.module.css';
-import { combineClassNames } from '@/utils/combine-class-names';
-import { Accordion, Alert, Button, Checkbox, createTheme, Loader, Notification, Paper, SegmentedControl, Select, Skeleton, Table, Text, TextInput, Title } from '@mantine/core';
-import { DateInput } from '@mantine/dates';
-import { IconCaretLeftFilled } from '@tabler/icons-react';
+import Link from 'next/link';
 
 /* * */
 
@@ -77,6 +82,18 @@ export default createTheme({
 			},
 			defaultProps: {
 				variant: 'info',
+			},
+		}),
+
+		Anchor: Anchor.extend({
+			classNames: () => {
+				let defaultClasses = {
+					root: AnchorOverride.root,
+				};
+				return defaultClasses;
+			},
+			defaultProps: {
+				component: Link,
 			},
 		}),
 

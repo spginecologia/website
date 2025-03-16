@@ -503,6 +503,25 @@
 			"paragraph_2": "Se já é Sócio SPG, basta que nos envie os seus dados para que possamos confirmar e activar a sua conta. Se ainda não é Sócio SPG, preencha o formulário para formalizar a sua candidatura, que será submetida a aprovação em Assembleia Geral.",
 			"signup": "Começar Agora",
 			"title": "Ainda não tem conta SPG?"
+		},
+		"ResetPasswordForm": {
+			"email": {
+				"label": "Email ou NIF",
+				"placeholder": "Introduza o seu email ou NIF"
+			},
+			"error": {
+				"message": "Login falhou. Email ou password incorretos.",
+				"retry": "Tentar Novamente"
+			},
+			"submit": {
+				"label": "Iniciar Sessão"
+			},
+			"subtitle": "Introduza o seu email ou NIF. Irá receber um email com instruções para a recuperação da sua password.",
+			"success": {
+				"message": "As instruções foram enviadas para o seu email. Por favor verifique a sua caixa de entrada.",
+				"title": "Pedido enviado"
+			},
+			"title": "Recuperar Password"
 		}
 	},
 	"common": {

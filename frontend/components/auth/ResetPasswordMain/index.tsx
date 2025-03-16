@@ -2,12 +2,10 @@
 
 /* * */
 
-import { type PayloadMeResponse } from '@/types/payload-api-response';
-
-import { LoginForm } from '@/components/auth/LoginForm';
-import { LoginSignupAd } from '@/components/auth/LoginSignupAd';
+import { ResetPasswordForm } from '@/components/auth/ResetPasswordForm';
 import { ContentWrapper } from '@/components/common/ContentWrapper';
 import { Section } from '@/components/common/Section';
+import { type PayloadMeResponse } from '@/types/payload-api-response';
 import { Skeleton } from '@mantine/core';
 import { useEffect } from 'react';
 import useSWR from 'swr';
@@ -16,7 +14,7 @@ import styles from './styles.module.css';
 
 /* * */
 
-export function LoginMain() {
+export function ResetPasswordMain() {
 	//
 
 	//
@@ -43,7 +41,6 @@ export function LoginMain() {
 				<Section withTopSpacer="transparent">
 					<div className={styles.grid}>
 						<Skeleton height={350} />
-						<LoginSignupAd />
 					</div>
 				</Section>
 			</ContentWrapper>
@@ -54,8 +51,7 @@ export function LoginMain() {
 		<ContentWrapper className={styles.contentWrapperOverride}>
 			<Section withTopSpacer="transparent">
 				<div className={styles.grid}>
-					<LoginForm />
-					<LoginSignupAd />
+					<ResetPasswordForm />
 				</div>
 			</Section>
 		</ContentWrapper>

@@ -2,13 +2,12 @@
 
 /* * */
 
-import type { PayloadMeResponse } from '@/types/payload-api-response';
-
 import { AccountPayments } from '@/components/account/AccountPayments';
 import { AccountProfile } from '@/components/account/AccountProfile';
 import { AccountVideos } from '@/components/account/AccountVideos';
 import { ContentWrapper } from '@/components/common/ContentWrapper';
 import { Section } from '@/components/common/Section';
+import { type PayloadMeResponse } from '@/types/payload-api-response';
 import { useEffect } from 'react';
 import useSWR from 'swr';
 

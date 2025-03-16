@@ -13,6 +13,11 @@ interface BrevoApiData {
 	method: 'DELETE' | 'GET' | 'POST' | 'PUT'
 
 	/**
+	 * The additional path to use. Only used when the method is 'PUT'.
+	 */
+	path?: string
+
+	/**
 	 * The service to use. Currently only 'contacts' is supported.
 	 */
 	service: 'contacts'
@@ -21,7 +26,7 @@ interface BrevoApiData {
 
 /* * */
 
-export async function BREVOAPI({ data, method, service }: BrevoApiData) {
+export async function BREVOAPI({ data, method, path, service }: BrevoApiData) {
 	try {
 		//
 
@@ -37,7 +42,9 @@ export async function BREVOAPI({ data, method, service }: BrevoApiData) {
 		//
 		// Setup the request options
 
-		const url = `https://api.brevo.com/v3/${service}`;
+		let url = `https://api.brevo.com/v3/${service}`;
+
+		if (path) url += `/${path}`;
 
 		const options = {
 			body: data,
@@ -58,6 +65,8 @@ export async function BREVOAPI({ data, method, service }: BrevoApiData) {
 		// Handle the response statuses
 
 		if (!response.ok) {
+			const text = await response.text();
+			console.log(text);
 			throw new Error(`The BREVO API returned an error: ${response.status} ${response.statusText}`);
 		}
 

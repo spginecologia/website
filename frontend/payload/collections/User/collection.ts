@@ -1,7 +1,7 @@
 /* * */
 
+import { afterChangeUser } from '@/payload/collections/User/hooks';
 import { UserOptions } from '@/payload/collections/User/options';
-import { brevoUpdateNewsletterSubscription } from '@/utils/brevo-update-newsletter-subscription';
 import { validateTaxId } from '@/utils/validate-tax-id';
 import { type CollectionConfig } from 'payload';
 
@@ -319,9 +319,7 @@ export const Users: CollectionConfig = {
 
 	hooks: {
 		afterChange: [
-			async ({ doc }) => {
-				await brevoUpdateNewsletterSubscription(doc);
-			},
+			afterChangeUser,
 		],
 	},
 

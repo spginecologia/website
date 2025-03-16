@@ -14,6 +14,9 @@
 /* RESET PASSWORD */
 
 #resetPassword {
-	font-size: 14px;
 	color: var(--color-brand-support-500);
+}
+
+#resetPassword span {
+	font-size: 14px;
 }

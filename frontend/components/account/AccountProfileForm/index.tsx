@@ -2,12 +2,11 @@
 
 /* * */
 
-import type { PayloadMeResponse } from '@/types/payload-api-response';
-
 import { FormSection } from '@/components/common/FormSection';
 import { UserEditableProfileDefault } from '@/payload/collections/User/default';
 import { UserOptions } from '@/payload/collections/User/options';
 import { UserEditableProfileValidation } from '@/payload/collections/User/validation';
+import { type PayloadMeResponse } from '@/types/payload-api-response';
 import { showNotification } from '@/utils/show-notification';
 import { Button, Checkbox, Select, Space, Text, TextInput } from '@mantine/core';
 import { DateInput } from '@mantine/dates';
