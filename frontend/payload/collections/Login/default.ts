@@ -1,6 +1,6 @@
 /* * */
 
-export const SignInDefault = {
+export const LoginDefault = {
 	email: '',
 	password: '',
 };

@@ -14,8 +14,9 @@ import '@/themes/_default/styles/wordpress.css';
 
 /* * */
 
+import { VisibilityToggleIcon } from '@/components/common/VisibilityToggleIcon';
 import { combineClassNames } from '@/utils/combine-class-names';
-import { Accordion, Alert, Anchor, Button, Checkbox, createTheme, Loader, Notification, Paper, SegmentedControl, Select, Skeleton, Table, Text, TextInput, Title } from '@mantine/core';
+import { Accordion, Alert, Anchor, Button, Checkbox, createTheme, Loader, Notification, Paper, PasswordInput, SegmentedControl, Select, Skeleton, Table, Text, TextInput, Title } from '@mantine/core';
 import { DateInput } from '@mantine/dates';
 import { IconCaretLeftFilled } from '@tabler/icons-react';
 
@@ -31,6 +32,7 @@ import DateInputOverride from '@/themes/_default/overrides/DateInput.module.css'
 import LoaderOverride from '@/themes/_default/overrides/Loader.module.css';
 import NotificationOverride from '@/themes/_default/overrides/Notification.module.css';
 import PaperOverride from '@/themes/_default/overrides/Paper.module.css';
+import PasswordInputOverride from '@/themes/_default/overrides/PasswordInput.module.css';
 import SegmentedControlOverride from '@/themes/_default/overrides/SegmentedControl.module.css';
 import SelectOverride from '@/themes/_default/overrides/Select.module.css';
 import SkeletonOverride from '@/themes/_default/overrides/Skeleton.module.css';
@@ -220,6 +222,34 @@ export default createTheme({
 					root: PaperOverride.root,
 				};
 				return defaultClasses;
+			},
+		}),
+
+		PasswordInput: PasswordInput.extend({
+			classNames: (_, props) => {
+				let defaultClasses = {
+					// PasswordInput is very similar to TextInput. The only difference is that
+					// the 'input' field is wrapped by an outer div, with the class '.input'.
+					// The actual 'input' field is named '.innerInput'. It is necessary to
+					// map the 'input' field styles to the '.innerInput' class and apply reset styles
+					// to the '.input' class, otherwise the input will appear to be rendered twice.
+					description: TextInputOverride.description,
+					error: TextInputOverride.error,
+					innerInput: TextInputOverride.input,
+					input: PasswordInputOverride.input,
+					label: TextInputOverride.label,
+					root: TextInputOverride.root,
+					section: TextInputOverride.section,
+					wrapper: TextInputOverride.wrapper,
+				};
+				if (props.variant === 'primary') {
+					defaultClasses = combineClassNames(defaultClasses, [TextInputOverride.variantPrimary]);
+				}
+				return defaultClasses;
+			},
+			defaultProps: {
+				variant: 'primary',
+				visibilityToggleIcon: VisibilityToggleIcon,
 			},
 		}),
 

@@ -1,7 +1,5 @@
 /* * */
 
-import { User } from '@/payload-types';
-import { validateTaxId } from '@/utils/validate-tax-id';
 import payloadConfig from '@payload-config';
 import { DateTime } from 'luxon';
 import { getPayload } from 'payload';
@@ -15,42 +13,44 @@ export async function POST(request: Request) {
 		const payload = await getPayload({ config: payloadConfig });
 
 		//
-		// Extract the username (email or NIF) and password from the request body
+		// Extract the password and password confirmation fields from the request body
 
 		const requestBody = await request.json();
 
-		const emailOrTaxId = requestBody.username;
-		const password = requestBody.password;
+		const newPassword = requestBody.password;
+		const newPasswordConfirmation = requestBody.password_confirmation;
+
+		const resetToken = requestBody.token;
+		if (!resetToken) throw new Error('Token not provided.');
+
+		console.log('Token:', resetToken);
 
 		//
-		// Check if the user is trying to login with Tax ID instead of email.
-		// If the user is trying to login with Tax ID, we need to find
-		// the email associated with that Tax ID first.
+		// Check if the password and password confirmation fields match
+		// and if the password is at least 5 characters long.
 
-		const isTaxId = validateTaxId(emailOrTaxId, false);
-
-		let foundUser: User;
-
-		if (isTaxId) {
-			const result = await payload.find({
-				collection: 'users',
-				where: { tax_id: { equals: emailOrTaxId } },
-			});
-			if (result.docs.length === 0) {
-				throw new Error(`User not found for given Tax ID: ${emailOrTaxId}`);
-			}
-			foundUser = result.docs[0];
+		if (newPassword !== newPasswordConfirmation) {
+			throw new Error('Passwords do not match.');
 		}
-		else {
-			const result = await payload.find({
-				collection: 'users',
-				where: { email: { equals: emailOrTaxId } },
-			});
-			if (result.docs.length === 0) {
-				throw new Error(`User not found for given email: ${emailOrTaxId}`);
-			}
-			foundUser = result.docs[0];
+
+		if (newPassword.length < 5) {
+			throw new Error('Password must be at least 5 characters long.');
 		}
+
+		//
+		// Now, using the found user object, we can request an email with
+		// a reset pasword token to be sent to the user using the
+		// Payload API forgot password method.
+
+		const resetResult = await payload.resetPassword({
+			collection: 'users',
+			data: {
+				password: newPassword,
+				token: resetToken,
+			},
+			overrideAccess: true,
+			req: request,
+		});
 
 		//
 		// Now, using the found user object, we can login the user using the
@@ -61,8 +61,8 @@ export async function POST(request: Request) {
 		const loginResult = await payload.login({
 			collection: 'users',
 			data: {
-				email: foundUser.email,
-				password: password,
+				email: resetResult.user.email as string,
+				password: newPassword,
 			},
 			req: request,
 		});

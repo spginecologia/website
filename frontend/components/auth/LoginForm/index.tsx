@@ -2,8 +2,8 @@
 
 /* * */
 
-import { SignInDefault } from '@/payload/collections/SignIn/default';
-import { SignInValidation } from '@/payload/collections/SignIn/validation';
+import { LoginDefault } from '@/payload/collections/Login/default';
+import { LoginValidation } from '@/payload/collections/Login/validation';
 import { navigationHandleRedirectParam } from '@/utils/navigation-handle-redirect-param';
 import { Anchor, Button, Loader, Paper, Space, Text, TextInput, Title } from '@mantine/core';
 import { useForm, zodResolver } from '@mantine/form';
@@ -30,23 +30,23 @@ export function LoginForm() {
 
 	const form = useForm({
 		clearInputErrorOnChange: true,
-		initialValues: SignInDefault,
+		initialValues: LoginDefault,
 		onValuesChange: () => {
 			setIsError(false);
 		},
-		validate: zodResolver(SignInValidation),
+		validate: zodResolver(LoginValidation),
 	});
 
 	//
 	// C. Handle actions
 
-	const handleSignIn = async () => {
+	const handleLogin = async () => {
 		try {
 			setIsLoading(true);
 			const response = await fetch('/api/account/login', {
 				body: JSON.stringify({
-					email: form.values.email,
 					password: form.values.password,
+					username: form.values.username,
 				}),
 				headers: {
 					'Content-Type': 'application/json',
@@ -71,11 +71,11 @@ export function LoginForm() {
 	// D. Render components
 
 	return (
-		<Paper className={styles.container} component="form" onSubmit={form.onSubmit(handleSignIn)}>
+		<Paper className={styles.container} component="form" onSubmit={form.onSubmit(handleLogin)}>
 			<Title order={2}>{t('title')}</Title>
 			<Text>{t('subtitle')}</Text>
 			<Space h={5} />
-			<TextInput disabled={isLoading} label={t('email.label')} placeholder={t('email.placeholder')} w="100%" {...form.getInputProps('email')} />
+			<TextInput disabled={isLoading} label={t('username.label')} placeholder={t('username.placeholder')} w="100%" {...form.getInputProps('username')} />
 			<TextInput disabled={isLoading} label={t('password.label')}placeholder={t('password.placeholder')} type="password" w="100%" {...form.getInputProps('password')} />
 			{isLoading && <Loader />}
 			{(!isLoading && form.isDirty()) && <Button disabled={!form.isValid()} type="submit">{t('submit.label')}</Button>}

@@ -476,11 +476,26 @@
 			"action_verify": "Sou Sócio mas ainda não tenho conta",
 			"message": "Para aceder a este conteúdo terá de fazer login com as suas credenciais SPG."
 		},
-		"LoginForm": {
-			"email": {
+		"ForgotPasswordForm": {
+			"error": {
+				"message": "Login falhou. Email ou password incorretos.",
+				"retry": "Tentar Novamente"
+			},
+			"submit": {
+				"label": "Iniciar Sessão"
+			},
+			"subtitle": "Introduza o seu email ou NIF. Irá receber um email com instruções para a recuperação da sua password.",
+			"success": {
+				"message": "As instruções foram enviadas para o seu email. Por favor verifique a sua caixa de entrada.",
+				"title": "Pedido enviado"
+			},
+			"title": "Recuperar Password",
+			"username": {
 				"label": "Email ou NIF",
 				"placeholder": "Introduza o seu email ou NIF"
-			},
+			}
+		},
+		"LoginForm": {
 			"error": {
 				"message": "Login falhou. Email ou password incorretos.",
 				"retry": "Tentar Novamente"
@@ -496,7 +511,11 @@
 				"label": "Iniciar Sessão"
 			},
 			"subtitle": "Já é possível entrar na sua conta SPG através do seu Número de Contribuinte pessoal.",
-			"title": "Login"
+			"title": "Login",
+			"username": {
+				"label": "Email ou NIF",
+				"placeholder": "Introduza o seu email ou NIF"
+			}
 		},
 		"LoginSignupAd": {
 			"paragraph_1": "Usufrua das tecnologias que colocamos à sua disposição para consultar, discutir e partilhar documentos, vídeos e cursos científicos relacionados com a especialidade.",
@@ -505,13 +524,17 @@
 			"title": "Ainda não tem conta SPG?"
 		},
 		"ResetPasswordForm": {
-			"email": {
-				"label": "Email ou NIF",
-				"placeholder": "Introduza o seu email ou NIF"
-			},
 			"error": {
 				"message": "Login falhou. Email ou password incorretos.",
 				"retry": "Tentar Novamente"
+			},
+			"password": {
+				"label": "Nova Password",
+				"placeholder": "Introduza uma password nova"
+			},
+			"password_confirmation": {
+				"label": "Confirmação da Password",
+				"placeholder": "Introduza novamente a mesma password"
 			},
 			"submit": {
 				"label": "Iniciar Sessão"

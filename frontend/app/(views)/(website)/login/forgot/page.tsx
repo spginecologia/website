@@ -1,9 +1,9 @@
 /* * */
 
-import { ResetPasswordMain } from '@/components/auth/ResetPasswordMain';
+import { ForgotPasswordMain } from '@/components/auth/ForgotPasswordMain';
 
 /* * */
 
 export default function Page() {
-	return <ResetPasswordMain />;
+	return <ForgotPasswordMain />;
 }

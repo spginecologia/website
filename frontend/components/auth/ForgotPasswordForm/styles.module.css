@@ -1,0 +1,22 @@
+/* * */
+/* CONTAINER */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+/* * */
+/* RESET PASSWORD */
+
+#resetPassword {
+	color: var(--color-brand-support-500);
+}
+
+#resetPassword span {
+	font-size: 14px;
+}

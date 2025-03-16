@@ -1,5 +1,6 @@
 /* * */
 
 export const ResetPasswordDefault = {
-	email: '',
+	password: '',
+	password_confirmation: '',
 };
