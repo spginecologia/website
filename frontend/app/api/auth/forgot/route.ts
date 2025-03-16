@@ -70,7 +70,7 @@ export async function POST(request: Request) {
 		//
 		// Send an email to the user with the reset password token.
 
-		const actionUrl = navigationGetUrlWithRedirectParam(`${process.env.NEXT_PUBLIC_URL}/login/reset?token=${tokenresult}`, redirectParam);
+		const actionUrl = navigationGetUrlWithRedirectParam(`${process.env.NEXT_PUBLIC_URL}/reset?token=${tokenresult}`, redirectParam);
 
 		await payload.sendEmail({
 			html: getNotificationActionTemplate({
@@ -92,13 +92,6 @@ export async function POST(request: Request) {
 		}
 
 		return new Response(JSON.stringify({ status: 'success' }), { status: 200 });
-
-		// return new Response(JSON.stringify(loginresult), {
-		// 	headers: {
-		// 		'Set-Cookie': `payload-token=${loginresult.token};Expires=${DateTime.fromSeconds(loginresult.exp).toHTTP()};Domain=${process.env.NEXT_PUBLIC_COOKIE_DOMAIN};Path=/;Secure=true;HttpOnly=true;SameSite=Strict`,
-		// 	},
-		// 	status: 200,
-		// });
 
 		//
 	}

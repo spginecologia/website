@@ -56,7 +56,7 @@ export function ResetPasswordForm() {
 		try {
 			setIsLoading(true);
 			setIsError(false);
-			const response = await fetch('/api/account/reset', {
+			const response = await fetch('/api/auth/reset', {
 				body: JSON.stringify({
 					password: form.values.password,
 					password_confirmation: form.values.password_confirmation,
