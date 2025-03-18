@@ -12,7 +12,7 @@ export const CheckUserValidation = z
 		tax_id: z
 			.string()
 			.refine((value) => {
-				const isValidTaxId = validateTaxId(value, true);
+				const isValidTaxId = validateTaxId(value, true, ['singular']);
 				// Return true if if the value is not empty
 				// and is a valid Tax ID.
 				return !!value && isValidTaxId;
@@ -33,7 +33,7 @@ export const SignupValidation = z
 		username: z
 			.string()
 			.refine((value) => {
-				const isValidTaxId = validateTaxId(value, true);
+				const isValidTaxId = validateTaxId(value, true, ['singular']);
 				const isValidEmail = validateEmail(value, true);
 				// Return true if if the value is not empty
 				// and is either a valid Tax ID or a valid Email.

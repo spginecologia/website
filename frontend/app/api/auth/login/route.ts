@@ -27,7 +27,7 @@ export async function POST(request: Request) {
 		// If the user is trying to login with Tax ID, we need to find
 		// the email associated with that Tax ID first.
 
-		const isTaxId = validateTaxId(emailOrTaxId, false);
+		const isTaxId = validateTaxId(emailOrTaxId, false, ['singular']);
 
 		let foundUser: User;
 

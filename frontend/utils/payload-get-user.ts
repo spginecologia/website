@@ -18,7 +18,7 @@ export async function payloadGetUser(username: string): Promise<null | User> {
 	//
 	// Check if the username is an email or a Tax ID.
 
-	const isTaxId = validateTaxId(username, false);
+	const isTaxId = validateTaxId(username, false, ['singular']);
 
 	//
 	// Find the user based on the username.

@@ -562,6 +562,134 @@
 			"paragraph_2": "Se já é Sócio SPG, basta que nos envie os seus dados para que possamos confirmar e activar a sua conta. Se ainda não é Sócio SPG, preencha o formulário para formalizar a sua candidatura, que será submetida a aprovação em Assembleia Geral.",
 			"signup": "Começar Agora",
 			"title": "Ainda não tem conta SPG?"
+		},
+		"SignupForm": {
+			"actions": {
+				"has_errors": "Existem erros no preenchimento",
+				"submit": {
+					"label": "Atualizar dados"
+				}
+			},
+			"error": "Não foi possível carregar o seu perfil",
+			"fields": {
+				"address_1": {
+					"label": "Morada",
+					"placeholder": "Rua de Santa Apolónia"
+				},
+				"address_2": {
+					"label": "Morada (Continuação)",
+					"placeholder": "Bloco 3"
+				},
+				"billing_address_1": {
+					"description": "Opcionalmente indique a morada a constar na fatura.",
+					"label": "Morada (Faturação)",
+					"placeholder": "Rua de Santa Apolónia"
+				},
+				"billing_address_2": {
+					"label": "Morada Cont. (Faturação)",
+					"placeholder": "Bloco 3"
+				},
+				"billing_city": {
+					"label": "Cidade (Faturação)",
+					"placeholder": "Lisboa"
+				},
+				"billing_name": {
+					"description": "Indique o nome que pretende que conste na fatura.",
+					"label": "Nome (Faturação)",
+					"placeholder": "Empresa Lda."
+				},
+				"billing_postal_code": {
+					"label": "Código Postal (Faturação)",
+					"placeholder": "1234-567"
+				},
+				"billing_tax_id": {
+					"description": "Por favor indique o NIF da entidade a faturar.",
+					"label": "NIF (Faturação)",
+					"placeholder": "512 345 678"
+				},
+				"birthday": {
+					"label": "Data de Nascimento",
+					"placeholder": ""
+				},
+				"city": {
+					"label": "Cidade",
+					"placeholder": "Coimbra"
+				},
+				"country": {
+					"label": "País",
+					"placeholder": "Portugal"
+				},
+				"email": {
+					"label": "Email",
+					"placeholder": "Escolha uma opção..."
+				},
+				"first_name": {
+					"label": "Nome",
+					"placeholder": ""
+				},
+				"last_name": {
+					"label": "Apelido(s)",
+					"placeholder": ""
+				},
+				"medical_id": {
+					"description": "Para alterar este campo por favor entre em contacto com o Secretariado SPG.",
+					"label": "Número de Cédula Médica",
+					"placeholder": "00000"
+				},
+				"phone": {
+					"label": "Telefone",
+					"placeholder": "+351 912 345 678"
+				},
+				"postal_code": {
+					"label": "Código Postal",
+					"placeholder": "1000-200"
+				},
+				"send_newsletter": {
+					"label": "Receber Newsletter"
+				},
+				"subscribed_sections": {
+					"label": "Secções de Interesse"
+				},
+				"tax_id": {
+					"description": "O seu NIF pessoal. Por motivos alheios não podemos aceitar NIFs institucionais. Pode pedir emissão de fatura com outro NIF. Para alterar este campo por favor entre em contacto com o Secretariado SPG.",
+					"label": "Número de Contribuinte",
+					"placeholder": "000 000 000"
+				},
+				"title": {
+					"label": "Título",
+					"nothingFound": "No Results Found",
+					"placeholder": "Escolha uma opção..."
+				},
+				"workplace_primary": {
+					"label": "Local de Trabalho Principal",
+					"placeholder": "Hospital Central"
+				},
+				"workplace_secondary": {
+					"label": "Local de Trabalho Secundário",
+					"placeholder": ""
+				}
+			},
+			"loading": "A carregar o seu perfil...",
+			"sections": {
+				"activity": {
+					"description": "Por favor indique-nos qual a sua actividade.",
+					"title": "A Sua Actividade"
+				},
+				"basic": {
+					"description": "Por favor mantenha os seus dados atualizados. Se pretender alterar o NIF ou Número da Ordem, deverá entrar em contacto com o Secretariado da SPG.",
+					"title": "Os Seus Dados"
+				},
+				"billing": {
+					"description": "Adicione os seus dados de faturação para que possamos emitir faturas corretamente.",
+					"title": "Dados de Faturação"
+				},
+				"correspondence": {
+					"description": "Por favor indique onde gostaria de receber correspondência da SPG.",
+					"title": "Correspondência"
+				}
+			},
+			"subtitle": "Estamos ectstáticos por ter decidido juntar-se à Sociedade Portuguesa de Ginecologia. Por favor preencha o formulário abaixo para formalizar a sua candidatura. A sua candidatura será submetida a aprovação em Assembleia Geral.",
+			"title": "Candidatura a Sócio"
 		}
 	},
 	"common": {

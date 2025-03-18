@@ -47,7 +47,7 @@ export const UserEditableProfileValidation = z
 		billing_tax_id: z
 			.coerce
 			.string()
-			.refine(value => validateTaxId(value, true), { message: 'NIF (Faturação) deve ser um número de 9 caracteres.' }),
+			.refine(value => validateTaxId(value, true, ['singular', 'company']), { message: 'NIF (Faturação) deve ser um número de 9 caracteres.' }),
 
 		birthday: z
 			.coerce

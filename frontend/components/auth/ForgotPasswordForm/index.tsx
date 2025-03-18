@@ -5,6 +5,8 @@
 import { ForgotPasswordDefault } from '@/payload/collections/ForgotPassword/default';
 import { type ForgotPasswordRequest, type ForgotPasswordResponse } from '@/payload/collections/ForgotPassword/types';
 import { ForgotPasswordValidation } from '@/payload/collections/ForgotPassword/validation';
+import { validateEmail } from '@/utils/validate-email';
+import { validateTaxId } from '@/utils/validate-tax-id';
 import { Alert, Button, Loader, Paper, Space, Text, TextInput, Title } from '@mantine/core';
 import { useForm, zodResolver } from '@mantine/form';
 import { IconInfoCircle, IconUserHeart } from '@tabler/icons-react';
@@ -68,8 +70,15 @@ export function ForgotPasswordForm() {
 		}
 	};
 
-	const handleApplyRequest = async () => {
-		window.location.href = `/signup?username=${form.values.username}`;
+	const handleContinueToSignup = async () => {
+		// Check if the username is a valid Tax ID
+		const isValidTaxId = validateTaxId(form.values.username, false, ['singular']);
+		if (!isValidTaxId) return window.location.href = `/signup?tax_id=${form.values.username}`;
+		// Check if the username is a valid Tax ID
+		const isValidEmail = validateEmail(form.values.username, false);
+		if (!isValidEmail) return window.location.href = `/signup?email=${form.values.username}`;
+		// Redirect to signup page without any parameter
+		return window.location.href = '/signup';
 	};
 
 	//
@@ -117,7 +126,7 @@ export function ForgotPasswordForm() {
 				<Alert icon={<IconInfoCircle />} title={t('status.no_user.alert.title')} w="100%">
 					<Text size="sm">{t('status.no_user.alert.message')}</Text>
 					<Space h={5} />
-					<Button onClick={handleApplyRequest}>{t('status.no_user.alert.action')}</Button>
+					<Button onClick={handleContinueToSignup}>{t('status.no_user.alert.action')}</Button>
 				</Alert>
 			</Paper>
 		);
