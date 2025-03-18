@@ -16,11 +16,11 @@
 	font-weight: 700;
 	line-height: 1;
 	color: var(--color-reference-black);
+	outline: none;
 	background: transparent;
 	border: none;
 	border-bottom: 2px solid var(--color-reference-black);
 	border-radius: 0;
-	outline: none;
 	transition: all 300ms ease;
 }
 
@@ -53,6 +53,11 @@
 
 .section[data-position="left"] {
 	pointer-events: none;
+}
+
+.required {
+	font-weight: var(--font-weight-bold);
+	color: var(--color-state-error);
 }
 
 

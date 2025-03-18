@@ -3,11 +3,11 @@
 /* * */
 
 import { FormSection } from '@/components/common/FormSection';
-import { SignupDefault } from '@/payload/collections/Signup/default';
-import { SignupValidation } from '@/payload/collections/Signup/validation';
+import { SignupFormDefault } from '@/payload/collections/Signup/default';
+import { SignupFormValidation } from '@/payload/collections/Signup/validation';
 import { UserOptions } from '@/payload/collections/User/options';
 import { navigationHandleRedirectParam } from '@/utils/navigation-handle-redirect-param';
-import { Anchor, Button, Checkbox, Loader, Paper, Select, Space, Text, TextInput, Title } from '@mantine/core';
+import { Button, Checkbox, Loader, Paper, Select, Space, Text, TextInput, Title } from '@mantine/core';
 import { DateInput } from '@mantine/dates';
 import { useForm, zodResolver } from '@mantine/form';
 import { useTranslations } from 'next-intl';
@@ -33,11 +33,11 @@ export function SignupForm() {
 
 	const form = useForm({
 		clearInputErrorOnChange: true,
-		initialValues: SignupDefault,
+		initialValues: SignupFormDefault,
 		onValuesChange: () => {
 			setIsError(false);
 		},
-		validate: zodResolver(SignupValidation),
+		validate: zodResolver(SignupFormValidation),
 	});
 
 	//
@@ -119,22 +119,20 @@ export function SignupForm() {
 				<TextInput label={t('fields.address_2.label')} placeholder={t('fields.address_2.placeholder')} {...form.getInputProps('address_2')} />
 				<div style={{ display: 'grid', gap: 10, gridTemplateColumns: '1fr 2fr' }}>
 					<TextInput label={t('fields.postal_code.label')} placeholder={t('fields.postal_code.placeholder')} {...form.getInputProps('postal_code')} />
-					<TextInput label={t('fields.city.label')} placeholder={t('fields.city.placeholder')} {...form.getInputProps('city')} />
+					<TextInput label={t('fields.city.label')} placeholder={t('fields.city.placeholder')} required {...form.getInputProps('city')} />
 				</div>
 				<TextInput label={t('fields.country.label')} placeholder={t('fields.country.placeholder')} {...form.getInputProps('country')} />
 				<Checkbox label={t('fields.send_newsletter.label')} {...form.getInputProps('send_newsletter', { type: 'checkbox' })} />
 			</FormSection>
 
 			{isLoading && <Loader />}
-			{(!isLoading && form.isDirty()) && <Button disabled={!form.isValid()} type="submit">{t('submit.label')}</Button>}
+			{(!isLoading && form.isDirty()) && <Button disabled={!form.isValid()} type="submit">{t('actions.submit.label')}</Button>}
 			{(!isLoading && isError) && (
 				<>
 					<Space h={5} />
 					<Text variant="error">{t('error.message')}</Text>
 				</>
 			)}
-			<Space h={5} />
-			<Anchor href={`/forgot?username=${form.values.username}`} id={styles.anchor} variant="link">{t('reset_password')}</Anchor>
 		</Paper>
 	);
 
