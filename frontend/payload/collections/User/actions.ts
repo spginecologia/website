@@ -18,10 +18,12 @@ export const afterChangeUser: CollectionAfterChangeHook<User> = async ({ doc, pr
 	// If the user has changed their email,
 	// then we need to update the user in Brevo using ext_id value.
 
-	if (previousDoc.email !== doc.email) {
+	if (previousDoc.email && previousDoc.email !== doc.email) {
+		console.log('User changed email:', previousDoc.email, '->', doc.email);
 		await brevoUpdateUser(doc, 'id');
 	}
 	else {
+		console.log('User updated:', doc.email);
 		await brevoUpdateUser(doc, 'email');
 	}
 

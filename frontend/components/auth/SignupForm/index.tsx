@@ -7,7 +7,6 @@ import { SignupFormDefault } from '@/payload/collections/Signup/default';
 import { SignupResponse } from '@/payload/collections/Signup/types';
 import { SignupFormValidation } from '@/payload/collections/Signup/validation';
 import { UserOptions } from '@/payload/collections/User/options';
-import { navigationHandleRedirectParam } from '@/utils/navigation-handle-redirect-param';
 import { Alert, Button, Checkbox, Loader, Paper, Select, Space, Text, TextInput, Title } from '@mantine/core';
 import { DateInput } from '@mantine/dates';
 import { useForm, zodResolver } from '@mantine/form';

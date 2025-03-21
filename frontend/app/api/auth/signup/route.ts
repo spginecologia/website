@@ -101,7 +101,7 @@ export async function POST(request: Request) {
 		//
 	}
 	catch (err) {
-		console.error(err);
+		console.error(err.cause);
 		return new Response(err.message, { status: 401 });
 	}
 }

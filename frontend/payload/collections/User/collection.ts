@@ -70,7 +70,7 @@ export const Users: CollectionConfig = {
 									required: true,
 									type: 'text',
 									unique: true,
-									validate: value => validateTaxId(value, true, ['singular']) || 'Número de Contribuinte deve ser um número de 9 caracteres.',
+									validate: (value: string) => validateTaxId(value, false, ['singular']) || 'Número de Contribuinte deve ser um número de 9 caracteres.',
 								},
 								{
 									label: 'Número de Cédula Médica',
