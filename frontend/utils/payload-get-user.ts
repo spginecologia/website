@@ -1,6 +1,7 @@
 /* * */
 
 import { type User } from '@/payload-types';
+import { validateEmail } from '@/utils/validate-email';
 import { validateTaxId } from '@/utils/validate-tax-id';
 import payloadConfig from '@payload-config';
 import { getPayload } from 'payload';
@@ -19,9 +20,10 @@ export async function payloadGetUser(username: string): Promise<null | User> {
 	// Check if the username is an email or a Tax ID.
 
 	const isTaxId = validateTaxId(username, false, ['singular']);
+	const isEmail = validateEmail(username, false);
 
 	//
-	// Find the user based on the username.
+	// Find the user based on the Tax ID
 
 	if (isTaxId) {
 		const result = await payload.find({
@@ -34,7 +36,11 @@ export async function payloadGetUser(username: string): Promise<null | User> {
 		}
 		return result.docs[0];
 	}
-	else {
+
+	//
+	// Find the user based on the Email
+
+	if (isEmail) {
 		const result = await payload.find({
 			collection: 'users',
 			where: { email: { equals: username } },
@@ -45,6 +51,12 @@ export async function payloadGetUser(username: string): Promise<null | User> {
 		}
 		return result.docs[0];
 	}
+
+	//
+	// Return null if the username is neither an email nor a Tax ID.
+
+	console.log(`Invalid username: ${username}`);
+	return null;
 
 	//
 }

@@ -13,9 +13,11 @@ export function validateTaxId(value: number | string, isOptional: boolean, allow
 	//
 
 	//
-	// Return true if the value is optional and empty
+	// Return true if the value is optional and empty.
+	// Return false if the value is not optional and empty.
 
 	if (isOptional && !value) return true;
+	if (!isOptional && !value) return false;
 
 	//
 	// Ensure the value is a string

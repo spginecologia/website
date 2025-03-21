@@ -194,7 +194,7 @@ export const Users: CollectionConfig = {
 									label: 'Número de Contribuinte (Fatura)',
 									name: 'billing_tax_id',
 									type: 'text',
-									validate: value => validateTaxId(value, true, ['singular', 'company']) || 'NIF (Faturação) deve ser um número de 9 caracteres.',
+									validate: (value: string) => validateTaxId(value, true, ['singular', 'company']) || 'NIF (Faturação) deve ser um número de 9 caracteres.',
 								},
 							],
 							type: 'row',

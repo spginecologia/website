@@ -99,7 +99,7 @@ export const UserEditableProfileValidation = z
 
 		title: z
 			.enum([...UserOptions.title] as [string, ...string[]])
-			.nullable(),
+			.nullish(),
 
 		workplace_primary: z
 			.coerce

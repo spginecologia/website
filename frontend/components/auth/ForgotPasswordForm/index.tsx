@@ -28,7 +28,7 @@ export function ForgotPasswordForm() {
 	const [isLoading, setIsLoading] = useState(false);
 	const [isError, setIsError] = useState(false);
 
-	const [checkResult, setCheckResult] = useState<ForgotPasswordResponse | null>();
+	const [forgotPasswordResponse, setForgotPasswordResponse] = useState<ForgotPasswordResponse | null>();
 
 	//
 	// B. Setup form
@@ -49,7 +49,7 @@ export function ForgotPasswordForm() {
 		try {
 			setIsLoading(true);
 			setIsError(false);
-			setCheckResult(null);
+			setForgotPasswordResponse(null);
 			const requestData: ForgotPasswordRequest = {
 				username: form.values.username,
 			};
@@ -61,7 +61,7 @@ export function ForgotPasswordForm() {
 			if (!response.ok) throw new Error(`Failed to Check. Status: ${response.status}`);
 			const responseData = await response.json();
 			setIsLoading(false);
-			setCheckResult(responseData);
+			setForgotPasswordResponse(responseData);
 		}
 		catch (error) {
 			console.log(error.message);
@@ -73,10 +73,10 @@ export function ForgotPasswordForm() {
 	const handleContinueToSignup = async () => {
 		// Check if the username is a valid Tax ID
 		const isValidTaxId = validateTaxId(form.values.username, false, ['singular']);
-		if (!isValidTaxId) return window.location.href = `/signup?tax_id=${form.values.username}`;
+		if (isValidTaxId) return window.location.href = `/signup?tax_id=${form.values.username}`;
 		// Check if the username is a valid Tax ID
 		const isValidEmail = validateEmail(form.values.username, false);
-		if (!isValidEmail) return window.location.href = `/signup?email=${form.values.username}`;
+		if (isValidEmail) return window.location.href = `/signup?email=${form.values.username}`;
 		// Redirect to signup page without any parameter
 		return window.location.href = '/signup';
 	};
@@ -84,7 +84,7 @@ export function ForgotPasswordForm() {
 	//
 	// D. Render components
 
-	if (checkResult && checkResult.user_found && checkResult.has_email) {
+	if (forgotPasswordResponse && forgotPasswordResponse.user_found && forgotPasswordResponse.has_email) {
 		return (
 			<Paper className={styles.container}>
 				<Title order={2}>{t('title')}</Title>
@@ -93,14 +93,14 @@ export function ForgotPasswordForm() {
 				<Alert icon={<IconUserHeart />} title={t('status.has_user_has_email.alert.title')} w="100%">
 					<Text size="sm">{t('status.has_user_has_email.alert.message')}</Text>
 					<Space h={5} />
-					<Text fw="bold" size="sm">{checkResult?.has_email}</Text>
+					<Text fw="bold" size="sm">{forgotPasswordResponse?.has_email}</Text>
 					<Space h={5} />
 				</Alert>
 			</Paper>
 		);
 	}
 
-	if (checkResult && checkResult.user_found && !checkResult.has_email) {
+	if (forgotPasswordResponse && forgotPasswordResponse.user_found && !forgotPasswordResponse.has_email) {
 		return (
 			<Paper className={styles.container}>
 				<Title order={2}>{t('title')}</Title>
@@ -117,7 +117,7 @@ export function ForgotPasswordForm() {
 		);
 	}
 
-	if (checkResult && !checkResult.user_found) {
+	if (forgotPasswordResponse && !forgotPasswordResponse.user_found) {
 		return (
 			<Paper className={styles.container}>
 				<Title order={2}>{t('title')}</Title>

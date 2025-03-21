@@ -4,14 +4,16 @@
 
 import { FormSection } from '@/components/common/FormSection';
 import { SignupFormDefault } from '@/payload/collections/Signup/default';
+import { SignupResponse } from '@/payload/collections/Signup/types';
 import { SignupFormValidation } from '@/payload/collections/Signup/validation';
 import { UserOptions } from '@/payload/collections/User/options';
 import { navigationHandleRedirectParam } from '@/utils/navigation-handle-redirect-param';
-import { Button, Checkbox, Loader, Paper, Select, Space, Text, TextInput, Title } from '@mantine/core';
+import { Alert, Button, Checkbox, Loader, Paper, Select, Space, Text, TextInput, Title } from '@mantine/core';
 import { DateInput } from '@mantine/dates';
 import { useForm, zodResolver } from '@mantine/form';
+import { IconUserHeart } from '@tabler/icons-react';
 import { useTranslations } from 'next-intl';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import styles from './styles.module.css';
 
@@ -28,6 +30,8 @@ export function SignupForm() {
 	const [isLoading, setIsLoading] = useState(false);
 	const [isError, setIsError] = useState(false);
 
+	const [signupResponse, setSignupResponse] = useState<null | SignupResponse>();
+
 	//
 	// B. Setup form
 
@@ -43,28 +47,32 @@ export function SignupForm() {
 	//
 	// C. Handle actions
 
+	useEffect(() => {
+		// Get pre-filled values from URL query params
+		const params = new URLSearchParams(window.location.search);
+		const email = params.get('email');
+		const taxId = params.get('tax_id');
+		if (email) form.setFieldValue('email', email);
+		if (taxId) form.setFieldValue('tax_id', taxId);
+	}, []);
+
 	const handleSignup = async () => {
 		try {
 			setIsLoading(true);
-			const response = await fetch('/api/auth/login', {
-				body: JSON.stringify({
-					password: form.values.password,
-					username: form.values.username,
-				}),
-				headers: {
-					'Content-Type': 'application/json',
-				},
+			setIsError(false);
+			setSignupResponse(null);
+			const response = await fetch('/api/auth/signup', {
+				body: JSON.stringify(form.values),
+				headers: { 'Content-Type': 'application/json' },
 				method: 'POST',
 			});
-			if (!response.ok) {
-				throw new Error(`Failed to login. Status: ${response.status}`);
-			}
-			console.log('Signup successful. Redirecting to account page...');
-			navigationHandleRedirectParam('/account');
+			if (!response.ok) throw new Error(`Failed to Check. Status: ${response.status}`);
+			const responseData = await response.json();
+			setIsLoading(false);
+			setSignupResponse(responseData);
 		}
 		catch (error) {
 			console.log(error.message);
-			form.setFieldValue('password', '');
 			setIsLoading(false);
 			setIsError(true);
 		}
@@ -72,6 +80,39 @@ export function SignupForm() {
 
 	//
 	// D. Render components
+
+	if (signupResponse && signupResponse.status === 'user_exists') {
+		return (
+			<Paper className={styles.container}>
+				<Title order={2}>{t('title')}</Title>
+				<Text>{t('subtitle')}</Text>
+				<Space h={5} />
+				<Alert icon={<IconUserHeart />} title={t('status.has_user_has_email.alert.title')} w="100%">
+					<Text size="sm">{t('status.has_user_has_email.alert.message')}</Text>
+					<Space h={5} />
+					<Text fw="bold" size="sm">{signupResponse?.anonymized_email}</Text>
+					<Space h={5} />
+				</Alert>
+			</Paper>
+		);
+	}
+
+	if (signupResponse && signupResponse.status === 'user_created') {
+		return (
+			<Paper className={styles.container}>
+				<Title order={2}>{t('title')}</Title>
+				<Text>{t('subtitle')}</Text>
+				<Space h={5} />
+				<Alert icon={<IconUserHeart />} title={t('status.has_user_no_email.alert.title')} w="100%">
+					<Text size="sm">{t('status.has_user_no_email.alert.message')}</Text>
+					<Space h={5} />
+					<Text fw="bold" size="xs">+351 218 429 710</Text>
+					<Text fw="bold" size="xs">secretariado@spginecologia.pt</Text>
+					<Space h={5} />
+				</Alert>
+			</Paper>
+		);
+	}
 
 	return (
 		<Paper className={styles.container} component="form" onSubmit={form.onSubmit(handleSignup)}>

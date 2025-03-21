@@ -9,11 +9,20 @@
 export function validateEmail(value: string, isOptional: boolean): boolean {
 	//
 
-	if (isOptional && !value) {
-		return true;
-	}
+	//
+	// Return true if the value is optional and empty.
+	// Return false if the value is not optional and empty.
+
+	if (isOptional && !value) return true;
+	if (!isOptional && !value) return false;
+
+	//
+	// Check if the value is a valid email address
 
 	const isValidEmail = /.+@[^@]+\.[^@]{2,}$/.test(value);
+
+	//
+	// Return the result of the validation
 
 	return isValidEmail;
 
