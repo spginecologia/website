@@ -2,64 +2,80 @@
 /* CONTAINER */
 
 .container {
-  position: fixed;
-  z-index: 99999;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+	position: fixed;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
 }
 
 /* * */
 /* PRIMARY */
 
 .primaryWrapper {
-  z-index: 99999;
-  width: 100%;
-  background-color: var(--color-reference-white);
-  box-shadow: 0 0 8px 0 rgb(0 0 0 / 15%);
+	z-index: 1;
+	width: 100%;
+	background-color: var(--color-reference-white);
+	box-shadow: 0 0 8px 0 rgb(0 0 0 / 15%);
 }
 
 .primary {
-  display: grid;
-  grid-template-rows: 70px;
-  grid-template-columns: 120px 1fr auto;
-  gap: 50px;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  max-width: var(--frontend-global-width);
-  padding: 0 var(--frontend-global-padding);
-  margin: auto;
+	display: grid;
+	grid-template-rows: 70px;
+	grid-template-columns: 120px 1fr auto;
+	gap: 50px;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	max-width: var(--frontend-global-width);
+	padding: 0 var(--frontend-global-padding);
+	margin: auto;
+}
+
+@media (width <= 1200px) {
+	.primary {
+		grid-template-columns: 120px auto;
+	}
 }
 
 .buttons {
-  display: grid;
-  grid-template-columns: 230px minmax(170px, auto);
-  gap: 1px;
-  height: 100%;
-  background-color: var(--color-brand-support-300);
-  border-right: 1px solid var(--color-brand-support-300);
-  border-left: 1px solid var(--color-brand-support-300);
+	display: grid;
+	grid-template-columns: 230px minmax(170px, auto);
+	gap: 1px;
+	height: 100%;
+	background-color: var(--color-brand-support-300);
+	border-right: 1px solid var(--color-brand-support-300);
+	border-left: 1px solid var(--color-brand-support-300);
+}
+
+@media (width <= 1200px) {
+	.buttons {
+		display: flex;
+		gap: 15px;
+		background-color: transparent;
+		border: none;
+	}
 }
 
 /* * */
 /* SECONDARY */
 
 .secondaryWrapper {
-  width: 100%;
-  background-color: rgb(255 255 255 / 80%);
-  backdrop-filter: blur(5px);
-  box-shadow: 0 0 5px 0 rgb(0 0 0 / 15%);
+	z-index: 0;
+	width: 100%;
+	background-color: rgb(255 255 255 / 80%);
+	box-shadow: 0 0 5px 0 rgb(0 0 0 / 15%);
+	backdrop-filter: blur(5px);
 }
 
 .secondary {
-  display: flex;
-  flex-direction: row;
-  gap: 30px;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  max-width: var(--frontend-global-width);
-  padding: 10px var(--frontend-global-padding);
-  margin: auto;
+	display: flex;
+	flex-direction: row;
+	gap: 30px;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	max-width: var(--frontend-global-width);
+	padding: 10px var(--frontend-global-padding);
+	margin: auto;
 }
