@@ -71,19 +71,20 @@ export async function POST(request: Request) {
 		// Filter out the unpaid items and create
 		// a Checkout Session to initiate payment.
 
-		const unpaidItems = balanceStatus.filter(item => item.status === 'unpaid');
+		// const unpaidItems = balanceStatus.filter(item => item.status === 'unpaid');
 
-		const session = await STRIPEAPI.checkout.sessions.create({
-			automatic_tax: { enabled: true },
-			cancel_url: `${request.headers.get('origin')}/account?canceled=true`,
-			client_reference_id: currentUser.user?.id,
-			line_items: unpaidItems.map(purchaseItem => ({ price: purchaseItem.amount, quantity: 1 })),
-			mode: 'payment',
-			success_url: `${request.headers.get('origin')}/account?success=true`,
-			...customerOptions,
-		});
+		// const session = await STRIPEAPI.checkout.sessions.create({
+		// 	automatic_tax: { enabled: true },
+		// 	cancel_url: `${request.headers.get('origin')}/account?canceled=true`,
+		// 	client_reference_id: currentUser.user?.id,
+		// 	line_items: unpaidItems.map(purchaseItem => ({ price: purchaseItem.amount, quantity: 1 })),
+		// 	mode: 'payment',
+		// 	success_url: `${request.headers.get('origin')}/account?success=true`,
+		// 	...customerOptions,
+		// });
 
-		return Response.redirect(session.url ?? '');
+		return Response.redirect('');
+		// return Response.redirect(session.url ?? '');
 	}
 	catch (err) {
 		console.log(err);
