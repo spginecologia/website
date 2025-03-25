@@ -116,21 +116,21 @@ export async function POST(request: Request) {
 				notes: `Método de pagamento: ${event.data.object.payment_method_details?.type || 'Desconhecido'}`,
 			});
 			// Save the invoice to the user's account
-			await payload.update({
-				collection: 'users',
-				data: {
-					invoices: [
-						...userData.invoices || [],
-						{
-							invoice_date: invoiceData.date,
-							invoice_id: invoiceData.id,
-							invoice_number: invoiceData.number,
-							invoice_system_time: invoiceData.system_time,
-						},
-					],
-				},
-				id: userData.id,
-			});
+			// await payload.update({
+			// 	collection: 'users',
+			// 	data: {
+			// 		invoices: [
+			// 			...userData.invoices || [],
+			// 			{
+			// 				invoice_date: invoiceData.date,
+			// 				invoice_id: invoiceData.id,
+			// 				invoice_number: invoiceData.number,
+			// 				invoice_system_time: invoiceData.system_time,
+			// 			},
+			// 		],
+			// 	},
+			// 	id: userData.id,
+			// });
 			// Acknowledge the event
 			return Response.json({ received: true });
 		}
