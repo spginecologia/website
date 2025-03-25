@@ -692,6 +692,21 @@
 			"title": "Candidatura a Sócio"
 		}
 	},
+	"brand": {
+		"BrandAssetsMain": {
+			"button_1": "Download em adobe illustrator",
+			"button_2": "Download em eps",
+			"paragraph": "Disponibilizamos todos os materiais necessários para a apresentação da marca SPG nos suportes dos nossos parceiros. Para qualquer dúvida de utilização ou para requisitar materiais específicos, entre em contacto para o nosso email academia@spginecologia.pt",
+			"title": "A Nossa Marca",
+			"title_3": "Tipografia"
+		},
+		"BrandColors": {
+			"title": "As Nossas Cores"
+		},
+		"BrandTypography": {
+			"title": "Tipografia"
+		}
+	},
 	"common": {
 		"CardPublishDate": {
 			"publish_date": "Publicado a {value, date}"
