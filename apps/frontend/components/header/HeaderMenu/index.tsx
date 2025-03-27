@@ -12,11 +12,11 @@ import styles from './styles.module.css';
 
 const MENU_PAGES = [
 	{ key: 'society', path: '/society' },
-	{ key: 'sections', path: '/sections' },
-	{ key: 'workgroups', path: '/workgroups' },
-	{ key: 'news', path: '/news' },
-	{ key: 'agenda', path: '/agenda' },
-	{ key: 'award', path: '/award' },
+	{ key: 'sections', path: 'https://spginecologia.pt/seccoes' },
+	{ key: 'workgroups', path: 'https://spginecologia.pt/nucleos' },
+	{ key: 'news', path: 'https://spginecologia.pt/noticias' },
+	{ key: 'agenda', path: 'https://spginecologia.pt/agenda' },
+	{ key: 'award', path: 'https://spginecologia.pt/premio/2025' },
 ];
 
 /* * */
@@ -39,7 +39,7 @@ export function HeaderMenu() {
 					{t(`${item.key}.label`)}
 				</Link>
 			))}
-			<Link className={styles.search} href="/academia/topics">
+			<Link className={styles.search} href="https://spginecologia.pt/academia/topicos">
 				<IconSearch size={18} />
 			</Link>
 		</div>
