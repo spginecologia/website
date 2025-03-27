@@ -4,6 +4,7 @@ import { mongooseAdapter } from '@payloadcms/db-mongodb';
 import { nodemailerAdapter } from '@payloadcms/email-nodemailer';
 import { lexicalEditor } from '@payloadcms/richtext-lexical';
 import { s3Storage } from '@payloadcms/storage-s3';
+import nodemailer from 'nodemailer';
 import { buildConfig } from 'payload';
 import sharp from 'sharp';
 
@@ -73,14 +74,22 @@ export default buildConfig({
 	email: nodemailerAdapter({
 		defaultFromAddress: process.env.EMAIL_FROM_ADDRESS ?? '',
 		defaultFromName: process.env.EMAIL_FROM_NAME ?? '',
-		transportOptions: {
+		transport: nodemailer.createTransport({
 			auth: {
 				pass: process.env.EMAIL_SERVER_PASSWORD,
 				user: process.env.EMAIL_SERVER_USER,
 			},
 			host: process.env.EMAIL_SERVER_HOST,
-			port: process.env.EMAIL_SERVER_PORT,
-		},
+			port: Number(process.env.EMAIL_SERVER_PORT) || 465,
+		}),
+		// transportOptions: {
+		// 	auth: {
+		// 		pass: process.env.EMAIL_SERVER_PASSWORD,
+		// 		user: process.env.EMAIL_SERVER_USER,
+		// 	},
+		// 	host: process.env.EMAIL_SERVER_HOST,
+		// 	port: process.env.EMAIL_SERVER_PORT,
+		// },
 	}),
 
 	// Define and configure your globals in this array

@@ -47,6 +47,7 @@
 		"@carrismetropolitana/eslint": "20250325.1926.5",
 		"@types/luxon": "3.4.2",
 		"@types/node": "22.13.14",
+		"@types/nodemailer": "^6.4.17",
 		"@types/react": "19.0.12",
 		"@types/react-dom": "19.0.4",
 		"postcss": "8.5.3",
