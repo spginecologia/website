@@ -7,3 +7,21 @@
     gap: 20px;
     place-items: start stretch;
 }
+
+@media (width <= 1000px) {
+	.grid {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
+
+@media (width <= 700px) {
+	.grid {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media (width <= 400px) {
+	.grid {
+		grid-template-columns: 1fr;
+	}
+}
