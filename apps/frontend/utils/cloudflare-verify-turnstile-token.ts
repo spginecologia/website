@@ -10,7 +10,7 @@ export async function cloudflareVerifyTurnstileToken(token: string): Promise<boo
 		//
 
 		const verifyEndpoint = 'https://challenges.cloudflare.com/turnstile/v0/siteverify';
-		const secretKey = process.env.CLOUDFLARE_TURNSTILE_SECRET_KEY ?? '';
+		const secretKey = process.env.CLOUDFLARE_TURNSTILE_SECRET_KEY ?? 'missing-secret-key';
 
 		const response = await fetch(verifyEndpoint, {
 			body: `secret=${encodeURIComponent(secretKey)}&response=${encodeURIComponent(token)}`,
