@@ -718,6 +718,9 @@
 		"NoDataDisplay": {
 			"message": "Por favor, tente novamente.",
 			"title": "Sem dados disponíveis"
+		},
+		"RedirectDisplay": {
+			"title": "A redirecionar..."
 		}
 	},
 	"courses": {
