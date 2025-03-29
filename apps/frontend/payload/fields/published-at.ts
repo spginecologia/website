@@ -4,7 +4,7 @@ import type { Field } from 'payload';
 
 /* * */
 
-export const createdAtField: Field = {
+export const publishedAtField: Field = {
 
 	admin: {
 		date: {
@@ -17,8 +17,8 @@ export const createdAtField: Field = {
 	hooks: {
 		beforeChange: [
 			({ previousValue, value }) => {
-				if (!previousValue && !value) return new Date();
-				if (previousValue && !value) return previousValue;
+				if (!value && !previousValue) return new Date();
+				if (!value && previousValue) return previousValue;
 				return value;
 			},
 		],
@@ -26,7 +26,7 @@ export const createdAtField: Field = {
 
 	label: 'Data de Publicação',
 
-	name: 'createdAt',
+	name: 'publishedAt',
 
 	required: true,
 

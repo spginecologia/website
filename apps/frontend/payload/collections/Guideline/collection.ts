@@ -1,6 +1,7 @@
 /* * */
 
 import { featuredImageField } from '@/payload/fields/featured-image';
+import { publishedAtField } from '@/payload/fields/published-at';
 import { topicsField } from '@/payload/fields/topics';
 import { type CollectionConfig } from 'payload';
 
@@ -55,6 +56,7 @@ export const Guidelines: CollectionConfig = {
 			type: 'text',
 		},
 		topicsField,
+		publishedAtField,
 		featuredImageField,
 	],
 	labels: {

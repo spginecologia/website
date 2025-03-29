@@ -29,7 +29,7 @@ export function GuidelinesList() {
 	//
 	// B. Fetch data
 
-	const { data: allGuidelinesData, error: allGuidelinesError, isLoading: allGuidelinesLoading } = useSWR<PayloadAPIResponse<Guideline>>(`/api/guidelines`);
+	const { data: allGuidelinesData, error: allGuidelinesError, isLoading: allGuidelinesLoading } = useSWR<PayloadAPIResponse<Guideline>>(`/api/guidelines?limit=1000&sort=-publishedAt`);
 
 	//
 	// C. Render components
@@ -80,7 +80,7 @@ export function GuidelinesList() {
 							coverAspectRatio="210 / 297"
 							coverSrc={typeof guidelineData.featured_image === 'object' ? guidelineData.featured_image?.url : undefined}
 							href={`/academia/guidelines/${guidelineData.id}`}
-							publishDate={new Date(guidelineData.createdAt)}
+							publishDate={new Date(guidelineData.publishedAt)}
 							title={guidelineData.title}
 						/>
 					))}
