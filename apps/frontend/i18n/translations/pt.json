@@ -781,7 +781,13 @@
 		}
 	},
 	"header": {
-		"HeaderAcademia": {
+		"HeaderMenu": {
+			"agenda": {
+				"label": "Agenda"
+			},
+			"award": {
+				"label": "Prémio SPG"
+			},
 			"courses": {
 				"label": "Palestras e Cursos"
 			},
@@ -794,8 +800,17 @@
 			"home": {
 				"label": "Home"
 			},
+			"news": {
+				"label": "Notícias"
+			},
 			"publications": {
 				"label": "Publicações"
+			},
+			"sections": {
+				"label": "Secções"
+			},
+			"society": {
+				"label": "Sociedade"
 			},
 			"topics": {
 				"label": "Pesquisa por Tópicos"
@@ -805,23 +820,6 @@
 			},
 			"videos_new": {
 				"label": "Submeter Vídeo"
-			}
-		},
-		"HeaderMenu": {
-			"agenda": {
-				"label": "Agenda"
-			},
-			"award": {
-				"label": "Prémio SPG"
-			},
-			"news": {
-				"label": "Notícias"
-			},
-			"sections": {
-				"label": "Secções"
-			},
-			"society": {
-				"label": "Sociedade"
 			},
 			"workgroups": {
 				"label": "Núcleos"

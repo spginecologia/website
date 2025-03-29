@@ -11,7 +11,7 @@ import styles from './styles.module.css';
 
 /* * */
 
-const ACADEMIA_PAGES = [
+export const ACADEMIA_PAGES = [
 	{ icon: <IconBuildingCottage size={20} />, key: 'home', path: 'https://spginecologia.pt/academia' },
 	{ icon: <IconBrandYoutube size={22} />, key: 'videos', path: 'https://spginecologia.pt/academia/videos' },
 	{ icon: <IconVideoPlus size={24} />, key: 'videos_new', path: 'https://spginecologia.pt/academia/videos/new' },
@@ -30,7 +30,7 @@ export function HeaderAcademia() {
 	//
 	// A. Setup variables
 
-	const t = useTranslations('header.HeaderAcademia');
+	const t = useTranslations('header.HeaderMenu');
 
 	//
 	// B. Render components

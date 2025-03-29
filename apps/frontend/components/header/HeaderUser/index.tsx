@@ -45,8 +45,8 @@ export function HeaderUser() {
 						<span className={styles.userFirstName}>{t('login.label')}</span>
 					</Link>
 				</div>
-				<div className={styles.container} data-mobile={true}>
-					<Link className={styles.login} href="/login">
+				<div className={styles.container} data-mobile>
+					<Link className={styles.login} href="https://spginecologia.pt/account">
 						<IconUserCircle size={35} />
 					</Link>
 				</div>

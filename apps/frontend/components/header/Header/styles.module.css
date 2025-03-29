@@ -9,6 +9,20 @@
 	width: 100%;
 }
 
+.container[data-mobile="true"] {
+	display: none;
+}
+
+@media screen and (width <= 1200px) {
+	.container[data-desktop="true"] {
+		display: none;
+	}
+	.container[data-mobile="true"] {
+		display: flex;
+	}
+}
+
+
 /* * */
 /* PRIMARY */
 
@@ -34,7 +48,8 @@
 
 @media (width <= 1200px) {
 	.primary {
-		grid-template-columns: 120px auto;
+		grid-template-columns: 120px 1fr auto auto;
+		gap: 0;
 	}
 }
 
