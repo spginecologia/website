@@ -75,7 +75,7 @@ export async function POST(request: Request) {
 				last_name: validatedData.last_name,
 				medical_id: validatedData.medical_id,
 				member_since: new Date().toISOString(),
-				password: 'abc',
+				password: Math.random().toString(36).slice(0, 20),
 				phone: validatedData.phone,
 				postal_code: validatedData.postal_code,
 				send_newsletter: validatedData.send_newsletter,
