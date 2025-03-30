@@ -318,6 +318,7 @@ export const Users: CollectionConfig = {
 			options: [
 				{ label: 'Ativo', value: 'active' },
 				{ label: 'Pendente de Aprovação', value: 'pending' },
+				{ label: 'Inativo / Desconhecido', value: 'dormant' },
 			],
 			type: 'select',
 		},
