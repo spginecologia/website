@@ -2,13 +2,12 @@
 
 /* * */
 
-import type { Guideline } from '@/payload-types';
-
 import { Card } from '@/components/cards/Card';
 import { CardSkeleton } from '@/components/cards/CardSkeleton';
 import { ErrorDisplay } from '@/components/common/ErrorDisplay';
 import { NoDataDisplay } from '@/components/common/NoDataDisplay';
 import { Section } from '@/components/common/Section';
+import { type Guideline } from '@/payload-types';
 import { PayloadAPIResponse } from '@/types/payload-api-response';
 import { Title } from '@mantine/core';
 import { useTranslations } from 'next-intl';
@@ -30,7 +29,7 @@ export function HomeGuidelines() {
 	//
 	// B. Fetch data
 
-	const { data: allGuidelinesData, error: allGuidelinesError, isLoading: allGuidelinesLoading } = useSWR<PayloadAPIResponse<Guideline>>(`/api/guidelines`);
+	const { data: allGuidelinesData, error: allGuidelinesError, isLoading: allGuidelinesLoading } = useSWR<PayloadAPIResponse<Guideline>>(`/api/guidelines?limit=4&sort=-publishedAt`);
 
 	//
 	// C. Transform data
