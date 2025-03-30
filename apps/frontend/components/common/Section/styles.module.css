@@ -50,36 +50,3 @@
 	padding: 0 var(--frontend-global-padding);
 	margin: auto;
 }
-
-
-
-/* * */
-/* ACADEMIA BANNER */
-
-.academiaBanner {
-    height: 280px;
-    text-align: justify;
-    background-color: #a0285a;
-	background-size: contain;
-}
-
-.academiaBannerInnerWrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    justify-content: space-between;
-}
-
-.academiaBannerImage {
-    width: 100%;
-    max-width: 70%;
-    background-image: url("https://spginecologia.pt/wp-content/uploads/2021/07/banner-academia.svg");
-    background-repeat: no-repeat;
-    background-position: 0% 85%;
-    background-size: cover;
-}
-
-.academiaLogo {
-	width: 250px;
-    margin-top: 30px;
-}
