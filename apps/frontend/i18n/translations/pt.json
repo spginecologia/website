@@ -688,8 +688,34 @@
 					"title": "Correspondência"
 				}
 			},
-			"subtitle": "Estamos ectstáticos por ter decidido juntar-se à Sociedade Portuguesa de Ginecologia. Por favor preencha o formulário abaixo para formalizar a sua candidatura. A sua candidatura será submetida a aprovação em Assembleia Geral.",
+			"status": {
+				"has_user_no_email": {
+					"alert": {
+						"message": "A conta associada a este NIF não tem email disponível. Por favor contacte o Secretariado SPG para atualizar os seus dados.",
+						"title": "Encontrámos uma conta associada a este NIF"
+					}
+				},
+				"user_created": {
+					"alert": {
+						"message": "Os seus dados foram recebidos e serão analisados pelo Secretariado SPG. Assim que a sua candidatura for aprovada, receberá um email com as instruções para aceder à sua conta. Para qualquer dúvida não hesite em contactar-nos.",
+						"title": "Candidatura submetida com sucesso"
+					}
+				},
+				"user_exists": {
+					"alert": {
+						"action": "Recuperar Password",
+						"message": "Por favor uitlize a opção de recuperação de password para aceder à sua conta.",
+						"title": "Já existe uma conta SPG com estes dados"
+					}
+				}
+			},
+			"subtitle": "A sua candidatura será submetida a aprovação em Assembleia Geral.",
 			"title": "Candidatura a Sócio"
+		},
+		"SignupGuide": {
+			"paragraph_1": "Contribua para o futuro desta especialidade. Ao tornar-se Sócio SPG ganha acesso às áreas reservadas da Academia SPG, onde pode partilhar as suas experiências cirúrgicas e discutir conteúdos científicos de qualidade com a comunidade ginecológica.",
+			"paragraph_2": "A sua candidatura será submetida a aprovação em Assembleia Geral na próxima reunião da Sociedade. Se precisar de algum esclarecimento, teremos todo o prazer em falar consigo através dos contactos que colocamos à sua disposição.",
+			"title": "Torne-se Sócio SPG"
 		}
 	},
 	"brand": {
