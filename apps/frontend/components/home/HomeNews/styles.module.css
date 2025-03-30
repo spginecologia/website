@@ -7,3 +7,10 @@
     gap: 20px;
     place-items: start stretch;
 }
+
+@media (width <= 800px) {
+	.grid {
+		grid-template-columns: 1fr 1fr;
+		gap: 10px;
+	}
+}

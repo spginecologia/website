@@ -1,8 +1,7 @@
 /* * */
 
 import { type User } from '@/payload-types';
-import { getNotificationActionTemplate } from '@/payload/email/notification-action.template';
-import { navigationGetUrlWithRedirectParam } from '@/utils/navigation-handle-redirect-param';
+import { getNotificationPlainTemplate } from '@/payload/email/notification-plain.template';
 import payloadConfig from '@payload-config';
 import { getPayload } from 'payload';
 
@@ -11,39 +10,22 @@ import { getPayload } from 'payload';
  * @param username The username (email or Tax ID) to search for.
  * @returns The User object if found, or null if not found.
  */
-export async function payloadSendSignupEmail(userData: User, redirectTo = '/account') {
+export async function payloadSendSignupEmail(userData: User) {
 	//
 
 	const payload = await getPayload({ config: payloadConfig });
 
 	//
-	// Request a reset password token for the given user.
-
-	const tokenresult = await payload.forgotPassword({
-		collection: 'users',
-		data: { email: userData.email },
-		disableEmail: true, // DO NOT send the email
-	});
-
-	if (!tokenresult) {
-		throw new Error('Failed to generate a reset password token.');
-	}
-
-	//
 	// Prepare the required email data and send the email to the user.
 
-	const actionUrl = navigationGetUrlWithRedirectParam(`${process.env.NEXT_PUBLIC_URL}/reset?token=${tokenresult}`, redirectTo);
-
-	const htmlData = getNotificationActionTemplate({
-		action_title: 'Definir Password',
-		action_url: actionUrl,
-		content: 'Clique no botão abaixo para definir a sua password.',
-		title: 'A sua conta SPG foi criada com sucesso!',
+	const htmlData = getNotificationPlainTemplate({
+		content: 'Os seus dados serão analisados em breve pela Direção da SPG. Após a análise, receberá um email com a confirmação da sua conta. Agradecemos o seu interesse.',
+		title: 'Recebemos a sua candidatura à SPG',
 	});
 
 	await payload.sendEmail({
 		html: htmlData,
-		subject: 'A sua nova Conta SPG',
+		subject: 'Recebemos a sua candidatura à SPG',
 		to: userData.email,
 	});
 

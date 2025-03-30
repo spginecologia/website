@@ -3,20 +3,13 @@
 /* * */
 
 import { Loader } from '@/components/common/Loader';
-import { PayloadMeResponse } from '@/types/payload-api-response';
-import { IconSettings, IconUserCircle } from '@tabler/icons-react';
+import { type PayloadMeResponse } from '@/types/payload-api-response';
+import { IconUserCircle } from '@tabler/icons-react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import useSWR from 'swr';
 
 import styles from './styles.module.css';
-
-/* * */
-
-const PROFILE_PAGES = [
-	{ icon: <IconUserCircle size={24} />, key: 'account', path: '/account' },
-	{ icon: <IconSettings size={24} />, key: 'admin', path: '/admin' },
-];
 
 /* * */
 
@@ -44,31 +37,40 @@ export function HeaderUser() {
 		);
 	}
 
-	return (
-		<div className={styles.container}>
-			{(!userData || !userData.user) && (
-				<Link className={styles.login} href="/login">
-					<span className={styles.userFirstName}>{t('login.label')}</span>
-				</Link>
-			)}
-			{userData && userData.user && (
-				<>
-					<Link className={styles.target} href="/account">
+	if (!userData || !userData.user) {
+		return (
+			<>
+				<div className={styles.container} data-desktop>
+					<Link className={styles.login} href="https://spginecologia.pt/account">
+						<span className={styles.userFirstName}>{t('login.label')}</span>
+					</Link>
+				</div>
+				<div className={styles.container} data-mobile>
+					<Link className={styles.login} href="https://spginecologia.pt/account">
+						<IconUserCircle size={35} />
+					</Link>
+				</div>
+			</>
+		);
+	}
+
+	if (userData && userData.user) {
+		return (
+			<>
+				<div className={styles.container} data-desktop>
+					<Link className={styles.target} href="https://spginecologia.pt/account">
 						{userData.user.title && <span className={styles.userTitle}>{userData.user.title}</span>}
 						{userData.user.first_name && <span className={styles.userFirstName}>{userData.user.first_name.substring(0, 12)}</span>}
 					</Link>
-					<div className={styles.dropdown}>
-						{PROFILE_PAGES.map(item => (
-							<Link key={item.key} className={styles.dropdownLink} href={item.path}>
-								<span className={styles.dropdownLinkIcon}>{item.icon}</span>
-								<span className={styles.dropdownLinkLabel}>{t(`${item.key}.label`)}</span>
-							</Link>
-						))}
-					</div>
-				</>
-			)}
-		</div>
-	);
+				</div>
+				<div className={styles.container} data-mobile>
+					<Link className={styles.login} href="https://spginecologia.pt/account">
+						<IconUserCircle size={35} />
+					</Link>
+				</div>
+			</>
+		);
+	}
 
 	//
 }

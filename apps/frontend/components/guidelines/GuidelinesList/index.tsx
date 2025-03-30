@@ -2,14 +2,13 @@
 
 /* * */
 
-import type { Guideline } from '@/payload-types';
-
 import { Card } from '@/components/cards/Card';
 import { CardSkeleton } from '@/components/cards/CardSkeleton';
 import { ContentWrapper } from '@/components/common/ContentWrapper';
 import { ErrorDisplay } from '@/components/common/ErrorDisplay';
 import { NoDataDisplay } from '@/components/common/NoDataDisplay';
 import { Section } from '@/components/common/Section';
+import { type Guideline } from '@/payload-types';
 import { PayloadAPIResponse } from '@/types/payload-api-response';
 import { Title } from '@mantine/core';
 import { useTranslations } from 'next-intl';
@@ -30,7 +29,7 @@ export function GuidelinesList() {
 	//
 	// B. Fetch data
 
-	const { data: allGuidelinesData, error: allGuidelinesError, isLoading: allGuidelinesLoading } = useSWR<PayloadAPIResponse<Guideline>>(`/api/guidelines`);
+	const { data: allGuidelinesData, error: allGuidelinesError, isLoading: allGuidelinesLoading } = useSWR<PayloadAPIResponse<Guideline>>(`/api/guidelines?limit=1000&sort=-publishedAt`);
 
 	//
 	// C. Render components
@@ -81,7 +80,7 @@ export function GuidelinesList() {
 							coverAspectRatio="210 / 297"
 							coverSrc={typeof guidelineData.featured_image === 'object' ? guidelineData.featured_image?.url : undefined}
 							href={`/academia/guidelines/${guidelineData.id}`}
-							publishDate={new Date(guidelineData.createdAt)}
+							publishDate={new Date(guidelineData.publishedAt)}
 							title={guidelineData.title}
 						/>
 					))}

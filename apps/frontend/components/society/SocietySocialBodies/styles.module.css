@@ -3,7 +3,8 @@
 
 .container {
 	width: 100%;
-	padding: 30px;
+
+	/* padding: 30px; */
 	background-color: var(--color-brand-support-300);
 }
 
@@ -15,6 +16,12 @@
 	grid-template-columns: 1fr 1fr;
 	gap: 40px;
 	padding-top: 40px;
+}
+
+@media (width <= 800px) {
+	.grid {
+		grid-template-columns: 1fr;
+	}
 }
 
 .column {

@@ -295,6 +295,7 @@ export interface Guideline {
   document?: (string | null) | Document;
   url?: string | null;
   topics?: (string | Topic)[] | null;
+  publishedAt: string;
   featured_image?: (string | null) | Media;
   updatedAt: string;
   createdAt: string;
@@ -340,7 +341,7 @@ export interface News {
   is_featured?: boolean | null;
   topics?: (string | Topic)[] | null;
   featured_image?: (string | null) | Media;
-  createdAt: string;
+  publishedAt: string;
   updatedAt: string;
 }
 /**
@@ -781,6 +782,7 @@ export interface GuidelinesSelect<T extends boolean = true> {
   document?: T;
   url?: T;
   topics?: T;
+  publishedAt?: T;
   featured_image?: T;
   updatedAt?: T;
   createdAt?: T;
@@ -838,7 +840,7 @@ export interface NewsSelect<T extends boolean = true> {
   is_featured?: T;
   topics?: T;
   featured_image?: T;
-  createdAt?: T;
+  publishedAt?: T;
   updatedAt?: T;
 }
 /**

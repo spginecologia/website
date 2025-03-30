@@ -73,13 +73,14 @@ export default buildConfig({
 	email: nodemailerAdapter({
 		defaultFromAddress: process.env.EMAIL_FROM_ADDRESS ?? '',
 		defaultFromName: process.env.EMAIL_FROM_NAME ?? '',
+		skipVerify: true,
 		transportOptions: {
 			auth: {
 				pass: process.env.EMAIL_SERVER_PASSWORD,
 				user: process.env.EMAIL_SERVER_USER,
 			},
 			host: process.env.EMAIL_SERVER_HOST,
-			port: process.env.EMAIL_SERVER_PORT,
+			port: Number(process.env.EMAIL_SERVER_PORT ?? 465),
 		},
 	}),
 

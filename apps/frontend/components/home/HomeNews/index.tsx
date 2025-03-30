@@ -37,7 +37,7 @@ export function HomeNews() {
 	const sortedNewsData = useMemo(() => {
 		if (!allNewsData) return [];
 		return allNewsData.docs
-			.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
+			.sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
 			.slice(0, 3);
 	}, [allNewsData]);
 
@@ -82,7 +82,7 @@ export function HomeNews() {
 						key={newsData.id}
 						coverSrc={typeof newsData.featured_image === 'object' ? newsData.featured_image?.url : undefined}
 						href={`/news/${newsData.id}`}
-						publishDate={new Date(newsData.createdAt)}
+						publishDate={new Date(newsData.publishedAt)}
 						summary={newsData.summary}
 						title={newsData.title}
 						topic={newsData.topics && typeof newsData.topics[0] === 'object' ? newsData.topics[0] : undefined}

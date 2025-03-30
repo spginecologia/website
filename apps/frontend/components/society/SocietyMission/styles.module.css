@@ -42,6 +42,19 @@
 	grid-area: c;
 }
 
+@media (width <= 800px) {
+	.cellB {
+		display: none;
+	}
+	.grid {
+		grid-template:
+			"a" auto
+			"b" auto
+			"c" auto / 1fr;
+		gap: 20px 0;
+	}
+}
+
 /* * */
 /* TEXT */
 

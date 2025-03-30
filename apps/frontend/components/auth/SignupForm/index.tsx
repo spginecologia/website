@@ -4,14 +4,15 @@
 
 import { FormSection } from '@/components/common/FormSection';
 import { SignupFormDefault } from '@/payload/collections/Signup/default';
-import { SignupResponse } from '@/payload/collections/Signup/types';
+import { type SignupResponse } from '@/payload/collections/Signup/types';
 import { SignupFormValidation } from '@/payload/collections/Signup/validation';
 import { UserOptions } from '@/payload/collections/User/options';
 import { Alert, Button, Checkbox, Loader, Paper, Select, Space, Text, TextInput, Title } from '@mantine/core';
 import { DateInput } from '@mantine/dates';
 import { useForm, zodResolver } from '@mantine/form';
-import { IconUserHeart } from '@tabler/icons-react';
+import { IconRosetteDiscountCheckFilled, IconUserHeart } from '@tabler/icons-react';
 import { useTranslations } from 'next-intl';
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 import styles from './styles.module.css';
@@ -84,12 +85,11 @@ export function SignupForm() {
 		return (
 			<Paper className={styles.container}>
 				<Title order={2}>{t('title')}</Title>
-				<Text>{t('subtitle')}</Text>
 				<Space h={5} />
-				<Alert icon={<IconUserHeart />} title={t('status.has_user_has_email.alert.title')} w="100%">
-					<Text size="sm">{t('status.has_user_has_email.alert.message')}</Text>
+				<Alert icon={<IconUserHeart />} title={t('status.user_exists.alert.title')} w="100%">
+					<Text size="sm">{t('status.user_exists.alert.message')}</Text>
 					<Space h={5} />
-					<Text fw="bold" size="sm">{signupResponse?.anonymized_email}</Text>
+					<Button component={Link} href="/forgot">{t('status.user_exists.alert.action')}</Button>
 					<Space h={5} />
 				</Alert>
 			</Paper>
@@ -102,8 +102,8 @@ export function SignupForm() {
 				<Title order={2}>{t('title')}</Title>
 				<Text>{t('subtitle')}</Text>
 				<Space h={5} />
-				<Alert icon={<IconUserHeart />} title={t('status.has_user_no_email.alert.title')} w="100%">
-					<Text size="sm">{t('status.has_user_no_email.alert.message')}</Text>
+				<Alert icon={<IconRosetteDiscountCheckFilled />} title={t('status.user_created.alert.title')} w="100%">
+					<Text size="sm">{t('status.user_created.alert.message')}</Text>
 					<Space h={5} />
 					<Text fw="bold" size="xs">+351 218 429 710</Text>
 					<Text fw="bold" size="xs">secretariado@spginecologia.pt</Text>

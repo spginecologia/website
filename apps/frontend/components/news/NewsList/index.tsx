@@ -39,7 +39,7 @@ export function NewsList() {
 	const featuredNewsItem = useMemo(() => {
 		if (!allNewsData) return null;
 		return allNewsData.docs
-			.sort((a, b) => b.createdAt.localeCompare(a.createdAt))
+			.sort((a, b) => b.publishedAt.localeCompare(a.publishedAt))
 			.filter(news => news.is_featured)
 			.pop();
 	}, [allNewsData]);
@@ -48,7 +48,7 @@ export function NewsList() {
 		if (!allNewsData) return [];
 		return allNewsData.docs
 			.filter(news => news.id !== featuredNewsItem?.id)
-			.sort((a, b) => b.createdAt.localeCompare(a.createdAt));
+			.sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
 	}, [allNewsData, featuredNewsItem]);
 
 	//
@@ -96,7 +96,7 @@ export function NewsList() {
 					<NewsCardFeatured
 						coverSrc={typeof featuredNewsItem.featured_image === 'object' ? featuredNewsItem?.featured_image?.url : undefined}
 						href={`/news/${featuredNewsItem.id}`}
-						publishDate={new Date(featuredNewsItem.createdAt)}
+						publishDate={new Date(featuredNewsItem.publishedAt)}
 						summary={featuredNewsItem.summary}
 						title={featuredNewsItem.title}
 						topic={featuredNewsItem.topics && typeof featuredNewsItem.topics[0] === 'object' ? featuredNewsItem.topics[0] : undefined}
@@ -111,7 +111,7 @@ export function NewsList() {
 							key={newsData.id}
 							coverSrc={typeof newsData.featured_image === 'object' ? newsData.featured_image?.url : undefined}
 							href={`/news/${newsData.id}`}
-							publishDate={new Date(newsData.createdAt)}
+							publishDate={new Date(newsData.publishedAt)}
 							summary={newsData.summary}
 							title={newsData.title}
 							topic={newsData.topics && typeof newsData.topics[0] === 'object' ? newsData.topics[0] : undefined}

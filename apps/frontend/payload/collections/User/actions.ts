@@ -2,6 +2,7 @@
 
 import { User } from '@/payload-types';
 import { brevoUpdateUser } from '@/utils/brevo-update-user';
+import { payloadSendActivationEmail } from '@/utils/payload-send-activation-email';
 import { type CollectionAfterChangeHook } from 'payload';
 
 /**
@@ -25,6 +26,17 @@ export const afterChangeUser: CollectionAfterChangeHook<User> = async ({ doc, pr
 	else {
 		console.log('User updated:', doc.email);
 		await brevoUpdateUser(doc, 'email');
+	}
+
+	//
+	// If the user account_status has changed,
+	// then we need to send the activation email to the user.
+
+	if (previousDoc.account_status !== doc.account_status) {
+		console.log('User account status changed:', doc.tax_id, previousDoc.account_status, '->', doc.account_status);
+		if (doc.account_status === 'active') {
+			await payloadSendActivationEmail(doc);
+		}
 	}
 
 	//
