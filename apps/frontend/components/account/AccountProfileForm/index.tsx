@@ -96,12 +96,12 @@ export function AccountProfileForm() {
 		clearInputErrorOnChange: true,
 		initialValues: UserEditableProfileDefault,
 		onValuesChange: handleValuesChange,
-		// transformValues: (values) => {
-		// 	const birthday = values.birthday ? new Date(values.birthday) : null;
-		// 	return { ...values, birthday };
-		// },
 		validate: zodResolver(UserEditableProfileValidation),
+		validateInputOnBlur: true,
+		validateInputOnChange: true,
 	});
+
+	console.log(form.errors);
 
 	//
 	// E. Render components

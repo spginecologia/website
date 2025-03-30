@@ -12,37 +12,37 @@ export const UserEditableProfileValidation = z
 		address_1: z
 			.coerce
 			.string()
-			.optional(),
+			.nullish(),
 
 		address_2: z
 			.coerce
 			.string()
-			.optional(),
+			.nullish(),
 
 		billing_address_1: z
 			.coerce
 			.string()
-			.optional(),
+			.nullish(),
 
 		billing_address_2: z
 			.coerce
 			.string()
-			.optional(),
+			.nullish(),
 
 		billing_city: z
 			.coerce
 			.string()
-			.optional(),
+			.nullish(),
 
 		billing_name: z
 			.coerce
 			.string()
-			.optional(),
+			.nullish(),
 
 		billing_postal_code: z
 			.coerce
 			.string()
-			.optional(),
+			.nullish(),
 
 		billing_tax_id: z
 			.coerce
@@ -52,7 +52,7 @@ export const UserEditableProfileValidation = z
 		city: z
 			.coerce
 			.string()
-			.optional(),
+			.nullish(),
 
 		country: z
 			.coerce
@@ -82,7 +82,7 @@ export const UserEditableProfileValidation = z
 		postal_code: z
 			.coerce
 			.string()
-			.optional(),
+			.nullish(),
 
 		send_newsletter: z
 			.coerce
@@ -98,14 +98,13 @@ export const UserEditableProfileValidation = z
 		workplace_primary: z
 			.coerce
 			.string()
-			.optional(),
+			.nullish(),
 
 		workplace_secondary: z
 			.coerce
 			.string()
-			.optional(),
+			.nullish(),
 
-	})
-	.strict();
+	});
 
 export type UserEditableProfile = z.infer<typeof UserEditableProfileValidation>;
