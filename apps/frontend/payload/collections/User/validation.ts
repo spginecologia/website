@@ -49,12 +49,6 @@ export const UserEditableProfileValidation = z
 			.string()
 			.refine(value => validateTaxId(value, true, ['singular', 'company']), { message: 'NIF (Faturação) deve ser um número de 9 caracteres.' }),
 
-		birthday: z
-			.coerce
-			.date()
-			.optional()
-			.default(new Date(1900, 0, 1)),
-
 		city: z
 			.coerce
 			.string()

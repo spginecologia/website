@@ -365,8 +365,8 @@
 					"title": "A Sua Actividade"
 				},
 				"basic": {
-					"description": "Por favor mantenha os seus dados atualizados. Se pretender alterar o NIF ou Número da Ordem, deverá entrar em contacto com o Secretariado da SPG.",
-					"title": "Os Seus Dados"
+					"description": "Se pretender alterar os dados de identificação deverá entrar em contacto com o Secretariado da SPG.",
+					"title": "Dados de Identificação"
 				},
 				"billing": {
 					"description": "Adicione os seus dados de faturação para que possamos emitir faturas corretamente.",

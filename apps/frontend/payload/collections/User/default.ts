@@ -13,7 +13,6 @@ export const UserEditableProfileDefault: UserEditableProfile = {
 	billing_name: '',
 	billing_postal_code: '',
 	billing_tax_id: '',
-	birthday: new Date(1900, 0, 1),
 	city: '',
 	country: 'Portugal',
 	email: '',
