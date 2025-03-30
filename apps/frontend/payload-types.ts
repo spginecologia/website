@@ -80,6 +80,7 @@ export interface Config {
     products: Product;
     publications: Publication;
     sections: Section;
+	workgroup: Workgroup;
     users: User;
     videos: Video;
     'video-files': VideoFile;
@@ -405,6 +406,42 @@ export interface Section {
   updatedAt: string;
   createdAt: string;
 }
+
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "workgroups".
+ */
+export interface Workgroup {
+	id: string;
+	title: string;
+	intro_text: string;
+	project_description: string;
+	goal_description: string;
+	social_bodies?:
+	  | {
+		  name: string;
+		  position?: string | null;
+		  city?: string | null;
+		  photo?: (string | null) | Media;
+		  separated_from_next?: boolean | null;
+		  id?: string | null;
+		}[]
+	  | null;
+	useful_links?:
+	  | {
+		  title: string;
+		  content_type: 'file' | 'url';
+		  document?: (string | null) | Document;
+		  url?: string | null;
+		  id?: string | null;
+		}[]
+	  | null;
+	slug: string;
+	topics?: (string | Topic)[] | null;
+	featured_image?: (string | null) | Media;
+	updatedAt: string;
+	createdAt: string;
+  }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "users".

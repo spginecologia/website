@@ -1365,5 +1365,11 @@
 			},
 			"title": "Submeter Vídeo"
 		}
+	},
+	"workgroups": {
+		"WorkgroupsIntro": {
+			"paragraph": "Os Núcleos da Sociedade Portuguesa de Ginecologia, criados ao abrigo do Art. 8º dos seus Estatutos, asseguraram o apoio técnico à direcção da SPG em áreas especificas da Ginecologia de natureza multidisciplinar e com pontos em comum com outras especialidades. Assumem também um papel nos eventos organizados pela SPG.",
+			"title": "Promover a excelência científica."
+		}
 	}
 }
