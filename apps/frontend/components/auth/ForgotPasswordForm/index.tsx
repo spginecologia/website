@@ -11,7 +11,7 @@ import { Alert, Button, Loader, Paper, Space, Text, TextInput, Title } from '@ma
 import { useForm, zodResolver } from '@mantine/form';
 import { IconInfoCircle, IconUserHeart } from '@tabler/icons-react';
 import { useTranslations } from 'next-intl';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import styles from './styles.module.css';
 
@@ -45,7 +45,14 @@ export function ForgotPasswordForm() {
 	//
 	// C. Handle actions
 
-	const handleForgotPasswordname = async () => {
+	useEffect(() => {
+		// Get pre-filled values from URL query params
+		const params = new URLSearchParams(window.location.search);
+		const username = params.get('username');
+		if (username) form.setFieldValue('username', username);
+	}, []);
+
+	const handleFormSubmit = async () => {
 		try {
 			setIsLoading(true);
 			setIsError(false);
@@ -133,7 +140,7 @@ export function ForgotPasswordForm() {
 	}
 
 	return (
-		<Paper className={styles.container} component="form" onSubmit={form.onSubmit(handleForgotPasswordname)}>
+		<Paper className={styles.container} component="form" onSubmit={form.onSubmit(handleFormSubmit)}>
 			<Title order={2}>{t('title')}</Title>
 			<Text>{t('subtitle')}</Text>
 			<Space h={5} />
