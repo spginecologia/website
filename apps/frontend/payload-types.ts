@@ -80,7 +80,6 @@ export interface Config {
     products: Product;
     publications: Publication;
     sections: Section;
-	workgroup: Workgroup;
     users: User;
     videos: Video;
     'video-files': VideoFile;
@@ -406,49 +405,13 @@ export interface Section {
   updatedAt: string;
   createdAt: string;
 }
-
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "workgroups".
- */
-export interface Workgroup {
-	id: string;
-	title: string;
-	intro_text: string;
-	project_description: string;
-	goal_description: string;
-	social_bodies?:
-	  | {
-		  name: string;
-		  position?: string | null;
-		  city?: string | null;
-		  photo?: (string | null) | Media;
-		  separated_from_next?: boolean | null;
-		  id?: string | null;
-		}[]
-	  | null;
-	useful_links?:
-	  | {
-		  title: string;
-		  content_type: 'file' | 'url';
-		  document?: (string | null) | Document;
-		  url?: string | null;
-		  id?: string | null;
-		}[]
-	  | null;
-	slug: string;
-	topics?: (string | Topic)[] | null;
-	featured_image?: (string | null) | Media;
-	updatedAt: string;
-	createdAt: string;
-  }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "users".
  */
 export interface User {
   id: string;
-  title?: ('Sr.' | 'Sr.ª' | 'Dr.' | 'Dr.ª' | 'Prof.' | 'Prof.ª' | 'Exmo.' | 'Exmo.ª') | null;
+  title?: ('' | 'Sr.' | 'Sr.ª' | 'Dr.' | 'Dr.ª' | 'Prof.' | 'Prof.ª' | 'Exmo.' | 'Exmo.ª') | null;
   first_name?: string | null;
   last_name?: string | null;
   tax_id: string;
@@ -492,7 +455,7 @@ export interface User {
         id?: string | null;
       }[]
     | null;
-  account_status?: ('active' | 'pending') | null;
+  account_status?: ('active' | 'pending' | 'dormant') | null;
   updatedAt: string;
   createdAt: string;
   email: string;
