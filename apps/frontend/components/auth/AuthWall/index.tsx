@@ -7,7 +7,7 @@ import { Button, Image, Skeleton, Text } from '@mantine/core';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { useEffect } from 'react';
+import { useEffect, useMemo } from 'react';
 import useSWR from 'swr';
 
 import styles from './styles.module.css';
@@ -49,7 +49,21 @@ export function AuthWall({ children, invisible, redirect }: Props) {
 	const { data: userData, isLoading: userLoading } = useSWR<PayloadMeResponse>('/api/users/me');
 
 	//
-	// C. Handle actions
+	// C. Transform data
+
+	const isAuthorized = useMemo(() => {
+		// Return false if no user is logged in
+		if (!userData || !userData.user) return false;
+		// Return false if user account is 'pending'
+		if (userData.user.account_status === 'pending') return false;
+		// Return false if user account is 'dormant'
+		if (userData.user.account_status === 'dormant') return false;
+		// Return true otherwise
+		return true;
+	}, [userData]);
+
+	//
+	// D. Handle actions
 
 	useEffect(() => {
 		if (userLoading) return;
@@ -64,17 +78,17 @@ export function AuthWall({ children, invisible, redirect }: Props) {
 	}, [userData, userLoading]);
 
 	//
-	// D. Render components
+	// E. Render components
 
-	if (invisible && (userLoading || !userData || !userData.user)) {
+	if (invisible && (userLoading || !isAuthorized)) {
 		return <></>;
 	}
 
-	if (userLoading && !invisible) {
+	if (!invisible && userLoading) {
 		return <Skeleton h={200} w={400} />;
 	}
 
-	if (userData && userData.user) {
+	if (!invisible && !userLoading && isAuthorized) {
 		return children;
 	}
 
@@ -87,7 +101,6 @@ export function AuthWall({ children, invisible, redirect }: Props) {
 				<div className={styles.content}>
 					<Text ta="center">{t('message')}</Text>
 					<Button component={Link} href={`/login?redirect=${window.location.pathname}`} w="100%">{t('action_login')}</Button>
-					<Button component={Link} href={`/signup?verify=true&redirect=${window.location.pathname}`} w="100%">{t('action_verify')}</Button>
 					<Button component={Link} href={`/signup?redirect=${window.location.pathname}`} w="100%">{t('action_signup')}</Button>
 				</div>
 			</div>

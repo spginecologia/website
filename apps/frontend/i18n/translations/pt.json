@@ -471,9 +471,8 @@
 	},
 	"auth": {
 		"AuthWall": {
-			"action_login": "Já tenho conta SPG",
+			"action_login": "Já sou sócio SPG",
 			"action_signup": "Tornar-me Sócio SPG",
-			"action_verify": "Sou Sócio mas ainda não tenho conta",
 			"message": "Para aceder a este conteúdo terá de fazer login com as suas credenciais SPG."
 		},
 		"ForgotPasswordForm": {
