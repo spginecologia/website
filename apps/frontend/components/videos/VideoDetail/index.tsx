@@ -11,6 +11,8 @@ import { VideoDetailAdditionalInfo } from '@/components/videos/VideoDetailAdditi
 import { VideoDetailDescription } from '@/components/videos/VideoDetailDescription';
 import { VideoDetailMetadata } from '@/components/videos/VideoDetailMetadata';
 import { VideoDetailPlayer } from '@/components/videos/VideoDetailPlayer';
+import { VideoDetailRelatedVideos } from '@/components/videos/VideoDetailRelatedVideos';
+import { PayloadAPIResponse } from '@/types/payload-api-response';
 import { useMemo } from 'react';
 import useSWR from 'swr';
 
@@ -25,11 +27,14 @@ export function VideoDetail({ id }) {
 	// A. Fetch data
 
 	const { data: videoData } = useSWR<Video>(`/api/videos/${id}`);
+	const { data: allVideosData } = useSWR<PayloadAPIResponse<Video>>(`/api/videos`);
 
 	//
 	// B. Render components
 
 	const videoFileUrl = useMemo(() => {
+		console.log('videoData', videoData);
+		console.log('videoData.video_file', videoData?.video_file);
 		if (!videoData || !videoData.video_file) return;
 		if (typeof videoData.video_file === 'string' || !videoData.video_file.url) return;
 		return videoData.video_file.url;
@@ -41,10 +46,14 @@ export function VideoDetail({ id }) {
 		return videoData.topics as Topic[];
 	}, [videoData]);
 
-	// const relatedVideos = useMemo(() => {
-	// 	if (!videoTopics) return;
-	// 	console.log(videoTopics);
-	// }, [videoData]);
+	const relatedVideos = useMemo(() => {
+		if (!videoTopics || !allVideosData || !videoData) return;
+		return allVideosData.docs.filter((video) => {
+			if (!video.topics || !video.topics.length) return false;
+			if (video.id === videoData.id) return false;
+			return video.topics.some(topic => videoTopics.some(vt => typeof topic === 'object' && vt.id === topic.id));
+		});
+	}, [videoData, videoTopics, allVideosData]);
 
 	//
 	// C. Render components
@@ -64,7 +73,7 @@ export function VideoDetail({ id }) {
 						<div className={styles.sidebar}>
 							<VideoDetailAdditionalInfo publishDate={videoData?.createdAt} topics={videoTopics} views={videoData?.views} />
 							{/* <VideoDetailPublishConfig /> */}
-							{/* <VideoDetailRelatedVideos /> */}
+							<VideoDetailRelatedVideos list={relatedVideos} />
 						</div>
 
 					</div>

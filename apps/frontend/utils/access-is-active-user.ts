@@ -13,18 +13,13 @@ interface Props {
 export function accessIsActiveUser({ req, user }: Props): boolean {
 	//
 
-	if (req && req.user) {
-		if (req.user.collection === 'users' && req.user.account_status === 'active') {
-			return true;
-		}
-		return false;
-	}
+	if (!req || !req.user) return false;
 
-	if (user && user.account_status === 'active') {
-		return true;
-	}
+	if (req.user.collection !== 'users') return false;
 
-	return false;
+	if (req.user.account_status !== 'active' && req.user.account_status !== 'dormant') return false;
+
+	return true;
 
 	//
 }
