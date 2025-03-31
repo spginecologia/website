@@ -29,5 +29,7 @@ export async function payloadSendSignupEmail(userData: User) {
 		to: userData.email,
 	});
 
+	console.log('Signup Confirmation Email sent to:', userData.email);
+
 	//
 }

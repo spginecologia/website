@@ -47,5 +47,7 @@ export async function payloadSendResetPasswordEmail(userData: User, redirectTo?:
 		to: userData.email,
 	});
 
+	console.log('Reset Password Email sent to:', userData.email);
+
 	//
 }

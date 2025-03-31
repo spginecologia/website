@@ -47,5 +47,7 @@ export async function payloadSendActivationEmail(userData: User) {
 		to: userData.email,
 	});
 
+	console.log('Activation Email sent to:', userData.email);
+
 	//
 }
