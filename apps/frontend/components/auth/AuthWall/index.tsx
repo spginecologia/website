@@ -56,8 +56,6 @@ export function AuthWall({ children, invisible, redirect }: Props) {
 		if (!userData || !userData.user) return false;
 		// Return false if user account is 'pending'
 		if (userData.user.account_status === 'pending') return false;
-		// Return false if user account is 'dormant'
-		if (userData.user.account_status === 'dormant') return false;
 		// Return true otherwise
 		return true;
 	}, [userData]);
