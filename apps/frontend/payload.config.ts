@@ -24,6 +24,7 @@ import { Topics } from '@/payload/collections/Topic/collection';
 import { Users } from '@/payload/collections/User/collection';
 import { Videos } from '@/payload/collections/Video/collection';
 import { VideoFiles } from '@/payload/collections/VideoFile/collection';
+import { Workgroups } from '@/payload/collections/Workgroup/collection';
 
 /* * */
 
@@ -56,6 +57,7 @@ export default buildConfig({
 		Users,
 		Videos,
 		VideoFiles,
+		Workgroups,
 	],
 
 	// Whichever Database Adapter you're using should go here

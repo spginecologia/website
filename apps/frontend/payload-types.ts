@@ -83,6 +83,7 @@ export interface Config {
     users: User;
     videos: Video;
     'video-files': VideoFile;
+    workgroups: Workgroup;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
@@ -104,6 +105,7 @@ export interface Config {
     users: UsersSelect<false> | UsersSelect<true>;
     videos: VideosSelect<false> | VideosSelect<true>;
     'video-files': VideoFilesSelect<false> | VideoFilesSelect<true>;
+    workgroups: WorkgroupsSelect<false> | WorkgroupsSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
     'payload-migrations': PayloadMigrationsSelect<false> | PayloadMigrationsSelect<true>;
@@ -533,6 +535,41 @@ export interface VideoFile {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "workgroups".
+ */
+export interface Workgroup {
+  id: string;
+  title: string;
+  intro_text: string;
+  project_description: string;
+  goal_description: string;
+  social_bodies?:
+    | {
+        name: string;
+        position?: string | null;
+        city?: string | null;
+        photo?: (string | null) | Media;
+        separated_from_next?: boolean | null;
+        id?: string | null;
+      }[]
+    | null;
+  useful_links?:
+    | {
+        title: string;
+        content_type: 'file' | 'url';
+        document?: (string | null) | Document;
+        url?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  slug: string;
+  topics?: (string | Topic)[] | null;
+  featured_image?: (string | null) | Media;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-locked-documents".
  */
 export interface PayloadLockedDocument {
@@ -597,6 +634,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'video-files';
         value: string | VideoFile;
+      } | null)
+    | ({
+        relationTo: 'workgroups';
+        value: string | Workgroup;
       } | null);
   globalSlug?: string | null;
   user:
@@ -955,6 +996,40 @@ export interface VideoFilesSelect<T extends boolean = true> {
   height?: T;
   focalX?: T;
   focalY?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "workgroups_select".
+ */
+export interface WorkgroupsSelect<T extends boolean = true> {
+  title?: T;
+  intro_text?: T;
+  project_description?: T;
+  goal_description?: T;
+  social_bodies?:
+    | T
+    | {
+        name?: T;
+        position?: T;
+        city?: T;
+        photo?: T;
+        separated_from_next?: T;
+        id?: T;
+      };
+  useful_links?:
+    | T
+    | {
+        title?: T;
+        content_type?: T;
+        document?: T;
+        url?: T;
+        id?: T;
+      };
+  slug?: T;
+  topics?: T;
+  featured_image?: T;
+  updatedAt?: T;
+  createdAt?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
