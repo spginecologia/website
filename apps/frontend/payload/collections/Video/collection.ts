@@ -73,7 +73,7 @@ export const Videos: CollectionConfig = {
 		{
 			label: 'Descrição deste Vídeo',
 			name: 'description',
-			type: 'richText',
+			type: 'textarea',
 		},
 		{
 			label: 'Utilizador que Publicou',

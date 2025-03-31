@@ -4,11 +4,11 @@
 
 import type { Topic, Video } from '@/payload-types';
 
+import { AuthWall } from '@/components/auth/AuthWall';
 import { ContentWrapper } from '@/components/common/ContentWrapper';
 import { Section } from '@/components/common/Section';
 import { VideoDetailAdditionalInfo } from '@/components/videos/VideoDetailAdditionalInfo';
-// import { VideoDetailDescription } from '@/components/videos/VideoDetailDescription';
-import { AuthWall } from '@/components/auth/AuthWall';
+import { VideoDetailDescription } from '@/components/videos/VideoDetailDescription';
 import { VideoDetailMetadata } from '@/components/videos/VideoDetailMetadata';
 import { VideoDetailPlayer } from '@/components/videos/VideoDetailPlayer';
 import { useMemo } from 'react';
@@ -22,15 +22,12 @@ export function VideoDetail({ id }) {
 	//
 
 	//
-	// A. Setup variables
-
-	//
-	// B. Fetch data
+	// A. Fetch data
 
 	const { data: videoData } = useSWR<Video>(`/api/videos/${id}`);
 
 	//
-	// A. Render components
+	// B. Render components
 
 	const videoFileUrl = useMemo(() => {
 		if (!videoData || !videoData.video_file) return;
@@ -50,7 +47,7 @@ export function VideoDetail({ id }) {
 	// }, [videoData]);
 
 	//
-	// A. Render components
+	// C. Render components
 
 	return (
 		<ContentWrapper>
@@ -61,7 +58,7 @@ export function VideoDetail({ id }) {
 						<div className={styles.content}>
 							<VideoDetailPlayer url={videoFileUrl} />
 							<VideoDetailMetadata authors={videoData?.authors} introduction={videoData?.introduction} title={videoData?.title} />
-							{/* <VideoDetailDescription description={videoData.description} /> */}
+							<VideoDetailDescription description={videoData?.description} />
 						</div>
 
 						<div className={styles.sidebar}>

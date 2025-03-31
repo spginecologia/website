@@ -1,14 +1,12 @@
 /* * */
-/* GRID */
+/* DESCRIPTION */
 
-.grid {
-	display: grid;
-	grid-template-columns: 2fr 1fr;
-	grid-gap: 20px 40px;
-}
-
-
-.content {
-
-	/* grid-column: span 2; */
+.description {
+	font-family: lato, sans-serif;
+    font-size: 18px;
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.5;
+    color: var(--color-reference-black);
+    text-align: left;
+	opacity: 0.8;
 }

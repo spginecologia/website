@@ -20,9 +20,9 @@ export function VideoDetailDescription({ description }: Props) {
 	}
 
 	return (
-		<div className={styles.container}>
+		<p className={styles.description}>
 			{description}
-		</div>
+		</p>
 	);
 
 	//
