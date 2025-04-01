@@ -1,24 +1,19 @@
 /* * */
 
 import { type User } from '@/payload-types';
-import { type PayloadRequest } from 'payload';
 
 /* * */
 
-interface Props {
-	req?: null | PayloadRequest
-	user?: null | User
-}
-
-export function accessIsActiveUser({ req, user }: Props): boolean {
+export function accessIsActiveUser(userData?: null | User): boolean {
 	//
 
-	if (!req || !req.user) return false;
+	// Return false if no user is logged in
+	if (!userData) return false;
 
-	if (req.user.collection !== 'users') return false;
+	// Return false if user account is 'pending'
+	if (userData.account_status === 'pending') return false;
 
-	if (req.user.account_status !== 'active' && req.user.account_status !== 'dormant') return false;
-
+	// Return true otherwise
 	return true;
 
 	//

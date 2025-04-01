@@ -12,12 +12,12 @@ export const VideoFiles: CollectionConfig = {
 	access: {
 		create: ({ req }) => {
 			const isAdmin = accessIsAdmin({ req });
-			const isActiveUser = accessIsActiveUser({ req });
+			const isActiveUser = accessIsActiveUser(req.user?.collection === 'users' ? req.user : null);
 			return isAdmin || isActiveUser;
 		},
 		read: ({ req }) => {
 			const isAdmin = accessIsAdmin({ req });
-			const isActiveUser = accessIsActiveUser({ req });
+			const isActiveUser = accessIsActiveUser(req.user?.collection === 'users' ? req.user : null);
 			return isAdmin || isActiveUser;
 		},
 	},

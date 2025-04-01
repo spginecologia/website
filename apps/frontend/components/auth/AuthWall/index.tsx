@@ -3,6 +3,7 @@
 /* * */
 
 import { type PayloadMeResponse } from '@/types/payload-api-response';
+import { accessIsActiveUser } from '@/utils/access-is-active-user';
 import { Button, Image, Skeleton, Text } from '@mantine/core';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
@@ -52,12 +53,7 @@ export function AuthWall({ children, invisible, redirect }: Props) {
 	// C. Transform data
 
 	const isAuthorized = useMemo(() => {
-		// Return false if no user is logged in
-		if (!userData || !userData.user) return false;
-		// Return false if user account is 'pending'
-		if (userData.user.account_status === 'pending') return false;
-		// Return true otherwise
-		return true;
+		return accessIsActiveUser(userData?.user);
 	}, [userData]);
 
 	//
