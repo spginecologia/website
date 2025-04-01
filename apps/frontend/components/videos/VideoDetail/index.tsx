@@ -2,8 +2,6 @@
 
 /* * */
 
-import type { Topic, Video } from '@/payload-types';
-
 import { AuthWall } from '@/components/auth/AuthWall';
 import { ContentWrapper } from '@/components/common/ContentWrapper';
 import { Section } from '@/components/common/Section';
@@ -12,6 +10,7 @@ import { VideoDetailDescription } from '@/components/videos/VideoDetailDescripti
 import { VideoDetailMetadata } from '@/components/videos/VideoDetailMetadata';
 import { VideoDetailPlayer } from '@/components/videos/VideoDetailPlayer';
 import { VideoDetailRelatedVideos } from '@/components/videos/VideoDetailRelatedVideos';
+import { type Topic, type Video } from '@/payload-types';
 import { PayloadAPIResponse } from '@/types/payload-api-response';
 import { useMemo } from 'react';
 import useSWR from 'swr';
@@ -33,8 +32,6 @@ export function VideoDetail({ id }) {
 	// B. Render components
 
 	const videoFileUrl = useMemo(() => {
-		console.log('videoData', videoData);
-		console.log('videoData.video_file', videoData?.video_file);
 		if (!videoData || !videoData.video_file) return;
 		if (typeof videoData.video_file === 'string' || !videoData.video_file.url) return;
 		return videoData.video_file.url;
