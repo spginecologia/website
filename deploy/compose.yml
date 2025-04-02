@@ -1,6 +1,5 @@
 volumes:
   certbotdata:
-  spgdbdata:
 
 services:
   #
@@ -64,12 +63,11 @@ services:
         max-size: '1m'
         max-file: '1'
     volumes:
-      - spgdbdata:/data/db
-    environment:
-      - MONGO_INITDB_ROOT_USERNAME=spgdbuser
-      - MONGO_INITDB_ROOT_PASSWORD=spgdbpassword
-    # ports:
-    #   - 37017:27017
+      - ./spgdbdata:/data/db
+    env_file:
+      - .env.production
+    ports:
+      - 37017:27017
 
   # # # # # # # # # # # # # # # # # # # # #
   # # # # # # # # # # # # # # # # # # # # #
