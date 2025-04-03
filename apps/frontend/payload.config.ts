@@ -100,7 +100,7 @@ export default buildConfig({
 		s3Storage({
 			bucket: process.env.CLOUDFLARE_R2_BUCKET ?? 'placeholder',
 			collections: {
-				'document': true,
+				'documents': true,
 				'media': true,
 				'video-files': true,
 			},
