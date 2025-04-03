@@ -43,7 +43,7 @@ export const Courses: CollectionConfig = {
 			},
 			label: 'Ficheiro deste Curso',
 			name: 'document',
-			relationTo: 'document',
+			relationTo: 'documents',
 			type: 'upload',
 		},
 		{

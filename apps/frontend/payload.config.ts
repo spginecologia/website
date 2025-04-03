@@ -14,6 +14,7 @@ import { Courses } from '@/payload/collections/Course/collection';
 import { Documents } from '@/payload/collections/Document/collection';
 import { Event } from '@/payload/collections/Event/collection';
 import { Guidelines } from '@/payload/collections/Guideline/collection';
+import { InternalDocuments } from '@/payload/collections/InternalDocument/collection';
 import { Links } from '@/payload/collections/Link/collection';
 import { Media } from '@/payload/collections/Media/collection';
 import { News } from '@/payload/collections/News/collection';
@@ -47,6 +48,7 @@ export default buildConfig({
 		Documents,
 		Event,
 		Guidelines,
+		InternalDocuments,
 		Links,
 		Topics,
 		Media,

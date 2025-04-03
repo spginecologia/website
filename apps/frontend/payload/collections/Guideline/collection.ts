@@ -44,7 +44,7 @@ export const Guidelines: CollectionConfig = {
 			},
 			label: 'Ficheiro deste Consenso',
 			name: 'document',
-			relationTo: 'document',
+			relationTo: 'documents',
 			type: 'upload',
 		},
 		{

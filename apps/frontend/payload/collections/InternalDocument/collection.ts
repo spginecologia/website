@@ -1,14 +1,19 @@
 /* * */
 
+import { accessIsAdmin } from '@/utils/access-is-admin';
 import { type CollectionConfig } from 'payload';
 
 /* * */
 
-export const Documents: CollectionConfig = {
+export const InternalDocuments: CollectionConfig = {
 
 	access: {
-		create: () => true,
-		read: () => true,
+		create: ({ req }) => {
+			return accessIsAdmin({ req });
+		},
+		read: ({ req }) => {
+			return accessIsAdmin({ req });
+		},
 	},
 
 	fields: [],
@@ -24,11 +29,11 @@ export const Documents: CollectionConfig = {
 	},
 
 	labels: {
-		plural: 'Documentos',
-		singular: 'Documento',
+		plural: 'Documentos Internos',
+		singular: 'Documento Interno',
 	},
 
-	slug: 'documents',
+	slug: 'internal-documents',
 
 	upload: true,
 

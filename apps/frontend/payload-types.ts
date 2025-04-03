@@ -70,9 +70,10 @@ export interface Config {
   collections: {
     admins: Admin;
     courses: Course;
-    document: Document;
+    documents: Document;
     events: Event;
     guidelines: Guideline;
+    'internal-documents': InternalDocument;
     links: Link;
     topics: Topic;
     media: Media;
@@ -92,9 +93,10 @@ export interface Config {
   collectionsSelect: {
     admins: AdminsSelect<false> | AdminsSelect<true>;
     courses: CoursesSelect<false> | CoursesSelect<true>;
-    document: DocumentSelect<false> | DocumentSelect<true>;
+    documents: DocumentsSelect<false> | DocumentsSelect<true>;
     events: EventsSelect<false> | EventsSelect<true>;
     guidelines: GuidelinesSelect<false> | GuidelinesSelect<true>;
+    'internal-documents': InternalDocumentsSelect<false> | InternalDocumentsSelect<true>;
     links: LinksSelect<false> | LinksSelect<true>;
     topics: TopicsSelect<false> | TopicsSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
@@ -205,7 +207,7 @@ export interface Course {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "document".
+ * via the `definition` "documents".
  */
 export interface Document {
   id: string;
@@ -300,6 +302,24 @@ export interface Guideline {
   featured_image?: (string | null) | Media;
   updatedAt: string;
   createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "internal-documents".
+ */
+export interface InternalDocument {
+  id: string;
+  updatedAt: string;
+  createdAt: string;
+  url?: string | null;
+  thumbnailURL?: string | null;
+  filename?: string | null;
+  mimeType?: string | null;
+  filesize?: number | null;
+  width?: number | null;
+  height?: number | null;
+  focalX?: number | null;
+  focalY?: number | null;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -476,9 +496,9 @@ export interface User {
 export interface Video {
   id: string;
   title?: string | null;
-  status?: ('draft' | 'in_review' | 'approved' | 'rejected') | null;
+  status: 'draft' | 'in_review' | 'approved' | 'rejected';
   video_file?: (string | null) | VideoFile;
-  declaration_file?: (string | null) | Media;
+  declaration_file?: (string | null) | InternalDocument;
   authors?: string | null;
   section?:
     | (
@@ -570,7 +590,7 @@ export interface PayloadLockedDocument {
         value: string | Course;
       } | null)
     | ({
-        relationTo: 'document';
+        relationTo: 'documents';
         value: string | Document;
       } | null)
     | ({
@@ -580,6 +600,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'guidelines';
         value: string | Guideline;
+      } | null)
+    | ({
+        relationTo: 'internal-documents';
+        value: string | InternalDocument;
       } | null)
     | ({
         relationTo: 'links';
@@ -709,9 +733,9 @@ export interface CoursesSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "document_select".
+ * via the `definition` "documents_select".
  */
-export interface DocumentSelect<T extends boolean = true> {
+export interface DocumentsSelect<T extends boolean = true> {
   updatedAt?: T;
   createdAt?: T;
   url?: T;
@@ -776,6 +800,23 @@ export interface GuidelinesSelect<T extends boolean = true> {
   featured_image?: T;
   updatedAt?: T;
   createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "internal-documents_select".
+ */
+export interface InternalDocumentsSelect<T extends boolean = true> {
+  updatedAt?: T;
+  createdAt?: T;
+  url?: T;
+  thumbnailURL?: T;
+  filename?: T;
+  mimeType?: T;
+  filesize?: T;
+  width?: T;
+  height?: T;
+  focalX?: T;
+  focalY?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

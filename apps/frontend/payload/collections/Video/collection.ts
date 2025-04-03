@@ -11,8 +11,17 @@ import { type CollectionConfig } from 'payload';
 export const Videos: CollectionConfig = {
 
 	access: {
-		create: () => true,
-		read: () => true,
+		create: ({ req }) => {
+			const isAdmin = accessIsAdmin({ req });
+			const isActiveUser = accessIsActiveUser(req.user?.collection === 'users' ? req.user : null);
+			return isAdmin || isActiveUser;
+		},
+		read: ({ req }) => {
+			return true;
+			// const isAdmin = accessIsAdmin({ req });
+			// const isActiveUser = accessIsActiveUser(req.user?.collection === 'users' ? req.user : null);
+			// return isAdmin || isActiveUser;
+		},
 	},
 
 	admin: {
@@ -27,6 +36,7 @@ export const Videos: CollectionConfig = {
 			type: 'text',
 		},
 		{
+			defaultValue: 'draft',
 			label: 'Estado',
 			name: 'status',
 			options: [
@@ -35,20 +45,19 @@ export const Videos: CollectionConfig = {
 				{ label: 'Aprovado', value: 'approved' },
 				{ label: 'Rejeitado', value: 'rejected' },
 			],
-			// required: true,
+			required: true,
 			type: 'select',
 		},
 		{
 			label: 'Ficheiro do Vídeo',
 			name: 'video_file',
 			relationTo: 'video-files',
-			// required: true,
 			type: 'relationship',
 		},
 		{
 			label: 'Declaração Assinada',
 			name: 'declaration_file',
-			relationTo: 'media',
+			relationTo: 'internal-documents',
 			type: 'relationship',
 		},
 		{

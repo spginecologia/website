@@ -37,7 +37,7 @@ export const fileOrUrlFieldSet: Field[] = [
 		},
 		label: 'Ficheiro desta Publicação',
 		name: 'document',
-		relationTo: 'document',
+		relationTo: 'documents',
 		type: 'upload',
 	},
 
