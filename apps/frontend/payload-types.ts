@@ -516,6 +516,7 @@ export interface Video {
   views?: number | null;
   is_featured?: boolean | null;
   topics?: (string | Topic)[] | null;
+  publishedAt: string;
   featured_image?: (string | null) | Media;
   updatedAt: string;
   createdAt: string;
@@ -1002,6 +1003,7 @@ export interface VideosSelect<T extends boolean = true> {
   views?: T;
   is_featured?: T;
   topics?: T;
+  publishedAt?: T;
   featured_image?: T;
   updatedAt?: T;
   createdAt?: T;
