@@ -101,6 +101,7 @@ export default buildConfig({
 			bucket: process.env.CLOUDFLARE_R2_BUCKET ?? 'placeholder',
 			collections: {
 				'documents': true,
+				'internal-documents': true,
 				'media': true,
 				'video-files': true,
 			},
