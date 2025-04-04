@@ -517,6 +517,11 @@
 			"title": "Verificação de Conta"
 		},
 		"LoginForm": {
+			"alert": {
+				"action": "Clique aqui para redefinir a sua password",
+				"message": "Agora já é possível entrar na sua conta SPG através do seu Número de Contribuinte pessoal! Por este motivo, poderá ser necessário redefinir a sua password.",
+				"title": "Nova experiência de login"
+			},
 			"error": {
 				"message": "Login falhou. Email ou password incorretos.",
 				"retry": "Tentar Novamente"

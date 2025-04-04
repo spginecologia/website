@@ -5,8 +5,9 @@
 import { LoginDefault } from '@/payload/collections/Login/default';
 import { LoginValidation } from '@/payload/collections/Login/validation';
 import { navigationHandleRedirectParam } from '@/utils/navigation-handle-redirect-param';
-import { Anchor, Button, Loader, Paper, Space, Text, TextInput, Title } from '@mantine/core';
+import { Alert, Anchor, Button, Loader, Paper, Space, Text, TextInput, Title } from '@mantine/core';
 import { useForm, zodResolver } from '@mantine/form';
+import { IconSparkles } from '@tabler/icons-react';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 
@@ -72,11 +73,19 @@ export function LoginForm() {
 
 	return (
 		<Paper className={styles.container} component="form" onSubmit={form.onSubmit(handleLogin)}>
+
 			<Title order={2}>{t('title')}</Title>
-			<Text>{t('subtitle')}</Text>
+
+			<Alert icon={<IconSparkles />} title={t('alert.title')} w="100%">
+				<Text size="xs">{t('alert.message')}</Text>
+				<Anchor href={`/forgot?username=${form.values.username}`} id={styles.anchor} variant="link">{t('alert.action')}</Anchor>
+			</Alert>
+
 			<Space h={5} />
+
 			<TextInput disabled={isLoading} label={t('username.label')} placeholder={t('username.placeholder')} w="100%" {...form.getInputProps('username')} />
 			<TextInput disabled={isLoading} label={t('password.label')}placeholder={t('password.placeholder')} type="password" w="100%" {...form.getInputProps('password')} />
+
 			{isLoading && <Loader />}
 			{(!isLoading && form.isDirty()) && <Button disabled={!form.isValid()} type="submit">{t('submit.label')}</Button>}
 			{(!isLoading && isError) && (
@@ -85,8 +94,10 @@ export function LoginForm() {
 					<Text variant="error">{t('error.message')}</Text>
 				</>
 			)}
+
 			<Space h={5} />
 			<Anchor href={`/forgot?username=${form.values.username}`} id={styles.anchor} variant="link">{t('reset_password')}</Anchor>
+
 		</Paper>
 	);
 
