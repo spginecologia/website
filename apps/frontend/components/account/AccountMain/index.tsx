@@ -12,6 +12,7 @@ import { useEffect } from 'react';
 import useSWR from 'swr';
 
 import { AccountIntro } from '../AccountIntro';
+import { AccountLogoutButton } from '../AccountLogoutButton';
 import styles from './styles.module.css';
 
 /* * */
@@ -52,6 +53,9 @@ export function AccountMain() {
 						<AccountProfile />
 					</div>
 				</div>
+			</Section>
+			<Section>
+				<AccountLogoutButton />
 			</Section>
 		</ContentWrapper>
 	);

@@ -209,6 +209,9 @@
 			},
 			"title": "Olá {name}"
 		},
+		"AccountLogoutButton": {
+			"label": "Terminar Sessão"
+		},
 		"AccountPayments": {
 			"subtitle": "Faça a gestão autónoma das suas quotas de sócio.",
 			"title": "Pagamentos & Faturas"
