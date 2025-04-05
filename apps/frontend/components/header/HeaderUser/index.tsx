@@ -41,12 +41,12 @@ export function HeaderUser() {
 		return (
 			<>
 				<div className={styles.container} data-desktop>
-					<Link className={styles.login} href="https://spginecologia.pt/account">
+					<Link className={styles.login} href="/login">
 						<span className={styles.userFirstName}>{t('login.label')}</span>
 					</Link>
 				</div>
 				<div className={styles.container} data-mobile>
-					<Link className={styles.login} href="https://spginecologia.pt/account">
+					<Link className={styles.login} href="/login">
 						<IconUserCircle size={35} />
 					</Link>
 				</div>
@@ -58,13 +58,13 @@ export function HeaderUser() {
 		return (
 			<>
 				<div className={styles.container} data-desktop>
-					<Link className={styles.target} href="https://spginecologia.pt/account">
+					<Link className={styles.target} href="/account">
 						{userData.user.title && <span className={styles.userTitle}>{userData.user.title}</span>}
 						{userData.user.first_name && <span className={styles.userFirstName}>{userData.user.first_name.substring(0, 12)}</span>}
 					</Link>
 				</div>
 				<div className={styles.container} data-mobile>
-					<Link className={styles.login} href="https://spginecologia.pt/account">
+					<Link className={styles.login} href="/account">
 						<IconUserCircle size={35} />
 					</Link>
 				</div>
