@@ -50,6 +50,7 @@
 	.primary {
 		grid-template-columns: 120px 1fr auto auto;
 		gap: 0;
+		padding-right: 0;
 	}
 }
 
