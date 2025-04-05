@@ -39,7 +39,7 @@ export function NewsList() {
 	const featuredNewsItem = useMemo(() => {
 		if (!allNewsData) return null;
 		return allNewsData.docs
-			.sort((a, b) => b.publishedAt.localeCompare(a.publishedAt))
+			.sort((a, b) => b.publishedAt?.localeCompare(a.publishedAt))
 			.filter(news => news.is_featured)
 			.pop();
 	}, [allNewsData]);
@@ -48,7 +48,7 @@ export function NewsList() {
 		if (!allNewsData) return [];
 		return allNewsData.docs
 			.filter(news => news.id !== featuredNewsItem?.id)
-			.sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
+			.sort((a, b) => b.publishedAt?.localeCompare(a.publishedAt));
 	}, [allNewsData, featuredNewsItem]);
 
 	//

@@ -39,7 +39,7 @@ export function VideosList() {
 	const featuredVideosItems = useMemo(() => {
 		if (!allVideosData) return [];
 		return allVideosData.docs
-			.sort((a, b) => b.publishedAt.localeCompare(a.publishedAt))
+			.sort((a, b) => b.publishedAt?.localeCompare(a.publishedAt))
 			.filter(video => video.is_featured)
 			.slice(0, 3);
 	}, [allVideosData]);
@@ -49,7 +49,7 @@ export function VideosList() {
 		const featuredVideosIds = featuredVideosItems?.map(video => video.id);
 		return allVideosData.docs
 			.filter(video => !featuredVideosIds?.includes(video.id))
-			.sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
+			.sort((a, b) => b.publishedAt?.localeCompare(a.publishedAt));
 	}, [allVideosData, featuredVideosItems]);
 
 	//
