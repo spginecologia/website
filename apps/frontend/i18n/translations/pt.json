@@ -574,7 +574,7 @@
 			"actions": {
 				"has_errors": "Existem erros no preenchimento",
 				"submit": {
-					"label": "Atualizar dados"
+					"label": "Submeter candidatura"
 				}
 			},
 			"error": "Não foi possível carregar o seu perfil",
