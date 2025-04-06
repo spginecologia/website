@@ -12,7 +12,7 @@ import styles from './styles.module.css';
 
 export function VideosSubmit() {
 	return (
-		<ContentWrapper className={styles.contentWrapperOverride}>
+		<ContentWrapper variant="support">
 			<Section withTopSpacer="transparent">
 				<div className={styles.grid}>
 					<div />

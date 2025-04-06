@@ -2,6 +2,8 @@
 
 /* * */
 
+import { AccountIntro } from '@/components/account/AccountIntro';
+import { AccountLogoutButton } from '@/components/account/AccountLogoutButton';
 import { AccountPayments } from '@/components/account/AccountPayments';
 import { AccountProfile } from '@/components/account/AccountProfile';
 import { AccountVideos } from '@/components/account/AccountVideos';
@@ -11,8 +13,6 @@ import { type PayloadMeResponse } from '@/types/payload-api-response';
 import { useEffect } from 'react';
 import useSWR from 'swr';
 
-import { AccountIntro } from '../AccountIntro';
-import { AccountLogoutButton } from '../AccountLogoutButton';
 import styles from './styles.module.css';
 
 /* * */
@@ -39,7 +39,7 @@ export function AccountMain() {
 	// C. Render components
 
 	return (
-		<ContentWrapper className={styles.contentWrapperOverride}>
+		<ContentWrapper variant="support">
 			<Section withTopSpacer="transparent">
 				<AccountIntro />
 			</Section>

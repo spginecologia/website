@@ -43,7 +43,7 @@ export function AuthWrapper({ children, sidebar }: Props) {
 
 	if (userLoading) {
 		return (
-			<ContentWrapper className={styles.contentWrapperOverride}>
+			<ContentWrapper variant="brand-secondary">
 				<Section withTopSpacer="transparent">
 					<div className={styles.grid}>
 						<Skeleton height={350} />
@@ -56,7 +56,7 @@ export function AuthWrapper({ children, sidebar }: Props) {
 
 	if (!sidebar) {
 		return (
-			<ContentWrapper className={styles.contentWrapperOverride}>
+			<ContentWrapper variant="brand-secondary">
 				<Section withTopSpacer="transparent">
 					<div className={styles.grid} data-full-width>
 						{children}
@@ -67,7 +67,7 @@ export function AuthWrapper({ children, sidebar }: Props) {
 	}
 
 	return (
-		<ContentWrapper className={styles.contentWrapperOverride}>
+		<ContentWrapper variant="brand-secondary">
 			<Section withTopSpacer="transparent">
 				<div className={styles.grid}>
 					{children}

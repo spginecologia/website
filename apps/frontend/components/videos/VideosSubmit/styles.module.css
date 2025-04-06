@@ -1,11 +1,4 @@
 /* * */
-/* CONTENT WRAPPER OVERRIDE */
-
-.contentWrapperOverride {
-	background-color: var(--color-brand-support-300);
-}
-
-/* * */
 /* GRID */
 
 .grid {

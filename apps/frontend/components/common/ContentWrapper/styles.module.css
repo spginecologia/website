@@ -8,6 +8,28 @@
 	padding-bottom: 60px;
 }
 
-.container.withGap {
+/* * */
+/* PROPS / WITH GAP */
+
+.container[data-with-gap="true"] {
 	gap: 50px;
+}
+
+/* * */
+/* PROPS / VARIANT */
+
+.container[data-variant="default"] {
+	background-color: var(--color-system-background-100);
+}
+
+.container[data-variant="brand-primary"] {
+	background-color: var(--color-brand-primary-100);
+}
+
+.container[data-variant="brand-secondary"] {
+	background-color: var(--color-brand-primary-300)
+}
+
+.container[data-variant="support"] {
+	background-color: var(--color-brand-support-300);
 }

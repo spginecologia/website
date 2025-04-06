@@ -6,14 +6,14 @@ import styles from './styles.module.css';
 
 interface Props {
 	children: React.ReactNode
-	className?: string
+	variant?: 'brand-primary' | 'brand-secondary' | 'default' | 'support'
 	withGap?: boolean
 }
 /* * */
 
-export function ContentWrapper({ children, className = '', withGap = true }: Props) {
+export function ContentWrapper({ children, variant = 'default', withGap = true }: Props) {
 	return (
-		<div className={`${styles.container} ${withGap && styles.withGap} ${className}`}>
+		<div className={styles.container} data-variant={variant} data-with-gap={withGap}>
 			{children}
 		</div>
 	);
