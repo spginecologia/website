@@ -29,6 +29,8 @@ export const Users: CollectionConfig = {
 			secure: true,
 		},
 
+		maxLoginAttempts: 0,
+
 		// This is being handled by the custom API routes
 		forgotPassword: undefined,
 
