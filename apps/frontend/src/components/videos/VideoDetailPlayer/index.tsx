@@ -17,11 +17,11 @@ export function VideoDetailPlayer({ url }: Props) {
 	//
 
 	if (!url) {
-		return <Skeleton className={styles.skeleton} animate />;
+		return <Skeleton animate className={styles.skeleton} />;
 	}
 
 	return (
-		<video className={styles.player} autoPlay controls>
+		<video autoPlay className={styles.player} controls>
 			<source src={url} type="video/mp4" />
 		</video>
 	);

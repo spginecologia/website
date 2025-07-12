@@ -9,8 +9,9 @@ import { SignupFormValidation } from '@/payload/collections/Signup/validation';
 import { UserOptions } from '@/payload/collections/User/options';
 import { Alert, Button, Checkbox, Loader, Paper, Select, Space, Text, TextInput, Title } from '@mantine/core';
 import { DateInput } from '@mantine/dates';
-import { useForm, zodResolver } from '@mantine/form';
+import { useForm } from '@mantine/form';
 import { IconRosetteDiscountCheckFilled, IconUserHeart } from '@tabler/icons-react';
+import { zod4Resolver } from 'mantine-form-zod-resolver';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
@@ -41,7 +42,7 @@ export function SignupForm() {
 		onValuesChange: () => {
 			setIsError(false);
 		},
-		validate: zodResolver(SignupFormValidation),
+		validate: zod4Resolver(SignupFormValidation),
 	});
 
 	//

@@ -32,7 +32,7 @@ export function HeaderUser() {
 	if (userLoading) {
 		return (
 			<div className={styles.container}>
-				<Loader size={20} full visible />
+				<Loader full size={20} visible />
 			</div>
 		);
 	}

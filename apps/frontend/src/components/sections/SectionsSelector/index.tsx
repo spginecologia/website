@@ -28,7 +28,7 @@ export function SectionsSelector({ withTopSpacer = false }) {
 
 	if (allSectionsLoading) {
 		return (
-			<LayoutSection withTopSpacer={withTopSpacer ? 'transparent' : 'none'} withPadding>
+			<LayoutSection withPadding withTopSpacer={withTopSpacer ? 'transparent' : 'none'}>
 				<div className={styles.grid}>
 					{[...Array(5)].map((_, i) => <SectionsSelectorItem key={i} />)}
 				</div>
@@ -38,7 +38,7 @@ export function SectionsSelector({ withTopSpacer = false }) {
 
 	if (allSectionsError) {
 		return (
-			<LayoutSection withTopSpacer={withTopSpacer ? 'transparent' : 'none'} withPadding>
+			<LayoutSection withPadding withTopSpacer={withTopSpacer ? 'transparent' : 'none'}>
 				<ErrorDisplay />
 			</LayoutSection>
 		);
@@ -46,20 +46,20 @@ export function SectionsSelector({ withTopSpacer = false }) {
 
 	if (!allSectionsData?.docs.length) {
 		return (
-			<LayoutSection withTopSpacer={withTopSpacer ? 'transparent' : 'none'} withPadding>
+			<LayoutSection withPadding withTopSpacer={withTopSpacer ? 'transparent' : 'none'}>
 				<NoDataDisplay />
 			</LayoutSection>
 		);
 	}
 
 	return (
-		<LayoutSection withTopSpacer={withTopSpacer ? 'transparent' : 'none'} withPadding>
+		<LayoutSection withPadding withTopSpacer={withTopSpacer ? 'transparent' : 'none'}>
 			<div className={styles.grid}>
 				{allSectionsData?.docs?.map(sectionData => (
 					<SectionsSelectorItem
-						key={sectionData.id}
-						imageSrc={typeof sectionData.featured_image === 'object' ? sectionData.featured_image?.url : ''}
-						slug={sectionData.slug}
+  key={sectionData.id}
+  imageSrc={typeof sectionData.featured_image === 'object' ? sectionData.featured_image?.url : ''}
+  slug={sectionData.slug}
 					/>
 				))}
 			</div>

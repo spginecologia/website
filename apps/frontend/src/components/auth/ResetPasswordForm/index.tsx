@@ -6,7 +6,8 @@ import { ResetPasswordDefault } from '@/payload/collections/ResetPassword/defaul
 import { ResetPasswordValidation } from '@/payload/collections/ResetPassword/validation';
 import { navigationHandleRedirectParam } from '@/utils/navigation-handle-redirect-param';
 import { Button, Loader, Paper, PasswordInput, Space, Text, Title } from '@mantine/core';
-import { useForm, zodResolver } from '@mantine/form';
+import { useForm } from '@mantine/form';
+import { zod4Resolver } from 'mantine-form-zod-resolver';
 import { useTranslations } from 'next-intl';
 import { useMemo, useState } from 'react';
 
@@ -36,7 +37,7 @@ export function ResetPasswordForm() {
 		onValuesChange: () => {
 			setIsError(false);
 		},
-		validate: zodResolver(ResetPasswordValidation),
+		validate: zod4Resolver(ResetPasswordValidation),
 	});
 
 	//

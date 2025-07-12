@@ -5,8 +5,9 @@
 import { NewsletterDefault } from '@/payload/collections/Newsletter/default';
 import { NewsletterValidation } from '@/payload/collections/Newsletter/validation';
 import { Button, Loader, Space, Text, TextInput, Title } from '@mantine/core';
-import { useForm, zodResolver } from '@mantine/form';
+import { useForm } from '@mantine/form';
 import { Turnstile } from '@marsidev/react-turnstile';
+import { zod4Resolver } from 'mantine-form-zod-resolver';
 import { useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';
 
@@ -35,7 +36,7 @@ export function FooterNewsletter() {
 		onValuesChange: () => {
 			setIsError(false);
 		},
-		validate: zodResolver(NewsletterValidation),
+		validate: zod4Resolver(NewsletterValidation),
 	});
 
 	//

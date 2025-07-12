@@ -41,7 +41,7 @@ export function PublicationsList() {
 				<Section withTopSpacer="academia">
 					<Title order={1}>{t('title')}</Title>
 					<div className={styles.grid}>
-						{[...Array(10)].map((_, i) => <CardSkeleton key={i} coverAspectRatio="210 / 297" />)}
+						{[...Array(10)].map((_, i) => <CardSkeleton coverAspectRatio="210 / 297" key={i} />)}
 					</div>
 				</Section>
 			</ContentWrapper>
@@ -77,12 +77,12 @@ export function PublicationsList() {
 				<div className={styles.grid}>
 					{allPublicationsData?.docs.map(guideline => (
 						<Card
-							key={guideline.id}
-							coverAspectRatio="210 / 297"
-							coverSrc={typeof guideline.featured_image === 'object' ? guideline?.featured_image?.url : undefined}
-							href={`/academia/publications/${guideline.id}`}
-							publishDate={new Date(guideline.createdAt)}
-							title={guideline.title}
+  key={guideline.id}
+  coverAspectRatio="210 / 297"
+  coverSrc={typeof guideline.featured_image === 'object' ? guideline?.featured_image?.url : undefined}
+  href={`/academia/publications/${guideline.id}`}
+  publishDate={new Date(guideline.createdAt)}
+  title={guideline.title}
 						/>
 					))}
 				</div>

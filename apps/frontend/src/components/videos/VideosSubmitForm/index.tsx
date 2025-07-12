@@ -7,7 +7,8 @@ import { Videos } from '@/payload/collections/Video/collection';
 import { VideoDefault } from '@/payload/collections/Video/default';
 import { VideoValidationClient } from '@/payload/collections/Video/validation';
 import { Button, Checkbox, FileInput, MultiSelect, Paper, Select, Space, Text, Textarea, TextInput, Title } from '@mantine/core';
-import { useForm, zodResolver } from '@mantine/form';
+import { useForm } from '@mantine/form';
+import { zod4Resolver } from 'mantine-form-zod-resolver';
 import { useTranslations } from 'next-intl';
 import { useMemo, useState } from 'react';
 import useSWR from 'swr';
@@ -82,7 +83,7 @@ export function VideosSubmitForm() {
 		clearInputErrorOnChange: true,
 		initialValues: VideoDefault,
 		onValuesChange: handleValuesChange,
-		validate: zodResolver(VideoValidationClient),
+		validate: zod4Resolver(VideoValidationClient),
 	});
 
 	//

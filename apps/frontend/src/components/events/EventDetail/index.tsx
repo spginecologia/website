@@ -6,8 +6,9 @@ import { Section } from '@/components/common/Section';
 import { Title } from '@mantine/core';
 import Image from 'next/image';
 
-import FrontendTopicTag from '../../FrontendTopicTag/FrontendTopicTag';
 import styles from './styles.module.css';
+
+import FrontendTopicTag from '../../FrontendTopicTag/FrontendTopicTag';
 
 /* * */
 
@@ -37,7 +38,7 @@ export function EventDetail({ id }) {
 		<ContentWrapper>
 			<Section withTopSpacer="transparent">
 				<div className={styles.imageWrapper}>
-					<Image alt="" src={newsData.image_url} style={{ objectFit: 'cover' }} fill />
+					<Image alt="" fill src={newsData.image_url} style={{ objectFit: 'cover' }} />
 				</div>
 			</Section>
 			<Section>

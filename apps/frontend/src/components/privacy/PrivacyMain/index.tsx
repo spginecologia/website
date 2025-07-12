@@ -22,7 +22,7 @@ export function PrivacyMain({ withTopSpacer = true }) {
 
 	return (
 		<ContentWrapper>
-			<Section withTopSpacer={withTopSpacer ? 'transparent' : 'none'} withPadding>
+			<Section withPadding withTopSpacer={withTopSpacer ? 'transparent' : 'none'}>
 				<Title order={1}>{t('title')}</Title>
 				<div className={styles.grid}>
 					<div className={styles.cell}>

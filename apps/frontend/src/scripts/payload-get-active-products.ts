@@ -1,7 +1,7 @@
 /* * */
 
-import { type Product } from '@/payload-types';
 import payloadConfig from '@/payload-config';
+import { type Product } from '@/payload-types';
 import { getPayload } from 'payload';
 
 /* * */

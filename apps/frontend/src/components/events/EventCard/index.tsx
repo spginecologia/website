@@ -36,12 +36,12 @@ export function EventCard({ coverSrc, endDate, href, startDate, title, topic }: 
 	// B. Render components
 
 	return (
-		<CardWrapper className={styles.container} href={href} variant="featured" fullHeight>
+		<CardWrapper className={styles.container} fullHeight href={href} variant="featured">
 			<CardCoverImage aspectRatio="900 / 400" src={coverSrc} />
 			<div className={styles.bottomWrapper}>
 				<DateRibbon date={startDate} />
 				<div className={styles.contentWrapper}>
-					{topic && <TopicDisplay id={topic.id} title={topic.title} noLink />}
+					{topic && <TopicDisplay id={topic.id} noLink title={topic.title} />}
 					<Title order={2} size="sm">{title}</Title>
 					<div className={styles.datesWrapper}>
 						{startDate && <Text size="sm">{t('start_date', { value: startDate })}</Text>}

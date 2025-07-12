@@ -30,7 +30,7 @@ export function VideoCard({ authors, coverSrc, duration, href, summary, title, t
 		<CardWrapper href={href} variant="default">
 			<VideoCoverImage coverSrc={coverSrc} duration={duration} views={views} />
 			<div />
-			{topic && <TopicDisplay id={topic.id} title={topic.title} noLink />}
+			{topic && <TopicDisplay id={topic.id} noLink title={topic.title} />}
 			<Title order={2} size="sm">{title}</Title>
 			{authors && <p className={styles.authors}>{authors}</p>}
 			<CardSummary size="sm" text={summary} />

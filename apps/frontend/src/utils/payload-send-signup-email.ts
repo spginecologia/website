@@ -1,8 +1,8 @@
 /* * */
 
+import payloadConfig from '@/payload-config';
 import { type User } from '@/payload-types';
 import { getNotificationPlainTemplate } from '@/payload/email/notification-plain.template';
-import payloadConfig from '@/payload-config';
 import { getPayload } from 'payload';
 
 /**

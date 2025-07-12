@@ -22,6 +22,8 @@ import { IconCaretLeftFilled } from '@tabler/icons-react';
 
 /* * */
 
+import Link from 'next/link';
+
 import AccordionOverride from '@/themes/_default/overrides/Accordion.module.css';
 import AlertOverride from '@/themes/_default/overrides/Alert.module.css';
 import AnchorOverride from '@/themes/_default/overrides/Anchor.module.css';
@@ -40,7 +42,6 @@ import TableOverride from '@/themes/_default/overrides/Table.module.css';
 import TextOverride from '@/themes/_default/overrides/Text.module.css';
 import TextInputOverride from '@/themes/_default/overrides/TextInput.module.css';
 import TitleOverride from '@/themes/_default/overrides/Title.module.css';
-import Link from 'next/link';
 
 /* * */
 

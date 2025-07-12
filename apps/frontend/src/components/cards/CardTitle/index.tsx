@@ -17,7 +17,7 @@ export function CardTitle({ text, variant = 'default' }: Props) {
 	//
 
 	if (!text) {
-		return <Skeleton h={20} w="80%" animate />;
+		return <Skeleton animate h={20} w="80%" />;
 	}
 
 	if (variant === 'serif') {

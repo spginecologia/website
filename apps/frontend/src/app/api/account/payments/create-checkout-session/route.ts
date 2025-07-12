@@ -1,10 +1,10 @@
 /* * */
 
+import payloadConfig from '@/payload-config';
 import { payloadGetBalanceStatus } from '@/scripts/payload-get-balance-status';
 import { stripeGetBalanceStatus } from '@/scripts/stripe-get-balance-status';
 import { STRIPEAPI } from '@/services/STRIPEAPI';
 import { Purchase } from '@/types/payments';
-import payloadConfig from '@/payload-config';
 import { getPayload } from 'payload';
 
 /* * */

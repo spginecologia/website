@@ -19,15 +19,20 @@ export function CardSummary({ size = 'md', text }: Props) {
 	if (!text) {
 		return (
 			<div className={styles.skeletonWrapper}>
-				<Skeleton h={15} w="80%" animate />
-				<Skeleton h={15} w="100%" animate />
-				<Skeleton h={15} w="60%" animate />
+				<Skeleton animate h={15} w="80%" />
+				<Skeleton animate h={15} w="100%" />
+				<Skeleton animate h={15} w="60%" />
 			</div>
 		);
 	}
 
 	if (text.length > 153) {
-		return <Text size={size}>{text.substring(0, 150)}...</Text>;
+		return (
+			<Text size={size}>
+				{text.substring(0, 150)}
+				...
+			</Text>
+		);
 	}
 
 	return <Text size={size}>{text}</Text>;

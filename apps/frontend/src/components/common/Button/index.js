@@ -9,13 +9,17 @@ export default function Button({ fullwidth = false, label = 'Button Label', vari
 		case 'default':
 			return (
 				<button className={`${styles.button} ${styles.default} ${fullwidth && styles.fullwidth}`} {...props}>
-					deprecated {label}
+					deprecated
+					{' '}
+					{label}
 				</button>
 			);
 		case 'muted':
 			return (
 				<button className={`${styles.button} ${styles.muted} ${fullwidth && styles.fullwidth}`} {...props}>
-					deprecated {label}
+					deprecated
+					{' '}
+					{label}
 				</button>
 			);
 		default:

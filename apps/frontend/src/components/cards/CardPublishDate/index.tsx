@@ -25,7 +25,7 @@ export function CardPublishDate({ date }: Props) {
 	// B. Render components
 
 	if (!date) {
-		return <Skeleton h={15} w="60%" animate />;
+		return <Skeleton animate h={15} w="60%" />;
 	}
 
 	return <p className={styles.date}>{t('publish_date', { value: date })}</p>;

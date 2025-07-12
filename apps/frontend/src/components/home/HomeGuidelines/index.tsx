@@ -49,7 +49,7 @@ export function HomeGuidelines() {
 			<Section>
 				<Title order={1}>{t('title')}</Title>
 				<div className={styles.grid}>
-					{[...Array(4)].map((_, i) => <CardSkeleton key={i} coverAspectRatio="210 / 297" />)}
+					{[...Array(4)].map((_, i) => <CardSkeleton coverAspectRatio="210 / 297" key={i} />)}
 				</div>
 			</Section>
 		);
@@ -79,12 +79,12 @@ export function HomeGuidelines() {
 			<div className={styles.grid}>
 				{sortedGuidelinesData.map(guidelineData => (
 					<Card
-						key={guidelineData.id}
-						coverAspectRatio="210 / 297"
-						coverSrc={typeof guidelineData.featured_image === 'object' ? guidelineData.featured_image?.url : undefined}
-						href={`/academia/guidelines/${guidelineData.id}`}
-						publishDate={new Date(guidelineData.createdAt)}
-						title={guidelineData.title}
+  key={guidelineData.id}
+  coverAspectRatio="210 / 297"
+  coverSrc={typeof guidelineData.featured_image === 'object' ? guidelineData.featured_image?.url : undefined}
+  href={`/academia/guidelines/${guidelineData.id}`}
+  publishDate={new Date(guidelineData.createdAt)}
+  title={guidelineData.title}
 					/>
 				))}
 			</div>

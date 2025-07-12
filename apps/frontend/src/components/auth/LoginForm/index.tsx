@@ -6,8 +6,9 @@ import { LoginDefault } from '@/payload/collections/Login/default';
 import { LoginValidation } from '@/payload/collections/Login/validation';
 import { navigationHandleRedirectParam } from '@/utils/navigation-handle-redirect-param';
 import { Alert, Anchor, Button, Loader, Paper, Space, Text, TextInput, Title } from '@mantine/core';
-import { useForm, zodResolver } from '@mantine/form';
+import { useForm } from '@mantine/form';
 import { IconSparkles } from '@tabler/icons-react';
+import { zod4Resolver } from 'mantine-form-zod-resolver';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 
@@ -35,7 +36,7 @@ export function LoginForm() {
 		onValuesChange: () => {
 			setIsError(false);
 		},
-		validate: zodResolver(LoginValidation),
+		validate: zod4Resolver(LoginValidation),
 	});
 
 	//

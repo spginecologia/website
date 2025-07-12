@@ -1,7 +1,7 @@
 /* * */
 
-import { payloadGetBalanceStatus } from '@/scripts/payload-get-balance-status';
 import payloadConfig from '@/payload-config';
+import { payloadGetBalanceStatus } from '@/scripts/payload-get-balance-status';
 import { getPayload } from 'payload';
 
 /* * */

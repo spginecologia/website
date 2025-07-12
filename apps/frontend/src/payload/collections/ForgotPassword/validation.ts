@@ -17,7 +17,7 @@ export const ForgotPasswordValidation = z
 				// Return true if if the value is not empty
 				// and is either a valid Tax ID or a valid Email.
 				return !!value && (isValidTaxId || isValidEmail);
-			}, { message: 'Email ou NIF devem ser válidos.' }),
+			}, { error: 'Email ou NIF devem ser válidos.' }),
 
 	})
 	.strict();

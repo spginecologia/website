@@ -38,7 +38,7 @@ export function LinksList() {
 	if (allActiveLinksLoading) {
 		return (
 			<div className={styles.container}>
-				{[...Array(5)].map((_, i) => <Skeleton key={i} h={75} />)}
+				{[...Array(5)].map((_, i) => <Skeleton h={75} key={i} />)}
 			</div>
 		);
 	}

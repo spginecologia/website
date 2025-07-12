@@ -10,7 +10,8 @@ import { type PayloadMeResponse } from '@/types/payload-api-response';
 import { showNotification } from '@/utils/show-notification';
 import { Button, Checkbox, Select, Space, Text, TextInput } from '@mantine/core';
 import { DateInput } from '@mantine/dates';
-import { useForm, zodResolver } from '@mantine/form';
+import { useForm } from '@mantine/form';
+import { zod4Resolver } from 'mantine-form-zod-resolver';
 import { mergekit } from 'mergekit';
 import { useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';
@@ -96,7 +97,7 @@ export function AccountProfileForm() {
 		clearInputErrorOnChange: true,
 		initialValues: UserEditableProfileDefault,
 		onValuesChange: handleValuesChange,
-		validate: zodResolver(UserEditableProfileValidation),
+		validate: zod4Resolver(UserEditableProfileValidation),
 		validateInputOnBlur: true,
 		validateInputOnChange: true,
 	});
@@ -128,9 +129,9 @@ export function AccountProfileForm() {
 			</FormSection>
 
 			<FormSection description={t('sections.basic.description')} title={t('sections.basic.title')}>
-				<TextInput description={t('fields.tax_id.description')} label={t('fields.tax_id.label')} placeholder={t('fields.tax_id.placeholder')} value={userData?.user.tax_id || ''} disabled readOnly />
-				<TextInput description={t('fields.medical_id.description')} label={t('fields.medical_id.label')} placeholder={t('fields.medical_id.placeholder')} value={userData?.user.medical_id || ''} disabled readOnly />
-				<DateInput label={t('fields.birthday.label')} placeholder={t('fields.birthday.placeholder')} value={userData?.user?.birthday ? new Date(userData.user.birthday) : null} valueFormat="YYYY-MM-DD" disabled readOnly />
+				<TextInput description={t('fields.tax_id.description')} disabled label={t('fields.tax_id.label')} placeholder={t('fields.tax_id.placeholder')} readOnly value={userData?.user.tax_id || ''} />
+				<TextInput description={t('fields.medical_id.description')} disabled label={t('fields.medical_id.label')} placeholder={t('fields.medical_id.placeholder')} readOnly value={userData?.user.medical_id || ''} />
+				<DateInput disabled label={t('fields.birthday.label')} placeholder={t('fields.birthday.placeholder')} readOnly value={userData?.user?.birthday ? new Date(userData.user.birthday) : null} valueFormat="YYYY-MM-DD" />
 			</FormSection>
 
 			<FormSection description={t('sections.billing.description')} title={t('sections.billing.title')}>

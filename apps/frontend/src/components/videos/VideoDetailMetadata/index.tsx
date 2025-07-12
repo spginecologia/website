@@ -22,9 +22,9 @@ export function VideoDetailMetadata({ authors, introduction, title }: Props) {
 	if (!title || !authors || !introduction) {
 		return (
 			<div className={styles.container}>
-				<Skeleton h={50} animate />
-				<Skeleton h={30} animate />
-				<Skeleton h={150} mt={15} animate />
+				<Skeleton animate h={50} />
+				<Skeleton animate h={30} />
+				<Skeleton animate h={150} mt={15} />
 			</div>
 		);
 	}

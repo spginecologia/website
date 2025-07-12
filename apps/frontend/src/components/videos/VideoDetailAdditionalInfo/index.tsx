@@ -42,7 +42,7 @@ export function VideoDetailAdditionalInfo({ publishDate, topics, views = 1 }: Pr
 	// C. Render components
 
 	if (!publishDateFormatted || !topics || typeof views !== 'number') {
-		return <Skeleton h={250} animate />;
+		return <Skeleton animate h={250} />;
 	}
 
 	return (
@@ -62,7 +62,7 @@ export function VideoDetailAdditionalInfo({ publishDate, topics, views = 1 }: Pr
 				<p className={styles.label}>{t('topics.label')}</p>
 				<div className={styles.topicsWrapper}>
 					{topics?.map(topic => (
-						<TopicDisplay key={topic.id} description={topic.description} id={topic.id} title={topic.title} />
+						<TopicDisplay description={topic.description} id={topic.id} key={topic.id} title={topic.title} />
 					))}
 				</div>
 			</div>

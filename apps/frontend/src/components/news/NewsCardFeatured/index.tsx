@@ -27,10 +27,10 @@ export function NewsCardFeatured({ coverSrc, href, publishDate, summary, title, 
 	return (
 		<CardWrapper className={styles.container} href={href} variant="featured">
 			<div className={styles.imageWrapper}>
-				{coverSrc && <Image alt="" src={coverSrc} style={{ objectFit: 'cover' }} fill />}
+				{coverSrc && <Image alt="" fill src={coverSrc} style={{ objectFit: 'cover' }} />}
 			</div>
 			<div className={styles.contentWrapper}>
-				{topic && <TopicDisplay id={topic.id} title={topic.title} noLink />}
+				{topic && <TopicDisplay id={topic.id} noLink title={topic.title} />}
 				<Title order={2}>{title}</Title>
 				<Text>{summary}</Text>
 				<CardPublishDate date={publishDate} />

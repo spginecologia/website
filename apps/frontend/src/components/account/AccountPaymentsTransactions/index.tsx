@@ -34,7 +34,10 @@ export function AccountPaymentsTransactions() {
 			return [
 				transactionItem.doc_number,
 				transactionItem.doc_date,
-				<a className={styles.openPdf} href={`/api/account/payments/get-transaction-pdf/${transactionItem.doc_id}`} target="_blank">Abrir PDF <IconExternalLink size={14} /></a>,
+				<a className={styles.openPdf} href={`/api/account/payments/get-transaction-pdf/${transactionItem.doc_id}`} target="_blank">
+					Abrir PDF
+					<IconExternalLink size={14} />
+				</a>,
 			];
 		});
 		return {

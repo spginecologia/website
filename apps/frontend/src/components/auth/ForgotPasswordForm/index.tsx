@@ -8,8 +8,9 @@ import { ForgotPasswordValidation } from '@/payload/collections/ForgotPassword/v
 import { validateEmail } from '@/utils/validate-email';
 import { validateTaxId } from '@/utils/validate-tax-id';
 import { Alert, Button, Loader, Paper, Space, Text, TextInput, Title } from '@mantine/core';
-import { useForm, zodResolver } from '@mantine/form';
+import { useForm } from '@mantine/form';
 import { IconInfoCircle, IconUserHeart } from '@tabler/icons-react';
+import { zod4Resolver } from 'mantine-form-zod-resolver';
 import { useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';
 
@@ -39,7 +40,7 @@ export function ForgotPasswordForm() {
 		onValuesChange: () => {
 			setIsError(false);
 		},
-		validate: zodResolver(ForgotPasswordValidation),
+		validate: zod4Resolver(ForgotPasswordValidation),
 	});
 
 	//
