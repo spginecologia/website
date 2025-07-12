@@ -21,7 +21,7 @@ export function BrandTypography({ withTopSpacer = true }) {
 
 	return (
 		<div className={styles.container}>
-			<Section withPadding withTopSpacer={withTopSpacer ? 'transparent' : 'none'}>
+			<Section withTopSpacer={withTopSpacer ? 'transparent' : 'none'} withPadding>
 				<Title order={1}>{t('title')}</Title>
 				<div className={styles.grid}>
 					<div className={styles.lato}>LATO</div>

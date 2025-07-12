@@ -19,9 +19,9 @@ export function CardSummary({ size = 'md', text }: Props) {
 	if (!text) {
 		return (
 			<div className={styles.skeletonWrapper}>
-				<Skeleton animate h={15} w="80%" />
-				<Skeleton animate h={15} w="100%" />
-				<Skeleton animate h={15} w="60%" />
+				<Skeleton h={15} w="80%" animate />
+				<Skeleton h={15} w="100%" animate />
+				<Skeleton h={15} w="60%" animate />
 			</div>
 		);
 	}

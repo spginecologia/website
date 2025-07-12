@@ -17,7 +17,7 @@ export function CardCoverImage({ aspectRatio, src }: Props) {
 	//
 
 	if (!src) {
-		return <Skeleton animate style={{ aspectRatio: aspectRatio }} />;
+		return <Skeleton style={{ aspectRatio: aspectRatio }} animate />;
 	}
 
 	return (

@@ -41,7 +41,7 @@ export function HeaderMenu() {
 
 			<div className={styles.container} data-desktop>
 				{MENU_PAGES.map(item => (
-					<Link className={styles.link} href={item.path} key={item.key}>
+					<Link key={item.key} className={styles.link} href={item.path}>
 						{t(`${item.key}.label`)}
 					</Link>
 				))}
@@ -51,17 +51,17 @@ export function HeaderMenu() {
 			</div>
 
 			<Drawer
-  classNames={{ body: styles.drawerBody, content: styles.drawerContent }}
-  onClose={() => setIsDrawerOpen((false))}
-  opened={isDrawerOpen}
-  position="right"
-  withCloseButton={false}
+				classNames={{ body: styles.drawerBody, content: styles.drawerContent }}
+				onClose={() => setIsDrawerOpen((false))}
+				opened={isDrawerOpen}
+				position="right"
+				withCloseButton={false}
 			>
 				<div className={styles.closeDrawer} onClick={() => setIsDrawerOpen(false)}>
 					<IconX size={35} />
 				</div>
 				{[...MENU_PAGES, ...ACADEMIA_PAGES].map(item => (
-					<Link className={styles.link} href={item.path} key={item.key}>
+					<Link key={item.key} className={styles.link} href={item.path}>
 						{t(`${item.key}.label`)}
 					</Link>
 				))}

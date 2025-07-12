@@ -21,7 +21,7 @@ export function BrandAssetsMain({ withTopSpacer = true }) {
 
 	return (
 		<div className={styles.container}>
-			<Section withPadding withTopSpacer={withTopSpacer ? 'transparent' : 'none'}>
+			<Section withTopSpacer={withTopSpacer ? 'transparent' : 'none'} withPadding>
 				<div className={styles.grid}>
 					<Image className={styles.logo} fit="contain" src="/brand/spg/spg-logo-vertical.svg" />
 					<div className={styles.rightCell}>

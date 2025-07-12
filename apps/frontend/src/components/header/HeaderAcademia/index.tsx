@@ -43,7 +43,7 @@ export function HeaderAcademia() {
 
 			<div className={styles.dropdown}>
 				{ACADEMIA_PAGES.map(item => (
-					<Link className={styles.dropdownLink} href={item.path} key={item.key}>
+					<Link key={item.key} className={styles.dropdownLink} href={item.path}>
 						<span className={styles.dropdownLinkIcon}>{item.icon}</span>
 						<span className={styles.dropdownLinkLabel}>{t(`${item.key}.label`)}</span>
 					</Link>

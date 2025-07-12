@@ -25,7 +25,7 @@ export function DateRibbon({ date }: Props) {
 	// B. Render components
 
 	if (!date) {
-		return <Skeleton animate className={styles.skeleton} />;
+		return <Skeleton className={styles.skeleton} animate />;
 	}
 
 	return (

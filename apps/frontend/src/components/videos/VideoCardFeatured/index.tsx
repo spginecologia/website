@@ -27,8 +27,8 @@ interface Props {
 
 export function VideoCardFeatured({ authors, coverSrc, duration, href, summary, title, topic, views }: Props) {
 	return (
-		<CardWrapper fullHeight href={href} variant="featured">
-			{topic && <TopicDisplay id={topic.id} noLink title={topic.title} />}
+		<CardWrapper href={href} variant="featured" fullHeight>
+			{topic && <TopicDisplay id={topic.id} title={topic.title} noLink />}
 			<div />
 			<VideoCoverImage coverSrc={coverSrc} duration={duration} views={views} />
 			<div />

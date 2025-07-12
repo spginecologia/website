@@ -3,12 +3,11 @@
 import { CardPublishDate } from '@/components/cards/CardPublishDate';
 import { ContentWrapper } from '@/components/common/ContentWrapper';
 import { Section } from '@/components/common/Section';
+import FrontendTopicTag from '@/components/FrontendTopicTag/FrontendTopicTag';
 import { Title } from '@mantine/core';
 import Image from 'next/image';
 
 import styles from './styles.module.css';
-
-import FrontendTopicTag from '../../FrontendTopicTag/FrontendTopicTag';
 
 /* * */
 
@@ -38,7 +37,7 @@ export function EventDetail({ id }) {
 		<ContentWrapper>
 			<Section withTopSpacer="transparent">
 				<div className={styles.imageWrapper}>
-					<Image alt="" fill src={newsData.image_url} style={{ objectFit: 'cover' }} />
+					<Image alt="" src={newsData.image_url} style={{ objectFit: 'cover' }} fill />
 				</div>
 			</Section>
 			<Section>

@@ -41,7 +41,7 @@ export function CoursesList() {
 				<Section withTopSpacer="academia">
 					<Title order={1}>{t('title')}</Title>
 					<div className={styles.grid}>
-						{[...Array(10)].map((_, i) => <CardSkeleton coverAspectRatio="600 / 300" key={i} />)}
+						{[...Array(10)].map((_, i) => <CardSkeleton key={i} coverAspectRatio="600 / 300" />)}
 					</div>
 				</Section>
 			</ContentWrapper>
@@ -77,12 +77,12 @@ export function CoursesList() {
 				<div className={styles.grid}>
 					{allCoursesData?.docs.map(courseData => (
 						<CourseCard
-  key={courseData.id}
-  coverSrc={typeof courseData.featured_image === 'object' ? courseData?.featured_image?.url : undefined}
-  href={`/academia/courses/${courseData.id}`}
-  publishDate={new Date(courseData.createdAt)}
-  title={courseData.title}
-  topic={courseData.topics && typeof courseData.topics[0] === 'object' ? courseData.topics[0] : undefined}
+							key={courseData.id}
+							coverSrc={typeof courseData.featured_image === 'object' ? courseData?.featured_image?.url : undefined}
+							href={`/academia/courses/${courseData.id}`}
+							publishDate={new Date(courseData.createdAt)}
+							title={courseData.title}
+							topic={courseData.topics && typeof courseData.topics[0] === 'object' ? courseData.topics[0] : undefined}
 						/>
 					))}
 				</div>
