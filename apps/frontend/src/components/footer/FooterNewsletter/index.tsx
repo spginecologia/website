@@ -102,7 +102,7 @@ export function FooterNewsletter() {
 				<TextInput aria-label={t('form.email.label')}placeholder={t('form.email.placeholder')} variant="contrast" w="100%" {...form.getInputProps('email')} />
 				<Turnstile onSuccess={token => form.setFieldValue('turnstile_token', token)} siteKey={process.env.NEXT_PUBLIC_CLOUDFLARE_TURNSTILE_SITE_KEY ?? 'unavailable-site-key'} />
 				{isLoading && <Loader />}
-				{(!isLoading && form.values.email.length > 0) && <Button disabled={!form.isValid()} type="submit" variant="contrast" w="100%">{t('subscribe')}</Button>}
+				{(!isLoading && String(form.values.email).length > 0) && <Button disabled={!form.isValid()} type="submit" variant="contrast" w="100%">{t('subscribe')}</Button>}
 				{(!isLoading && isError) && (
 					<>
 						<Space h={20} />

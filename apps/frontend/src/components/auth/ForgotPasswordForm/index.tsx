@@ -59,7 +59,7 @@ export function ForgotPasswordForm() {
 			setIsError(false);
 			setForgotPasswordResponse(null);
 			const requestData: ForgotPasswordRequest = {
-				username: form.values.username,
+				username: form.values.username as string,
 			};
 			const response = await fetch('/api/auth/forgot', {
 				body: JSON.stringify(requestData),
@@ -80,10 +80,10 @@ export function ForgotPasswordForm() {
 
 	const handleContinueToSignup = async () => {
 		// Check if the username is a valid Tax ID
-		const isValidTaxId = validateTaxId(form.values.username, false, ['singular']);
+		const isValidTaxId = validateTaxId(String(form.values.username), false, ['singular']);
 		if (isValidTaxId) return window.location.href = `/signup?tax_id=${form.values.username}`;
 		// Check if the username is a valid Tax ID
-		const isValidEmail = validateEmail(form.values.username, false);
+		const isValidEmail = validateEmail(String(form.values.username), false);
 		if (isValidEmail) return window.location.href = `/signup?email=${form.values.username}`;
 		// Redirect to signup page without any parameter
 		return window.location.href = '/signup';

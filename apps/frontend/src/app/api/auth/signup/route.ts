@@ -1,3 +1,5 @@
+/* eslint-disable @stylistic/no-mixed-spaces-and-tabs */
+
 /* * */
 
 import payloadConfig from '@/payload-config';
@@ -79,9 +81,51 @@ export async function POST(request: Request) {
 				phone: validatedData.phone,
 				postal_code: validatedData.postal_code,
 				send_newsletter: validatedData.send_newsletter,
-				subscribed_sections: validatedData.subscribed_sections,
+				subscribed_sections: validatedData.subscribed_sections
+					? validatedData.subscribed_sections.filter(
+						section =>
+							[
+								'colposcopia_patologia_tracto_genital_inferior',
+								'endoscopia_ginecologica',
+								'ginecologia_oncologica',
+								'menopausa',
+								'uroginecologia',
+							].includes(section),
+					) as (
+					  | 'colposcopia_patologia_tracto_genital_inferior'
+					  | 'endoscopia_ginecologica'
+					  | 'ginecologia_oncologica'
+					  | 'menopausa'
+					  | 'uroginecologia'
+					)[]
+					: validatedData.subscribed_sections,
 				tax_id: validatedData.tax_id,
-				title: validatedData.title,
+				title: [
+					'',
+					'Dr.',
+					'Dr.ª',
+					'Exmo.',
+					'Exmo.ª',
+					null,
+					'Prof.',
+					'Prof.ª',
+					'Sr.',
+					'Sr.ª',
+					undefined,
+				].includes(validatedData.title)
+					? (validatedData.title as
+					| ''
+					| 'Dr.'
+					| 'Dr.ª'
+					| 'Exmo.'
+					| 'Exmo.ª'
+					| 'Prof.'
+					| 'Prof.ª'
+					| 'Sr.'
+					| 'Sr.ª'
+					| null
+					| undefined)
+					: '',
 				workplace_primary: validatedData.workplace_primary,
 				workplace_secondary: validatedData.workplace_secondary,
 			},

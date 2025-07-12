@@ -2,7 +2,7 @@
 
 import { validateEmail } from '@/utils/validate-email';
 import { validateTaxId } from '@/utils/validate-tax-id';
-import { z } from 'zod';
+import { z } from 'zod/v4';
 
 /* * */
 
@@ -11,13 +11,17 @@ export const ForgotPasswordValidation = z
 
 		username: z
 			.string()
-			.refine((value) => {
-				const isValidTaxId = validateTaxId(value, true, ['singular']);
-				const isValidEmail = validateEmail(value, true);
+			.check((ctx) => {
+				const isValidTaxId = validateTaxId(ctx.value, true, ['singular']);
+				const isValidEmail = validateEmail(ctx.value, true);
 				// Return true if if the value is not empty
 				// and is either a valid Tax ID or a valid Email.
-				return !!value && (isValidTaxId || isValidEmail);
-			}, { error: 'Email ou NIF devem ser válidos.' }),
+				if (!(!!ctx.value && (isValidTaxId || isValidEmail))) ctx.issues.push({
+					code: 'custom',
+					input: ctx.value,
+					message: 'Email ou NIF devem ser válidos.',
+				});
+			}),
 
 	})
 	.strict();

@@ -1,7 +1,7 @@
 /* * */
 
 import { validateEmail } from '@/utils/validate-email';
-import { z } from 'zod';
+import { z } from 'zod/v4';
 
 /* * */
 
