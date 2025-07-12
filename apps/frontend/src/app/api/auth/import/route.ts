@@ -6,7 +6,7 @@ import { type SignupForm, SignupFormValidation } from '@/payload/collections/Sig
 import { getAnonymizedEmail } from '@/utils/get-anonymized-email';
 import { payloadGetUser } from '@/utils/payload-get-user';
 import { payloadSendSignupEmail } from '@/utils/payload-send-signup-email';
-import payloadConfig from '@payload-config';
+import payloadConfig from '@/payload-config';
 import { DateTime } from 'luxon';
 import fs from 'node:fs';
 import Papa from 'papaparse';

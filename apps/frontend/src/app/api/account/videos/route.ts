@@ -1,6 +1,6 @@
 /* * */
 
-import payloadConfig from '@payload-config';
+import payloadConfig from '@/payload-config';
 import { getPayload } from 'payload';
 
 /* * */

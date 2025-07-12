@@ -3,7 +3,7 @@
 import { type User } from '@/payload-types';
 import { validateEmail } from '@/utils/validate-email';
 import { validateTaxId } from '@/utils/validate-tax-id';
-import payloadConfig from '@payload-config';
+import payloadConfig from '@/payload-config';
 import { getPayload } from 'payload';
 
 /**

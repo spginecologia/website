@@ -3,7 +3,7 @@
 import { BREVOAPI } from '@/services/BREVOAPI';
 import { cloudflareVerifyTurnstileToken } from '@/utils/cloudflare-verify-turnstile-token';
 import { validateEmail } from '@/utils/validate-email';
-import payloadConfig from '@payload-config';
+import payloadConfig from '@/payload-config';
 import { getPayload } from 'payload';
 
 /* * */
