@@ -1,0 +1,36 @@
+name: spg-dev
+
+volumes:
+  spgdbdata:
+
+services:
+  #
+
+  # # # # # # # # # # # # # # # # # # # # #
+  # # # # # # # # # # # # # # # # # # # # #
+
+  spgdb:
+    image: mongo
+    restart: unless-stopped
+    logging:
+      options:
+        max-size: '1m'
+        max-file: '1'
+    ports:
+      - 37005:27017
+    volumes:
+      - spgdbdata:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=spgdbuser
+      - MONGO_INITDB_ROOT_PASSWORD=spgdbpassword
+
+  # # # # # # # # # # # # # # # # # # # # #
+  # # # # # # # # # # # # # # # # # # # # #
+
+  synclocal:
+    build: ./apps/synclocal
+    restart: no
+    logging:
+      options:
+        max-size: '1m'
+        max-file: '1'

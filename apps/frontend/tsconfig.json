@@ -16,10 +16,7 @@
 		"noEmit": true,
 		"paths": {
 			"@/*": [
-				"./*"
-			],
-			"@payload-config": [
-				"./payload.config.ts"
+				"./src/*"
 			]
 		},
 		"plugins": [
