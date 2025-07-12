@@ -2,10 +2,10 @@
 
 /* * */
 
-import { FormSection } from '@/src/components/common/FormSection';
-import { Videos } from '@/src/payload/collections/Video/collection';
-import { VideoDefault } from '@/src/payload/collections/Video/default';
-import { VideoValidationClient } from '@/src/payload/collections/Video/validation';
+import { FormSection } from '@/components/common/FormSection';
+import { Videos } from '@/payload/collections/Video/collection';
+import { VideoDefault } from '@/payload/collections/Video/default';
+import { VideoValidationClient } from '@/payload/collections/Video/validation';
 import { Button, Checkbox, FileInput, MultiSelect, Paper, Select, Space, Text, Textarea, TextInput, Title } from '@mantine/core';
 import { useForm, zodResolver } from '@mantine/form';
 import { useTranslations } from 'next-intl';

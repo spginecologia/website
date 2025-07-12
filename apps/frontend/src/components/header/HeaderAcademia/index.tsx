@@ -2,7 +2,7 @@
 
 /* * */
 
-import { SpgAcademia } from '@/src/assets/spg';
+import { SpgAcademia } from '@/assets/spg';
 import { IconBooks, IconBrandYoutube, IconBuildingCottage, IconBulb, IconFileCheck, IconListSearch, IconSchool, IconVideoPlus } from '@tabler/icons-react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';

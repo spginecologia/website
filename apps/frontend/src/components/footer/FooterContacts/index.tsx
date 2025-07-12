@@ -2,7 +2,7 @@
 
 /* * */
 
-import { Facebook, Instagram, LinkedIn } from '@/src/assets/socials';
+import { Facebook, Instagram, LinkedIn } from '@/assets/socials';
 import { useTranslations } from 'next-intl';
 
 import styles from './styles.module.css';

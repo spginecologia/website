@@ -1,6 +1,6 @@
 /* * */
 
-import { HomeMain } from '@/src/components/home/HomeMain';
+import { HomeMain } from '@/components/home/HomeMain';
 
 /* * */
 

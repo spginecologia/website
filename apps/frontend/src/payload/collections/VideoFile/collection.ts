@@ -1,8 +1,8 @@
 /* * */
 
-import { accessIsActiveUser } from '@/src/utils/access-is-active-user';
-import { accessIsAdmin } from '@/src/utils/access-is-admin';
-import { getVideoDurationInSeconds } from '@/src/utils/get-video-duration-in-seconds';
+import { accessIsActiveUser } from '@/utils/access-is-active-user';
+import { accessIsAdmin } from '@/utils/access-is-admin';
+import { getVideoDurationInSeconds } from '@/utils/get-video-duration-in-seconds';
 import { type CollectionConfig } from 'payload';
 
 /* * */

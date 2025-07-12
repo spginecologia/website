@@ -1,6 +1,6 @@
 /* * */
 
-import { VideosList } from '@/src/components/videos/VideosList';
+import { VideosList } from '@/components/videos/VideosList';
 
 /* * */
 

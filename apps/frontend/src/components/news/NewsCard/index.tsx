@@ -1,11 +1,11 @@
 /* * */
 
-import { CardCoverImage } from '@/src/components/cards/CardCoverImage';
-import { CardPublishDate } from '@/src/components/cards/CardPublishDate';
-import { CardSummary } from '@/src/components/cards/CardSummary';
-import { CardTitle } from '@/src/components/cards/CardTitle';
-import { CardWrapper } from '@/src/components/cards/CardWrapper';
-import { TopicDisplay } from '@/src/components/topics/TopicDisplay';
+import { CardCoverImage } from '@/components/cards/CardCoverImage';
+import { CardPublishDate } from '@/components/cards/CardPublishDate';
+import { CardSummary } from '@/components/cards/CardSummary';
+import { CardTitle } from '@/components/cards/CardTitle';
+import { CardWrapper } from '@/components/cards/CardWrapper';
+import { TopicDisplay } from '@/components/topics/TopicDisplay';
 import { Topic } from '@/payload-types';
 
 /* * */

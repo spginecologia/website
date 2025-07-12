@@ -1,6 +1,6 @@
 /* * */
 
-import { PrivacyMain } from '@/src/components/privacy/PrivacyMain';
+import { PrivacyMain } from '@/components/privacy/PrivacyMain';
 
 /* * */
 

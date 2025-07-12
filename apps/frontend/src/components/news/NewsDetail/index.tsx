@@ -1,8 +1,8 @@
 /* * */
 
-import { CardPublishDate } from '@/src/components/cards/CardPublishDate';
-import { ContentWrapper } from '@/src/components/common/ContentWrapper';
-import { Section } from '@/src/components/common/Section';
+import { CardPublishDate } from '@/components/cards/CardPublishDate';
+import { ContentWrapper } from '@/components/common/ContentWrapper';
+import { Section } from '@/components/common/Section';
 import { Title } from '@mantine/core';
 import Image from 'next/image';
 

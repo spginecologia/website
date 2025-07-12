@@ -2,14 +2,14 @@
 
 /* * */
 
-import { AccountIntro } from '@/src/components/account/AccountIntro';
-import { AccountLogoutButton } from '@/src/components/account/AccountLogoutButton';
-import { AccountPayments } from '@/src/components/account/AccountPayments';
-import { AccountProfile } from '@/src/components/account/AccountProfile';
-import { AccountVideos } from '@/src/components/account/AccountVideos';
-import { ContentWrapper } from '@/src/components/common/ContentWrapper';
-import { Section } from '@/src/components/common/Section';
-import { type PayloadMeResponse } from '@/src/types/payload-api-response';
+import { AccountIntro } from '@/components/account/AccountIntro';
+import { AccountLogoutButton } from '@/components/account/AccountLogoutButton';
+import { AccountPayments } from '@/components/account/AccountPayments';
+import { AccountProfile } from '@/components/account/AccountProfile';
+import { AccountVideos } from '@/components/account/AccountVideos';
+import { ContentWrapper } from '@/components/common/ContentWrapper';
+import { Section } from '@/components/common/Section';
+import { type PayloadMeResponse } from '@/types/payload-api-response';
 import { useEffect } from 'react';
 import useSWR from 'swr';
 

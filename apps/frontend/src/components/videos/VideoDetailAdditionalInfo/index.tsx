@@ -4,7 +4,7 @@
 
 import type { Topic } from '@/payload-types';
 
-import { TopicDisplay } from '@/src/components/topics/TopicDisplay';
+import { TopicDisplay } from '@/components/topics/TopicDisplay';
 import { Skeleton } from '@mantine/core';
 import { DateTime } from 'luxon';
 import { useTranslations } from 'next-intl';

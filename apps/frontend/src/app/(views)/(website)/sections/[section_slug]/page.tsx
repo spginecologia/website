@@ -1,6 +1,6 @@
 /* * */
 
-import { SectionDetail } from '@/src/components/sections/SectionDetail';
+import { SectionDetail } from '@/components/sections/SectionDetail';
 
 /* * */
 

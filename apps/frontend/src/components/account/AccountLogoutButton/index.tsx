@@ -1,6 +1,6 @@
 /* * */
 
-import { type PayloadMeResponse } from '@/src/types/payload-api-response';
+import { type PayloadMeResponse } from '@/types/payload-api-response';
 import { Button } from '@mantine/core';
 import { useTranslations } from 'next-intl';
 import useSWR from 'swr';

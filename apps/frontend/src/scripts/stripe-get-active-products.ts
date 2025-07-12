@@ -1,7 +1,7 @@
 /* * */
 
-import { STRIPEAPI } from '@/src/services/STRIPEAPI';
-import { Purchase } from '@/src/types/payments';
+import { STRIPEAPI } from '@/services/STRIPEAPI';
+import { Purchase } from '@/types/payments';
 
 /* * */
 

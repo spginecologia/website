@@ -2,12 +2,12 @@
 
 /* * */
 
-import { FormSection } from '@/src/components/common/FormSection';
-import { UserEditableProfileDefault } from '@/src/payload/collections/User/default';
-import { UserOptions } from '@/src/payload/collections/User/options';
-import { UserEditableProfileValidation } from '@/src/payload/collections/User/validation';
-import { type PayloadMeResponse } from '@/src/types/payload-api-response';
-import { showNotification } from '@/src/utils/show-notification';
+import { FormSection } from '@/components/common/FormSection';
+import { UserEditableProfileDefault } from '@/payload/collections/User/default';
+import { UserOptions } from '@/payload/collections/User/options';
+import { UserEditableProfileValidation } from '@/payload/collections/User/validation';
+import { type PayloadMeResponse } from '@/types/payload-api-response';
+import { showNotification } from '@/utils/show-notification';
 import { Button, Checkbox, Select, Space, Text, TextInput } from '@mantine/core';
 import { DateInput } from '@mantine/dates';
 import { useForm, zodResolver } from '@mantine/form';

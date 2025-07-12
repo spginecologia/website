@@ -1,9 +1,9 @@
 /* * */
 
-import { payloadGetBalanceStatus } from '@/src/scripts/payload-get-balance-status';
-import { stripeGetBalanceStatus } from '@/src/scripts/stripe-get-balance-status';
-import { STRIPEAPI } from '@/src/services/STRIPEAPI';
-import { Purchase } from '@/src/types/payments';
+import { payloadGetBalanceStatus } from '@/scripts/payload-get-balance-status';
+import { stripeGetBalanceStatus } from '@/scripts/stripe-get-balance-status';
+import { STRIPEAPI } from '@/services/STRIPEAPI';
+import { Purchase } from '@/types/payments';
 import payloadConfig from '@payload-config';
 import { getPayload } from 'payload';
 

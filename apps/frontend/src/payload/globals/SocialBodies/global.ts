@@ -1,6 +1,6 @@
 /* * */
 
-import { spgMemberFieldSet } from '@/src/payload/fields/spg-member';
+import { spgMemberFieldSet } from '@/payload/fields/spg-member';
 import { type GlobalConfig } from 'payload';
 
 /* * */

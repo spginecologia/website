@@ -1,7 +1,7 @@
 /* * */
 
-import { validateEmail } from '@/src/utils/validate-email';
-import { validateTaxId } from '@/src/utils/validate-tax-id';
+import { validateEmail } from '@/utils/validate-email';
+import { validateTaxId } from '@/utils/validate-tax-id';
 import { z } from 'zod';
 
 /* * */

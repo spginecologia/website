@@ -1,9 +1,9 @@
 /* * */
 
-import { TextBlock } from '@/src/blocks/TextBlock';
-import { featuredImageField } from '@/src/payload/fields/featured-image';
-import { isFeaturedField } from '@/src/payload/fields/is-featured';
-import { topicsField } from '@/src/payload/fields/topics';
+import { TextBlock } from '@/blocks/TextBlock';
+import { featuredImageField } from '@/payload/fields/featured-image';
+import { isFeaturedField } from '@/payload/fields/is-featured';
+import { topicsField } from '@/payload/fields/topics';
 import { type CollectionConfig } from 'payload';
 
 /* * */

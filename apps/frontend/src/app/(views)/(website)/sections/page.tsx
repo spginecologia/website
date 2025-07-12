@@ -1,6 +1,6 @@
 /* * */
 
-import { SectionsMain } from '@/src/components/sections/SectionsMain';
+import { SectionsMain } from '@/components/sections/SectionsMain';
 
 /* * */
 

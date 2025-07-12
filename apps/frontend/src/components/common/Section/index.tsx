@@ -1,6 +1,6 @@
 /* * */
 
-import { AcademiaBanner } from '@/src/components/common/AcademiaBanner';
+import { AcademiaBanner } from '@/components/common/AcademiaBanner';
 
 import styles from './styles.module.css';
 

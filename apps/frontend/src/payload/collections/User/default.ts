@@ -1,6 +1,6 @@
 /* * */
 
-import { UserEditableProfile } from '@/src/payload/collections/User/validation';
+import { UserEditableProfile } from '@/payload/collections/User/validation';
 
 /* * */
 

@@ -1,8 +1,8 @@
 /* * */
 
 import { User } from '@/payload-types';
-import { brevoUpdateUser } from '@/src/utils/brevo-update-user';
-import { payloadSendActivationEmail } from '@/src/utils/payload-send-activation-email';
+import { brevoUpdateUser } from '@/utils/brevo-update-user';
+import { payloadSendActivationEmail } from '@/utils/payload-send-activation-email';
 import { type CollectionAfterChangeHook } from 'payload';
 
 /**

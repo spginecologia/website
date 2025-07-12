@@ -1,6 +1,6 @@
 /* * */
 
-import { SpgLogoCompact } from '@/src/assets/spg';
+import { SpgLogoCompact } from '@/assets/spg';
 import Link from 'next/link';
 
 import styles from './styles.module.css';

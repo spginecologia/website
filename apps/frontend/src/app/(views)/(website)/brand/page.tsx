@@ -1,8 +1,8 @@
 /* * */
 
-import { BrandAssetsMain } from '@/src/components/brand/BrandAssetsMain';
-import { BrandColors } from '@/src/components/brand/BrandColors';
-import { BrandTypography } from '@/src/components/brand/BrandTypography';
+import { BrandAssetsMain } from '@/components/brand/BrandAssetsMain';
+import { BrandColors } from '@/components/brand/BrandColors';
+import { BrandTypography } from '@/components/brand/BrandTypography';
 
 /* * */
 

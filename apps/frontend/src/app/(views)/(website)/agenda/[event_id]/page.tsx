@@ -1,6 +1,6 @@
 /* * */
 
-import { EventDetail } from '@/src/components/events/EventDetail';
+import { EventDetail } from '@/components/events/EventDetail';
 
 /* * */
 

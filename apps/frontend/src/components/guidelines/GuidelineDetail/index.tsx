@@ -4,9 +4,9 @@
 
 import type { Guideline } from '@/payload-types';
 
-import { ContentWrapper } from '@/src/components/common/ContentWrapper';
-import { RedirectDisplay } from '@/src/components/common/RedirectDisplay';
-import { Section } from '@/src/components/common/Section';
+import { ContentWrapper } from '@/components/common/ContentWrapper';
+import { RedirectDisplay } from '@/components/common/RedirectDisplay';
+import { Section } from '@/components/common/Section';
 import { useMemo } from 'react';
 import useSWR from 'swr';
 

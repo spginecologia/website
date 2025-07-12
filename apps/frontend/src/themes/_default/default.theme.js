@@ -14,7 +14,7 @@ import '@/themes/_default/styles/wordpress.css';
 
 /* * */
 
-import { VisibilityToggleIcon } from '@/src/components/common/VisibilityToggleIcon';
+import { VisibilityToggleIcon } from '@/components/common/VisibilityToggleIcon';
 import { combineClassNames } from '@/utils/combine-class-names';
 import { Accordion, Alert, Anchor, Button, Checkbox, createTheme, Loader, Notification, Paper, PasswordInput, SegmentedControl, Select, Skeleton, Table, Text, TextInput, Title } from '@mantine/core';
 import { DateInput } from '@mantine/dates';

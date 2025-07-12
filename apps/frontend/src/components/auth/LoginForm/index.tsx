@@ -2,9 +2,9 @@
 
 /* * */
 
-import { LoginDefault } from '@/src/payload/collections/Login/default';
-import { LoginValidation } from '@/src/payload/collections/Login/validation';
-import { navigationHandleRedirectParam } from '@/src/utils/navigation-handle-redirect-param';
+import { LoginDefault } from '@/payload/collections/Login/default';
+import { LoginValidation } from '@/payload/collections/Login/validation';
+import { navigationHandleRedirectParam } from '@/utils/navigation-handle-redirect-param';
 import { Alert, Anchor, Button, Loader, Paper, Space, Text, TextInput, Title } from '@mantine/core';
 import { useForm, zodResolver } from '@mantine/form';
 import { IconSparkles } from '@tabler/icons-react';

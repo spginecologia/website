@@ -1,7 +1,7 @@
 /* * */
 
-import { CardWrapper } from '@/src/components/cards/CardWrapper';
-import { VideoCoverImage } from '@/src/components/videos/VideoCoverImage';
+import { CardWrapper } from '@/components/cards/CardWrapper';
+import { VideoCoverImage } from '@/components/videos/VideoCoverImage';
 import { Title } from '@mantine/core';
 
 import styles from './styles.module.css';

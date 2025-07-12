@@ -1,6 +1,6 @@
 /* * */
 
-import { fileOrUrlFieldSet } from '@/src/payload/fields/file-or-url';
+import { fileOrUrlFieldSet } from '@/payload/fields/file-or-url';
 import { type GlobalConfig } from 'payload';
 
 /* * */

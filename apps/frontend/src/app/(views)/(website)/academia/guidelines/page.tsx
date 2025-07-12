@@ -1,6 +1,6 @@
 /* * */
 
-import { GuidelinesList } from '@/src/components/guidelines/GuidelinesList';
+import { GuidelinesList } from '@/components/guidelines/GuidelinesList';
 
 /* * */
 

@@ -9,28 +9,28 @@ import sharp from 'sharp';
 
 /* * */
 
-import { Admins } from '@/src/payload/collections/Admin/collection';
-import { Courses } from '@/src/payload/collections/Course/collection';
-import { Documents } from '@/src/payload/collections/Document/collection';
-import { Event } from '@/src/payload/collections/Event/collection';
-import { Guidelines } from '@/src/payload/collections/Guideline/collection';
-import { InternalDocuments } from '@/src/payload/collections/InternalDocument/collection';
-import { Links } from '@/src/payload/collections/Link/collection';
-import { Media } from '@/src/payload/collections/Media/collection';
-import { News } from '@/src/payload/collections/News/collection';
-import { Products } from '@/src/payload/collections/Product/collection';
-import { Publications } from '@/src/payload/collections/Publication/collection';
-import { Sections } from '@/src/payload/collections/Section/collection';
-import { Topics } from '@/src/payload/collections/Topic/collection';
-import { Users } from '@/src/payload/collections/User/collection';
-import { Videos } from '@/src/payload/collections/Video/collection';
-import { VideoFiles } from '@/src/payload/collections/VideoFile/collection';
-import { Workgroups } from '@/src/payload/collections/Workgroup/collection';
+import { Admins } from '@/payload/collections/Admin/collection';
+import { Courses } from '@/payload/collections/Course/collection';
+import { Documents } from '@/payload/collections/Document/collection';
+import { Event } from '@/payload/collections/Event/collection';
+import { Guidelines } from '@/payload/collections/Guideline/collection';
+import { InternalDocuments } from '@/payload/collections/InternalDocument/collection';
+import { Links } from '@/payload/collections/Link/collection';
+import { Media } from '@/payload/collections/Media/collection';
+import { News } from '@/payload/collections/News/collection';
+import { Products } from '@/payload/collections/Product/collection';
+import { Publications } from '@/payload/collections/Publication/collection';
+import { Sections } from '@/payload/collections/Section/collection';
+import { Topics } from '@/payload/collections/Topic/collection';
+import { Users } from '@/payload/collections/User/collection';
+import { Videos } from '@/payload/collections/Video/collection';
+import { VideoFiles } from '@/payload/collections/VideoFile/collection';
+import { Workgroups } from '@/payload/collections/Workgroup/collection';
 
 /* * */
 
-import { LegalDocuments } from '@/src/payload/globals/LegalDocuments/global';
-import { SocialBodies } from '@/src/payload/globals/SocialBodies/global';
+import { LegalDocuments } from '@/payload/globals/LegalDocuments/global';
+import { SocialBodies } from '@/payload/globals/SocialBodies/global';
 
 /* * */
 

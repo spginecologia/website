@@ -2,9 +2,9 @@
 
 /* * */
 
-import { LinksFooter } from '@/src/components/links/LinksFooter';
-import { LinksHeader } from '@/src/components/links/LinksHeader';
-import { LinksList } from '@/src/components/links/LinksList';
+import { LinksFooter } from '@/components/links/LinksFooter';
+import { LinksHeader } from '@/components/links/LinksHeader';
+import { LinksList } from '@/components/links/LinksList';
 
 import styles from './styles.module.css';
 

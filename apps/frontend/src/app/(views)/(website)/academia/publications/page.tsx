@@ -1,6 +1,6 @@
 /* * */
 
-import { PublicationsList } from '@/src/components/publications/PublicationsList';
+import { PublicationsList } from '@/components/publications/PublicationsList';
 
 /* * */
 

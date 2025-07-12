@@ -1,7 +1,7 @@
 /* * */
 
-import { isActiveField } from '@/src/payload/fields/is-active';
-import { isFeaturedField } from '@/src/payload/fields/is-featured';
+import { isActiveField } from '@/payload/fields/is-active';
+import { isFeaturedField } from '@/payload/fields/is-featured';
 import { type CollectionConfig } from 'payload';
 
 /* * */

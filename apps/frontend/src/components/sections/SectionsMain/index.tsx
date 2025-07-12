@@ -1,8 +1,8 @@
 /* * */
 
-import { ContentWrapper } from '@/src/components/common/ContentWrapper';
-import { SectionsIntro } from '@/src/components/sections/SectionsIntro';
-import { SectionsSelector } from '@/src/components/sections/SectionsSelector';
+import { ContentWrapper } from '@/components/common/ContentWrapper';
+import { SectionsIntro } from '@/components/sections/SectionsIntro';
+import { SectionsSelector } from '@/components/sections/SectionsSelector';
 
 /* * */
 

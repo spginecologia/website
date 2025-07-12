@@ -1,10 +1,10 @@
 /* * */
 
-import { featuredImageField } from '@/src/payload/fields/featured-image';
-import { isFeaturedField } from '@/src/payload/fields/is-featured';
-import { publishedAtField } from '@/src/payload/fields/published-at';
-import { topicsField } from '@/src/payload/fields/topics';
-import { updatedAtField } from '@/src/payload/fields/updated-at';
+import { featuredImageField } from '@/payload/fields/featured-image';
+import { isFeaturedField } from '@/payload/fields/is-featured';
+import { publishedAtField } from '@/payload/fields/published-at';
+import { topicsField } from '@/payload/fields/topics';
+import { updatedAtField } from '@/payload/fields/updated-at';
 import { type CollectionConfig } from 'payload';
 
 /* * */

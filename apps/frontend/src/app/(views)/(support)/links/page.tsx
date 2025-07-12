@@ -1,6 +1,6 @@
 /* * */
 
-import { LinksMain } from '@/src/components/links/LinksMain';
+import { LinksMain } from '@/components/links/LinksMain';
 
 /* * */
 

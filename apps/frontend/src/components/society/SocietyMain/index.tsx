@@ -1,8 +1,8 @@
 /* * */
 
-import { SocietyLegalDocuments } from '@/src/components/society/SocietyLegalDocuments';
-import { SocietyMission } from '@/src/components/society/SocietyMission';
-import { SocietySocialBodies } from '@/src/components/society/SocietySocialBodies';
+import { SocietyLegalDocuments } from '@/components/society/SocietyLegalDocuments';
+import { SocietyMission } from '@/components/society/SocietyMission';
+import { SocietySocialBodies } from '@/components/society/SocietySocialBodies';
 
 /* * */
 

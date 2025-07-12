@@ -2,8 +2,8 @@
 
 /* * */
 
-import { availableFormats } from '@/src/i18n/config';
-import { getUserLocale } from '@/src/i18n/locale';
+import { availableFormats } from '@/i18n/config';
+import { getUserLocale } from '@/i18n/locale';
 import { getRequestConfig } from 'next-intl/server';
 
 /* * */

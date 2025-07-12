@@ -1,6 +1,6 @@
 /* * */
 
-import { vendusGetInvoicePdf } from '@/src/scripts/vendus-get-invoice-pdf';
+import { vendusGetInvoicePdf } from '@/scripts/vendus-get-invoice-pdf';
 import payloadConfig from '@payload-config';
 import { getPayload } from 'payload';
 

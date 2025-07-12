@@ -1,9 +1,9 @@
 /* * */
 
-import { FooterContacts } from '@/src/components/footer/FooterContacts';
-import { FooterLegal } from '@/src/components/footer/FooterLegal';
-import { FooterLogo } from '@/src/components/footer/FooterLogo';
-import { FooterNewsletter } from '@/src/components/footer/FooterNewsletter';
+import { FooterContacts } from '@/components/footer/FooterContacts';
+import { FooterLegal } from '@/components/footer/FooterLegal';
+import { FooterLogo } from '@/components/footer/FooterLogo';
+import { FooterNewsletter } from '@/components/footer/FooterNewsletter';
 
 import styles from './styles.module.css';
 

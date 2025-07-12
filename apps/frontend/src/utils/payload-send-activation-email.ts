@@ -1,8 +1,8 @@
 /* * */
 
 import { type User } from '@/payload-types';
-import { getNotificationActionTemplate } from '@/src/payload/email/notification-action.template';
-import { navigationGetUrlWithRedirectParam } from '@/src/utils/navigation-handle-redirect-param';
+import { getNotificationActionTemplate } from '@/payload/email/notification-action.template';
+import { navigationGetUrlWithRedirectParam } from '@/utils/navigation-handle-redirect-param';
 import payloadConfig from '@payload-config';
 import { getPayload } from 'payload';
 

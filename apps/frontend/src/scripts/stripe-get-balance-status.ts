@@ -1,8 +1,8 @@
 /* * */
 
-import { stripeGetActiveProducts } from '@/src/scripts/stripe-get-active-products';
-import { stripeGetPastPurchases } from '@/src/scripts/stripe-get-past-purchases';
-import { Purchase } from '@/src/types/payments';
+import { stripeGetActiveProducts } from '@/scripts/stripe-get-active-products';
+import { stripeGetPastPurchases } from '@/scripts/stripe-get-past-purchases';
+import { Purchase } from '@/types/payments';
 
 /**
  * To return the balance status, we need to fetch the active products

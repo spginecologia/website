@@ -1,6 +1,6 @@
 /* * */
 
-import { Section } from '@/src/components/common/Section';
+import { Section } from '@/components/common/Section';
 import { Image, Text, Title } from '@mantine/core';
 import { useTranslations } from 'next-intl';
 

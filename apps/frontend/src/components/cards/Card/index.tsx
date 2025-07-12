@@ -1,9 +1,9 @@
 /* * */
 
-import { CardCoverImage } from '@/src/components/cards/CardCoverImage';
-import { CardPublishDate } from '@/src/components/cards/CardPublishDate';
-import { CardTitle } from '@/src/components/cards/CardTitle';
-import { CardWrapper } from '@/src/components/cards/CardWrapper';
+import { CardCoverImage } from '@/components/cards/CardCoverImage';
+import { CardPublishDate } from '@/components/cards/CardPublishDate';
+import { CardTitle } from '@/components/cards/CardTitle';
+import { CardWrapper } from '@/components/cards/CardWrapper';
 
 /* * */
 

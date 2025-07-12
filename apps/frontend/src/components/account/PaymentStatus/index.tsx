@@ -1,6 +1,6 @@
 /* * */
 
-import { Purchase } from '@/src/types/payments';
+import { Purchase } from '@/types/payments';
 import { IconArrowForwardUp, IconCheck, IconFlag3Filled, IconInfoCircle } from '@tabler/icons-react';
 import { useTranslations } from 'next-intl';
 

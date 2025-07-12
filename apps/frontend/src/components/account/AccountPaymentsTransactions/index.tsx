@@ -2,7 +2,7 @@
 
 /* * */
 
-import { type PayloadMeResponse } from '@/src/types/payload-api-response';
+import { type PayloadMeResponse } from '@/types/payload-api-response';
 import { Table, TableData, Text } from '@mantine/core';
 import { IconExternalLink } from '@tabler/icons-react';
 import { useTranslations } from 'next-intl';

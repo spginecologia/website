@@ -3,11 +3,11 @@
 /* * */
 
 import type { Link } from '@/payload-types';
-import type { PayloadAPIResponse } from '@/src/types/payload-api-response';
+import type { PayloadAPIResponse } from '@/types/payload-api-response';
 
-import { ErrorDisplay } from '@/src/components/common/ErrorDisplay';
-import { NoDataDisplay } from '@/src/components/common/NoDataDisplay';
-import { LinkItem } from '@/src/components/links/LinkItem';
+import { ErrorDisplay } from '@/components/common/ErrorDisplay';
+import { NoDataDisplay } from '@/components/common/NoDataDisplay';
+import { LinkItem } from '@/components/links/LinkItem';
 import { Skeleton } from '@mantine/core';
 import { useMemo } from 'react';
 import useSWR from 'swr';

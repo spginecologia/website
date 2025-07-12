@@ -2,7 +2,7 @@
 
 /* * */
 
-import { CardCoverImage } from '@/src/components/cards/CardCoverImage';
+import { CardCoverImage } from '@/components/cards/CardCoverImage';
 import { useMemo } from 'react';
 
 import styles from './styles.module.css';

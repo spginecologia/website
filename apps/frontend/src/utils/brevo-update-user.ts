@@ -1,7 +1,7 @@
 /* * */
 
 import { type User } from '@/payload-types';
-import { BREVOAPI } from '@/src/services/BREVOAPI';
+import { BREVOAPI } from '@/services/BREVOAPI';
 
 /**
  * Updates the user's attributes, including newsletter subscription, in Brevo.

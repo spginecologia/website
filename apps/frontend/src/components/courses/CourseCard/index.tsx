@@ -2,10 +2,10 @@
 
 import type { Topic } from '@/payload-types';
 
-import { CardCoverImage } from '@/src/components/cards/CardCoverImage';
-import { CardPublishDate } from '@/src/components/cards/CardPublishDate';
-import { CardWrapper } from '@/src/components/cards/CardWrapper';
-import { TopicDisplay } from '@/src/components/topics/TopicDisplay';
+import { CardCoverImage } from '@/components/cards/CardCoverImage';
+import { CardPublishDate } from '@/components/cards/CardPublishDate';
+import { CardWrapper } from '@/components/cards/CardWrapper';
+import { TopicDisplay } from '@/components/topics/TopicDisplay';
 import { Title } from '@mantine/core';
 
 import styles from './styles.module.css';

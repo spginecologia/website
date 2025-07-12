@@ -1,6 +1,6 @@
 /* * */
 
-import { accessIsAdmin } from '@/src/utils/access-is-admin';
+import { accessIsAdmin } from '@/utils/access-is-admin';
 import { type CollectionConfig } from 'payload';
 
 /* * */

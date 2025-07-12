@@ -1,7 +1,7 @@
 /* * */
 
-import { AccountPaymentsCheckout } from '@/src/components/account/AccountPaymentsCheckout';
-import { AccountPaymentsTransactions } from '@/src/components/account/AccountPaymentsTransactions';
+import { AccountPaymentsCheckout } from '@/components/account/AccountPaymentsCheckout';
+import { AccountPaymentsTransactions } from '@/components/account/AccountPaymentsTransactions';
 import { Paper, Space, Text, Title } from '@mantine/core';
 import { useTranslations } from 'next-intl';
 

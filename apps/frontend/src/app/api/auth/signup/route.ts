@@ -1,10 +1,10 @@
 /* * */
 
-import { type SignupResponse } from '@/src/payload/collections/Signup/types';
-import { type SignupForm, SignupFormValidation } from '@/src/payload/collections/Signup/validation';
-import { getAnonymizedEmail } from '@/src/utils/get-anonymized-email';
-import { payloadGetUser } from '@/src/utils/payload-get-user';
-import { payloadSendSignupEmail } from '@/src/utils/payload-send-signup-email';
+import { type SignupResponse } from '@/payload/collections/Signup/types';
+import { type SignupForm, SignupFormValidation } from '@/payload/collections/Signup/validation';
+import { getAnonymizedEmail } from '@/utils/get-anonymized-email';
+import { payloadGetUser } from '@/utils/payload-get-user';
+import { payloadSendSignupEmail } from '@/utils/payload-send-signup-email';
 import payloadConfig from '@payload-config';
 import { getPayload } from 'payload';
 // import { payloadSendResetPasswordEmail } from '@/utils/payload-send-reset-password-email';

@@ -2,13 +2,13 @@
 
 /* * */
 
-import { Card } from '@/src/components/cards/Card';
-import { CardSkeleton } from '@/src/components/cards/CardSkeleton';
-import { ErrorDisplay } from '@/src/components/common/ErrorDisplay';
-import { NoDataDisplay } from '@/src/components/common/NoDataDisplay';
-import { Section } from '@/src/components/common/Section';
+import { Card } from '@/components/cards/Card';
+import { CardSkeleton } from '@/components/cards/CardSkeleton';
+import { ErrorDisplay } from '@/components/common/ErrorDisplay';
+import { NoDataDisplay } from '@/components/common/NoDataDisplay';
+import { Section } from '@/components/common/Section';
 import { type Guideline } from '@/payload-types';
-import { PayloadAPIResponse } from '@/src/types/payload-api-response';
+import { PayloadAPIResponse } from '@/types/payload-api-response';
 import { Title } from '@mantine/core';
 import { useTranslations } from 'next-intl';
 import { useMemo } from 'react';

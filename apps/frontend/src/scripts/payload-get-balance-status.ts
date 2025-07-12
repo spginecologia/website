@@ -1,8 +1,8 @@
 /* * */
 
 import { type User } from '@/payload-types';
-import { payloadGetActiveProducts } from '@/src/scripts/payload-get-active-products';
-import { type BalanceStatus } from '@/src/types/payments';
+import { payloadGetActiveProducts } from '@/scripts/payload-get-active-products';
+import { type BalanceStatus } from '@/types/payments';
 
 /* * */
 

@@ -2,16 +2,16 @@
 
 /* * */
 
-import { AuthWall } from '@/src/components/auth/AuthWall';
-import { ContentWrapper } from '@/src/components/common/ContentWrapper';
-import { Section } from '@/src/components/common/Section';
-import { VideoDetailAdditionalInfo } from '@/src/components/videos/VideoDetailAdditionalInfo';
-import { VideoDetailDescription } from '@/src/components/videos/VideoDetailDescription';
-import { VideoDetailMetadata } from '@/src/components/videos/VideoDetailMetadata';
-import { VideoDetailPlayer } from '@/src/components/videos/VideoDetailPlayer';
-import { VideoDetailRelatedVideos } from '@/src/components/videos/VideoDetailRelatedVideos';
+import { AuthWall } from '@/components/auth/AuthWall';
+import { ContentWrapper } from '@/components/common/ContentWrapper';
+import { Section } from '@/components/common/Section';
+import { VideoDetailAdditionalInfo } from '@/components/videos/VideoDetailAdditionalInfo';
+import { VideoDetailDescription } from '@/components/videos/VideoDetailDescription';
+import { VideoDetailMetadata } from '@/components/videos/VideoDetailMetadata';
+import { VideoDetailPlayer } from '@/components/videos/VideoDetailPlayer';
+import { VideoDetailRelatedVideos } from '@/components/videos/VideoDetailRelatedVideos';
 import { type Topic, type Video } from '@/payload-types';
-import { PayloadAPIResponse } from '@/src/types/payload-api-response';
+import { PayloadAPIResponse } from '@/types/payload-api-response';
 import { useMemo } from 'react';
 import useSWR from 'swr';
 

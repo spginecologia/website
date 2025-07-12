@@ -1,7 +1,7 @@
 /* * */
 
 import { User } from '@/payload-types';
-import { validateTaxId } from '@/src/utils/validate-tax-id';
+import { validateTaxId } from '@/utils/validate-tax-id';
 import payloadConfig from '@payload-config';
 import { DateTime } from 'luxon';
 import { getPayload } from 'payload';

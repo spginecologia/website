@@ -1,6 +1,6 @@
 /* * */
 
-import { NewsList } from '@/src/components/news/NewsList';
+import { NewsList } from '@/components/news/NewsList';
 
 /* * */
 

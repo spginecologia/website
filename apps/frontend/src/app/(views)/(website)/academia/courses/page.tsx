@@ -1,6 +1,6 @@
 /* * */
 
-import { CoursesList } from '@/src/components/courses/CoursesList';
+import { CoursesList } from '@/components/courses/CoursesList';
 
 /* * */
 

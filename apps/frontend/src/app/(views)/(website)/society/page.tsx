@@ -1,6 +1,6 @@
 /* * */
 
-import { SocietyMain } from '@/src/components/society/SocietyMain';
+import { SocietyMain } from '@/components/society/SocietyMain';
 
 /* * */
 

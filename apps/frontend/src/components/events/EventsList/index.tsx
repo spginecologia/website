@@ -4,13 +4,13 @@
 
 import type { Event } from '@/payload-types';
 
-import { ContentWrapper } from '@/src/components/common/ContentWrapper';
-import { ErrorDisplay } from '@/src/components/common/ErrorDisplay';
-import { NoDataDisplay } from '@/src/components/common/NoDataDisplay';
-import { Section } from '@/src/components/common/Section';
-import { EventCard } from '@/src/components/events/EventCard';
-import { EventsListPastButton } from '@/src/components/events/EventsListPastButton';
-import { PayloadAPIResponse } from '@/src/types/payload-api-response';
+import { ContentWrapper } from '@/components/common/ContentWrapper';
+import { ErrorDisplay } from '@/components/common/ErrorDisplay';
+import { NoDataDisplay } from '@/components/common/NoDataDisplay';
+import { Section } from '@/components/common/Section';
+import { EventCard } from '@/components/events/EventCard';
+import { EventsListPastButton } from '@/components/events/EventsListPastButton';
+import { PayloadAPIResponse } from '@/types/payload-api-response';
 import { Title } from '@mantine/core';
 import { useTranslations } from 'next-intl';
 import { useMemo } from 'react';

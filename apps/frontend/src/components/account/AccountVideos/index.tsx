@@ -1,6 +1,6 @@
 /* * */
 
-import { AccountVideosList } from '@/src/components/account/AccountVideosList';
+import { AccountVideosList } from '@/components/account/AccountVideosList';
 import { Paper, Space, Text, Title } from '@mantine/core';
 import { useTranslations } from 'next-intl';
 

@@ -2,9 +2,9 @@
 
 /* * */
 
-import { ResetPasswordDefault } from '@/src/payload/collections/ResetPassword/default';
-import { ResetPasswordValidation } from '@/src/payload/collections/ResetPassword/validation';
-import { navigationHandleRedirectParam } from '@/src/utils/navigation-handle-redirect-param';
+import { ResetPasswordDefault } from '@/payload/collections/ResetPassword/default';
+import { ResetPasswordValidation } from '@/payload/collections/ResetPassword/validation';
+import { navigationHandleRedirectParam } from '@/utils/navigation-handle-redirect-param';
 import { Button, Loader, Paper, PasswordInput, Space, Text, Title } from '@mantine/core';
 import { useForm, zodResolver } from '@mantine/form';
 import { useTranslations } from 'next-intl';

@@ -1,7 +1,7 @@
 /* * */
 
-import { ContentWrapper } from '@/src/components/common/ContentWrapper';
-import { Section } from '@/src/components/common/Section';
+import { ContentWrapper } from '@/components/common/ContentWrapper';
+import { Section } from '@/components/common/Section';
 import { Text, Title } from '@mantine/core';
 import { useTranslations } from 'next-intl';
 

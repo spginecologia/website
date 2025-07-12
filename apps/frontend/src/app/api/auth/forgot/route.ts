@@ -1,9 +1,9 @@
 /* * */
 
-import { type ForgotPasswordResponse } from '@/src/payload/collections/ForgotPassword/types';
-import { getAnonymizedEmail } from '@/src/utils/get-anonymized-email';
-import { payloadGetUser } from '@/src/utils/payload-get-user';
-import { payloadSendResetPasswordEmail } from '@/src/utils/payload-send-reset-password-email';
+import { type ForgotPasswordResponse } from '@/payload/collections/ForgotPassword/types';
+import { getAnonymizedEmail } from '@/utils/get-anonymized-email';
+import { payloadGetUser } from '@/utils/payload-get-user';
+import { payloadSendResetPasswordEmail } from '@/utils/payload-send-reset-password-email';
 
 /* * */
 

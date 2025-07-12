@@ -1,6 +1,6 @@
 /* * */
 
-import { SpgLogoWhite } from '@/src/assets/spg';
+import { SpgLogoWhite } from '@/assets/spg';
 import Link from 'next/link';
 
 import styles from './styles.module.css';

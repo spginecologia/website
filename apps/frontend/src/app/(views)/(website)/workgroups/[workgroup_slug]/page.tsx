@@ -1,6 +1,6 @@
 /* * */
 
-import { WorkgroupDetail } from '@/src/components/workgroups/WorkgroupDetail';
+import { WorkgroupDetail } from '@/components/workgroups/WorkgroupDetail';
 
 /* * */
 

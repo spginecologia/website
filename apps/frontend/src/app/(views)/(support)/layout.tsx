@@ -2,9 +2,9 @@
 
 /* * */
 
-import { SupportViewport } from '@/src/components/viewport/SupportViewport';
-import { ThemeProviders } from '@/src/providers/theme-providers';
-import { supportTheme } from '@/src/themes/support/support.theme';
+import { SupportViewport } from '@/components/viewport/SupportViewport';
+import { ThemeProviders } from '@/providers/theme-providers';
+import { supportTheme } from '@/themes/support/support.theme';
 import { Notifications } from '@mantine/notifications';
 
 /* * */

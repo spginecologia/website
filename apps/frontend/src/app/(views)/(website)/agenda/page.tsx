@@ -1,6 +1,6 @@
 /* * */
 
-import { EventsList } from '@/src/components/events/EventsList';
+import { EventsList } from '@/components/events/EventsList';
 
 /* * */
 

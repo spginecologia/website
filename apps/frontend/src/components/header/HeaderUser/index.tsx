@@ -2,8 +2,8 @@
 
 /* * */
 
-import { Loader } from '@/src/components/common/Loader';
-import { type PayloadMeResponse } from '@/src/types/payload-api-response';
+import { Loader } from '@/components/common/Loader';
+import { type PayloadMeResponse } from '@/types/payload-api-response';
 import { IconUserCircle } from '@tabler/icons-react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';

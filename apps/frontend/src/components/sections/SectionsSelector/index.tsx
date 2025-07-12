@@ -4,11 +4,11 @@
 
 import type { Section } from '@/payload-types';
 
-import { ErrorDisplay } from '@/src/components/common/ErrorDisplay';
-import { NoDataDisplay } from '@/src/components/common/NoDataDisplay';
-import { Section as LayoutSection } from '@/src/components/common/Section';
-import { SectionsSelectorItem } from '@/src/components/sections/SectionsSelectorItem';
-import { PayloadAPIResponse } from '@/src/types/payload-api-response';
+import { ErrorDisplay } from '@/components/common/ErrorDisplay';
+import { NoDataDisplay } from '@/components/common/NoDataDisplay';
+import { Section as LayoutSection } from '@/components/common/Section';
+import { SectionsSelectorItem } from '@/components/sections/SectionsSelectorItem';
+import { PayloadAPIResponse } from '@/types/payload-api-response';
 import useSWR from 'swr';
 
 import styles from './styles.module.css';

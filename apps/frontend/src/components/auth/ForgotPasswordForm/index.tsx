@@ -2,11 +2,11 @@
 
 /* * */
 
-import { ForgotPasswordDefault } from '@/src/payload/collections/ForgotPassword/default';
-import { type ForgotPasswordRequest, type ForgotPasswordResponse } from '@/src/payload/collections/ForgotPassword/types';
-import { ForgotPasswordValidation } from '@/src/payload/collections/ForgotPassword/validation';
-import { validateEmail } from '@/src/utils/validate-email';
-import { validateTaxId } from '@/src/utils/validate-tax-id';
+import { ForgotPasswordDefault } from '@/payload/collections/ForgotPassword/default';
+import { type ForgotPasswordRequest, type ForgotPasswordResponse } from '@/payload/collections/ForgotPassword/types';
+import { ForgotPasswordValidation } from '@/payload/collections/ForgotPassword/validation';
+import { validateEmail } from '@/utils/validate-email';
+import { validateTaxId } from '@/utils/validate-tax-id';
 import { Alert, Button, Loader, Paper, Space, Text, TextInput, Title } from '@mantine/core';
 import { useForm, zodResolver } from '@mantine/form';
 import { IconInfoCircle, IconUserHeart } from '@tabler/icons-react';

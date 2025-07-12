@@ -1,7 +1,7 @@
 /* * */
 
-import { featuredImageField } from '@/src/payload/fields/featured-image';
-import { topicsField } from '@/src/payload/fields/topics';
+import { featuredImageField } from '@/payload/fields/featured-image';
+import { topicsField } from '@/payload/fields/topics';
 import { type CollectionConfig } from 'payload';
 
 /* * */

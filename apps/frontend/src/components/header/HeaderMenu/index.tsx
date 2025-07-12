@@ -2,7 +2,7 @@
 
 /* * */
 
-import { ACADEMIA_PAGES } from '@/src/components/header/HeaderAcademia';
+import { ACADEMIA_PAGES } from '@/components/header/HeaderAcademia';
 import { Drawer } from '@mantine/core';
 import { IconMenuDeep, IconSearch, IconX } from '@tabler/icons-react';
 import { useTranslations } from 'next-intl';

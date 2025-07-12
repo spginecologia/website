@@ -2,11 +2,11 @@
 
 /* * */
 
-import { FormSection } from '@/src/components/common/FormSection';
-import { SignupFormDefault } from '@/src/payload/collections/Signup/default';
-import { type SignupResponse } from '@/src/payload/collections/Signup/types';
-import { SignupFormValidation } from '@/src/payload/collections/Signup/validation';
-import { UserOptions } from '@/src/payload/collections/User/options';
+import { FormSection } from '@/components/common/FormSection';
+import { SignupFormDefault } from '@/payload/collections/Signup/default';
+import { type SignupResponse } from '@/payload/collections/Signup/types';
+import { SignupFormValidation } from '@/payload/collections/Signup/validation';
+import { UserOptions } from '@/payload/collections/User/options';
 import { Alert, Button, Checkbox, Loader, Paper, Select, Space, Text, TextInput, Title } from '@mantine/core';
 import { DateInput } from '@mantine/dates';
 import { useForm, zodResolver } from '@mantine/form';

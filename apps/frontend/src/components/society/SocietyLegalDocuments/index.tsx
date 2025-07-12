@@ -4,7 +4,7 @@
 
 import type { DataFromGlobalSlug } from 'payload';
 
-import { Section } from '@/src/components/common/Section';
+import { Section } from '@/components/common/Section';
 import { Button } from '@mantine/core';
 import Link from 'next/link';
 import useSWR from 'swr';

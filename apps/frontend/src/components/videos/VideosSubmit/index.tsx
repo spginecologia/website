@@ -2,9 +2,9 @@
 
 /* * */
 
-import { ContentWrapper } from '@/src/components/common/ContentWrapper';
-import { Section } from '@/src/components/common/Section';
-import { VideosSubmitForm } from '@/src/components/videos/VideosSubmitForm';
+import { ContentWrapper } from '@/components/common/ContentWrapper';
+import { Section } from '@/components/common/Section';
+import { VideosSubmitForm } from '@/components/videos/VideosSubmitForm';
 
 import styles from './styles.module.css';
 

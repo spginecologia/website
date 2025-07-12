@@ -3,9 +3,9 @@
 /* * */
 
 import type { Video } from '@/payload-types';
-import type { PayloadAPIResponse } from '@/src/types/payload-api-response';
+import type { PayloadAPIResponse } from '@/types/payload-api-response';
 
-import { VideoCardRelated } from '@/src/components/videos/VideoCardRelated';
+import { VideoCardRelated } from '@/components/videos/VideoCardRelated';
 import { Text } from '@mantine/core';
 import { useTranslations } from 'next-intl';
 import { useMemo } from 'react';

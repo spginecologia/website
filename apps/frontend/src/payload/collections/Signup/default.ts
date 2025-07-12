@@ -1,6 +1,6 @@
 /* * */
 
-import { SignupForm } from '@/src/payload/collections/Signup/validation';
+import { SignupForm } from '@/payload/collections/Signup/validation';
 
 /* * */
 

@@ -1,6 +1,6 @@
 /* * */
 
-import { WorkgroupsMain } from '@/src/components/workgroups/WorkgroupsMain';
+import { WorkgroupsMain } from '@/components/workgroups/WorkgroupsMain';
 
 /* * */
 

@@ -1,7 +1,7 @@
 /* * */
 
-import { availableFormats } from '@/src/i18n/config';
-import { ConfigProviders } from '@/src/providers/config-providers';
+import { availableFormats } from '@/i18n/config';
+import { ConfigProviders } from '@/providers/config-providers';
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages } from 'next-intl/server';
 import { DM_Serif_Display } from 'next/font/google';

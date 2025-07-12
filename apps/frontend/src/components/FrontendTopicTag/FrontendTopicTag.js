@@ -2,7 +2,7 @@
 
 /* * */
 
-import { Loader } from '@/src/components/common/Loader';
+import { Loader } from '@/components/common/Loader';
 import Link from 'next/link';
 
 import styles from './FrontendTopicTag.module.css';

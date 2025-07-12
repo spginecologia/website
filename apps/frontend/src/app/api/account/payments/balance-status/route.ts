@@ -1,6 +1,6 @@
 /* * */
 
-import { payloadGetBalanceStatus } from '@/src/scripts/payload-get-balance-status';
+import { payloadGetBalanceStatus } from '@/scripts/payload-get-balance-status';
 import payloadConfig from '@payload-config';
 import { getPayload } from 'payload';
 

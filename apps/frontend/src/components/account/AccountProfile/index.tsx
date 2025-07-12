@@ -1,6 +1,6 @@
 /* * */
 
-import { AccountProfileForm } from '@/src/components/account/AccountProfileForm';
+import { AccountProfileForm } from '@/components/account/AccountProfileForm';
 import { Paper, Space, Text, Title } from '@mantine/core';
 import { useTranslations } from 'next-intl';
 

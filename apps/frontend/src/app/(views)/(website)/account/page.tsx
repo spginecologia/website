@@ -1,6 +1,6 @@
 /* * */
 
-import { AccountMain } from '@/src/components/account/AccountMain';
+import { AccountMain } from '@/components/account/AccountMain';
 
 /* * */
 

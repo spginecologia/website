@@ -1,8 +1,8 @@
 /* * */
 
-import { featuredImageField } from '@/src/payload/fields/featured-image';
-import { publishedAtField } from '@/src/payload/fields/published-at';
-import { topicsField } from '@/src/payload/fields/topics';
+import { featuredImageField } from '@/payload/fields/featured-image';
+import { publishedAtField } from '@/payload/fields/published-at';
+import { topicsField } from '@/payload/fields/topics';
 import { type CollectionConfig } from 'payload';
 
 /* * */

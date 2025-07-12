@@ -1,6 +1,6 @@
 /* * */
 
-import { validateEmail } from '@/src/utils/validate-email';
+import { validateEmail } from '@/utils/validate-email';
 import { z } from 'zod';
 
 /* * */

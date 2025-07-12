@@ -2,9 +2,9 @@
 
 /* * */
 
-import { ContentWrapper } from '@/src/components/common/ContentWrapper';
-import { Section } from '@/src/components/common/Section';
-import { type PayloadMeResponse } from '@/src/types/payload-api-response';
+import { ContentWrapper } from '@/components/common/ContentWrapper';
+import { Section } from '@/components/common/Section';
+import { type PayloadMeResponse } from '@/types/payload-api-response';
 import { Skeleton } from '@mantine/core';
 import { useEffect } from 'react';
 import useSWR from 'swr';

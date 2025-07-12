@@ -2,8 +2,8 @@
 
 /* * */
 
-import { type PayloadMeResponse } from '@/src/types/payload-api-response';
-import { accessIsActiveUser } from '@/src/utils/access-is-active-user';
+import { type PayloadMeResponse } from '@/types/payload-api-response';
+import { accessIsActiveUser } from '@/utils/access-is-active-user';
 import { Button, Image, Skeleton, Text } from '@mantine/core';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';

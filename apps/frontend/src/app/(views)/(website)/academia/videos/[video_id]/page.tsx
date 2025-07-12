@@ -1,6 +1,6 @@
 /* * */
 
-import { VideoDetail } from '@/src/components/videos/VideoDetail';
+import { VideoDetail } from '@/components/videos/VideoDetail';
 
 /* * */
 

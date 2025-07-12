@@ -1,6 +1,6 @@
 /* * */
 
-import { VideosSubmit } from '@/src/components/videos/VideosSubmit';
+import { VideosSubmit } from '@/components/videos/VideosSubmit';
 
 /* * */
 

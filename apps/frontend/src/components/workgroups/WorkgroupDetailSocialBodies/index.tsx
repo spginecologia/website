@@ -4,8 +4,8 @@
 
 import type { DataFromGlobalSlug } from 'payload';
 
-import { Section as LayoutSection } from '@/src/components/common/Section';
-import { SocietySocialBodiesMember } from '@/src/components/society/SocietySocialBodiesMember';
+import { Section as LayoutSection } from '@/components/common/Section';
+import { SocietySocialBodiesMember } from '@/components/society/SocietySocialBodiesMember';
 import { Image, Title } from '@mantine/core';
 import { useTranslations } from 'next-intl';
 import useSWR from 'swr';

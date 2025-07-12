@@ -1,6 +1,6 @@
 /* * */
 
-import { GuidelineDetail } from '@/src/components/guidelines/GuidelineDetail';
+import { GuidelineDetail } from '@/components/guidelines/GuidelineDetail';
 
 /* * */
 

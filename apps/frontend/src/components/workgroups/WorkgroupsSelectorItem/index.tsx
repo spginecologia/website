@@ -2,7 +2,7 @@
 
 /* * */
 
-import { CardWrapper } from '@/src/components/cards/CardWrapper';
+import { CardWrapper } from '@/components/cards/CardWrapper';
 import { Image, Skeleton } from '@mantine/core';
 
 import styles from './styles.module.css';

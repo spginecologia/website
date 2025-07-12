@@ -2,7 +2,7 @@
 
 /* * */
 
-import { allEnabledLocaleCodesAndAliases, availableLocales, defaultLocaleCode, defaultLocaleCodesAndAliases } from '@/src/i18n/config';
+import { allEnabledLocaleCodesAndAliases, availableLocales, defaultLocaleCode, defaultLocaleCodesAndAliases } from '@/i18n/config';
 import { cookies, headers } from 'next/headers';
 
 /* * */

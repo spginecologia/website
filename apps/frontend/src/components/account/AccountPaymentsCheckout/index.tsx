@@ -2,7 +2,7 @@
 
 /* * */
 
-import { PaymentStatus } from '@/src/components/account/PaymentStatus';
+import { PaymentStatus } from '@/components/account/PaymentStatus';
 // import { type ProductStatus } from '@/types/payments';
 import { Alert, Button, Space, Table, TableData, Text } from '@mantine/core';
 import { IconFlag3Filled } from '@tabler/icons-react';

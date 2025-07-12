@@ -1,10 +1,10 @@
 /* * */
 
-import { HeaderAcademia } from '@/src/components/header/HeaderAcademia';
-import { HeaderBreadcrumbs } from '@/src/components/header/HeaderBreadcrumbs';
-import { HeaderLogo } from '@/src/components/header/HeaderLogo';
-import { HeaderMenu } from '@/src/components/header/HeaderMenu';
-import { HeaderUser } from '@/src/components/header/HeaderUser';
+import { HeaderAcademia } from '@/components/header/HeaderAcademia';
+import { HeaderBreadcrumbs } from '@/components/header/HeaderBreadcrumbs';
+import { HeaderLogo } from '@/components/header/HeaderLogo';
+import { HeaderMenu } from '@/components/header/HeaderMenu';
+import { HeaderUser } from '@/components/header/HeaderUser';
 import { Space } from '@mantine/core';
 
 import styles from './styles.module.css';

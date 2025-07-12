@@ -1,7 +1,7 @@
 /* * */
 
-import { vendusCreateInvoice, VendusTransactionClient, VendusTransactionItem } from '@/src/scripts/vendus-create-invoice';
-import { STRIPEAPI } from '@/src/services/STRIPEAPI';
+import { vendusCreateInvoice, VendusTransactionClient, VendusTransactionItem } from '@/scripts/vendus-create-invoice';
+import { STRIPEAPI } from '@/services/STRIPEAPI';
 import payloadConfig from '@payload-config';
 import { getPayload } from 'payload';
 import Stripe from 'stripe';

@@ -1,6 +1,6 @@
 /* * */
 
-import { Section } from '@/src/components/common/Section';
+import { Section } from '@/components/common/Section';
 import NoDataLabel from '@/components/NoDataLabel/NoDataLabel';
 import { Space } from '@mantine/core';
 

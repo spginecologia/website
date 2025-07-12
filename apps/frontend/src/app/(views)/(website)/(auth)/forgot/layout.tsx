@@ -1,6 +1,6 @@
 /* * */
 
-import { AuthWrapper } from '@/src/components/auth/AuthWrapper';
+import { AuthWrapper } from '@/components/auth/AuthWrapper';
 
 /* * */
 

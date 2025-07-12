@@ -1,6 +1,6 @@
 /* * */
 
-import { SignupForm } from '@/src/components/auth/SignupForm';
+import { SignupForm } from '@/components/auth/SignupForm';
 
 /* * */
 

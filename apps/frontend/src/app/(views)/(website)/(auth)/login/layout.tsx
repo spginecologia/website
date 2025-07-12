@@ -1,7 +1,7 @@
 /* * */
 
-import { AuthWrapper } from '@/src/components/auth/AuthWrapper';
-import { SignupAd } from '@/src/components/auth/SignupAd';
+import { AuthWrapper } from '@/components/auth/AuthWrapper';
+import { SignupAd } from '@/components/auth/SignupAd';
 
 /* * */
 

@@ -1,6 +1,6 @@
 /* * */
 
-import { ResetPasswordForm } from '@/src/components/auth/ResetPasswordForm';
+import { ResetPasswordForm } from '@/components/auth/ResetPasswordForm';
 
 /* * */
 
