@@ -1,6 +1,6 @@
 /* * */
 
-import { type User } from '@/payload-types';
+import { type User } from 'payload-types';
 import { payloadGetActiveProducts } from '@/scripts/payload-get-active-products';
 import { type BalanceStatus } from '@/types/payments';
 

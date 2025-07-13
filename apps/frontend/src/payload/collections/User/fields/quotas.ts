@@ -66,7 +66,7 @@ export const userFieldsQuotasPayments: Field[] = [
 					},
 					{
 						label: 'Ano da Quota',
-						min: 2020,
+						min: 1975,
 						name: 'year',
 						required: true,
 						type: 'number',

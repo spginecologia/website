@@ -2,7 +2,7 @@
 
 /* * */
 
-import type { Course } from '@/payload-types';
+import type { Course } from 'payload-types';
 
 import { CardSkeleton } from '@/components/cards/CardSkeleton';
 import { ContentWrapper } from '@/components/common/ContentWrapper';

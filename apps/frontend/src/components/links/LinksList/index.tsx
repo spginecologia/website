@@ -2,7 +2,7 @@
 
 /* * */
 
-import type { Link } from '@/payload-types';
+import type { Link } from 'payload-types';
 import type { PayloadAPIResponse } from '@/types/payload-api-response';
 
 import { ErrorDisplay } from '@/components/common/ErrorDisplay';

@@ -2,7 +2,7 @@
 
 /* * */
 
-import type { Guideline } from '@/payload-types';
+import type { Guideline } from 'payload-types';
 
 import { ContentWrapper } from '@/components/common/ContentWrapper';
 import { RedirectDisplay } from '@/components/common/RedirectDisplay';

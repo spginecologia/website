@@ -6,7 +6,7 @@ import { CardSummary } from '@/components/cards/CardSummary';
 import { CardTitle } from '@/components/cards/CardTitle';
 import { CardWrapper } from '@/components/cards/CardWrapper';
 import { TopicDisplay } from '@/components/topics/TopicDisplay';
-import { Topic } from '@/payload-types';
+import { Topic } from 'payload-types';
 
 /* * */
 

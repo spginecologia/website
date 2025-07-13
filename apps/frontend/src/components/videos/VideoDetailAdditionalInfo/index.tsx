@@ -2,7 +2,7 @@
 
 /* * */
 
-import type { Topic } from '@/payload-types';
+import type { Topic } from 'payload-types';
 
 import { TopicDisplay } from '@/components/topics/TopicDisplay';
 import { Skeleton } from '@mantine/core';

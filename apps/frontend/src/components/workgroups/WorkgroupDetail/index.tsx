@@ -5,7 +5,7 @@
 import { ContentWrapper } from '@/components/common/ContentWrapper';
 import { Section as LayoutSection } from '@/components/common/Section';
 import { WorkgroupDetailIntro } from '@/components/workgroups/WorkgroupDetailIntro';
-import { type Workgroup } from '@/payload-types';
+import { type Workgroup } from 'payload-types';
 import useSWR from 'swr';
 
 import styles from './styles.module.css';

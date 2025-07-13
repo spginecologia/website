@@ -492,7 +492,7 @@
 			"status": {
 				"has_user_has_email": {
 					"alert": {
-						"message": "Este é o email que temos associado à sua ficha de sócio. Enviámos uma mensagem com instruções para redefenir a sua password. Caso não reconheça este email, por favor contacte o Secretariado SPG.",
+						"message": "Este é o email que temos associado à sua ficha de sócio. Enviámos uma mensagem com instruções para redefinir a sua password. Caso não reconheça este email, por favor contacte o Secretariado SPG.",
 						"title": "Encontrámos uma conta associada a este NIF"
 					}
 				},

@@ -6,6 +6,7 @@ import { userFieldsContacts } from '@/payload/collections/User/fields/contacts';
 import { userFieldsDocuments } from '@/payload/collections/User/fields/documents';
 import { userFieldsQuotas } from '@/payload/collections/User/fields/quotas';
 import { userFieldsReferences } from '@/payload/collections/User/fields/references';
+import { UserOptions } from '@/payload/collections/User/options';
 import { type CollectionConfig } from 'payload';
 
 /* * */
@@ -74,11 +75,7 @@ export const Users: CollectionConfig = {
 			defaultValue: 'pending',
 			label: 'Estado do Utilizador',
 			name: 'account_status',
-			options: [
-				{ label: 'Ativo', value: 'active' },
-				{ label: 'Pendente de Aprovação', value: 'pending' },
-				{ label: 'Inativo / Desconhecido', value: 'dormant' },
-			],
+			options: UserOptions.account_status,
 			type: 'select',
 		},
 	],

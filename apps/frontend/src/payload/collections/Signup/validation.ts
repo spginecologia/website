@@ -1,6 +1,6 @@
 /* * */
 
-import { User } from '@/payload-types';
+import { User } from 'payload-types';
 import { UserOptions } from '@/payload/collections/User/options';
 import { validateTaxId } from '@/utils/validate-tax-id';
 import { z } from 'zod/v4';

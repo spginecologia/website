@@ -2,6 +2,12 @@
 
 export const UserOptions = {
 
+	account_status: [
+		{ label: 'Ativo', value: 'active' },
+		{ label: 'Pendente de Aprovação', value: 'waiting' },
+		{ label: 'Inativo / Desconhecido', value: 'dormant' },
+	],
+
 	subscribed_sections: [
 		{ label: 'Colposcopia Patologia Tracto Genital Inferior', value: 'colposcopia_patologia_tracto_genital_inferior' },
 		{ label: 'Endoscopia Ginecológica', value: 'endoscopia_ginecologica' },

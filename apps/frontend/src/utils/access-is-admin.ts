@@ -1,6 +1,6 @@
 /* * */
 
-import { type Admin } from '@/payload-types';
+import { type Admin } from 'payload-types';
 import { type PayloadRequest } from 'payload';
 
 /* * */

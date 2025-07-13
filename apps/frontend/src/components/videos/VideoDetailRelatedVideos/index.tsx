@@ -3,7 +3,7 @@
 /* * */
 
 import { VideoCardRelated } from '@/components/videos/VideoCardRelated';
-import { Video } from '@/payload-types';
+import { Video } from 'payload-types';
 
 import styles from './styles.module.css';
 

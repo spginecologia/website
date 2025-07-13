@@ -17,7 +17,7 @@ export const Quotas: CollectionConfig = {
 	fields: [
 		{
 			label: 'Referente ao Ano',
-			min: 2020,
+			min: 1975,
 			name: 'year',
 			required: true,
 			type: 'number',

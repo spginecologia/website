@@ -5,7 +5,7 @@
 import { ContentWrapper } from '@/components/common/ContentWrapper';
 import { Section as LayoutSection } from '@/components/common/Section';
 import { SectionDetailIntro } from '@/components/sections/SectionDetailIntro';
-import { Section } from '@/payload-types';
+import { Section } from 'payload-types';
 import useSWR from 'swr';
 
 import styles from './styles.module.css';

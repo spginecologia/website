@@ -2,7 +2,7 @@
 
 /* * */
 
-import type { News } from '@/payload-types';
+import type { News } from 'payload-types';
 
 import { ContentWrapper } from '@/components/common/ContentWrapper';
 import { ErrorDisplay } from '@/components/common/ErrorDisplay';

@@ -4,8 +4,10 @@
 	"private": true,
 	"type": "module",
 	"scripts": {
-		"build": "next build",
-		"dev": "npx --yes payload generate:types && npx --yes payload generate:importmap && next dev -p 3005",
+		"build": "npm run generate:types && npm run generate:importmap && next build",
+		"dev": "npm run generate:types && npm run generate:importmap && next dev -p 3005",
+		"generate:importmap": "PAYLOAD_CONFIG_PATH=src/payload-config.ts npx payload generate:importmap",
+		"generate:types": "PAYLOAD_CONFIG_PATH=src/payload-config.ts npx payload generate:types",
 		"lint": "eslint .",
 		"lint:fix": "eslint . --fix && npx stylelint . --fix",
 		"start": "next start"

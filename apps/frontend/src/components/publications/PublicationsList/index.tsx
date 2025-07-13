@@ -2,7 +2,7 @@
 
 /* * */
 
-import type { Publication } from '@/payload-types';
+import type { Publication } from 'payload-types';
 
 import { Card } from '@/components/cards/Card';
 import { CardSkeleton } from '@/components/cards/CardSkeleton';

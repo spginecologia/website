@@ -1,6 +1,6 @@
 /* * */
 
-import type { Topic } from '@/payload-types';
+import type { Topic } from 'payload-types';
 
 import { CardSummary } from '@/components/cards/CardSummary';
 import { CardWrapper } from '@/components/cards/CardWrapper';

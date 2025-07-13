@@ -7,7 +7,7 @@ import { CardSkeleton } from '@/components/cards/CardSkeleton';
 import { ErrorDisplay } from '@/components/common/ErrorDisplay';
 import { NoDataDisplay } from '@/components/common/NoDataDisplay';
 import { Section } from '@/components/common/Section';
-import { type Guideline } from '@/payload-types';
+import { type Guideline } from 'payload-types';
 import { PayloadAPIResponse } from '@/types/payload-api-response';
 import { Title } from '@mantine/core';
 import { useTranslations } from 'next-intl';

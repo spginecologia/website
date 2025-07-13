@@ -2,7 +2,7 @@
 
 /* * */
 
-import type { Video } from '@/payload-types';
+import type { Video } from 'payload-types';
 import type { PayloadAPIResponse } from '@/types/payload-api-response';
 
 import { VideoCardRelated } from '@/components/videos/VideoCardRelated';

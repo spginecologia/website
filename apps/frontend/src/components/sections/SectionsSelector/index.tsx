@@ -2,7 +2,7 @@
 
 /* * */
 
-import type { Section } from '@/payload-types';
+import type { Section } from 'payload-types';
 
 import { ErrorDisplay } from '@/components/common/ErrorDisplay';
 import { NoDataDisplay } from '@/components/common/NoDataDisplay';
