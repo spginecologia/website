@@ -1,8 +1,11 @@
 /* * */
 
 import { afterChangeUser } from '@/payload/collections/User/actions';
-import { UserOptions } from '@/payload/collections/User/options';
-import { validateTaxId } from '@/utils/validate-tax-id';
+import { userFieldsActivity } from '@/payload/collections/User/fields/activity';
+import { userFieldsContacts } from '@/payload/collections/User/fields/contacts';
+import { userFieldsDocuments } from '@/payload/collections/User/fields/documents';
+import { userFieldsQuotas } from '@/payload/collections/User/fields/quotas';
+import { userFieldsReferences } from '@/payload/collections/User/fields/references';
 import { type CollectionConfig } from 'payload';
 
 /* * */
@@ -42,270 +45,24 @@ export const Users: CollectionConfig = {
 		{
 			tabs: [
 				{
-					fields: [
-						{
-							fields: [
-								{
-									label: 'Título',
-									name: 'title',
-									options: UserOptions.title,
-									type: 'select',
-								},
-								{
-									label: 'Primeiro Nome',
-									name: 'first_name',
-									type: 'text',
-								},
-								{
-									label: 'Apelido(s)',
-									name: 'last_name',
-									type: 'text',
-								},
-							],
-							type: 'row',
-						},
-						{
-							fields: [
-								{
-									label: 'Número de Contribuinte',
-									name: 'tax_id',
-									required: true,
-									type: 'text',
-									unique: true,
-									validate: (value: string) => validateTaxId(value, false, ['singular']) || 'Número de Contribuinte deve ser um número de 9 caracteres.',
-								},
-								{
-									label: 'Número de Cédula Médica',
-									name: 'medical_id',
-									type: 'number',
-								},
-							],
-							type: 'row',
-						},
-						{
-							fields: [
-								{
-									label: 'Data de Nascimento',
-									name: 'birthday',
-									type: 'date',
-								},
-								{
-									label: 'Sócio SPG desde',
-									name: 'member_since',
-									type: 'date',
-								},
-							],
-							type: 'row',
-						},
-					],
+					fields: userFieldsReferences,
 					label: 'Referências',
 				},
 				{
-					fields: [
-						{
-							fields: [
-								{
-									defaultValue: true,
-									label: 'Enviar Newsletter',
-									name: 'send_newsletter',
-									type: 'checkbox',
-								},
-							],
-							type: 'row',
-						},
-						{
-							fields: [
-								{
-									label: 'Telefone',
-									name: 'phone',
-									type: 'text',
-								},
-							],
-							type: 'row',
-						},
-						{
-							label: 'Morada',
-							name: 'address_1',
-							type: 'text',
-						},
-						{
-							label: 'Morada (Continuação)',
-							name: 'address_2',
-							type: 'text',
-						},
-						{
-							fields: [
-								{
-									label: 'Código Postal',
-									name: 'postal_code',
-									type: 'text',
-								},
-								{
-									label: 'Cidade',
-									name: 'city',
-									type: 'text',
-								},
-								{
-									defaultValue: 'Portugal',
-									label: 'País',
-									name: 'country',
-									type: 'text',
-								},
-							],
-							type: 'row',
-						},
-					],
+					fields: userFieldsContacts,
 					label: 'Contactos',
 				},
 				{
-					fields: [
-						{
-							label: 'Local de Trabalho Principal',
-							name: 'workplace_primary',
-							type: 'text',
-						},
-						{
-							label: 'Local de Trabalho Secundário',
-							name: 'workplace_secondary',
-							type: 'text',
-						},
-						{
-							hasMany: true,
-							label: 'Áreas de Interesse',
-							name: 'subscribed_sections',
-							options: UserOptions.subscribed_sections,
-							type: 'select',
-						},
-					],
+					fields: userFieldsActivity,
 					label: 'Atividade',
 				},
 				{
-					fields: [],
+					fields: userFieldsDocuments,
 					label: 'Documentos',
 				},
 				{
-					fields: [
-						{
-							fields: [
-								{
-									label: 'Nome na Fatura',
-									name: 'billing_name',
-									type: 'text',
-								},
-								{
-									label: 'Número de Contribuinte (Fatura)',
-									name: 'billing_tax_id',
-									type: 'text',
-									validate: (value: string) => validateTaxId(value, true, ['singular', 'company']) || 'NIF (Faturação) deve ser um número de 9 caracteres.',
-								},
-							],
-							type: 'row',
-						},
-						{
-							label: 'Morada (Fatura)',
-							name: 'billing_address_1',
-							type: 'text',
-						},
-						{
-							label: 'Morada Cont. (Fatura)',
-							name: 'billing_address_2',
-							type: 'text',
-						},
-						{
-							fields: [
-								{
-									label: 'Código Postal (Fatura)',
-									name: 'billing_postal_code',
-									type: 'text',
-								},
-								{
-									label: 'Cidade (Fatura)',
-									name: 'billing_city',
-									type: 'text',
-								},
-							],
-							type: 'row',
-						},
-						{
-							access: {
-								update: ({ req }) => {
-									if (req.user?.email === 'admin@spginecologia.pt') return true;
-									return false;
-								},
-							},
-							label: 'Stripe ID',
-							name: 'stripe_id',
-							type: 'text',
-						},
-						{
-							fields: [
-								{
-									fields: [
-										{
-											label: 'Tipo de Documento',
-											name: 'doc_type',
-											options: [
-												{ label: 'Fatura', value: 'invoice' },
-												{ label: 'Nota de Crédito', value: 'credit_note' },
-											],
-											type: 'select',
-										},
-										{
-											label: 'Data de Emissão',
-											name: 'doc_date',
-											type: 'text',
-										},
-										{
-											label: 'Valor',
-											name: 'doc_amount',
-											type: 'number',
-										},
-									],
-									type: 'row',
-								},
-								{
-									fields: [
-										{
-											label: 'Nº do Documento',
-											name: 'doc_number',
-											type: 'text',
-										},
-										{
-											label: 'ID de Sistema',
-											name: 'doc_id',
-											type: 'text',
-										},
-										{
-											label: 'Hora de Sistema',
-											name: 'doc_system_time',
-											type: 'text',
-										},
-									],
-									type: 'row',
-								},
-								{
-									hasMany: true,
-									label: 'Produtos associados a esta transação',
-									name: 'associated_products',
-									relationTo: 'products',
-									type: 'relationship',
-								},
-								{
-									admin: {
-										components: {
-											Field: '@/payload/components/OpenTransactionDocumentButton/index#OpenTransactionDocumentButton',
-										},
-									},
-									name: 'open_pdf',
-									type: 'ui',
-								},
-							],
-							label: 'Transações',
-							name: 'transactions',
-							type: 'array',
-						},
-					],
-					label: 'Pagamentos & Faturas',
+					fields: userFieldsQuotas,
+					label: 'Pagamentos de Quotas',
 				},
 			],
 			type: 'tabs',

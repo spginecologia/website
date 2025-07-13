@@ -4,22 +4,23 @@ import { type CollectionConfig } from 'payload';
 
 /* * */
 
-export const Products: CollectionConfig = {
+export const Quotas: CollectionConfig = {
 
 	access: {
 		read: () => true,
 	},
 
 	admin: {
-		useAsTitle: 'title',
+		useAsTitle: 'year',
 	},
 
 	fields: [
 		{
-			label: 'Título',
-			name: 'title',
+			label: 'Referente ao Ano',
+			min: 2020,
+			name: 'year',
 			required: true,
-			type: 'text',
+			type: 'number',
 		},
 		{
 			label: 'Valor',
@@ -37,10 +38,10 @@ export const Products: CollectionConfig = {
 	],
 
 	labels: {
-		plural: 'Configuração de Produtos',
-		singular: 'Produto',
+		plural: 'Configuração de Cotas',
+		singular: 'Cota',
 	},
 
-	slug: 'products',
+	slug: 'quotas',
 
 };
