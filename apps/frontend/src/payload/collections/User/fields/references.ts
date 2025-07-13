@@ -59,6 +59,7 @@ export const userFieldsReferences: Field[] = [
 				label: 'Sócio SPG desde o ano (inclusive)',
 				min: 1975,
 				name: 'member_since',
+				required: true,
 				type: 'number',
 			},
 		],

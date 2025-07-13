@@ -2,24 +2,22 @@
 
 /* * */
 
+import { OpenInvoice } from '@/components/account/OpenInvoice';
 import { type PayloadMeResponse } from '@/types/payload-api-response';
 import { Table, TableData, Text } from '@mantine/core';
-import { IconExternalLink } from '@tabler/icons-react';
 import { useTranslations } from 'next-intl';
 import { useMemo } from 'react';
 import useSWR from 'swr';
 
-import styles from './styles.module.css';
-
 /* * */
 
-export function AccountPaymentsTransactions() {
+export function AccountQuotasInvoices() {
 	//
 
 	//
 	// A. Setup variables
 
-	const t = useTranslations('account.AccountPaymentsTransactions');
+	const t = useTranslations('account.AccountQuotasInvoices');
 
 	//
 	// B. Fetch data
@@ -30,20 +28,28 @@ export function AccountPaymentsTransactions() {
 	// C. Transform data
 
 	const tableData = useMemo<TableData>(() => {
-		const bodyData = userData?.user?.transactions?.map((transactionItem) => {
-			return [
-				transactionItem.doc_number,
-				transactionItem.doc_date,
-				<a className={styles.openPdf} href={`/api/account/payments/get-transaction-pdf/${transactionItem.doc_id}`} target="_blank">
-					Abrir PDF
-					<IconExternalLink size={14} />
-				</a>,
-			];
-		});
-		return {
-			body: bodyData || [],
+		// Setup table data
+		const tableData: TableData = {
+			body: [],
 			head: [t('table.head.doc_number'), t('table.head.doc_date'), ''],
 		};
+		// If no user data, return the empty table
+		if (!userData?.user?.quotas?.length) {
+			return tableData;
+		}
+		// Extract all invoices from user payments
+		tableData.body = userData.user.quotas
+			.flatMap(payment => payment.invoices || [])
+			.sort((a, b) => b.doc_system_time.localeCompare(a.doc_system_time))
+			.map((item) => {
+				return [
+					item.doc_number,
+					item.doc_system_time.substring(0, 10), // Format date to YYYY-MM-DD
+					<OpenInvoice docId={item.doc_id} />,
+				];
+			});
+		// Return the table
+		return tableData;
 	}, [userData]);
 
 	//
@@ -61,9 +67,7 @@ export function AccountPaymentsTransactions() {
 		return <Text variant="overline">{t('no_data')}</Text>;
 	}
 
-	return (
-		<Table data={tableData} layout="fixed" withTableBorder />
-	);
+	return <Table data={tableData} layout="fixed" withTableBorder />;
 
 	//
 }

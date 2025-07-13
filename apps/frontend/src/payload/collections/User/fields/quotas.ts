@@ -1,5 +1,6 @@
 /* * */
 
+import { UserOptions } from '@/payload/collections/User/options';
 import { validateTaxId } from '@/utils/validate-tax-id';
 import { type Field } from 'payload';
 
@@ -55,6 +56,7 @@ export const userFieldsQuotasBillingDetails: Field[] = [
 
 export const userFieldsQuotasPayments: Field[] = [
 	{
+		defaultValue: [],
 		fields: [
 			{
 				fields: [
@@ -80,64 +82,73 @@ export const userFieldsQuotasPayments: Field[] = [
 					{
 						label: 'Estado do Pagamento',
 						name: 'payment_status',
-						options: [
-							{ label: 'Aguarda Pagamento', value: 'waiting' },
-							{ label: 'Pago', value: 'paid' },
-							{ label: 'Reembolso', value: 'refunded' },
-							{ label: 'Cancelado', value: 'canceled' },
-							{ label: 'ERRO', value: 'error' },
-						],
+						options: [...UserOptions.payment_status],
 						required: true,
 						type: 'select',
-					},
-					{
-						label: 'PaymentLink ID (mollie)',
-						name: 'payment_link_id',
-						type: 'text',
-					},
-
-					{
-						fields: [
-							{
-								fields: [
-									{
-										label: 'Nº do Documento',
-										name: 'doc_number',
-										type: 'text',
-									},
-									{
-										label: 'ID de Sistema',
-										name: 'doc_id',
-										type: 'text',
-									},
-									{
-										label: 'Hora de Sistema',
-										name: 'doc_system_time',
-										type: 'text',
-									},
-									{
-										admin: {
-											components: {
-												Field: '@/payload/components/OpenTransactionDocumentButton/index#OpenTransactionDocumentButton',
-											},
-										},
-										name: 'open_pdf',
-										type: 'ui',
-									},
-								],
-								type: 'row',
-							},
-						],
-						label: 'Faturas',
-						name: 'system_info',
-						type: 'array',
 					},
 				],
 				type: 'row',
 			},
+			{
+				fields: [
+					{
+						label: 'Mollie Payment Link ID',
+						name: 'payment_link_id',
+						required: true,
+						type: 'text',
+					},
+					{
+						label: 'Mollie Payment Link URL',
+						name: 'payment_link_url',
+						required: true,
+						type: 'text',
+					},
+				],
+				type: 'row',
+			},
+			{
+				defaultValue: [],
+				fields: [
+					{
+						fields: [
+							{
+								label: 'ID de Sistema',
+								name: 'doc_id',
+								required: true,
+								type: 'text',
+							},
+							{
+								label: 'Nº do Documento',
+								name: 'doc_number',
+								required: true,
+								type: 'text',
+							},
+							{
+								label: 'Hora de Sistema',
+								name: 'doc_system_time',
+								required: true,
+								type: 'text',
+							},
+							{
+								admin: {
+									components: {
+										Field: '@/payload/components/OpenTransactionDocumentButton/index#OpenTransactionDocumentButton',
+									},
+								},
+								name: 'open_pdf',
+								type: 'ui',
+							},
+						],
+						type: 'row',
+					},
+				],
+				label: 'Faturas',
+				name: 'invoices',
+				type: 'array',
+			},
 		],
 		label: 'Pagamentos de Quotas',
-		name: 'payments',
+		name: 'quotas',
 		type: 'array',
 	},
 ];

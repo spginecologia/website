@@ -1,5 +1,6 @@
 /* * */
 
+import { afterActivateQuota } from '@/payload/collections/Quotas/actions';
 import { type CollectionConfig } from 'payload';
 
 /* * */
@@ -21,13 +22,28 @@ export const Quotas: CollectionConfig = {
 			name: 'year',
 			required: true,
 			type: 'number',
+			unique: true,
+			validate: (value: number) => {
+				// Check if the value is an integer without decimal places.
+				if (!Number.isInteger(value)) {
+					return 'O ano deve ser um número inteiro, sem casas decimais.';
+				}
+				return true;
+			},
 		},
 		{
-			label: 'Valor',
+			label: 'Valor (EUR) (sem casas decimais)',
 			min: 0,
 			name: 'amount',
 			required: true,
 			type: 'number',
+			validate: (value: number) => {
+				// Check if the value is an integer without decimal places.
+				if (!Number.isInteger(value)) {
+					return 'O valor deve ser um número inteiro, sem casas decimais.';
+				}
+				return true;
+			},
 		},
 		{
 			label: 'Ativar Quota',
@@ -37,9 +53,15 @@ export const Quotas: CollectionConfig = {
 		},
 	],
 
+	hooks: {
+		afterChange: [
+			afterActivateQuota,
+		],
+	},
+
 	labels: {
-		plural: 'Configuração de Cotas',
-		singular: 'Cota',
+		plural: 'Configuração de Quotas',
+		singular: 'Quota',
 	},
 
 	slug: 'quotas',

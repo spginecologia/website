@@ -4,8 +4,8 @@
 
 import { AccountIntro } from '@/components/account/AccountIntro';
 import { AccountLogoutButton } from '@/components/account/AccountLogoutButton';
-import { AccountPayments } from '@/components/account/AccountPayments';
 import { AccountProfile } from '@/components/account/AccountProfile';
+import { AccountQuotas } from '@/components/account/AccountQuotas';
 import { AccountVideos } from '@/components/account/AccountVideos';
 import { ContentWrapper } from '@/components/common/ContentWrapper';
 import { Section } from '@/components/common/Section';
@@ -46,7 +46,7 @@ export function AccountMain() {
 			<Section>
 				<div className={styles.grid}>
 					<div className={styles.columnA}>
-						<AccountPayments />
+						<AccountQuotas />
 						<AccountVideos />
 					</div>
 					<div className={styles.columnB}>

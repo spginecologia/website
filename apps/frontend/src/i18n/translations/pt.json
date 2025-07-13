@@ -212,45 +212,6 @@
 		"AccountLogoutButton": {
 			"label": "Terminar Sessão"
 		},
-		"AccountPayments": {
-			"subtitle": "Faça a gestão autónoma das suas quotas de sócio.",
-			"title": "Pagamentos & Faturas"
-		},
-		"AccountPaymentsCheckout": {
-			"alert": {
-				"action": "Regularizar Pagamentos",
-				"message": "O pagamento das suas quotas de sócio é o que permite à SPG evoluir e continuar a servir a comunidade médica.",
-				"title": "Tem pagamentos pendentes"
-			},
-			"error": "Erro ao carregar histórico",
-			"loading": "A carregar histórico...",
-			"no_data": "Nenhum item disponível",
-			"table": {
-				"body": {
-					"amount": "{value, number, currency_euro}",
-					"status": {
-						"false": "Pendente",
-						"true": "OK"
-					}
-				},
-				"head": {
-					"amount": "Valor",
-					"price_name": "Quota",
-					"status": "Estado"
-				}
-			}
-		},
-		"AccountPaymentsTransactions": {
-			"error": "Erro ao carregar faturas",
-			"loading": "A carregar faturas...",
-			"no_data": "Nenhum Item Disponível",
-			"table": {
-				"head": {
-					"doc_date": "Data de Emissão",
-					"doc_number": "Nº Documento"
-				}
-			}
-		},
 		"AccountProfile": {
 			"subtitle": "Aceda e atualize os seus dados pessoais.",
 			"title": "Perfil de Sócio"
@@ -381,6 +342,41 @@
 				}
 			}
 		},
+		"AccountQuotas": {
+			"subtitle": "Faça a gestão autónoma das suas quotas de sócio.",
+			"title": "Pagamentos & Faturas"
+		},
+		"AccountQuotasInvoices": {
+			"error": "Erro ao carregar faturas",
+			"loading": "A carregar faturas...",
+			"no_data": "Nenhum Documento Disponível",
+			"table": {
+				"head": {
+					"doc_date": "Data de Emissão",
+					"doc_number": "Nº Documento"
+				}
+			}
+		},
+		"AccountQuotasPayments": {
+			"alert": {
+				"action": "Regularizar Pagamentos",
+				"message": "O pagamento das suas quotas de sócio é o que permite à SPG evoluir e continuar a servir a comunidade médica.",
+				"title": "Tem pagamentos pendentes"
+			},
+			"error": "Erro ao carregar histórico",
+			"loading": "A carregar histórico...",
+			"no_data": "Nenhum item disponível",
+			"table": {
+				"body": {
+					"payment_amount": "{value, number, currency_euro}"
+				},
+				"head": {
+					"payment_amount": "Valor",
+					"payment_status": "Estado",
+					"year": "Ano"
+				}
+			}
+		},
 		"AccountVideos": {
 			"subtitle": "Todos os vídeos cirúrgicos que publicou.",
 			"title": "Vídeos Cirúrgicos"
@@ -390,11 +386,15 @@
 			"loading": "A carregar vídeos...",
 			"no_data": "Ainda não publicou nenhum vídeo cirúrgico"
 		},
-		"PaymentStatus": {
+		"OpenInvoice": {
+			"label": "Abrir PDF"
+		},
+		"QuotaPaymentStatus": {
+			"canceled": "Cancelado",
 			"paid": "OK",
 			"refunded": "Reembolsado",
 			"unknown": "Desconhecido",
-			"unpaid": "Pendente"
+			"waiting": "Pagar Agora"
 		}
 	},
 	"agencies": {

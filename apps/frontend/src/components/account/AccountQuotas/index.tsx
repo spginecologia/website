@@ -1,19 +1,19 @@
 /* * */
 
-import { AccountPaymentsCheckout } from '@/components/account/AccountPaymentsCheckout';
-import { AccountPaymentsTransactions } from '@/components/account/AccountPaymentsTransactions';
+import { AccountQuotasInvoices } from '@/components/account/AccountQuotasInvoices';
+import { AccountQuotasPayments } from '@/components/account/AccountQuotasPayments';
 import { Paper, Space, Text, Title } from '@mantine/core';
 import { useTranslations } from 'next-intl';
 
 /* * */
 
-export function AccountPayments() {
+export function AccountQuotas() {
 	//
 
 	//
 	// A. Setup variables
 
-	const t = useTranslations('account.AccountPayments');
+	const t = useTranslations('account.AccountQuotas');
 
 	//
 	// B. Render components
@@ -24,9 +24,9 @@ export function AccountPayments() {
 			<Space h="xs" />
 			<Text>{t('subtitle')}</Text>
 			<Space h="xl" />
-			<AccountPaymentsCheckout />
+			<AccountQuotasPayments />
 			<Space h="xl" />
-			<AccountPaymentsTransactions />
+			<AccountQuotasInvoices />
 		</Paper>
 	);
 

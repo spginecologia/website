@@ -446,7 +446,7 @@ export interface User {
   tax_id: string;
   medical_id?: number | null;
   birthday?: string | null;
-  member_since?: number | null;
+  member_since: number;
   send_newsletter?: boolean | null;
   phone?: string | null;
   address_1?: string | null;
@@ -471,18 +471,19 @@ export interface User {
   billing_address_2?: string | null;
   billing_postal_code?: string | null;
   billing_city?: string | null;
-  payments?:
+  quotas?:
     | {
         request_date: string;
         year: number;
         payment_amount: number;
-        payment_status: 'waiting' | 'paid' | 'refunded' | 'canceled' | 'error';
-        payment_link_id?: string | null;
-        system_info?:
+        payment_status: 'waiting' | 'paid' | 'refunded' | 'canceled';
+        payment_link_id: string;
+        payment_link_url: string;
+        invoices?:
           | {
-              doc_number?: string | null;
-              doc_id?: string | null;
-              doc_system_time?: string | null;
+              doc_id: string;
+              doc_number: string;
+              doc_system_time: string;
               id?: string | null;
             }[]
           | null;
@@ -986,7 +987,7 @@ export interface UsersSelect<T extends boolean = true> {
   billing_address_2?: T;
   billing_postal_code?: T;
   billing_city?: T;
-  payments?:
+  quotas?:
     | T
     | {
         request_date?: T;
@@ -994,11 +995,12 @@ export interface UsersSelect<T extends boolean = true> {
         payment_amount?: T;
         payment_status?: T;
         payment_link_id?: T;
-        system_info?:
+        payment_link_url?: T;
+        invoices?:
           | T
           | {
-              doc_number?: T;
               doc_id?: T;
+              doc_number?: T;
               doc_system_time?: T;
               id?: T;
             };

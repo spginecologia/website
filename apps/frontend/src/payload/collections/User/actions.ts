@@ -1,12 +1,12 @@
 /* * */
 
-import { User } from 'payload-types';
 import { brevoUpdateUser } from '@/utils/brevo-update-user';
 import { payloadSendActivationEmail } from '@/utils/payload-send-activation-email';
 import { type CollectionAfterChangeHook } from 'payload';
+import { User } from 'payload-types';
 
 /**
- * This function runs after a user object is updated.
+ * This function runs after a `user` object is updated.
  * It is necessary to handle the special case of when the email is changed,
  * since that is the primary key in most systems.
  * @param doc The updated user.
@@ -21,11 +21,11 @@ export const afterChangeUser: CollectionAfterChangeHook<User> = async ({ doc, pr
 
 	if (previousDoc.email && previousDoc.email !== doc.email) {
 		console.log('User changed email:', previousDoc.email, '->', doc.email);
-		await brevoUpdateUser(doc, 'id');
+		// await brevoUpdateUser(doc, 'id');
 	}
 	else {
 		console.log('User updated:', doc.email);
-		await brevoUpdateUser(doc, 'email');
+		// await brevoUpdateUser(doc, 'email');
 	}
 
 	//
