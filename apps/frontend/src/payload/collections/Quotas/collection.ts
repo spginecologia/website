@@ -60,7 +60,7 @@ export const Quotas: CollectionConfig = {
 	},
 
 	labels: {
-		plural: 'Configuração de Quotas',
+		plural: 'Quotas',
 		singular: 'Quota',
 	},
 

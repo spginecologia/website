@@ -70,23 +70,5 @@ export function AccountQuotasPayments() {
 
 	return <Table data={tableData} layout="fixed" withTableBorder />;
 
-	// return (
-	// 	<>
-	// 		{hasUnpaidOptions && (
-	// 			<>
-	// 				<Alert icon={<IconFlag3Filled />} title={t('alert.title')} w="100%">
-	// 					<Text size="sm">{t('alert.message')}</Text>
-	// 					<Space h="xs" />
-	// 					<form action="/api/account/payments/create-checkout-session" method="POST">
-	// 						<Button size="xs" type="submit">{t('alert.action')}</Button>
-	// 					</form>
-	// 				</Alert>
-	// 				<Space h="md" />
-	// 			</>
-	// 		)}
-	// 		<Table data={tableData} layout="fixed" withTableBorder />
-	// 	</>
-	// );
-
 	//
 }

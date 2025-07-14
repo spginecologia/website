@@ -1,0 +1,63 @@
+/* * */
+
+import { mollieUpdateQuotaStatus } from '@/scripts/mollie-update-quota-status';
+
+/* * */
+
+// This endpoint is called on changes to a Mollie Payment status (not Payment Links).
+// When it is paid, cancelled, refunded, etc. These notifications must be treated
+// as just notifications, and as such it is necessary to fetch from Mollie API.
+
+/* * */
+
+interface ContextProps {
+	params: Promise<{ user_id: string }>
+}
+
+/* * */
+
+export async function GET(request: Request, { params }: ContextProps) {
+	try {
+		//
+
+		const { user_id } = await params;
+
+		if (!user_id) {
+			return new Response('User ID is required', { status: 400 });
+		}
+
+		await mollieUpdateQuotaStatus(user_id);
+
+		return new Response('OK', { status: 200 });
+
+		//
+	}
+	catch (err) {
+		console.log(err);
+		return new Response(null, { status: 400 });
+	}
+}
+
+/* * */
+
+export async function POST(request: Request, { params }: ContextProps) {
+	try {
+		//
+
+		const { user_id } = await params;
+
+		if (!user_id) {
+			return new Response('User ID is required', { status: 400 });
+		}
+
+		await mollieUpdateQuotaStatus(user_id);
+
+		return new Response('OK', { status: 200 });
+
+		//
+	}
+	catch (err) {
+		console.log(err);
+		return new Response(null, { status: 400 });
+	}
+}

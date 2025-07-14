@@ -2,6 +2,7 @@
 
 import { sendActivationEmail } from '@/payload/collections/User/actions/send-activation-email';
 import { updateBrevo } from '@/payload/collections/User/actions/update-brevo';
+import { updateQuotaStatus } from '@/payload/collections/User/actions/update-quota-status';
 import { userFieldsActivity } from '@/payload/collections/User/fields/activity';
 import { userFieldsContacts } from '@/payload/collections/User/fields/contacts';
 import { userFieldsDocuments } from '@/payload/collections/User/fields/documents';
@@ -9,8 +10,6 @@ import { userFieldsQuotas } from '@/payload/collections/User/fields/quotas';
 import { userFieldsReferences } from '@/payload/collections/User/fields/references';
 import { UserOptions } from '@/payload/collections/User/options';
 import { type CollectionConfig } from 'payload';
-
-import { updateQuotaStatus } from './actions/update-quota-status';
 
 /* * */
 
@@ -88,7 +87,7 @@ export const Users: CollectionConfig = {
 			updateBrevo,
 			sendActivationEmail,
 		],
-		afterRead: [
+		afterLogin: [
 			updateQuotaStatus,
 		],
 	},

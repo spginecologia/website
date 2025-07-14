@@ -1,24 +1,33 @@
 /* * */
 
 import payloadConfig from '@/payload-config';
+import { vendusCreateInvoice } from '@/scripts/vendus-create-invoice';
 import { MOLLIEAPI } from '@/services/MOLLIEAPI';
 import { PaymentStatus } from '@mollie/api-client';
 import { getPayload } from 'payload';
-import { type User } from 'payload-types';
-
-import { vendusCreateInvoice } from './vendus-create-invoice';
 
 /**
- * Updates the user's attributes, including newsletter subscription, in Brevo.
- * @param userData User data to be updated in Brevo.
+ * This function updates the quota status of a user based on their Mollie payment links.
+ * It checks the payment status and updates the user's quotas accordingly.
+ * It also creates invoices or credit notes in Vendus if necessary.
+ * @param userId User ID to update.
  */
-export async function mollieUpdateQuotaStatus(userData: User) {
+export async function mollieUpdateQuotaStatus(userId: string) {
 	//
 
 	//
-	// Setup payload to access the database
+	// Setup payload and fetch the user data
 
 	const payload = await getPayload({ config: payloadConfig });
+
+	const userData = await payload.findByID({
+		collection: 'users',
+		id: userId,
+	});
+
+	if (!userData) {
+		throw new Error(`User with ID "${userId}" not found. Skipping...`);
+	}
 
 	//
 	// Check if the user has any quotas and loop through them
@@ -66,8 +75,9 @@ export async function mollieUpdateQuotaStatus(userData: User) {
 			const isPaid = paymentData.status === PaymentStatus.paid;
 			const alreadyHasInvoice = quotaData.invoices?.find(item => item.payment_id === paymentData.id && item.doc_type === 'invoice');
 
-			const isRefunded = paymentData.amountRefunded && paymentData.amountRefunded.value.length > 0;
-			const alreadyHasCreditNote = quotaData.invoices?.find(item => item.payment_id === paymentData.id && item.doc_type === 'credit_note');
+			if (isPaid) {
+				quotaData.payment_status = 'paid';
+			}
 
 			if (isPaid && !alreadyHasInvoice) {
 				// Create a new invoice in Vendus
@@ -89,6 +99,42 @@ export async function mollieUpdateQuotaStatus(userData: User) {
 						doc_number: newInvoiceData.number,
 						doc_system_time: newInvoiceData.system_time,
 						doc_type: 'invoice',
+						payment_id: paymentData.id,
+					},
+					...quotaData.invoices || [],
+				];
+			}
+
+			//
+			// Handle the refunded payments
+
+			const isRefunded = paymentData.amountRefunded && paymentData.amountRefunded.value.length > 0;
+			const alreadyHasCreditNote = quotaData.invoices?.find(item => item.payment_id === paymentData.id && item.doc_type === 'credit_note');
+
+			if (isRefunded) {
+				quotaData.payment_status = 'refunded';
+			}
+
+			if (isRefunded && !alreadyHasCreditNote) {
+				// Create a new credit note in Vendus
+				const newCreditNoteData = await vendusCreateInvoice({
+					external_reference: quotaData.payment_link_id,
+					items: [{
+						gross_price: quotaData.payment_amount,
+						qty: 1,
+						reference: `quota-${quotaData.year}`,
+						tax_id: 'NOR',
+						title: `Quota for ${quotaData.year}`,
+					}],
+				});
+				console.log('newCreditNoteData', newCreditNoteData);
+				// Add the new invoice to the quota
+				quotaData.invoices = [
+					{
+						doc_id: newCreditNoteData.id,
+						doc_number: newCreditNoteData.number,
+						doc_system_time: newCreditNoteData.system_time,
+						doc_type: 'credit_note',
 						payment_id: paymentData.id,
 					},
 					...quotaData.invoices || [],

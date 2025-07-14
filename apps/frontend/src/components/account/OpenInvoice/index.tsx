@@ -29,7 +29,7 @@ export function OpenInvoice({ docId }: Props) {
 	}
 
 	return (
-		<a className={styles.link} href={`/api/account/payments/get-transaction-pdf/${docId}`} target="_blank">
+		<a className={styles.link} href={`/api/account/quotas/get-invoice-pdf/${docId}`} target="_blank">
 			{t('label')}
 			<IconExternalLink size={14} />
 		</a>

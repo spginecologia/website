@@ -20,7 +20,7 @@ export function OpenTransactionDocumentButton({ path }) {
 	return (
 		<a
 			className="btn btn--size-medium btn--style-primary"
-			href={`/api/account/payments/get-invoice-pdf/${docId}`}
+			href={`/api/account/quotas/get-invoice-pdf/${docId}`}
 			style={{ textAlign: 'center' }}
 			target="_blank"
 		>
