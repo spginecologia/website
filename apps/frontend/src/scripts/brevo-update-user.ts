@@ -1,7 +1,7 @@
 /* * */
 
-import { type User } from 'payload-types';
 import { BREVOAPI } from '@/services/BREVOAPI';
+import { type User } from 'payload-types';
 
 /**
  * Updates the user's attributes, including newsletter subscription, in Brevo.
@@ -13,24 +13,24 @@ export async function brevoUpdateUser(userData: User, updateBy: 'email' | 'id') 
 	//
 	// Set the request params
 
-	let userId: string;
 	let requestPath: string | undefined;
 	let requestMethod: 'POST' | 'PUT';
 
 	if (updateBy === 'email') {
 		// If we use email, then it is possible to use a POST
 		// as it will create a new user or update an existing one.
-		userId = userData.email;
 		requestPath = undefined;
 		requestMethod = 'POST';
 	}
-	else {
+	else if (updateBy === 'id') {
 		// If we use id, then we must use a PUT as it will
 		// update an existing user. This happens when the user
 		// changes their email, for example.
-		userId = userData.id;
-		requestPath = `${userId}?identifierType=ext_id`;
+		requestPath = `${userData.id}?identifierType=ext_id`;
 		requestMethod = 'PUT';
+	}
+	else {
+		throw new Error('Invalid updateBy parameter. Use "email" or "id".');
 	}
 
 	//

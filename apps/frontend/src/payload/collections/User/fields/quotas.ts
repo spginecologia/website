@@ -115,13 +115,29 @@ export const userFieldsQuotasPayments: Field[] = [
 								label: 'ID de Sistema',
 								name: 'doc_id',
 								required: true,
-								type: 'text',
+								type: 'number',
 							},
 							{
 								label: 'Nº do Documento',
 								name: 'doc_number',
 								required: true,
 								type: 'text',
+							},
+							{
+								label: 'Mollie Payment ID',
+								name: 'payment_id',
+								required: true,
+								type: 'text',
+							},
+							{
+								label: 'Tipo de Documento',
+								name: 'doc_type',
+								options: [
+									{ label: 'Fatura', value: 'invoice' },
+									{ label: 'Nota de Crédito', value: 'credit_note' },
+								],
+								required: true,
+								type: 'select',
 							},
 							{
 								label: 'Hora de Sistema',

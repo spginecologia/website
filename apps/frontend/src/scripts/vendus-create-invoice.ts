@@ -34,7 +34,7 @@ interface VendusInvoiceableTransaction extends VendusTransaction {
 
 interface VendusInvoice {
 	date: string
-	id: string
+	id: number
 	number: string
 	system_time: string
 }

@@ -481,8 +481,10 @@ export interface User {
         payment_link_url: string;
         invoices?:
           | {
-              doc_id: string;
+              doc_id: number;
               doc_number: string;
+              payment_id: string;
+              doc_type: 'invoice' | 'credit_note';
               doc_system_time: string;
               id?: string | null;
             }[]
@@ -1001,6 +1003,8 @@ export interface UsersSelect<T extends boolean = true> {
           | {
               doc_id?: T;
               doc_number?: T;
+              payment_id?: T;
+              doc_type?: T;
               doc_system_time?: T;
               id?: T;
             };

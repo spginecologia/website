@@ -12,7 +12,7 @@ export const userFieldsReferences: Field[] = [
 			{
 				label: 'Título',
 				name: 'title',
-				options: UserOptions.title,
+				options: [...UserOptions.title],
 				type: 'select',
 			},
 			{

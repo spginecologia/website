@@ -82,6 +82,7 @@ export const afterActivateQuota: CollectionAfterChangeHook<Quota> = async ({ doc
 			},
 			description: `Quota de Sócio SPG de ${doc.year}`,
 			reusable: false,
+			webhookUrl: 'https://5509d7a2ebfc.ngrok-free.app/api/account/quotas/mollie-webhook',
 		});
 
 		//

@@ -20,7 +20,7 @@ export const userFieldsActivity: Field[] = [
 		hasMany: true,
 		label: 'Áreas de Interesse',
 		name: 'subscribed_sections',
-		options: UserOptions.subscribed_sections,
+		options: [...UserOptions.subscribed_sections],
 		type: 'select',
 	},
 ];
