@@ -81,7 +81,7 @@ export const afterActivateQuota: CollectionAfterChangeHook<Quota> = async ({ doc
 				value: `${doc.amount}.00`, // Mollie requires the amount as a string
 			},
 			description: `Quota de Sócio SPG de ${doc.year}`,
-			redirectUrl: 'http://localhost:3005/account',
+			redirectUrl: `http://localhost:3005/api/account/quotas/refresh-status/${userData.id}`,
 			reusable: false,
 			webhookUrl: `https://5509d7a2ebfc.ngrok-free.app/api/account/quotas/refresh-status/${userData.id}`,
 		});

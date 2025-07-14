@@ -1,6 +1,7 @@
 /* * */
 
 import payloadConfig from '@/payload-config';
+import { mollieIsRefunded } from '@/scripts/mollie-is-refunded';
 import { vendusCreateInvoice } from '@/scripts/vendus-create-invoice';
 import { MOLLIEAPI } from '@/services/MOLLIEAPI';
 import { PaymentStatus } from '@mollie/api-client';
@@ -67,6 +68,9 @@ export async function mollieUpdateQuotaStatus(userId: string) {
 
 			if (paymentData.status === PaymentStatus.expired) continue;
 			if (paymentData.status === PaymentStatus.failed) continue;
+			if (paymentData.status === PaymentStatus.canceled) continue;
+			if (paymentData.status === PaymentStatus.open) continue;
+			if (paymentData.status === PaymentStatus.pending) continue;
 
 			//
 			// Check if the payment is paid or refunded,
@@ -91,7 +95,6 @@ export async function mollieUpdateQuotaStatus(userId: string) {
 						title: `Quota for ${quotaData.year}`,
 					}],
 				});
-				console.log('newInvoiceData', newInvoiceData);
 				// Add the new invoice to the quota
 				quotaData.invoices = [
 					{
@@ -108,7 +111,7 @@ export async function mollieUpdateQuotaStatus(userId: string) {
 			//
 			// Handle the refunded payments
 
-			const isRefunded = paymentData.amountRefunded && paymentData.amountRefunded.value.length > 0;
+			const isRefunded = mollieIsRefunded(paymentData);
 			const alreadyHasCreditNote = quotaData.invoices?.find(item => item.payment_id === paymentData.id && item.doc_type === 'credit_note');
 
 			if (isRefunded) {

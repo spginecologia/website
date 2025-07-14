@@ -1,6 +1,7 @@
 /* * */
 
 import { mollieUpdateQuotaStatus } from '@/scripts/mollie-update-quota-status';
+import { redirect } from 'next/navigation';
 
 /* * */
 
@@ -28,13 +29,16 @@ export async function GET(request: Request, { params }: ContextProps) {
 
 		await mollieUpdateQuotaStatus(user_id);
 
-		return new Response('OK', { status: 200 });
+		return new Response('OK', { status: 300 });
 
 		//
 	}
 	catch (err) {
 		console.log(err);
 		return new Response(null, { status: 400 });
+	}
+	finally {
+		redirect('/account');
 	}
 }
 
