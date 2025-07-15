@@ -1,23 +1,38 @@
 /* * */
 
-import { type VendusCreditNote, type VendusDocumentResponse } from '@/services/vendus/types';
+import { type VendusRefundableLineItem, type VendusSimplifiedDocumentResponse } from '@/services/vendus/types';
+import { vendusGetDocumentData } from '@/services/vendus/vendus-get-invoice-data';
 
 /**
- * This is the internal type used to create a Credit Note
- * in Vendus. It extends the VendusCreditNote type
- * with additional fields required by the Vendus API.
+ * This is the internal type used
+ * to create a Credit Note in Vendus.
  */
-export interface VendusCreatableCreditNote extends VendusCreditNote {
+export interface VendusCreatableCreditNote {
+	items: VendusRefundableLineItem[]
 	mode: 'normal' | 'tests'
+	notes: string
 	output: 'auto' | 'html' | 'pdf'
 	payments: { id: string }[]
 	register_id: string
+	type: 'NC'
 }
 
-/* * */
-
-export async function vendusCreateDocument(transactionData: VendusCreditNote): Promise<VendusDocumentResponse> {
+/**
+ * This function creates a credit note in Vendus based on the original invoice data.
+ * It requires the original invoice ID to fetch the necessary data.
+ * @param invoiceId The ID of the original invoice to create a credit note for.
+ * @returns A promise that resolves to the simplified response from Vendus after creating the credit note.
+ * @throws An error if the Vendus API request fails or if required environment variables are missing
+ */
+export async function vendusCreateCreditNote(invoiceId: number): Promise<VendusSimplifiedDocumentResponse> {
 	//
+
+	//
+	// Validate params
+
+	if (!invoiceId) {
+		throw new Error('Missing invoiceId parameter');
+	}
 
 	//
 	// Validate environment variables
@@ -39,19 +54,31 @@ export async function vendusCreateDocument(transactionData: VendusCreditNote): P
 	}
 
 	//
-	// Prepare the invoiceable transaction object
+	// Fetch the original invoice data from Vendus
+
+	const originalInvoiceData = await vendusGetDocumentData(invoiceId);
+
+	//
+	// Prepare the Credit Note object
+
+	const refundableLineItems: VendusRefundableLineItem[] = originalInvoiceData.items.map((item, index) => ({
+		id: item.id,
+		qty: item.qty,
+		reference_document: {
+			document_number: originalInvoiceData.number,
+			document_row: index + 1,
+		},
+	}));
 
 	const creatableCreditNoteData: VendusCreatableCreditNote = {
-		...transactionData,
-		mode: process.env.VENDUS_WORKMODE as VendusCreatableCreditNote['mode'] || 'tests',
+		items: refundableLineItems,
+		mode: process.env.VENDUS_WORKMODE as VendusCreatableCreditNote['mode'] ?? 'tests',
+		notes: 'Correção de valor.',
 		output: 'auto',
 		payments: [{ id: process.env.VENDUS_PAYMENT_ID }],
 		register_id: process.env.VENDUS_REGISTER_ID,
+		type: 'NC',
 	};
-
-	console.log('-----------------------------');
-	console.log('creatableCreditNoteData', creatableCreditNoteData);
-	console.log('-----------------------------');
 
 	//
 	// Send the invoiceable transaction object to the Vendus API

@@ -22,13 +22,23 @@ export function validateTaxId(value: number | string, isOptional: boolean, allow
 	//
 	// Ensure the value is a string
 
-	const valueAsString = value.toString();
+	const valueAsString = `${value}`;
 
 	//
 	// Check if the value has 9 digits
 
 	const isValidLength = valueAsString.length === 9;
 	if (!isValidLength) return false;
+
+	//
+	// Reject if all digits are the same or if the value is a sequence of 0s, 1s, or 2s,
+	// or if the value is a known invalid sequence like '123456789' or '987654321'.
+
+	if (/^(\d)\1{8}$/.test(valueAsString)) return false;
+
+	if (/^(0{9}|1{9}|2{9}|3{9}|4{9}|5{9}|6{9}|7{9}|8{9}|9{9})$/.test(valueAsString)) return false;
+
+	if (valueAsString === '123456789' || valueAsString === '987654321') return false;
 
 	//
 	// Check if the value has only numbers

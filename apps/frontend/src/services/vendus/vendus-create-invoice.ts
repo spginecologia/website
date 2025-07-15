@@ -1,6 +1,6 @@
 /* * */
 
-import { type VendusDocumentResponse, type VendusInvoice } from '@/services/vendus/types';
+import { type VendusInvoice, type VendusSimplifiedDocumentResponse } from '@/services/vendus/types';
 
 /**
  * This is the internal type used to create an invoice
@@ -16,7 +16,7 @@ interface VendusCreatableInvoice extends VendusInvoice {
 
 /* * */
 
-export async function vendusCreateInvoice(transactionData: VendusInvoice): Promise<VendusDocumentResponse> {
+export async function vendusCreateInvoice(transactionData: VendusInvoice): Promise<VendusSimplifiedDocumentResponse> {
 	//
 
 	//
@@ -43,16 +43,12 @@ export async function vendusCreateInvoice(transactionData: VendusInvoice): Promi
 
 	const creatableInvoiceData: VendusCreatableInvoice = {
 		...transactionData,
-		mode: process.env.VENDUS_WORKMODE as VendusCreatableInvoice['mode'] || 'tests',
+		mode: process.env.VENDUS_WORKMODE as VendusCreatableInvoice['mode'] ?? 'tests',
 		output: 'auto',
 		payments: [{ id: process.env.VENDUS_PAYMENT_ID }],
 		register_id: process.env.VENDUS_REGISTER_ID,
 		type: 'FT',
 	};
-
-	console.log('-----------------------------');
-	console.log('creatableInvoiceData', creatableInvoiceData);
-	console.log('-----------------------------');
 
 	//
 	// Send the invoiceable transaction object to the Vendus API

@@ -96,42 +96,18 @@ export interface VendusInvoice {
 /* * */
 
 /**
- * This type represents the minimum required
- * data to create a Credit Note in Vendus.
- * You need to have the original invoice response data
- * to be able to create a credit note.
- */
-export interface VendusCreditNote {
-
-	/**
-	 * The list of refundable line items
-	 * that are being credited.
-	 */
-	items: VendusRefundableLineItem[]
-
-	/**
-	 * The type is fixed to `NC` (Nota de Crédito)
-	 * because it is used to create a credit note.
-	 */
-	type: 'NC'
-
-}
-
-/* * */
-
-/**
  * This is the response type returned
  * by the Vendus API when creating a document.
  * Only a subset of fields are relevant for our use case.
  */
-export interface VendusDocumentResponse {
+export interface VendusSimplifiedDocumentResponse {
 	// amount_gross: string
 	// amount_net: string
 	// atcud: string
 	date: string
 	// date_supply: string
 	// hash: string
-	id: string
+	id: number
 	// local_time: string
 	number: string
 	// output: string
@@ -142,4 +118,167 @@ export interface VendusDocumentResponse {
 	system_time: string
 	// tax_authority_id: string
 	// type: 'NC'
+}
+
+/**
+ * This is the full response type returned
+ * by the Vendus API when requesting a document.
+ * It contains all the details of the document,
+ * including the client, items, payments, and more.
+ */
+export interface VendusFullDocumentResponse {
+	amount_gross: string
+	amount_net: string
+	atcud: string
+	client: {
+		address: string
+		city: string
+		country: string
+		country_name: string
+		email: string
+		external_reference: string
+		fiscal_id: string
+		id: string
+		is_tax_free_valid: boolean
+		name: string
+		postalcode: string
+	}
+	date: string
+	date_due: string
+	date_supply: string
+	debt: {
+		paid: string
+		total: string
+		unpaid: string
+	}
+	discounts: {
+		amount: string
+		percentage: string
+		total: string
+	}
+	external_reference: string
+	hash: string
+	id: string
+	irs: {
+		amount: string
+		description: string
+		rate: string
+	}
+	items: [
+		{
+			amounts: [
+				{
+					gross_total: string
+					gross_unit: string
+					net_total: string
+					net_unit: string
+				},
+			]
+			brand_id: string
+			category_id: string
+			discounts: [
+				{
+					amount: string
+					calculated_percentage: string
+					percentage: string
+				},
+			]
+			id: number
+			qty: number
+			qty_left_to_invoice: string
+			reference: string
+			reference_document: string
+			serial: string
+			stock_control: string
+			tax: {
+				country: string
+				exemption: string
+				exemption_law: string
+				id: string
+				rate: string
+			}
+			text: string
+			title: string
+			type_id: string
+		},
+	]
+	local_time: string
+	movement_of_goods: {
+		at_code: string
+		at_id: string
+		landpoint: [
+			{
+				address: string
+				city: string
+				date: string
+				disclaimer: string
+				postalcode: string
+				time: string
+			},
+		]
+		licence_plate: string
+		loadpoint: [
+			{
+				address: string
+				changestock: string
+				city: string
+				date: string
+				postalcode: string
+				time: string
+			},
+		]
+		show_prices: string
+	}
+	multibanco: {
+		amount: string
+		entity: string
+		reference: string
+	}
+	number: string
+	observations: string
+	output: string
+	output_data: string
+	payments: [
+		{
+			amount: string
+			change: string
+			id: string
+			title: string
+		},
+	]
+	qrcode: string
+	qrcode_data: string
+	qty_left_to_invoice: string
+	register_id: string
+	related_docs: [
+		{
+			amount: string
+			id: string
+			number: string
+			type: string
+		},
+	]
+	status: {
+		date: string
+		id: string
+		user_id: string
+	}
+	store_id: string
+	subtype: string
+	system_time: string
+	tax_authority_id: string
+	taxes: [
+		{
+			amount: string
+			base: string
+			rate: 23
+			total: string
+		},
+	]
+	type: string
+	user_id: string
+	venduspay: {
+		payment_qrcode: string
+		payment_url: string
+	}
 }
