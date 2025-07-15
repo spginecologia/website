@@ -33,7 +33,7 @@
 		"luxon": "3.7.1",
 		"mantine-form-zod-resolver": "1.3.0",
 		"mergekit": "3.0.6",
-		"next": "15.3.5",
+		"next": "15.4.1",
 		"next-intl": "4.3.4",
 		"nodemailer": "7.0.5",
 		"nuqs": "2.4.3",
@@ -49,7 +49,7 @@
 	"devDependencies": {
 		"@carrismetropolitana/eslint": "20250622.1204.50",
 		"@types/luxon": "3.6.2",
-		"@types/node": "24.0.13",
+		"@types/node": "24.0.14",
 		"@types/nodemailer": "6.4.17",
 		"@types/papaparse": "5.3.16",
 		"@types/react": "19.1.8",
