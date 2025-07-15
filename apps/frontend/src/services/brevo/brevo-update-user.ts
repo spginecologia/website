@@ -1,6 +1,6 @@
 /* * */
 
-import { BREVOAPI } from '@/services/BREVOAPI';
+import { BREVOAPI } from '@/services/brevo/BREVOAPI';
 import { type User } from 'payload-types';
 
 /**

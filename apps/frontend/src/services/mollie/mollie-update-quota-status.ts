@@ -1,9 +1,9 @@
 /* * */
 
 import payloadConfig from '@/payload-config';
-import { mollieIsRefunded } from '@/scripts/mollie-is-refunded';
-import { vendusCreateInvoice } from '@/scripts/vendus-create-invoice';
-import { MOLLIEAPI } from '@/services/MOLLIEAPI';
+import { mollieIsRefunded } from '@/services/mollie/mollie-is-refunded';
+import { MOLLIEAPI } from '@/services/mollie/MOLLIEAPI';
+import { vendusCreateInvoice } from '@/services/vendus/vendus-create-invoice';
 import { PaymentStatus } from '@mollie/api-client';
 import { getPayload } from 'payload';
 

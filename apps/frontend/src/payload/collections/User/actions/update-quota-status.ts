@@ -1,6 +1,6 @@
 /* * */
 
-import { mollieUpdateQuotaStatus } from '@/scripts/mollie-update-quota-status';
+import { mollieUpdateQuotaStatus } from '@/services/mollie/mollie-update-quota-status';
 import { type CollectionAfterLoginHook } from 'payload';
 import { type User } from 'payload-types';
 

@@ -1,6 +1,6 @@
 /* * */
 
-import { brevoUpdateUser } from '@/scripts/brevo-update-user';
+import { brevoUpdateUser } from '@/services/brevo/brevo-update-user';
 import { type CollectionAfterChangeHook } from 'payload';
 import { type User } from 'payload-types';
 

@@ -44,5 +44,6 @@ export async function vendusGetInvoicePdf(invoiceId: string): Promise<Buffer<Arr
 	catch (error) {
 		throw new Error('Error requesting Vendus for invoice PDF: ' + error);
 	}
+
 	//
 }

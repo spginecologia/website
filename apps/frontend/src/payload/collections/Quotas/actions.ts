@@ -1,7 +1,7 @@
 /* * */
 
 import payloadConfig from '@/payload-config';
-import { MOLLIEAPI } from '@/services/MOLLIEAPI';
+import { MOLLIEAPI } from '@/services/mollie/MOLLIEAPI';
 import { type CollectionAfterChangeHook } from 'payload';
 import { getPayload } from 'payload';
 import { type Quota, User } from 'payload-types';

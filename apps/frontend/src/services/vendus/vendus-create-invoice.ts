@@ -1,47 +1,22 @@
 /* * */
 
-export interface VendusTransactionItem {
-	gross_price: number
-	qty: number
-	reference: string
-	tax_id: 'NOR'
-	title: string
-}
+import { type VendusDocumentResponse, type VendusInvoice } from '@/services/vendus/types';
 
-export interface VendusTransactionClient {
-	address?: string
-	city?: string
-	country: 'PT'
-	fiscal_id?: string
-	name?: string
-	postalcode?: string
-}
-
-export interface VendusTransaction {
-	client?: VendusTransactionClient
-	external_reference?: string
-	items: VendusTransactionItem[]
-	notes?: string
-}
-
-interface VendusInvoiceableTransaction extends VendusTransaction {
+/**
+ * This is the internal type used to create an invoice
+ * in Vendus. It extends the VendusInvoice type
+ * with additional fields required by the Vendus API.
+ */
+interface VendusCreatableInvoice extends VendusInvoice {
 	mode: 'normal' | 'tests'
 	output: 'auto' | 'html' | 'pdf'
 	payments: { id: string }[]
 	register_id: string
-	type: 'FT'
-}
-
-interface VendusInvoice {
-	date: string
-	id: number
-	number: string
-	system_time: string
 }
 
 /* * */
 
-export async function vendusCreateInvoice(transactionData: VendusTransaction): Promise<VendusInvoice> {
+export async function vendusCreateInvoice(transactionData: VendusInvoice): Promise<VendusDocumentResponse> {
 	//
 
 	//
@@ -66,22 +41,17 @@ export async function vendusCreateInvoice(transactionData: VendusTransaction): P
 	//
 	// Prepare the invoiceable transaction object
 
-	const invoiceableTransactionData: VendusInvoiceableTransaction = {
+	const creatableInvoiceData: VendusCreatableInvoice = {
 		...transactionData,
-		mode: process.env.VENDUS_WORKMODE as VendusInvoiceableTransaction['mode'] || 'tests',
+		mode: process.env.VENDUS_WORKMODE as VendusCreatableInvoice['mode'] || 'tests',
 		output: 'auto',
 		payments: [{ id: process.env.VENDUS_PAYMENT_ID }],
 		register_id: process.env.VENDUS_REGISTER_ID,
 		type: 'FT',
 	};
 
-	// Remove the client object if it has no fiscal_id
-	if (!invoiceableTransactionData.client?.fiscal_id) {
-		delete invoiceableTransactionData.client;
-	}
-
 	console.log('-----------------------------');
-	console.log('invoiceableTransactionData', invoiceableTransactionData);
+	console.log('creatableInvoiceData', creatableInvoiceData);
 	console.log('-----------------------------');
 
 	//
@@ -90,7 +60,7 @@ export async function vendusCreateInvoice(transactionData: VendusTransaction): P
 
 	try {
 		const vendusResponse = await fetch('https://www.vendus.pt/ws/v1.2/documents', {
-			body: JSON.stringify(invoiceableTransactionData),
+			body: JSON.stringify(creatableInvoiceData),
 			headers: {
 				'Authorization': 'Basic ' + Buffer.from(process.env.VENDUS_API_KEY).toString('base64'),
 				'Content-Type': 'application/json',
@@ -115,5 +85,6 @@ export async function vendusCreateInvoice(transactionData: VendusTransaction): P
 	catch (error) {
 		throw new Error('Error requesting Vendus for an invoice: ' + error);
 	}
+
 	//
 }
