@@ -2,7 +2,7 @@
 
 /* * */
 
-import defaultTheme from '@/themes/_default/default.theme';
+import defaultTheme from '@/themes/_default/theme';
 import { createTheme } from '@mantine/core';
 
 /* * */

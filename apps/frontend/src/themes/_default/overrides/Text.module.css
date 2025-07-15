@@ -1,7 +1,7 @@
 /* * */
-/* VARIANTS */
+/* PROPS / VARIANTS */
 
-.root.variantPrimary {
+.root[data-variant="primary"] {
 	font-family: lato, sans-serif;
 	font-size: 20px;
 	font-weight: var(--font-weight-medium);
@@ -10,7 +10,7 @@
 	text-align: left;
 }
 
-.root.variantSecondary {
+.root[data-variant="secondary"] {
 	font-family: lato, sans-serif;
 	font-size: 14px;
 	font-weight: 500;
@@ -19,7 +19,7 @@
 	text-align: left;
 }
 
-.root.variantOverline {
+.root[data-variant="overline"] {
 	font-family: lato, sans-serif;
 	font-size: 14px;
 	font-weight: var(--font-weight-bold);
@@ -29,7 +29,7 @@
 	text-transform: uppercase;
 }
 
-.root.variantError {
+.root[data-variant="error"] {
 	font-family: lato, sans-serif;
 	font-size: 14px;
 	font-weight: var(--font-weight-bold);
@@ -42,14 +42,14 @@
 /* * */
 /* SIZES */
 
-.root.sizeMd {
+.root[data-size="md"] {
 	font-size: 20px;
 }
 
-.root.sizeSm {
+.root[data-size="sm"] {
 	font-size: 18px;
 }
 
-.root.sizeXs {
+.root[data-size="xs"] {
 	font-size: 16px;
 }

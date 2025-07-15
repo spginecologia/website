@@ -27,6 +27,8 @@ export function AccountQuotas() {
 			<AccountQuotasPayments />
 			<Space h="xl" />
 			<AccountQuotasInvoices />
+			<Space h="xl" />
+			<Text size="xs">{t('subtitle')}</Text>
 		</Paper>
 	);
 

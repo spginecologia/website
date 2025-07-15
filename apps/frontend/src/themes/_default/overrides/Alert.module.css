@@ -17,27 +17,27 @@
 /* * */
 /* VARIANT / INFO */
 
-.variantinfo.root {
+.root[data-variant='info'] {
 	background-color: var(--color-brand-support-300);
 }
 
-.variantinfo.icon {
+.root[data-variant='info'] .icon {
 	width: 24px;
 	height: 24px;
 	color: var(--color-brand-primary-100);
 }
 
-.variantinfo.icon svg {
+.root[data-variant='info'] .icon svg {
 	width: 100%;
 	height: 100%;
 }
 
-.variantinfo.label {
+.root[data-variant='info'] .label {
 	font-size: 18px;
 	font-weight: var(--font-weight-bold);
 	color: var(--color-brand-primary-100);
 }
 
-.variantinfo.message {
+.root[data-variant='info'] .message {
 	font-size: 16px;
 }

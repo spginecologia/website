@@ -8,6 +8,6 @@
 /* * */
 /* VARIANT / CONTRAST */
 
-.variantContrast.root {
+.root[data-variant='contrast'] {
 	--loader-color: var(--color-reference-white);
 }
