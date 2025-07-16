@@ -46,6 +46,5 @@ export async function GET(request: Request, { params }: { params: Promise<{ invo
 	catch (err) {
 		console.log(err);
 		redirect('/error');
-		// return new Response(null, { status: 400 });
 	}
 }
