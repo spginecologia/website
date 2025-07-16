@@ -1,10 +1,10 @@
 /* * */
 
 import payloadConfig from '@/payload-config';
-import { type User } from 'payload-types';
 import { validateEmail } from '@/utils/validate-email';
 import { validateTaxId } from '@/utils/validate-tax-id';
 import { getPayload } from 'payload';
+import { type User } from 'payload-types';
 
 /**
  * Finds and returns a User from the database based on the given username (email or Tax ID).

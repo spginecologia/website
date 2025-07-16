@@ -1,9 +1,9 @@
 /* * */
 
 import payloadConfig from '@/payload-config';
-import { type User } from 'payload-types';
 import { getNotificationPlainTemplate } from '@/payload/email/notification-plain.template';
 import { getPayload } from 'payload';
+import { type User } from 'payload-types';
 
 /**
  * Finds and returns a User from the database based on the given username (email or Tax ID).

@@ -1,7 +1,7 @@
 /* * */
 
-import { type Admin } from 'payload-types';
 import { type PayloadRequest } from 'payload';
+import { type Admin } from 'payload-types';
 
 /* * */
 
@@ -9,6 +9,8 @@ interface Props {
 	admin?: Admin | null
 	req?: null | PayloadRequest
 }
+
+/* * */
 
 export function accessIsAdmin({ admin, req }: Props): boolean {
 	//

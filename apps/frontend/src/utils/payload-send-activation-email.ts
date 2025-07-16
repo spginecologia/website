@@ -1,10 +1,10 @@
 /* * */
 
 import payloadConfig from '@/payload-config';
-import { type User } from 'payload-types';
 import { getNotificationActionTemplate } from '@/payload/email/notification-action.template';
 import { navigationGetUrlWithRedirectParam } from '@/utils/navigation-handle-redirect-param';
 import { getPayload } from 'payload';
+import { type User } from 'payload-types';
 
 /**
  * Finds and returns a User from the database based on the given username (email or Tax ID).

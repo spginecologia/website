@@ -2,7 +2,6 @@
 
 /**
  * Get the duration of a video file in seconds.
- *
  * @param bufferData - buffer data of the video file
  * @returns {number} - duration in seconds
  */
