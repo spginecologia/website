@@ -28,7 +28,7 @@ export function AccountQuotas() {
 			<Space h="xl" />
 			<AccountQuotasInvoices />
 			<Space h="xl" />
-			<Text size="xs">{t('subtitle')}</Text>
+			<Text maw={400} variant="footnote">{t('footnote')}</Text>
 		</Paper>
 	);
 

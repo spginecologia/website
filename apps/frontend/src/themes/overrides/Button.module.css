@@ -9,8 +9,8 @@
 	font-weight: var(--font-weight-bold);
 	line-height: 1.3;
 	color: var(--color-reference-black);
-	text-decoration: none;
 	text-transform: uppercase;
+	text-decoration: none;
 	cursor: pointer;
 	background-color: transparent;
 	border: 2px solid var(--color-reference-black);
@@ -25,7 +25,7 @@
 	align-items: center;
 	justify-content: center;
 	font-size: 16px;
-    font-weight: var(--font-weight-semibold);
+	font-weight: var(--font-weight-semibold);
 }
 
 .section {
@@ -43,27 +43,27 @@
 /* * */
 /* VARIANT / PRIMARY */
 
-.variantPrimary.root {
+.root[data-variant="primary"] {
 	color: var(--color-brand-primary-100);
 	border-color: inherit;
 }
 
-.variantPrimary.root:hover {
+.root[data-variant="primary"]:hover {
 	color: var(--color-reference-white);
 	background-color: var(--color-brand-primary-100);
 	border-color: var(--color-brand-primary-100);
 }
 
-.variantPrimary.root[data-disabled='true'],
-.variantPrimary.root[data-disabled='true']:hover {
+.root[data-variant="primary"][data-disabled='true'],
+.root[data-variant="primary"][data-disabled='true']:hover {
 	color: var(--color-brand-support-300);
 	cursor: not-allowed;
 	background-color: transparent;
 	border-color: inherit;
 }
 
-.variantPrimary.root[data-loading='true'],
-.variantPrimary.root[data-loading='true']:hover {
+.root[data-variant="primary"][data-loading='true'],
+.root[data-variant="primary"][data-loading='true']:hover {
 	color: var(--color-reference-white);
 	cursor: wait;
 	background-color: var(--color-brand-primary-100);
@@ -73,12 +73,12 @@
 /* * */
 /* VARIANT / SECONDARY */
 
-.root.variantSecondary {
+.root[data-variant="secondary"] {
 	color: var(--color-brand-primary-100);
 	border-color: inherit;
 }
 
-.root.variantSecondary:hover {
+.root[data-variant="secondary"]:hover {
 	color: var(--color-reference-white);
 	background-color: var(--color-brand-primary-100);
 	border-color: var(--color-brand-primary-100);
@@ -87,12 +87,12 @@
 /* * */
 /* VARIANT / MUTED */
 
-.root.variantMuted {
+.root[data-variant="muted"] {
 	color: var(--color-brand-support-400);
 	border-color: inherit;
 }
 
-.root.variantMuted:hover {
+.root[data-variant="muted"]:hover {
 	color: var(--color-reference-white);
 	background-color: var(--color-brand-support-400);
 	border-color: var(--color-brand-support-400);
@@ -101,19 +101,19 @@
 /* * */
 /* VARIANT / CONTRAST */
 
-.variantContrast.root {
+.root[data-variant="contrast"] {
 	color: var(--color-reference-white);
 	border-color: inherit;
 }
 
-.variantContrast.root:hover {
+.root[data-variant="contrast"]:hover {
 	color: var(--color-brand-primary-200);
 	background-color: var(--color-reference-white);
 	border-color: var(--color-reference-white);
 }
 
-.variantContrast.root[data-disabled='true'],
-.variantContrast.root[data-disabled='true']:hover {
+.root[data-variant="contrast"][data-disabled='true'],
+.root[data-variant="contrast"][data-disabled='true']:hover {
 	color: var(--color-reference-white);
 	cursor: not-allowed;
 	background-color: rgb(255 255 255 / 10%);
@@ -124,7 +124,7 @@
 /* * */
 /* VARIANT / LINK */
 
-.variantLink.root {
+.root[data-variant="link"] {
 	padding: 0;
 	font-size: 14px;
 	font-weight: var(--font-weight-bold);
@@ -133,10 +133,10 @@
 	border-bottom: 2px solid transparent;
 }
 
-.variantLink.root:hover {
+.root[data-variant="link"]:hover {
 	border-bottom-color: inherit;
 }
 
-.variantLink.label {
+.root[data-variant="link"] .label {
 	margin: 0;
 }

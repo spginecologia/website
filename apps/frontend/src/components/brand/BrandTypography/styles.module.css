@@ -10,34 +10,31 @@
 /* GRID */
 
 .grid {
-	justify-items: center;
-    align-items: center;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-    width: 100%;
     display: grid;
-    align-items: center;
-    text-align: center;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    place-items: center center;
+    width: 100%;
     min-height: 200px;
+    text-align: center;
 }
 
 .lato {
+    width: 100%;
+    font-family: lato, sans-serif;
 	font-size: 50px;
-    font-family: 'lato';
-    color: #000000;
     font-weight: 500;
     line-height: 1.4;
-    width: 100%;
+    color: #000;
 }
 
 .leMonde{
+    width: 100%;
+	font-family: lemonde-journal, serif;
 	font-size: 50px;
-	font-family: 'lemonde-journal';
-    color: #000000;
     font-weight: 700;
     line-height: 1.2;
-    letter-spacing: 0px;
-    width: 100%;
+    color: #000;
     text-align: left;
+    letter-spacing: 0;
 }

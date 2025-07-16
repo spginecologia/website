@@ -1,7 +1,7 @@
 /* * */
 /* ROOT */
 
-.root[data-order="h1"] {
+h1.root {
 	width: 100%;
 	margin-bottom: 20px;
 	font-family: lato, sans-serif;
@@ -15,7 +15,7 @@
 	border-bottom: 2px solid var(--color-brand-primary-200);
 }
 
-.root[data-order="h2"] {
+h2.root {
 	width: 100%;
 	font-family: lemonde-journal, serif;
 	font-size: 30px;
@@ -26,7 +26,7 @@
 	letter-spacing: 0;
 }
 
-.root[data-order="h4"] {
+h4.root {
 	font-family: lato, sans-serif;
 	font-size: 18px;
 	font-weight: var(--font-weight-bold);

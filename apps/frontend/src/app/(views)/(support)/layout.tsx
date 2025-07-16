@@ -4,14 +4,14 @@
 
 import { SupportViewport } from '@/components/viewport/SupportViewport';
 import { ThemeProviders } from '@/providers/theme-providers';
-import { supportTheme } from '@/themes/support/support.theme';
+import theme from '@/themes/theme';
 import { Notifications } from '@mantine/notifications';
 
 /* * */
 
 export default function Providers({ children }) {
 	return (
-		<ThemeProviders themeData={supportTheme}>
+		<ThemeProviders themeData={theme}>
 			<Notifications styles={{ root: { marginTop: '60px' } }} />
 			<SupportViewport>
 				{children}

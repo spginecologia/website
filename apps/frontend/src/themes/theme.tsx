@@ -8,9 +8,8 @@ import '@mantine/notifications/styles.css';
 
 /* * */
 
-import '@/themes/_default/styles/reset.css';
-import '@/themes/_default/styles/variables.css';
-import '@/themes/_default/styles/wordpress.css';
+import '@/themes/styles/reset.css';
+import '@/themes/styles/variables.css';
 
 /* * */
 
@@ -21,24 +20,24 @@ import { IconCaretLeftFilled } from '@tabler/icons-react';
 
 /* * */
 
-import AccordionOverride from '@/themes/_default/overrides/Accordion.module.css';
-import AlertOverride from '@/themes/_default/overrides/Alert.module.css';
-import AnchorOverride from '@/themes/_default/overrides/Anchor.module.css';
-import ButtonOverride from '@/themes/_default/overrides/Button.module.css';
-import CheckboxOverride from '@/themes/_default/overrides/Checkbox.module.css';
-import CheckboxGroupOverride from '@/themes/_default/overrides/CheckboxGroup.module.css';
-import DateInputOverride from '@/themes/_default/overrides/DateInput.module.css';
-import LoaderOverride from '@/themes/_default/overrides/Loader.module.css';
-import NotificationOverride from '@/themes/_default/overrides/Notification.module.css';
-import PaperOverride from '@/themes/_default/overrides/Paper.module.css';
-import PasswordInputOverride from '@/themes/_default/overrides/PasswordInput.module.css';
-import SegmentedControlOverride from '@/themes/_default/overrides/SegmentedControl.module.css';
-import SelectOverride from '@/themes/_default/overrides/Select.module.css';
-import SkeletonOverride from '@/themes/_default/overrides/Skeleton.module.css';
-import TableOverride from '@/themes/_default/overrides/Table.module.css';
-import TextOverride from '@/themes/_default/overrides/Text.module.css';
-import TextInputOverride from '@/themes/_default/overrides/TextInput.module.css';
-import TitleOverride from '@/themes/_default/overrides/Title.module.css';
+import AccordionOverride from '@/themes/overrides/Accordion.module.css';
+import AlertOverride from '@/themes/overrides/Alert.module.css';
+import AnchorOverride from '@/themes/overrides/Anchor.module.css';
+import ButtonOverride from '@/themes/overrides/Button.module.css';
+import CheckboxOverride from '@/themes/overrides/Checkbox.module.css';
+import CheckboxGroupOverride from '@/themes/overrides/CheckboxGroup.module.css';
+import DateInputOverride from '@/themes/overrides/DateInput.module.css';
+import LoaderOverride from '@/themes/overrides/Loader.module.css';
+import NotificationOverride from '@/themes/overrides/Notification.module.css';
+import PaperOverride from '@/themes/overrides/Paper.module.css';
+import PasswordInputOverride from '@/themes/overrides/PasswordInput.module.css';
+import SegmentedControlOverride from '@/themes/overrides/SegmentedControl.module.css';
+import SelectOverride from '@/themes/overrides/Select.module.css';
+import SkeletonOverride from '@/themes/overrides/Skeleton.module.css';
+import TableOverride from '@/themes/overrides/Table.module.css';
+import TextOverride from '@/themes/overrides/Text.module.css';
+import TextInputOverride from '@/themes/overrides/TextInput.module.css';
+import TitleOverride from '@/themes/overrides/Title.module.css';
 
 /* * */
 
@@ -74,6 +73,9 @@ export default createTheme({
 		Button: Button.extend({
 			classNames: {
 				...ButtonOverride,
+			},
+			defaultProps: {
+				variant: 'primary',
 			},
 		}),
 
@@ -157,6 +159,9 @@ export default createTheme({
 		Text: Text.extend({
 			classNames: {
 				...TextOverride,
+			},
+			defaultProps: {
+				variant: 'primary',
 			},
 		}),
 

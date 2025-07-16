@@ -39,6 +39,14 @@
 	text-transform: uppercase;
 }
 
+.root[data-variant="footnote"] {
+	font-family: lato, sans-serif;
+	font-size: 14px;
+	font-weight: var(--font-weight-semibold);
+	color: var(--color-brand-support-400);
+	text-align: left;
+}
+
 /* * */
 /* SIZES */
 
