@@ -2,8 +2,6 @@
 
 /* * */
 
-import type { Course } from 'payload-types';
-
 import { CardSkeleton } from '@/components/cards/CardSkeleton';
 import { ContentWrapper } from '@/components/common/ContentWrapper';
 import { ErrorDisplay } from '@/components/common/ErrorDisplay';
@@ -13,6 +11,7 @@ import { CourseCard } from '@/components/courses/CourseCard';
 import { PayloadAPIResponse } from '@/types/payload-api-response';
 import { Title } from '@mantine/core';
 import { useTranslations } from 'next-intl';
+import { type Course } from 'payload-types';
 import useSWR from 'swr';
 
 import styles from './styles.module.css';

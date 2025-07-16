@@ -2,6 +2,7 @@
 
 import payloadConfig from '@/payload-config';
 import { vendusGetInvoicePdf } from '@/services/vendus/vendus-get-invoice-pdf';
+import { redirect } from 'next/navigation';
 import { getPayload } from 'payload';
 
 /* * */
@@ -44,6 +45,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ invo
 	}
 	catch (err) {
 		console.log(err);
-		return new Response(null, { status: 400 });
+		redirect('/error');
+		// return new Response(null, { status: 400 });
 	}
 }
