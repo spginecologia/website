@@ -32,7 +32,7 @@ export function ThemeProviders({ children, themeData }: Props) {
 	// B. Render components
 
 	return (
-		<MantineProvider defaultColorScheme="auto" theme={themeData}>
+		<MantineProvider forceColorScheme="light" theme={themeData}>
 			<DatesProvider settings={mantineDatesSettings}>
 				<ModalsProvider>
 					{children}
