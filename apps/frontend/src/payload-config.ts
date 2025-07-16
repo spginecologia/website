@@ -112,6 +112,18 @@ export default buildConfig({
 					secretAccessKey: process.env.CLOUDFLARE_R2_SECRET_ACCESS_KEY ?? 'placeholder',
 				},
 				region: 'auto',
+				requestHandler: {
+					connectionTimeout: 5_000,
+					httpAgent: {
+						keepAlive: false,
+						maxSockets: 300,
+					},
+					httpsAgent: {
+						keepAlive: false,
+						maxSockets: 300,
+					},
+					requestTimeout: 30_000,
+				},
 			},
 		}),
 	],
