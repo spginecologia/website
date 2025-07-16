@@ -304,8 +304,8 @@
 					"label": "Secções de Interesse"
 				},
 				"tax_id": {
-					"description": "O seu NIF pessoal. Por motivos alheios não podemos aceitar NIFs institucionais. Pode pedir emissão de fatura com outro NIF. Para alterar este campo por favor entre em contacto com o Secretariado SPG.",
-					"label": "Número de Contribuinte",
+					"description": "Por motivos alheios não podemos aceitar NIFs institucionais. Pode pedir emissão de fatura com outro NIF. Para alterar este campo por favor entre em contacto com o Secretariado SPG.",
+					"label": "Número de Contribuinte Pessoal",
 					"placeholder": "000 000 000"
 				},
 				"title": {
@@ -659,8 +659,8 @@
 					"label": "Secções de Interesse"
 				},
 				"tax_id": {
-					"description": "O seu NIF pessoal. Por motivos alheios não podemos aceitar NIFs institucionais. Pode pedir emissão de fatura com outro NIF. Para alterar este campo por favor entre em contacto com o Secretariado SPG.",
-					"label": "Número de Contribuinte",
+					"description": "Por motivos alheios não podemos aceitar NIFs institucionais. Pode pedir emissão de fatura com outro NIF. Para alterar este campo por favor entre em contacto com o Secretariado SPG.",
+					"label": "Número de Contribuinte Pessoal",
 					"placeholder": "000 000 000"
 				},
 				"title": {
