@@ -6,7 +6,9 @@ import { MOLLIEAPI } from '@/services/mollie/MOLLIEAPI';
 import { vendusCreateCreditNote } from '@/services/vendus/vendus-create-credit-note';
 import { vendusCreateInvoice } from '@/services/vendus/vendus-create-invoice';
 import { vendusGetClientFromUser } from '@/services/vendus/vendus-get-client-from-user';
+import { getUserDisplayName } from '@/utils/get-user-display-name';
 import { PaymentStatus } from '@mollie/api-client';
+import { renderQuotaPaymentSuccess, renderQuotaRefundSuccess } from '@spginecologia/website-emails';
 import { getPayload } from 'payload';
 
 /**
@@ -92,6 +94,7 @@ export async function mollieUpdateQuotaStatus(userId: string) {
 				// Setup the Vendus client data from the user
 				const vendusClientData = vendusGetClientFromUser(userData);
 				// Create a new invoice in Vendus
+				console.log(`Creating a new invoice for user NIF "${userData.tax_id}" for the quota year "${quotaData.year}"...`);
 				const newInvoiceData = await vendusCreateInvoice({
 					client: vendusClientData,
 					external_reference: paymentData.id,
@@ -117,6 +120,26 @@ export async function mollieUpdateQuotaStatus(userId: string) {
 					},
 					...quotaData.invoices || [],
 				];
+				// Send the email with the invoice to the user
+				console.log(`Sending invoice email for user NIF "${userData.tax_id}" for the quota year "${quotaData.year}"...`);
+				const htmlData = await renderQuotaPaymentSuccess({
+					invoiceNumber: newInvoiceData.number,
+					paymentAmount: `${quotaData.payment_amount}€`,
+					quotaYear: quotaData.year,
+					userDisplayName: getUserDisplayName(userData.title, userData.first_name),
+				});
+				await payload.sendEmail({
+					attachments: [{
+						content: newInvoiceData.output,
+						contentType: 'application/pdf',
+						encoding: 'base64',
+						filename: `spg-invoice-${newInvoiceData.id}.pdf`,
+					}],
+					html: htmlData,
+					subject: `Quota for ${quotaData.year} - Invoice ${newInvoiceData.number}`,
+					to: userData.email,
+				});
+				console.log('Sent');
 			}
 
 			//
@@ -145,6 +168,23 @@ export async function mollieUpdateQuotaStatus(userId: string) {
 					},
 					...quotaData.invoices || [],
 				];
+				// Send the email with the invoice to the user
+				await payload.sendEmail({
+					attachments: [{
+						content: newCreditNoteData.output,
+						contentType: 'application/pdf',
+						encoding: 'base64',
+						filename: `spg-credit-note-${newCreditNoteData.id}.pdf`,
+					}],
+					html: await renderQuotaRefundSuccess({
+						creditNoteNumber: newCreditNoteData.number,
+						paymentAmount: `${quotaData.payment_amount}€`,
+						quotaYear: quotaData.year,
+						userDisplayName: getUserDisplayName(userData.title, userData.first_name),
+					}),
+					subject: `Quota for ${quotaData.year} - Nota de Crédito ${newCreditNoteData.number}`,
+					to: userData.email,
+				});
 			}
 
 			//

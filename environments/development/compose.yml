@@ -28,7 +28,7 @@ services:
   # # # # # # # # # # # # # # # # # # # # #
 
   synclocal:
-    build: ./apps/synclocal
+    build: ../../apps/synclocal
     restart: no
     logging:
       options:

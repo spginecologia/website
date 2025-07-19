@@ -10,7 +10,7 @@ import { Wrapper } from '@/components/Wrapper';
 export interface QuotaPaymentSuccessProps {
 	invoiceNumber: string
 	paymentAmount: string
-	quotaYear: string
+	quotaYear: number
 	userDisplayName: string
 }
 
@@ -33,7 +33,7 @@ export function QuotaPaymentSuccess({ invoiceNumber, paymentAmount, quotaYear, u
 QuotaPaymentSuccess.PreviewProps = {
 	invoiceNumber: 'FT 2025/12',
 	paymentAmount: '50,00€',
-	quotaYear: '2024',
+	quotaYear: 2024,
 	userDisplayName: 'Dra. Susana Silva',
 } as QuotaPaymentSuccessProps;
 

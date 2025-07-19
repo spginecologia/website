@@ -11,7 +11,7 @@ export interface VendusCreatableCreditNote {
 	items: VendusRefundableLineItem[]
 	mode: 'normal' | 'tests'
 	notes: string
-	output: 'auto' | 'html' | 'pdf'
+	output: 'pdf'
 	payments: { id: string }[]
 	register_id: string
 	type: 'NC'
@@ -74,7 +74,7 @@ export async function vendusCreateCreditNote(invoiceId: number): Promise<VendusS
 		items: refundableLineItems,
 		mode: process.env.VENDUS_WORKMODE as VendusCreatableCreditNote['mode'] ?? 'tests',
 		notes: 'Correção de valor.',
-		output: 'auto',
+		output: 'pdf',
 		payments: [{ id: process.env.VENDUS_PAYMENT_ID }],
 		register_id: process.env.VENDUS_REGISTER_ID,
 		type: 'NC',
@@ -105,6 +105,7 @@ export async function vendusCreateCreditNote(invoiceId: number): Promise<VendusS
 			date: vendusResponseData.date,
 			id: vendusResponseData.id,
 			number: vendusResponseData.number,
+			output: vendusResponseData.output,
 			system_time: vendusResponseData.system_time,
 		};
 	}

@@ -110,7 +110,7 @@ export interface VendusSimplifiedDocumentResponse {
 	id: number
 	// local_time: string
 	number: string
-	// output: string
+	output: string
 	// output_data: string
 	// qrcode: string
 	// qrcode_data: string

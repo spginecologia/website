@@ -9,7 +9,7 @@ import { type VendusInvoice, type VendusSimplifiedDocumentResponse } from '@/ser
  */
 interface VendusCreatableInvoice extends VendusInvoice {
 	mode: 'normal' | 'tests'
-	output: 'auto' | 'html' | 'pdf'
+	output: 'pdf'
 	payments: { id: string }[]
 	register_id: string
 }
@@ -44,7 +44,7 @@ export async function vendusCreateInvoice(transactionData: VendusInvoice): Promi
 	const creatableInvoiceData: VendusCreatableInvoice = {
 		...transactionData,
 		mode: process.env.VENDUS_WORKMODE as VendusCreatableInvoice['mode'] ?? 'tests',
-		output: 'auto',
+		output: 'pdf',
 		payments: [{ id: process.env.VENDUS_PAYMENT_ID }],
 		register_id: process.env.VENDUS_REGISTER_ID,
 		type: 'FT',
@@ -75,6 +75,7 @@ export async function vendusCreateInvoice(transactionData: VendusInvoice): Promi
 			date: vendusResponseData.date,
 			id: vendusResponseData.id,
 			number: vendusResponseData.number,
+			output: vendusResponseData.output,
 			system_time: vendusResponseData.system_time,
 		};
 	}

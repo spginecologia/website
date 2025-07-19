@@ -6,7 +6,8 @@ const text: React.CSSProperties = {
 	fontFamily: '\'Open Sans\', \'Helvetica Neue\', Arial',
 	fontSize: '12px',
 	fontWeight: '400',
-	lineHeight: '16px',
+	lineHeight: '1.5',
+	margin: '5px 0',
 	textAlign: 'left',
 };
 

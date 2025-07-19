@@ -21,11 +21,13 @@ export function Wrapper({ children, previewMessage }: PropsWithChildren<WrapperP
 			<Head />
 			<Body style={styles.body}>
 				<Preview>{previewMessage}</Preview>
-				<CoverLogo />
 				<Container style={styles.container}>
-					{children}
+					<CoverLogo />
+					<Container style={styles.content}>
+						{children}
+					</Container>
+					<Footer />
 				</Container>
-				<Footer />
 			</Body>
 		</Html>
 	);

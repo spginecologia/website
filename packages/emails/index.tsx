@@ -2,7 +2,7 @@
 
 import { QuotaPaymentSuccess, type QuotaPaymentSuccessProps } from '@/templates/quota-payment-success';
 import { QuotaRefundSuccess, type QuotaRefundSuccessProps } from '@/templates/quota-refund-success';
-import { render } from '@react-email/components';
+import { render } from '@react-email/render';
 
 /* * */
 
