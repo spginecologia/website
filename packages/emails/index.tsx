@@ -6,10 +6,10 @@ import { render } from '@react-email/components';
 
 /* * */
 
-export const RenderQuotaPaymentSuccess = async (props: QuotaPaymentSuccessProps) => {
+export const renderQuotaPaymentSuccess = async (props: QuotaPaymentSuccessProps) => {
 	return await render(<QuotaPaymentSuccess {...props} />);
 };
 
-export const RenderQuotaRefundSuccess = async (props: QuotaRefundSuccessProps) => {
+export const renderQuotaRefundSuccess = async (props: QuotaRefundSuccessProps) => {
 	return await render(<QuotaRefundSuccess {...props} />);
 };
