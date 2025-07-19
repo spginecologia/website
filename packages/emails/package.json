@@ -10,9 +10,9 @@
 	},
 	"scripts": {
 		"build": "rimraf ./dist && tsc && resolve-tspaths",
+		"dev": "email dev -p 3007 --dir ./src/templates",
 		"export": "email export --dir ./src/templates",
-		"lint": "eslint ./src/ && tsc --noEmit",
-		"preview-emails": "email dev -p 3007 --dir ./src/templates"
+		"lint": "eslint ./src/ && tsc --noEmit"
 	},
 	"dependencies": {
 		"@react-email/components": "0.3.2",

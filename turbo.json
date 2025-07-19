@@ -17,10 +17,6 @@
 		"lint:fix": {
 			"dependsOn": ["^lint:fix"]
 		},
-		"preview-emails": {
-			"cache": false,
-			"persistent": true
-		},
 		"start": {
 			"dependsOn": ["^build", "^start"],
 			"outputs": ["dist/**"]

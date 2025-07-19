@@ -9,7 +9,6 @@
 		"dev:prod": "dotenv-run -f ./environments/production/secrets/.env -- turbo dev",
 		"lint": "turbo lint",
 		"lint:fix": "eslint . --fix && npx stylelint . --fix",
-		"preview-emails": "dotenv-run -f ./environments/production/secrets/.env -- turbo preview-emails",
 		"rinse": "npx --yes @tmlmobilidade/repo-rinse",
 		"start": "turbo start"
 	},
