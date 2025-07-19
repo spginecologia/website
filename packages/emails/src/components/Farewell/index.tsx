@@ -19,7 +19,3 @@ export function Farewell({ text = 'Academia SPG' }: FarewellProps) {
 		</Text>
 	);
 };
-
-/* * */
-
-export default Farewell;

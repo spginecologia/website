@@ -14,7 +14,3 @@ export function Paragraph({ children }: PropsWithChildren) {
 		</Text>
 	);
 };
-
-/* * */
-
-export default Paragraph;

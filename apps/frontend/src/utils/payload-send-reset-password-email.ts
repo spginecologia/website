@@ -1,8 +1,9 @@
 /* * */
 
 import payloadConfig from '@/payload-config';
-import { getNotificationActionTemplate } from '@/payload/email/notification-action.template';
+import { getUserDisplayName } from '@/utils/get-user-display-name';
 import { navigationGetUrlWithRedirectParam } from '@/utils/navigation-handle-redirect-param';
+import { renderAccountPasswordResetTemplate } from '@spginecologia/website-emails';
 import { getPayload } from 'payload';
 import { type User } from 'payload-types';
 
@@ -30,20 +31,16 @@ export async function payloadSendResetPasswordEmail(userData: User, redirectTo?:
 	}
 
 	//
-	// Prepare the required email data and send the email to the user.
+	// Prepare the template and send the email to the user.
 
-	const actionUrl = navigationGetUrlWithRedirectParam(`${process.env.NEXT_PUBLIC_URL}/reset?token=${tokenresult}`, redirectTo);
-
-	const htmlData = getNotificationActionTemplate({
-		action_title: 'Definir Nova Password',
-		action_url: actionUrl,
-		content: 'Clique no botão abaixo para redefinir a sua password.',
-		title: 'Escolha uma nova Password',
+	const templateData = await renderAccountPasswordResetTemplate({
+		resetPasswordUrl: navigationGetUrlWithRedirectParam(`${process.env.NEXT_PUBLIC_URL}/reset?token=${tokenresult}`, redirectTo),
+		userDisplayName: getUserDisplayName(userData.title, userData.first_name),
 	});
 
 	await payload.sendEmail({
-		html: htmlData,
-		subject: 'Recuperação de Password SPG',
+		html: templateData.html,
+		subject: templateData.subject,
 		to: userData.email,
 	});
 

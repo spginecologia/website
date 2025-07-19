@@ -8,7 +8,7 @@ import { vendusCreateInvoice } from '@/services/vendus/vendus-create-invoice';
 import { vendusGetClientFromUser } from '@/services/vendus/vendus-get-client-from-user';
 import { getUserDisplayName } from '@/utils/get-user-display-name';
 import { PaymentStatus } from '@mollie/api-client';
-import { renderQuotaPaymentSuccess, renderQuotaRefundSuccess } from '@spginecologia/website-emails';
+import { renderQuotaPaymentSuccessTemplate, renderQuotaRefundSuccessTemplate } from '@spginecologia/website-emails';
 import { getPayload } from 'payload';
 
 /**
@@ -121,8 +121,7 @@ export async function mollieUpdateQuotaStatus(userId: string) {
 					...quotaData.invoices || [],
 				];
 				// Send the email with the invoice to the user
-				console.log(`Sending invoice email for user NIF "${userData.tax_id}" for the quota year "${quotaData.year}"...`);
-				const htmlData = await renderQuotaPaymentSuccess({
+				const templateData = await renderQuotaPaymentSuccessTemplate({
 					invoiceNumber: newInvoiceData.number,
 					paymentAmount: `${quotaData.payment_amount}€`,
 					quotaYear: quotaData.year,
@@ -135,8 +134,8 @@ export async function mollieUpdateQuotaStatus(userId: string) {
 						encoding: 'base64',
 						filename: `spg-invoice-${newInvoiceData.id}.pdf`,
 					}],
-					html: htmlData,
-					subject: `Quota for ${quotaData.year} - Invoice ${newInvoiceData.number}`,
+					html: templateData.html,
+					subject: templateData.subject,
 					to: userData.email,
 				});
 				console.log('Sent');
@@ -169,6 +168,12 @@ export async function mollieUpdateQuotaStatus(userId: string) {
 					...quotaData.invoices || [],
 				];
 				// Send the email with the invoice to the user
+				const templateData = await renderQuotaRefundSuccessTemplate({
+					creditNoteNumber: newCreditNoteData.number,
+					paymentAmount: `${quotaData.payment_amount}€`,
+					quotaYear: quotaData.year,
+					userDisplayName: getUserDisplayName(userData.title, userData.first_name),
+				});
 				await payload.sendEmail({
 					attachments: [{
 						content: newCreditNoteData.output,
@@ -176,13 +181,8 @@ export async function mollieUpdateQuotaStatus(userId: string) {
 						encoding: 'base64',
 						filename: `spg-credit-note-${newCreditNoteData.id}.pdf`,
 					}],
-					html: await renderQuotaRefundSuccess({
-						creditNoteNumber: newCreditNoteData.number,
-						paymentAmount: `${quotaData.payment_amount}€`,
-						quotaYear: quotaData.year,
-						userDisplayName: getUserDisplayName(userData.title, userData.first_name),
-					}),
-					subject: `Quota for ${quotaData.year} - Nota de Crédito ${newCreditNoteData.number}`,
+					html: templateData.html,
+					subject: templateData.subject,
 					to: userData.email,
 				});
 			}

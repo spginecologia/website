@@ -11,7 +11,6 @@ const body: React.CSSProperties = {
 /* CONTAINER */
 
 const container: React.CSSProperties = {
-	maxWidth: '500px',
 	width: '100%',
 };
 
@@ -21,6 +20,7 @@ const container: React.CSSProperties = {
 const content: React.CSSProperties = {
 	backgroundColor: '#EBE9E6',
 	padding: '30px',
+	width: '100%',
 };
 
 /* * */

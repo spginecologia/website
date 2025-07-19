@@ -5,6 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"build": "turbo build",
+		"build:packages": "turbo build --filter=./packages/*",
 		"dev": "dotenv-run -f ./environments/development/secrets/.env -- turbo dev",
 		"dev:prod": "dotenv-run -f ./environments/production/secrets/.env -- turbo dev",
 		"lint": "turbo lint",

@@ -1,7 +1,8 @@
 /* * */
 
 import payloadConfig from '@/payload-config';
-import { getNotificationPlainTemplate } from '@/payload/email/notification-plain.template';
+import { getUserDisplayName } from '@/utils/get-user-display-name';
+import { renderAccountSignupTemplate } from '@spginecologia/website-emails';
 import { getPayload } from 'payload';
 import { type User } from 'payload-types';
 
@@ -18,14 +19,13 @@ export async function payloadSendSignupEmail(userData: User) {
 	//
 	// Prepare the required email data and send the email to the user.
 
-	const htmlData = getNotificationPlainTemplate({
-		content: 'Os seus dados serão analisados em breve pela Direção da SPG. Após a análise, receberá um email com a confirmação da sua conta. Agradecemos o seu interesse.',
-		title: 'Recebemos a sua candidatura à SPG',
+	const templateData = await renderAccountSignupTemplate({
+		userDisplayName: getUserDisplayName(userData.title, userData.first_name),
 	});
 
 	await payload.sendEmail({
-		html: htmlData,
-		subject: 'Recebemos a sua candidatura à SPG',
+		html: templateData.html,
+		subject: templateData.subject,
 		to: userData.email,
 	});
 

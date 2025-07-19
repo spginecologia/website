@@ -9,7 +9,7 @@
 		}
 	},
 	"scripts": {
-		"build": "rimraf ./dist && tsc && resolve-tspaths",
+		"build": "tsc && resolve-tspaths",
 		"dev": "email dev -p 3007 --dir ./src/templates",
 		"export": "email export --dir ./src/templates",
 		"lint": "eslint ./src/ && tsc --noEmit"

@@ -15,7 +15,3 @@ export function Footer() {
 		</Section>
 	);
 };
-
-/* * */
-
-export default Footer;

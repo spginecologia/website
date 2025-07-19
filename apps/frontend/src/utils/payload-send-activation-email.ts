@@ -1,8 +1,9 @@
 /* * */
 
 import payloadConfig from '@/payload-config';
-import { getNotificationActionTemplate } from '@/payload/email/notification-action.template';
+import { getUserDisplayName } from '@/utils/get-user-display-name';
 import { navigationGetUrlWithRedirectParam } from '@/utils/navigation-handle-redirect-param';
+import { renderAccountActivationTemplate } from '@spginecologia/website-emails';
 import { getPayload } from 'payload';
 import { type User } from 'payload-types';
 
@@ -30,20 +31,16 @@ export async function payloadSendActivationEmail(userData: User) {
 	}
 
 	//
-	// Prepare the required email data and send the email to the user.
+	// Prepare the template and send the email to the user.
 
-	const actionUrl = navigationGetUrlWithRedirectParam(`${process.env.NEXT_PUBLIC_URL}/reset?token=${tokenresult}`);
-
-	const htmlData = getNotificationActionTemplate({
-		action_title: 'Definir Nova Password',
-		action_url: actionUrl,
-		content: 'Clique no botão abaixo para definir a sua password.',
-		title: 'A Direção da SPG confirmou a sua conta.',
+	const templateData = await renderAccountActivationTemplate({
+		resetPasswordUrl: navigationGetUrlWithRedirectParam(`${process.env.NEXT_PUBLIC_URL}/reset?token=${tokenresult}`),
+		userDisplayName: getUserDisplayName(userData.title, userData.first_name),
 	});
 
 	await payload.sendEmail({
-		html: htmlData,
-		subject: 'A sua Conta SPG foi confirmada!',
+		html: templateData.html,
+		subject: templateData.subject,
 		to: userData.email,
 	});
 

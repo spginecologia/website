@@ -3,7 +3,7 @@
 
 const text: React.CSSProperties = {
 	color: '#000000',
-	fontFamily: '\'Open Sans\', \'Helvetica Neue\', Arial',
+	fontFamily: '\'Lato\', \'Open Sans\', Arial, sans-serif',
 	fontSize: '16px',
 	fontWeight: '600',
 	margin: '0',

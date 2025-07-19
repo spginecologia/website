@@ -19,7 +19,3 @@ export function Greeting({ text = 'Caros Sócios,' }: GreetingProps) {
 		</Text>
 	);
 };
-
-/* * */
-
-export default Greeting;

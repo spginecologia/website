@@ -16,7 +16,11 @@ export interface QuotaRefundSuccessProps {
 
 /* * */
 
-export function QuotaRefundSuccess({ creditNoteNumber, paymentAmount, quotaYear, userDisplayName }: QuotaRefundSuccessProps) {
+export const quotaRefundSuccessSubject = 'Reembolso da sua Quota de Sócio SPG';
+
+/* * */
+
+export function QuotaRefundSuccessTemplate({ creditNoteNumber, paymentAmount, quotaYear, userDisplayName }: QuotaRefundSuccessProps) {
 	return (
 		<Wrapper previewMessage="Reembolso da Quota de Sócio SPG">
 			<Greeting text={`${userDisplayName},`} />
@@ -30,7 +34,7 @@ export function QuotaRefundSuccess({ creditNoteNumber, paymentAmount, quotaYear,
 
 /* * */
 
-QuotaRefundSuccess.PreviewProps = {
+QuotaRefundSuccessTemplate.PreviewProps = {
 	creditNoteNumber: 'NC 2025/12',
 	paymentAmount: '50,00€',
 	quotaYear: 2024,
@@ -39,4 +43,4 @@ QuotaRefundSuccess.PreviewProps = {
 
 /* * */
 
-export default QuotaRefundSuccess;
+export default QuotaRefundSuccessTemplate;

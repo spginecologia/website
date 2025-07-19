@@ -16,7 +16,11 @@ export interface QuotaPaymentSuccessProps {
 
 /* * */
 
-export function QuotaPaymentSuccess({ invoiceNumber, paymentAmount, quotaYear, userDisplayName }: QuotaPaymentSuccessProps) {
+export const quotaPaymentSuccessSubject = 'Recebemos o pagamento da sua Quota de Sócio SPG';
+
+/* * */
+
+export function QuotaPaymentSuccessTemplate({ invoiceNumber, paymentAmount, quotaYear, userDisplayName }: QuotaPaymentSuccessProps) {
 	return (
 		<Wrapper previewMessage="Confirmação de pagamento de Quota de Sócio SPG">
 			<Greeting text={`${userDisplayName},`} />
@@ -30,7 +34,7 @@ export function QuotaPaymentSuccess({ invoiceNumber, paymentAmount, quotaYear, u
 
 /* * */
 
-QuotaPaymentSuccess.PreviewProps = {
+QuotaPaymentSuccessTemplate.PreviewProps = {
 	invoiceNumber: 'FT 2025/12',
 	paymentAmount: '50,00€',
 	quotaYear: 2024,
@@ -39,4 +43,4 @@ QuotaPaymentSuccess.PreviewProps = {
 
 /* * */
 
-export default QuotaPaymentSuccess;
+export default QuotaPaymentSuccessTemplate;
