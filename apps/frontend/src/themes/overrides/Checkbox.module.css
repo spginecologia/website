@@ -32,7 +32,7 @@
 
 .input[data-error="true"] {
 	background: var(--color-state-error-background);
-    border-bottom-color: var(--color-state-error);
+	border-bottom-color: var(--color-state-error);
 }
 
 /* * */

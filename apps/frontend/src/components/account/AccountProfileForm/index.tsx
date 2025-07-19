@@ -132,6 +132,7 @@ export function AccountProfileForm() {
 				<TextInput description={t('fields.tax_id.description')} label={t('fields.tax_id.label')} placeholder={t('fields.tax_id.placeholder')} value={userData?.user.tax_id || ''} disabled readOnly />
 				<TextInput description={t('fields.medical_id.description')} label={t('fields.medical_id.label')} placeholder={t('fields.medical_id.placeholder')} value={userData?.user.medical_id || ''} disabled readOnly />
 				<DateInput label={t('fields.birthday.label')} placeholder={t('fields.birthday.placeholder')} value={userData?.user?.birthday ? new Date(userData.user.birthday) : null} valueFormat="YYYY-MM-DD" disabled readOnly />
+				<Checkbox checked={true} label={t('fields.workplace_secondary.label')} readOnly />
 			</FormSection>
 
 			<FormSection description={t('sections.billing.description')} title={t('sections.billing.title')}>

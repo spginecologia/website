@@ -1,7 +1,7 @@
 /* * */
 
 import { UserQuotaPaymentStatus } from '@/payload/collections/User/options';
-import { IconAlertSquareFilled, IconArrowForwardUp, IconCheck, IconFlag3Filled, IconX } from '@tabler/icons-react';
+import { IconAlertSquareFilled, IconArrowForwardUp, IconCheck, IconFlag3Filled, IconGift, IconX } from '@tabler/icons-react';
 import { useTranslations } from 'next-intl';
 
 import styles from './styles.module.css';
@@ -32,6 +32,13 @@ export function QuotaPaymentStatus({ paymentLinkUrl, status }: Props) {
 				<div className={styles.container} data-status="canceled">
 					<IconX size={16} />
 					<p className={styles.label}>{t('canceled')}</p>
+				</div>
+			);
+		case 'free':
+			return (
+				<div className={styles.container} data-status="free">
+					<IconGift size={16} />
+					<p className={styles.label}>{t('free')}</p>
 				</div>
 			);
 		case 'paid':

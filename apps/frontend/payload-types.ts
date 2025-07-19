@@ -447,6 +447,13 @@ export interface User {
   medical_id?: number | null;
   birthday?: string | null;
   member_since: number;
+  /**
+   * Os utilizadores que são Internos não pagam quotas se a Quota for para um ano entre o ano de início e fim do Internato.
+   */
+  is_intern?: boolean | null;
+  intern_since?: number | null;
+  intern_until?: number | null;
+  intern_proof?: (string | null) | InternalDocument;
   send_newsletter?: boolean | null;
   phone?: string | null;
   address_1?: string | null;
@@ -476,7 +483,7 @@ export interface User {
         request_date: string;
         year: number;
         payment_amount: number;
-        payment_status: 'waiting' | 'paid' | 'refunded' | 'canceled';
+        payment_status: 'waiting' | 'free' | 'paid' | 'refunded' | 'canceled';
         payment_link_id: string;
         payment_link_url: string;
         invoices?:
@@ -973,6 +980,10 @@ export interface UsersSelect<T extends boolean = true> {
   medical_id?: T;
   birthday?: T;
   member_since?: T;
+  is_intern?: T;
+  intern_since?: T;
+  intern_until?: T;
+  intern_proof?: T;
   send_newsletter?: T;
   phone?: T;
   address_1?: T;

@@ -10,6 +10,7 @@ export const UserOptions = {
 
 	payment_status: [
 		{ label: 'Aguarda Pagamento', value: 'waiting' },
+		{ label: 'Oferta', value: 'free' },
 		{ label: 'Pago', value: 'paid' },
 		{ label: 'Reembolso', value: 'refunded' },
 		{ label: 'Cancelado', value: 'canceled' },

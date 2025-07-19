@@ -65,4 +65,40 @@ export const userFieldsReferences: Field[] = [
 		],
 		type: 'row',
 	},
+	{
+		fields: [
+			{
+				admin: {
+					description: 'Os utilizadores que são Internos não pagam quotas se a Quota for para um ano entre o ano de início e fim do Internato.',
+				},
+				label: 'Definir como Interno',
+				name: 'is_intern',
+				type: 'checkbox',
+			},
+			{
+				fields: [
+					{
+						label: 'Interno desde o ano (inclusive)',
+						min: 1975,
+						name: 'intern_since',
+						type: 'number',
+					},
+					{
+						label: 'Interno até ao ano (inclusive)',
+						min: 1975,
+						name: 'intern_until',
+						type: 'number',
+					},
+				],
+				type: 'row',
+			},
+			{
+				label: 'Prova de Internato',
+				name: 'intern_proof',
+				relationTo: 'internal-documents',
+				type: 'upload',
+			},
+		],
+		type: 'group',
+	},
 ];

@@ -392,6 +392,7 @@
 		},
 		"QuotaPaymentStatus": {
 			"canceled": "Cancelado",
+			"free": "Oferta",
 			"paid": "OK",
 			"refunded": "Reembolsado",
 			"unknown": "Desconhecido",
