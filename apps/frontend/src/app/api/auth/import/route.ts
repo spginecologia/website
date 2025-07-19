@@ -1,7 +1,6 @@
 /* * */
 
 import payloadConfig from '@/payload-config';
-import { User } from 'payload-types';
 import { type SignupResponse } from '@/payload/collections/Signup/types';
 import { type SignupForm, SignupFormValidation } from '@/payload/collections/Signup/validation';
 import { getAnonymizedEmail } from '@/utils/get-anonymized-email';
@@ -11,6 +10,7 @@ import { DateTime } from 'luxon';
 import fs from 'node:fs';
 import Papa from 'papaparse';
 import { getPayload } from 'payload';
+import { User } from 'payload-types';
 // import { payloadSendResetPasswordEmail } from '@/utils/payload-send-reset-password-email';
 
 /* * */

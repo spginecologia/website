@@ -1,0 +1,29 @@
+{
+	"name": "@spginecologia/website-emails",
+	"version": "1.0.0",
+	"private": true,
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"default": "./dist/index.js"
+		}
+	},
+	"scripts": {
+		"build": "rimraf ./dist && tsc && resolve-tspaths",
+		"dev": "email dev -p 3007 --dir ./src/templates",
+		"export": "email export --dir ./src/templates",
+		"lint": "eslint ./src/ && tsc --noEmit"
+	},
+	"dependencies": {
+		"@react-email/components": "0.3.2",
+		"browserslist": "4.25.1",
+		"react-email": "4.2.3"
+	},
+	"devDependencies": {
+		"@carrismetropolitana/eslint": "20250622.1204.50",
+		"@react-email/preview-server": "4.2.3",
+		"@types/node": "24.0.13",
+		"resolve-tspaths": "0.8.23",
+		"typescript": "5.8.3"
+	}
+}
