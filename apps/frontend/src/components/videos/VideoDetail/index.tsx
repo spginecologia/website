@@ -10,8 +10,8 @@ import { VideoDetailDescription } from '@/components/videos/VideoDetailDescripti
 import { VideoDetailMetadata } from '@/components/videos/VideoDetailMetadata';
 import { VideoDetailPlayer } from '@/components/videos/VideoDetailPlayer';
 import { VideoDetailRelatedVideos } from '@/components/videos/VideoDetailRelatedVideos';
-import { type Topic, type Video } from 'payload-types';
 import { PayloadAPIResponse } from '@/types/payload-api-response';
+import { type Topic, type Video } from 'payload-types';
 import { useMemo } from 'react';
 import useSWR from 'swr';
 

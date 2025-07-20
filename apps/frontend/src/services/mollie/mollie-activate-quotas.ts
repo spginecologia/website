@@ -1,9 +1,9 @@
 /* * */
 
 import payloadConfig from '@/payload-config';
-import LOGGER from '@/services/logger/LOGGER';
-import { MOLLIEAPI } from '@/services/mollie/MOLLIEAPI';
 import { getUserDisplayName } from '@/services/general/get-user-display-name';
+import { LOGGER } from '@/services/logger/LOGGER';
+import { MOLLIEAPI } from '@/services/mollie/MOLLIEAPI';
 import { renderQuotaActivationFreeTemplate, renderQuotaActivationTemplate } from '@spginecologia/website-emails';
 import { getPayload } from 'payload';
 import { type User } from 'payload-types';

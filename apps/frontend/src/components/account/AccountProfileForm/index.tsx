@@ -3,11 +3,11 @@
 /* * */
 
 import { FormSection } from '@/components/common/FormSection';
+import { showNotification } from '@/services/general/show-notification';
 import { UserEditableProfileDefault } from '@/services/payload/collections/User/default';
 import { UserOptions } from '@/services/payload/collections/User/options';
 import { UserEditableProfile, UserEditableProfileValidation } from '@/services/payload/collections/User/validation';
 import { type PayloadMeResponse } from '@/types/payload-api-response';
-import { showNotification } from '@/services/general/show-notification';
 import { Button, Checkbox, Select, Space, Text, TextInput } from '@mantine/core';
 import { DateInput } from '@mantine/dates';
 import { useForm } from '@mantine/form';

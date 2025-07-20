@@ -8,7 +8,7 @@ import styles from './styles.module.css';
 /* * */
 
 interface Props {
-	docId?: null | string
+	docId?: null | number
 }
 
 /* * */

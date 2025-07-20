@@ -3,13 +3,13 @@
 /* * */
 
 import payloadConfig from '@/payload-config';
+import { getAnonymizedEmail } from '@/services/general/get-anonymized-email';
 import { type SignupResponse } from '@/services/payload/collections/Signup/types';
 import { type SignupForm, SignupFormValidation } from '@/services/payload/collections/Signup/validation';
-import { getAnonymizedEmail } from '@/services/general/get-anonymized-email';
 import { payloadGetUser } from '@/services/payload/utils/payload-get-user';
 import { payloadSendSignupEmail } from '@/services/payload/utils/payload-send-signup-email';
+import { DateTime } from 'luxon';
 import { getPayload } from 'payload';
-// import { payloadSendResetPasswordEmail } from '@/utils/payload-send-reset-password-email';
 
 /* * */
 
@@ -60,7 +60,7 @@ export async function POST(request: Request) {
 		const newUserData = await payload.create({
 			collection: 'users',
 			data: {
-				account_status: 'pending',
+				account_status: 'waiting',
 				address_1: validatedData.address_1,
 				address_2: validatedData.address_2,
 				billing_address_1: validatedData.billing_address_1,
@@ -76,7 +76,7 @@ export async function POST(request: Request) {
 				first_name: validatedData.first_name,
 				last_name: validatedData.last_name,
 				medical_id: validatedData.medical_id,
-				member_since: new Date().toISOString(),
+				member_since: Number(DateTime.now().toFormat('yyyy')),
 				password: Math.random().toString(36).slice(0, 20),
 				phone: validatedData.phone,
 				postal_code: validatedData.postal_code,

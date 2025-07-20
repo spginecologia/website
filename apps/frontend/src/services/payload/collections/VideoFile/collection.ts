@@ -1,8 +1,8 @@
 /* * */
 
+import { getVideoDurationInSeconds } from '@/services/general/get-video-duration-in-seconds';
 import { payloadIsActiveUser } from '@/services/payload/utils/payload-is-active-user';
 import { payloadIsAdmin } from '@/services/payload/utils/payload-is-admin';
-import { getVideoDurationInSeconds } from '@/services/general/get-video-duration-in-seconds';
 import { type CollectionConfig } from 'payload';
 
 /* * */

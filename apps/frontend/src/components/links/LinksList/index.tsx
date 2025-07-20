@@ -2,13 +2,12 @@
 
 /* * */
 
-import type { Link } from 'payload-types';
-import type { PayloadAPIResponse } from '@/types/payload-api-response';
-
 import { ErrorDisplay } from '@/components/common/ErrorDisplay';
 import { NoDataDisplay } from '@/components/common/NoDataDisplay';
 import { LinkItem } from '@/components/links/LinkItem';
+import { type PayloadAPIResponse } from '@/types/payload-api-response';
 import { Skeleton } from '@mantine/core';
+import { type Link } from 'payload-types';
 import { useMemo } from 'react';
 import useSWR from 'swr';
 

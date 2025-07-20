@@ -1,8 +1,8 @@
 /* * */
 
-import { type PayloadMeResponse } from '@/types/payload-api-response';
 import { getUserDisplayName } from '@/services/general/get-user-display-name';
 import { getUserGenderFromTitle } from '@/services/general/get-user-gender-from-title';
+import { type PayloadMeResponse } from '@/types/payload-api-response';
 import { Skeleton, Text, Title } from '@mantine/core';
 import { useTranslations } from 'next-intl';
 import useSWR from 'swr';

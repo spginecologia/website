@@ -25,7 +25,16 @@ export function QuotaActivationFreeTemplate({ accountUrl, paymentAmount, quotaYe
 	return (
 		<Wrapper previewMessage="Confirmação de pagamento de Quota de Sócio SPG">
 			<Greeting text={`${userDisplayName},`} />
-			<Paragraph>Informamos que a sua <strong>Quota de Sócio para o ano de {quotaYear}</strong>, no valor de <strong>{paymentAmount}</strong>, foi oferecida pela Direção SPG. Estamos empenhados em desenvolver o futuro da nossa especialidade consigo.</Paragraph>
+			<Paragraph>
+				Informamos que a sua
+				<strong>
+					Quota de Sócio para o ano de
+					{quotaYear}
+				</strong>
+				, no valor de
+				<strong>{paymentAmount}</strong>
+				, foi oferecida pela Direção SPG. Estamos empenhados em desenvolver o futuro da nossa especialidade consigo.
+			</Paragraph>
 			<MainButton href={accountUrl} label="Aceder à Conta SPG" />
 			<Paragraph>Se necessitar de algum esclarecimento adicional, ou se algo não estiver correto, por favor entre em contacto com o Secretariado SPG.</Paragraph>
 			<Farewell text="Secretariado SPG" />

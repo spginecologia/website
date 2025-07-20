@@ -1,7 +1,8 @@
 'use client';
 
-import { Skeleton } from '@mantine/core';
 /* * */
+
+import { Skeleton } from '@mantine/core';
 
 import styles from './styles.module.css';
 

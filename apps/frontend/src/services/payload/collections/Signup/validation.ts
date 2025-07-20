@@ -1,8 +1,7 @@
 /* * */
 
-import { User } from 'payload-types';
-import { UserOptions } from '@/services/payload/collections/User/options';
 import { validateTaxId } from '@/services/general/validate-tax-id';
+import { UserOptions } from '@/services/payload/collections/User/options';
 import { z } from 'zod/v4';
 
 /* * */

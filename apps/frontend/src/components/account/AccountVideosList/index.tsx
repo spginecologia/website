@@ -2,12 +2,11 @@
 
 /* * */
 
-import type { Video } from 'payload-types';
-import type { PayloadAPIResponse } from '@/types/payload-api-response';
-
 import { VideoCardRelated } from '@/components/videos/VideoCardRelated';
+import { type PayloadAPIResponse } from '@/types/payload-api-response';
 import { Text } from '@mantine/core';
 import { useTranslations } from 'next-intl';
+import { type Video } from 'payload-types';
 import { useMemo } from 'react';
 import useSWR from 'swr';
 

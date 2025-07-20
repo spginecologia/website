@@ -2,16 +2,12 @@
 
 import payloadConfig from '@/payload-config';
 import { type SignupResponse } from '@/services/payload/collections/Signup/types';
-import { type SignupForm, SignupFormValidation } from '@/services/payload/collections/Signup/validation';
-import { getAnonymizedEmail } from '@/services/general/get-anonymized-email';
 import { payloadGetUser } from '@/services/payload/utils/payload-get-user';
-import { payloadSendSignupEmail } from '@/services/payload/utils/payload-send-signup-email';
 import { DateTime } from 'luxon';
 import fs from 'node:fs';
 import Papa from 'papaparse';
 import { getPayload } from 'payload';
 import { User } from 'payload-types';
-// import { payloadSendResetPasswordEmail } from '@/utils/payload-send-reset-password-email';
 
 /* * */
 
@@ -63,6 +59,7 @@ export async function GET() {
 						first_name: userData.first_name,
 						last_name: userData.last_name,
 						medical_id: userData.medical_id,
+						member_since: Number(DateTime.now().toFormat('yyyy')),
 						password: Math.random().toString(36).slice(0, 20),
 						phone: userData.phone,
 						postal_code: userData.postal_code,

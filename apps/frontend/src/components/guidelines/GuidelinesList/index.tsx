@@ -8,10 +8,10 @@ import { ContentWrapper } from '@/components/common/ContentWrapper';
 import { ErrorDisplay } from '@/components/common/ErrorDisplay';
 import { NoDataDisplay } from '@/components/common/NoDataDisplay';
 import { Section } from '@/components/common/Section';
-import { type Guideline } from 'payload-types';
 import { PayloadAPIResponse } from '@/types/payload-api-response';
 import { Title } from '@mantine/core';
 import { useTranslations } from 'next-intl';
+import { type Guideline } from 'payload-types';
 import useSWR from 'swr';
 
 import styles from './styles.module.css';

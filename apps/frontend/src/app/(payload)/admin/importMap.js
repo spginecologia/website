@@ -21,9 +21,9 @@ import { StrikethroughFeatureClient as StrikethroughFeatureClient_e70f5e05f09f93
 import { UnderlineFeatureClient as UnderlineFeatureClient_e70f5e05f09f93e00b997edb1ef0c864 } from '@payloadcms/richtext-lexical/client'
 import { BoldFeatureClient as BoldFeatureClient_e70f5e05f09f93e00b997edb1ef0c864 } from '@payloadcms/richtext-lexical/client'
 import { ItalicFeatureClient as ItalicFeatureClient_e70f5e05f09f93e00b997edb1ef0c864 } from '@payloadcms/richtext-lexical/client'
-import { SpgMemberRowLabel as SpgMemberRowLabel_ef24b43a8ae7fb128de8e4029b3a4094 } from '@/services/payload/components/SpgMemberRowLabel/index'
-import { FileOrUrlRowLabel as FileOrUrlRowLabel_a2948c35ea015ac0e9690fd4289a2141 } from '@/services/payload/components/FileOrUrlRowLabel/index'
-import { OpenTransactionDocumentButton as OpenTransactionDocumentButton_e7cdbf483149b3e1ab5401bd809936cc } from '@/services/payload/components/OpenTransactionDocumentButton/index'
+import { SpgMemberRowLabel as SpgMemberRowLabel_c6a59ba124efbe19240b0bf5154fe8b4 } from '@/services/payload/components/SpgMemberRowLabel/index'
+import { FileOrUrlRowLabel as FileOrUrlRowLabel_e392e86270e94bf15012006ccac0b5ce } from '@/services/payload/components/FileOrUrlRowLabel/index'
+import { OpenTransactionDocumentButton as OpenTransactionDocumentButton_ff581ccc4f936cf6b07007539c523b86 } from '@/services/payload/components/OpenTransactionDocumentButton/index'
 import { S3ClientUploadHandler as S3ClientUploadHandler_f97aa6c64367fa259c5bc0567239ef24 } from '@payloadcms/storage-s3/client'
 
 export const importMap = {
@@ -50,8 +50,8 @@ export const importMap = {
   "@payloadcms/richtext-lexical/client#UnderlineFeatureClient": UnderlineFeatureClient_e70f5e05f09f93e00b997edb1ef0c864,
   "@payloadcms/richtext-lexical/client#BoldFeatureClient": BoldFeatureClient_e70f5e05f09f93e00b997edb1ef0c864,
   "@payloadcms/richtext-lexical/client#ItalicFeatureClient": ItalicFeatureClient_e70f5e05f09f93e00b997edb1ef0c864,
-  "@/services/payload/components/SpgMemberRowLabel/index#SpgMemberRowLabel": SpgMemberRowLabel_ef24b43a8ae7fb128de8e4029b3a4094,
-  "@/services/payload/components/FileOrUrlRowLabel/index#FileOrUrlRowLabel": FileOrUrlRowLabel_a2948c35ea015ac0e9690fd4289a2141,
-  "@/services/payload/components/OpenTransactionDocumentButton/index#OpenTransactionDocumentButton": OpenTransactionDocumentButton_e7cdbf483149b3e1ab5401bd809936cc,
+  "@/services/payload/components/SpgMemberRowLabel/index#SpgMemberRowLabel": SpgMemberRowLabel_c6a59ba124efbe19240b0bf5154fe8b4,
+  "@/services/payload/components/FileOrUrlRowLabel/index#FileOrUrlRowLabel": FileOrUrlRowLabel_e392e86270e94bf15012006ccac0b5ce,
+  "@/services/payload/components/OpenTransactionDocumentButton/index#OpenTransactionDocumentButton": OpenTransactionDocumentButton_ff581ccc4f936cf6b07007539c523b86,
   "@payloadcms/storage-s3/client#S3ClientUploadHandler": S3ClientUploadHandler_f97aa6c64367fa259c5bc0567239ef24
 }

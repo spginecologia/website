@@ -1,8 +1,8 @@
 /* * */
 
 import payloadConfig from '@/payload-config';
-import { VideoValidationServer } from '@/services/payload/collections/Video/validation';
 import { getVideoDurationInSeconds } from '@/services/general/get-video-duration-in-seconds';
+import { VideoValidationServer } from '@/services/payload/collections/Video/validation';
 import { getPayload } from 'payload';
 
 /* * */

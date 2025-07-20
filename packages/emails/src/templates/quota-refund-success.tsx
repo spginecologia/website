@@ -24,8 +24,22 @@ export function QuotaRefundSuccessTemplate({ creditNoteNumber, paymentAmount, qu
 	return (
 		<Wrapper previewMessage="Reembolso da Quota de Sócio SPG">
 			<Greeting text={`${userDisplayName},`} />
-			<Paragraph>Informamos que a <strong>Quota de Sócio para o ano de {quotaYear}</strong> foi reembolsada para o método de pagamento utilizado originalmente.</Paragraph>
-			<Paragraph>Em anexo poderá encontrar a Nota de Crédito <strong>{creditNoteNumber}</strong>, no valor de <strong>{paymentAmount}</strong>.</Paragraph>
+			<Paragraph>
+				Informamos que a
+				<strong>
+					Quota de Sócio para o ano de
+					{quotaYear}
+				</strong>
+				{' '}
+				foi reembolsada para o método de pagamento utilizado originalmente.
+			</Paragraph>
+			<Paragraph>
+				Em anexo poderá encontrar a Nota de Crédito
+				<strong>{creditNoteNumber}</strong>
+				, no valor de
+				<strong>{paymentAmount}</strong>
+				.
+			</Paragraph>
 			<Paragraph>Se necessitar de algum esclarecimento adicional, ou se algo não estiver correto, por favor entre em contacto com o Secretariado SPG.</Paragraph>
 			<Paragraph>Agradecemos a sua colaboração.</Paragraph>
 			<Farewell text="Secretariado SPG" />

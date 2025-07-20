@@ -2,12 +2,11 @@
 
 /* * */
 
-import type { Topic } from 'payload-types';
-
 import { TopicDisplay } from '@/components/topics/TopicDisplay';
 import { Skeleton } from '@mantine/core';
 import { DateTime } from 'luxon';
 import { useTranslations } from 'next-intl';
+import { type Topic } from 'payload-types';
 import { useMemo } from 'react';
 
 import styles from './styles.module.css';

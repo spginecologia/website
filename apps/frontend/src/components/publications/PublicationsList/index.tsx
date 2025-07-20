@@ -2,8 +2,6 @@
 
 /* * */
 
-import type { Publication } from 'payload-types';
-
 import { Card } from '@/components/cards/Card';
 import { CardSkeleton } from '@/components/cards/CardSkeleton';
 import { ContentWrapper } from '@/components/common/ContentWrapper';
@@ -13,6 +11,7 @@ import { Section } from '@/components/common/Section';
 import { PayloadAPIResponse } from '@/types/payload-api-response';
 import { Title } from '@mantine/core';
 import { useTranslations } from 'next-intl';
+import { type Publication } from 'payload-types';
 import useSWR from 'swr';
 
 import styles from './styles.module.css';

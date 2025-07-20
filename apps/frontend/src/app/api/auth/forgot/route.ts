@@ -1,7 +1,7 @@
 /* * */
 
-import { type ForgotPasswordResponse } from '@/services/payload/collections/ForgotPassword/types';
 import { getAnonymizedEmail } from '@/services/general/get-anonymized-email';
+import { type ForgotPasswordResponse } from '@/services/payload/collections/ForgotPassword/types';
 import { payloadGetUser } from '@/services/payload/utils/payload-get-user';
 import { payloadSendResetPasswordEmail } from '@/services/payload/utils/payload-send-reset-password-email';
 

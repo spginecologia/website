@@ -1,12 +1,11 @@
 /* * */
 
-import type { Topic } from 'payload-types';
-
 import { CardSummary } from '@/components/cards/CardSummary';
 import { CardWrapper } from '@/components/cards/CardWrapper';
 import { TopicDisplay } from '@/components/topics/TopicDisplay';
 import { VideoCoverImage } from '@/components/videos/VideoCoverImage';
 import { Title } from '@mantine/core';
+import { type Topic } from 'payload-types';
 
 import styles from './styles.module.css';
 

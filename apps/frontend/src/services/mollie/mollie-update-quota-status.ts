@@ -1,13 +1,13 @@
 /* * */
 
 import payloadConfig from '@/payload-config';
-import LOGGER from '@/services/logger/LOGGER';
+import { getUserDisplayName } from '@/services/general/get-user-display-name';
+import { LOGGER } from '@/services/logger/LOGGER';
 import { mollieIsRefunded } from '@/services/mollie/mollie-is-refunded';
 import { MOLLIEAPI } from '@/services/mollie/MOLLIEAPI';
 import { vendusCreateCreditNote } from '@/services/vendus/vendus-create-credit-note';
 import { vendusCreateInvoice } from '@/services/vendus/vendus-create-invoice';
 import { vendusGetClientFromUser } from '@/services/vendus/vendus-get-client-from-user';
-import { getUserDisplayName } from '@/services/general/get-user-display-name';
 import { PaymentStatus } from '@mollie/api-client';
 import { renderQuotaPaymentSuccessTemplate, renderQuotaRefundSuccessTemplate } from '@spginecologia/website-emails';
 import { getPayload } from 'payload';
