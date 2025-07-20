@@ -5,7 +5,9 @@ import { next } from '@carrismetropolitana/eslint'
 /* * */
 
 export default [
+
   ...next,
+
   {
     ignores: [
       '.next/',
@@ -13,7 +15,8 @@ export default [
       'assets/',
       'public/',
       'node_modules/',
-      'app/(payload)/',
+      'src/app/(payload)/',
     ],
   },
+
 ]

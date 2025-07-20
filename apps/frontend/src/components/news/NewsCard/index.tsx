@@ -28,7 +28,7 @@ export function NewsCard({ coverSrc, href, publishDate, summary, title, topic }:
 	return (
 		<CardWrapper href={href} variant="default">
 			<CardCoverImage aspectRatio="16/9" src={coverSrc} />
-			{topic && <TopicDisplay id={topic.id} noLink title={topic.title} />}
+			{topic && <TopicDisplay id={topic.id} title={topic.title} noLink />}
 			<CardTitle text={title} variant="serif" />
 			<CardSummary text={summary} />
 			<CardPublishDate date={publishDate} />
