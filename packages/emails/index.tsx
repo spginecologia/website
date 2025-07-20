@@ -3,6 +3,8 @@
 import { type AccountActivationProps, accountActivationSubject, AccountActivationTemplate } from '@/templates/account-activation';
 import { type AccountPasswordResetProps, accountPasswordResetSubject, AccountPasswordResetTemplate } from '@/templates/account-password-reset';
 import { type AccountSignupProps, accountSignupSubject, AccountSignupTemplate } from '@/templates/account-signup';
+import { type QuotaActivationProps, quotaActivationSubject, QuotaActivationTemplate } from '@/templates/quota-activation';
+import { type QuotaActivationFreeProps, quotaActivationFreeSubject, QuotaActivationFreeTemplate } from '@/templates/quota-activation-free';
 import { type QuotaPaymentSuccessProps, quotaPaymentSuccessSubject, QuotaPaymentSuccessTemplate } from '@/templates/quota-payment-success';
 import { type QuotaRefundSuccessProps, quotaRefundSuccessSubject, QuotaRefundSuccessTemplate } from '@/templates/quota-refund-success';
 import { render } from '@react-email/render';
@@ -34,6 +36,20 @@ export const renderAccountSignupTemplate = async (props: AccountSignupProps): Pr
 	return {
 		html: await render(<AccountSignupTemplate {...props} />),
 		subject: accountSignupSubject,
+	};
+};
+
+export const renderQuotaActivationFreeTemplate = async (props: QuotaActivationFreeProps): Promise<EmailTemplate> => {
+	return {
+		html: await render(<QuotaActivationFreeTemplate {...props} />),
+		subject: quotaActivationFreeSubject,
+	};
+};
+
+export const renderQuotaActivationTemplate = async (props: QuotaActivationProps): Promise<EmailTemplate> => {
+	return {
+		html: await render(<QuotaActivationTemplate {...props} />),
+		subject: quotaActivationSubject,
 	};
 };
 

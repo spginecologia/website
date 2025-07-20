@@ -22,8 +22,7 @@ export function AccountSignupTemplate({ userDisplayName }: AccountSignupProps) {
 		<Wrapper previewMessage="A sua conta SPG está em confirmação.">
 			<Greeting text={`${userDisplayName},`} />
 			<Paragraph>Agradecemos o seu interesse em tornar-se membro da SPG.</Paragraph>
-			<Paragraph>Os seus dados serão analisados em breve pela Direção da SPG.</Paragraph>
-			<Paragraph>Após a análise, receberá um email com a confirmação de ativação da sua conta.</Paragraph>
+			<Paragraph>Os seus dados serão analisados em breve pela Direção da SPG. Após a análise, receberá um email com a confirmação de ativação da sua conta.</Paragraph>
 			<Farewell text="Academia SPG" />
 		</Wrapper>
 	);

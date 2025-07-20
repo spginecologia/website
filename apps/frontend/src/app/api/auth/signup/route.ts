@@ -2,9 +2,9 @@
 
 /* * */
 
-import payloadConfig from '@/payload-config';
-import { type SignupResponse } from '@/payload/collections/Signup/types';
-import { type SignupForm, SignupFormValidation } from '@/payload/collections/Signup/validation';
+import payloadConfig from '@/services/payload-config';
+import { type SignupResponse } from '@/services/payload/collections/Signup/types';
+import { type SignupForm, SignupFormValidation } from '@/services/payload/collections/Signup/validation';
 import { getAnonymizedEmail } from '@/utils/get-anonymized-email';
 import { payloadGetUser } from '@/utils/payload-get-user';
 import { payloadSendSignupEmail } from '@/utils/payload-send-signup-email';

@@ -1,6 +1,6 @@
 /* * */
 
-import payloadConfig from '@/payload-config';
+import payloadConfig from '@/services/payload-config';
 import { User } from 'payload-types';
 import { validateTaxId } from '@/utils/validate-tax-id';
 import { DateTime } from 'luxon';

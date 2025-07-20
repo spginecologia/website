@@ -9,28 +9,28 @@ import sharp from 'sharp';
 
 /* * */
 
-import { Admins } from '@/payload/collections/Admin/collection';
-import { Courses } from '@/payload/collections/Course/collection';
-import { Documents } from '@/payload/collections/Document/collection';
-import { Event } from '@/payload/collections/Event/collection';
-import { Guidelines } from '@/payload/collections/Guideline/collection';
-import { InternalDocuments } from '@/payload/collections/InternalDocument/collection';
-import { Links } from '@/payload/collections/Link/collection';
-import { Media } from '@/payload/collections/Media/collection';
-import { News } from '@/payload/collections/News/collection';
-import { Publications } from '@/payload/collections/Publication/collection';
-import { Quotas } from '@/payload/collections/Quotas/collection';
-import { Sections } from '@/payload/collections/Section/collection';
-import { Topics } from '@/payload/collections/Topic/collection';
-import { Users } from '@/payload/collections/User/collection';
-import { Videos } from '@/payload/collections/Video/collection';
-import { VideoFiles } from '@/payload/collections/VideoFile/collection';
-import { Workgroups } from '@/payload/collections/Workgroup/collection';
+import { Admins } from '@/services/payload/collections/Admin/collection';
+import { Courses } from '@/services/payload/collections/Course/collection';
+import { Documents } from '@/services/payload/collections/Document/collection';
+import { Event } from '@/services/payload/collections/Event/collection';
+import { Guidelines } from '@/services/payload/collections/Guideline/collection';
+import { InternalDocuments } from '@/services/payload/collections/InternalDocument/collection';
+import { Links } from '@/services/payload/collections/Link/collection';
+import { Media } from '@/services/payload/collections/Media/collection';
+import { News } from '@/services/payload/collections/News/collection';
+import { Publications } from '@/services/payload/collections/Publication/collection';
+import { Quotas } from '@/services/payload/collections/Quotas/collection';
+import { Sections } from '@/services/payload/collections/Section/collection';
+import { Topics } from '@/services/payload/collections/Topic/collection';
+import { Users } from '@/services/payload/collections/User/collection';
+import { Videos } from '@/services/payload/collections/Video/collection';
+import { VideoFiles } from '@/services/payload/collections/VideoFile/collection';
+import { Workgroups } from '@/services/payload/collections/Workgroup/collection';
 
 /* * */
 
-import { LegalDocuments } from '@/payload/globals/LegalDocuments/global';
-import { SocialBodies } from '@/payload/globals/SocialBodies/global';
+import { LegalDocuments } from '@/services/payload/globals/LegalDocuments/global';
+import { SocialBodies } from '@/services/payload/globals/SocialBodies/global';
 
 /* * */
 

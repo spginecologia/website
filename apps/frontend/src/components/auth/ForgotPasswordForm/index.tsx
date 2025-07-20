@@ -2,9 +2,9 @@
 
 /* * */
 
-import { ForgotPasswordDefault } from '@/payload/collections/ForgotPassword/default';
-import { type ForgotPasswordRequest, type ForgotPasswordResponse } from '@/payload/collections/ForgotPassword/types';
-import { ForgotPasswordValidation } from '@/payload/collections/ForgotPassword/validation';
+import { ForgotPasswordDefault } from '@/services/payload/collections/ForgotPassword/default';
+import { type ForgotPasswordRequest, type ForgotPasswordResponse } from '@/services/payload/collections/ForgotPassword/types';
+import { ForgotPasswordValidation } from '@/services/payload/collections/ForgotPassword/validation';
 import { validateEmail } from '@/utils/validate-email';
 import { validateTaxId } from '@/utils/validate-tax-id';
 import { Alert, Button, Loader, Paper, Space, Text, TextInput, Title } from '@mantine/core';

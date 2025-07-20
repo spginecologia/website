@@ -3,9 +3,9 @@
 /* * */
 
 import { FormSection } from '@/components/common/FormSection';
-import { Videos } from '@/payload/collections/Video/collection';
-import { VideoDefault } from '@/payload/collections/Video/default';
-import { VideoValidationClient } from '@/payload/collections/Video/validation';
+import { Videos } from '@/services/payload/collections/Video/collection';
+import { VideoDefault } from '@/services/payload/collections/Video/default';
+import { VideoValidationClient } from '@/services/payload/collections/Video/validation';
 import { Button, Checkbox, FileInput, MultiSelect, Paper, Select, Space, Text, Textarea, TextInput, Title } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { zod4Resolver } from 'mantine-form-zod-resolver';

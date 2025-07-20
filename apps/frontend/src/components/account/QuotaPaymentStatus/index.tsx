@@ -1,6 +1,6 @@
 /* * */
 
-import { UserQuotaPaymentStatus } from '@/payload/collections/User/options';
+import { UserQuotaPaymentStatus } from '@/services/payload/collections/User/options';
 import { IconAlertSquareFilled, IconArrowForwardUp, IconCheck, IconFlag3Filled, IconGift, IconX } from '@tabler/icons-react';
 import { useTranslations } from 'next-intl';
 

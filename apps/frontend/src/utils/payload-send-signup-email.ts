@@ -1,6 +1,6 @@
 /* * */
 
-import payloadConfig from '@/payload-config';
+import payloadConfig from '@/services/payload-config';
 import { getUserDisplayName } from '@/utils/get-user-display-name';
 import { renderAccountSignupTemplate } from '@spginecologia/website-emails';
 import { getPayload } from 'payload';

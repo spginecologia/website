@@ -1,6 +1,6 @@
 /* * */
 
-import payloadConfig from '@/payload-config';
+import payloadConfig from '@/services/payload-config';
 import { validateEmail } from '@/utils/validate-email';
 import { validateTaxId } from '@/utils/validate-tax-id';
 import { getPayload } from 'payload';

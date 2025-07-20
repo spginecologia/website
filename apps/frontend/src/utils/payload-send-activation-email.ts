@@ -1,6 +1,6 @@
 /* * */
 
-import payloadConfig from '@/payload-config';
+import payloadConfig from '@/services/payload-config';
 import { getUserDisplayName } from '@/utils/get-user-display-name';
 import { navigationGetUrlWithRedirectParam } from '@/utils/navigation-handle-redirect-param';
 import { renderAccountActivationTemplate } from '@spginecologia/website-emails';

@@ -280,6 +280,9 @@
 					"label": "Nome",
 					"placeholder": ""
 				},
+				"is_intern": {
+					"label": "Declarar-me como Interno"
+				},
 				"last_name": {
 					"label": "Apelido(s)",
 					"placeholder": ""

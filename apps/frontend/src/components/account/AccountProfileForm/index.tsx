@@ -3,9 +3,9 @@
 /* * */
 
 import { FormSection } from '@/components/common/FormSection';
-import { UserEditableProfileDefault } from '@/payload/collections/User/default';
-import { UserOptions } from '@/payload/collections/User/options';
-import { UserEditableProfileValidation } from '@/payload/collections/User/validation';
+import { UserEditableProfileDefault } from '@/services/payload/collections/User/default';
+import { UserOptions } from '@/services/payload/collections/User/options';
+import { UserEditableProfile, UserEditableProfileValidation } from '@/services/payload/collections/User/validation';
 import { type PayloadMeResponse } from '@/types/payload-api-response';
 import { showNotification } from '@/utils/show-notification';
 import { Button, Checkbox, Select, Space, Text, TextInput } from '@mantine/core';
@@ -93,7 +93,7 @@ export function AccountProfileForm() {
 	//
 	// D. Setup form
 
-	const form = useForm({
+	const form = useForm<UserEditableProfile>({
 		clearInputErrorOnChange: true,
 		initialValues: UserEditableProfileDefault,
 		onValuesChange: handleValuesChange,
@@ -132,22 +132,25 @@ export function AccountProfileForm() {
 				<TextInput description={t('fields.tax_id.description')} label={t('fields.tax_id.label')} placeholder={t('fields.tax_id.placeholder')} value={userData?.user.tax_id || ''} disabled readOnly />
 				<TextInput description={t('fields.medical_id.description')} label={t('fields.medical_id.label')} placeholder={t('fields.medical_id.placeholder')} value={userData?.user.medical_id || ''} disabled readOnly />
 				<DateInput label={t('fields.birthday.label')} placeholder={t('fields.birthday.placeholder')} value={userData?.user?.birthday ? new Date(userData.user.birthday) : null} valueFormat="YYYY-MM-DD" disabled readOnly />
-				<Checkbox checked={true} label={t('fields.workplace_secondary.label')} readOnly />
+				<Checkbox label={t('fields.is_intern.label')} readOnly={isLoading} {...form.getInputProps('is_intern', { type: 'checkbox' })} />
+				{form.values.is_intern && <DateInput label={t('fields.birthday.label')} placeholder={t('fields.birthday.placeholder')} readOnly={isLoading} value={userData?.user?.birthday ? new Date(userData.user.birthday) : null} valueFormat="YYYY-MM-DD" />}
+				{form.values.is_intern && <DateInput label={t('fields.birthday.label')} placeholder={t('fields.birthday.placeholder')} readOnly={isLoading} value={userData?.user?.birthday ? new Date(userData.user.birthday) : null} valueFormat="YYYY-MM-DD" />}
+				{form.values.is_intern && <DateInput label={t('fields.birthday.label')} placeholder={t('fields.birthday.placeholder')} readOnly={isLoading} value={userData?.user?.birthday ? new Date(userData.user.birthday) : null} valueFormat="YYYY-MM-DD" />}
 			</FormSection>
 
 			<FormSection description={t('sections.billing.description')} title={t('sections.billing.title')}>
-				<TextInput description={t('fields.billing_name.description')} label={t('fields.billing_name.label')} placeholder={t('fields.billing_name.placeholder')} {...form.getInputProps('billing_name')} />
-				<TextInput description={t('fields.billing_tax_id.description')} label={t('fields.billing_tax_id.label')} placeholder={t('fields.billing_tax_id.placeholder')} type="number" {...form.getInputProps('billing_tax_id')} />
-				<TextInput description={t('fields.billing_address_1.description')} label={t('fields.billing_address_1.label')} placeholder={t('fields.billing_address_1.placeholder')} {...form.getInputProps('billing_address_1')} />
-				<TextInput label={t('fields.billing_address_2.label')} placeholder={t('fields.billing_address_2.placeholder')} {...form.getInputProps('billing_address_2')} />
-				<TextInput label={t('fields.billing_postal_code.label')} placeholder={t('fields.billing_postal_code.placeholder')} {...form.getInputProps('billing_postal_code')} />
-				<TextInput label={t('fields.billing_city.label')} placeholder={t('fields.billing_city.placeholder')} {...form.getInputProps('billing_city')} />
+				<TextInput description={t('fields.billing_name.description')} label={t('fields.billing_name.label')} placeholder={t('fields.billing_name.placeholder')} readOnly={isLoading} {...form.getInputProps('billing_name')} />
+				<TextInput description={t('fields.billing_tax_id.description')} label={t('fields.billing_tax_id.label')} placeholder={t('fields.billing_tax_id.placeholder')} readOnly={isLoading} type="number" {...form.getInputProps('billing_tax_id')} />
+				<TextInput description={t('fields.billing_address_1.description')} label={t('fields.billing_address_1.label')} placeholder={t('fields.billing_address_1.placeholder')} readOnly={isLoading} {...form.getInputProps('billing_address_1')} />
+				<TextInput label={t('fields.billing_address_2.label')} placeholder={t('fields.billing_address_2.placeholder')} readOnly={isLoading} {...form.getInputProps('billing_address_2')} />
+				<TextInput label={t('fields.billing_postal_code.label')} placeholder={t('fields.billing_postal_code.placeholder')} readOnly={isLoading} {...form.getInputProps('billing_postal_code')} />
+				<TextInput label={t('fields.billing_city.label')} placeholder={t('fields.billing_city.placeholder')} readOnly={isLoading} {...form.getInputProps('billing_city')} />
 			</FormSection>
 
 			<FormSection description={t('sections.activity.description')} title={t('sections.activity.title')}>
 				<TextInput label={t('fields.workplace_primary.label')} placeholder={t('fields.workplace_primary.placeholder')} readOnly={isLoading} {...form.getInputProps('workplace_primary')} />
 				<TextInput label={t('fields.workplace_secondary.label')} placeholder={t('fields.workplace_secondary.placeholder')} readOnly={isLoading} {...form.getInputProps('workplace_secondary')} />
-				<Checkbox.Group label={t('fields.subscribed_sections.label')} {...form.getInputProps('subscribed_sections')}>
+				<Checkbox.Group label={t('fields.subscribed_sections.label')} readOnly={isLoading} {...form.getInputProps('subscribed_sections')}>
 					{UserOptions.subscribed_sections.map(section => (
 						<Checkbox key={section.value} label={section.label} value={section.value} />
 					))}

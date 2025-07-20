@@ -3,10 +3,10 @@
 /* * */
 
 import { FormSection } from '@/components/common/FormSection';
-import { SignupFormDefault } from '@/payload/collections/Signup/default';
-import { type SignupResponse } from '@/payload/collections/Signup/types';
-import { SignupFormValidation } from '@/payload/collections/Signup/validation';
-import { UserOptions } from '@/payload/collections/User/options';
+import { SignupFormDefault } from '@/services/payload/collections/Signup/default';
+import { type SignupResponse } from '@/services/payload/collections/Signup/types';
+import { SignupFormValidation } from '@/services/payload/collections/Signup/validation';
+import { UserOptions } from '@/services/payload/collections/User/options';
 import { Alert, Button, Checkbox, Loader, Paper, Select, Space, Text, TextInput, Title } from '@mantine/core';
 import { DateInput } from '@mantine/dates';
 import { useForm } from '@mantine/form';

@@ -1,6 +1,7 @@
 /* * */
 
-import payloadConfig from '@/payload-config';
+import payloadConfig from '@/services/payload-config';
+import LOGGER from '@/services/logger/LOGGER';
 import { mollieIsRefunded } from '@/services/mollie/mollie-is-refunded';
 import { MOLLIEAPI } from '@/services/mollie/MOLLIEAPI';
 import { vendusCreateCreditNote } from '@/services/vendus/vendus-create-credit-note';
@@ -35,12 +36,15 @@ export async function mollieUpdateQuotaStatus(userId: string) {
 	}
 
 	//
+	// Refresh quota activation
+
+	//
 	// Check if the user has any quotas and loop through them
 
 	const allUserQuotas = userData.quotas ?? [];
 
 	if (!allUserQuotas.length) {
-		console.error(`User NIF "${userData.tax_id}" does not have any quotas. Skipping...`);
+		LOGGER.error('mollie-update-quota-status', `User NIF "${userData.tax_id}" does not have any quotas. Skipping...`);
 		return;
 	}
 
@@ -48,10 +52,18 @@ export async function mollieUpdateQuotaStatus(userId: string) {
 		//
 
 		//
+		// Check if the quota is free or has no payment link
+
+		if (quotaData.payment_status === 'free') {
+			LOGGER.info('mollie-update-quota-status', `User NIF "${userData.tax_id}" has a free quota for the year "${quotaData.year}". Skipping...`);
+			continue;
+		}
+
+		//
 		// Check if the quota has a Mollie payment link and if it is not paid yet
 
 		if (!quotaData.payment_link_url) {
-			console.log(`User NIF "${userData.tax_id}" does not have a payment link for the quota year "${quotaData.year}". Skipping...`);
+			LOGGER.info('mollie-update-quota-status', `User NIF "${userData.tax_id}" does not have a payment link for the quota year "${quotaData.year}". Skipping...`);
 			continue;
 		}
 
@@ -94,7 +106,7 @@ export async function mollieUpdateQuotaStatus(userId: string) {
 				// Setup the Vendus client data from the user
 				const vendusClientData = vendusGetClientFromUser(userData);
 				// Create a new invoice in Vendus
-				console.log(`Creating a new invoice for user NIF "${userData.tax_id}" for the quota year "${quotaData.year}"...`);
+				LOGGER.info('mollie-update-quota-status', `Creating a new invoice for user NIF "${userData.tax_id}" for the quota year "${quotaData.year}"...`);
 				const newInvoiceData = await vendusCreateInvoice({
 					client: vendusClientData,
 					external_reference: paymentData.id,
@@ -138,7 +150,7 @@ export async function mollieUpdateQuotaStatus(userId: string) {
 					subject: templateData.subject,
 					to: userData.email,
 				});
-				console.log('Sent');
+				LOGGER.info('mollie-update-quota-status', 'Sent');
 			}
 
 			//

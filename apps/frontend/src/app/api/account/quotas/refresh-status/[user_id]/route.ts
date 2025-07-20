@@ -1,5 +1,6 @@
 /* * */
 
+import { mollieActivateQuotas } from '@/services/mollie/mollie-activate-quotas';
 import { mollieUpdateQuotaStatus } from '@/services/mollie/mollie-update-quota-status';
 import { redirect } from 'next/navigation';
 
@@ -27,7 +28,13 @@ export async function GET(request: Request, { params }: ContextProps) {
 			return new Response('User ID is required', { status: 400 });
 		}
 
+		/* * */
+
+		await mollieActivateQuotas(user_id);
+
 		await mollieUpdateQuotaStatus(user_id);
+
+		/* * */
 
 		return new Response('OK', { status: 300 });
 

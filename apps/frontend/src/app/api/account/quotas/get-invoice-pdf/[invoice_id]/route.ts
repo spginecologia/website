@@ -1,6 +1,6 @@
 /* * */
 
-import payloadConfig from '@/payload-config';
+import payloadConfig from '@/services/payload-config';
 import { vendusGetInvoicePdf } from '@/services/vendus/vendus-get-invoice-pdf';
 import { redirect } from 'next/navigation';
 import { getPayload } from 'payload';

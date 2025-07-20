@@ -1,6 +1,6 @@
 /* * */
 
-import { type UserQuotaPaymentStatus } from '@/payload/collections/User/options';
+import { type UserQuotaPaymentStatus } from '@/services/payload/collections/User/options';
 
 /* * */
 
