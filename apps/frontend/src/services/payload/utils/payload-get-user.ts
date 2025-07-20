@@ -1,8 +1,8 @@
 /* * */
 
-import payloadConfig from '@/services/payload-config';
-import { validateEmail } from '@/utils/validate-email';
-import { validateTaxId } from '@/utils/validate-tax-id';
+import payloadConfig from '@/payload-config';
+import { validateEmail } from '@/services/general/validate-email';
+import { validateTaxId } from '@/services/general/validate-tax-id';
 import { getPayload } from 'payload';
 import { type User } from 'payload-types';
 

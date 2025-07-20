@@ -1,6 +1,6 @@
 /* * */
 
-import { validateEmail } from '@/utils/validate-email';
+import { validateEmail } from '@/services/general/validate-email';
 import { z } from 'zod/v4';
 
 /* * */

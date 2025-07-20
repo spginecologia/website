@@ -1,6 +1,6 @@
 /* * */
 
-import payloadConfig from '@/services/payload-config';
+import payloadConfig from '@/payload-config';
 import { DateTime } from 'luxon';
 import { getPayload } from 'payload';
 

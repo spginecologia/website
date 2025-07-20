@@ -1,9 +1,9 @@
 /* * */
 
-import payloadConfig from '@/services/payload-config';
+import payloadConfig from '@/payload-config';
 import { BREVOAPI } from '@/services/brevo/BREVOAPI';
 import { cloudflareVerifyTurnstileToken } from '@/services/cloudflare/cloudflare-verify-turnstile-token';
-import { validateEmail } from '@/utils/validate-email';
+import { validateEmail } from '@/services/general/validate-email';
 import { getPayload } from 'payload';
 
 /* * */

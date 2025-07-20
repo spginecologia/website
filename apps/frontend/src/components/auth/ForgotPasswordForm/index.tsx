@@ -5,8 +5,8 @@
 import { ForgotPasswordDefault } from '@/services/payload/collections/ForgotPassword/default';
 import { type ForgotPasswordRequest, type ForgotPasswordResponse } from '@/services/payload/collections/ForgotPassword/types';
 import { ForgotPasswordValidation } from '@/services/payload/collections/ForgotPassword/validation';
-import { validateEmail } from '@/utils/validate-email';
-import { validateTaxId } from '@/utils/validate-tax-id';
+import { validateEmail } from '@/services/general/validate-email';
+import { validateTaxId } from '@/services/general/validate-tax-id';
 import { Alert, Button, Loader, Paper, Space, Text, TextInput, Title } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { IconInfoCircle, IconUserHeart } from '@tabler/icons-react';

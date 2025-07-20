@@ -1,6 +1,6 @@
 /* * */
 
-import payloadConfig from '@/services/payload-config';
+import payloadConfig from '@/payload-config';
 import { mollieActivateQuotas } from '@/services/mollie/mollie-activate-quotas';
 import { type CollectionAfterChangeHook } from 'payload';
 import { getPayload } from 'payload';

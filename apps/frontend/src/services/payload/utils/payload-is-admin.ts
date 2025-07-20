@@ -12,7 +12,7 @@ interface Props {
 
 /* * */
 
-export function accessIsAdmin({ admin, req }: Props): boolean {
+export function payloadIsAdmin({ admin, req }: Props): boolean {
 	//
 
 	if (admin) {

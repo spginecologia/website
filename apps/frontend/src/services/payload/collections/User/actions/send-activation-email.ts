@@ -1,6 +1,6 @@
 /* * */
 
-import { payloadSendActivationEmail } from '@/utils/payload-send-activation-email';
+import { payloadSendActivationEmail } from '@/services/payload/utils/payload-send-activation-email';
 import { type CollectionAfterChangeHook } from 'payload';
 import { type User } from 'payload-types';
 

@@ -1,6 +1,6 @@
 /* * */
 
-import payloadConfig from '@/services/payload-config';
+import payloadConfig from '@/payload-config';
 import { UserEditableProfileDefault } from '@/services/payload/collections/User/default';
 import { UserEditableProfileValidation } from '@/services/payload/collections/User/validation';
 import { mergekit } from 'mergekit';

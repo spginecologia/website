@@ -4,7 +4,7 @@
 
 import { LoginDefault } from '@/services/payload/collections/Login/default';
 import { LoginValidation } from '@/services/payload/collections/Login/validation';
-import { navigationHandleRedirectParam } from '@/utils/navigation-handle-redirect-param';
+import { navigationHandleRedirectParam } from '@/services/navigation/navigation-handle-redirect-param';
 import { Alert, Anchor, Button, Loader, Paper, Space, Text, TextInput, Title } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { IconSparkles } from '@tabler/icons-react';

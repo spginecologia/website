@@ -1,7 +1,7 @@
 /* * */
 
 import { UserOptions } from '@/services/payload/collections/User/options';
-import { validateTaxId } from '@/utils/validate-tax-id';
+import { validateTaxId } from '@/services/general/validate-tax-id';
 import { type Field } from 'payload';
 
 /* * */

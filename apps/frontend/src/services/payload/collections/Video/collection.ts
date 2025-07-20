@@ -5,8 +5,8 @@ import { featuredImageField } from '@/services/payload/fields/featured-image';
 import { isFeaturedField } from '@/services/payload/fields/is-featured';
 import { publishedAtField } from '@/services/payload/fields/published-at';
 import { topicsField } from '@/services/payload/fields/topics';
-import { accessIsActiveUser } from '@/utils/access-is-active-user';
-import { accessIsAdmin } from '@/utils/access-is-admin';
+import { payloadIsActiveUser } from '@/services/payload/utils/payload-is-active-user';
+import { payloadIsAdmin } from '@/services/payload/utils/payload-is-admin';
 import { type CollectionConfig } from 'payload';
 
 /* * */
@@ -15,14 +15,14 @@ export const Videos: CollectionConfig = {
 
 	access: {
 		create: ({ req }) => {
-			const isAdmin = accessIsAdmin({ req });
-			const isActiveUser = accessIsActiveUser(req.user?.collection === 'users' ? req.user : null);
+			const isAdmin = payloadIsAdmin({ req });
+			const isActiveUser = payloadIsActiveUser(req.user?.collection === 'users' ? req.user : null);
 			return isAdmin || isActiveUser;
 		},
 		read: ({ req }) => {
 			return true;
-			// const isAdmin = accessIsAdmin({ req });
-			// const isActiveUser = accessIsActiveUser(req.user?.collection === 'users' ? req.user : null);
+			// const isAdmin = payloadIsAdmin({ req });
+			// const isActiveUser = payloadIsActiveUser(req.user?.collection === 'users' ? req.user : null);
 			// return isAdmin || isActiveUser;
 		},
 	},

@@ -4,7 +4,7 @@ import { type User } from 'payload-types';
 
 /* * */
 
-export function accessIsActiveUser(userData?: null | User): boolean {
+export function payloadIsActiveUser(userData?: null | User): boolean {
 	//
 
 	//

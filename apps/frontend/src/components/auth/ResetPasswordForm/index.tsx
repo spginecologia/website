@@ -4,7 +4,7 @@
 
 import { ResetPasswordDefault } from '@/services/payload/collections/ResetPassword/default';
 import { ResetPasswordValidation } from '@/services/payload/collections/ResetPassword/validation';
-import { navigationHandleRedirectParam } from '@/utils/navigation-handle-redirect-param';
+import { navigationHandleRedirectParam } from '@/services/navigation/navigation-handle-redirect-param';
 import { Button, Loader, Paper, PasswordInput, Space, Text, Title } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { zod4Resolver } from 'mantine-form-zod-resolver';
