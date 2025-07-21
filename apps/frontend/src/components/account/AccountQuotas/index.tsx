@@ -2,6 +2,7 @@
 
 import { AccountQuotasInvoices } from '@/components/account/AccountQuotasInvoices';
 import { AccountQuotasPayments } from '@/components/account/AccountQuotasPayments';
+import { AccountQuotasRefresh } from '@/components/account/AccountQuotasRefresh';
 import { Paper, Space, Text, Title } from '@mantine/core';
 import { useTranslations } from 'next-intl';
 
@@ -28,7 +29,7 @@ export function AccountQuotas() {
 			<Space h="xl" />
 			<AccountQuotasInvoices />
 			<Space h="xl" />
-			<Text maw={400} variant="footnote">{t('footnote')}</Text>
+			<AccountQuotasRefresh />
 		</Paper>
 	);
 

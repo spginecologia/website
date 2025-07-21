@@ -14,7 +14,7 @@ import '@/themes/styles/variables.css';
 /* * */
 
 import { VisibilityToggleIcon } from '@/components/common/VisibilityToggleIcon';
-import { Accordion, Alert, Anchor, Button, Checkbox, createTheme, Loader, Notification, Paper, PasswordInput, SegmentedControl, Select, Skeleton, Table, Text, TextInput, Title } from '@mantine/core';
+import { Accordion, Alert, Anchor, Button, Checkbox, createTheme, FileInput, Loader, Notification, NumberInput, Paper, PasswordInput, SegmentedControl, Select, Skeleton, Table, Text, TextInput, Title } from '@mantine/core';
 import { DateInput } from '@mantine/dates';
 import { IconCaretLeftFilled } from '@tabler/icons-react';
 
@@ -27,8 +27,10 @@ import ButtonOverride from '@/themes/overrides/Button.module.css';
 import CheckboxOverride from '@/themes/overrides/Checkbox.module.css';
 import CheckboxGroupOverride from '@/themes/overrides/CheckboxGroup.module.css';
 import DateInputOverride from '@/themes/overrides/DateInput.module.css';
+import FileInputOverride from '@/themes/overrides/FileInput.module.css';
 import LoaderOverride from '@/themes/overrides/Loader.module.css';
 import NotificationOverride from '@/themes/overrides/Notification.module.css';
+import NumberInputOverride from '@/themes/overrides/NumberInput.module.css';
 import PaperOverride from '@/themes/overrides/Paper.module.css';
 import PasswordInputOverride from '@/themes/overrides/PasswordInput.module.css';
 import SegmentedControlOverride from '@/themes/overrides/SegmentedControl.module.css';
@@ -97,6 +99,12 @@ export default createTheme({
 			},
 		}),
 
+		FileInput: FileInput.extend({
+			classNames: {
+				...FileInputOverride,
+			},
+		}),
+
 		Loader: Loader.extend({
 			classNames: {
 				...LoaderOverride,
@@ -106,6 +114,12 @@ export default createTheme({
 		Notification: Notification.extend({
 			classNames: {
 				...NotificationOverride,
+			},
+		}),
+
+		NumberInput: NumberInput.extend({
+			classNames: {
+				...NumberInputOverride,
 			},
 		}),
 

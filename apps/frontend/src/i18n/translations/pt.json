@@ -203,9 +203,9 @@
 		"AccountIntro": {
 			"error": "Não foi possível carregar o seu perfil",
 			"member_since": {
-				"female": "Sócia desde {value, date, long}",
-				"male": "Sócio desde {value, date, long}",
-				"other": "Está com a SPG desde {value, date, long}"
+				"female": "Sócia desde {value}",
+				"male": "Sócio desde {value}",
+				"other": "Membro desde {value}"
 			},
 			"title": "Olá {name}"
 		},
@@ -280,6 +280,18 @@
 					"label": "Nome",
 					"placeholder": ""
 				},
+				"intern_proof": {
+					"label": "Documento Comprovativo",
+					"placeholder": "Escolher ficheiro..."
+				},
+				"intern_since": {
+					"label": "Ano de Início",
+					"placeholder": ""
+				},
+				"intern_until": {
+					"label": "Ano de Fim",
+					"placeholder": ""
+				},
 				"is_intern": {
 					"label": "Declarar-me como Interno"
 				},
@@ -342,11 +354,14 @@
 				"correspondence": {
 					"description": "Por favor indique onde gostaria de receber correspondência da SPG.",
 					"title": "Correspondência"
+				},
+				"internship": {
+					"description": "Para que possamos validar o seu internato, por favor envie-nos a prova de internato. Só após validação é que as quotas serão atualizadas.",
+					"title": "Prova de Internato"
 				}
 			}
 		},
 		"AccountQuotas": {
-			"footnote": "Se algo não estiver correto, por favor contacte o Secretariado SPG com brevidade. Agradecemos a sua colaboração.",
 			"subtitle": "Faça a gestão autónoma das suas quotas de sócio.",
 			"title": "Pagamentos & Faturas"
 		},
@@ -380,6 +395,9 @@
 					"year": "Ano"
 				}
 			}
+		},
+		"AccountQuotasRefresh": {
+			"footnote": "Atualizar informações. Se algo não estiver correto, por favor contacte o Secretariado SPG com brevidade. Agradecemos a sua colaboração."
 		},
 		"AccountVideos": {
 			"subtitle": "Todos os vídeos cirúrgicos que publicou.",

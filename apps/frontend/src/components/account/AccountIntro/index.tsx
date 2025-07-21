@@ -55,9 +55,9 @@ export function AccountIntro() {
 		<div className={styles.container}>
 			<Title id={styles.displayName} order={2}>{t('title', { name: userDisplayName })}</Title>
 			<Text variant="overline">{userData?.user?.email}</Text>
-			{userGender === 'female' && <Text variant="overline">{t('member_since.female', { value: new Date() })}</Text>}
-			{userGender === 'male' && <Text variant="overline">{t('member_since.male', { value: new Date() })}</Text>}
-			{userGender === 'other' && <Text variant="overline">{t('member_since.other', { value: new Date() })}</Text>}
+			{userGender === 'female' && <Text variant="overline">{t('member_since.female', { value: userData?.user?.member_since ?? '-' })}</Text>}
+			{userGender === 'male' && <Text variant="overline">{t('member_since.male', { value: userData?.user?.member_since ?? '-' })}</Text>}
+			{userGender === 'other' && <Text variant="overline">{t('member_since.other', { value: userData?.user?.member_since ?? '-' })}</Text>}
 		</div>
 	);
 
