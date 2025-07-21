@@ -28,7 +28,7 @@
 		"@payloadcms/storage-s3": "3.48.0",
 		"@payloadcms/ui": "3.48.0",
 		"@spginecologia/website-emails": "*",
-		"@tabler/icons-react": "3.34.0",
+		"@tabler/icons-react": "3.34.1",
 		"dayjs": "1.11.13",
 		"graphql": "16.11.0",
 		"luxon": "3.7.1",
