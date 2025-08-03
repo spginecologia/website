@@ -76,10 +76,8 @@ export async function POST(request: Request) {
 		const declarationFileData = Buffer.from(declarationFileArrayBuffer);
 
 		const createDeclarationFileResult = await payload.create({
-			collection: 'media',
-			data: {
-				alt: jsonDataValidationResult.title,
-			},
+			collection: 'internal-documents',
+			data: {},
 			file: {
 				data: declarationFileData,
 				mimetype: declarationFileFormData.type,

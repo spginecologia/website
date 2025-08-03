@@ -23,15 +23,45 @@ export async function POST(request: Request) {
 		//
 		// Get the form data
 
-		const data = await request.json();
+		console.log('Form data received:');
+		const data = await request.formData();
 		if (!data) return new Response(null, { status: 400 });
 
 		//
 		// Validate the form data
 
-		const validationResult = UserEditableProfileValidation.parse(data);
+		const jsonData = data.get('_json_data');
+
+		if (!jsonData || typeof jsonData !== 'string') {
+			return new Response('Missing form JSON data', { status: 400 });
+		}
+
+		const parsedJsonData = JSON.parse(jsonData);
+
+		const validationResult = UserEditableProfileValidation.parse(parsedJsonData);
 
 		const mergedData = mergekit([validationResult], { onlyKeys: Object.keys(UserEditableProfileDefault) });
+
+		//
+		// Create the intern proof file
+
+		const internProofFileFormData = data.get('intern_proof');
+
+		if (internProofFileFormData && (internProofFileFormData instanceof File)) {
+			const internProofFileArrayBuffer = await internProofFileFormData.arrayBuffer();
+			const internProofFileData = Buffer.from(internProofFileArrayBuffer);
+			const createInternProofFileResult = await payload.create({
+				collection: 'internal-documents',
+				data: {},
+				file: {
+					data: internProofFileData,
+					mimetype: internProofFileFormData.type,
+					name: internProofFileFormData.name,
+					size: internProofFileFormData.size,
+				},
+			});
+			mergedData.intern_proof = createInternProofFileResult.id;
+		}
 
 		//
 		// Update the user

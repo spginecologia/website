@@ -213,10 +213,6 @@
 			"label": "Terminar Sessão"
 		},
 		"AccountProfile": {
-			"subtitle": "Aceda e atualize os seus dados pessoais.",
-			"title": "Perfil de Sócio"
-		},
-		"AccountProfileForm": {
 			"actions": {
 				"has_errors": "Existem erros no preenchimento",
 				"submit": {
@@ -359,7 +355,9 @@
 					"description": "Para que possamos validar o seu internato, por favor envie-nos a prova de internato. Só após validação é que as quotas serão atualizadas.",
 					"title": "Prova de Internato"
 				}
-			}
+			},
+			"subtitle": "Aceda e atualize os seus dados pessoais.",
+			"title": "Perfil de Sócio"
 		},
 		"AccountQuotas": {
 			"subtitle": "Faça a gestão autónoma das suas quotas de sócio.",
