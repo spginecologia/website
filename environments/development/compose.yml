@@ -27,10 +27,10 @@ services:
   # # # # # # # # # # # # # # # # # # # # #
   # # # # # # # # # # # # # # # # # # # # #
 
-  synclocal:
-    build: ../../apps/synclocal
-    restart: no
-    logging:
-      options:
-        max-size: '1m'
-        max-file: '1'
+  # synclocal:
+  #   build: ../../apps/synclocal
+  #   restart: no
+  #   logging:
+  #     options:
+  #       max-size: '1m'
+  #       max-file: '1'
