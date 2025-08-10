@@ -15,12 +15,11 @@ export const VideoValidationCommon = {
 
 	description: z
 		.string({ message: 'Telefone é um campo obrigatório.' })
-		.min(9, { message: 'Phone deve ser maior ou igual que 9 caracteres.' })
-		.max(13, { message: 'Phone deve ser menor ou igual que 13 caracteres.' }),
+		.min(10, { message: 'Phone deve ser maior ou igual que 9 caracteres.' }),
 
 	introduction: z
 		.string({ message: 'O vídeo precisa de uma introdução' })
-		.max(25, { message: 'A introdução deve explicar resumidamente o conteúdo do vídeo' }),
+		.max(150, { message: 'A introdução deve explicar resumidamente o conteúdo do vídeo' }),
 
 	rgpd_toggle: z
 		.boolean({ message: 'Último Nome é um campo obrigatório.' }),

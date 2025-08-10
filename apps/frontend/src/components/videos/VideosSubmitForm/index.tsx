@@ -6,7 +6,7 @@ import { FormSection } from '@/components/common/FormSection';
 import { Videos } from '@/services/payload/collections/Video/collection';
 import { VideoDefault } from '@/services/payload/collections/Video/default';
 import { VideoValidationClient } from '@/services/payload/collections/Video/validation';
-import { Button, Checkbox, FileInput, MultiSelect, Paper, Select, Space, Text, Textarea, TextInput, Title } from '@mantine/core';
+import { Anchor, Button, Checkbox, FileInput, Paper, Select, Space, TagsInput, Text, Textarea, TextInput, Title } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { zod4Resolver } from 'mantine-form-zod-resolver';
 import { useTranslations } from 'next-intl';
@@ -63,10 +63,11 @@ export function VideosSubmitForm() {
 			formData.append('video_file', data.video_file);
 			formData.append('declaration_file', data.declaration_file);
 			formData.append('featured_image', data.featured_image);
-			await fetch('/api/account/videos/new', {
+			const result = await fetch('/api/account/videos/new', {
 				body: formData,
 				method: 'POST',
 			});
+			console.log(result);
 			// form.reset();
 			setIsLoading(false);
 		}
@@ -93,7 +94,11 @@ export function VideosSubmitForm() {
 		<Paper>
 
 			<Title order={2}>{t('title')}</Title>
+			<Space h="xs" />
 			<Text>{t('description')}</Text>
+			<Space h="xs" />
+			<Anchor href="/academia/videos/instructions" target="_blank">{t('instructions')}</Anchor>
+			<Space h="xl" />
 
 			<form onSubmit={form.onSubmit(handleSubmit)}>
 
@@ -105,12 +110,12 @@ export function VideosSubmitForm() {
 				</FormSection>
 
 				<FormSection description={t('sections.about.description')} title={t('sections.about.title')}>
-					<Textarea label={t('fields.introduction.label')} placeholder={t('fields.introduction.placeholder')} readOnly={isLoading} {...form.getInputProps('introduction')} />
-					<Textarea label={t('fields.description.label')} placeholder={t('fields.description.placeholder')} readOnly={isLoading} {...form.getInputProps('description')} />
+					<Textarea label={t('fields.introduction.label')} placeholder={t('fields.introduction.placeholder')} readOnly={isLoading} {...form.getInputProps('introduction')} autosize />
+					<Textarea label={t('fields.description.label')} placeholder={t('fields.description.placeholder')} readOnly={isLoading} {...form.getInputProps('description')} autosize />
 				</FormSection>
 
 				<FormSection description={t('sections.metadata.description')} title={t('sections.metadata.title')}>
-					<MultiSelect data={topicOptions} label={t('fields.topics.label')} placeholder={t('fields.topics.placeholder')} readOnly={isLoading} {...form.getInputProps('topics')} />
+					<TagsInput data={topicOptions} label={t('fields.topics.label')} placeholder={t('fields.topics.placeholder')} readOnly={isLoading} {...form.getInputProps('topics')} />
 					<Select data={sectionOptions} label={t('fields.section.label')} placeholder={t('fields.section.placeholder')} readOnly={isLoading} {...form.getInputProps('section')} />
 				</FormSection>
 

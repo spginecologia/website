@@ -14,7 +14,7 @@ import '@/themes/styles/variables.css';
 /* * */
 
 import { VisibilityToggleIcon } from '@/components/common/VisibilityToggleIcon';
-import { Accordion, Alert, Anchor, Button, Checkbox, createTheme, FileInput, Loader, Notification, NumberInput, Paper, PasswordInput, SegmentedControl, Select, Skeleton, Table, Text, TextInput, Title } from '@mantine/core';
+import { Accordion, Alert, Anchor, Button, Checkbox, createTheme, FileInput, Loader, Notification, NumberInput, Paper, PasswordInput, SegmentedControl, Select, Skeleton, Table, Text, Textarea, TextInput, Title } from '@mantine/core';
 import { DateInput } from '@mantine/dates';
 import { IconCaretLeftFilled } from '@tabler/icons-react';
 
@@ -38,6 +38,7 @@ import SelectOverride from '@/themes/overrides/Select.module.css';
 import SkeletonOverride from '@/themes/overrides/Skeleton.module.css';
 import TableOverride from '@/themes/overrides/Table.module.css';
 import TextOverride from '@/themes/overrides/Text.module.css';
+import TextareaOverride from '@/themes/overrides/Textarea.module.css';
 import TextInputOverride from '@/themes/overrides/TextInput.module.css';
 import TitleOverride from '@/themes/overrides/Title.module.css';
 
@@ -69,6 +70,9 @@ export default createTheme({
 		Anchor: Anchor.extend({
 			classNames: {
 				...AnchorOverride,
+			},
+			defaultProps: {
+				variant: 'link',
 			},
 		}),
 
@@ -176,6 +180,12 @@ export default createTheme({
 			},
 			defaultProps: {
 				variant: 'primary',
+			},
+		}),
+
+		Textarea: Textarea.extend({
+			classNames: {
+				...TextareaOverride,
 			},
 		}),
 

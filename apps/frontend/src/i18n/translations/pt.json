@@ -1322,6 +1322,60 @@
 				"label": "Visualizações"
 			}
 		},
+		"VideosInstructions": {
+			"sections": {
+				"authors": {
+					"paragraph_1": "Pedimos que coloque os autores do vídeo no formato \"Nome Apelido; Nome Apelido; Nome Apelido, etc.\", pela ordem que fizer sentido aos elementos da equipa. Desta forma torna-se possível encontrar o vídeo pesquisando pelo nome dos autores, o que não seria possível utilizando outro formato.",
+					"title": "Autores"
+				},
+				"cover_image": {
+					"paragraph_1": "Como capa do vídeo utilize uma imagem com o aspeto 16:9 (ex.: 1280x720 px ou 1920x1080 px), mesmo que o vídeo esteja filmado noutras dimensões. As imagens enviadas com outros aspetos são aceites, mas serão redimensionadas para este aspeto.",
+					"paragraph_2": "Pedimos que não coloque texto na imagem de capa. Poderá utilizar um frame do vídeo ou construir uma imagem noutro programa adequado.",
+					"title": "Imagem de Capa"
+				},
+				"description": {
+					"paragraph_1": "Neste campo poderá incluir todo o texto que pretender.",
+					"paragraph_2": "Sugerimos que organize por Objetivos, Material e Métodos, Conclusões. Procura-se manter alguma consistência entre vídeos, no entanto fica ao critério da equipa decidir a organização que melhor se adequa ao vídeo a ser publicado.",
+					"title": "Descrição"
+				},
+				"introduction": {
+					"paragraph_1": "Neste campo inclua uma breve descrição do vídeo. Este texto estará visível na página principal da  SPG e da Academia, acompanhado da imagem de capa.",
+					"paragraph_2": "Apesar de estar totalmente dependente do teor do vídeo, sugerimos que resuma as questões a que o vídeo responde ou a técnica inovadora demonstrada, entre outros. O importante é que seja claro qual o tema do vídeo e que, de certa forma, capture a atenção do utilizador.",
+					"title": "Introdução"
+				},
+				"rgpd_declaration": {
+					"link_1": "Consultar o Regulamento Geral para a Proteção de Dados",
+					"paragraph_1": "De acordo com a legislação em vigor, necessitamos da sua permissão para o tratamento dos dados disponibilizados no formulário de submissão do vídeo única e exclusivamente para efeitos de publicação na Academia SPG.",
+					"title": "Confirmação RGPD"
+				},
+				"rights_declaration": {
+					"link_1": "Descarregar a Declaração de Cedência de Direitos",
+					"paragraph_1": "Por favor preencha a Declaração de Cedência de Direitos (disponível aqui). Assine e faça o upload para o campo.",
+					"title": "Declaração de Cedência de Direitos"
+				},
+				"spg_sections": {
+					"paragraph_1": "Selecione qual a Secção da SPG que ficará responsável por validar o vídeo.",
+					"title": "Área de Interesse"
+				},
+				"topics": {
+					"paragraph_1": "Sugerimos que selecione pelo menos 2, e até 5, tópicos onde se enquadre o vídeo.",
+					"paragraph_2": "Se o seu tópico não estiver disponível poderá criá-lo, bastando para tal escrevê-lo no campo. Pedimos que seja relativamente abrangente nos temas escolhidos para permitir um maior alcance, e evitar que exista apenas um único vídeo por tópico.",
+					"title": "Tópicos"
+				},
+				"video_file": {
+					"link_1": "Sugerimos o serviço online https://video-converter.com",
+					"paragraph_1": "A nossa plataforma aceita ficheiros de vídeo do tipo .mp4 e .m4v. Poderá utilizar um programa ou um serviço online para converter o ficheiro no formato desejado.",
+					"paragraph_2": "O ficheiro deverá ter no máximo 800 MB.",
+					"title": "Ficheiro de Vídeo"
+				},
+				"video_title": {
+					"paragraph_1": "Sugerimos que escolha um título que transmita em poucas palavras o teor do vídeo. Desta forma promove a atratividade do vídeo perante os utilizadores da Academia SPG e o correto enquadramento dentro dos limites definidos pela plataforma.",
+					"title": "Título do Vídeo"
+				}
+			},
+			"subtitle": "Aqui poderá encontrar as instruções para a submissão de Vídeo Cirúrgicos na Academia SPG. Para qualquer assunto não mencionado neste documento, poderá entrar em contacto connosco através do email academia@spginecologia.pt.",
+			"title": "Submissão de Vídeos Cirúrgicos"
+		},
 		"VideosList": {
 			"title": "Vídeos Cirúrgicos"
 		},
@@ -1332,7 +1386,7 @@
 					"label": "Publicar Vídeo"
 				}
 			},
-			"description": "Agradecemos o seu interesse em publicar na Academia SPG. Poderá encontrar as instruções de publicação aqui. Para qualquer dúvida não hesite em contactar-nos para o email academia@spginecologia.pt",
+			"description": "Agradecemos o seu interesse em publicar na Academia SPG. Consulte as instruções de publicação. Para qualquer dúvida não hesite em contactar-nos para o email academia@spginecologia.pt",
 			"fields": {
 				"authors": {
 					"label": "Autores",
@@ -1377,6 +1431,7 @@
 					"placeholder": "Selecione um ficheiro..."
 				}
 			},
+			"instructions": "Ver Instruções",
 			"sections": {
 				"about": {
 					"description": "Introduza uma pequena introdução que descreva o core do vídeo. Na descrição pode incluir detalhes mais vastos.",
