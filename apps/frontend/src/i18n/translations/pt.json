@@ -1442,7 +1442,8 @@
 					"title": "Metadados"
 				},
 				"privacy": {
-					"description": "A SPG valoriza os direitos de privacidade e a garantia de não existirem quaisquer conflitos de interesse inerentes à publicação de um vídeo científico. Pedimos ao autor do vídeo que assine a Declaração de Cedência de Direitos e faça o upload do ficheiro no campo seguinte. Pode encontrar a declaração aqui.",
+					"description": "A SPG valoriza os direitos de privacidade e a garantia de não existirem quaisquer conflitos de interesse inerentes à publicação de um vídeo científico. Pedimos ao autor do vídeo que assine a Declaração de Cedência de Direitos e faça o upload do ficheiro no campo seguinte.",
+					"rights_declaration_link": "Descarregar Declaração de Cedência de Direitos",
 					"title": "Privacidade e Conflito de Interesses"
 				}
 			},

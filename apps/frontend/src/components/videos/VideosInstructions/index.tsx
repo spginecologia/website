@@ -21,7 +21,7 @@ export function VideosInstructions() {
 	// B. Render components
 
 	return (
-		<ContentWrapper variant="support">
+		<ContentWrapper>
 
 			<Section withTopSpacer="academia" withGap withMaxWidth>
 				<Title order={2}>{t('title')}</Title>

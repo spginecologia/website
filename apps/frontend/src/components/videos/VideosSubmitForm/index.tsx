@@ -116,11 +116,15 @@ export function VideosSubmitForm() {
 
 				<FormSection description={t('sections.metadata.description')} title={t('sections.metadata.title')}>
 					<TagsInput data={topicOptions} label={t('fields.topics.label')} placeholder={t('fields.topics.placeholder')} readOnly={isLoading} {...form.getInputProps('topics')} />
+					<Space h="md" />
 					<Select data={sectionOptions} label={t('fields.section.label')} placeholder={t('fields.section.placeholder')} readOnly={isLoading} {...form.getInputProps('section')} />
 				</FormSection>
 
 				<FormSection description={t('sections.privacy.description')} title={t('sections.privacy.title')}>
+					<Anchor href="/files/academia-spg-declaracao-cedencia-direitos.pdf" target="_blank">{t('sections.privacy.rights_declaration_link')}</Anchor>
+					<Space h="xl" />
 					<FileInput label={t('fields.declaration_file.label')} placeholder={t('fields.declaration_file.placeholder')} readOnly={isLoading} {...form.getInputProps('declaration_file')} />
+					<Space h="md" />
 					<Checkbox label={t('fields.rgpd_toggle.label')} {...form.getInputProps('rgpd_toggle', { type: 'checkbox' })} />
 				</FormSection>
 
