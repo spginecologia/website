@@ -3,13 +3,14 @@
 /* * */
 
 import { FormSection } from '@/components/common/FormSection';
-import { Videos } from '@/services/payload/collections/Video/collection';
 import { VideoDefault } from '@/services/payload/collections/Video/default';
 import { VideoValidationClient } from '@/services/payload/collections/Video/validation';
+import { type PayloadAPIResponse } from '@/types/payload-api-response';
 import { Anchor, Button, Checkbox, FileInput, Paper, Select, Space, TagsInput, Text, Textarea, TextInput, Title } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { zod4Resolver } from 'mantine-form-zod-resolver';
 import { useTranslations } from 'next-intl';
+import { type Section, type Topic } from 'payload-types';
 import { useMemo, useState } from 'react';
 import useSWR from 'swr';
 
@@ -30,21 +31,21 @@ export function VideosSubmitForm() {
 	//
 	// B. Fetch data
 
-	const { data: allTopicsData } = useSWR('/api/topics');
+	const { data: allTopicsData } = useSWR<PayloadAPIResponse<Topic>>('/api/topics');
+	const { data: allSectionsData } = useSWR<PayloadAPIResponse<Section>>('/api/sections');
 
 	//
 	// C. Transform data
 
 	const topicOptions = useMemo(() => {
-		if (!allTopicsData || !allTopicsData.docs) return [];
+		if (!allTopicsData?.docs) return [];
 		return allTopicsData.docs.map(topic => ({ label: topic.title, value: topic.id }));
 	}, [allTopicsData]);
 
 	const sectionOptions = useMemo(() => {
-		const field = Videos.fields.find(field => field['name'] === 'section');
-		if (!field) return [];
-		return field['options'];
-	}, [Videos.fields]);
+		if (!allSectionsData?.docs) return [];
+		return allSectionsData.docs.map(section => ({ label: section.title, value: section.id }));
+	}, [allSectionsData]);
 
 	//
 	// D. Handle actions

@@ -431,6 +431,7 @@ export interface Section {
   slug: string;
   topics?: (string | Topic)[] | null;
   featured_image?: (string | null) | Media;
+  contact_email?: string | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -965,6 +966,7 @@ export interface SectionsSelect<T extends boolean = true> {
   slug?: T;
   topics?: T;
   featured_image?: T;
+  contact_email?: T;
   updatedAt?: T;
   createdAt?: T;
 }

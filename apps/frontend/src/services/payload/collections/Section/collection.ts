@@ -88,6 +88,30 @@ export const Sections: CollectionConfig = {
 		},
 		topicsField,
 		featuredImageField,
+		{
+			fields: [
+				{
+					access: {
+						create: ({ req }) => {
+							if (req.user?.collection === 'admins') return true;
+							return false;
+						},
+						read: ({ req }) => {
+							if (req.user?.collection === 'admins') return true;
+							return false;
+						},
+						update: ({ req }) => {
+							if (req.user?.collection === 'admins') return true;
+							return false;
+						},
+					},
+					label: 'Email de Contacto',
+					name: 'contact_email',
+					type: 'text',
+				},
+			],
+			type: 'group',
+		},
 	],
 	labels: {
 		plural: 'Secções',

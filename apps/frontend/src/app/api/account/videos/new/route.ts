@@ -134,6 +134,27 @@ export async function POST(request: Request) {
 			},
 		});
 
+		//
+		// Send a notification to the contact email
+		// for the selected SPG section
+
+		console.log('jsonDataValidationResult.section', jsonDataValidationResult.section);
+
+		const sectionContactEmail = await payload.find({
+			collection: 'sections',
+			where: {
+				slug: {
+					equals: jsonDataValidationResult.section,
+				},
+			},
+
+		});
+
+		console.log('sectionContactEmail', sectionContactEmail);
+
+		//
+		// Send the response to the caller
+
 		return Response.json(createVideoResult);
 
 		//
