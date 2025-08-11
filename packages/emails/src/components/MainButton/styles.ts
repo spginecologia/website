@@ -6,7 +6,7 @@ const button: React.CSSProperties = {
 	borderRadius: '5px',
 	color: '#FFFFFF',
 	fontFamily: '\'Lato\', \'Open Sans\', Arial, sans-serif',
-	fontSize: '16px',
+	fontSize: '18px',
 	fontWeight: '600',
 	marginBottom: '20px',
 	marginTop: '10px',

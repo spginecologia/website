@@ -140,17 +140,40 @@ export async function POST(request: Request) {
 
 		console.log('jsonDataValidationResult.section', jsonDataValidationResult.section);
 
-		const sectionContactEmail = await payload.find({
+		const foundSections = await payload.find({
 			collection: 'sections',
 			where: {
-				slug: {
+				id: {
 					equals: jsonDataValidationResult.section,
 				},
 			},
-
 		});
 
-		console.log('sectionContactEmail', sectionContactEmail);
+		if (foundSections?.docs.length === 1 && foundSections.docs[0].contact_email) {
+			const sectionContactEmail = foundSections.docs[0].contact_email;
+			if (sectionContactEmail) {
+				// Send the email with the invoice to the user
+				const templateData = await renderQuotaPaymentSuccessTemplate({
+					invoiceNumber: newInvoiceData.number,
+					paymentAmount: `${quotaData.payment_amount}€`,
+					quotaYear: quotaData.year,
+					userDisplayName: getUserDisplayName(userData.title, userData.first_name),
+				});
+				await payload.sendEmail({
+					attachments: [{
+						content: newInvoiceData.output,
+						contentType: 'application/pdf',
+						encoding: 'base64',
+						filename: `spg-invoice-${newInvoiceData.id}.pdf`,
+					}],
+					html: templateData.html,
+					subject: templateData.subject,
+					to: userData.email,
+				});
+			}
+		}
+
+		console.log('sectionContactEmail', sectionData.docs[0]);
 
 		//
 		// Send the response to the caller

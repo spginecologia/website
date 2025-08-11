@@ -25,16 +25,7 @@ export function QuotaActivationTemplate({ accountUrl, paymentAmount, quotaYear, 
 	return (
 		<Wrapper previewMessage="Confirmação de pagamento de Quota de Sócio SPG">
 			<Greeting text={`${userDisplayName},`} />
-			<Paragraph>
-				Informamos que está disponível para pagamento a sua
-				<strong>
-					Quota de Sócio para o ano de
-					{quotaYear}
-				</strong>
-				, no valor de
-				<strong>{paymentAmount}</strong>
-				.
-			</Paragraph>
+			<Paragraph>Informamos que está disponível para pagamento a sua <strong>Quota de Sócio para o ano de {quotaYear}</strong>, no valor de <strong>{paymentAmount}</strong>.</Paragraph>
 			<Paragraph>Agora é mais fácil manter as quotas em dia acedendo à sua Conta SPG. Antes do pagamento, por favor verifique se os seus dados de faturação estão atualizados, para que a fatura seja corretamente emitida no NIF desejado.</Paragraph>
 			<Paragraph>É fundamental manter os seus pagamentos em dia para que possamos continuar a desenvolver o futuro da nossa especialidade.</Paragraph>
 			<MainButton href={accountUrl} label="Pagar Agora" />

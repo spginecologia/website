@@ -31,9 +31,6 @@ export function AccountSignupTemplate({ userDisplayName }: AccountSignupProps) {
 /* * */
 
 AccountSignupTemplate.PreviewProps = {
-	invoiceNumber: 'FT 2025/12',
-	paymentAmount: '50,00€',
-	quotaYear: 2024,
 	userDisplayName: 'Dra. Susana Silva',
 } as AccountSignupProps;
 
