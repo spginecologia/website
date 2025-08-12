@@ -1,6 +1,5 @@
 /* * */
 
-import { VideoOptions } from '@/services/payload/collections/Video/options';
 import { featuredImageField } from '@/services/payload/fields/featured-image';
 import { isFeaturedField } from '@/services/payload/fields/is-featured';
 import { publishedAtField } from '@/services/payload/fields/published-at';
@@ -19,12 +18,7 @@ export const Videos: CollectionConfig = {
 			const isActiveUser = payloadIsActiveUser(req.user?.collection === 'users' ? req.user : null);
 			return isAdmin || isActiveUser;
 		},
-		read: ({ req }) => {
-			return true;
-			// const isAdmin = payloadIsAdmin({ req });
-			// const isActiveUser = payloadIsActiveUser(req.user?.collection === 'users' ? req.user : null);
-			// return isAdmin || isActiveUser;
-		},
+		read: () => true,
 	},
 
 	admin: {
@@ -72,9 +66,9 @@ export const Videos: CollectionConfig = {
 		{
 			label: 'Área de Interesse',
 			name: 'section',
-			options: VideoOptions.section,
-			// required: true,
-			type: 'select',
+			relationTo: 'sections',
+			required: true,
+			type: 'relationship',
 		},
 		{
 			label: 'Introdução deste Vídeo',

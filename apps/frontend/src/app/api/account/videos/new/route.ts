@@ -1,8 +1,10 @@
 /* * */
 
 import payloadConfig from '@/payload-config';
+import { getUserDisplayName } from '@/services/general/get-user-display-name';
 import { getVideoDurationInSeconds } from '@/services/general/get-video-duration-in-seconds';
 import { VideoValidationServer } from '@/services/payload/collections/Video/validation';
+import { renderVideoSubmitSectionTemplate, renderVideoSubmitUserTemplate } from '@spginecologia/website-emails';
 import { getPayload } from 'payload';
 
 /* * */
@@ -17,7 +19,10 @@ export async function POST(request: Request) {
 		// Get the current logged in user
 
 		const currentUser = await payload.auth({ headers: request.headers });
-		if (!currentUser || !currentUser.user) return new Response(null, { status: 401 });
+		if (!currentUser.user?.id) return new Response(null, { status: 401 });
+
+		const currentUserData = await payload.findByID({ collection: 'users', id: currentUser.user.id });
+		if (!currentUserData) return new Response(null, { status: 404 });
 
 		//
 		// Get the form data
@@ -135,10 +140,7 @@ export async function POST(request: Request) {
 		});
 
 		//
-		// Send a notification to the contact email
-		// for the selected SPG section
-
-		console.log('jsonDataValidationResult.section', jsonDataValidationResult.section);
+		// Get the associated Section data from Payload
 
 		const foundSections = await payload.find({
 			collection: 'sections',
@@ -149,31 +151,37 @@ export async function POST(request: Request) {
 			},
 		});
 
-		if (foundSections?.docs.length === 1 && foundSections.docs[0].contact_email) {
-			const sectionContactEmail = foundSections.docs[0].contact_email;
-			if (sectionContactEmail) {
-				// Send the email with the invoice to the user
-				const templateData = await renderQuotaPaymentSuccessTemplate({
-					invoiceNumber: newInvoiceData.number,
-					paymentAmount: `${quotaData.payment_amount}€`,
-					quotaYear: quotaData.year,
-					userDisplayName: getUserDisplayName(userData.title, userData.first_name),
-				});
-				await payload.sendEmail({
-					attachments: [{
-						content: newInvoiceData.output,
-						contentType: 'application/pdf',
-						encoding: 'base64',
-						filename: `spg-invoice-${newInvoiceData.id}.pdf`,
-					}],
-					html: templateData.html,
-					subject: templateData.subject,
-					to: userData.email,
-				});
-			}
+		const sectionData = foundSections.docs?.pop();
+
+		//
+		// Send an email notification to the associated Section contact
+
+		if (sectionData && sectionData.contact_email) {
+			// Get the template data
+			const videoSubmitSectionTemplateData = await renderVideoSubmitSectionTemplate({
+				videoUrl: createVideoResult.id,
+			});
+			// Send the email
+			await payload.sendEmail({
+				html: videoSubmitSectionTemplateData.html,
+				subject: videoSubmitSectionTemplateData.subject,
+				to: sectionData.contact_email,
+			});
 		}
 
-		console.log('sectionContactEmail', sectionData.docs[0]);
+		//
+		// Send an email to the user about the new Video
+
+		const videoSubmitUserTemplateData = await renderVideoSubmitUserTemplate({
+			sectionTitle: sectionData?.title ?? 'SPG',
+			userDisplayName: getUserDisplayName(currentUserData.title, currentUserData.first_name),
+		});
+
+		await payload.sendEmail({
+			html: videoSubmitUserTemplateData.html,
+			subject: videoSubmitUserTemplateData.subject,
+			to: currentUser.user.email,
+		});
 
 		//
 		// Send the response to the caller
