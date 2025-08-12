@@ -7,6 +7,9 @@ import { type QuotaActivationProps, quotaActivationSubject, QuotaActivationTempl
 import { type QuotaActivationFreeProps, quotaActivationFreeSubject, QuotaActivationFreeTemplate } from '@/templates/quota-activation-free';
 import { type QuotaPaymentSuccessProps, quotaPaymentSuccessSubject, QuotaPaymentSuccessTemplate } from '@/templates/quota-payment-success';
 import { type QuotaRefundSuccessProps, quotaRefundSuccessSubject, QuotaRefundSuccessTemplate } from '@/templates/quota-refund-success';
+import { type VideoApprovalUserProps, videoApprovalUserSubject, VideoApprovalUserTemplate } from '@/templates/video-approval-user';
+import { type VideoSubmitSectionProps, videoSubmitSectionSubject, VideoSubmitSectionTemplate } from '@/templates/video-submit-section';
+import { type VideoSubmitUserProps, videoSubmitUserSubject, VideoSubmitUserTemplate } from '@/templates/video-submit-user';
 import { render } from '@react-email/render';
 
 /* * */
@@ -64,5 +67,26 @@ export const renderQuotaRefundSuccessTemplate = async (props: QuotaRefundSuccess
 	return {
 		html: await render(<QuotaRefundSuccessTemplate {...props} />),
 		subject: quotaRefundSuccessSubject,
+	};
+};
+
+export const renderVideoApprovalUserTemplate = async (props: VideoApprovalUserProps): Promise<EmailTemplate> => {
+	return {
+		html: await render(<VideoApprovalUserTemplate {...props} />),
+		subject: videoApprovalUserSubject,
+	};
+};
+
+export const renderVideoSubmitSectionTemplate = async (props: VideoSubmitSectionProps): Promise<EmailTemplate> => {
+	return {
+		html: await render(<VideoSubmitSectionTemplate {...props} />),
+		subject: videoSubmitSectionSubject,
+	};
+};
+
+export const renderVideoSubmitUserTemplate = async (props: VideoSubmitUserProps): Promise<EmailTemplate> => {
+	return {
+		html: await render(<VideoSubmitUserTemplate {...props} />),
+		subject: videoSubmitUserSubject,
 	};
 };
