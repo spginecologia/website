@@ -63,12 +63,10 @@ export type SupportedTimezones =
 
 export interface Config {
   auth: {
-    admins: AdminAuthOperations;
     users: UserAuthOperations;
   };
   blocks: {};
   collections: {
-    admins: Admin;
     courses: Course;
     documents: Document;
     events: Event;
@@ -91,7 +89,6 @@ export interface Config {
   };
   collectionsJoins: {};
   collectionsSelect: {
-    admins: AdminsSelect<false> | AdminsSelect<true>;
     courses: CoursesSelect<false> | CoursesSelect<true>;
     documents: DocumentsSelect<false> | DocumentsSelect<true>;
     events: EventsSelect<false> | EventsSelect<true>;
@@ -124,34 +121,12 @@ export interface Config {
     'social-bodies': SocialBodiesSelect<false> | SocialBodiesSelect<true>;
   };
   locale: null;
-  user:
-    | (Admin & {
-        collection: 'admins';
-      })
-    | (User & {
-        collection: 'users';
-      });
+  user: User & {
+    collection: 'users';
+  };
   jobs: {
     tasks: unknown;
     workflows: unknown;
-  };
-}
-export interface AdminAuthOperations {
-  forgotPassword: {
-    email: string;
-    password: string;
-  };
-  login: {
-    email: string;
-    password: string;
-  };
-  registerFirstUser: {
-    email: string;
-    password: string;
-  };
-  unlock: {
-    email: string;
-    password: string;
   };
 }
 export interface UserAuthOperations {
@@ -171,31 +146,6 @@ export interface UserAuthOperations {
     email: string;
     password: string;
   };
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "admins".
- */
-export interface Admin {
-  id: string;
-  name?: string | null;
-  updatedAt: string;
-  createdAt: string;
-  email: string;
-  resetPasswordToken?: string | null;
-  resetPasswordExpiration?: string | null;
-  salt?: string | null;
-  hash?: string | null;
-  loginAttempts?: number | null;
-  lockUntil?: string | null;
-  sessions?:
-    | {
-        id: string;
-        createdAt?: string | null;
-        expiresAt: string;
-      }[]
-    | null;
-  password?: string | null;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -501,6 +451,7 @@ export interface User {
       }[]
     | null;
   account_status?: ('active' | 'waiting' | 'dormant') | null;
+  account_role?: ('member' | 'video-manager' | 'content-manager' | 'users-manager' | 'admin') | null;
   updatedAt: string;
   createdAt: string;
   email: string;
@@ -528,19 +479,10 @@ export interface Video {
   video_file?: (string | null) | VideoFile;
   declaration_file?: (string | null) | InternalDocument;
   authors?: string | null;
-  section?:
-    | (
-        | 'geral'
-        | 'colposcopia_patologia_tracto_genital_inferior'
-        | 'endoscopia_ginecologica'
-        | 'ginecologia_oncologica'
-        | 'menopausa'
-        | 'uroginecologia'
-      )
-    | null;
+  section: string | Section;
   introduction?: string | null;
   description?: string | null;
-  publisher?: (string | null) | User;
+  publisher: string | User;
   views?: number | null;
   is_featured?: boolean | null;
   topics?: (string | Topic)[] | null;
@@ -611,10 +553,6 @@ export interface PayloadLockedDocument {
   id: string;
   document?:
     | ({
-        relationTo: 'admins';
-        value: string | Admin;
-      } | null)
-    | ({
         relationTo: 'courses';
         value: string | Course;
       } | null)
@@ -679,15 +617,10 @@ export interface PayloadLockedDocument {
         value: string | Workgroup;
       } | null);
   globalSlug?: string | null;
-  user:
-    | {
-        relationTo: 'admins';
-        value: string | Admin;
-      }
-    | {
-        relationTo: 'users';
-        value: string | User;
-      };
+  user: {
+    relationTo: 'users';
+    value: string | User;
+  };
   updatedAt: string;
   createdAt: string;
 }
@@ -697,15 +630,10 @@ export interface PayloadLockedDocument {
  */
 export interface PayloadPreference {
   id: string;
-  user:
-    | {
-        relationTo: 'admins';
-        value: string | Admin;
-      }
-    | {
-        relationTo: 'users';
-        value: string | User;
-      };
+  user: {
+    relationTo: 'users';
+    value: string | User;
+  };
   key?: string | null;
   value?:
     | {
@@ -729,29 +657,6 @@ export interface PayloadMigration {
   batch?: number | null;
   updatedAt: string;
   createdAt: string;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "admins_select".
- */
-export interface AdminsSelect<T extends boolean = true> {
-  name?: T;
-  updatedAt?: T;
-  createdAt?: T;
-  email?: T;
-  resetPasswordToken?: T;
-  resetPasswordExpiration?: T;
-  salt?: T;
-  hash?: T;
-  loginAttempts?: T;
-  lockUntil?: T;
-  sessions?:
-    | T
-    | {
-        id?: T;
-        createdAt?: T;
-        expiresAt?: T;
-      };
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -1024,6 +929,7 @@ export interface UsersSelect<T extends boolean = true> {
         id?: T;
       };
   account_status?: T;
+  account_role?: T;
   updatedAt?: T;
   createdAt?: T;
   email?: T;

@@ -2,7 +2,7 @@
 
 /* * */
 
-import { payloadIsActiveUser } from '@/services/payload/utils/payload-is-active-user';
+import { payloadAccessControl } from '@/services/payload/utils/payload-access-control';
 import { type PayloadMeResponse } from '@/types/payload-api-response';
 import { Button, Image, Skeleton, Text } from '@mantine/core';
 import { useTranslations } from 'next-intl';
@@ -53,7 +53,7 @@ export function AuthWall({ children, invisible, redirect }: Props) {
 	// C. Transform data
 
 	const isAuthorized = useMemo(() => {
-		return payloadIsActiveUser(userData?.user);
+		return payloadAccessControl(null, userData?.user);
 	}, [userData]);
 
 	//

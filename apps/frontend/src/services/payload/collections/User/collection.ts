@@ -9,6 +9,7 @@ import { userFieldsDocuments } from '@/services/payload/collections/User/fields/
 import { userFieldsQuotas } from '@/services/payload/collections/User/fields/quotas';
 import { userFieldsReferences } from '@/services/payload/collections/User/fields/references';
 import { UserOptions } from '@/services/payload/collections/User/options';
+import { payloadAccessControl } from '@/services/payload/utils/payload-access-control';
 import { type CollectionConfig } from 'payload';
 
 /* * */
@@ -16,6 +17,9 @@ import { type CollectionConfig } from 'payload';
 export const Users: CollectionConfig = {
 
 	access: {
+		admin({ req }) {
+			return payloadAccessControl('admin', req);
+		},
 		// update: ({ id, req: { user } }) => {
 		// 	if (!user || !id) return false;
 		// 	if (user.id === id) return true;
@@ -78,6 +82,16 @@ export const Users: CollectionConfig = {
 			label: 'Estado do Utilizador',
 			name: 'account_status',
 			options: [...UserOptions.account_status],
+			type: 'select',
+		},
+		{
+			admin: {
+				position: 'sidebar',
+			},
+			defaultValue: false,
+			label: 'Permissões do Utilizador',
+			name: 'account_role',
+			options: [...UserOptions.account_role],
 			type: 'select',
 		},
 	],

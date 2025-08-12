@@ -1,11 +1,11 @@
 /* * */
 
+import { sendApprovalEmail } from '@/services/payload/collections/Video/actions/send-approval-email';
 import { featuredImageField } from '@/services/payload/fields/featured-image';
 import { isFeaturedField } from '@/services/payload/fields/is-featured';
 import { publishedAtField } from '@/services/payload/fields/published-at';
 import { topicsField } from '@/services/payload/fields/topics';
-import { payloadIsActiveUser } from '@/services/payload/utils/payload-is-active-user';
-import { payloadIsAdmin } from '@/services/payload/utils/payload-is-admin';
+import { payloadAccessControl } from '@/services/payload/utils/payload-access-control';
 import { type CollectionConfig } from 'payload';
 
 /* * */
@@ -14,9 +14,7 @@ export const Videos: CollectionConfig = {
 
 	access: {
 		create: ({ req }) => {
-			const isAdmin = payloadIsAdmin({ req });
-			const isActiveUser = payloadIsActiveUser(req.user?.collection === 'users' ? req.user : null);
-			return isAdmin || isActiveUser;
+			return payloadAccessControl('admin', req);
 		},
 		read: () => true,
 	},
@@ -85,7 +83,7 @@ export const Videos: CollectionConfig = {
 			label: 'Utilizador que Publicou',
 			name: 'publisher',
 			relationTo: 'users',
-			// required: true,
+			required: true,
 			type: 'relationship',
 		},
 		{
@@ -102,6 +100,12 @@ export const Videos: CollectionConfig = {
 		publishedAtField,
 		featuredImageField,
 	],
+
+	hooks: {
+		afterChange: [
+			sendApprovalEmail,
+		],
+	},
 
 	labels: {
 		plural: 'Videos',

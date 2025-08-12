@@ -1,10 +1,14 @@
 /* * */
-/* CONTAINEER */
+/* CONTAINER */
 
 .container {
 	display: grid;
 	grid-template-columns: 125px 1fr;
 	gap: 15px;
+	align-items: flex-start;
+	justify-content: flex-start;
+	width: 100%;
+	text-align: left;
 }
 
 /* * */

@@ -1,8 +1,7 @@
 /* * */
 
 import { getVideoDurationInSeconds } from '@/services/general/get-video-duration-in-seconds';
-import { payloadIsActiveUser } from '@/services/payload/utils/payload-is-active-user';
-import { payloadIsAdmin } from '@/services/payload/utils/payload-is-admin';
+import { payloadAccessControl } from '@/services/payload/utils/payload-access-control';
 import { type CollectionConfig } from 'payload';
 
 /* * */
@@ -11,14 +10,10 @@ export const VideoFiles: CollectionConfig = {
 
 	access: {
 		create: ({ req }) => {
-			const isAdmin = payloadIsAdmin({ req });
-			const isActiveUser = payloadIsActiveUser(req.user?.collection === 'users' ? req.user : null);
-			return isAdmin || isActiveUser;
+			return payloadAccessControl('admin', req);
 		},
 		read: ({ req }) => {
-			const isAdmin = payloadIsAdmin({ req });
-			const isActiveUser = payloadIsActiveUser(req.user?.collection === 'users' ? req.user : null);
-			return isAdmin || isActiveUser;
+			return payloadAccessControl('admin', req);
 		},
 	},
 

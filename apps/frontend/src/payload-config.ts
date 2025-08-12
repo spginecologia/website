@@ -9,7 +9,6 @@ import sharp from 'sharp';
 
 /* * */
 
-import { Admins } from '@/services/payload/collections/Admin/collection';
 import { Courses } from '@/services/payload/collections/Course/collection';
 import { Documents } from '@/services/payload/collections/Document/collection';
 import { Event } from '@/services/payload/collections/Event/collection';
@@ -38,12 +37,11 @@ export default buildConfig({
 
 	// Only admins can access the CMS
 	admin: {
-		user: 'admins',
+		user: 'users',
 	},
 
 	// Define and configure your collections in this array
 	collections: [
-		Admins,
 		Courses,
 		Documents,
 		Event,

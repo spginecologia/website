@@ -1,12 +1,13 @@
 /* * */
 
 import Link from 'next/link';
+import { type PropsWithChildren } from 'react';
 
 import styles from './styles.module.css';
 
 /* * */
 
-interface Props {
+interface CardWrapperProps {
 	children: React.ReactNode
 	className?: string
 	fullHeight?: boolean
@@ -17,19 +18,19 @@ interface Props {
 
 /* * */
 
-export function CardWrapper({ children = '', className, fullHeight, href, target = '_self', variant = 'default' }: Props) {
+export function CardWrapper({ children, className, fullHeight, href, target = '_self', variant = 'default' }: PropsWithChildren<CardWrapperProps>) {
 	//
 
 	if (!href) {
 		return (
-			<div className={`${styles.wrapper} ${fullHeight && styles.fullHeight} ${styles[variant]} ${className}`}>
+			<div className={`${styles.wrapper} ${className ?? ''}`} data-full-height={fullHeight} data-variant={variant}>
 				{children}
 			</div>
 		);
 	}
 
 	return (
-		<Link className={`${styles.wrapper} ${fullHeight && styles.fullHeight} ${styles.asLink} ${styles[variant]} ${className}`} href={href} target={target}>
+		<Link className={`${styles.wrapper} ${className ?? ''}`} data-full-height={fullHeight} data-variant={variant} href={href} target={target} data-as-link>
 			{children}
 		</Link>
 	);

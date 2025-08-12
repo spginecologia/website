@@ -1,6 +1,6 @@
 /* * */
 
-import { payloadIsAdmin } from '@/services/payload/utils/payload-is-admin';
+import { payloadAccessControl } from '@/services/payload/utils/payload-access-control';
 import { type CollectionConfig } from 'payload';
 
 /* * */
@@ -9,10 +9,10 @@ export const InternalDocuments: CollectionConfig = {
 
 	access: {
 		create: ({ req }) => {
-			return payloadIsAdmin({ req });
+			return payloadAccessControl('admin', req);
 		},
 		read: ({ req }) => {
-			return payloadIsAdmin({ req });
+			return payloadAccessControl('admin', req);
 		},
 	},
 

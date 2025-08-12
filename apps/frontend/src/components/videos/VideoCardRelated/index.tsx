@@ -20,11 +20,13 @@ interface Props {
 
 export function VideoCardRelated({ authors, coverSrc, duration, href, title }: Props) {
 	return (
-		<CardWrapper className={styles.container} href={href} variant="compact">
-			<VideoCoverImage coverSrc={coverSrc} duration={duration} />
-			<div className={styles.contentWrapper}>
-				<Title order={2} size="xs">{title}</Title>
-				{authors && <p className={styles.authors}>{authors}</p>}
+		<CardWrapper href={href} variant="compact">
+			<div className={styles.container}>
+				<VideoCoverImage coverSrc={coverSrc} duration={duration} />
+				<div className={styles.contentWrapper}>
+					<Title order={2} size="xs">{title}</Title>
+					{authors && <p className={styles.authors}>{authors}</p>}
+				</div>
 			</div>
 		</CardWrapper>
 	);

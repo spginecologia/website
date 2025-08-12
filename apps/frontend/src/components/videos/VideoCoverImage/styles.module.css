@@ -4,13 +4,16 @@
 .container {
 	position: relative;
 	width: 100%;
+	overflow: hidden;
+	border-radius: 2px;
 	box-shadow: 0 0 10px 0 rgb(0 0 0 / 5%);
 }
 
 /* * */
 /* DURATION & VIEWS */
 
-.duration, .views {
+.duration,
+.views {
 	position: absolute;
 	bottom: 0;
 	padding: 3px 4px;
