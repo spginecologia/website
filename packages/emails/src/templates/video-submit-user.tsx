@@ -22,8 +22,8 @@ export function VideoSubmitUserTemplate({ sectionTitle, userDisplayName }: Video
 	return (
 		<Wrapper previewMessage="Estamos a processar o seu vídeo.">
 			<Greeting text={`${userDisplayName},`} />
-			<Paragraph>Agradecemos por partilhar a sua experiência com os Sócios SPG.</Paragraph>
-			<Paragraph>O seu vídeo está a ser processado e será analisado em breve pela {sectionTitle}. Assim que ficar disponível entraremos em contacto.</Paragraph>
+			<Paragraph>Agradecemos por decidir partilhar a sua experiência cirúrgica com os Sócios SPG.</Paragraph>
+			<Paragraph>O seu vídeo está a ser processado e será analisado em breve pela <strong>{sectionTitle}</strong>. Assim que ficar disponível entraremos novamente em contacto.</Paragraph>
 			<Farewell text="Academia SPG" />
 		</Wrapper>
 	);
