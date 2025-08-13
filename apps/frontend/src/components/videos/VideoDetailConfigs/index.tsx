@@ -9,13 +9,13 @@ import styles from './styles.module.css';
 
 /* * */
 
-interface Props {
+interface VideoDetailConfigsProps {
 	videoId?: null | string
 }
 
 /* * */
 
-export function VideoDetailConfigs({ videoId }: Props) {
+export function VideoDetailConfigs({ videoId }: VideoDetailConfigsProps) {
 	//
 
 	if (!videoId) {

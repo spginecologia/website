@@ -77,15 +77,19 @@ export function AuthWall({ children, invisible, redirect, roles }: PropsWithChil
 	//
 	// E. Render components
 
-	if (invisible && (userLoading || !isAuthorized)) {
+	if (userLoading && invisible) {
 		return null;
 	}
 
-	if (!invisible && userLoading) {
+	if (!isAuthorized && invisible) {
+		return null;
+	}
+
+	if (userLoading && !invisible) {
 		return <Skeleton h={200} w={400} />;
 	}
 
-	if (!invisible && !userLoading && isAuthorized) {
+	if (!userLoading && isAuthorized) {
 		return children;
 	}
 
