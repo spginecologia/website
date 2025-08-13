@@ -158,6 +158,7 @@ export interface Course {
   document?: (string | null) | Document;
   url?: string | null;
   topics?: (string | Topic)[] | null;
+  publishedAt: string;
   featured_image?: (string | null) | Media;
   updatedAt: string;
   createdAt: string;
@@ -333,6 +334,7 @@ export interface Publication {
   document?: (string | null) | Document;
   url?: string | null;
   topics?: (string | Topic)[] | null;
+  publishedAt: string;
   featured_image?: (string | null) | Media;
   updatedAt: string;
   createdAt: string;
@@ -668,6 +670,7 @@ export interface CoursesSelect<T extends boolean = true> {
   document?: T;
   url?: T;
   topics?: T;
+  publishedAt?: T;
   featured_image?: T;
   updatedAt?: T;
   createdAt?: T;
@@ -825,6 +828,7 @@ export interface PublicationsSelect<T extends boolean = true> {
   document?: T;
   url?: T;
   topics?: T;
+  publishedAt?: T;
   featured_image?: T;
   updatedAt?: T;
   createdAt?: T;

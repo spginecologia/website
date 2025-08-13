@@ -200,6 +200,10 @@
 		}
 	},
 	"academia": {
+		"AcademiaHomeCourses": {
+			"see_all": "Ver mais Palestras & Cursos",
+			"title": "Palestras & Cursos"
+		},
 		"AcademiaHomeGuidelines": {
 			"see_all": "Consultar todos os Consensos",
 			"title": "Consensos SPG"
@@ -215,6 +219,10 @@
 			"publications": "Publicações Científicas",
 			"topics": "Pesquisa por Tópicos",
 			"videos": "Vídeos Cirúrgicos"
+		},
+		"AcademiaHomePublications": {
+			"see_all": "Consultar todas as Publicações",
+			"title": "Publicações Científicas"
 		},
 		"AcademiaHomeVideos": {
 			"see_all": "Ver mais Vídeos",

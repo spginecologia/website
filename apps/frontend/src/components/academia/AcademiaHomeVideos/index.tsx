@@ -43,6 +43,10 @@ export function AcademiaHomeVideos() {
 	//
 	// D. Render components
 
+	if (!featuredItems.length) {
+		return null;
+	}
+
 	return (
 		<Section>
 			<Title order={1}>{t('title')}</Title>

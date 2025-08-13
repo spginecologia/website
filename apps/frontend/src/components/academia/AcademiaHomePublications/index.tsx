@@ -8,7 +8,7 @@ import { type PayloadAPIResponse } from '@/types/payload-api-response';
 import { Button, Title } from '@mantine/core';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
-import { type Guideline } from 'payload-types';
+import { type Publication } from 'payload-types';
 import { useMemo } from 'react';
 import useSWR from 'swr';
 
@@ -16,28 +16,28 @@ import styles from './styles.module.css';
 
 /* * */
 
-export function AcademiaHomeGuidelines() {
+export function AcademiaHomePublications() {
 	//
 
 	//
 	// A. Setup variables
 
-	const t = useTranslations('academia.AcademiaHomeGuidelines');
+	const t = useTranslations('academia.AcademiaHomePublications');
 
 	//
 	// B. Fetch data
 
-	const { data: allGuidelinesData } = useSWR<PayloadAPIResponse<Guideline>>(`/api/guidelines?limit=1000&sort=-publishedAt`);
+	const { data: allPublicationsData } = useSWR<PayloadAPIResponse<Publication>>(`/api/publications`);
 
 	//
 	// C. Transform data
 
 	const featuredItems = useMemo(() => {
-		if (!allGuidelinesData) return [];
-		return allGuidelinesData.docs
+		if (!allPublicationsData) return [];
+		return allPublicationsData.docs
 			.sort((a, b) => b.publishedAt?.localeCompare(a.publishedAt))
 			.slice(0, 4);
-	}, [allGuidelinesData]);
+	}, [allPublicationsData]);
 
 	//
 	// D. Render components
@@ -50,18 +50,18 @@ export function AcademiaHomeGuidelines() {
 		<Section>
 			<Title order={1}>{t('title')}</Title>
 			<div className={styles.grid}>
-				{featuredItems.map(guidelineData => (
+				{featuredItems.map(guideline => (
 					<Card
-						key={guidelineData.id}
+						key={guideline.id}
 						coverAspectRatio="210 / 297"
-						coverSrc={typeof guidelineData.featured_image === 'object' ? guidelineData.featured_image?.url : undefined}
-						href={`/academia/guidelines/${guidelineData.id}`}
-						publishDate={new Date(guidelineData.publishedAt)}
-						title={guidelineData.title}
+						coverSrc={typeof guideline.featured_image === 'object' ? guideline?.featured_image?.url : undefined}
+						href={`/academia/publications/${guideline.id}`}
+						publishDate={new Date(guideline.createdAt)}
+						title={guideline.title}
 					/>
 				))}
 			</div>
-			<Button component={Link} href="/academia/guidelines" m="auto" mt="xl">
+			<Button component={Link} href="/academia/publications" m="auto" mt="xl">
 				{t('see_all')}
 			</Button>
 		</Section>

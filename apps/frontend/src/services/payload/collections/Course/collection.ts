@@ -1,6 +1,7 @@
 /* * */
 
 import { featuredImageField } from '@/services/payload/fields/featured-image';
+import { publishedAtField } from '@/services/payload/fields/published-at';
 import { topicsField } from '@/services/payload/fields/topics';
 import { type CollectionConfig } from 'payload';
 
@@ -55,6 +56,7 @@ export const Courses: CollectionConfig = {
 			type: 'text',
 		},
 		topicsField,
+		publishedAtField,
 		featuredImageField,
 	],
 	labels: {
