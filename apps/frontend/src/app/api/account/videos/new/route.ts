@@ -125,11 +125,11 @@ export async function POST(request: Request) {
 				authors: jsonDataValidationResult.authors,
 				createdAt: new Date().toISOString(),
 				declaration_file: createDeclarationFileResult.id,
-				featured: false,
 				featured_image: createFeaturedImageResult.id,
 				introduction: jsonDataValidationResult.introduction,
+				is_featured: false,
+				publishedAt: new Date().toISOString(),
 				publisher: currentUser.user.id,
-				// @ts-expect-error - There is a mismatch between Payload types and the actual data
 				section: jsonDataValidationResult.section,
 				status: 'in_review',
 				title: jsonDataValidationResult.title,

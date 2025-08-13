@@ -6,10 +6,13 @@ import { spgMemberFieldSet } from '@/services/payload/fields/spg-member';
 import { topicsField } from '@/services/payload/fields/topics';
 import { type CollectionConfig } from 'payload';
 
+import { payloadAccessControl } from '../../utils/payload-access-control';
+
 /* * */
 
 export const Sections: CollectionConfig = {
 	access: {
+		admin: ({ req }) => payloadAccessControl('admin', req),
 		read: () => true,
 	},
 	admin: {
@@ -93,16 +96,13 @@ export const Sections: CollectionConfig = {
 				{
 					access: {
 						create: ({ req }) => {
-							if (req.user?.collection === 'admins') return true;
-							return false;
+							return payloadAccessControl('admin', req);
 						},
 						read: ({ req }) => {
-							if (req.user?.collection === 'admins') return true;
-							return false;
+							return payloadAccessControl('admin', req);
 						},
 						update: ({ req }) => {
-							if (req.user?.collection === 'admins') return true;
-							return false;
+							return payloadAccessControl('admin', req);
 						},
 					},
 					label: 'Email de Contacto',
