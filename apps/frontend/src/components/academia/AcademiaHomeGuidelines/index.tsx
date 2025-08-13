@@ -57,7 +57,7 @@ export function AcademiaHomeGuidelines() {
 					/>
 				))}
 			</div>
-			<Button component={Link} href="/academia/guidelines" m="auto" mt="lg">
+			<Button component={Link} href="/academia/guidelines" m="auto" mt="xl">
 				{t('see_all')}
 			</Button>
 		</Section>

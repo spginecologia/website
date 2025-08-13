@@ -5,8 +5,9 @@
 import { Section } from '@/components/common/Section';
 import { VideoCardFeatured } from '@/components/videos/VideoCardFeatured';
 import { type PayloadAPIResponse } from '@/types/payload-api-response';
-import { Title } from '@mantine/core';
+import { Button, Title } from '@mantine/core';
 import { useTranslations } from 'next-intl';
+import Link from 'next/link';
 import { type Video } from 'payload-types';
 import { useMemo } from 'react';
 import useSWR from 'swr';
@@ -60,6 +61,9 @@ export function AcademiaHomeVideos() {
 					/>
 				))}
 			</div>
+			<Button component={Link} href="/academia/videos" m="auto" mt="xl">
+				{t('see_all')}
+			</Button>
 		</Section>
 	);
 
