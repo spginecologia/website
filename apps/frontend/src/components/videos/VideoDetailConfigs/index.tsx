@@ -23,7 +23,7 @@ export function VideoDetailConfigs({ videoId }: Props) {
 	}
 
 	return (
-		<AuthWall roles={['video-manager']} invisible>
+		<AuthWall roles={['admin', 'video-manager']} invisible>
 			<div className={styles.container}>
 				<Anchor href={`/admin/collections/videos/${videoId}`} target="_blank">Editar no Backoffice</Anchor>
 			</div>
