@@ -165,6 +165,7 @@ export function AccountProfile() {
 							<NumberInput label={t('fields.intern_until.label')} placeholder={t('fields.intern_until.placeholder')} readOnly={isLoading} {...form.getInputProps('intern_until')} max={2050} min={2000} />
 						</div>
 						<FileInput label={t('fields.intern_proof.label')} placeholder={t('fields.intern_proof.placeholder')} readOnly={isLoading} {...form.getInputProps('intern_proof')} />
+						{userData?.user.intern_proof && <Text variant="link">{typeof userData.user.intern_proof === 'string' ? userData.user.intern_proof : '✅ Comprovativo submetido'}</Text>}
 					</FormSection>
 				)}
 
