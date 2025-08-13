@@ -21,7 +21,7 @@ export const accountPasswordResetSubject = 'Recuperação de Password';
 
 export function AccountPasswordResetTemplate({ resetPasswordUrl, userDisplayName }: AccountPasswordResetProps) {
 	return (
-		<Wrapper previewMessage="Confirmação de pagamento de Quota de Sócio SPG">
+		<Wrapper previewMessage="Passos para definir a sua password.">
 			<Greeting text={`${userDisplayName},`} />
 			<Paragraph>Recebemos um pedido de recuperação de password para a sua conta. Utilize o link seguinte para definir uma nova chave de acesso.</Paragraph>
 			<MainButton href={resetPasswordUrl} label="Definir Nova Password" />

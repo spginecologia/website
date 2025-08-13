@@ -23,7 +23,7 @@ export const quotaActivationSubject = 'Foi emitida uma nova guia de pagamento pa
 
 export function QuotaActivationTemplate({ accountUrl, paymentAmount, quotaYear, userDisplayName }: QuotaActivationProps) {
 	return (
-		<Wrapper previewMessage="Confirmação de pagamento de Quota de Sócio SPG">
+		<Wrapper previewMessage="Efetue o pagamento da sua Quota de Sócio SPG de forma autónoma.">
 			<Greeting text={`${userDisplayName},`} />
 			<Paragraph>Informamos que está disponível para pagamento a sua <strong>Quota de Sócio para o ano de {quotaYear}</strong>, no valor de <strong>{paymentAmount}</strong>.</Paragraph>
 			<Paragraph>Agora é mais fácil manter as quotas em dia acedendo à sua Conta SPG. Antes do pagamento, por favor verifique se os seus dados de faturação estão atualizados, para que a fatura seja corretamente emitida no NIF desejado.</Paragraph>

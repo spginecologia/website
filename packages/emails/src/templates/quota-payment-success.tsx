@@ -22,7 +22,7 @@ export const quotaPaymentSuccessSubject = 'Recebemos o pagamento da sua Quota de
 
 export function QuotaPaymentSuccessTemplate({ invoiceNumber, paymentAmount, quotaYear, userDisplayName }: QuotaPaymentSuccessProps) {
 	return (
-		<Wrapper previewMessage="Confirmação de pagamento de Quota de Sócio SPG">
+		<Wrapper previewMessage="Obrigado por continuar a fazer parte da SPG">
 			<Greeting text={`${userDisplayName},`} />
 			<Paragraph>Informamos que a sua <strong>Quota de Sócio para o ano de {quotaYear}</strong> foi paga com sucesso.</Paragraph>
 			<Paragraph>Em anexo poderá encontrar a Fatura <strong>{invoiceNumber}</strong>, no valor de <strong>{paymentAmount}</strong>, emitida de acordo com os dados introduzidos no seu Perfil SPG. Aqui é também possível consultar o seu extrato corrente, atualizar os seus dados e consultar documentos emitidos anteriormente.</Paragraph>

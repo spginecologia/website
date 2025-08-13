@@ -17,13 +17,13 @@ export interface QuotaActivationFreeProps {
 
 /* * */
 
-export const quotaActivationFreeSubject = 'Foi emitida uma nova guia de pagamento para a sua Quota de Sócio SPG';
+export const quotaActivationFreeSubject = 'Oferta da sua quota de Sócio SPG';
 
 /* * */
 
 export function QuotaActivationFreeTemplate({ accountUrl, paymentAmount, quotaYear, userDisplayName }: QuotaActivationFreeProps) {
 	return (
-		<Wrapper previewMessage="Confirmação de pagamento de Quota de Sócio SPG">
+		<Wrapper previewMessage="A SPG decidiu oferecer a sua quota de sócio.">
 			<Greeting text={`${userDisplayName},`} />
 			<Paragraph>Informamos que a sua <strong>Quota de Sócio para o ano de {quotaYear}</strong>, no valor de <strong>{paymentAmount}</strong>, foi oferecida pela Direção SPG. Estamos empenhados em desenvolver o futuro da nossa especialidade consigo.</Paragraph>
 			<MainButton href={accountUrl} label="Aceder à Conta SPG" />

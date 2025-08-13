@@ -22,7 +22,7 @@ export const quotaRefundSuccessSubject = 'Reembolso da sua Quota de Sócio SPG';
 
 export function QuotaRefundSuccessTemplate({ creditNoteNumber, paymentAmount, quotaYear, userDisplayName }: QuotaRefundSuccessProps) {
 	return (
-		<Wrapper previewMessage="Reembolso da Quota de Sócio SPG">
+		<Wrapper previewMessage="Deverá receber o valor nos próximos dias.">
 			<Greeting text={`${userDisplayName},`} />
 			<Paragraph>Informamos que a <strong>Quota de Sócio para o ano de {quotaYear}</strong> foi reembolsada para o método de pagamento utilizado originalmente.</Paragraph>
 			<Paragraph>Em anexo poderá encontrar a Nota de Crédito <strong>{creditNoteNumber}</strong>, no valor de <strong>{paymentAmount}</strong>.</Paragraph>

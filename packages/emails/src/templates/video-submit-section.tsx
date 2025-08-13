@@ -19,7 +19,7 @@ export const videoSubmitSectionSubject = 'Novo vídeo publicado';
 
 export function VideoSubmitSectionTemplate({ videoUrl }: VideoSubmitSectionProps) {
 	return (
-		<Wrapper previewMessage="É necessário validação.">
+		<Wrapper previewMessage="Estamos a processar a sua submissão.">
 			<Paragraph>Foi publicado um novo vídeo na Academia SPG.</Paragraph>
 			<Paragraph>É necessário validar o conteúdo do vídeo e tomar uma decisão em relação à sua publicação.</Paragraph>
 			<MainButton href={videoUrl} label="Validar Vídeo" />
