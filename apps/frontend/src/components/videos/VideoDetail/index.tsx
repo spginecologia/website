@@ -6,6 +6,7 @@ import { AuthWall } from '@/components/auth/AuthWall';
 import { ContentWrapper } from '@/components/common/ContentWrapper';
 import { Section } from '@/components/common/Section';
 import { VideoDetailAdditionalInfo } from '@/components/videos/VideoDetailAdditionalInfo';
+import { VideoDetailConfigs } from '@/components/videos/VideoDetailConfigs';
 import { VideoDetailDescription } from '@/components/videos/VideoDetailDescription';
 import { VideoDetailMetadata } from '@/components/videos/VideoDetailMetadata';
 import { VideoDetailPlayer } from '@/components/videos/VideoDetailPlayer';
@@ -69,7 +70,7 @@ export function VideoDetail({ id }) {
 
 						<div className={styles.sidebar}>
 							<VideoDetailAdditionalInfo publishDate={videoData?.createdAt} topics={videoTopics} views={videoData?.views} />
-							{/* <VideoDetailPublishConfig /> */}
+							<VideoDetailConfigs videoId={videoData?.id} />
 							<VideoDetailRelatedVideos list={relatedVideos} />
 						</div>
 

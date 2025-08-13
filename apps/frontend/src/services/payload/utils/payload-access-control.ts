@@ -12,7 +12,7 @@ import { type User } from 'payload-types';
  * @param param0 - The request object, user object, and role to check.
  * @returns True if the user has access, false otherwise.
  */
-export function payloadAccessControl(role: null | undefined | User['account_role'], userOrRequest: null | PayloadRequest | undefined | User): boolean {
+export function payloadAccessControl(role: null | undefined | User['account_role'] | User['account_role'][], userOrRequest: null | PayloadRequest | undefined | User): boolean {
 	//
 
 	//
@@ -68,6 +68,10 @@ export function payloadAccessControl(role: null | undefined | User['account_role
 	//
 	// Check the role value
 	// against the set User value
+
+	if (Array.isArray(role)) {
+		return role.includes(userData.account_role);
+	}
 
 	if (role === userData.account_role) {
 		return true;

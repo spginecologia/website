@@ -8,19 +8,15 @@ import { Button, Image, Skeleton, Text } from '@mantine/core';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { useEffect, useMemo } from 'react';
+import { type User } from 'payload-types';
+import { type PropsWithChildren, useEffect, useMemo } from 'react';
 import useSWR from 'swr';
 
 import styles from './styles.module.css';
 
 /* * */
 
-interface Props {
-
-	/**
-	 * The children to render if the user has the required permission.
-	 */
-	children: React.ReactNode
+interface AuthWallProps {
 
 	/**
 	 * If true, the "wall" message will not be rendered.
@@ -33,9 +29,16 @@ interface Props {
 	 */
 	redirect?: boolean | string
 
+	/**
+	 * The role required to access the children.
+	 */
+	roles?: User['account_role'] | User['account_role'][]
+
 }
 
-export function AuthWall({ children, invisible, redirect }: Props) {
+/* * */
+
+export function AuthWall({ children, invisible, redirect, roles }: PropsWithChildren<AuthWallProps>) {
 	//
 
 	//
@@ -53,7 +56,7 @@ export function AuthWall({ children, invisible, redirect }: Props) {
 	// C. Transform data
 
 	const isAuthorized = useMemo(() => {
-		return payloadAccessControl(null, userData?.user);
+		return payloadAccessControl(roles, userData?.user);
 	}, [userData]);
 
 	//
@@ -75,7 +78,7 @@ export function AuthWall({ children, invisible, redirect }: Props) {
 	// E. Render components
 
 	if (invisible && (userLoading || !isAuthorized)) {
-		return <></>;
+		return null;
 	}
 
 	if (!invisible && userLoading) {
