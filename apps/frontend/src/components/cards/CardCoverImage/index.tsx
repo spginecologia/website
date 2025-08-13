@@ -9,11 +9,12 @@ import styles from './styles.module.css';
 interface Props {
 	aspectRatio?: string
 	src?: null | string
+	withShadow?: boolean
 }
 
 /* * */
 
-export function CardCoverImage({ aspectRatio, src }: Props) {
+export function CardCoverImage({ aspectRatio, src, withShadow = true }: Props) {
 	//
 
 	if (!src) {
@@ -22,7 +23,7 @@ export function CardCoverImage({ aspectRatio, src }: Props) {
 
 	return (
 		<div>
-			<Image className={styles.cover} src={src} style={{ aspectRatio: aspectRatio }} />
+			<Image className={styles.cover} data-with-shadow={withShadow} src={src} style={{ aspectRatio: aspectRatio }} />
 		</div>
 	);
 

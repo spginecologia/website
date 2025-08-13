@@ -24,7 +24,7 @@ interface Props {
 export function CourseCard({ coverSrc, href, publishDate, title, topic }: Props) {
 	return (
 		<CardWrapper className={styles.container} href={href} variant="featured">
-			<CardCoverImage aspectRatio="600 / 300" src={coverSrc} />
+			<CardCoverImage aspectRatio="600 / 300" src={coverSrc} withShadow={false} />
 			<div className={styles.contentWrapper}>
 				{topic && <TopicDisplay id={topic.id} title={topic.title} noLink />}
 				<Title order={2} size="sm">{title}</Title>

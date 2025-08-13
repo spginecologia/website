@@ -5,5 +5,8 @@
 	width: 100%;
 	overflow: hidden;
 	border-radius: 2px;
+}
+
+.cover[data-with-shadow='true'] {
 	box-shadow: 0 0 5px 0 rgb(100 90 105 / 15%);
 }
