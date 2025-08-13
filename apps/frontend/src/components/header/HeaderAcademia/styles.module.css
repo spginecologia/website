@@ -21,69 +21,70 @@
 /* TARGET */
 
 .target {
-  z-index: 9999;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  padding: 10px 20px;
-  cursor: pointer;
-  background-color: var(--color-reference-white);
+	z-index: 9999;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	padding: 10px 20px;
+	cursor: pointer;
+	background-color: var(--color-reference-white);
 }
 
 /* * */
 /* DROPDOWN */
 
 .dropdown {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 10;
-  display: none;
-  width: 100%;
-  background-color: var(--color-reference-white);
-  border-top: 1px solid var(--color-brand-support-300);
-  box-shadow: 0 0 5px 0 rgb(0 0 0 / 15%);
-  transition: all 300ms ease;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 10;
+	display: none;
+	width: 100%;
+	background-color: var(--color-reference-white);
+	border-top: 1px solid var(--color-brand-support-300);
+	box-shadow: 0 0 5px 0 rgb(0 0 0 / 15%);
+	transition: all 300ms ease;
 }
 
 .container:hover .dropdown {
-  display: block;
+	display: block;
 }
 
 /* * */
 /* DROPDOWN LINK */
 
 .dropdownLink {
-  display: grid;
-  grid-template-columns: 30px 1fr;
-  gap: 10px;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 12px 16px;
-  overflow: hidden;
-  font-size: 16px;
-  line-height: 1;
-  color: var(--color-brand-primary-100);
+	display: grid;
+	grid-template-columns: 30px 1fr;
+	gap: 10px;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 10px 16px;
+	overflow: hidden;
+	font-size: 16px;
+	line-height: 1;
+	color: var(--color-brand-primary-100);
 }
 
 .dropdownLink:hover {
-  background-color: var(--color-brand-support-300);
+	background-color: var(--color-brand-support-300);
 }
 
 .dropdownLinkIcon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .dropdownLinkLabel {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  width: 100%;
-  padding-bottom: 1px;
-  text-align: left;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	width: 100%;
+	padding-bottom: 1px;
+	font-weight: 600;
+	text-align: left;
 }

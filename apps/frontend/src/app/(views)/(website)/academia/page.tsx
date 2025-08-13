@@ -1,16 +1,9 @@
 /* * */
 
-import { Section } from '@/components/common/Section';
-import NoDataLabel from '@/components/NoDataLabel/NoDataLabel';
-import { Space } from '@mantine/core';
+import { AcademiaHome } from '@/components/academia/AcademiaHome';
 
 /* * */
 
 export default function Page() {
-	return (
-		<Section withTopSpacer="academia">
-			<NoDataLabel text="Academia SPG" />
-			<Space h={300} />
-		</Section>
-	);
+	return <AcademiaHome />;
 }

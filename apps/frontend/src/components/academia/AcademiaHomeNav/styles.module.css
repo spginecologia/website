@@ -1,0 +1,33 @@
+/* * */
+/* CONTAINER */
+
+.container {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	gap: 3px;
+}
+
+/* * */
+/* LINK */
+
+.link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 30px;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 1.4;
+	color: var(--color-brand-primary-100);
+	text-align: center;
+	text-transform: uppercase;
+	background-color: var(--color-brand-support-300);
+	box-shadow: 0 0 5px 0 rgb(0 0 0 / 0%);
+	transition: all 300ms ease;
+}
+
+.link:hover {
+	color: #fff;
+	background-color: #a0285a;
+    box-shadow: 0 0 10px 0 rgb(0 0 0 / 20%);
+}

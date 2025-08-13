@@ -199,6 +199,27 @@
 			"placeholder": "Choose an option..."
 		}
 	},
+	"academia": {
+		"AcademiaHomeGuidelines": {
+			"see_all": "Consultar todos os Consensos",
+			"title": "Consensos SPG"
+		},
+		"AcademiaHomeIntro": {
+			"description": "A SPG acredita que a verdadeira formação advém da exposição à realidade prática. Face a esta necessidade, a Academia SPG integra um conjunto de ferramentas que colaboram para a partilha da experiência clínica e cirúrgica.",
+			"title": "Apresentamos a"
+		},
+		"AcademiaHomeNav": {
+			"courses": "Palestras & Cursos",
+			"grant": "Bolsa de Investigação",
+			"guidelines": "Consensos",
+			"publications": "Publicações Científicas",
+			"topics": "Pesquisa por Tópicos",
+			"videos": "Vídeos Cirúrgicos"
+		},
+		"AcademiaHomeVideos": {
+			"title": "Vídeos Cirúrgicos"
+		}
+	},
 	"account": {
 		"AccountIntro": {
 			"error": "Não foi possível carregar o seu perfil",
