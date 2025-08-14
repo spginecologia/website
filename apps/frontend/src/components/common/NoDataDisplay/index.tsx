@@ -6,7 +6,13 @@ import styles from './styles.module.css';
 
 /* * */
 
-export function NoDataDisplay() {
+interface NoDataDisplayProps {
+	text?: string
+}
+
+/* * */
+
+export function NoDataDisplay({ text }: NoDataDisplayProps) {
 	//
 
 	//
@@ -17,7 +23,7 @@ export function NoDataDisplay() {
 	//
 	// B. Render components
 
-	return <div className={styles.container}>{t('title')}</div>;
+	return <div className={styles.container}>{text || t('title')}</div>;
 
 	//
 }

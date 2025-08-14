@@ -1,20 +1,24 @@
 /* * */
 
+import { Button } from '@mantine/core';
 import { useTranslations } from 'next-intl';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 import styles from './styles.module.css';
+
+import { NoDataDisplay } from '../NoDataDisplay';
 
 /* * */
 
 interface Props {
 	href?: null | string
+	target?: '_blank' | '_self'
 	withDelay?: number
 }
 
 /* * */
 
-export function RedirectDisplay({ href, withDelay = 0 }: Props) {
+export function RedirectDisplay({ href, target = '_blank', withDelay = 0 }: Props) {
 	//
 
 	//
@@ -22,20 +26,35 @@ export function RedirectDisplay({ href, withDelay = 0 }: Props) {
 
 	const t = useTranslations('common.RedirectDisplay');
 
+	const [manualButtonIsVisible, setManualButtonIsVisible] = useState(false);
+
 	//
 	// B. Handle actions
 
+	const handleOpenLink = () => {
+		if (href) window.open(href, target);
+	};
+
 	useEffect(() => {
 		if (!href) return;
-		setTimeout(() => {
-			window.location.replace(href);
-		}, withDelay);
+		const timeout = setTimeout(handleOpenLink, withDelay);
+		return () => clearTimeout(timeout);
+	}, [href, withDelay]);
+
+	useEffect(() => {
+		if (!href) return;
+		const timeout = setTimeout(() => setManualButtonIsVisible(true), 5000);
+		return () => clearTimeout(timeout);
 	}, [href, withDelay]);
 
 	//
 	// C. Render components
 
-	return <div className={styles.container}>{t('title')}</div>;
+	return (
+		<div className={styles.container}>
+			{manualButtonIsVisible ? <Button onClick={handleOpenLink}>{t('open')}</Button> : <NoDataDisplay text={t('title')} />}
+		</div>
+	);
 
 	//
 }

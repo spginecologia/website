@@ -2,36 +2,36 @@
 
 /* * */
 
-import type { Guideline } from 'payload-types';
-
+import { AuthWall } from '@/components/auth/AuthWall';
 import { ContentWrapper } from '@/components/common/ContentWrapper';
 import { RedirectDisplay } from '@/components/common/RedirectDisplay';
 import { Section } from '@/components/common/Section';
+import { type Publication } from 'payload-types';
 import { useMemo } from 'react';
 import useSWR from 'swr';
 
 /* * */
 
-export function GuidelineDetail({ id }) {
+export function PublicationDetail({ id }) {
 	//
 
 	//
 	// A. Fetch data
 
-	const { data: guidelineData } = useSWR<Guideline>(`/api/guidelines/${id}`);
+	const { data: publicationData } = useSWR<Publication>(`/api/publications/${id}`);
 
 	//
 	// B. Transform data
 
-	const guidelineHref = useMemo(() => {
-		if (!guidelineData) return;
-		if (guidelineData.content_type === 'file' && typeof guidelineData.document === 'object') {
-			return guidelineData.document?.url;
+	const publicationHref = useMemo(() => {
+		if (!publicationData) return;
+		if (publicationData.content_type === 'file' && typeof publicationData.document === 'object') {
+			return publicationData.document?.url;
 		}
-		if (guidelineData.content_type === 'url') {
-			return guidelineData.url;
+		if (publicationData.content_type === 'url') {
+			return publicationData.url;
 		}
-	}, [guidelineData]);
+	}, [publicationData]);
 
 	//
 	// C. Render components
@@ -39,7 +39,9 @@ export function GuidelineDetail({ id }) {
 	return (
 		<ContentWrapper>
 			<Section withTopSpacer="transparent">
-				<RedirectDisplay href={guidelineHref} />
+				<AuthWall>
+					<RedirectDisplay href={publicationHref} />
+				</AuthWall>
 			</Section>
 		</ContentWrapper>
 	);
