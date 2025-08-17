@@ -12,12 +12,12 @@ import styles from './styles.module.css';
 /* * */
 
 export const ACADEMIA_PAGES = [
-	{ icon: <IconBuildingCottage size={20} />, key: 'home', path: 'https://spginecologia.pt/academia' },
+	{ icon: <IconBuildingCottage size={20} />, key: 'home', path: '/academia' },
 	{ icon: <IconBrandYoutube size={22} />, key: 'videos', path: '/academia/videos' },
 	{ icon: <IconVideoPlus size={24} />, key: 'videos_new', path: '/academia/videos/new' },
 	{ icon: <IconFileCheck size={24} />, key: 'guidelines', path: '/academia/guidelines' },
-	{ icon: <IconBooks size={24} />, key: 'publications', path: 'https://spginecologia.pt/academia/publicacoes' },
-	{ icon: <IconSchool size={24} />, key: 'courses', path: 'https://spginecologia.pt/academia/palestras-cursos' },
+	{ icon: <IconBooks size={24} />, key: 'publications', path: '/academia/publicacoes' },
+	{ icon: <IconSchool size={24} />, key: 'courses', path: '/academia/palestras-cursos' },
 	{ icon: <IconBulb size={24} />, key: 'grant', path: 'https://spginecologia.pt/bolsa/2025' },
 	{ icon: <IconListSearch size={24} />, key: 'topics', path: 'https://spginecologia.pt/academia/topicos' },
 ];

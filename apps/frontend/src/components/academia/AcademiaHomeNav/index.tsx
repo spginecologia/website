@@ -12,8 +12,8 @@ import styles from './styles.module.css';
 const LINKS = [
 	{ key: 'guidelines', path: '/academia/guidelines' },
 	{ key: 'videos', path: '/academia/videos' },
-	{ key: 'publications', path: 'https://spginecologia.pt/academia/publicacoes' },
-	{ key: 'courses', path: 'https://spginecologia.pt/academia/palestras-cursos' },
+	{ key: 'publications', path: '/academia/publicacoes' },
+	{ key: 'courses', path: '/academia/palestras-cursos' },
 	{ key: 'grant', path: 'https://spginecologia.pt/bolsa/2025' },
 	{ key: 'topics', path: 'https://spginecologia.pt/academia/topicos' },
 ];
