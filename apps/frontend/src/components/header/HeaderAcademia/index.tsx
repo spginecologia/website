@@ -37,7 +37,7 @@ export function HeaderAcademia() {
 
 	return (
 		<div className={styles.container}>
-			<Link className={styles.target} href="https://spginecologia.pt/academia">
+			<Link className={styles.target} href="/academia">
 				<SpgAcademia />
 			</Link>
 
