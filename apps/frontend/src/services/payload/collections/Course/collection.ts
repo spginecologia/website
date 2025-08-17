@@ -27,6 +27,10 @@ export const Courses: CollectionConfig = {
 			name: 'content_type',
 			options: [
 				{
+					label: 'Vídeo',
+					value: 'video',
+				},
+				{
 					label: 'Ficheiro',
 					value: 'file',
 				},
@@ -37,6 +41,15 @@ export const Courses: CollectionConfig = {
 			],
 			required: true,
 			type: 'radio',
+		},
+		{
+			admin: {
+				condition: (_, siblingData) => siblingData?.content_type === 'video',
+			},
+			label: 'Vídeo deste Curso',
+			name: 'video',
+			relationTo: 'documents',
+			type: 'upload',
 		},
 		{
 			admin: {
@@ -54,6 +67,11 @@ export const Courses: CollectionConfig = {
 			label: 'URL deste Curso',
 			name: 'url',
 			type: 'text',
+		},
+		{
+			label: 'Introdução',
+			name: 'introduction',
+			type: 'textarea',
 		},
 		topicsField,
 		publishedAtField,

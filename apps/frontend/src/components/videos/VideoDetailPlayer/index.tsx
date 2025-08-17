@@ -8,13 +8,13 @@ import styles from './styles.module.css';
 
 /* * */
 
-interface Props {
+interface VideoDetailPlayerProps {
 	url?: string
 }
 
 /* * */
 
-export function VideoDetailPlayer({ url }: Props) {
+export function VideoDetailPlayer({ url }: VideoDetailPlayerProps) {
 	//
 
 	if (!url) {

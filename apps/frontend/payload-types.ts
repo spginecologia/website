@@ -154,9 +154,11 @@ export interface UserAuthOperations {
 export interface Course {
   id: string;
   title: string;
-  content_type: 'file' | 'url';
+  content_type: 'video' | 'file' | 'url';
+  video?: (string | null) | Document;
   document?: (string | null) | Document;
   url?: string | null;
+  introduction?: string | null;
   topics?: (string | Topic)[] | null;
   publishedAt: string;
   featured_image?: (string | null) | Media;
@@ -667,8 +669,10 @@ export interface PayloadMigration {
 export interface CoursesSelect<T extends boolean = true> {
   title?: T;
   content_type?: T;
+  video?: T;
   document?: T;
   url?: T;
+  introduction?: T;
   topics?: T;
   publishedAt?: T;
   featured_image?: T;

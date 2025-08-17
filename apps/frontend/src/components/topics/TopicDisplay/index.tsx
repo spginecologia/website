@@ -7,7 +7,7 @@ import styles from './styles.module.css';
 
 /* * */
 
-interface Props {
+interface TopicDisplayProps {
 	description?: null | string
 	id: string
 	noLink?: boolean
@@ -16,7 +16,7 @@ interface Props {
 
 /* * */
 
-export function TopicDisplay({ description, id, noLink = false, title }: Props) {
+export function TopicDisplay({ description, id, noLink = false, title }: TopicDisplayProps) {
 	//
 
 	//
