@@ -40,7 +40,7 @@ export function EventCard({ coverSrc, endDate, href, startDate, title, topic }: 
 			<div className={styles.bottomWrapper}>
 				<DateRibbon date={startDate} />
 				<div className={styles.contentWrapper}>
-					{topic && <TopicDisplay id={topic.id} title={topic.title} noLink />}
+					{topic && <TopicDisplay asLink={false} data={topic} />}
 					<Title order={2} size="sm">{title}</Title>
 					<div className={styles.datesWrapper}>
 						{startDate && <Text size="sm">{t('start_date', { value: startDate })}</Text>}

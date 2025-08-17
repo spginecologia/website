@@ -11,7 +11,7 @@ import styles from './styles.module.css';
 
 /* * */
 
-interface Props {
+interface CourseCardProps {
 	coverSrc?: null | string
 	href?: string
 	publishDate?: Date | null
@@ -21,12 +21,12 @@ interface Props {
 
 /* * */
 
-export function CourseCard({ coverSrc, href, publishDate, title, topic }: Props) {
+export function CourseCard({ coverSrc, href, publishDate, title, topic }: CourseCardProps) {
 	return (
 		<CardWrapper className={styles.container} href={href} variant="featured">
 			<CardCoverImage aspectRatio="600 / 300" src={coverSrc} withShadow={false} />
 			<div className={styles.contentWrapper}>
-				{topic && <TopicDisplay id={topic.id} title={topic.title} noLink />}
+				{topic && <TopicDisplay asLink={false} data={topic} />}
 				<Title order={2} size="sm">{title}</Title>
 				<CardPublishDate date={publishDate} />
 			</div>

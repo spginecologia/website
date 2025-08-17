@@ -10,7 +10,7 @@ import { Topic } from 'payload-types';
 
 /* * */
 
-interface Props {
+interface NewsCardProps {
 	coverSrc?: null | string
 	href?: string
 	publishDate?: Date | null
@@ -22,13 +22,13 @@ interface Props {
 
 /* * */
 
-export function NewsCard({ coverSrc, href, publishDate, summary, title, topic }: Props) {
+export function NewsCard({ coverSrc, href, publishDate, summary, title, topic }: NewsCardProps) {
 	//
 
 	return (
 		<CardWrapper href={href} variant="default">
 			<CardCoverImage aspectRatio="16/9" src={coverSrc} />
-			{topic && <TopicDisplay id={topic.id} title={topic.title} noLink />}
+			{topic && <TopicDisplay asLink={false} data={topic} />}
 			<CardTitle text={title} variant="serif" />
 			<CardSummary text={summary} />
 			<CardPublishDate date={publishDate} />
