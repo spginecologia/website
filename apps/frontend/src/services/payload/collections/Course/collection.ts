@@ -22,7 +22,7 @@ export const Courses: CollectionConfig = {
 			type: 'text',
 		},
 		{
-			defaultValue: 'file',
+			defaultValue: 'video',
 			label: 'Tipo de Conteúdo',
 			name: 'content_type',
 			options: [
