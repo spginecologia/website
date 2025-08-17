@@ -13,7 +13,7 @@ import styles from './styles.module.css';
 
 /* * */
 
-interface Props {
+interface VideoDetailAdditionalInfoProps {
 	publishDate?: null | string
 	topics?: null | Topic[]
 	views?: null | number
@@ -21,7 +21,7 @@ interface Props {
 
 /* * */
 
-export function VideoDetailAdditionalInfo({ publishDate, topics, views = 1 }: Props) {
+export function VideoDetailAdditionalInfo({ publishDate, topics, views = 1 }: VideoDetailAdditionalInfoProps) {
 	//
 
 	//
@@ -61,7 +61,7 @@ export function VideoDetailAdditionalInfo({ publishDate, topics, views = 1 }: Pr
 				<p className={styles.label}>{t('topics.label')}</p>
 				<div className={styles.topicsWrapper}>
 					{topics?.map(topic => (
-						<TopicDisplay key={topic.id} description={topic.description} id={topic.id} title={topic.title} />
+						<TopicDisplay key={topic.id} data={topic} />
 					))}
 				</div>
 			</div>

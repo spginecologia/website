@@ -11,7 +11,7 @@ import styles from './styles.module.css';
 
 /* * */
 
-interface Props {
+interface NewsCardFeaturedProps {
 	coverSrc?: null | string
 	href?: string
 	publishDate?: Date | null
@@ -22,14 +22,14 @@ interface Props {
 
 /* * */
 
-export function NewsCardFeatured({ coverSrc, href, publishDate, summary, title, topic }: Props) {
+export function NewsCardFeatured({ coverSrc, href, publishDate, summary, title, topic }: NewsCardFeaturedProps) {
 	return (
 		<CardWrapper className={styles.container} href={href} variant="featured">
 			<div className={styles.imageWrapper}>
 				{coverSrc && <Image alt="" src={coverSrc} style={{ objectFit: 'cover' }} fill />}
 			</div>
 			<div className={styles.contentWrapper}>
-				{topic && <TopicDisplay id={topic.id} title={topic.title} noLink />}
+				{topic && <TopicDisplay asLink={false} data={topic} />}
 				<Title order={2}>{title}</Title>
 				<Text>{summary}</Text>
 				<CardPublishDate date={publishDate} />

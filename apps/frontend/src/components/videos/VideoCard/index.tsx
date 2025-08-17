@@ -11,7 +11,7 @@ import styles from './styles.module.css';
 
 /* * */
 
-interface Props {
+interface VideoCardProps {
 	authors?: null | string
 	coverSrc?: null | string
 	duration?: null | number
@@ -24,12 +24,12 @@ interface Props {
 
 /* * */
 
-export function VideoCard({ authors, coverSrc, duration, href, summary, title, topic, views }: Props) {
+export function VideoCard({ authors, coverSrc, duration, href, summary, title, topic, views }: VideoCardProps) {
 	return (
 		<CardWrapper href={href} variant="default">
 			<VideoCoverImage coverSrc={coverSrc} duration={duration} views={views} />
 			<div />
-			{topic && <TopicDisplay id={topic.id} title={topic.title} noLink />}
+			{topic && <TopicDisplay asLink={false} data={topic} />}
 			<Title order={2} size="sm">{title}</Title>
 			{authors && <p className={styles.authors}>{authors}</p>}
 			<CardSummary size="sm" text={summary} />

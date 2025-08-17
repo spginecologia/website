@@ -11,7 +11,7 @@ import styles from './styles.module.css';
 
 /* * */
 
-interface Props {
+interface VideoCardFeaturedProps {
 	authors?: null | string
 	coverSrc?: null | string
 	duration?: null | number
@@ -24,10 +24,10 @@ interface Props {
 
 /* * */
 
-export function VideoCardFeatured({ authors, coverSrc, duration, href, summary, title, topic, views }: Props) {
+export function VideoCardFeatured({ authors, coverSrc, duration, href, summary, title, topic, views }: VideoCardFeaturedProps) {
 	return (
 		<CardWrapper href={href} variant="featured" fullHeight>
-			{topic && <TopicDisplay id={topic.id} title={topic.title} noLink />}
+			{topic && <TopicDisplay asLink={false} data={topic} />}
 			<div />
 			<VideoCoverImage coverSrc={coverSrc} duration={duration} views={views} />
 			<div />
