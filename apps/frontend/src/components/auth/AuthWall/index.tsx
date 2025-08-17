@@ -102,7 +102,7 @@ export function AuthWall({ children, invisible, redirect, roles }: PropsWithChil
 				<div className={styles.content}>
 					<Text ta="center">{t('message')}</Text>
 					<Button component={Link} href={`/login?redirect=${window.location.pathname}`} w="100%">{t('action_login')}</Button>
-					<Button component={Link} href={`/signup?redirect=${window.location.pathname}`} w="100%">{t('action_signup')}</Button>
+					<Button component={Link} href={`/forgot?redirect=${window.location.pathname}`} w="100%">{t('action_signup')}</Button>
 				</div>
 			</div>
 		</div>
