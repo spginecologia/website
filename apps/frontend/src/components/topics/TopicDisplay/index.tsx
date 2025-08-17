@@ -2,41 +2,50 @@
 
 import { HoverCard, Text, UnstyledButton } from '@mantine/core';
 import Link from 'next/link';
+import { Topic } from 'payload-types';
+import { useMemo } from 'react';
 
 import styles from './styles.module.css';
 
 /* * */
 
 interface TopicDisplayProps {
-	description?: null | string
-	id: string
-	noLink?: boolean
-	title: string
+	asLink?: boolean
+	data?: null | (string | Topic)
 }
 
 /* * */
 
-export function TopicDisplay({ description, id, noLink = false, title }: TopicDisplayProps) {
+export function TopicDisplay({ asLink = true, data }: TopicDisplayProps) {
 	//
 
 	//
-	// A. Render components
+	// A. Transform data
 
-	if (noLink) {
-		return <p className={styles.topic}>{title}</p>;
+	const topicData = useMemo(() => {
+		if (!data) return null;
+		if (typeof data !== 'object') return null;
+		return data;
+	}, [data]);
+
+	//
+	// B. Render components
+
+	if (!topicData) {
+		return null;
 	}
 
-	if (!description) {
-		return <Link className={styles.topic} href={`/topics/${id}`}>{title}</Link>;
+	if (!asLink) {
+		return <p className={styles.topic}>{topicData.title}</p>;
 	}
 
 	return (
 		<HoverCard openDelay={1000} shadow="md" width={250} withArrow>
 			<HoverCard.Target>
-				<UnstyledButton className={styles.topic} component={Link} href={`/topics/${id}`}>{title}</UnstyledButton>
+				<UnstyledButton className={styles.topic} component={Link} href={`/topics/${topicData.id}`} target="_blank">{topicData.title}</UnstyledButton>
 			</HoverCard.Target>
 			<HoverCard.Dropdown>
-				<Text variant="secondary">{description}</Text>
+				<Text variant="secondary">{topicData.description}</Text>
 			</HoverCard.Dropdown>
 		</HoverCard>
 	);

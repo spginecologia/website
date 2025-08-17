@@ -8,6 +8,7 @@ import { NoDataDisplay } from '@/components/common/NoDataDisplay';
 import { RedirectDisplay } from '@/components/common/RedirectDisplay';
 import { Section } from '@/components/common/Section';
 import { CourseDetailVideoMetadata } from '@/components/courses/CourseDetailVideoMetadata';
+import { TopicDisplayGroup } from '@/components/topics/TopicDisplayGroup';
 import { VideoDetailPlayer } from '@/components/videos/VideoDetailPlayer';
 import { Space } from '@mantine/core';
 import { type Course } from 'payload-types';
@@ -74,6 +75,8 @@ export function CourseDetail({ id }) {
 					<AuthWall>
 						<VideoDetailPlayer url={courseVideoUrl} />
 					</AuthWall>
+					<Space h="lg" />
+					<TopicDisplayGroup topics={courseData?.topics} />
 					<Space h="lg" />
 					<CourseDetailVideoMetadata
 						introduction={courseData?.introduction}
