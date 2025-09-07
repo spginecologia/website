@@ -18,11 +18,6 @@ export async function mollieActivateQuotas(userId: string) {
 	//
 
 	//
-	// Set a timeout to avoid overloading the server
-
-	await new Promise(resolve => setTimeout(resolve, 2000));
-
-	//
 	// Setup payload
 
 	const payload = await getPayload({ config: payloadConfig });
@@ -158,6 +153,11 @@ export async function mollieActivateQuotas(userId: string) {
 
 			LOGGER.info('mollie-activate-quotas', `Created PaymentLink for User with ID "${userId}" for the year "${quotaData.year}" as an Intern. Email Sent...`);
 
+			//
+			// Set a timeout to avoid overloading the server
+
+			await new Promise(resolve => setTimeout(resolve, 1000));
+
 			continue;
 
 			//
@@ -218,6 +218,11 @@ export async function mollieActivateQuotas(userId: string) {
 		});
 
 		LOGGER.info('mollie-activate-quotas', `Created PaymentLink for User with ID "${userId}" for the year "${quotaData.year}". Email Sent...`);
+
+		//
+		// Set a timeout to avoid overloading the server
+
+		await new Promise(resolve => setTimeout(resolve, 1000));
 
 		//
 	}
