@@ -18,6 +18,11 @@ export async function mollieActivateQuotas(userId: string) {
 	//
 
 	//
+	// Set a timeout to avoid overloading the server
+
+	await new Promise(resolve => setTimeout(resolve, 2000));
+
+	//
 	// Setup payload
 
 	const payload = await getPayload({ config: payloadConfig });
