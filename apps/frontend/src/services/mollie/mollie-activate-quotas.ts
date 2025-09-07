@@ -151,6 +151,8 @@ export async function mollieActivateQuotas(userId: string) {
 			//
 			// Continue to the next quota as this one is already handled.
 
+			LOGGER.info('mollie-activate-quotas', `Created PaymentLink for User with ID "${userId}" for the year "${quotaData.year}" as an Intern. Email Sent...`);
+
 			continue;
 
 			//
