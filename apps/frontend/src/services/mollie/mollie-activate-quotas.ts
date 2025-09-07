@@ -210,6 +210,8 @@ export async function mollieActivateQuotas(userId: string) {
 			to: userData.email,
 		});
 
+		LOGGER.info('mollie-activate-quotas', `Created PaymentLink for User with ID "${userId}" for the year "${quotaData.year}". Email Sent...`);
+
 		//
 	}
 
