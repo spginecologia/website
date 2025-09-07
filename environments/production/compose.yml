@@ -65,7 +65,7 @@ services:
     volumes:
       - ./spgdbdata:/data/db
     env_file:
-      - .env.production
+      - ./secrets/.env
     ports:
       - 37017:27017
 
@@ -82,7 +82,7 @@ services:
     volumes:
       - ./backups/:/backups
     env_file:
-      - .env.production
+      - ./secrets/.env
 
   # # # # # # # # # # # # # # # # # # # # #
   # # # # # # # # # # # # # # # # # # # # #
@@ -95,4 +95,4 @@ services:
         max-size: '1m'
         max-file: '1'
     env_file:
-      - .env.production
+      - ./secrets/.env
