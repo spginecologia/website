@@ -36,7 +36,12 @@ export async function mollieActivateQuotas(userId: string) {
 		return;
 	}
 
-	if (userData.account_status !== 'active') {
+	if (!userData.account_status) {
+		LOGGER.error('mollie-activate-quotas', `User with ID "${userId}" does not have an account status set. Skipping...`);
+		return;
+	}
+
+	if (!['active', 'dormant'].includes(userData.account_status)) {
 		LOGGER.info('mollie-activate-quotas', `User with ID "${userId}" is not active. Skipping...`);
 		return;
 	}
