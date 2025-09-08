@@ -18,11 +18,11 @@
 		"@react-email/components": "0.5.2",
 		"@react-email/render": "1.2.2",
 		"browserslist": "4.25.4",
-		"react-email": "4.2.8"
+		"react-email": "4.2.9"
 	},
 	"devDependencies": {
 		"@carrismetropolitana/eslint": "20250622.1204.50",
-		"@react-email/preview-server": "4.2.8",
+		"@react-email/preview-server": "4.2.9",
 		"@types/node": "24.3.1",
 		"resolve-tspaths": "0.8.23",
 		"typescript": "5.9.2"

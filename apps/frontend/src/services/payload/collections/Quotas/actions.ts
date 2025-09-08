@@ -1,6 +1,7 @@
 /* * */
 
 import payloadConfig from '@/payload-config';
+import { LOGGER } from '@/services/logger/LOGGER';
 import { mollieActivateQuotas } from '@/services/mollie/mollie-activate-quotas';
 import { type CollectionAfterChangeHook } from 'payload';
 import { getPayload } from 'payload';
@@ -24,10 +25,14 @@ export const afterActivateQuota: CollectionAfterChangeHook<Quota> = async () => 
 	//
 	// Get all Users and loop through them
 
-	const allUsers = await payload.find({ collection: 'users' });
+	const allUsers = await payload.find({ collection: 'users', limit: 9999 });
+
+	LOGGER.info('[afterActivateQuota]', `Fetched ${allUsers.totalDocs} Users...`);
 
 	for (const userData of allUsers.docs) {
 		//
+
+		LOGGER.info('[afterActivateQuota]', `Activating Quotas for User ${userData.id} - ${userData.email}...`, 0, 1);
 
 		await mollieActivateQuotas(userData.id);
 
