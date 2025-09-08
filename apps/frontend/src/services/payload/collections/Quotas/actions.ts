@@ -39,5 +39,7 @@ export const afterActivateQuota: CollectionAfterChangeHook<Quota> = async () => 
 		//
 	}
 
+	LOGGER.terminate('[afterActivateQuota] Finished activating Quotas for all Users.');
+
 	//
 };
