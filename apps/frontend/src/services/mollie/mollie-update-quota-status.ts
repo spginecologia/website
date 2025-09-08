@@ -139,18 +139,23 @@ export async function mollieUpdateQuotaStatus(userId: string) {
 					quotaYear: quotaData.year,
 					userDisplayName: getUserDisplayName(userData.title, userData.first_name),
 				});
-				await payload.sendEmail({
-					attachments: [{
-						content: newInvoiceData.output,
-						contentType: 'application/pdf',
-						encoding: 'base64',
-						filename: `spg-invoice-${newInvoiceData.id}.pdf`,
-					}],
-					html: templateData.html,
-					subject: templateData.subject,
-					to: userData.email,
-				});
-				LOGGER.info('mollie-update-quota-status', 'Sent');
+				try {
+					await payload.sendEmail({
+						attachments: [{
+							content: newInvoiceData.output,
+							contentType: 'application/pdf',
+							encoding: 'base64',
+							filename: `spg-invoice-${newInvoiceData.id}.pdf`,
+						}],
+						html: templateData.html,
+						subject: templateData.subject,
+						to: userData.email,
+					});
+					LOGGER.info('mollie-update-quota-status', 'Sent');
+				}
+				catch (error) {
+					LOGGER.error('mollie-update-quota-status', `Failed to send the invoice email to user NIF "${userData.tax_id}" for the quota year "${quotaData.year}". Error: ${error.message}`);
+				}
 			}
 
 			//
@@ -186,17 +191,22 @@ export async function mollieUpdateQuotaStatus(userId: string) {
 					quotaYear: quotaData.year,
 					userDisplayName: getUserDisplayName(userData.title, userData.first_name),
 				});
-				await payload.sendEmail({
-					attachments: [{
-						content: newCreditNoteData.output,
-						contentType: 'application/pdf',
-						encoding: 'base64',
-						filename: `spg-credit-note-${newCreditNoteData.id}.pdf`,
-					}],
-					html: templateData.html,
-					subject: templateData.subject,
-					to: userData.email,
-				});
+				try {
+					await payload.sendEmail({
+						attachments: [{
+							content: newCreditNoteData.output,
+							contentType: 'application/pdf',
+							encoding: 'base64',
+							filename: `spg-credit-note-${newCreditNoteData.id}.pdf`,
+						}],
+						html: templateData.html,
+						subject: templateData.subject,
+						to: userData.email,
+					});
+				}
+				catch (error) {
+					LOGGER.error('mollie-update-quota-status', `Failed to send the credit note email to user NIF "${userData.tax_id}" for the quota year "${quotaData.year}". Error: ${error.message}`);
+				}
 			}
 
 			//
