@@ -106,6 +106,11 @@ export const Users: CollectionConfig = {
 		],
 	},
 
+	labels: {
+		plural: 'Sócios',
+		singular: 'Sócio',
+	},
+
 	slug: 'users',
 
 };
