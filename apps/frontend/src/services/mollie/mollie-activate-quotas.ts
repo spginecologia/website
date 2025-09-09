@@ -227,7 +227,7 @@ export async function mollieActivateQuotas(userId: string) {
 		//
 		// Set a timeout to avoid overloading the server
 
-		await new Promise(resolve => setTimeout(resolve, 1000));
+		await new Promise(resolve => setTimeout(resolve, 200));
 
 		//
 	}
