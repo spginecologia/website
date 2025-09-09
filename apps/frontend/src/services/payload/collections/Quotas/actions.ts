@@ -25,7 +25,7 @@ export const afterActivateQuota: CollectionAfterChangeHook<Quota> = async () => 
 	//
 	// Get all Users and loop through them
 
-	const allUsers = await payload.find({ collection: 'users', limit: 9999 });
+	const allUsers = await payload.find({ collection: 'users', limit: 50 });
 
 	LOGGER.info('[afterActivateQuota]', `Fetched ${allUsers.totalDocs} Users...`);
 
