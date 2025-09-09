@@ -141,7 +141,7 @@ export async function mollieActivateQuotas(userId: string) {
 			// informing them about the free quota.
 
 			const templateData = await renderQuotaActivationFreeTemplate({
-				accountUrl: `http://localhost:3005/account`,
+				accountUrl: `${process.env.NEXT_PUBLIC_URL || 'http://localhost:3005'}/account`,
 				paymentAmount: `${quotaData.amount}€`,
 				quotaYear: quotaData.year,
 				userDisplayName: getUserDisplayName(userData.title, userData.first_name),
@@ -178,9 +178,9 @@ export async function mollieActivateQuotas(userId: string) {
 				value: `${quotaData.amount}.00`, // Mollie requires the amount as a string
 			},
 			description: `Quota de Sócio SPG de ${quotaData.year}`,
-			redirectUrl: `http://localhost:3005/api/account/quotas/refresh-status/${userData.id}`,
+			redirectUrl: `${process.env.NEXT_PUBLIC_URL || 'http://localhost:3005'}/api/account/quotas/refresh-status/${userData.id}`,
 			reusable: false,
-			webhookUrl: `https://5509d7a2ebfc.ngrok-free.app/api/account/quotas/refresh-status/${userData.id}`,
+			webhookUrl: `${process.env.NEXT_PUBLIC_URL || 'http://localhost:3005'}/api/account/quotas/refresh-status/${userData.id}`,
 		});
 
 		//
@@ -210,7 +210,7 @@ export async function mollieActivateQuotas(userId: string) {
 		// informing them about the new quota.
 
 		const templateData = await renderQuotaActivationTemplate({
-			accountUrl: `http://localhost:3005/account`,
+			accountUrl: `${process.env.NEXT_PUBLIC_URL || 'http://localhost:3005'}/account`,
 			paymentAmount: `${quotaData.amount}€`,
 			quotaYear: quotaData.year,
 			userDisplayName: getUserDisplayName(userData.title, userData.first_name),
