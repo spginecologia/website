@@ -22,7 +22,7 @@ export function vendusGetClientFromUser(userData: User): VendusClient {
 
 	if (userData.billing_name && userData.billing_tax_id) {
 		return {
-			address: `${userData.billing_address_1 ?? ''} ${userData.billing_address_2 ?? ''}`.trim(),
+			address: (userData.billing_address_1 || userData.billing_address_2) ? `${userData.billing_address_1 ?? ''} ${userData.billing_address_2 ?? ''}`.trim() : 'Lisboa',
 			city: userData.billing_city ?? '',
 			country: 'PT',
 			fiscal_id: userData.billing_tax_id,
@@ -38,7 +38,7 @@ export function vendusGetClientFromUser(userData: User): VendusClient {
 
 	if (userData.first_name && userData.tax_id) {
 		return {
-			address: `${userData.address_1 ?? ''} ${userData.address_2 ?? ''}`.trim(),
+			address: (userData.address_1 || userData.address_2) ? `${userData.address_1 ?? ''} ${userData.address_2 ?? ''}`.trim() : 'Lisboa',
 			city: userData.city ?? '',
 			country: 'PT',
 			fiscal_id: userData.tax_id,
