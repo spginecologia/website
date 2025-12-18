@@ -3,6 +3,7 @@
 /* * */
 
 import { FormSection } from '@/components/common/FormSection';
+import { isRequiredFromZod } from '@/services/general/is-required-from-zod';
 import { VideoDefault } from '@/services/payload/collections/Video/default';
 import { VideoValidationClient } from '@/services/payload/collections/Video/validation';
 import { type PayloadAPIResponse } from '@/types/payload-api-response';
@@ -104,29 +105,29 @@ export function VideosSubmitForm() {
 			<form onSubmit={form.onSubmit(handleSubmit)}>
 
 				<FormSection>
-					<TextInput label={t('fields.title.label')} placeholder={t('fields.title.placeholder')} readOnly={isLoading} {...form.getInputProps('title')} />
-					<TextInput label={t('fields.authors.label')} placeholder={t('fields.authors.placeholder')} readOnly={isLoading} {...form.getInputProps('authors')} />
-					<FileInput label={t('fields.video_file.label')} placeholder={t('fields.video_file.placeholder')} readOnly={isLoading} {...form.getInputProps('video_file')} />
-					<FileInput label={t('fields.featured_image.label')} placeholder={t('fields.featured_image.placeholder')} readOnly={isLoading} {...form.getInputProps('featured_image')} />
+					<TextInput label={t('fields.title.label')} placeholder={t('fields.title.placeholder')} readOnly={isLoading} required={isRequiredFromZod(VideoValidationClient.shape.title)} {...form.getInputProps('title')} />
+					<TextInput label={t('fields.authors.label')} placeholder={t('fields.authors.placeholder')} readOnly={isLoading} required={isRequiredFromZod(VideoValidationClient.shape.authors)} {...form.getInputProps('authors')} />
+					<FileInput label={t('fields.video_file.label')} placeholder={t('fields.video_file.placeholder')} readOnly={isLoading} required={isRequiredFromZod(VideoValidationClient.shape.video_file)} {...form.getInputProps('video_file')} />
+					<FileInput label={t('fields.featured_image.label')} placeholder={t('fields.featured_image.placeholder')} readOnly={isLoading} required={isRequiredFromZod(VideoValidationClient.shape.featured_image)} {...form.getInputProps('featured_image')} />
 				</FormSection>
 
 				<FormSection description={t('sections.about.description')} title={t('sections.about.title')}>
-					<Textarea label={t('fields.introduction.label')} placeholder={t('fields.introduction.placeholder')} readOnly={isLoading} {...form.getInputProps('introduction')} autosize />
-					<Textarea label={t('fields.description.label')} placeholder={t('fields.description.placeholder')} readOnly={isLoading} {...form.getInputProps('description')} autosize />
+					<Textarea label={t('fields.introduction.label')} placeholder={t('fields.introduction.placeholder')} readOnly={isLoading} required={isRequiredFromZod(VideoValidationClient.shape.introduction)} {...form.getInputProps('introduction')} autosize />
+					<Textarea label={t('fields.description.label')} placeholder={t('fields.description.placeholder')} readOnly={isLoading} required={isRequiredFromZod(VideoValidationClient.shape.description)} {...form.getInputProps('description')} autosize />
 				</FormSection>
 
 				<FormSection description={t('sections.metadata.description')} title={t('sections.metadata.title')}>
-					<TagsInput data={topicOptions} label={t('fields.topics.label')} placeholder={t('fields.topics.placeholder')} readOnly={isLoading} {...form.getInputProps('topics')} />
+					<TagsInput data={topicOptions} label={t('fields.topics.label')} placeholder={t('fields.topics.placeholder')} readOnly={isLoading} required={isRequiredFromZod(VideoValidationClient.shape.topics)} {...form.getInputProps('topics')} />
 					<Space h="md" />
-					<Select data={sectionOptions} label={t('fields.section.label')} placeholder={t('fields.section.placeholder')} readOnly={isLoading} {...form.getInputProps('section')} />
+					<Select data={sectionOptions} label={t('fields.section.label')} placeholder={t('fields.section.placeholder')} readOnly={isLoading} required={isRequiredFromZod(VideoValidationClient.shape.section)} {...form.getInputProps('section')} />
 				</FormSection>
 
 				<FormSection description={t('sections.privacy.description')} title={t('sections.privacy.title')}>
 					<Anchor href="/files/academia-spg-declaracao-cedencia-direitos.pdf" target="_blank">{t('sections.privacy.rights_declaration_link')}</Anchor>
 					<Space h="xl" />
-					<FileInput label={t('fields.declaration_file.label')} placeholder={t('fields.declaration_file.placeholder')} readOnly={isLoading} {...form.getInputProps('declaration_file')} />
+					<FileInput label={t('fields.declaration_file.label')} placeholder={t('fields.declaration_file.placeholder')} readOnly={isLoading} required={isRequiredFromZod(VideoValidationClient.shape.declaration_file)} {...form.getInputProps('declaration_file')} />
 					<Space h="md" />
-					<Checkbox label={t('fields.rgpd_toggle.label')} {...form.getInputProps('rgpd_toggle', { type: 'checkbox' })} />
+					<Checkbox label={t('fields.rgpd_toggle.label')} required={isRequiredFromZod(VideoValidationClient.shape.rgpd_toggle)} {...form.getInputProps('rgpd_toggle', { type: 'checkbox' })} />
 				</FormSection>
 
 				{isDirty && <Button disabled={!isValid} loading={isLoading} type="submit">{t('actions.submit.label')}</Button>}

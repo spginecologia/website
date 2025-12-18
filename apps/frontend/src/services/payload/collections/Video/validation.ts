@@ -22,10 +22,10 @@ export const VideoValidationCommon = {
 		.max(150, { message: 'A introdução deve explicar resumidamente o conteúdo do vídeo' }),
 
 	rgpd_toggle: z
-		.boolean({ message: 'Último Nome é um campo obrigatório.' }),
+		.boolean(),
 
 	section: z
-		.enum([...VideoOptions.section.map(item => item.value)] as [string, ...string[]], { message: 'Último Nome é um campo obrigatório.' }),
+		.string(),
 
 	title: z
 		.string({ message: 'O vídeo precisa de um título' })

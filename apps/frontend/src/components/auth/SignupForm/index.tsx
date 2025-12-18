@@ -42,15 +42,12 @@ export function SignupForm() {
 		initialValues: SignupFormDefault,
 		onValuesChange: () => {
 			setIsError(false);
+			const validationResult = form.validate();
+			console.log('Form validation result:', validationResult);
 		},
 		validate: zod4Resolver(SignupFormValidation),
 		validateInputOnChange: true,
 	});
-
-	useEffect(() => {
-		const validationResult = form.validate();
-		console.log('Form validation result:', validationResult);
-	}, [form.values]);
 
 	//
 	// C. Handle actions
