@@ -60,6 +60,7 @@ export async function POST(request: Request) {
 		const newUserData = await payload.create({
 			collection: 'users',
 			data: {
+				account_role: 'member',
 				account_status: 'waiting',
 				address_1: validatedData.address_1,
 				address_2: validatedData.address_2,
@@ -145,7 +146,7 @@ export async function POST(request: Request) {
 		//
 	}
 	catch (err) {
-		console.error(err.cause);
+		console.error(err);
 		return new Response(err.message, { status: 401 });
 	}
 }

@@ -39,7 +39,8 @@ export const SignupFormValidation = z
 
 		billing_tax_id: z
 			.string()
-			.refine(value => validateTaxId(value, true, ['singular', 'company']), { message: 'NIF (Faturação) deve ser um número de 9 caracteres.' }),
+			.refine(value => validateTaxId(value, true, ['singular', 'company']), { message: 'NIF (Faturação) deve ser um número de 9 caracteres.' })
+			.nullish(),
 
 		birthday: z
 			.string()

@@ -175,7 +175,7 @@ export function SignupForm() {
 			{(!isLoading && isError) && (
 				<>
 					<Space h={5} />
-					<Text variant="error">{t('error.message')}</Text>
+					<Text variant="error">{t('error')}</Text>
 				</>
 			)}
 		</Paper>
