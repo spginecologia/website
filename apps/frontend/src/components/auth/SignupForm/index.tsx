@@ -3,6 +3,7 @@
 /* * */
 
 import { FormSection } from '@/components/common/FormSection';
+import { isRequiredFromZod } from '@/services/general/is-required-from-zod';
 import { SignupFormDefault } from '@/services/payload/collections/Signup/default';
 import { type SignupResponse } from '@/services/payload/collections/Signup/types';
 import { SignupFormValidation } from '@/services/payload/collections/Signup/validation';
@@ -37,13 +38,19 @@ export function SignupForm() {
 	// B. Setup form
 
 	const form = useForm({
-		clearInputErrorOnChange: true,
+		// clearInputErrorOnChange: true,
 		initialValues: SignupFormDefault,
 		onValuesChange: () => {
 			setIsError(false);
 		},
 		validate: zod4Resolver(SignupFormValidation),
+		validateInputOnChange: true,
 	});
+
+	useEffect(() => {
+		const validationResult = form.validate();
+		console.log('Form validation result:', validationResult);
+	}, [form.values]);
 
 	//
 	// C. Handle actions
@@ -123,26 +130,26 @@ export function SignupForm() {
 			<FormSection>
 				<div style={{ display: 'grid', gap: 10, gridTemplateColumns: '1fr 2fr' }}>
 					<Select data={UserOptions.title} label={t('fields.title.label')} placeholder={t('fields.title.placeholder')} {...form.getInputProps('title')} />
-					<TextInput label={t('fields.first_name.label')} placeholder={t('fields.first_name.placeholder')} {...form.getInputProps('first_name')} />
+					<TextInput label={t('fields.first_name.label')} placeholder={t('fields.first_name.placeholder')} required={isRequiredFromZod(SignupFormValidation.shape.first_name)} {...form.getInputProps('first_name')} />
 				</div>
-				<TextInput label={t('fields.last_name.label')} placeholder={t('fields.last_name.placeholder')} {...form.getInputProps('last_name')} />
-				<TextInput label={t('fields.phone.label')} placeholder={t('fields.phone.placeholder')} {...form.getInputProps('phone')} type="tel" />
-				<TextInput label={t('fields.email.label')} placeholder={t('fields.email.placeholder')} {...form.getInputProps('email')} type="email" />
+				<TextInput label={t('fields.last_name.label')} placeholder={t('fields.last_name.placeholder')} required={isRequiredFromZod(SignupFormValidation.shape.last_name)} {...form.getInputProps('last_name')} />
+				<TextInput label={t('fields.phone.label')} placeholder={t('fields.phone.placeholder')} required={isRequiredFromZod(SignupFormValidation.shape.phone)} {...form.getInputProps('phone')} type="tel" />
+				<TextInput label={t('fields.email.label')} placeholder={t('fields.email.placeholder')} required={isRequiredFromZod(SignupFormValidation.shape.email)} {...form.getInputProps('email')} type="email" />
 			</FormSection>
 
 			<FormSection description={t('sections.basic.description')} title={t('sections.basic.title')}>
-				<TextInput description={t('fields.tax_id.description')} label={t('fields.tax_id.label')} placeholder={t('fields.tax_id.placeholder')} {...form.getInputProps('tax_id')} />
-				<TextInput description={t('fields.medical_id.description')} label={t('fields.medical_id.label')} placeholder={t('fields.medical_id.placeholder')} {...form.getInputProps('medical_id')} />
-				<DateInput label={t('fields.birthday.label')} placeholder={t('fields.birthday.placeholder')} {...form.getInputProps('birthday')} valueFormat="YYYY-MM-DD" />
+				<TextInput description={t('fields.tax_id.description')} label={t('fields.tax_id.label')} placeholder={t('fields.tax_id.placeholder')} required={isRequiredFromZod(SignupFormValidation.shape.tax_id)} {...form.getInputProps('tax_id')} />
+				<TextInput description={t('fields.medical_id.description')} label={t('fields.medical_id.label')} placeholder={t('fields.medical_id.placeholder')} required={isRequiredFromZod(SignupFormValidation.shape.medical_id)} {...form.getInputProps('medical_id')} />
+				<DateInput label={t('fields.birthday.label')} placeholder={t('fields.birthday.placeholder')} required={isRequiredFromZod(SignupFormValidation.shape.birthday)} {...form.getInputProps('birthday')} valueFormat="YYYY-MM-DD" />
 			</FormSection>
 
 			<FormSection description={t('sections.billing.description')} title={t('sections.billing.title')}>
-				<TextInput description={t('fields.billing_name.description')} label={t('fields.billing_name.label')} placeholder={t('fields.billing_name.placeholder')} {...form.getInputProps('billing_name')} />
-				<TextInput description={t('fields.billing_tax_id.description')} label={t('fields.billing_tax_id.label')} placeholder={t('fields.billing_tax_id.placeholder')} type="number" {...form.getInputProps('billing_tax_id')} />
-				<TextInput description={t('fields.billing_address_1.description')} label={t('fields.billing_address_1.label')} placeholder={t('fields.billing_address_1.placeholder')} {...form.getInputProps('billing_address_1')} />
-				<TextInput label={t('fields.billing_address_2.label')} placeholder={t('fields.billing_address_2.placeholder')} {...form.getInputProps('billing_address_2')} />
-				<TextInput label={t('fields.billing_postal_code.label')} placeholder={t('fields.billing_postal_code.placeholder')} {...form.getInputProps('billing_postal_code')} />
-				<TextInput label={t('fields.billing_city.label')} placeholder={t('fields.billing_city.placeholder')} {...form.getInputProps('billing_city')} />
+				<TextInput description={t('fields.billing_name.description')} label={t('fields.billing_name.label')} placeholder={t('fields.billing_name.placeholder')} required={isRequiredFromZod(SignupFormValidation.shape.billing_name)} {...form.getInputProps('billing_name')} />
+				<TextInput description={t('fields.billing_tax_id.description')} label={t('fields.billing_tax_id.label')} placeholder={t('fields.billing_tax_id.placeholder')} required={isRequiredFromZod(SignupFormValidation.shape.billing_tax_id)} type="number" {...form.getInputProps('billing_tax_id')} />
+				<TextInput description={t('fields.billing_address_1.description')} label={t('fields.billing_address_1.label')} placeholder={t('fields.billing_address_1.placeholder')} required={isRequiredFromZod(SignupFormValidation.shape.billing_address_1)} {...form.getInputProps('billing_address_1')} />
+				<TextInput label={t('fields.billing_address_2.label')} placeholder={t('fields.billing_address_2.placeholder')} required={isRequiredFromZod(SignupFormValidation.shape.billing_address_2)} {...form.getInputProps('billing_address_2')} />
+				<TextInput label={t('fields.billing_postal_code.label')} placeholder={t('fields.billing_postal_code.placeholder')} required={isRequiredFromZod(SignupFormValidation.shape.billing_postal_code)} {...form.getInputProps('billing_postal_code')} />
+				<TextInput label={t('fields.billing_city.label')} placeholder={t('fields.billing_city.placeholder')} required={isRequiredFromZod(SignupFormValidation.shape.billing_city)} {...form.getInputProps('billing_city')} />
 			</FormSection>
 
 			<FormSection description={t('sections.activity.description')} title={t('sections.activity.title')}>
@@ -156,14 +163,14 @@ export function SignupForm() {
 			</FormSection>
 
 			<FormSection description={t('sections.correspondence.description')} title={t('sections.correspondence.title')}>
-				<TextInput label={t('fields.address_1.label')} placeholder={t('fields.address_1.placeholder')} {...form.getInputProps('address_1')} />
-				<TextInput label={t('fields.address_2.label')} placeholder={t('fields.address_2.placeholder')} {...form.getInputProps('address_2')} />
+				<TextInput label={t('fields.address_1.label')} placeholder={t('fields.address_1.placeholder')} required={isRequiredFromZod(SignupFormValidation.shape.address_1)} {...form.getInputProps('address_1')} />
+				<TextInput label={t('fields.address_2.label')} placeholder={t('fields.address_2.placeholder')} required={isRequiredFromZod(SignupFormValidation.shape.address_2)} {...form.getInputProps('address_2')} />
 				<div style={{ display: 'grid', gap: 10, gridTemplateColumns: '1fr 2fr' }}>
-					<TextInput label={t('fields.postal_code.label')} placeholder={t('fields.postal_code.placeholder')} {...form.getInputProps('postal_code')} />
-					<TextInput label={t('fields.city.label')} placeholder={t('fields.city.placeholder')} required {...form.getInputProps('city')} />
+					<TextInput label={t('fields.postal_code.label')} placeholder={t('fields.postal_code.placeholder')} required={isRequiredFromZod(SignupFormValidation.shape.postal_code)} {...form.getInputProps('postal_code')} />
+					<TextInput label={t('fields.city.label')} placeholder={t('fields.city.placeholder')} required={isRequiredFromZod(SignupFormValidation.shape.city)} {...form.getInputProps('city')} />
 				</div>
-				<TextInput label={t('fields.country.label')} placeholder={t('fields.country.placeholder')} {...form.getInputProps('country')} />
-				<Checkbox label={t('fields.send_newsletter.label')} {...form.getInputProps('send_newsletter', { type: 'checkbox' })} />
+				<TextInput label={t('fields.country.label')} placeholder={t('fields.country.placeholder')} required={isRequiredFromZod(SignupFormValidation.shape.country)} {...form.getInputProps('country')} />
+				<Checkbox label={t('fields.send_newsletter.label')} required={isRequiredFromZod(SignupFormValidation.shape.send_newsletter)} {...form.getInputProps('send_newsletter', { type: 'checkbox' })} />
 			</FormSection>
 
 			{isLoading && <Loader />}

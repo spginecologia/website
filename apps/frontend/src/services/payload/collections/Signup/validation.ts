@@ -42,9 +42,9 @@ export const SignupFormValidation = z
 			.refine(value => validateTaxId(value, true, ['singular', 'company']), { message: 'NIF (Faturação) deve ser um número de 9 caracteres.' }),
 
 		birthday: z
-			.date()
-			.nullish()
-			.default(new Date(1900, 0, 1)),
+			.string()
+			.refine(value => new Date(value) < new Date(), { message: 'Data de Nascimento deve ser uma data no passado.' })
+			.refine(value => new Date(value) > new Date(1900, 0, 1), { message: 'Data de Nascimento deve ser uma data após 01/01/1900.' }),
 
 		city: z
 			.string()
@@ -54,37 +54,39 @@ export const SignupFormValidation = z
 			.string({ message: 'País é um campo obrigatório.' }),
 
 		email: z
-			.email({ message: 'Please provide a valid email address.' }),
+			.email({ message: 'Por favor forneça um endereço de email válido.' }),
 
 		first_name: z
 			.string({ message: 'Primeiro Nome é um campo obrigatório.' })
-			.max(25, { message: 'Primeiro Nome deve ser menor ou igual que ${max} caracteres.' }),
+			.max(25, { message: 'Primeiro Nome deve ser menor ou igual que 25 caracteres.' }),
 
 		last_name: z
 			.string({ message: 'Último Nome é um campo obrigatório.' })
-			.max(25, { message: 'Último Nome deve ser menor ou igual que ${max} caracteres.' }),
+			.max(25, { message: 'Último Nome deve ser menor ou igual que 25 caracteres.' }),
 
 		medical_id: z
 			.number(),
 
 		phone: z
 			.string({ message: 'Telefone é um campo obrigatório.' })
-			.min(9, { message: 'Phone deve ser maior ou igual que 9 caracteres.' })
-			.max(13, { message: 'Phone deve ser menor ou igual que 13 caracteres.' }),
+			.min(9, { message: 'Telefone deve ser maior ou igual que 9 caracteres.' })
+			.max(13, { message: 'Telefone deve ser menor ou igual que 13 caracteres.' }),
 
 		postal_code: z
 			.string()
 			.nullish(),
 
 		send_newsletter: z
-			.boolean(),
+			.boolean()
+			.default(true),
 
 		subscribed_sections: z
 			.array(z.enum(UserOptions.subscribed_sections.map(section => section.value) as [string, ...string[]]))
 			.nullish(),
 
 		tax_id: z
-			.string(),
+			.string()
+			.refine(value => validateTaxId(value, true, ['singular']), { message: 'NIF deve ser um número de 9 caracteres. Apenas são aceites NIFs pessoais.' }),
 
 		title: z
 			.enum([...UserOptions.title] as [string, ...string[]])

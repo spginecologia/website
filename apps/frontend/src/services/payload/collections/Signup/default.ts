@@ -13,7 +13,7 @@ export const SignupFormDefault: SignupForm = {
 	billing_name: '',
 	billing_postal_code: '',
 	billing_tax_id: '',
-	birthday: new Date(1950, 0, 1),
+	birthday: '',
 	city: '',
 	country: 'Portugal',
 	email: '',
