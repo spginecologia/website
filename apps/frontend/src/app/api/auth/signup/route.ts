@@ -69,7 +69,7 @@ export async function POST(request: Request) {
 				billing_name: validatedData.billing_name,
 				billing_postal_code: validatedData.billing_postal_code,
 				billing_tax_id: validatedData.billing_tax_id,
-				birthday: validatedData.birthday ? validatedData.birthday.toISOString() : null,
+				birthday: validatedData.birthday || null,
 				city: validatedData.city,
 				country: validatedData.country,
 				email: validatedData.email,
