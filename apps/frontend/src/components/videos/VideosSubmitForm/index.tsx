@@ -7,8 +7,9 @@ import { isRequiredFromZod } from '@/services/general/is-required-from-zod';
 import { VideoDefault } from '@/services/payload/collections/Video/default';
 import { VideoValidationClient } from '@/services/payload/collections/Video/validation';
 import { type PayloadAPIResponse } from '@/types/payload-api-response';
-import { Anchor, Button, Checkbox, FileInput, Paper, Progress, Select, Space, TagsInput, Text, Textarea, TextInput, Title } from '@mantine/core';
+import { Alert, Anchor, Button, Checkbox, Code, FileInput, Paper, Progress, Select, Space, TagsInput, Text, Textarea, TextInput, Title } from '@mantine/core';
 import { useForm } from '@mantine/form';
+import { IconX } from '@tabler/icons-react';
 import { zod4Resolver } from 'mantine-form-zod-resolver';
 import { useTranslations } from 'next-intl';
 import { type Section, type Topic } from 'payload-types';
@@ -25,6 +26,7 @@ export function VideosSubmitForm() {
 
 	const t = useTranslations('videos.VideosSubmitForm');
 
+	const [isError, setIsError] = useState<string>();
 	const [isLoading, setIsLoading] = useState(false);
 	const [isDirty, setIsDirty] = useState(false);
 	const [isValid, setIsValid] = useState(false);
@@ -62,6 +64,7 @@ export function VideosSubmitForm() {
 	const handleSubmit = async (data) => {
 		try {
 			setIsLoading(true);
+			setIsError(undefined);
 			// Construct form data
 			const formData = new FormData();
 			formData.append('_json_data', JSON.stringify(data));
@@ -83,6 +86,7 @@ export function VideosSubmitForm() {
 				}
 				else {
 					console.error('Upload failed', xhr.responseText);
+					setIsError(xhr.responseText || 'XHR generic error. Response status: ' + xhr.status);
 					setIsLoading(false);
 				}
 			};
@@ -165,6 +169,18 @@ export function VideosSubmitForm() {
 					<>
 						<Space h={10} />
 						<Text variant="overline">{t('actions.has_errors')}</Text>
+					</>
+				)}
+
+				{isError && (
+					<>
+						<Space h={10} />
+						<Alert icon={<IconX />} title={t('actions.upload_error.title')} w="100%">
+							<Text size="sm">{t('actions.upload_error.message')}</Text>
+							<Space h={5} />
+							<Code block>{isError}</Code>
+							<Space h={5} />
+						</Alert>
 					</>
 				)}
 

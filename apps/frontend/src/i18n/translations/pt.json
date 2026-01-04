@@ -1416,6 +1416,10 @@
 				"submit": {
 					"label": "Publicar Vídeo"
 				},
+				"upload_error": {
+					"message": "Ocorreu um erro ao enviar o seu vídeo. Por favor tente novamente. Se o erro persistir por favor envie-nos um email com a seguinte informação:",
+					"title": "Não foi possível receber o seu vídeo"
+				},
 				"uploading": "Por favor aguarde enquanto o seu vídeo é enviado: {progress}%"
 			},
 			"description": "Agradecemos o seu interesse em publicar na Academia SPG. Consulte as instruções de publicação. Para qualquer dúvida não hesite em contactar-nos para o email academia@spginecologia.pt",

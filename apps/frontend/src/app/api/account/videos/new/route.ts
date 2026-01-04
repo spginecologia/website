@@ -119,8 +119,13 @@ export async function POST(request: Request) {
 		//
 		// Get the associated Topics data from Payload
 
-		const foundTopics = await payload.find({
+		if (!jsonDataValidationResult.topics?.length) {
+			return new Response('At least one Topic is required', { status: 400 });
+		}
+
+		const existingTopicsResult = await payload.find({
 			collection: 'topics',
+			limit: jsonDataValidationResult.topics.length,
 			where: {
 				title: {
 					in: jsonDataValidationResult.topics,
@@ -128,9 +133,22 @@ export async function POST(request: Request) {
 			},
 		});
 
-		if (!foundTopics.docs?.length) {
-			return new Response('Invalid Topics', { status: 400 });
-		}
+		const existingTopicTitles = new Set(existingTopicsResult.docs.map(topic => topic.title));
+		const missingTopicTitles = jsonDataValidationResult.topics.filter(title => !existingTopicTitles.has(title));
+
+		const createdTopics = await Promise.all(
+			missingTopicTitles.map(title =>
+				payload.create({
+					collection: 'topics',
+					data: { title },
+				}),
+			),
+		);
+
+		const topicIds = [
+			...existingTopicsResult.docs.map(topic => topic.id),
+			...createdTopics.map(topic => topic.id),
+		];
 
 		//
 		// Get the associated Section data from Payload
@@ -168,7 +186,7 @@ export async function POST(request: Request) {
 				section: sectionData.id,
 				status: 'in_review',
 				title: jsonDataValidationResult.title,
-				topics: foundTopics.docs.map(topic => topic.id),
+				topics: topicIds,
 				updatedAt: new Date().toISOString(),
 				video_file: createVideoFileResult.id,
 				views: 0,
@@ -219,6 +237,6 @@ export async function POST(request: Request) {
 	}
 	catch (err) {
 		console.log(err);
-		return Response.json({ message: 'Internal Server Error' }, { status: 500 });
+		return new Response('Internal Server Error', { status: 500 });
 	}
 }

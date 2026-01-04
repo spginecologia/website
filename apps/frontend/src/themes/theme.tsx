@@ -14,7 +14,7 @@ import '@/themes/styles/variables.css';
 /* * */
 
 import { VisibilityToggleIcon } from '@/components/common/VisibilityToggleIcon';
-import { Accordion, Alert, Anchor, Button, Checkbox, createTheme, FileInput, Loader, Notification, NumberInput, Paper, PasswordInput, Progress, SegmentedControl, Select, Skeleton, Table, Text, Textarea, TextInput, Title } from '@mantine/core';
+import { Accordion, Alert, Anchor, Button, Checkbox, Code, createTheme, FileInput, Loader, Notification, NumberInput, Paper, PasswordInput, Progress, SegmentedControl, Select, Skeleton, Table, Text, Textarea, TextInput, Title } from '@mantine/core';
 import { DateInput } from '@mantine/dates';
 import { IconCaretLeftFilled } from '@tabler/icons-react';
 
@@ -26,6 +26,7 @@ import AnchorOverride from '@/themes/overrides/Anchor.module.css';
 import ButtonOverride from '@/themes/overrides/Button.module.css';
 import CheckboxOverride from '@/themes/overrides/Checkbox.module.css';
 import CheckboxGroupOverride from '@/themes/overrides/CheckboxGroup.module.css';
+import CodeOverride from '@/themes/overrides/Code.module.css';
 import DateInputOverride from '@/themes/overrides/DateInput.module.css';
 import FileInputOverride from '@/themes/overrides/FileInput.module.css';
 import LoaderOverride from '@/themes/overrides/Loader.module.css';
@@ -95,6 +96,12 @@ export default createTheme({
 		CheckboxGroup: Checkbox.Group.extend({
 			classNames: {
 				...CheckboxGroupOverride,
+			},
+		}),
+
+		Code: Code.extend({
+			classNames: {
+				...CodeOverride,
 			},
 		}),
 
