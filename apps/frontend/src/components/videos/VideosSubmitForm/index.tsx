@@ -7,7 +7,7 @@ import { isRequiredFromZod } from '@/services/general/is-required-from-zod';
 import { VideoDefault } from '@/services/payload/collections/Video/default';
 import { VideoValidationClient } from '@/services/payload/collections/Video/validation';
 import { type PayloadAPIResponse } from '@/types/payload-api-response';
-import { Anchor, Button, Checkbox, FileInput, Paper, Select, Space, TagsInput, Text, Textarea, TextInput, Title } from '@mantine/core';
+import { Anchor, Button, Checkbox, FileInput, Paper, Progress, Select, Space, TagsInput, Text, Textarea, TextInput, Title } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { zod4Resolver } from 'mantine-form-zod-resolver';
 import { useTranslations } from 'next-intl';
@@ -28,6 +28,8 @@ export function VideosSubmitForm() {
 	const [isLoading, setIsLoading] = useState(false);
 	const [isDirty, setIsDirty] = useState(false);
 	const [isValid, setIsValid] = useState(false);
+
+	const [uploadProgress, setUploadProgress] = useState(0);
 
 	//
 	// B. Fetch data
@@ -60,20 +62,36 @@ export function VideosSubmitForm() {
 	const handleSubmit = async (data) => {
 		try {
 			setIsLoading(true);
+			// Construct form data
 			const formData = new FormData();
 			formData.append('_json_data', JSON.stringify(data));
 			formData.append('video_file', data.video_file);
 			formData.append('declaration_file', data.declaration_file);
 			formData.append('featured_image', data.featured_image);
-			const result = await fetch('/api/account/videos/new', {
-				body: formData,
-				method: 'POST',
-			});
-			console.log(result);
-			const resultData = await result.json();
-			window.location.href = `/academia/videos/${resultData.id}`;
-			// form.reset();
-			setIsLoading(false);
+			// Upload with progress tracking
+			const xhr = new XMLHttpRequest();
+			xhr.upload.onprogress = (event) => {
+				if (event.lengthComputable) {
+					const percent = Math.round((event.loaded / event.total) * 100);
+					setUploadProgress(percent);
+				}
+			};
+			xhr.onload = () => {
+				if (xhr.status >= 200 && xhr.status < 300) {
+					const resultData = JSON.parse(xhr.responseText);
+					window.location.href = `/academia/videos/${resultData.id}`;
+				}
+				else {
+					console.error('Upload failed', xhr.responseText);
+					setIsLoading(false);
+				}
+			};
+			xhr.onerror = () => {
+				console.error('Upload error');
+				setIsLoading(false);
+			};
+			xhr.open('POST', '/api/account/videos/new');
+			xhr.send(formData);
 		}
 		catch (error) {
 			console.log(error);
@@ -133,6 +151,15 @@ export function VideosSubmitForm() {
 				</FormSection>
 
 				{isDirty && <Button disabled={!isValid} loading={isLoading} type="submit">{t('actions.submit.label')}</Button>}
+
+				{isLoading && (
+					<>
+						<Space h="md" />
+						<Text variant="overline">{t('actions.uploading', { progress: uploadProgress })}</Text>
+						<Space h="md" />
+						<Progress value={uploadProgress} animated />
+					</>
+				)}
 
 				{(isDirty && !isValid) && (
 					<>

@@ -17,13 +17,15 @@ export const VideoValidationCommon = {
 
 	introduction: z
 		.string({ message: 'O vídeo precisa de uma introdução' })
-		.max(150, { message: 'A introdução deve explicar resumidamente o conteúdo do vídeo' }),
+		.min(10, { message: 'A introdução deve ser maior ou igual que 10 caracteres.' })
+		.max(150, { message: 'A introdução deve explicar, resumidamente, o conteúdo do vídeo' }),
 
 	rgpd_toggle: z
 		.boolean(),
 
 	section: z
-		.string(),
+		.string()
+		.min(1, { message: 'Selecione uma secção' }),
 
 	title: z
 		.string({ message: 'O vídeo precisa de um título' })

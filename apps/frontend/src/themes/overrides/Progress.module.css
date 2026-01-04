@@ -1,0 +1,10 @@
+/* * */
+/* ROOT */
+
+.root {
+	background-color: var(--color-brand-support-300);
+}
+
+.section {
+	background-color: var(--color-brand-primary-200);
+}

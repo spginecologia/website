@@ -1415,7 +1415,8 @@
 				"has_errors": "Existem erros no preenchimento",
 				"submit": {
 					"label": "Publicar Vídeo"
-				}
+				},
+				"uploading": "Por favor aguarde enquanto o seu vídeo é enviado: {progress}%"
 			},
 			"description": "Agradecemos o seu interesse em publicar na Academia SPG. Consulte as instruções de publicação. Para qualquer dúvida não hesite em contactar-nos para o email academia@spginecologia.pt",
 			"fields": {

@@ -14,7 +14,7 @@ import '@/themes/styles/variables.css';
 /* * */
 
 import { VisibilityToggleIcon } from '@/components/common/VisibilityToggleIcon';
-import { Accordion, Alert, Anchor, Button, Checkbox, createTheme, FileInput, Loader, Notification, NumberInput, Paper, PasswordInput, SegmentedControl, Select, Skeleton, Table, Text, Textarea, TextInput, Title } from '@mantine/core';
+import { Accordion, Alert, Anchor, Button, Checkbox, createTheme, FileInput, Loader, Notification, NumberInput, Paper, PasswordInput, Progress, SegmentedControl, Select, Skeleton, Table, Text, Textarea, TextInput, Title } from '@mantine/core';
 import { DateInput } from '@mantine/dates';
 import { IconCaretLeftFilled } from '@tabler/icons-react';
 
@@ -33,6 +33,7 @@ import NotificationOverride from '@/themes/overrides/Notification.module.css';
 import NumberInputOverride from '@/themes/overrides/NumberInput.module.css';
 import PaperOverride from '@/themes/overrides/Paper.module.css';
 import PasswordInputOverride from '@/themes/overrides/PasswordInput.module.css';
+import ProgressOverride from '@/themes/overrides/Progress.module.css';
 import SegmentedControlOverride from '@/themes/overrides/SegmentedControl.module.css';
 import SelectOverride from '@/themes/overrides/Select.module.css';
 import SkeletonOverride from '@/themes/overrides/Skeleton.module.css';
@@ -147,6 +148,12 @@ export default createTheme({
 			},
 			defaultProps: {
 				visibilityToggleIcon: VisibilityToggleIcon,
+			},
+		}),
+
+		Progress: Progress.extend({
+			classNames: {
+				...ProgressOverride,
 			},
 		}),
 

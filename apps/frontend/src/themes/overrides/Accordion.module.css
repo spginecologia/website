@@ -2,7 +2,7 @@
 /* ROOT */
 
 .root {
-    background-color: var(--color-system-background-100);
+	background-color: var(--color-system-background-100);
 }
 
 /* * */
@@ -17,13 +17,13 @@
 /* CONTROL */
 
 .control {
+	gap: var(--size-spacing-15);
+	align-items: flex-start;
 	padding: var(--size-spacing-20);
 	background-color: var(--color-system-background-100);
-	align-items: flex-start;
-	gap: var(--size-spacing-15);
 }
 
-@media (max-width: 500px) {
+@media (width <= 500px) {
 	.control {
 		padding: var(--size-spacing-20) var(--size-spacing-15);
 	}
@@ -37,7 +37,7 @@
 	color: var(--color-system-text-400);
 }
 
-.item[data-active=true] .chevron {
+.item[data-active="true"] .chevron {
 	transform: rotate(-90deg);
 }
 
@@ -45,11 +45,11 @@
 /* LABEL */
 
 .label {
-	color: var(--color-system-text-100);
-    font-size: var(--font-size-nav);
-    font-weight: var(--font-weight-nav);
+	padding: 0;
 	margin-top: 2px;
-    padding: 0;
+	font-size: var(--font-size-nav);
+	font-weight: var(--font-weight-nav);
+	color: var(--color-system-text-100);
 }
 
 /* * */
@@ -68,7 +68,7 @@
 	padding-top: 0;
 }
 
-@media (max-width: 500px) {
+@media (width <= 500px) {
 	.content {
 		padding: var(--size-spacing-20) var(--size-spacing-15);
 		padding-top: 0;
