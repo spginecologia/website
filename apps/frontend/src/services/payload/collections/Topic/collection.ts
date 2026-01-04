@@ -20,6 +20,7 @@ export const Topics: CollectionConfig = {
 			name: 'title',
 			required: true,
 			type: 'text',
+			unique: true,
 		},
 		{
 			label: 'Descrição',

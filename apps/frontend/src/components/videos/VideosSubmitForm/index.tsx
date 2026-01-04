@@ -70,6 +70,8 @@ export function VideosSubmitForm() {
 				method: 'POST',
 			});
 			console.log(result);
+			const resultData = await result.json();
+			window.location.href = `/academia/videos/${resultData.id}`;
 			// form.reset();
 			setIsLoading(false);
 		}

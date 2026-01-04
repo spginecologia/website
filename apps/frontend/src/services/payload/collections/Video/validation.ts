@@ -12,8 +12,8 @@ export const VideoValidationCommon = {
 		.max(150, { message: 'Autores deve ser menor ou igual que 150 caracteres' }),
 
 	description: z
-		.string({ message: 'Telefone é um campo obrigatório.' })
-		.min(10, { message: 'Phone deve ser maior ou igual que 9 caracteres.' }),
+		.string({ message: 'Descrição é um campo obrigatório.' })
+		.min(10, { message: 'Descrição deve ser maior ou igual que 10 caracteres.' }),
 
 	introduction: z
 		.string({ message: 'O vídeo precisa de uma introdução' })

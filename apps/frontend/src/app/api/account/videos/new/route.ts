@@ -117,27 +117,20 @@ export async function POST(request: Request) {
 		});
 
 		//
-		// Create the video document
+		// Get the associated Topics data from Payload
 
-		const createVideoResult = await payload.create({
-			collection: 'videos',
-			data: {
-				authors: jsonDataValidationResult.authors,
-				createdAt: new Date().toISOString(),
-				declaration_file: createDeclarationFileResult.id,
-				featured_image: createFeaturedImageResult.id,
-				introduction: jsonDataValidationResult.introduction,
-				is_featured: false,
-				publishedAt: new Date().toISOString(),
-				publisher: currentUser.user.id,
-				section: jsonDataValidationResult.section,
-				status: 'in_review',
-				title: jsonDataValidationResult.title,
-				topics: jsonDataValidationResult.topics,
-				updatedAt: new Date().toISOString(),
-				video_file: createVideoFileResult.id,
+		const foundTopics = await payload.find({
+			collection: 'topics',
+			where: {
+				title: {
+					in: jsonDataValidationResult.topics,
+				},
 			},
 		});
+
+		if (!foundTopics.docs?.length) {
+			return new Response('Invalid Topics', { status: 400 });
+		}
 
 		//
 		// Get the associated Section data from Payload
@@ -152,6 +145,38 @@ export async function POST(request: Request) {
 		});
 
 		const sectionData = foundSections.docs?.pop();
+
+		if (!sectionData) {
+			return new Response('Invalid Section', { status: 400 });
+		}
+
+		//
+		// Create the video document
+
+		const createVideoResult = await payload.create({
+			collection: 'videos',
+			data: {
+				authors: jsonDataValidationResult.authors,
+				createdAt: new Date().toISOString(),
+				declaration_file: createDeclarationFileResult.id,
+				description: jsonDataValidationResult.description,
+				featured_image: createFeaturedImageResult.id,
+				introduction: jsonDataValidationResult.introduction,
+				is_featured: false,
+				publishedAt: new Date().toISOString(),
+				publisher: currentUser.user.id,
+				section: sectionData.id,
+				status: 'in_review',
+				title: jsonDataValidationResult.title,
+				topics: foundTopics.docs.map(topic => topic.id),
+				updatedAt: new Date().toISOString(),
+				video_file: createVideoFileResult.id,
+				views: 0,
+			},
+			draft: false,
+		});
+
+		console.log('Created video with ID:', createVideoResult.id);
 
 		//
 		// Send an email notification to the associated Section contact
@@ -186,12 +211,14 @@ export async function POST(request: Request) {
 		//
 		// Send the response to the caller
 
+		console.log('Video creation process completed successfully.');
+
 		return Response.json(createVideoResult);
 
 		//
 	}
 	catch (err) {
 		console.log(err);
-		return Response.error();
+		return Response.json({ message: 'Internal Server Error' }, { status: 500 });
 	}
 }
