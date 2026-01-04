@@ -2,6 +2,7 @@
 
 /* * */
 
+import { AuthWall } from '@/components/auth/AuthWall';
 import { ContentWrapper } from '@/components/common/ContentWrapper';
 import { Section } from '@/components/common/Section';
 import { VideosSubmitForm } from '@/components/videos/VideosSubmitForm';
@@ -14,10 +15,12 @@ export function VideosSubmit() {
 	return (
 		<ContentWrapper variant="support">
 			<Section withTopSpacer="transparent">
-				<div className={styles.grid}>
-					<div />
-					<VideosSubmitForm />
-				</div>
+				<AuthWall>
+					<div className={styles.grid}>
+						<div />
+						<VideosSubmitForm />
+					</div>
+				</AuthWall>
 			</Section>
 		</ContentWrapper>
 	);
