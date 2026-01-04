@@ -16,6 +16,8 @@ export async function GET() {
 
 		const videoFiles = await payload.find({
 			collection: 'videos',
+			limit: 1000,
+			sort: '-publishedAt',
 			where: {
 				status: {
 					equals: 'approved',

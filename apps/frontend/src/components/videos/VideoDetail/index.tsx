@@ -26,8 +26,8 @@ export function VideoDetail({ id }) {
 	//
 	// A. Fetch data
 
-	const { data: videoData } = useSWR<Video>(`/api/videos/${id}`);
-	const { data: allVideosData } = useSWR<PayloadAPIResponse<Video>>(`/api/videos`);
+	const { data: videoData } = useSWR<Video>(`/api/academia/videos/${id}`);
+	const { data: allVideosData } = useSWR<PayloadAPIResponse<Video>>('/api/academia/videos');
 
 	//
 	// B. Render components

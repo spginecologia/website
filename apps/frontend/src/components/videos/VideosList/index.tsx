@@ -31,7 +31,7 @@ export function VideosList() {
 	//
 	// B. Fetch data
 
-	const { data: allVideosData, error: allVideosError, isLoading: allVideosLoading } = useSWR<PayloadAPIResponse<Video>>(`/api/videos?limit=1000&sort=-publishedAt`);
+	const { data: allVideosData, error: allVideosError, isLoading: allVideosLoading } = useSWR<PayloadAPIResponse<Video>>('/api/academia/videos');
 
 	//
 	// C. Transform data

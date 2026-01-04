@@ -27,7 +27,7 @@ export function AcademiaHomeVideos() {
 	//
 	// B. Fetch data
 
-	const { data: allVideosData } = useSWR<PayloadAPIResponse<Video>>(`/api/videos?limit=1000&sort=-publishedAt`);
+	const { data: allVideosData } = useSWR<PayloadAPIResponse<Video>>(`/api/academia/videos?limit=1000&sort=-publishedAt`);
 
 	//
 	// C. Transform data
