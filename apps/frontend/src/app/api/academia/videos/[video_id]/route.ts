@@ -25,7 +25,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ vide
 
 		const videoId = (await params).video_id;
 
-		if (!videoId || typeof videoId !== 'string') return new Response(null, { status: 400 });
+		if (!videoId || typeof videoId !== 'string') return new Response('Invalid video ID', { status: 400 });
 
 		//
 		// Search videos for the current user
@@ -39,9 +39,13 @@ export async function GET(request: Request, { params }: { params: Promise<{ vide
 			},
 		});
 
+		if (!videoFile.docs.length) {
+			return new Response('No video files found matching the provided ID', { status: 404 });
+		}
+
 		console.log(`Fetched ${videoFile.docs.length} video files...`);
 
-		return Response.json(videoFile.docs.pop());
+		return Response.json(videoFile.docs.pop(), { status: 200 });
 
 		//
 	}
