@@ -19,7 +19,7 @@ export const SignupFormDefault: SignupForm = {
 	email: '',
 	first_name: '',
 	last_name: '',
-	medical_id: 0,
+	medical_id: '',
 	phone: '',
 	postal_code: '',
 	send_newsletter: true,

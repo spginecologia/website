@@ -402,7 +402,7 @@ export interface User {
   first_name?: string | null;
   last_name?: string | null;
   tax_id: string;
-  medical_id?: number | null;
+  medical_id?: string | null;
   birthday?: string | null;
   member_since: number;
   /**

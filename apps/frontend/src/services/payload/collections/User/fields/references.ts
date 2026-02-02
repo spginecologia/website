@@ -43,7 +43,7 @@ export const userFieldsReferences: Field[] = [
 			{
 				label: 'Número de Cédula Médica',
 				name: 'medical_id',
-				type: 'number',
+				type: 'text',
 			},
 		],
 		type: 'row',
