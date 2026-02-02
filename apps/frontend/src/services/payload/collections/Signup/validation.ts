@@ -66,7 +66,8 @@ export const SignupFormValidation = z
 			.max(25, { message: 'Último Nome deve ser menor ou igual que 25 caracteres.' }),
 
 		medical_id: z
-			.number(),
+			.string()
+			.max(10, { message: 'Número de Cédula Médica deve ser menor ou igual que 10 caracteres.' }),
 
 		phone: z
 			.string({ message: 'Telefone é um campo obrigatório.' })
