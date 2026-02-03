@@ -8,7 +8,7 @@ import { Button, Loader, Space, Text, TextInput, Title } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { Turnstile } from '@marsidev/react-turnstile';
 import { zod4Resolver } from 'mantine-form-zod-resolver';
-import { useTranslations } from 'next-intl';
+import { useTranslation } from 'react-i18next';
 import { useEffect, useState } from 'react';
 
 import styles from './styles.module.css';
@@ -21,7 +21,7 @@ export function FooterNewsletter() {
 	//
 	// A. Setup variables
 
-	const t = useTranslations('footer.FooterNewsletter');
+	const { t } = useTranslation('footer.FooterNewsletter');
 
 	const [isLoading, setIsLoading] = useState(false);
 	const [isSuccess, setIsSuccess] = useState(false);

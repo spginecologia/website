@@ -4,7 +4,7 @@
 
 import { SpgAcademia } from '@/assets/spg';
 import { IconBooks, IconBrandYoutube, IconBuildingCottage, IconBulb, IconFileCheck, IconListSearch, IconSchool, IconVideoPlus } from '@tabler/icons-react';
-import { useTranslations } from 'next-intl';
+import { useTranslation } from 'react-i18next';
 import Link from 'next/link';
 
 import styles from './styles.module.css';
@@ -30,7 +30,7 @@ export function HeaderAcademia() {
 	//
 	// A. Setup variables
 
-	const t = useTranslations('header.HeaderMenu');
+	const { t } = useTranslation('header.HeaderMenu');
 
 	//
 	// B. Render components

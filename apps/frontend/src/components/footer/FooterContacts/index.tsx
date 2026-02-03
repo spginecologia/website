@@ -3,7 +3,7 @@
 /* * */
 
 import { Facebook, Instagram, LinkedIn } from '@/assets/socials';
-import { useTranslations } from 'next-intl';
+import { useTranslation } from 'react-i18next';
 
 import styles from './styles.module.css';
 
@@ -15,7 +15,7 @@ export function FooterContacts() {
 	//
 	// A. Setup variables
 
-	const t = useTranslations('footer.FooterContacts');
+	const { t } = useTranslation('footer.FooterContacts');
 
 	//
 	// B. Render components

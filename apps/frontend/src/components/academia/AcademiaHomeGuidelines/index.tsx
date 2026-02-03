@@ -6,7 +6,7 @@ import { Card } from '@/components/cards/Card';
 import { Section } from '@/components/common/Section';
 import { type PayloadAPIResponse } from '@/types/payload-api-response';
 import { Button, Title } from '@mantine/core';
-import { useTranslations } from 'next-intl';
+import { useTranslation } from 'react-i18next';
 import Link from 'next/link';
 import { type Guideline } from 'payload-types';
 import { useMemo } from 'react';
@@ -22,7 +22,7 @@ export function AcademiaHomeGuidelines() {
 	//
 	// A. Setup variables
 
-	const t = useTranslations('academia.AcademiaHomeGuidelines');
+	const { t } = useTranslation('academia.AcademiaHomeGuidelines');
 
 	//
 	// B. Fetch data

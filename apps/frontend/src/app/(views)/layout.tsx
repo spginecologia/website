@@ -1,9 +1,9 @@
 /* * */
 
-import { availableFormats } from '@/i18n/config';
+import '@/i18n/config';
+// import { i18nResourceKeysPt } from '@/i18n/resources';
 import { ConfigProviders } from '@/providers/config-providers';
-import { NextIntlClientProvider } from 'next-intl';
-import { getLocale, getMessages } from 'next-intl/server';
+// import { LocaleContextProvider } from '@/providers/locale-providers';
 import { DM_Serif_Display } from 'next/font/google';
 import { NuqsAdapter } from 'nuqs/adapters/next/app';
 
@@ -27,39 +27,22 @@ export const metadata = {
 /* * */
 
 export default async function RootLayout({ children }) {
-	//
-
-	//
-	// A. Fetch data
-
-	const locale = await getLocale();
-	const messages = await getMessages();
-
-	//
-	// B. Render components
-
 	return (
-		<html className={dmSerifDisplay.variable} lang={locale}>
+		<html className={dmSerifDisplay.variable} lang="pt">
 			<head>
 				<meta content="SPG" name="apple-mobile-web-app-title" />
 				<meta content="transparent" name="theme-color" />
 				<link href="https://use.typekit.net/xgs1heq.css" rel="stylesheet" />
 			</head>
 			<body>
-				<NextIntlClientProvider
-					formats={availableFormats}
-					locale={locale}
-					messages={messages}
-				>
-					<NuqsAdapter>
-						<ConfigProviders>
-							{children}
-						</ConfigProviders>
-					</NuqsAdapter>
-				</NextIntlClientProvider>
+				{/* <LocaleContextProvider i18n={{ pt: i18nResourceKeysPt }}> */}
+				<NuqsAdapter>
+					<ConfigProviders>
+						{children}
+					</ConfigProviders>
+				</NuqsAdapter>
+				{/* </LocaleContextProvider> */}
 			</body>
 		</html>
 	);
-
-	//
 }

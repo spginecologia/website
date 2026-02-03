@@ -3,7 +3,7 @@
 /* * */
 
 import { Button, Image, Space, Text, Title } from '@mantine/core';
-import { useTranslations } from 'next-intl';
+import { useTranslation } from 'react-i18next';
 import Link from 'next/link';
 
 import styles from './styles.module.css';
@@ -16,7 +16,7 @@ export function SignupAd() {
 	//
 	// A. Setup variables
 
-	const t = useTranslations('auth.SignupAd');
+	const { t } = useTranslation('auth.SignupAd');
 
 	//
 	// B. Render components

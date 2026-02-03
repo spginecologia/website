@@ -5,7 +5,7 @@
 import { TopicDisplay } from '@/components/topics/TopicDisplay';
 import { Skeleton } from '@mantine/core';
 import { DateTime } from 'luxon';
-import { useTranslations } from 'next-intl';
+import { useTranslation } from 'react-i18next';
 import { type Topic } from 'payload-types';
 import { useMemo } from 'react';
 
@@ -27,7 +27,7 @@ export function VideoDetailAdditionalInfo({ publishDate, topics, views = 1 }: Vi
 	//
 	// A. Setup variables
 
-	const t = useTranslations('videos.VideoDetailAdditionalInfo');
+	const { t } = useTranslation('videos.VideoDetailAdditionalInfo');
 
 	//
 	// B. Transform data

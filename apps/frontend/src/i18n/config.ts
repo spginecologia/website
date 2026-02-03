@@ -1,67 +1,21 @@
-/* * */
-
-import type { Formats } from 'next-intl';
+'use client';
 
 /* * */
 
-export const availableLocales = [
-	{ alias: ['pt-PT', 'pt_PT', 'pt-BR', 'pt_BR', 'pt-GW', 'pt_GW', 'pt-MZ', 'pt_MZ'], enabled: true, value: 'pt' },
-	// { alias: ['en-US', 'en_US', 'en-GB', 'en_GB'], enabled: true, value: 'en' },
-];
-
-export const enabledLocaleCodes = availableLocales.filter(item => item.enabled).map(({ value }) => value);
-export const enabledLocaleAliases = availableLocales.filter(item => item.enabled).flatMap(({ alias }) => alias);
-export const allEnabledLocaleCodesAndAliases = [...enabledLocaleCodes, ...enabledLocaleAliases];
-
-export const defaultLocaleCode = 'pt';
-export const defaultLocaleAliases = availableLocales.find(item => item.value === defaultLocaleCode)?.alias || [];
-export const defaultLocaleCodesAndAliases = [defaultLocaleCode, ...defaultLocaleAliases];
+import { i18nResourceKeysPt } from '@/i18n/resources';
+import i18next from 'i18next';
+import ICU from 'i18next-icu';
+import { initReactI18next } from 'react-i18next';
 
 /* * */
 
-export const availableFormats: Partial<Formats> = {
-	dateTime: {
-		dayLong: {
-			day: '2-digit',
+i18next
+	.use(ICU)
+	.use(initReactI18next)
+	.init({
+		debug: true,
+		fallbackLng: 'pt',
+		resources: {
+			pt: i18nResourceKeysPt,
 		},
-		dayShort: {
-			day: 'numeric',
-		},
-		full: {
-			day: '2-digit',
-			month: 'long',
-			weekday: 'long',
-			year: 'numeric',
-		},
-		monthLong: {
-			month: 'long',
-		},
-		monthShort: {
-			month: 'short',
-		},
-		yearLong: {
-			year: 'numeric',
-		},
-		yearShort: {
-			year: '2-digit',
-		},
-	},
-	number: {
-		currency_euro: {
-			currency: 'EUR',
-			currencySign: 'standard',
-			style: 'currency',
-		},
-		kilometers: {
-			maximumFractionDigits: 2,
-			style: 'unit',
-			unit: 'kilometer',
-			unitDisplay: 'short',
-		},
-		percentage: {
-			maximumFractionDigits: 2,
-			style: 'unit',
-			unit: 'percent',
-		},
-	},
-};
+	});

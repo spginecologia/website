@@ -13,7 +13,7 @@ import { DateInput } from '@mantine/dates';
 import { useForm } from '@mantine/form';
 import { IconRosetteDiscountCheckFilled, IconUserHeart } from '@tabler/icons-react';
 import { zod4Resolver } from 'mantine-form-zod-resolver';
-import { useTranslations } from 'next-intl';
+import { useTranslation } from 'react-i18next';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
@@ -27,7 +27,7 @@ export function SignupForm() {
 	//
 	// A. Setup variables
 
-	const t = useTranslations('auth.SignupForm');
+	const { t } = useTranslation('auth.SignupForm');
 
 	const [isLoading, setIsLoading] = useState(false);
 	const [isError, setIsError] = useState(false);

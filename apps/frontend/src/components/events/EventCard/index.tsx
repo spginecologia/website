@@ -5,7 +5,7 @@ import { CardWrapper } from '@/components/cards/CardWrapper';
 import { DateRibbon } from '@/components/events/DateRibbon';
 import { TopicDisplay } from '@/components/topics/TopicDisplay';
 import { Text, Title } from '@mantine/core';
-import { useTranslations } from 'next-intl';
+import { useTranslation } from 'react-i18next';
 import { type Topic } from 'payload-types';
 
 import styles from './styles.module.css';
@@ -29,7 +29,7 @@ export function EventCard({ coverSrc, endDate, href, startDate, title, topic }: 
 	//
 	// A. Setup variables
 
-	const t = useTranslations('events.EventCard');
+	const { t } = useTranslation('events.EventCard');
 
 	//
 	// B. Render components

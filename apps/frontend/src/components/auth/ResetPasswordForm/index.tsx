@@ -8,7 +8,7 @@ import { ResetPasswordValidation } from '@/services/payload/collections/ResetPas
 import { Button, Loader, Paper, PasswordInput, Space, Text, Title } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { zod4Resolver } from 'mantine-form-zod-resolver';
-import { useTranslations } from 'next-intl';
+import { useTranslation } from 'react-i18next';
 import { useMemo, useState } from 'react';
 
 import styles from './styles.module.css';
@@ -21,7 +21,7 @@ export function ResetPasswordForm() {
 	//
 	// A. Setup variables
 
-	const t = useTranslations('auth.ResetPasswordForm');
+	const { t } = useTranslation('auth.ResetPasswordForm');
 
 	const [isLoading, setIsLoading] = useState(false);
 	const [isError, setIsError] = useState(false);

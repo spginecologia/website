@@ -11,7 +11,7 @@ import { Alert, Button, Loader, Paper, Space, Text, TextInput, Title } from '@ma
 import { useForm } from '@mantine/form';
 import { IconInfoCircle, IconUserHeart } from '@tabler/icons-react';
 import { zod4Resolver } from 'mantine-form-zod-resolver';
-import { useTranslations } from 'next-intl';
+import { useTranslation } from 'react-i18next';
 import { useEffect, useState } from 'react';
 
 import styles from './styles.module.css';
@@ -24,7 +24,7 @@ export function ForgotPasswordForm() {
 	//
 	// A. Setup variables
 
-	const t = useTranslations('auth.ForgotPasswordForm');
+	const { t } = useTranslation('auth.ForgotPasswordForm');
 
 	const [isLoading, setIsLoading] = useState(false);
 	const [isError, setIsError] = useState(false);

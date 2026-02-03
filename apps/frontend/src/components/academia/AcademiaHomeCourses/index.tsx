@@ -6,7 +6,7 @@ import { Section } from '@/components/common/Section';
 import { CourseCard } from '@/components/courses/CourseCard';
 import { type PayloadAPIResponse } from '@/types/payload-api-response';
 import { Button, Title } from '@mantine/core';
-import { useTranslations } from 'next-intl';
+import { useTranslation } from 'react-i18next';
 import Link from 'next/link';
 import { type Course } from 'payload-types';
 import { useMemo } from 'react';
@@ -22,7 +22,7 @@ export function AcademiaHomeCourses() {
 	//
 	// A. Setup variables
 
-	const t = useTranslations('academia.AcademiaHomeCourses');
+	const { t } = useTranslation('academia.AcademiaHomeCourses');
 
 	//
 	// B. Fetch data

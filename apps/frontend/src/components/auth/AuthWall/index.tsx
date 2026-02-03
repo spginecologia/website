@@ -5,7 +5,7 @@
 import { payloadAccessControl } from '@/services/payload/utils/payload-access-control';
 import { type PayloadMeResponse } from '@/types/payload-api-response';
 import { Button, Image, Skeleton, Text } from '@mantine/core';
-import { useTranslations } from 'next-intl';
+import { useTranslation } from 'react-i18next';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { type User } from 'payload-types';
@@ -45,7 +45,7 @@ export function AuthWall({ children, invisible, redirect, roles }: PropsWithChil
 	// A. Setup variables
 
 	const router = useRouter();
-	const t = useTranslations('auth.AuthWall');
+	const { t } = useTranslation('auth.AuthWall');
 
 	//
 	// B. Fetch data

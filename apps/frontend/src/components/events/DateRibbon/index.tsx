@@ -1,7 +1,7 @@
 /* * */
 
 import { Skeleton } from '@mantine/core';
-import { useTranslations } from 'next-intl';
+import { useTranslation } from 'react-i18next';
 
 import styles from './styles.module.css';
 
@@ -19,7 +19,7 @@ export function DateRibbon({ date }: Props) {
 	//
 	// A. Setup variables
 
-	const t = useTranslations('events.DateRibbon');
+	const { t } = useTranslation('events.DateRibbon');
 
 	//
 	// B. Render components

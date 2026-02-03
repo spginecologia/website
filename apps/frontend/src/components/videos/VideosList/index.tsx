@@ -12,7 +12,7 @@ import { VideoCard } from '@/components/videos/VideoCard';
 import { VideoCardFeatured } from '@/components/videos/VideoCardFeatured';
 import { PayloadAPIResponse } from '@/types/payload-api-response';
 import { Title } from '@mantine/core';
-import { useTranslations } from 'next-intl';
+import { useTranslation } from 'react-i18next';
 import { useMemo } from 'react';
 import useSWR from 'swr';
 
@@ -26,7 +26,7 @@ export function VideosList() {
 	//
 	// A. Setup variables
 
-	const t = useTranslations('videos.VideosList');
+	const { t } = useTranslation('videos.VideosList');
 
 	//
 	// B. Fetch data

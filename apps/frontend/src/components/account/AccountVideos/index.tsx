@@ -2,7 +2,7 @@
 
 import { AccountVideosList } from '@/components/account/AccountVideosList';
 import { Paper, Space, Text, Title } from '@mantine/core';
-import { useTranslations } from 'next-intl';
+import { useTranslation } from 'react-i18next';
 
 /* * */
 
@@ -12,7 +12,7 @@ export function AccountVideos() {
 	//
 	// A. Setup variables
 
-	const t = useTranslations('account.AccountVideos');
+	const { t } = useTranslation('account.AccountVideos');
 
 	//
 	// B. Render components

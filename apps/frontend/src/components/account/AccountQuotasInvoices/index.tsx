@@ -5,7 +5,7 @@
 import { OpenInvoice } from '@/components/account/OpenInvoice';
 import { type PayloadMeResponse } from '@/types/payload-api-response';
 import { Table, TableData, Text } from '@mantine/core';
-import { useTranslations } from 'next-intl';
+import { useTranslation } from 'react-i18next';
 import { useMemo } from 'react';
 import useSWR from 'swr';
 
@@ -17,7 +17,7 @@ export function AccountQuotasInvoices() {
 	//
 	// A. Setup variables
 
-	const t = useTranslations('account.AccountQuotasInvoices');
+	const { t } = useTranslation('account.AccountQuotasInvoices');
 
 	//
 	// B. Fetch data

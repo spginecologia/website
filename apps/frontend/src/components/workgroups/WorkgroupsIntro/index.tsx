@@ -2,7 +2,7 @@
 
 import { Section } from '@/components/common/Section';
 import { Image, Text, Title } from '@mantine/core';
-import { useTranslations } from 'next-intl';
+import { useTranslation } from 'react-i18next';
 
 import styles from './styles.module.css';
 
@@ -14,7 +14,7 @@ export function WorkgroupsIntro() {
 	//
 	// A. Setup variables
 
-	const t = useTranslations('workgroups.WorkgroupsIntro');
+	const { t } = useTranslation('workgroups.WorkgroupsIntro');
 
 	//
 	// B. Render components

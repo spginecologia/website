@@ -9,7 +9,7 @@ import { Alert, Anchor, Button, Loader, Paper, Space, Text, TextInput, Title } f
 import { useForm } from '@mantine/form';
 import { IconSparkles } from '@tabler/icons-react';
 import { zod4Resolver } from 'mantine-form-zod-resolver';
-import { useTranslations } from 'next-intl';
+import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
 
 import styles from './styles.module.css';
@@ -22,7 +22,7 @@ export function LoginForm() {
 	//
 	// A. Setup variables
 
-	const t = useTranslations('auth.LoginForm');
+	const { t } = useTranslation('auth.LoginForm');
 
 	const [isLoading, setIsLoading] = useState(false);
 	const [isError, setIsError] = useState(false);

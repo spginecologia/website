@@ -4,7 +4,7 @@ import { getUserDisplayName } from '@/services/general/get-user-display-name';
 import { getUserGenderFromTitle } from '@/services/general/get-user-gender-from-title';
 import { type PayloadMeResponse } from '@/types/payload-api-response';
 import { Skeleton, Text, Title } from '@mantine/core';
-import { useTranslations } from 'next-intl';
+import { useTranslation } from 'react-i18next';
 import useSWR from 'swr';
 
 import styles from './styles.module.css';
@@ -17,7 +17,7 @@ export function AccountIntro() {
 	//
 	// A. Setup variables
 
-	const t = useTranslations('account.AccountIntro');
+	const { t } = useTranslation('account.AccountIntro');
 
 	//
 	// B. Fetch data

@@ -2,7 +2,7 @@
 
 /* * */
 
-import { useTranslations } from 'next-intl';
+import { useTranslation } from 'react-i18next';
 import Link from 'next/link';
 
 import styles from './styles.module.css';
@@ -15,7 +15,7 @@ export function FooterLegal() {
 	//
 	// A. Setup variables
 
-	const t = useTranslations('footer.FooterLegal');
+	const { t } = useTranslation('footer.FooterLegal');
 
 	//
 	// B. Render components

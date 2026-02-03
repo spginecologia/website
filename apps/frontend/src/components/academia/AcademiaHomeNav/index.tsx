@@ -3,7 +3,7 @@
 /* * */
 
 import { Section } from '@/components/common/Section';
-import { useTranslations } from 'next-intl';
+import { useTranslation } from 'react-i18next';
 
 import styles from './styles.module.css';
 
@@ -26,7 +26,7 @@ export function AcademiaHomeNav() {
 	//
 	// A. Setup variables
 
-	const t = useTranslations('academia.AcademiaHomeNav');
+	const { t } = useTranslation('academia.AcademiaHomeNav');
 
 	//
 	// B. Render components

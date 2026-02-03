@@ -4,19 +4,14 @@ import { type CollectionConfig } from 'payload';
 
 /* * */
 
-export const Media: CollectionConfig = {
+export const CourseFiles: CollectionConfig = {
 
 	access: {
 		create: () => true,
 		read: () => true,
 	},
 
-	fields: [
-		{
-			name: 'alt',
-			type: 'text',
-		},
-	],
+	fields: [],
 
 	hooks: {
 		beforeOperation: [
@@ -28,11 +23,12 @@ export const Media: CollectionConfig = {
 		],
 	},
 
-	slug: 'media',
-
-	upload: {
-		mimeTypes: ['image/*', 'video/*', 'audio/*'],
-		staticDir: 'media',
+	labels: {
+		plural: 'Curso (Ficheiros)',
+		singular: 'Curso (Ficheiro)',
 	},
+
+	slug: 'course-files',
+	upload: true,
 
 };

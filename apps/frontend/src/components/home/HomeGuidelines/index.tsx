@@ -9,7 +9,7 @@ import { NoDataDisplay } from '@/components/common/NoDataDisplay';
 import { Section } from '@/components/common/Section';
 import { PayloadAPIResponse } from '@/types/payload-api-response';
 import { Title } from '@mantine/core';
-import { useTranslations } from 'next-intl';
+import { useTranslation } from 'react-i18next';
 import { type Guideline } from 'payload-types';
 import { useMemo } from 'react';
 import useSWR from 'swr';
@@ -24,7 +24,7 @@ export function HomeGuidelines() {
 	//
 	// A. Setup variables
 
-	const t = useTranslations('home.HomeGuidelines');
+	const { t } = useTranslation('home.HomeGuidelines');
 
 	//
 	// B. Fetch data

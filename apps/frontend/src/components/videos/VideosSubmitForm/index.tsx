@@ -11,7 +11,7 @@ import { Alert, Anchor, Button, Checkbox, Code, FileInput, Paper, Progress, Sele
 import { useForm } from '@mantine/form';
 import { IconX } from '@tabler/icons-react';
 import { zod4Resolver } from 'mantine-form-zod-resolver';
-import { useTranslations } from 'next-intl';
+import { useTranslation } from 'react-i18next';
 import { type Section, type Topic } from 'payload-types';
 import { useMemo, useState } from 'react';
 import useSWR from 'swr';
@@ -24,7 +24,7 @@ export function VideosSubmitForm() {
 	//
 	// A. Setup variables
 
-	const t = useTranslations('videos.VideosSubmitForm');
+	const { t } = useTranslation('videos.VideosSubmitForm');
 
 	const [isError, setIsError] = useState<string>();
 	const [isLoading, setIsLoading] = useState(false);

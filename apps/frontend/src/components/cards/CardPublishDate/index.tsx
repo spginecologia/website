@@ -1,7 +1,7 @@
 /* * */
 
 import { Skeleton } from '@mantine/core';
-import { useTranslations } from 'next-intl';
+import { useTranslation } from 'react-i18next';
 
 import styles from './styles.module.css';
 
@@ -19,7 +19,7 @@ export function CardPublishDate({ date }: Props) {
 	//
 	// A. Setup variables
 
-	const t = useTranslations('common.CardPublishDate');
+	const { t } = useTranslation('common.CardPublishDate');
 
 	//
 	// B. Render components

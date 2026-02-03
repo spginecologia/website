@@ -4,7 +4,7 @@
 
 import { type PayloadMeResponse } from '@/types/payload-api-response';
 import { Text } from '@mantine/core';
-import { useTranslations } from 'next-intl';
+import { useTranslation } from 'react-i18next';
 import Link from 'next/link';
 import useSWR from 'swr';
 
@@ -16,7 +16,7 @@ export function AccountQuotasRefresh() {
 	//
 	// A. Setup variables
 
-	const t = useTranslations('account.AccountQuotasRefresh');
+	const { t } = useTranslation('account.AccountQuotasRefresh');
 
 	//
 	// B. Fetch data

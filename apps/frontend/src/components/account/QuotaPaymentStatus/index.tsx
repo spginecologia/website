@@ -2,7 +2,7 @@
 
 import { UserQuotaPaymentStatus } from '@/services/payload/collections/User/options';
 import { IconAlertSquareFilled, IconArrowForwardUp, IconCheck, IconFlag3Filled, IconGift, IconX } from '@tabler/icons-react';
-import { useTranslations } from 'next-intl';
+import { useTranslation } from 'react-i18next';
 
 import styles from './styles.module.css';
 
@@ -21,7 +21,7 @@ export function QuotaPaymentStatus({ paymentLinkUrl, status }: Props) {
 	//
 	// A. Setup variables
 
-	const t = useTranslations('account.QuotaPaymentStatus');
+	const { t } = useTranslation('account.QuotaPaymentStatus');
 
 	//
 	// B. Render components

@@ -10,7 +10,7 @@ import { Section } from '@/components/common/Section';
 import { EventCard } from '@/components/events/EventCard';
 import { PayloadAPIResponse } from '@/types/payload-api-response';
 import { Title } from '@mantine/core';
-import { useTranslations } from 'next-intl';
+import { useTranslation } from 'react-i18next';
 import { useMemo } from 'react';
 import useSWR from 'swr';
 
@@ -24,7 +24,7 @@ export function HomeEvents() {
 	//
 	// A. Setup variables
 
-	const t = useTranslations('home.HomeEvents');
+	const { t } = useTranslation('home.HomeEvents');
 
 	//
 	// B. Fetch data

@@ -7,7 +7,7 @@ import type { DataFromGlobalSlug } from 'payload';
 import { Section } from '@/components/common/Section';
 import { SocietySocialBodiesMember } from '@/components/society/SocietySocialBodiesMember';
 import { Image, Title } from '@mantine/core';
-import { useTranslations } from 'next-intl';
+import { useTranslation } from 'react-i18next';
 import useSWR from 'swr';
 
 import styles from './styles.module.css';
@@ -20,7 +20,7 @@ export function SectionDetailSocialBodies() {
 	//
 	// A. Setup variables
 
-	const t = useTranslations('society.SocietySocialBodies');
+	const { t } = useTranslation('society.SocietySocialBodies');
 
 	//
 	// B. Fetch data

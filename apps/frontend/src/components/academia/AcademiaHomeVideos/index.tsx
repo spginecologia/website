@@ -6,7 +6,7 @@ import { Section } from '@/components/common/Section';
 import { VideoCardFeatured } from '@/components/videos/VideoCardFeatured';
 import { type PayloadAPIResponse } from '@/types/payload-api-response';
 import { Button, Title } from '@mantine/core';
-import { useTranslations } from 'next-intl';
+import { useTranslation } from 'react-i18next';
 import Link from 'next/link';
 import { type Video } from 'payload-types';
 import { useMemo } from 'react';
@@ -22,7 +22,7 @@ export function AcademiaHomeVideos() {
 	//
 	// A. Setup variables
 
-	const t = useTranslations('academia.AcademiaHomeVideos');
+	const { t } = useTranslation('academia.AcademiaHomeVideos');
 
 	//
 	// B. Fetch data

@@ -13,7 +13,7 @@ import { DateInput } from '@mantine/dates';
 import { useForm } from '@mantine/form';
 import { zod4Resolver } from 'mantine-form-zod-resolver';
 import { mergekit } from 'mergekit';
-import { useTranslations } from 'next-intl';
+import { useTranslation } from 'react-i18next';
 import { useEffect, useState } from 'react';
 import useSWR from 'swr';
 
@@ -25,7 +25,7 @@ export function AccountProfile() {
 	//
 	// A. Setup variables
 
-	const t = useTranslations('account.AccountProfile');
+	const { t } = useTranslation('account.AccountProfile');
 
 	const [isLoading, setIsLoading] = useState(false);
 	const [isDirty, setIsDirty] = useState(false);

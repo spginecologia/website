@@ -12,7 +12,7 @@ import { NewsCard } from '@/components/news/NewsCard';
 import { NewsCardFeatured } from '@/components/news/NewsCardFeatured';
 import { PayloadAPIResponse } from '@/types/payload-api-response';
 import { Title } from '@mantine/core';
-import { useTranslations } from 'next-intl';
+import { useTranslation } from 'react-i18next';
 import { useMemo } from 'react';
 import useSWR from 'swr';
 
@@ -26,7 +26,7 @@ export function NewsList() {
 	//
 	// A. Setup variables
 
-	const t = useTranslations('news.NewsList');
+	const { t } = useTranslation('news.NewsList');
 
 	//
 	// B. Fetch data

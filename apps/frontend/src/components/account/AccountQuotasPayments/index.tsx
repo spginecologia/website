@@ -5,7 +5,7 @@
 import { QuotaPaymentStatus } from '@/components/account/QuotaPaymentStatus';
 import { PayloadMeResponse } from '@/types/payload-api-response';
 import { Table, TableData, Text } from '@mantine/core';
-import { useTranslations } from 'next-intl';
+import { useTranslation } from 'react-i18next';
 import { useMemo } from 'react';
 import useSWR from 'swr';
 
@@ -17,7 +17,7 @@ export function AccountQuotasPayments() {
 	//
 	// A. Setup variables
 
-	const t = useTranslations('account.AccountQuotasPayments');
+	const { t } = useTranslation('account.AccountQuotasPayments');
 
 	//
 	// B. Fetch data

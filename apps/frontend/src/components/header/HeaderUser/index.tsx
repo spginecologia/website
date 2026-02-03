@@ -5,7 +5,7 @@
 import { Loader } from '@/components/common/Loader';
 import { type PayloadMeResponse } from '@/types/payload-api-response';
 import { IconUserCircle } from '@tabler/icons-react';
-import { useTranslations } from 'next-intl';
+import { useTranslation } from 'react-i18next';
 import Link from 'next/link';
 import useSWR from 'swr';
 
@@ -19,7 +19,7 @@ export function HeaderUser() {
 	//
 	// A. Setup variables
 
-	const t = useTranslations('header.HeaderUser');
+	const { t } = useTranslation('header.HeaderUser');
 
 	//
 	// B. Fetch data
