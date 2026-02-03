@@ -17,7 +17,7 @@ export function AccountIntro() {
 	//
 	// A. Setup variables
 
-	const { t } = useTranslation('account.AccountIntro');
+	const { t } = useTranslation();
 
 	//
 	// B. Fetch data
@@ -46,18 +46,18 @@ export function AccountIntro() {
 	if (userError) {
 		return (
 			<div className={styles.container}>
-				<Text variant="overline">{t('error')}</Text>
+				<Text variant="overline">{t('account.AccountIntro.error')}</Text>
 			</div>
 		);
 	}
 
 	return (
 		<div className={styles.container}>
-			<Title id={styles.displayName} order={2}>{t('title', { name: userDisplayName })}</Title>
+			<Title id={styles.displayName} order={2}>{t('account.AccountIntro.title', { name: userDisplayName })}</Title>
 			<Text variant="overline">{userData?.user?.email}</Text>
-			{userGender === 'female' && <Text variant="overline">{t('member_since.female', { value: userData?.user?.member_since ?? '-' })}</Text>}
-			{userGender === 'male' && <Text variant="overline">{t('member_since.male', { value: userData?.user?.member_since ?? '-' })}</Text>}
-			{userGender === 'other' && <Text variant="overline">{t('member_since.other', { value: userData?.user?.member_since ?? '-' })}</Text>}
+			{userGender === 'female' && <Text variant="overline">{t('account.AccountIntro.member_since.female', { value: userData?.user?.member_since ?? '-' })}</Text>}
+			{userGender === 'male' && <Text variant="overline">{t('account.AccountIntro.member_since.male', { value: userData?.user?.member_since ?? '-' })}</Text>}
+			{userGender === 'other' && <Text variant="overline">{t('account.AccountIntro.member_since.other', { value: userData?.user?.member_since ?? '-' })}</Text>}
 		</div>
 	);
 

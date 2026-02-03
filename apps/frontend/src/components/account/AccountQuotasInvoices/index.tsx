@@ -5,8 +5,8 @@
 import { OpenInvoice } from '@/components/account/OpenInvoice';
 import { type PayloadMeResponse } from '@/types/payload-api-response';
 import { Table, TableData, Text } from '@mantine/core';
-import { useTranslation } from 'react-i18next';
 import { useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 import useSWR from 'swr';
 
 /* * */
@@ -17,7 +17,7 @@ export function AccountQuotasInvoices() {
 	//
 	// A. Setup variables
 
-	const { t } = useTranslation('account.AccountQuotasInvoices');
+	const { t } = useTranslation();
 
 	//
 	// B. Fetch data
@@ -31,7 +31,7 @@ export function AccountQuotasInvoices() {
 		// Setup table data
 		const tableData: TableData = {
 			body: [],
-			head: [t('table.head.doc_number'), t('table.head.doc_date'), ''],
+			head: [t('account.AccountQuotasInvoices.table.head.doc_number'), t('account.AccountQuotasInvoices.table.head.doc_date'), ''],
 		};
 		// If no user data, return the empty table
 		if (!userData?.user?.quotas?.length) {
@@ -56,15 +56,15 @@ export function AccountQuotasInvoices() {
 	// D. Render components
 
 	if (userDataLoading) {
-		return <Text variant="overline">{t('loading')}</Text>;
+		return <Text variant="overline">{t('account.AccountQuotasInvoices.loading')}</Text>;
 	}
 
 	if (userDataError) {
-		return <Text variant="overline">{t('error')}</Text>;
+		return <Text variant="overline">{t('account.AccountQuotasInvoices.error')}</Text>;
 	}
 
 	if (!tableData.body?.length) {
-		return <Text variant="overline">{t('no_data')}</Text>;
+		return <Text variant="overline">{t('account.AccountQuotasInvoices.no_data')}</Text>;
 	}
 
 	return <Table data={tableData} layout="fixed" withTableBorder />;

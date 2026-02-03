@@ -8,8 +8,8 @@ import { ResetPasswordValidation } from '@/services/payload/collections/ResetPas
 import { Button, Loader, Paper, PasswordInput, Space, Text, Title } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { zod4Resolver } from 'mantine-form-zod-resolver';
-import { useTranslation } from 'react-i18next';
 import { useMemo, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import styles from './styles.module.css';
 
@@ -21,7 +21,7 @@ export function ResetPasswordForm() {
 	//
 	// A. Setup variables
 
-	const { t } = useTranslation('auth.ResetPasswordForm');
+	const { t } = useTranslation();
 
 	const [isLoading, setIsLoading] = useState(false);
 	const [isError, setIsError] = useState(false);
@@ -45,7 +45,7 @@ export function ResetPasswordForm() {
 
 	const resetToken = useMemo(() => {
 		const urlParams = new URLSearchParams(window.location.search);
-		const token = urlParams.get('token');
+		const token = urlParams.get('auth.ResetPasswordForm.token');
 		if (!token) window.location.replace('/forgot');
 		return token;
 	}, []);
@@ -85,33 +85,33 @@ export function ResetPasswordForm() {
 
 	return (
 		<Paper className={styles.container} component="form" onSubmit={form.onSubmit(handleResetPassword)}>
-			<Title order={2}>{t('title')}</Title>
-			<Text>{t('subtitle')}</Text>
+			<Title order={2}>{t('auth.ResetPasswordForm.title')}</Title>
+			<Text>{t('auth.ResetPasswordForm.subtitle')}</Text>
 			<Space h={5} />
 			<PasswordInput
 				disabled={isLoading}
-				label={t('password.label')}
+				label={t('auth.ResetPasswordForm.password.label')}
 				onVisibilityChange={() => setPasswordVisibility(prev => !prev)}
-				placeholder={t('password.placeholder')}
+				placeholder={t('auth.ResetPasswordForm.password.placeholder')}
 				visible={passwordVisible}
 				w="100%"
 				{...form.getInputProps('password')}
 			/>
 			<PasswordInput
 				disabled={isLoading}
-				label={t('password_confirmation.label')}
+				label={t('auth.ResetPasswordForm.password_confirmation.label')}
 				onVisibilityChange={() => setPasswordVisibility(prev => !prev)}
-				placeholder={t('password_confirmation.placeholder')}
+				placeholder={t('auth.ResetPasswordForm.password_confirmation.placeholder')}
 				visible={passwordVisible}
 				w="100%"
 				{...form.getInputProps('password_confirmation')}
 			/>
 			{isLoading && <Loader />}
-			{(!isLoading && form.isDirty()) && <Button disabled={!form.isValid()} type="submit">{t('submit.label')}</Button>}
+			{(!isLoading && form.isDirty()) && <Button disabled={!form.isValid()} type="submit">{t('auth.ResetPasswordForm.submit.label')}</Button>}
 			{(!isLoading && isError) && (
 				<>
 					<Space h={5} />
-					<Text variant="error">{t('error.message')}</Text>
+					<Text variant="error">{t('auth.ResetPasswordForm.error.message')}</Text>
 				</>
 			)}
 		</Paper>

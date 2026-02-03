@@ -14,7 +14,7 @@ export function BrandColors({ withTopSpacer = true }) {
 	//
 	// A. Setup variables
 
-	const { t } = useTranslation('brand.BrandColors');
+	const { t } = useTranslation();
 
 	//
 	// B. Render components
@@ -22,7 +22,7 @@ export function BrandColors({ withTopSpacer = true }) {
 	return (
 		<div className={styles.container}>
 			<Section withTopSpacer={withTopSpacer ? 'transparent' : 'none'} withPadding>
-				<Title order={1}>{t('title')}</Title>
+				<Title order={1}>{t('brand.BrandColors.title')}</Title>
 				<div className={styles.topGrid}>
 					<div className={styles.card} style={{ backgroundColor: '#a0285a', color: '#ffffff' }}>
 						<div>#a0285a</div>

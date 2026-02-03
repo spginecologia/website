@@ -20,7 +20,7 @@ export function WorkgroupDetailSocialBodies() {
 	//
 	// A. Setup variables
 
-	const { t } = useTranslation('society.SocietySocialBodies');
+	const { t } = useTranslation();
 
 	//
 	// B. Fetch data
@@ -34,7 +34,7 @@ export function WorkgroupDetailSocialBodies() {
 		<div className={styles.container}>
 			<LayoutSection withPadding>
 
-				<Title order={1}>{t('title')}</Title>
+				<Title order={1}>{t('society.SocietySocialBodies.title')}</Title>
 				<Image src="/generic/orgaos-sociais-spg-2023.jpg" />
 
 				<div className={styles.grid}>
@@ -43,7 +43,7 @@ export function WorkgroupDetailSocialBodies() {
 
 						{socialBodiesData?.direction && (
 							<div className={styles.orgGroup}>
-								<Title className={styles.orgGroupTitle} order={2}>{t('org.direction.title')}</Title>
+								<Title className={styles.orgGroupTitle} order={2}>{t('society.SocietySocialBodies.org.direction.title')}</Title>
 								{socialBodiesData.direction.map(memberData => (
 									<SocietySocialBodiesMember
 										key={memberData.id}
@@ -63,7 +63,7 @@ export function WorkgroupDetailSocialBodies() {
 
 						{socialBodiesData?.general_assembly && (
 							<div className={styles.orgGroup}>
-								<Title className={styles.orgGroupTitle} order={2}>{t('org.general_assembly.title')}</Title>
+								<Title className={styles.orgGroupTitle} order={2}>{t('society.SocietySocialBodies.org.general_assembly.title')}</Title>
 								{socialBodiesData.general_assembly.map(memberData => (
 									<SocietySocialBodiesMember
 										key={memberData.id}
@@ -78,7 +78,7 @@ export function WorkgroupDetailSocialBodies() {
 
 						{socialBodiesData?.fiscal_council && (
 							<div className={styles.orgGroup}>
-								<Title className={styles.orgGroupTitle} order={2}>{t('org.fiscal_council.title')}</Title>
+								<Title className={styles.orgGroupTitle} order={2}>{t('society.SocietySocialBodies.org.fiscal_council.title')}</Title>
 								{socialBodiesData.fiscal_council.map(memberData => (
 									<SocietySocialBodiesMember
 										key={memberData.id}
@@ -93,7 +93,7 @@ export function WorkgroupDetailSocialBodies() {
 
 						{socialBodiesData?.consultive_council && (
 							<div className={styles.orgGroup}>
-								<Title className={styles.orgGroupTitle} order={2}>{t('org.consultive_council.title')}</Title>
+								<Title className={styles.orgGroupTitle} order={2}>{t('society.SocietySocialBodies.org.consultive_council.title')}</Title>
 								{socialBodiesData.consultive_council.map(memberData => (
 									<SocietySocialBodiesMember
 										key={memberData.id}

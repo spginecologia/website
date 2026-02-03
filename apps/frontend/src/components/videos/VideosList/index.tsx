@@ -25,7 +25,7 @@ export function VideosList() {
 	//
 	// A. Setup variables
 
-	const { t } = useTranslation('videos.VideosList');
+	const { t } = useTranslation();
 
 	//
 	// B. Fetch data
@@ -58,7 +58,7 @@ export function VideosList() {
 		return (
 			<ContentWrapper>
 				<Section withTopSpacer="academia">
-					<Title order={1}>{t('title')}</Title>
+					<Title order={1}>{t('videos.VideosList.title')}</Title>
 					<div className={styles.grid}>
 						{[...Array(10)].map((_, i) => <VideoCard key={i} />)}
 					</div>
@@ -71,7 +71,7 @@ export function VideosList() {
 		return (
 			<ContentWrapper>
 				<Section withTopSpacer="academia">
-					<Title order={1}>{t('title')}</Title>
+					<Title order={1}>{t('videos.VideosList.title')}</Title>
 					<ErrorDisplay />
 				</Section>
 			</ContentWrapper>
@@ -82,7 +82,7 @@ export function VideosList() {
 		return (
 			<ContentWrapper>
 				<Section withTopSpacer="academia">
-					<Title order={1}>{t('title')}</Title>
+					<Title order={1}>{t('videos.VideosList.title')}</Title>
 					<NoDataDisplay />
 				</Section>
 			</ContentWrapper>
@@ -111,7 +111,7 @@ export function VideosList() {
 				</Section>
 			)}
 			<Section>
-				<Title order={1}>{t('title')}</Title>
+				<Title order={1}>{t('videos.VideosList.title')}</Title>
 				<div className={styles.grid}>
 					{regularVideosItems.map(video => (
 						<VideoCard

@@ -9,9 +9,9 @@ import { NoDataDisplay } from '@/components/common/NoDataDisplay';
 import { Section } from '@/components/common/Section';
 import { PayloadAPIResponse } from '@/types/payload-api-response';
 import { Title } from '@mantine/core';
-import { useTranslation } from 'react-i18next';
 import { type Guideline } from 'payload-types';
 import { useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 import useSWR from 'swr';
 
 import styles from './styles.module.css';
@@ -24,7 +24,7 @@ export function HomeGuidelines() {
 	//
 	// A. Setup variables
 
-	const { t } = useTranslation('home.HomeGuidelines');
+	const { t } = useTranslation();
 
 	//
 	// B. Fetch data
@@ -47,7 +47,7 @@ export function HomeGuidelines() {
 	if (allGuidelinesLoading) {
 		return (
 			<Section>
-				<Title order={1}>{t('title')}</Title>
+				<Title order={1}>{t('home.HomeGuidelines.title')}</Title>
 				<div className={styles.grid}>
 					{[...Array(4)].map((_, i) => <CardSkeleton key={i} coverAspectRatio="210 / 297" />)}
 				</div>
@@ -58,7 +58,7 @@ export function HomeGuidelines() {
 	if (allGuidelinesError) {
 		return (
 			<Section>
-				<Title order={1}>{t('title')}</Title>
+				<Title order={1}>{t('home.HomeGuidelines.title')}</Title>
 				<ErrorDisplay />
 			</Section>
 		);
@@ -67,7 +67,7 @@ export function HomeGuidelines() {
 	if (!sortedGuidelinesData.length) {
 		return (
 			<Section>
-				<Title order={1}>{t('title')}</Title>
+				<Title order={1}>{t('home.HomeGuidelines.title')}</Title>
 				<NoDataDisplay />
 			</Section>
 		);
@@ -75,7 +75,7 @@ export function HomeGuidelines() {
 
 	return (
 		<Section>
-			<Title order={1}>{t('title')}</Title>
+			<Title order={1}>{t('home.HomeGuidelines.title')}</Title>
 			<div className={styles.grid}>
 				{sortedGuidelinesData.map(guidelineData => (
 					<Card

@@ -8,8 +8,8 @@ import { Button, Loader, Space, Text, TextInput, Title } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { Turnstile } from '@marsidev/react-turnstile';
 import { zod4Resolver } from 'mantine-form-zod-resolver';
-import { useTranslation } from 'react-i18next';
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import styles from './styles.module.css';
 
@@ -21,7 +21,7 @@ export function FooterNewsletter() {
 	//
 	// A. Setup variables
 
-	const { t } = useTranslation('footer.FooterNewsletter');
+	const { t } = useTranslation();
 
 	const [isLoading, setIsLoading] = useState(false);
 	const [isSuccess, setIsSuccess] = useState(false);
@@ -83,10 +83,10 @@ export function FooterNewsletter() {
 		return (
 			<div className={styles.container}>
 				<div className={styles.header}>
-					<Title id={styles.title} order={2}>{t('title')}</Title>
-					<Text id={styles.subtitle}>{t('subtitle')}</Text>
+					<Title id={styles.title} order={2}>{t('footer.FooterNewsletter.title')}</Title>
+					<Text id={styles.subtitle}>{t('footer.FooterNewsletter.subtitle')}</Text>
 				</div>
-				<Text id={styles.successMessage} variant="overline">{t('success_message')}</Text>
+				<Text id={styles.successMessage} variant="overline">{t('footer.FooterNewsletter.success_message')}</Text>
 			</div>
 		);
 	}
@@ -94,19 +94,19 @@ export function FooterNewsletter() {
 	return (
 		<div className={styles.container}>
 			<div className={styles.header}>
-				<Title id={styles.title} order={2}>{t('title')}</Title>
-				<Text id={styles.subtitle}>{t('subtitle')}</Text>
+				<Title id={styles.title} order={2}>{t('footer.FooterNewsletter.title')}</Title>
+				<Text id={styles.subtitle}>{t('footer.FooterNewsletter.subtitle')}</Text>
 			</div>
 			<form className={styles.form} onSubmit={form.onSubmit(handleSubscribe)}>
-				<TextInput aria-label={t('form.name.label')} placeholder={t('form.name.placeholder')} variant="contrast" w="100%" {...form.getInputProps('name')} />
-				<TextInput aria-label={t('form.email.label')}placeholder={t('form.email.placeholder')} variant="contrast" w="100%" {...form.getInputProps('email')} />
+				<TextInput aria-label={t('footer.FooterNewsletter.form.name.label')} placeholder={t('footer.FooterNewsletter.form.name.placeholder')} variant="contrast" w="100%" {...form.getInputProps('name')} />
+				<TextInput aria-label={t('footer.FooterNewsletter.form.email.label')}placeholder={t('footer.FooterNewsletter.form.email.placeholder')} variant="contrast" w="100%" {...form.getInputProps('email')} />
 				<Turnstile onSuccess={token => form.setFieldValue('turnstile_token', token)} siteKey={process.env.NEXT_PUBLIC_CLOUDFLARE_TURNSTILE_SITE_KEY ?? 'unavailable-site-key'} />
 				{isLoading && <Loader />}
-				{(!isLoading && String(form.values.email).length > 0) && <Button disabled={!form.isValid()} type="submit" variant="contrast" w="100%">{t('subscribe')}</Button>}
+				{(!isLoading && String(form.values.email).length > 0) && <Button disabled={!form.isValid()} type="submit" variant="contrast" w="100%">{t('footer.FooterNewsletter.subscribe')}</Button>}
 				{(!isLoading && isError) && (
 					<>
 						<Space h={20} />
-						<Text id={styles.errorMessage} variant="error">{t('error_message')}</Text>
+						<Text id={styles.errorMessage} variant="error">{t('footer.FooterNewsletter.error_message')}</Text>
 					</>
 				)}
 			</form>

@@ -2,8 +2,6 @@
 
 /* * */
 
-import type { News } from 'payload-types';
-
 import { ContentWrapper } from '@/components/common/ContentWrapper';
 import { ErrorDisplay } from '@/components/common/ErrorDisplay';
 import { NoDataDisplay } from '@/components/common/NoDataDisplay';
@@ -12,8 +10,9 @@ import { NewsCard } from '@/components/news/NewsCard';
 import { NewsCardFeatured } from '@/components/news/NewsCardFeatured';
 import { PayloadAPIResponse } from '@/types/payload-api-response';
 import { Title } from '@mantine/core';
-import { useTranslation } from 'react-i18next';
+import { type News } from 'payload-types';
 import { useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 import useSWR from 'swr';
 
 import styles from './styles.module.css';
@@ -26,7 +25,7 @@ export function NewsList() {
 	//
 	// A. Setup variables
 
-	const { t } = useTranslation('news.NewsList');
+	const { t } = useTranslation();
 
 	//
 	// B. Fetch data
@@ -58,7 +57,7 @@ export function NewsList() {
 		return (
 			<ContentWrapper>
 				<Section withTopSpacer="transparent">
-					<Title order={1}>{t('title')}</Title>
+					<Title order={1}>{t('news.NewsList.title')}</Title>
 					<div className={styles.grid}>
 						{[...Array(10)].map((_, i) => <NewsCard key={i} />)}
 					</div>
@@ -71,7 +70,7 @@ export function NewsList() {
 		return (
 			<ContentWrapper>
 				<Section withTopSpacer="transparent">
-					<Title order={1}>{t('title')}</Title>
+					<Title order={1}>{t('news.NewsList.title')}</Title>
 					<ErrorDisplay />
 				</Section>
 			</ContentWrapper>
@@ -82,7 +81,7 @@ export function NewsList() {
 		return (
 			<ContentWrapper>
 				<Section withTopSpacer="transparent">
-					<Title order={1}>{t('title')}</Title>
+					<Title order={1}>{t('news.NewsList.title')}</Title>
 					<NoDataDisplay />
 				</Section>
 			</ContentWrapper>
@@ -104,7 +103,7 @@ export function NewsList() {
 				)}
 			</Section>
 			<Section>
-				<Title order={1}>{t('title')}</Title>
+				<Title order={1}>{t('news.NewsList.title')}</Title>
 				<div className={styles.grid}>
 					{regularNewsItems.map(newsData => (
 						<NewsCard

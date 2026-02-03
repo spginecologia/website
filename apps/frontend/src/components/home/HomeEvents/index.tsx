@@ -10,8 +10,8 @@ import { Section } from '@/components/common/Section';
 import { EventCard } from '@/components/events/EventCard';
 import { PayloadAPIResponse } from '@/types/payload-api-response';
 import { Title } from '@mantine/core';
-import { useTranslation } from 'react-i18next';
 import { useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 import useSWR from 'swr';
 
 import styles from './styles.module.css';
@@ -24,7 +24,7 @@ export function HomeEvents() {
 	//
 	// A. Setup variables
 
-	const { t } = useTranslation('home.HomeEvents');
+	const { t } = useTranslation();
 
 	//
 	// B. Fetch data
@@ -48,7 +48,7 @@ export function HomeEvents() {
 	if (allEventsLoading) {
 		return (
 			<Section>
-				<Title order={1}>{t('title')}</Title>
+				<Title order={1}>{t('home.HomeEvents.title')}</Title>
 				<div className={styles.grid}>
 					{[...Array(2)].map((_, i) => <EventCard key={i} />)}
 				</div>
@@ -59,7 +59,7 @@ export function HomeEvents() {
 	if (allEventsError) {
 		return (
 			<Section>
-				<Title order={1}>{t('title')}</Title>
+				<Title order={1}>{t('home.HomeEvents.title')}</Title>
 				<ErrorDisplay />
 			</Section>
 		);
@@ -68,7 +68,7 @@ export function HomeEvents() {
 	if (!sortedEventsData.length) {
 		return (
 			<Section>
-				<Title order={1}>{t('title')}</Title>
+				<Title order={1}>{t('home.HomeEvents.title')}</Title>
 				<NoDataDisplay />
 			</Section>
 		);
@@ -76,7 +76,7 @@ export function HomeEvents() {
 
 	return (
 		<Section>
-			<Title order={1}>{t('title')}</Title>
+			<Title order={1}>{t('home.HomeEvents.title')}</Title>
 			<div className={styles.grid}>
 				{sortedEventsData.map(eventData => (
 					<EventCard

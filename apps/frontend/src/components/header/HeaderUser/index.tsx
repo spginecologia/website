@@ -5,8 +5,8 @@
 import { Loader } from '@/components/common/Loader';
 import { type PayloadMeResponse } from '@/types/payload-api-response';
 import { IconUserCircle } from '@tabler/icons-react';
-import { useTranslation } from 'react-i18next';
 import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
 import useSWR from 'swr';
 
 import styles from './styles.module.css';
@@ -19,7 +19,7 @@ export function HeaderUser() {
 	//
 	// A. Setup variables
 
-	const { t } = useTranslation('header.HeaderUser');
+	const { t } = useTranslation();
 
 	//
 	// B. Fetch data
@@ -42,7 +42,7 @@ export function HeaderUser() {
 			<>
 				<div className={styles.container} data-desktop>
 					<Link className={styles.login} href="/login">
-						<span className={styles.userFirstName}>{t('login.label')}</span>
+						<span className={styles.userFirstName}>{t('header.HeaderUser.login.label')}</span>
 					</Link>
 				</div>
 				<div className={styles.container} data-mobile>

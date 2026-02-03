@@ -13,7 +13,7 @@ export function AccountLogoutButton() {
 	//
 	// A. Setup variables
 
-	const { t } = useTranslation('account.AccountLogoutButton');
+	const { t } = useTranslation();
 
 	//
 	// B. Fetch data
@@ -38,7 +38,7 @@ export function AccountLogoutButton() {
 
 	return (
 		<div>
-			<Button onClick={handleLogout}>{t('label')}</Button>
+			<Button onClick={handleLogout}>{t('account.AccountLogoutButton.label')}</Button>
 		</div>
 	);
 

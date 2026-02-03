@@ -18,12 +18,12 @@ export function NoDataDisplay({ text }: NoDataDisplayProps) {
 	//
 	// A. Setup variables
 
-	const { t } = useTranslation('common.NoDataDisplay');
+	const { t } = useTranslation();
 
 	//
 	// B. Render components
 
-	return <div className={styles.container}>{text || t('title')}</div>;
+	return <div className={styles.container}>{text || t('common.NoDataDisplay.title')}</div>;
 
 	//
 }

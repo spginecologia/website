@@ -10,8 +10,8 @@ import { Section } from '@/components/common/Section';
 import { NewsCard } from '@/components/news/NewsCard';
 import { PayloadAPIResponse } from '@/types/payload-api-response';
 import { Title } from '@mantine/core';
-import { useTranslation } from 'react-i18next';
 import { useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 import useSWR from 'swr';
 
 import styles from './styles.module.css';
@@ -24,7 +24,7 @@ export function HomeNews() {
 	//
 	// A. Setup variables
 
-	const { t } = useTranslation('home.HomeNews');
+	const { t } = useTranslation();
 
 	//
 	// B. Fetch data
@@ -47,7 +47,7 @@ export function HomeNews() {
 	if (allNewsLoading) {
 		return (
 			<Section>
-				<Title order={1}>{t('title')}</Title>
+				<Title order={1}>{t('home.HomeNews.title')}</Title>
 				<div className={styles.grid}>
 					{[...Array(3)].map((_, i) => <NewsCard key={i} />)}
 				</div>
@@ -58,7 +58,7 @@ export function HomeNews() {
 	if (allNewsError) {
 		return (
 			<Section>
-				<Title order={1}>{t('title')}</Title>
+				<Title order={1}>{t('home.HomeNews.title')}</Title>
 				<ErrorDisplay />
 			</Section>
 		);
@@ -67,7 +67,7 @@ export function HomeNews() {
 	if (!sortedNewsData.length) {
 		return (
 			<Section>
-				<Title order={1}>{t('title')}</Title>
+				<Title order={1}>{t('home.HomeNews.title')}</Title>
 				<NoDataDisplay />
 			</Section>
 		);
@@ -75,7 +75,7 @@ export function HomeNews() {
 
 	return (
 		<Section>
-			<Title order={1}>{t('title')}</Title>
+			<Title order={1}>{t('home.HomeNews.title')}</Title>
 			<div className={styles.grid}>
 				{sortedNewsData.map(newsData => (
 					<NewsCard

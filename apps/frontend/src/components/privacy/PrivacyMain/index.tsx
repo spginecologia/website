@@ -15,7 +15,7 @@ export function PrivacyMain({ withTopSpacer = true }) {
 	//
 	// A. Setup variables
 
-	const { t } = useTranslation('privacy.PrivacyMain');
+	const { t } = useTranslation();
 
 	//
 	// B. Render components
@@ -23,20 +23,20 @@ export function PrivacyMain({ withTopSpacer = true }) {
 	return (
 		<ContentWrapper>
 			<Section withTopSpacer={withTopSpacer ? 'transparent' : 'none'} withPadding>
-				<Title order={1}>{t('title')}</Title>
+				<Title order={1}>{t('privacy.PrivacyMain.title')}</Title>
 				<div className={styles.grid}>
 					<div className={styles.cell}>
-						<Text fw="bold">{t('subtitle_1')}</Text>
-						<Text>{t('paragraph_1')}</Text>
+						<Text fw="bold">{t('privacy.PrivacyMain.subtitle_1')}</Text>
+						<Text>{t('privacy.PrivacyMain.paragraph_1')}</Text>
 					</div>
 					<div />
 					<div className={styles.cell}>
-						<Title order={2}>{t('subtitle_2')}</Title>
-						<Text>{t('paragraph_2')}</Text>
+						<Title order={2}>{t('privacy.PrivacyMain.subtitle_2')}</Title>
+						<Text>{t('privacy.PrivacyMain.paragraph_2')}</Text>
 					</div>
 					<div className={styles.cell}>
-						<Title order={2}>{t('subtitle_3')}</Title>
-						<Text>{t('paragraph_3')}</Text>
+						<Title order={2}>{t('privacy.PrivacyMain.subtitle_3')}</Title>
+						<Text>{t('privacy.PrivacyMain.paragraph_3')}</Text>
 					</div>
 				</div>
 			</Section>

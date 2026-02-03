@@ -1,7 +1,6 @@
 /* * */
 
 import { ConfigProviders } from '@/providers/config-providers';
-import { I18nProvider } from '@/providers/I18nProvider';
 import { DM_Serif_Display } from 'next/font/google';
 import { NuqsAdapter } from 'nuqs/adapters/next/app';
 

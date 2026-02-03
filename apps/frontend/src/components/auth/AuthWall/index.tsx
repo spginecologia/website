@@ -5,11 +5,11 @@
 import { payloadAccessControl } from '@/services/payload/utils/payload-access-control';
 import { type PayloadMeResponse } from '@/types/payload-api-response';
 import { Button, Image, Skeleton, Text } from '@mantine/core';
-import { useTranslation } from 'react-i18next';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { type User } from 'payload-types';
 import { type PropsWithChildren, useEffect, useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 import useSWR from 'swr';
 
 import styles from './styles.module.css';
@@ -45,7 +45,7 @@ export function AuthWall({ children, invisible, redirect, roles }: PropsWithChil
 	// A. Setup variables
 
 	const router = useRouter();
-	const { t } = useTranslation('auth.AuthWall');
+	const { t } = useTranslation();
 
 	//
 	// B. Fetch data
@@ -100,9 +100,9 @@ export function AuthWall({ children, invisible, redirect, roles }: PropsWithChil
 					<Image className={styles.headerLogo} src="/brand/academia/spg-academia-logo-white.svg" />
 				</div>
 				<div className={styles.content}>
-					<Text ta="center">{t('message')}</Text>
-					<Button component={Link} href={`/login?redirect=${window.location.pathname}`} w="100%">{t('action_login')}</Button>
-					<Button component={Link} href={`/forgot?redirect=${window.location.pathname}`} w="100%">{t('action_signup')}</Button>
+					<Text ta="center">{t('auth.AuthWall.message')}</Text>
+					<Button component={Link} href={`/login?redirect=${window.location.pathname}`} w="100%">{t('auth.AuthWall.action_login')}</Button>
+					<Button component={Link} href={`/forgot?redirect=${window.location.pathname}`} w="100%">{t('auth.AuthWall.action_signup')}</Button>
 				</div>
 			</div>
 		</div>

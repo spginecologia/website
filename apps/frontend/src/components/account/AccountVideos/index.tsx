@@ -12,16 +12,16 @@ export function AccountVideos() {
 	//
 	// A. Setup variables
 
-	const { t } = useTranslation('account.AccountVideos');
+	const { t } = useTranslation();
 
 	//
 	// B. Render components
 
 	return (
 		<Paper>
-			<Title order={2}>{t('title')}</Title>
+			<Title order={2}>{t('account.AccountVideos.title')}</Title>
 			<Space h="xs" />
-			<Text>{t('subtitle')}</Text>
+			<Text>{t('account.AccountVideos.subtitle')}</Text>
 			<Space h="xl" />
 			<AccountVideosList />
 		</Paper>

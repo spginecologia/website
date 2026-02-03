@@ -11,9 +11,9 @@ import { Alert, Anchor, Button, Checkbox, Code, FileInput, Paper, Progress, Sele
 import { useForm } from '@mantine/form';
 import { IconX } from '@tabler/icons-react';
 import { zod4Resolver } from 'mantine-form-zod-resolver';
-import { useTranslation } from 'react-i18next';
 import { type Section, type Topic } from 'payload-types';
 import { useMemo, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import useSWR from 'swr';
 
 /* * */
@@ -24,7 +24,7 @@ export function VideosSubmitForm() {
 	//
 	// A. Setup variables
 
-	const { t } = useTranslation('videos.VideosSubmitForm');
+	const { t } = useTranslation();
 
 	const [isError, setIsError] = useState<string>();
 	const [isLoading, setIsLoading] = useState(false);
@@ -119,47 +119,47 @@ export function VideosSubmitForm() {
 	return (
 		<Paper>
 
-			<Title order={2}>{t('title')}</Title>
+			<Title order={2}>{t('videos.VideosSubmitForm.title')}</Title>
 			<Space h="xs" />
-			<Text>{t('description')}</Text>
+			<Text>{t('videos.VideosSubmitForm.description')}</Text>
 			<Space h="xs" />
-			<Anchor href="/academia/videos/instructions" target="_blank">{t('instructions')}</Anchor>
+			<Anchor href="/academia/videos/instructions" target="_blank">{t('videos.VideosSubmitForm.instructions')}</Anchor>
 			<Space h="xl" />
 
 			<form onSubmit={form.onSubmit(handleSubmit)}>
 
 				<FormSection>
-					<TextInput label={t('fields.title.label')} placeholder={t('fields.title.placeholder')} readOnly={isLoading} required={isRequiredFromZod(VideoValidationClient.shape.title)} {...form.getInputProps('title')} />
-					<TextInput label={t('fields.authors.label')} placeholder={t('fields.authors.placeholder')} readOnly={isLoading} required={isRequiredFromZod(VideoValidationClient.shape.authors)} {...form.getInputProps('authors')} />
-					<FileInput label={t('fields.video_file.label')} placeholder={t('fields.video_file.placeholder')} readOnly={isLoading} required={isRequiredFromZod(VideoValidationClient.shape.video_file)} {...form.getInputProps('video_file')} />
-					<FileInput label={t('fields.featured_image.label')} placeholder={t('fields.featured_image.placeholder')} readOnly={isLoading} required={isRequiredFromZod(VideoValidationClient.shape.featured_image)} {...form.getInputProps('featured_image')} />
+					<TextInput label={t('videos.VideosSubmitForm.fields.title.label')} placeholder={t('videos.VideosSubmitForm.fields.title.placeholder')} readOnly={isLoading} required={isRequiredFromZod(VideoValidationClient.shape.title)} {...form.getInputProps('title')} />
+					<TextInput label={t('videos.VideosSubmitForm.fields.authors.label')} placeholder={t('videos.VideosSubmitForm.fields.authors.placeholder')} readOnly={isLoading} required={isRequiredFromZod(VideoValidationClient.shape.authors)} {...form.getInputProps('authors')} />
+					<FileInput label={t('videos.VideosSubmitForm.fields.video_file.label')} placeholder={t('videos.VideosSubmitForm.fields.video_file.placeholder')} readOnly={isLoading} required={isRequiredFromZod(VideoValidationClient.shape.video_file)} {...form.getInputProps('video_file')} />
+					<FileInput label={t('videos.VideosSubmitForm.fields.featured_image.label')} placeholder={t('videos.VideosSubmitForm.fields.featured_image.placeholder')} readOnly={isLoading} required={isRequiredFromZod(VideoValidationClient.shape.featured_image)} {...form.getInputProps('featured_image')} />
 				</FormSection>
 
-				<FormSection description={t('sections.about.description')} title={t('sections.about.title')}>
-					<Textarea label={t('fields.introduction.label')} placeholder={t('fields.introduction.placeholder')} readOnly={isLoading} required={isRequiredFromZod(VideoValidationClient.shape.introduction)} {...form.getInputProps('introduction')} autosize />
-					<Textarea label={t('fields.description.label')} placeholder={t('fields.description.placeholder')} readOnly={isLoading} required={isRequiredFromZod(VideoValidationClient.shape.description)} {...form.getInputProps('description')} autosize />
+				<FormSection description={t('videos.VideosSubmitForm.sections.about.description')} title={t('videos.VideosSubmitForm.sections.about.title')}>
+					<Textarea label={t('videos.VideosSubmitForm.fields.introduction.label')} placeholder={t('videos.VideosSubmitForm.fields.introduction.placeholder')} readOnly={isLoading} required={isRequiredFromZod(VideoValidationClient.shape.introduction)} {...form.getInputProps('introduction')} autosize />
+					<Textarea label={t('videos.VideosSubmitForm.fields.description.label')} placeholder={t('videos.VideosSubmitForm.fields.description.placeholder')} readOnly={isLoading} required={isRequiredFromZod(VideoValidationClient.shape.description)} {...form.getInputProps('description')} autosize />
 				</FormSection>
 
-				<FormSection description={t('sections.metadata.description')} title={t('sections.metadata.title')}>
-					<TagsInput data={topicOptions} label={t('fields.topics.label')} placeholder={t('fields.topics.placeholder')} readOnly={isLoading} required={isRequiredFromZod(VideoValidationClient.shape.topics)} {...form.getInputProps('topics')} />
+				<FormSection description={t('videos.VideosSubmitForm.sections.metadata.description')} title={t('videos.VideosSubmitForm.sections.metadata.title')}>
+					<TagsInput data={topicOptions} label={t('videos.VideosSubmitForm.fields.topics.label')} placeholder={t('videos.VideosSubmitForm.fields.topics.placeholder')} readOnly={isLoading} required={isRequiredFromZod(VideoValidationClient.shape.topics)} {...form.getInputProps('topics')} />
 					<Space h="md" />
-					<Select data={sectionOptions} label={t('fields.section.label')} placeholder={t('fields.section.placeholder')} readOnly={isLoading} required={isRequiredFromZod(VideoValidationClient.shape.section)} {...form.getInputProps('section')} />
+					<Select data={sectionOptions} label={t('videos.VideosSubmitForm.fields.section.label')} placeholder={t('videos.VideosSubmitForm.fields.section.placeholder')} readOnly={isLoading} required={isRequiredFromZod(VideoValidationClient.shape.section)} {...form.getInputProps('section')} />
 				</FormSection>
 
-				<FormSection description={t('sections.privacy.description')} title={t('sections.privacy.title')}>
-					<Anchor href="/files/academia-spg-declaracao-cedencia-direitos.pdf" target="_blank">{t('sections.privacy.rights_declaration_link')}</Anchor>
+				<FormSection description={t('videos.VideosSubmitForm.sections.privacy.description')} title={t('videos.VideosSubmitForm.sections.privacy.title')}>
+					<Anchor href="/files/academia-spg-declaracao-cedencia-direitos.pdf" target="_blank">{t('videos.VideosSubmitForm.sections.privacy.rights_declaration_link')}</Anchor>
 					<Space h="xl" />
-					<FileInput label={t('fields.declaration_file.label')} placeholder={t('fields.declaration_file.placeholder')} readOnly={isLoading} required={isRequiredFromZod(VideoValidationClient.shape.declaration_file)} {...form.getInputProps('declaration_file')} />
+					<FileInput label={t('videos.VideosSubmitForm.fields.declaration_file.label')} placeholder={t('videos.VideosSubmitForm.fields.declaration_file.placeholder')} readOnly={isLoading} required={isRequiredFromZod(VideoValidationClient.shape.declaration_file)} {...form.getInputProps('declaration_file')} />
 					<Space h="md" />
-					<Checkbox label={t('fields.rgpd_toggle.label')} required={isRequiredFromZod(VideoValidationClient.shape.rgpd_toggle)} {...form.getInputProps('rgpd_toggle', { type: 'checkbox' })} />
+					<Checkbox label={t('videos.VideosSubmitForm.fields.rgpd_toggle.label')} required={isRequiredFromZod(VideoValidationClient.shape.rgpd_toggle)} {...form.getInputProps('rgpd_toggle', { type: 'checkbox' })} />
 				</FormSection>
 
-				{isDirty && <Button disabled={!isValid} loading={isLoading} type="submit">{t('actions.submit.label')}</Button>}
+				{isDirty && <Button disabled={!isValid} loading={isLoading} type="submit">{t('videos.VideosSubmitForm.actions.submit.label')}</Button>}
 
 				{isLoading && (
 					<>
 						<Space h="md" />
-						<Text variant="overline">{t('actions.uploading', { progress: uploadProgress })}</Text>
+						<Text variant="overline">{t('videos.VideosSubmitForm.actions.uploading', { progress: uploadProgress })}</Text>
 						<Space h="md" />
 						<Progress value={uploadProgress} animated />
 					</>
@@ -168,15 +168,15 @@ export function VideosSubmitForm() {
 				{(isDirty && !isValid) && (
 					<>
 						<Space h={10} />
-						<Text variant="overline">{t('actions.has_errors')}</Text>
+						<Text variant="overline">{t('videos.VideosSubmitForm.actions.has_errors')}</Text>
 					</>
 				)}
 
 				{isError && (
 					<>
 						<Space h={10} />
-						<Alert icon={<IconX />} title={t('actions.upload_error.title')} w="100%">
-							<Text size="sm">{t('actions.upload_error.message')}</Text>
+						<Alert icon={<IconX />} title={t('videos.VideosSubmitForm.actions.upload_error.title')} w="100%">
+							<Text size="sm">{t('videos.VideosSubmitForm.actions.upload_error.message')}</Text>
 							<Space h={5} />
 							<Code block>{isError}</Code>
 							<Space h={5} />

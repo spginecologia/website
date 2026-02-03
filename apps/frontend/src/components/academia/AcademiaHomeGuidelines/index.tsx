@@ -6,10 +6,10 @@ import { Card } from '@/components/cards/Card';
 import { Section } from '@/components/common/Section';
 import { type PayloadAPIResponse } from '@/types/payload-api-response';
 import { Button, Title } from '@mantine/core';
-import { useTranslation } from 'react-i18next';
 import Link from 'next/link';
 import { type Guideline } from 'payload-types';
 import { useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 import useSWR from 'swr';
 
 import styles from './styles.module.css';
@@ -22,7 +22,7 @@ export function AcademiaHomeGuidelines() {
 	//
 	// A. Setup variables
 
-	const { t } = useTranslation('academia.AcademiaHomeGuidelines');
+	const { t } = useTranslation();
 
 	//
 	// B. Fetch data
@@ -48,7 +48,7 @@ export function AcademiaHomeGuidelines() {
 
 	return (
 		<Section>
-			<Title order={1}>{t('title')}</Title>
+			<Title order={1}>{t('academia.AcademiaHomeGuidelines.title')}</Title>
 			<div className={styles.grid}>
 				{featuredItems.map(guidelineData => (
 					<Card
@@ -62,7 +62,7 @@ export function AcademiaHomeGuidelines() {
 				))}
 			</div>
 			<Button component={Link} href="/academia/guidelines" m="auto" mt="xl">
-				{t('see_all')}
+				{t('academia.AcademiaHomeGuidelines.see_all')}
 			</Button>
 		</Section>
 	);

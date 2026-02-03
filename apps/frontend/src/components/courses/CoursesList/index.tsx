@@ -10,8 +10,8 @@ import { Section } from '@/components/common/Section';
 import { CourseCard } from '@/components/courses/CourseCard';
 import { PayloadAPIResponse } from '@/types/payload-api-response';
 import { Title } from '@mantine/core';
-import { useTranslation } from 'react-i18next';
 import { type Course } from 'payload-types';
+import { useTranslation } from 'react-i18next';
 import useSWR from 'swr';
 
 import styles from './styles.module.css';
@@ -24,7 +24,7 @@ export function CoursesList() {
 	//
 	// A. Setup variables
 
-	const { t } = useTranslation('courses.CoursesList');
+	const { t } = useTranslation();
 
 	//
 	// B. Fetch data
@@ -38,7 +38,7 @@ export function CoursesList() {
 		return (
 			<ContentWrapper>
 				<Section withTopSpacer="academia">
-					<Title order={1}>{t('title')}</Title>
+					<Title order={1}>{t('courses.CoursesList.title')}</Title>
 					<div className={styles.grid}>
 						{[...Array(10)].map((_, i) => <CardSkeleton key={i} coverAspectRatio="600 / 300" />)}
 					</div>
@@ -51,7 +51,7 @@ export function CoursesList() {
 		return (
 			<ContentWrapper>
 				<Section withTopSpacer="academia">
-					<Title order={1}>{t('title')}</Title>
+					<Title order={1}>{t('courses.CoursesList.title')}</Title>
 					<ErrorDisplay />
 				</Section>
 			</ContentWrapper>
@@ -62,7 +62,7 @@ export function CoursesList() {
 		return (
 			<ContentWrapper>
 				<Section withTopSpacer="academia">
-					<Title order={1}>{t('title')}</Title>
+					<Title order={1}>{t('courses.CoursesList.title')}</Title>
 					<NoDataDisplay />
 				</Section>
 			</ContentWrapper>
@@ -72,7 +72,7 @@ export function CoursesList() {
 	return (
 		<ContentWrapper>
 			<Section withTopSpacer="academia">
-				<Title order={1}>{t('title')}</Title>
+				<Title order={1}>{t('courses.CoursesList.title')}</Title>
 				<div className={styles.grid}>
 					{allCoursesData?.docs.map(courseData => (
 						<CourseCard

@@ -14,7 +14,7 @@ export function BrandTypography({ withTopSpacer = true }) {
 	//
 	// A. Setup variables
 
-	const { t } = useTranslation('brand.BrandTypography');
+	const { t } = useTranslation();
 
 	//
 	// B. Render components
@@ -22,7 +22,7 @@ export function BrandTypography({ withTopSpacer = true }) {
 	return (
 		<div className={styles.container}>
 			<Section withTopSpacer={withTopSpacer ? 'transparent' : 'none'} withPadding>
-				<Title order={1}>{t('title')}</Title>
+				<Title order={1}>{t('brand.BrandTypography.title')}</Title>
 				<div className={styles.grid}>
 					<div className={styles.lato}>LATO</div>
 					<div className={styles.leMonde}>Le Monde Journal</div>

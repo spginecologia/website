@@ -5,9 +5,9 @@
 import { VideoCardRelated } from '@/components/videos/VideoCardRelated';
 import { type PayloadAPIResponse } from '@/types/payload-api-response';
 import { Text } from '@mantine/core';
-import { useTranslation } from 'react-i18next';
 import { type Video } from 'payload-types';
 import { useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 import useSWR from 'swr';
 
 import styles from './styles.module.css';
@@ -20,7 +20,7 @@ export function AccountVideosList() {
 	//
 	// A. Setup variables
 
-	const { t } = useTranslation('account.AccountVideosList');
+	const { t } = useTranslation();
 
 	//
 	// B. Fetch data
@@ -39,15 +39,15 @@ export function AccountVideosList() {
 	// D. Render components
 
 	if (accountVideosLoading) {
-		return <Text variant="overline">{t('loading')}</Text>;
+		return <Text variant="overline">{t('account.AccountVideosList.loading')}</Text>;
 	}
 
 	if (accountVideosError) {
-		return <Text variant="overline">{t('error')}</Text>;
+		return <Text variant="overline">{t('account.AccountVideosList.error')}</Text>;
 	}
 
 	if (!videosListData.length) {
-		return <Text variant="overline">{t('no_data')}</Text>;
+		return <Text variant="overline">{t('account.AccountVideosList.no_data')}</Text>;
 	}
 
 	return (

@@ -4,8 +4,8 @@
 
 import { type PayloadMeResponse } from '@/types/payload-api-response';
 import { Text } from '@mantine/core';
-import { useTranslation } from 'react-i18next';
 import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
 import useSWR from 'swr';
 
 /* * */
@@ -16,7 +16,7 @@ export function AccountQuotasRefresh() {
 	//
 	// A. Setup variables
 
-	const { t } = useTranslation('account.AccountQuotasRefresh');
+	const { t } = useTranslation();
 
 	//
 	// B. Fetch data
@@ -32,7 +32,7 @@ export function AccountQuotasRefresh() {
 
 	return (
 		<Link href={`/api/account/quotas/refresh-status/${userData.user.id}`}>
-			<Text maw={400} variant="footnote">{t('footnote')}</Text>
+			<Text maw={400} variant="footnote">{t('account.AccountQuotasRefresh.footnote')}</Text>
 		</Link>
 	);
 

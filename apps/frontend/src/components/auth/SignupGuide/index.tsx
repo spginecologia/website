@@ -15,7 +15,7 @@ export function SignupGuide() {
 	//
 	// A. Setup variables
 
-	const { t } = useTranslation('auth.SignupGuide');
+	const { t } = useTranslation();
 
 	//
 	// B. Render components
@@ -23,9 +23,9 @@ export function SignupGuide() {
 	return (
 		<div className={styles.container}>
 			<Image className={styles.image} src="/generic/auth-login.svg" />
-			<Title id={styles.title} order={2}>{t('title')}</Title>
-			<Text>{t('paragraph_1')}</Text>
-			<Text>{t('paragraph_2')}</Text>
+			<Title id={styles.title} order={2}>{t('auth.SignupGuide.title')}</Title>
+			<Text>{t('auth.SignupGuide.paragraph_1')}</Text>
+			<Text>{t('auth.SignupGuide.paragraph_2')}</Text>
 			<Space h="xs" />
 		</div>
 	);

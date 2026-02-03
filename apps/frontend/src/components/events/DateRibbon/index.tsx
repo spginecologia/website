@@ -19,7 +19,7 @@ export function DateRibbon({ date }: Props) {
 	//
 	// A. Setup variables
 
-	const { t } = useTranslation('events.DateRibbon');
+	const { t } = useTranslation();
 
 	//
 	// B. Render components
@@ -30,9 +30,9 @@ export function DateRibbon({ date }: Props) {
 
 	return (
 		<div className={styles.container}>
-			<span className={styles.day}>{t('day', { value: date })}</span>
-			<span className={styles.month}>{t('month', { value: date })}</span>
-			<span className={styles.year}>{t('year', { value: date })}</span>
+			<span className={styles.day}>{t('events.DateRibbon.day', { value: date })}</span>
+			<span className={styles.month}>{t('events.DateRibbon.month', { value: date })}</span>
+			<span className={styles.year}>{t('events.DateRibbon.year', { value: date })}</span>
 		</div>
 	);
 

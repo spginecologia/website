@@ -2,8 +2,8 @@
 
 /* * */
 
-import { useTranslation } from 'react-i18next';
 import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
 
 import styles from './styles.module.css';
 
@@ -15,7 +15,7 @@ export function FooterLegal() {
 	//
 	// A. Setup variables
 
-	const { t } = useTranslation('footer.FooterLegal');
+	const { t } = useTranslation();
 
 	//
 	// B. Render components
@@ -24,18 +24,18 @@ export function FooterLegal() {
 		<div className={styles.container}>
 			<div className={styles.left}>
 				<Link className={styles.credits} href="https://joao.earth" target="_blank">
-					{t('credits')}
+					{t('footer.FooterLegal.credits')}
 				</Link>
 			</div>
 			<div className={styles.center}>
-				<p className={styles.copyright}>{t('copyright', { year: new Date().getFullYear() })}</p>
+				<p className={styles.copyright}>{t('footer.FooterLegal.copyright', { year: new Date().getFullYear() })}</p>
 			</div>
 			<div className={styles.right}>
 				<Link className={styles.legalLink} href="/brand" target="_blank">
-					{t('brand_assets')}
+					{t('footer.FooterLegal.brand_assets')}
 				</Link>
 				<Link className={styles.legalLink} href="/privacy" target="_blank">
-					{t('privacy')}
+					{t('footer.FooterLegal.privacy')}
 				</Link>
 			</div>
 		</div>
