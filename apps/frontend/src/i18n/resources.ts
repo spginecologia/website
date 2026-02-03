@@ -2,6 +2,7 @@
 
 /* * */
 
+import namespaceAcademiaPt from '@/i18n/namespaces/academia/pt.json' with { type: 'json' };
 import namespaceDefaultPt from '@/i18n/namespaces/default/pt.json' with { type: 'json' };
 
 /**
@@ -11,7 +12,6 @@ import namespaceDefaultPt from '@/i18n/namespaces/default/pt.json' with { type: 
  * connects the i18n system to the actual translation strings.
  */
 export const i18nResourceKeysPt = {
-	shared: {
-		default: namespaceDefaultPt,
-	},
+	academia: namespaceAcademiaPt,
+	default: namespaceDefaultPt,
 } as const;

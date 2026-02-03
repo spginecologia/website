@@ -1,0 +1,14 @@
+{
+	"test-academia": {
+		"auth": {
+			"logout": "Logout"
+		},
+		"language": {
+			"label": "Language",
+			"locale": "{locale, select, en {English} pt {Português} other {Unknown}}"
+		},
+		"version": {
+			"label": "Version {version}"
+		}
+	}
+}

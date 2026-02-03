@@ -2,7 +2,6 @@
 
 /* * */
 
-import { registerModuleTranslations } from '@/i18n/utils';
 import i18next from 'i18next';
 import { createContext, type PropsWithChildren, useContext, useEffect, useMemo, useState } from 'react';
 
@@ -37,7 +36,7 @@ export function useLocaleContext() {
 
 /* * */
 
-export const LocaleContextProvider = ({ children, i18n }: PropsWithChildren<LocaleContextProps>) => {
+export const LocaleContextProvider = ({ children }: PropsWithChildren<LocaleContextProps>) => {
 	//
 	//
 
@@ -59,13 +58,6 @@ export const LocaleContextProvider = ({ children, i18n }: PropsWithChildren<Loca
 	useEffect(() => {
 		i18next.changeLanguage(locale);
 	}, [locale]);
-
-	useEffect(() => {
-		if (!i18n) return;
-		for (const [key, value] of Object.entries(i18n.pt)) {
-			registerModuleTranslations(key, { pt: value });
-		}
-	}, [i18n]);
 
 	//
 	// C. Context value

@@ -1,9 +1,7 @@
 /* * */
 
-import '@/i18n/config';
-// import { i18nResourceKeysPt } from '@/i18n/resources';
 import { ConfigProviders } from '@/providers/config-providers';
-// import { LocaleContextProvider } from '@/providers/locale-providers';
+import { I18nProvider } from '@/providers/I18nProvider';
 import { DM_Serif_Display } from 'next/font/google';
 import { NuqsAdapter } from 'nuqs/adapters/next/app';
 
@@ -35,13 +33,11 @@ export default async function RootLayout({ children }) {
 				<link href="https://use.typekit.net/xgs1heq.css" rel="stylesheet" />
 			</head>
 			<body>
-				{/* <LocaleContextProvider i18n={{ pt: i18nResourceKeysPt }}> */}
 				<NuqsAdapter>
 					<ConfigProviders>
 						{children}
 					</ConfigProviders>
 				</NuqsAdapter>
-				{/* </LocaleContextProvider> */}
 			</body>
 		</html>
 	);

@@ -13,8 +13,9 @@ i18next
 	.use(ICU)
 	.use(initReactI18next)
 	.init({
-		debug: true,
+		defaultNS: 'default',
 		fallbackLng: 'pt',
+		ns: Object.keys(i18nResourceKeysPt),
 		resources: {
 			pt: i18nResourceKeysPt,
 		},

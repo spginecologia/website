@@ -2,8 +2,6 @@
 
 /* * */
 
-import type { Video } from 'payload-types';
-
 import { ContentWrapper } from '@/components/common/ContentWrapper';
 import { ErrorDisplay } from '@/components/common/ErrorDisplay';
 import { NoDataDisplay } from '@/components/common/NoDataDisplay';
@@ -12,8 +10,9 @@ import { VideoCard } from '@/components/videos/VideoCard';
 import { VideoCardFeatured } from '@/components/videos/VideoCardFeatured';
 import { PayloadAPIResponse } from '@/types/payload-api-response';
 import { Title } from '@mantine/core';
-import { useTranslation } from 'react-i18next';
+import { type Video } from 'payload-types';
 import { useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 import useSWR from 'swr';
 
 import styles from './styles.module.css';

@@ -30,7 +30,7 @@ export function HeaderMenu() {
 	//
 	// A. Setup variables
 
-	const { t } = useTranslation();
+	const { t } = useTranslation('academia');
 	const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
 	//
@@ -42,8 +42,8 @@ export function HeaderMenu() {
 			<div className={styles.container} data-desktop>
 				{MENU_PAGES.map(item => (
 					<Link key={item.key} className={styles.link} href={item.path}>
-						{/* {t('')} */}
-						{t(`header.HeaderMenu.${item.key}.label`)}
+						{t('')}
+						{/* {t(`header.HeaderMenu.${item.key}.label`)} */}
 					</Link>
 				))}
 				<Link className={styles.search} href="https://spginecologia.pt/academia/topicos">
