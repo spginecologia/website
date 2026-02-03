@@ -94,6 +94,10 @@ export default buildConfig({
 		SocialBodies,
 	],
 
+	upload: {
+		createParentPath: true,
+	},
+
 	// If you'd like to use S3 for file uploads,
 	// pass your S3 configuration here.
 	// plugins: [

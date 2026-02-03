@@ -29,6 +29,9 @@ export const CourseFiles: CollectionConfig = {
 	},
 
 	slug: 'course-files',
-	upload: true,
+
+	upload: {
+		staticDir: 'storage/course-files',
+	},
 
 };
