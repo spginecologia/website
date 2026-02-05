@@ -35,6 +35,8 @@ export const InternalDocuments: CollectionConfig = {
 
 	slug: 'internal-documents',
 
-	upload: true,
+	upload: {
+		staticDir: `${process.env.STORAGE_ROOT_DIR}/internal-documents`,
+	},
 
 };

@@ -30,6 +30,8 @@ export const Documents: CollectionConfig = {
 
 	slug: 'documents',
 
-	upload: true,
+	upload: {
+		staticDir: `${process.env.STORAGE_ROOT_DIR}/documents`,
+	},
 
 };

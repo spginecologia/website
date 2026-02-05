@@ -32,7 +32,7 @@ export const Media: CollectionConfig = {
 
 	upload: {
 		mimeTypes: ['image/*', 'video/*', 'audio/*'],
-		staticDir: 'media',
+		staticDir: `${process.env.STORAGE_ROOT_DIR}/media`,
 	},
 
 };
