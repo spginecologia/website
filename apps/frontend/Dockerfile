@@ -65,7 +65,7 @@ ENV NODE_ENV=production
 ENV UMASK=0002
 
 RUN adduser --system --uid 1001 nextjs
-RUN adduser nextjs storage
+RUN adduser nextjs $(getent group 1001 | cut -d: -f1)
 
 USER nextjs
 
