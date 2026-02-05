@@ -36,8 +36,15 @@ export const VideoFiles: CollectionConfig = {
 		],
 	},
 
+	labels: {
+		plural: 'Videos (Ficheiros)',
+		singular: 'Video (Ficheiro)',
+	},
+
 	slug: 'video-files',
 
-	upload: true,
+	upload: {
+		staticDir: `${process.env.STORAGE_ROOT_DIR}/video-files`,
+	},
 
 };
