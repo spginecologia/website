@@ -1,6 +1,6 @@
 # # # # # # # # #
 
-FROM node:22.6-alpine3.20 AS base
+FROM node:alpine AS base
 
 ARG ENVIRONMENT
 
@@ -64,8 +64,8 @@ ENV NODE_ENV=production
 
 ENV UMASK=0002
 
-RUN adduser nextjs $(getent group 1001 | cut -d: -f1)
-
+RUN addgroup --system --gid 1001 nodejs
+RUN adduser --system --uid 1001 nextjs
 USER nextjs
 
 COPY --from=builder --chown=nextjs:nodejs /app/apps/frontend/.next/standalone ./
