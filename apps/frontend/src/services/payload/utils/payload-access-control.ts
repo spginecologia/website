@@ -9,7 +9,8 @@ import { type User } from 'payload-types';
  * either by the request object or directly as a parameter.
  * If no `role` is provided, the function checks only for the User's
  * `account_status` value, effectively checking only if the User is active.
- * @param param0 - The request object, user object, and role to check.
+ * @param role The role or roles required to access the resource. If null or undefined, only the user's active status is checked.
+ * @param userOrRequest The user object or the request object containing the user data.
  * @returns True if the user has access, false otherwise.
  */
 export function payloadAccessControl(role: null | undefined | User['account_role'] | User['account_role'][], userOrRequest: null | PayloadRequest | undefined | User): boolean {

@@ -20,14 +20,14 @@ export const Users: CollectionConfig = {
 		admin({ req }) {
 			return payloadAccessControl('admin', req);
 		},
-		// update: ({ id, req: { user } }) => {
-		// 	if (!user || !id) return false;
-		// 	if (user.id === id) return true;
-		// 	return false;
-		// },
 	},
 
 	admin: {
+		components: {
+			listMenuItems: [
+				'@/services/payload/components/UsersExportButton/index#UsersExportButton',
+			],
+		},
 		useAsTitle: 'email',
 	},
 
