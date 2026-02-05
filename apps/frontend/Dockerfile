@@ -62,8 +62,12 @@ WORKDIR /app
 
 ENV NODE_ENV=production
 
+ENV UMASK=0002
+
 RUN addgroup --system --gid 1001 nodejs
-RUN adduser --system --uid 1001 nextjs
+RUN addgroup --system --gid 1001 storage
+RUN adduser nextjs storage
+
 USER nextjs
 
 COPY --from=builder --chown=nextjs:nodejs /app/apps/frontend/.next/standalone ./
