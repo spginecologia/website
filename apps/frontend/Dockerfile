@@ -65,7 +65,6 @@ ENV NODE_ENV=production
 ENV UMASK=0002
 
 RUN addgroup --system --gid 1001 nodejs
-RUN addgroup --system --gid 1001 storage
 RUN adduser nextjs storage
 
 USER nextjs
