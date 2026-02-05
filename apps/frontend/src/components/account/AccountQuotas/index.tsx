@@ -1,3 +1,5 @@
+'use client';
+
 /* * */
 
 import { AccountQuotasInvoices } from '@/components/account/AccountQuotasInvoices';

@@ -1,3 +1,5 @@
+'use client';
+
 /* * */
 
 import { type PayloadMeResponse } from '@/types/payload-api-response';

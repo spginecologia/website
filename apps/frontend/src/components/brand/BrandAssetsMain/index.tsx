@@ -1,3 +1,5 @@
+'use client';
+
 /* * */
 
 import { Section } from '@/components/common/Section';

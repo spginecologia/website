@@ -1,3 +1,5 @@
+'use client';
+
 /* * */
 
 import { UserQuotaPaymentStatus } from '@/services/payload/collections/User/options';

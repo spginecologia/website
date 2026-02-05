@@ -1,3 +1,5 @@
+'use client';
+
 /* * */
 
 import { ContentWrapper } from '@/components/common/ContentWrapper';

@@ -1,3 +1,5 @@
+'use client';
+
 /* * */
 
 import { CardCoverImage } from '@/components/cards/CardCoverImage';

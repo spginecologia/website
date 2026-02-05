@@ -1,3 +1,5 @@
+'use client';
+
 /* * */
 
 import { CardPublishDate } from '@/components/cards/CardPublishDate';

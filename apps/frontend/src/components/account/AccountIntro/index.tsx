@@ -1,3 +1,5 @@
+'use client';
+
 /* * */
 
 import { getUserDisplayName } from '@/services/general/get-user-display-name';

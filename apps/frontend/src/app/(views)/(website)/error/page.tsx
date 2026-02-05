@@ -1,3 +1,5 @@
+'use client';
+
 /* * */
 
 import { ErrorDisplay } from '@/components/common/ErrorDisplay';

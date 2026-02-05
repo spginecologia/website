@@ -1,3 +1,5 @@
+'use client';
+
 /* * */
 
 import { AccountVideosList } from '@/components/account/AccountVideosList';
