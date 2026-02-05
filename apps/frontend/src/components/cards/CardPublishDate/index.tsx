@@ -1,7 +1,7 @@
 /* * */
 
 import { Skeleton } from '@mantine/core';
-import { useTranslations } from 'next-intl';
+import { useTranslation } from 'react-i18next';
 
 import styles from './styles.module.css';
 
@@ -19,7 +19,7 @@ export function CardPublishDate({ date }: Props) {
 	//
 	// A. Setup variables
 
-	const t = useTranslations('common.CardPublishDate');
+	const { t } = useTranslation();
 
 	//
 	// B. Render components
@@ -28,7 +28,7 @@ export function CardPublishDate({ date }: Props) {
 		return <Skeleton h={15} w="60%" animate />;
 	}
 
-	return <p className={styles.date}>{t('publish_date', { value: date })}</p>;
+	return <p className={styles.date}>{t('common.CardPublishDate.publish_date', { value: date })}</p>;
 
 	//
 }

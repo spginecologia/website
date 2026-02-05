@@ -6,10 +6,10 @@ import { Section } from '@/components/common/Section';
 import { VideoCardFeatured } from '@/components/videos/VideoCardFeatured';
 import { type PayloadAPIResponse } from '@/types/payload-api-response';
 import { Button, Title } from '@mantine/core';
-import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { type Video } from 'payload-types';
 import { useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 import useSWR from 'swr';
 
 import styles from './styles.module.css';
@@ -22,7 +22,7 @@ export function AcademiaHomeVideos() {
 	//
 	// A. Setup variables
 
-	const t = useTranslations('academia.AcademiaHomeVideos');
+	const { t } = useTranslation();
 
 	//
 	// B. Fetch data
@@ -49,7 +49,7 @@ export function AcademiaHomeVideos() {
 
 	return (
 		<Section>
-			<Title order={1}>{t('title')}</Title>
+			<Title order={1}>{t('academia.AcademiaHomeVideos.title')}</Title>
 			<div className={styles.grid}>
 				{featuredItems.map(video => (
 					<VideoCardFeatured
@@ -66,7 +66,7 @@ export function AcademiaHomeVideos() {
 				))}
 			</div>
 			<Button component={Link} href="/academia/videos" m="auto" mt="xl">
-				{t('see_all')}
+				{t('academia.AcademiaHomeVideos.see_all')}
 			</Button>
 		</Section>
 	);

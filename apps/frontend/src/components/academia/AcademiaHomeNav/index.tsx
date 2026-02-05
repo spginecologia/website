@@ -3,7 +3,7 @@
 /* * */
 
 import { Section } from '@/components/common/Section';
-import { useTranslations } from 'next-intl';
+import { useTranslation } from 'react-i18next';
 
 import styles from './styles.module.css';
 
@@ -16,7 +16,7 @@ const LINKS = [
 	{ key: 'courses', path: '/academia/courses' },
 	{ key: 'grant', path: 'https://spginecologia.pt/bolsa/2025' },
 	{ key: 'topics', path: 'https://spginecologia.pt/academia/topicos' },
-];
+] as const;
 
 /* * */
 
@@ -26,7 +26,7 @@ export function AcademiaHomeNav() {
 	//
 	// A. Setup variables
 
-	const t = useTranslations('academia.AcademiaHomeNav');
+	const { t } = useTranslation();
 
 	//
 	// B. Render components
@@ -36,7 +36,7 @@ export function AcademiaHomeNav() {
 			<div className={styles.container}>
 				{LINKS.map(link => (
 					<a key={link.key} className={styles.link} href={link.path}>
-						{t(link.key)}
+						{t(`academia.AcademiaHomeNav.${link.key}`)}
 					</a>
 				))}
 			</div>

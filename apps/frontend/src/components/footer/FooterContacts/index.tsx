@@ -3,7 +3,7 @@
 /* * */
 
 import { Facebook, Instagram, LinkedIn } from '@/assets/socials';
-import { useTranslations } from 'next-intl';
+import { useTranslation } from 'react-i18next';
 
 import styles from './styles.module.css';
 
@@ -15,7 +15,7 @@ export function FooterContacts() {
 	//
 	// A. Setup variables
 
-	const t = useTranslations('footer.FooterContacts');
+	const { t } = useTranslation();
 
 	//
 	// B. Render components
@@ -45,7 +45,7 @@ export function FooterContacts() {
 				</a>
 			</div>
 			<div className={styles.address}>
-				<p className={styles.addressTitle}>{t('address.title')}</p>
+				<p className={styles.addressTitle}>{t('footer.FooterContacts.address.title')}</p>
 				<p className={styles.addressLine}>Edifício Cruzeiro 4 — 2º andar, sala 32</p>
 				<p className={styles.addressLine}>Largo Cruz de Celas — 3000-132 Coimbra</p>
 				<p className={styles.addressLine}>Portugal</p>

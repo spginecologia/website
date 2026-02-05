@@ -56,6 +56,7 @@ export async function payloadGetUser(username: string): Promise<null | User> {
 	// Return null if the username is neither an email nor a Tax ID.
 
 	console.log(`Invalid username: ${username}`);
+
 	return null;
 
 	//

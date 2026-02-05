@@ -5,8 +5,8 @@
 import { QuotaPaymentStatus } from '@/components/account/QuotaPaymentStatus';
 import { PayloadMeResponse } from '@/types/payload-api-response';
 import { Table, TableData, Text } from '@mantine/core';
-import { useTranslations } from 'next-intl';
 import { useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 import useSWR from 'swr';
 
 /* * */
@@ -17,7 +17,7 @@ export function AccountQuotasPayments() {
 	//
 	// A. Setup variables
 
-	const t = useTranslations('account.AccountQuotasPayments');
+	const { t } = useTranslation();
 
 	//
 	// B. Fetch data
@@ -31,7 +31,7 @@ export function AccountQuotasPayments() {
 		// Setup table data
 		const tableData: TableData = {
 			body: [],
-			head: [t('table.head.year'), t('table.head.payment_amount'), t('table.head.payment_status')],
+			head: [t('account.AccountQuotasPayments.table.head.year'), t('account.AccountQuotasPayments.table.head.payment_amount'), t('account.AccountQuotasPayments.table.head.payment_status')],
 		};
 		// If no user data, return the empty table
 		if (!userData?.user?.quotas?.length) {
@@ -45,7 +45,7 @@ export function AccountQuotasPayments() {
 			.map((item) => {
 				return [
 					item.year,
-					t('table.body.payment_amount', { value: item.payment_amount }),
+					t('account.AccountQuotasPayments.table.body.payment_amount', { value: item.payment_amount }),
 					<QuotaPaymentStatus paymentLinkUrl={item.payment_link_url} status={item.payment_status} />,
 				];
 			});
@@ -57,15 +57,15 @@ export function AccountQuotasPayments() {
 	// D. Render components
 
 	if (userLoading) {
-		return <Text variant="overline">{t('loading')}</Text>;
+		return <Text variant="overline">{t('account.AccountQuotasPayments.loading')}</Text>;
 	}
 
 	if (!userLoading && userError) {
-		return <Text variant="overline">{t('error')}</Text>;
+		return <Text variant="overline">{t('account.AccountQuotasPayments.error')}</Text>;
 	}
 
 	if (!tableData.body?.length) {
-		return <Text variant="overline">{t('no_data')}</Text>;
+		return <Text variant="overline">{t('account.AccountQuotasPayments.no_data')}</Text>;
 	}
 
 	return <Table data={tableData} layout="fixed" withTableBorder />;

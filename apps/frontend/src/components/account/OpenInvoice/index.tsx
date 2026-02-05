@@ -1,7 +1,7 @@
 /* * */
 
 import { IconExternalLink } from '@tabler/icons-react';
-import { useTranslations } from 'next-intl';
+import { useTranslation } from 'react-i18next';
 
 import styles from './styles.module.css';
 
@@ -19,7 +19,7 @@ export function OpenInvoice({ docId }: Props) {
 	//
 	// A. Setup variables
 
-	const t = useTranslations('account.OpenInvoice');
+	const { t } = useTranslation();
 
 	//
 	// B. Render components
@@ -30,7 +30,7 @@ export function OpenInvoice({ docId }: Props) {
 
 	return (
 		<a className={styles.link} href={`/api/account/quotas/get-invoice-pdf/${docId}`} target="_blank">
-			{t('label')}
+			{t('account.OpenInvoice.label')}
 			<IconExternalLink size={14} />
 		</a>
 	);

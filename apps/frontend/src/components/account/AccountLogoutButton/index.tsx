@@ -2,7 +2,7 @@
 
 import { type PayloadMeResponse } from '@/types/payload-api-response';
 import { Button } from '@mantine/core';
-import { useTranslations } from 'next-intl';
+import { useTranslation } from 'react-i18next';
 import useSWR from 'swr';
 
 /* * */
@@ -13,7 +13,7 @@ export function AccountLogoutButton() {
 	//
 	// A. Setup variables
 
-	const t = useTranslations('account.AccountLogoutButton');
+	const { t } = useTranslation();
 
 	//
 	// B. Fetch data
@@ -38,7 +38,7 @@ export function AccountLogoutButton() {
 
 	return (
 		<div>
-			<Button onClick={handleLogout}>{t('label')}</Button>
+			<Button onClick={handleLogout}>{t('account.AccountLogoutButton.label')}</Button>
 		</div>
 	);
 

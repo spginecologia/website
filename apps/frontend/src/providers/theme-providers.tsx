@@ -9,14 +9,14 @@ import 'dayjs/locale/pt';
 
 /* * */
 
-interface Props {
+interface ThemeProvidersProps {
 	children: React.ReactNode
 	themeData: MantineProviderProps['theme']
 }
 
 /* * */
 
-export function ThemeProviders({ children, themeData }: Props) {
+export function ThemeProviders({ children, themeData }: ThemeProvidersProps) {
 	//
 
 	//

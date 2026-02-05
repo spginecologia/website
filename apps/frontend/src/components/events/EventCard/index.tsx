@@ -5,8 +5,8 @@ import { CardWrapper } from '@/components/cards/CardWrapper';
 import { DateRibbon } from '@/components/events/DateRibbon';
 import { TopicDisplay } from '@/components/topics/TopicDisplay';
 import { Text, Title } from '@mantine/core';
-import { useTranslations } from 'next-intl';
 import { type Topic } from 'payload-types';
+import { useTranslation } from 'react-i18next';
 
 import styles from './styles.module.css';
 
@@ -29,7 +29,7 @@ export function EventCard({ coverSrc, endDate, href, startDate, title, topic }: 
 	//
 	// A. Setup variables
 
-	const t = useTranslations('events.EventCard');
+	const { t } = useTranslation();
 
 	//
 	// B. Render components
@@ -43,8 +43,8 @@ export function EventCard({ coverSrc, endDate, href, startDate, title, topic }: 
 					{topic && <TopicDisplay asLink={false} data={topic} />}
 					<Title order={2} size="sm">{title}</Title>
 					<div className={styles.datesWrapper}>
-						{startDate && <Text size="sm">{t('start_date', { value: startDate })}</Text>}
-						{endDate && <Text size="sm">{t('end_date', { value: endDate })}</Text>}
+						{startDate && <Text size="sm">{t('events.EventCard.start_date', { value: startDate })}</Text>}
+						{endDate && <Text size="sm">{t('events.EventCard.end_date', { value: endDate })}</Text>}
 					</div>
 				</div>
 			</div>

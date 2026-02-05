@@ -68,6 +68,7 @@ export interface Config {
   blocks: {};
   collections: {
     courses: Course;
+    'course-files': CourseFile;
     documents: Document;
     events: Event;
     guidelines: Guideline;
@@ -91,6 +92,7 @@ export interface Config {
   collectionsJoins: {};
   collectionsSelect: {
     courses: CoursesSelect<false> | CoursesSelect<true>;
+    'course-files': CourseFilesSelect<false> | CourseFilesSelect<true>;
     documents: DocumentsSelect<false> | DocumentsSelect<true>;
     events: EventsSelect<false> | EventsSelect<true>;
     guidelines: GuidelinesSelect<false> | GuidelinesSelect<true>;
@@ -124,9 +126,7 @@ export interface Config {
     'social-bodies': SocialBodiesSelect<false> | SocialBodiesSelect<true>;
   };
   locale: null;
-  user: User & {
-    collection: 'users';
-  };
+  user: User;
   jobs: {
     tasks: unknown;
     workflows: unknown;
@@ -158,8 +158,8 @@ export interface Course {
   id: string;
   title: string;
   content_type: 'video' | 'file' | 'url';
-  video?: (string | null) | Document;
-  document?: (string | null) | Document;
+  video?: (string | null) | CourseFile;
+  document?: (string | null) | CourseFile;
   url?: string | null;
   introduction?: string | null;
   topics?: (string | Topic)[] | null;
@@ -170,9 +170,9 @@ export interface Course {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "documents".
+ * via the `definition` "course-files".
  */
-export interface Document {
+export interface CourseFile {
   id: string;
   updatedAt: string;
   createdAt: string;
@@ -204,6 +204,24 @@ export interface Topic {
 export interface Media {
   id: string;
   alt?: string | null;
+  updatedAt: string;
+  createdAt: string;
+  url?: string | null;
+  thumbnailURL?: string | null;
+  filename?: string | null;
+  mimeType?: string | null;
+  filesize?: number | null;
+  width?: number | null;
+  height?: number | null;
+  focalX?: number | null;
+  focalY?: number | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "documents".
+ */
+export interface Document {
+  id: string;
   updatedAt: string;
   createdAt: string;
   url?: string | null;
@@ -474,6 +492,7 @@ export interface User {
       }[]
     | null;
   password?: string | null;
+  collection: 'users';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -579,6 +598,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'courses';
         value: string | Course;
+      } | null)
+    | ({
+        relationTo: 'course-files';
+        value: string | CourseFile;
       } | null)
     | ({
         relationTo: 'documents';
@@ -698,6 +721,23 @@ export interface CoursesSelect<T extends boolean = true> {
   featured_image?: T;
   updatedAt?: T;
   createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "course-files_select".
+ */
+export interface CourseFilesSelect<T extends boolean = true> {
+  updatedAt?: T;
+  createdAt?: T;
+  url?: T;
+  thumbnailURL?: T;
+  filename?: T;
+  mimeType?: T;
+  filesize?: T;
+  width?: T;
+  height?: T;
+  focalX?: T;
+  focalY?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

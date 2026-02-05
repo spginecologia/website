@@ -2,6 +2,9 @@
 
 /* * */
 
+import '@/i18n/config';
+import { LocaleContextProvider } from '@/i18n/LocaleContext';
+import { i18nResourceKeysPt } from '@/i18n/resources';
 import { SWRConfig, SWRConfiguration } from 'swr';
 
 /* * */
@@ -37,7 +40,9 @@ export function ConfigProviders({ children }) {
 
 	return (
 		<SWRConfig value={swrSettings}>
-			{children}
+			<LocaleContextProvider i18n={{ pt: i18nResourceKeysPt }}>
+				{children}
+			</LocaleContextProvider>
 		</SWRConfig>
 	);
 

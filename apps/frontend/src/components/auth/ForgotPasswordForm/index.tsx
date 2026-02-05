@@ -11,8 +11,8 @@ import { Alert, Button, Loader, Paper, Space, Text, TextInput, Title } from '@ma
 import { useForm } from '@mantine/form';
 import { IconInfoCircle, IconUserHeart } from '@tabler/icons-react';
 import { zod4Resolver } from 'mantine-form-zod-resolver';
-import { useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import styles from './styles.module.css';
 
@@ -24,7 +24,7 @@ export function ForgotPasswordForm() {
 	//
 	// A. Setup variables
 
-	const t = useTranslations('auth.ForgotPasswordForm');
+	const { t } = useTranslation();
 
 	const [isLoading, setIsLoading] = useState(false);
 	const [isError, setIsError] = useState(false);
@@ -49,7 +49,7 @@ export function ForgotPasswordForm() {
 	useEffect(() => {
 		// Get pre-filled values from URL query params
 		const params = new URLSearchParams(window.location.search);
-		const username = params.get('username');
+		const username = params.get('auth.ForgotPasswordForm.username');
 		if (username) form.setFieldValue('username', username);
 	}, []);
 
@@ -95,11 +95,11 @@ export function ForgotPasswordForm() {
 	if (forgotPasswordResponse && forgotPasswordResponse.user_found && forgotPasswordResponse.has_email) {
 		return (
 			<Paper className={styles.container}>
-				<Title order={2}>{t('title')}</Title>
-				<Text>{t('subtitle')}</Text>
+				<Title order={2}>{t('auth.ForgotPasswordForm.title')}</Title>
+				<Text>{t('auth.ForgotPasswordForm.subtitle')}</Text>
 				<Space h={5} />
-				<Alert icon={<IconUserHeart />} title={t('status.has_user_has_email.alert.title')} w="100%">
-					<Text size="sm">{t('status.has_user_has_email.alert.message')}</Text>
+				<Alert icon={<IconUserHeart />} title={t('auth.ForgotPasswordForm.status.has_user_has_email.alert.title')} w="100%">
+					<Text size="sm">{t('auth.ForgotPasswordForm.status.has_user_has_email.alert.message')}</Text>
 					<Space h={5} />
 					<Text fw="bold" size="sm">{forgotPasswordResponse?.has_email}</Text>
 					<Space h={5} />
@@ -111,11 +111,11 @@ export function ForgotPasswordForm() {
 	if (forgotPasswordResponse && forgotPasswordResponse.user_found && !forgotPasswordResponse.has_email) {
 		return (
 			<Paper className={styles.container}>
-				<Title order={2}>{t('title')}</Title>
-				<Text>{t('subtitle')}</Text>
+				<Title order={2}>{t('auth.ForgotPasswordForm.title')}</Title>
+				<Text>{t('auth.ForgotPasswordForm.subtitle')}</Text>
 				<Space h={5} />
-				<Alert icon={<IconUserHeart />} title={t('status.has_user_no_email.alert.title')} w="100%">
-					<Text size="sm">{t('status.has_user_no_email.alert.message')}</Text>
+				<Alert icon={<IconUserHeart />} title={t('auth.ForgotPasswordForm.status.has_user_no_email.alert.title')} w="100%">
+					<Text size="sm">{t('auth.ForgotPasswordForm.status.has_user_no_email.alert.message')}</Text>
 					<Space h={5} />
 					<Text fw="bold" size="xs">+351 218 429 710</Text>
 					<Text fw="bold" size="xs">secretariado@spginecologia.pt</Text>
@@ -128,13 +128,13 @@ export function ForgotPasswordForm() {
 	if (forgotPasswordResponse && !forgotPasswordResponse.user_found) {
 		return (
 			<Paper className={styles.container}>
-				<Title order={2}>{t('title')}</Title>
-				<Text>{t('subtitle')}</Text>
+				<Title order={2}>{t('auth.ForgotPasswordForm.title')}</Title>
+				<Text>{t('auth.ForgotPasswordForm.subtitle')}</Text>
 				<Space h={5} />
-				<Alert icon={<IconInfoCircle />} title={t('status.no_user.alert.title')} w="100%">
-					<Text size="sm">{t('status.no_user.alert.message')}</Text>
+				<Alert icon={<IconInfoCircle />} title={t('auth.ForgotPasswordForm.status.no_user.alert.title')} w="100%">
+					<Text size="sm">{t('auth.ForgotPasswordForm.status.no_user.alert.message')}</Text>
 					<Space h={5} />
-					<Button onClick={handleContinueToSignup}>{t('status.no_user.alert.action')}</Button>
+					<Button onClick={handleContinueToSignup}>{t('auth.ForgotPasswordForm.status.no_user.alert.action')}</Button>
 				</Alert>
 			</Paper>
 		);
@@ -142,16 +142,16 @@ export function ForgotPasswordForm() {
 
 	return (
 		<Paper className={styles.container} component="form" onSubmit={form.onSubmit(handleFormSubmit)}>
-			<Title order={2}>{t('title')}</Title>
-			<Text>{t('subtitle')}</Text>
+			<Title order={2}>{t('auth.ForgotPasswordForm.title')}</Title>
+			<Text>{t('auth.ForgotPasswordForm.subtitle')}</Text>
 			<Space h={5} />
-			<TextInput disabled={isLoading} label={t('fields.username.label')} placeholder={t('fields.username.placeholder')} w="100%" {...form.getInputProps('username')} />
+			<TextInput disabled={isLoading} label={t('auth.ForgotPasswordForm.fields.username.label')} placeholder={t('auth.ForgotPasswordForm.fields.username.placeholder')} w="100%" {...form.getInputProps('username')} />
 			{isLoading && <Loader />}
-			{(!isLoading && form.isDirty()) && <Button disabled={!form.isValid()} type="submit">{t('submit.label')}</Button>}
+			{(!isLoading && form.isDirty()) && <Button disabled={!form.isValid()} type="submit">{t('auth.ForgotPasswordForm.submit.label')}</Button>}
 			{(!isLoading && isError) && (
 				<>
 					<Space h={5} />
-					<Text variant="error">{t('error.message')}</Text>
+					<Text variant="error">{t('auth.ForgotPasswordForm.error.message')}</Text>
 				</>
 			)}
 		</Paper>

@@ -2,8 +2,6 @@
 
 /* * */
 
-import type { Video } from 'payload-types';
-
 import { ContentWrapper } from '@/components/common/ContentWrapper';
 import { ErrorDisplay } from '@/components/common/ErrorDisplay';
 import { NoDataDisplay } from '@/components/common/NoDataDisplay';
@@ -12,8 +10,9 @@ import { VideoCard } from '@/components/videos/VideoCard';
 import { VideoCardFeatured } from '@/components/videos/VideoCardFeatured';
 import { PayloadAPIResponse } from '@/types/payload-api-response';
 import { Title } from '@mantine/core';
-import { useTranslations } from 'next-intl';
+import { type Video } from 'payload-types';
 import { useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 import useSWR from 'swr';
 
 import styles from './styles.module.css';
@@ -26,7 +25,7 @@ export function VideosList() {
 	//
 	// A. Setup variables
 
-	const t = useTranslations('videos.VideosList');
+	const { t } = useTranslation();
 
 	//
 	// B. Fetch data
@@ -59,7 +58,7 @@ export function VideosList() {
 		return (
 			<ContentWrapper>
 				<Section withTopSpacer="academia">
-					<Title order={1}>{t('title')}</Title>
+					<Title order={1}>{t('videos.VideosList.title')}</Title>
 					<div className={styles.grid}>
 						{[...Array(10)].map((_, i) => <VideoCard key={i} />)}
 					</div>
@@ -72,7 +71,7 @@ export function VideosList() {
 		return (
 			<ContentWrapper>
 				<Section withTopSpacer="academia">
-					<Title order={1}>{t('title')}</Title>
+					<Title order={1}>{t('videos.VideosList.title')}</Title>
 					<ErrorDisplay />
 				</Section>
 			</ContentWrapper>
@@ -83,7 +82,7 @@ export function VideosList() {
 		return (
 			<ContentWrapper>
 				<Section withTopSpacer="academia">
-					<Title order={1}>{t('title')}</Title>
+					<Title order={1}>{t('videos.VideosList.title')}</Title>
 					<NoDataDisplay />
 				</Section>
 			</ContentWrapper>
@@ -112,7 +111,7 @@ export function VideosList() {
 				</Section>
 			)}
 			<Section>
-				<Title order={1}>{t('title')}</Title>
+				<Title order={1}>{t('videos.VideosList.title')}</Title>
 				<div className={styles.grid}>
 					{regularVideosItems.map(video => (
 						<VideoCard

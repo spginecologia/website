@@ -4,7 +4,7 @@
 
 import { Section } from '@/components/common/Section';
 import { Image, Text, Title } from '@mantine/core';
-import { useTranslations } from 'next-intl';
+import { useTranslation } from 'react-i18next';
 
 import styles from './styles.module.css';
 
@@ -16,7 +16,7 @@ export function AcademiaHomeIntro() {
 	//
 	// A. Setup variables
 
-	const t = useTranslations('academia.AcademiaHomeIntro');
+	const { t } = useTranslation();
 
 	//
 	// B. Render components
@@ -26,9 +26,9 @@ export function AcademiaHomeIntro() {
 			<div className={styles.container}>
 				<Image src="/brand/academia/academia-intro.svg" />
 				<div className={styles.descriptionWrapper}>
-					<Title order={2} ta="center">{t('title')}</Title>
+					<Title order={2} ta="center">{t('academia.AcademiaHomeIntro.title')}</Title>
 					<Image className={styles.academiaLogo} src="/brand/academia/spg-academia-logo.svg" />
-					<Text size="lg" ta="center">{t('description')}</Text>
+					<Text size="lg" ta="center">{t('academia.AcademiaHomeIntro.description')}</Text>
 				</div>
 			</div>
 		</Section>

@@ -5,12 +5,11 @@
 import { navigationHandleRedirectParam } from '@/services/navigation/navigation-handle-redirect-param';
 import { LoginDefault } from '@/services/payload/collections/Login/default';
 import { LoginValidation } from '@/services/payload/collections/Login/validation';
-import { Alert, Anchor, Button, Loader, Paper, Space, Text, TextInput, Title } from '@mantine/core';
+import { Anchor, Button, Loader, Paper, Space, Text, TextInput, Title } from '@mantine/core';
 import { useForm } from '@mantine/form';
-import { IconSparkles } from '@tabler/icons-react';
 import { zod4Resolver } from 'mantine-form-zod-resolver';
-import { useTranslations } from 'next-intl';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import styles from './styles.module.css';
 
@@ -22,7 +21,7 @@ export function LoginForm() {
 	//
 	// A. Setup variables
 
-	const t = useTranslations('auth.LoginForm');
+	const { t } = useTranslation();
 
 	const [isLoading, setIsLoading] = useState(false);
 	const [isError, setIsError] = useState(false);
@@ -75,29 +74,24 @@ export function LoginForm() {
 	return (
 		<Paper className={styles.container} component="form" onSubmit={form.onSubmit(handleLogin)}>
 
-			<Title order={2}>{t('title')}</Title>
-
-			<Alert icon={<IconSparkles />} title={t('alert.title')} w="100%">
-				<Text size="xs">{t('alert.message')}</Text>
-				<Anchor href={`/forgot?username=${form.values.username}`} id={styles.anchor} variant="link">{t('alert.action')}</Anchor>
-			</Alert>
+			<Title order={2}>{t('auth.LoginForm.title')}</Title>
 
 			<Space h={5} />
 
-			<TextInput disabled={isLoading} label={t('username.label')} placeholder={t('username.placeholder')} w="100%" {...form.getInputProps('username')} />
-			<TextInput disabled={isLoading} label={t('password.label')}placeholder={t('password.placeholder')} type="password" w="100%" {...form.getInputProps('password')} />
+			<TextInput disabled={isLoading} label={t('auth.LoginForm.username.label')} placeholder={t('auth.LoginForm.username.placeholder')} w="100%" {...form.getInputProps('username')} />
+			<TextInput disabled={isLoading} label={t('auth.LoginForm.password.label')}placeholder={t('auth.LoginForm.password.placeholder')} type="password" w="100%" {...form.getInputProps('password')} />
 
 			{isLoading && <Loader />}
-			{(!isLoading && form.isDirty()) && <Button disabled={!form.isValid()} type="submit">{t('submit.label')}</Button>}
+			{(!isLoading && form.isDirty()) && <Button disabled={!form.isValid()} type="submit">{t('auth.LoginForm.submit.label')}</Button>}
 			{(!isLoading && isError) && (
 				<>
 					<Space h={5} />
-					<Text variant="error">{t('error.message')}</Text>
+					<Text variant="error">{t('auth.LoginForm.error.message')}</Text>
 				</>
 			)}
 
 			<Space h={5} />
-			<Anchor href={`/forgot?username=${form.values.username}`} id={styles.anchor} variant="link">{t('reset_password')}</Anchor>
+			<Anchor href={`/forgot?username=${form.values.username}`} id={styles.anchor} variant="link">{t('auth.LoginForm.reset_password')}</Anchor>
 
 		</Paper>
 	);

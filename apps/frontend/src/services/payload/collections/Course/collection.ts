@@ -48,7 +48,7 @@ export const Courses: CollectionConfig = {
 			},
 			label: 'Vídeo deste Curso',
 			name: 'video',
-			relationTo: 'documents',
+			relationTo: 'course-files',
 			type: 'upload',
 		},
 		{
@@ -57,7 +57,7 @@ export const Courses: CollectionConfig = {
 			},
 			label: 'Ficheiro deste Curso',
 			name: 'document',
-			relationTo: 'documents',
+			relationTo: 'course-files',
 			type: 'upload',
 		},
 		{

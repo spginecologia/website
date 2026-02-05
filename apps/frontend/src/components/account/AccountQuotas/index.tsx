@@ -4,7 +4,7 @@ import { AccountQuotasInvoices } from '@/components/account/AccountQuotasInvoice
 import { AccountQuotasPayments } from '@/components/account/AccountQuotasPayments';
 import { AccountQuotasRefresh } from '@/components/account/AccountQuotasRefresh';
 import { Paper, Space, Text, Title } from '@mantine/core';
-import { useTranslations } from 'next-intl';
+import { useTranslation } from 'react-i18next';
 
 /* * */
 
@@ -14,16 +14,16 @@ export function AccountQuotas() {
 	//
 	// A. Setup variables
 
-	const t = useTranslations('account.AccountQuotas');
+	const { t } = useTranslation();
 
 	//
 	// B. Render components
 
 	return (
 		<Paper>
-			<Title order={2}>{t('title')}</Title>
+			<Title order={2}>{t('account.AccountQuotas.title')}</Title>
 			<Space h="xs" />
-			<Text>{t('subtitle')}</Text>
+			<Text>{t('account.AccountQuotas.subtitle')}</Text>
 			<Space h="xl" />
 			<AccountQuotasPayments />
 			<Space h="xl" />

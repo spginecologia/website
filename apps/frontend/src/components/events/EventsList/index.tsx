@@ -12,8 +12,8 @@ import { EventCard } from '@/components/events/EventCard';
 import { EventsListPastButton } from '@/components/events/EventsListPastButton';
 import { PayloadAPIResponse } from '@/types/payload-api-response';
 import { Title } from '@mantine/core';
-import { useTranslations } from 'next-intl';
 import { useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 import useSWR from 'swr';
 
 import styles from './styles.module.css';
@@ -26,7 +26,7 @@ export function EventsList() {
 	//
 	// A. Setup variables
 
-	const t = useTranslations('events.EventsList');
+	const { t } = useTranslation();
 
 	//
 	// B. Fetch data
@@ -58,7 +58,7 @@ export function EventsList() {
 		return (
 			<ContentWrapper>
 				<Section withTopSpacer="transparent">
-					<Title order={1}>{t('title')}</Title>
+					<Title order={1}>{t('events.EventsList.title')}</Title>
 					<div className={styles.grid}>
 						{[...Array(10)].map((_, i) => <EventCard key={i} />)}
 					</div>
@@ -71,7 +71,7 @@ export function EventsList() {
 		return (
 			<ContentWrapper>
 				<Section withTopSpacer="transparent">
-					<Title order={1}>{t('title')}</Title>
+					<Title order={1}>{t('events.EventsList.title')}</Title>
 					<ErrorDisplay />
 				</Section>
 			</ContentWrapper>
@@ -82,7 +82,7 @@ export function EventsList() {
 		return (
 			<ContentWrapper>
 				<Section withTopSpacer="transparent">
-					<Title order={1}>{t('title')}</Title>
+					<Title order={1}>{t('events.EventsList.title')}</Title>
 					<NoDataDisplay />
 				</Section>
 			</ContentWrapper>
@@ -108,7 +108,7 @@ export function EventsList() {
 				</Section>
 			)}
 			<Section withTopSpacer="transparent">
-				<Title order={1}>{t('title')}</Title>
+				<Title order={1}>{t('events.EventsList.title')}</Title>
 				<div className={styles.grid}>
 					{regularEventsItems.map(eventData => (
 						<EventCard

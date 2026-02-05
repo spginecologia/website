@@ -17,7 +17,7 @@ export const Documents: CollectionConfig = {
 		beforeOperation: [
 			({ collection, operation, req }) => {
 				if ((operation === 'create' || operation === 'update') && req.file) {
-					req.file.name = `${collection.slug}-${Date.now()}-${req.file.name.replace(/[^a-z0-9.]/gi, '_').slice(-30).toLowerCase()}`;
+					req.file.name = `${collection.slug}-${Date.now()}`;
 				}
 			},
 		],

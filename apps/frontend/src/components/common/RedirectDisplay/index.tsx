@@ -1,8 +1,8 @@
 /* * */
 
 import { Button } from '@mantine/core';
-import { useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import styles from './styles.module.css';
 
@@ -24,7 +24,7 @@ export function RedirectDisplay({ href, target = '_blank', withDelay = 0 }: Prop
 	//
 	// A. Setup variables
 
-	const t = useTranslations('common.RedirectDisplay');
+	const { t } = useTranslation();
 
 	const [manualButtonIsVisible, setManualButtonIsVisible] = useState(false);
 
@@ -52,7 +52,7 @@ export function RedirectDisplay({ href, target = '_blank', withDelay = 0 }: Prop
 
 	return (
 		<div className={styles.container}>
-			{manualButtonIsVisible ? <Button onClick={handleOpenLink}>{t('open')}</Button> : <NoDataDisplay text={t('title')} />}
+			{manualButtonIsVisible ? <Button onClick={handleOpenLink}>{t('common.RedirectDisplay.open')}</Button> : <NoDataDisplay text={t('common.RedirectDisplay.title')} />}
 		</div>
 	);
 

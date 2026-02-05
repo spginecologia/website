@@ -4,8 +4,8 @@
 
 import { SpgAcademia } from '@/assets/spg';
 import { IconBooks, IconBrandYoutube, IconBuildingCottage, IconBulb, IconFileCheck, IconListSearch, IconSchool, IconVideoPlus } from '@tabler/icons-react';
-import { useTranslations } from 'next-intl';
 import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
 
 import styles from './styles.module.css';
 
@@ -20,7 +20,7 @@ export const ACADEMIA_PAGES = [
 	{ icon: <IconSchool size={24} />, key: 'courses', path: '/academia/courses' },
 	{ icon: <IconBulb size={24} />, key: 'grant', path: 'https://spginecologia.pt/bolsa/2025' },
 	{ icon: <IconListSearch size={24} />, key: 'topics', path: 'https://spginecologia.pt/academia/topicos' },
-];
+] as const;
 
 /* * */
 
@@ -30,7 +30,7 @@ export function HeaderAcademia() {
 	//
 	// A. Setup variables
 
-	const t = useTranslations('header.HeaderMenu');
+	const { t } = useTranslation();
 
 	//
 	// B. Render components
@@ -45,7 +45,7 @@ export function HeaderAcademia() {
 				{ACADEMIA_PAGES.map(item => (
 					<Link key={item.key} className={styles.dropdownLink} href={item.path}>
 						<span className={styles.dropdownLinkIcon}>{item.icon}</span>
-						<span className={styles.dropdownLinkLabel}>{t(`${item.key}.label`)}</span>
+						<span className={styles.dropdownLinkLabel}>{t(`header.HeaderMenu.${item.key}.label`)}</span>
 					</Link>
 				))}
 			</div>

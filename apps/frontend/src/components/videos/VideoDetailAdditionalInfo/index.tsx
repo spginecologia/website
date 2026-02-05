@@ -5,9 +5,9 @@
 import { TopicDisplay } from '@/components/topics/TopicDisplay';
 import { Skeleton } from '@mantine/core';
 import { DateTime } from 'luxon';
-import { useTranslations } from 'next-intl';
 import { type Topic } from 'payload-types';
 import { useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import styles from './styles.module.css';
 
@@ -27,14 +27,14 @@ export function VideoDetailAdditionalInfo({ publishDate, topics, views = 1 }: Vi
 	//
 	// A. Setup variables
 
-	const t = useTranslations('videos.VideoDetailAdditionalInfo');
+	const { t } = useTranslation();
 
 	//
 	// B. Transform data
 
 	const publishDateFormatted = useMemo(() => {
 		if (!publishDate) return;
-		return DateTime.fromISO(publishDate).toFormat('dd-MM-yyyy');
+		return DateTime.fromISO(publishDate).toFormat('videos.VideoDetailAdditionalInfo.dd-MM-yyyy');
 	}, [publishDate]);
 
 	//
@@ -48,17 +48,17 @@ export function VideoDetailAdditionalInfo({ publishDate, topics, views = 1 }: Vi
 		<div className={styles.container}>
 
 			<div className={styles.block}>
-				<p className={styles.label}>{t('views.label')}</p>
+				<p className={styles.label}>{t('videos.VideoDetailAdditionalInfo.views.label')}</p>
 				<p className={styles.value}>{views}</p>
 			</div>
 
 			<div className={styles.block}>
-				<p className={styles.label}>{t('publish_date.label')}</p>
+				<p className={styles.label}>{t('videos.VideoDetailAdditionalInfo.publish_date.label')}</p>
 				<p className={styles.value}>{publishDateFormatted}</p>
 			</div>
 
 			<div className={styles.block}>
-				<p className={styles.label}>{t('topics.label')}</p>
+				<p className={styles.label}>{t('videos.VideoDetailAdditionalInfo.topics.label')}</p>
 				<div className={styles.topicsWrapper}>
 					{topics?.map(topic => (
 						<TopicDisplay key={topic.id} data={topic} />
