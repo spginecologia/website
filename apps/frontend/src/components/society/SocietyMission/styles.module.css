@@ -58,6 +58,6 @@
 /* * */
 /* TEXT */
 
-.grid .whiteText {
-	color: var(--color-reference-white);
+.whiteText {
+	color: var(--color-reference-white) !important;
 }
