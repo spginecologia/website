@@ -25,6 +25,7 @@ export async function POST(request: Request) {
 		// Check if an user already exists with the same email
 
 		const foundUserByEmail = await payloadGetUser(requestBody.email);
+
 		if (foundUserByEmail) {
 			const response: SignupResponse = {
 				anonymized_email: getAnonymizedEmail(foundUserByEmail.email),
@@ -34,9 +35,10 @@ export async function POST(request: Request) {
 		}
 
 		//
-		// Check if an user already exists with the same email
+		// Check if an user already exists with the same Tax ID
 
 		const foundUserByTaxId = await payloadGetUser(requestBody.tax_id);
+
 		if (foundUserByTaxId) {
 			const response: SignupResponse = {
 				anonymized_email: getAnonymizedEmail(foundUserByTaxId.email),

@@ -4,7 +4,6 @@ import payloadConfig from '@/payload-config';
 import { validateTaxId } from '@/services/general/validate-tax-id';
 import { DateTime } from 'luxon';
 import { getPayload } from 'payload';
-import { User } from 'payload-types';
 
 /* * */
 
@@ -15,42 +14,37 @@ export async function POST(request: Request) {
 		const payload = await getPayload({ config: payloadConfig });
 
 		//
-		// Extract the username (email or NIF) and password from the request body
+		// Parse the request body to get the username and password.
 
 		const requestBody = await request.json();
 
-		const emailOrTaxId = requestBody.username;
-		const password = requestBody.password;
+		//
+		// Check if the provided username (Tax ID) is valid.
+		// If it is not, throw an error. We expect the username
+		// to be a valid Tax ID for singular persons.
+
+		const isValidTaxId = validateTaxId(requestBody.username, false, ['singular']);
+
+		if (!isValidTaxId) {
+			throw new Error(`Invalid Tax ID format: ${requestBody.username}. Expected a valid Tax ID for singular persons.`);
+		}
 
 		//
-		// Check if the user is trying to login with Tax ID instead of email.
-		// If the user is trying to login with Tax ID, we need to find
-		// the email associated with that Tax ID first.
+		// Find the associated email for the given Tax ID.
+		// We will use this email to login the user, as Payload's
+		// login method requires an email and password. If no user
+		// is found for the given Tax ID, throw an error.
 
-		const isTaxId = validateTaxId(emailOrTaxId, false, ['singular']);
+		const result = await payload.find({
+			collection: 'users',
+			where: { tax_id: { equals: requestBody.username } },
+		});
 
-		let foundUser: User;
-
-		if (isTaxId) {
-			const result = await payload.find({
-				collection: 'users',
-				where: { tax_id: { equals: emailOrTaxId } },
-			});
-			if (result.docs.length === 0) {
-				throw new Error(`User not found for given Tax ID: ${emailOrTaxId}`);
-			}
-			foundUser = result.docs[0];
+		if (result.docs.length === 0) {
+			throw new Error(`User not found for given Tax ID: ${requestBody.username}`);
 		}
-		else {
-			const result = await payload.find({
-				collection: 'users',
-				where: { email: { equals: emailOrTaxId } },
-			});
-			if (result.docs.length === 0) {
-				throw new Error(`User not found for given email: ${emailOrTaxId}`);
-			}
-			foundUser = result.docs[0];
-		}
+
+		const foundUser = result.docs[0];
 
 		//
 		// Now, using the found user object, we can login the user using the
@@ -62,7 +56,7 @@ export async function POST(request: Request) {
 			collection: 'users',
 			data: {
 				email: foundUser.email,
-				password: password,
+				password: requestBody.password,
 			},
 			req: request,
 		});
