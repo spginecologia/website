@@ -31,7 +31,7 @@ export const CourseFiles: CollectionConfig = {
 	slug: 'course-files',
 
 	upload: {
-		staticDir: 'storage/course-files',
+		staticDir: `${process.env.STORAGE_ROOT_DIR}/course-files`,
 	},
 
 };

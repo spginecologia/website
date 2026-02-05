@@ -109,6 +109,6 @@ services:
         max-size: '1m'
         max-file: '1'
     volumes:
-      - /opt/storage/website-data:/data/db
+      - /opt/storage/website-data:/storage
     env_file:
       - ./secrets/.env
