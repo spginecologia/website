@@ -64,9 +64,6 @@
 		"locked": "Locked",
 		"unlocked": "Unlocked"
 	},
-	"NoDataLabel": {
-		"title": "No Data Available"
-	},
 	"PatternPresetsTable": {
 		"dwell_time": {
 			"apply": "Apply this Dwell Time to All Stops",
