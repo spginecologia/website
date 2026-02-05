@@ -536,8 +536,8 @@
 			},
 			"fields": {
 				"username": {
-					"label": "NIF ou Email",
-					"placeholder": "Introduza o seu NIF ou Email"
+					"label": "Número de Contribuinte",
+					"placeholder": "Introduza o seu NIF"
 				}
 			},
 			"status": {
@@ -564,17 +564,12 @@
 			"submit": {
 				"label": "Verificar"
 			},
-			"subtitle": "Antes de avançar, por favor indique o seu NIF ou Email para verificar se existe uma Conta SPG associada a esses dados.",
+			"subtitle": "Antes de avançar, por favor indique o seu NIF para verificar se já existe uma Conta SPG associada a esse dado.",
 			"title": "Verificação de Conta"
 		},
 		"LoginForm": {
-			"alert": {
-				"action": "Clique aqui para redefinir a sua password",
-				"message": "Agora já é possível entrar na sua conta SPG através do seu Número de Contribuinte pessoal! Por este motivo, poderá ser necessário redefinir a sua password.",
-				"title": "Nova experiência de login"
-			},
 			"error": {
-				"message": "Login falhou. Email ou password incorretos.",
+				"message": "Login falhou. NIF ou password incorretos.",
 				"retry": "Tentar Novamente"
 			},
 			"password": {
@@ -588,13 +583,13 @@
 			"subtitle": "Já é possível entrar na sua conta SPG através do seu Número de Contribuinte pessoal.",
 			"title": "Login",
 			"username": {
-				"label": "Email ou NIF",
-				"placeholder": "Introduza o seu email ou NIF"
+				"label": "Número de Contribuinte",
+				"placeholder": "Introduza o seu NIF"
 			}
 		},
 		"ResetPasswordForm": {
 			"error": {
-				"message": "Login falhou. Email ou password incorretos.",
+				"message": "Login falhou. NIF ou password incorretos.",
 				"retry": "Tentar Novamente"
 			},
 			"password": {
@@ -608,7 +603,7 @@
 			"submit": {
 				"label": "Iniciar Sessão"
 			},
-			"subtitle": "Introduza o seu email ou NIF. Irá receber um email com instruções para a recuperação da sua password.",
+			"subtitle": "Introduza o seu NIF. Irá receber um email com instruções para a recuperação da sua password.",
 			"success": {
 				"message": "As instruções foram enviadas para o seu email. Por favor verifique a sua caixa de entrada.",
 				"title": "Pedido enviado"

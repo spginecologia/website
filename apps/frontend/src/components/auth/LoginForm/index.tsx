@@ -5,9 +5,8 @@
 import { navigationHandleRedirectParam } from '@/services/navigation/navigation-handle-redirect-param';
 import { LoginDefault } from '@/services/payload/collections/Login/default';
 import { LoginValidation } from '@/services/payload/collections/Login/validation';
-import { Alert, Anchor, Button, Loader, Paper, Space, Text, TextInput, Title } from '@mantine/core';
+import { Anchor, Button, Loader, Paper, Space, Text, TextInput, Title } from '@mantine/core';
 import { useForm } from '@mantine/form';
-import { IconSparkles } from '@tabler/icons-react';
 import { zod4Resolver } from 'mantine-form-zod-resolver';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -76,11 +75,6 @@ export function LoginForm() {
 		<Paper className={styles.container} component="form" onSubmit={form.onSubmit(handleLogin)}>
 
 			<Title order={2}>{t('auth.LoginForm.title')}</Title>
-
-			<Alert icon={<IconSparkles />} title={t('auth.LoginForm.alert.title')} w="100%">
-				<Text size="xs">{t('auth.LoginForm.alert.message')}</Text>
-				<Anchor href={`/forgot?username=${form.values.username}`} id={styles.anchor} variant="link">{t('auth.LoginForm.alert.action')}</Anchor>
-			</Alert>
 
 			<Space h={5} />
 
