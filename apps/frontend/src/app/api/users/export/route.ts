@@ -24,9 +24,9 @@ export async function GET(request: Request) {
 
 		const authResult = await payload.auth({ headers: request.headers });
 
-		const hasAccess = payloadAccessControl('admin', authResult.user);
+		const hasAdminAccess = payloadAccessControl('admin', authResult.user);
 
-		if (!hasAccess) return new Response(null, { status: 403 });
+		if (!hasAdminAccess) return new Response(null, { status: 403 });
 
 		//
 		// Fetch all users from the database
@@ -42,7 +42,35 @@ export async function GET(request: Request) {
 		// Strip sensitive fields before exporting
 
 		const sanitizedDocs: Partial<User>[] = foundUsers.docs.map(item => ({
+			account_role: item.account_role,
+			account_status: item.account_status,
+			address_1: item.address_1,
+			address_2: item.address_2,
+			billing_address_1: item.billing_address_1,
+			billing_address_2: item.billing_address_2,
+			billing_city: item.billing_city,
+			billing_name: item.billing_name,
+			billing_postal_code: item.billing_postal_code,
+			billing_tax_id: item.billing_tax_id,
+			birthday: item.birthday,
+			city: item.city,
+			country: item.country,
+			createdAt: item.createdAt,
 			email: item.email,
+			first_name: item.first_name,
+			id: item.id,
+			is_intern: item.is_intern,
+			last_name: item.last_name,
+			medical_id: item.medical_id,
+			member_since: item.member_since,
+			phone: item.phone,
+			postal_code: item.postal_code,
+			send_newsletter: item.send_newsletter,
+			tax_id: item.tax_id,
+			title: item.title,
+			updatedAt: item.updatedAt,
+			workplace_primary: item.workplace_primary,
+			workplace_secondary: item.workplace_secondary,
 		}));
 
 		//
