@@ -23,18 +23,40 @@ export const Users: CollectionConfig = {
 	},
 
 	admin: {
+
 		components: {
 			listMenuItems: [
 				'@/services/payload/components/UsersExportButton/index#UsersExportButton',
 			],
 		},
+
+		defaultColumns: [
+			'tax_id',
+			'title',
+			'first_name',
+			'last_name',
+			'email',
+			'account_status',
+			'account_role',
+			'createdAt',
+		],
+
+		groupBy: true,
+
 		listSearchableFields: [
 			'tax_id',
 			'first_name',
 			'last_name',
 			'email',
 		],
-		useAsTitle: 'email',
+
+		pagination: {
+			defaultLimit: 100,
+			limits: [50, 100, 300, 500],
+		},
+
+		useAsTitle: 'tax_id',
+
 	},
 
 	auth: {
