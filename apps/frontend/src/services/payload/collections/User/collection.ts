@@ -28,6 +28,12 @@ export const Users: CollectionConfig = {
 				'@/services/payload/components/UsersExportButton/index#UsersExportButton',
 			],
 		},
+		listSearchableFields: [
+			'tax_id',
+			'first_name',
+			'last_name',
+			'email',
+		],
 		useAsTitle: 'email',
 	},
 
