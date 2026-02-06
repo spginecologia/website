@@ -1358,7 +1358,7 @@
 				},
 				"description": {
 					"paragraph_1": "Neste campo poderá incluir todo o texto que pretender.",
-					"paragraph_2": "Sugerimos que organize por Objetivos, Material e Métodos, Conclusões. Procura-se manter alguma consistência entre vídeos, no entanto fica ao critério da equipa decidir a organização que melhor se adequa ao vídeo a ser publicado.",
+					"paragraph_2": "Sugerimos que organize por Objetivos, Material e Métodos, Conclusões. Procura-se manter alguma consistência entre vídeos, no entanto fica ao critério do autor decidir a organização que melhor se adequa ao vídeo a ser publicado.",
 					"title": "Descrição"
 				},
 				"introduction": {
@@ -1373,7 +1373,7 @@
 				},
 				"rights_declaration": {
 					"link_1": "Descarregar a Declaração de Cedência de Direitos",
-					"paragraph_1": "Por favor preencha a Declaração de Cedência de Direitos (disponível aqui). Assine e faça o upload para o campo.",
+					"paragraph_1": "Por favor preencha a Declaração de Cedência de Direitos. Assine e faça o upload para o campo.",
 					"title": "Declaração de Cedência de Direitos"
 				},
 				"spg_sections": {
