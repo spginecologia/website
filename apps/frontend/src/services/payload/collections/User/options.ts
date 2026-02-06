@@ -6,7 +6,7 @@ export const UserOptions = {
 		{ label: '0 - Sócio Regular', value: 'member' },
 		{ label: '1 - Gestor de Vídeos', value: 'video-manager' },
 		{ label: '2 - Gestor de Conteúdos', value: 'content-manager' },
-		{ label: '3 - Gestor de Utilizadores', value: 'users-manager' },
+		{ label: '3 - Gestor de Sócios', value: 'users-manager' },
 		{ label: '4 - Administrador', value: 'admin' },
 	],
 

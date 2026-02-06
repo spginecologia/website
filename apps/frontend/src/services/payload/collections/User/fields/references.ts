@@ -69,7 +69,7 @@ export const userFieldsReferences: Field[] = [
 		fields: [
 			{
 				admin: {
-					description: 'Os utilizadores que são Internos não pagam quotas se a Quota for para um ano entre o ano de início e fim do Internato.',
+					description: 'Os sócios que são Internos não pagam quotas se a Quota for para um ano entre o ano de início e fim do Internato.',
 				},
 				label: 'Definir como Interno',
 				name: 'is_intern',

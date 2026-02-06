@@ -11,7 +11,7 @@ export function getUserDisplayName(title: null | string | undefined, firstName: 
 	//
 
 	if (!firstName) {
-		return 'Utilizador sem nome';
+		return 'Sócio sem nome';
 	}
 
 	if (!title) {

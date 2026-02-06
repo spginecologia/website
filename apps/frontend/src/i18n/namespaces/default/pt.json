@@ -938,7 +938,7 @@
 		"PrivacyMain": {
 			"paragraph_1": "Este documento contém informações sobre como são coletados, registados e utilizados dados dos visitantes do site da SPG. Se tiver perguntas adicionais ou precisar de mais informações sobre a nossa Política de Privacidade, não hesite em contactar-nos.",
 			"paragraph_2": "Este site utiliza cookies para permitir a estabilidade e a melhoria de desempenho das várias funcionalidades do site. As informações recolhidas de cada visitante são genéricas e a SPG apenas consegue visualizar o seu valor agregado. Pode consultar a Política de Privacidade do nosso fornecedor de métricas aqui: https://automattic.com/cookies/",
-			"paragraph_3": "A nossa newsletter periódica é enviada apenas aos subscritores que introduziram o seu email no website. Utilizamos o MailChimp para o envio da newsletter. São recolhidos dados sobre os utilizadores subscritos, (ex.: se ou quando abriu o email), sendo que a SPG consegue visualizar apenas o agregado. A SPG não irá utilizar a lista de contactos para outros fins a não ser o envio periódico de notícias ou avisos que considere relevantes para os seus utilizadores. Se pretender cancelar a subscrição pode clicar no link no fim de cada email, ou entrar em contacto connosco. Pode consultar a Política de Privacidade do MailChimp aqui: https://mailchimp.com/legal/privacy/",
+			"paragraph_3": "A nossa newsletter periódica é enviada apenas aos subscritores que introduziram o seu email no website. Utilizamos o MailChimp para o envio da newsletter. São recolhidos dados sobre os sócios subscritos, (ex.: se ou quando abriu o email), sendo que a SPG consegue visualizar apenas o agregado. A SPG não irá utilizar a lista de contactos para outros fins a não ser o envio periódico de notícias ou avisos que considere relevantes para os seus sócios. Se pretender cancelar a subscrição pode clicar no link no fim de cada email, ou entrar em contacto connosco. Pode consultar a Política de Privacidade do MailChimp aqui: https://mailchimp.com/legal/privacy/",
 			"subtitle_1": "Na SPG valorizamos a privacidade dos nossos sócios e visitantes.",
 			"subtitle_2": "Cookies",
 			"subtitle_3": "Newsletter",
@@ -1363,7 +1363,7 @@
 				},
 				"introduction": {
 					"paragraph_1": "Neste campo inclua uma breve descrição do vídeo. Este texto estará visível na página principal da  SPG e da Academia, acompanhado da imagem de capa.",
-					"paragraph_2": "Apesar de estar totalmente dependente do teor do vídeo, sugerimos que resuma as questões a que o vídeo responde ou a técnica inovadora demonstrada, entre outros. O importante é que seja claro qual o tema do vídeo e que, de certa forma, capture a atenção do utilizador.",
+					"paragraph_2": "Apesar de estar totalmente dependente do teor do vídeo, sugerimos que resuma as questões a que o vídeo responde ou a técnica inovadora demonstrada, entre outros. O importante é que seja claro qual o tema do vídeo e que, de certa forma, capture a atenção do sócio.",
 					"title": "Introdução"
 				},
 				"rgpd_declaration": {
@@ -1392,7 +1392,7 @@
 					"title": "Ficheiro de Vídeo"
 				},
 				"video_title": {
-					"paragraph_1": "Sugerimos que escolha um título que transmita em poucas palavras o teor do vídeo. Desta forma promove a atratividade do vídeo perante os utilizadores da Academia SPG e o correto enquadramento dentro dos limites definidos pela plataforma.",
+					"paragraph_1": "Sugerimos que escolha um título que transmita em poucas palavras o teor do vídeo. Desta forma promove a atratividade do vídeo perante os sócios da Academia SPG e o correto enquadramento dentro dos limites definidos pela plataforma.",
 					"title": "Título do Vídeo"
 				}
 			},

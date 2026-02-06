@@ -80,7 +80,7 @@ export const Videos: CollectionConfig = {
 			type: 'textarea',
 		},
 		{
-			label: 'Utilizador que Publicou',
+			label: 'Sócio que Publicou',
 			name: 'publisher',
 			relationTo: 'users',
 			required: true,
