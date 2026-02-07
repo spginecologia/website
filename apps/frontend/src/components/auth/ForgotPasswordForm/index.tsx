@@ -11,6 +11,7 @@ import { Alert, Button, Loader, Paper, Space, Text, TextInput, Title } from '@ma
 import { useForm } from '@mantine/form';
 import { IconInfoCircle, IconUserHeart } from '@tabler/icons-react';
 import { zod4Resolver } from 'mantine-form-zod-resolver';
+import { useQueryState } from 'nuqs';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -25,6 +26,8 @@ export function ForgotPasswordForm() {
 	// A. Setup variables
 
 	const { t } = useTranslation();
+
+	const [usernameValue] = useQueryState('username');
 
 	const [isLoading, setIsLoading] = useState(false);
 	const [isError, setIsError] = useState(false);
@@ -47,11 +50,10 @@ export function ForgotPasswordForm() {
 	// C. Handle actions
 
 	useEffect(() => {
+		if (!usernameValue) return;
 		// Get pre-filled values from URL query params
-		const params = new URLSearchParams(window.location.search);
-		const username = params.get('auth.ForgotPasswordForm.username');
-		if (username) form.setFieldValue('username', username);
-	}, []);
+		form.setFieldValue('username', usernameValue);
+	}, [usernameValue]);
 
 	const handleFormSubmit = async () => {
 		try {

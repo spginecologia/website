@@ -8,7 +8,8 @@ import { ResetPasswordValidation } from '@/services/payload/collections/ResetPas
 import { Button, Loader, Paper, PasswordInput, Space, Text, Title } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { zod4Resolver } from 'mantine-form-zod-resolver';
-import { useMemo, useState } from 'react';
+import { useQueryState } from 'nuqs';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import styles from './styles.module.css';
@@ -28,6 +29,8 @@ export function ResetPasswordForm() {
 
 	const [passwordVisible, setPasswordVisibility] = useState(false);
 
+	const [tokenValue] = useQueryState('token');
+
 	//
 	// B. Setup form
 
@@ -41,17 +44,18 @@ export function ResetPasswordForm() {
 	});
 
 	//
-	// C. Transform data
-
-	const resetToken = useMemo(() => {
-		const urlParams = new URLSearchParams(window.location.search);
-		const token = urlParams.get('auth.ResetPasswordForm.token');
-		if (!token) window.location.replace('/forgot');
-		return token;
-	}, []);
-
-	//
 	// D. Handle actions
+
+	useEffect(() => {
+		// Skip if token is present
+		if (tokenValue) return;
+		// Set timeout of 15 seconds to redirect user
+		// if token is not present in query params
+		const timeout = setTimeout(() => {
+			if (!tokenValue) window.location.replace('/forgot');
+		}, 15_000);
+		return () => clearTimeout(timeout);
+	}, [tokenValue]);
 
 	const handleResetPassword = async () => {
 		try {
@@ -61,7 +65,7 @@ export function ResetPasswordForm() {
 				body: JSON.stringify({
 					password: form.values.password,
 					password_confirmation: form.values.password_confirmation,
-					token: resetToken,
+					token: tokenValue,
 				}),
 				headers: {
 					'Content-Type': 'application/json',
@@ -82,6 +86,14 @@ export function ResetPasswordForm() {
 
 	//
 	// E. Render components
+
+	if (!tokenValue) {
+		return (
+			<Paper className={styles.container}>
+				<Loader />
+			</Paper>
+		);
+	}
 
 	return (
 		<Paper className={styles.container} component="form" onSubmit={form.onSubmit(handleResetPassword)}>
