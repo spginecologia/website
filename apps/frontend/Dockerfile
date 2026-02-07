@@ -49,6 +49,9 @@ RUN npm install
 COPY --from=pruner /app/out/full/ .
 RUN turbo run build --filter=@spginecologia/website-frontend
 
+# Bump the package version
+RUN npx @tmlmobilidade/repo-version --output=/app/apps/frontend/package.json
+
 
 # # # # # # # # #
 
