@@ -13,14 +13,14 @@ import styles from './styles.module.css';
 
 /* * */
 
-interface Props {
+interface AuthWrapperProps {
 	children: React.ReactNode
 	sidebar?: React.ReactNode
 }
 
 /* * */
 
-export function AuthWrapper({ children, sidebar }: Props) {
+export function AuthWrapper({ children, sidebar }: AuthWrapperProps) {
 	//
 
 	//
