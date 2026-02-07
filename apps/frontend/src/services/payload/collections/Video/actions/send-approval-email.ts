@@ -56,7 +56,7 @@ export const sendApprovalEmail: CollectionAfterChangeHook<Video> = async ({ doc,
 	const videoApprovalUserTemplateData = await renderVideoApprovalUserTemplate({
 		userDisplayName: getUserDisplayName(userData.title, userData.first_name),
 		videoTitle: doc.title ?? '',
-		videoUrl: doc.id,
+		videoUrl: `${process.env.NEXT_PUBLIC_URL}/academia/videos/${doc.id}`,
 	});
 
 	await payload.sendEmail({
