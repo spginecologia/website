@@ -1,6 +1,8 @@
 /* * */
 
 import payloadConfig from '@/payload-config';
+import { payloadGetUser } from '@/services/payload/utils/payload-get-user';
+import { payloadSendPasswordChangedEmail } from '@/services/payload/utils/payload-send-password-changed-email';
 import { DateTime } from 'luxon';
 import { getPayload } from 'payload';
 
@@ -55,6 +57,21 @@ export async function POST(request: Request) {
 		});
 
 		//
+		// Try to find the user based on the username field in the request body.
+
+		const foundUser = await payloadGetUser(resetResult.user.tax_id as string);
+
+		if (!foundUser) {
+			throw new Error('User not found.');
+		}
+
+		//
+		// Send a notification email to the user
+		// to inform them that their password has been reset.
+
+		await payloadSendPasswordChangedEmail(foundUser);
+
+		//
 		// Now, using the result object, we can login the user using the
 		// regular Payload API login method. This method will return the user object
 		// with the user's data and the auth token. Pass the request object
@@ -63,7 +80,7 @@ export async function POST(request: Request) {
 		const loginResult = await payload.login({
 			collection: 'users',
 			data: {
-				email: resetResult.user.email as string,
+				email: foundUser.email,
 				password: newPassword,
 			},
 			req: request,

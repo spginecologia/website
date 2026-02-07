@@ -12,7 +12,7 @@ import { type User } from 'payload-types';
  * @param username The username (email or Tax ID) to search for.
  * @returns The User object if found, or null if not found.
  */
-export async function payloadSendResetPasswordEmail(userData: User, redirectTo?: string) {
+export async function payloadSendPasswordResetEmail(userData: User, redirectTo?: string) {
 	//
 
 	const payload = await getPayload({ config: payloadConfig });

@@ -3,7 +3,7 @@
 import { getAnonymizedEmail } from '@/services/general/get-anonymized-email';
 import { type ForgotPasswordResponse } from '@/services/payload/collections/ForgotPassword/types';
 import { payloadGetUser } from '@/services/payload/utils/payload-get-user';
-import { payloadSendResetPasswordEmail } from '@/services/payload/utils/payload-send-reset-password-email';
+import { payloadSendPasswordResetEmail } from '@/services/payload/utils/payload-send-password-reset-email';
 
 /* * */
 
@@ -34,7 +34,7 @@ export async function POST(request: Request) {
 		// If the user is found and has an email, we can now request an email with
 		// a reset pasword token to be sent to the user using the Payload API.
 
-		await payloadSendResetPasswordEmail(foundUser, requestBody.redirect);
+		await payloadSendPasswordResetEmail(foundUser, requestBody.redirect);
 
 		//
 		// Return a 200 response with the user's email, but anonymized.

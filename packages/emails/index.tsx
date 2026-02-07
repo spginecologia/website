@@ -1,6 +1,7 @@
 /* * */
 
 import { type AccountActivationProps, accountActivationSubject, AccountActivationTemplate } from '@/templates/account-activation';
+import { type AccountPasswordChangedProps, accountPasswordChangedSubject, AccountPasswordChangedTemplate } from '@/templates/account-password-changed';
 import { type AccountPasswordResetProps, accountPasswordResetSubject, AccountPasswordResetTemplate } from '@/templates/account-password-reset';
 import { type AccountSignupProps, accountSignupSubject, AccountSignupTemplate } from '@/templates/account-signup';
 import { type QuotaActivationProps, quotaActivationSubject, QuotaActivationTemplate } from '@/templates/quota-activation';
@@ -25,6 +26,13 @@ export const renderAccountActivationTemplate = async (props: AccountActivationPr
 	return {
 		html: await render(<AccountActivationTemplate {...props} />),
 		subject: accountActivationSubject,
+	};
+};
+
+export const renderAccountPasswordChangedTemplate = async (props: AccountPasswordChangedProps): Promise<EmailTemplate> => {
+	return {
+		html: await render(<AccountPasswordChangedTemplate {...props} />),
+		subject: accountPasswordChangedSubject,
 	};
 };
 
