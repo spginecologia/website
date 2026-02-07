@@ -45,11 +45,12 @@ COPY --from=pruner /app/out/json/ .
 COPY --from=pruner /app/out/package-lock.json ./package-lock.json
 RUN npm install
 
+COPY --from=pruner /app/out/full/ .
+
 # Bump the package version
 RUN npx @tmlmobilidade/repo-version --output=/app/apps/frontend/package.json
 
 # Build the project
-COPY --from=pruner /app/out/full/ .
 RUN turbo run build --filter=@spginecologia/website-frontend
 
 
