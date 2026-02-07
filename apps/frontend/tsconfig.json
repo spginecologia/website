@@ -17,6 +17,9 @@
 		"paths": {
 			"@/*": [
 				"./src/*"
+			],
+			"@pjson": [
+				"package.json"
 			]
 		},
 		"plugins": [
