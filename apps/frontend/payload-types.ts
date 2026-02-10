@@ -416,7 +416,7 @@ export interface Section {
  */
 export interface User {
   id: string;
-  title?: ('' | 'Sr.' | 'Sr.ª' | 'Dr.' | 'Dr.ª' | 'Prof.' | 'Prof.ª' | 'Exmo.' | 'Exmo.ª') | null;
+  title?: ('(nenhum)' | 'Sr.' | 'Sr.ª' | 'Dr.' | 'Dr.ª' | 'Prof.' | 'Prof.ª' | 'Exmo.' | 'Exmo.ª') | null;
   first_name?: string | null;
   last_name?: string | null;
   tax_id: string;

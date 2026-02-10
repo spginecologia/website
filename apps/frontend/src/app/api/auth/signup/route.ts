@@ -104,7 +104,7 @@ export async function POST(request: Request) {
 					: validatedData.subscribed_sections,
 				tax_id: validatedData.tax_id,
 				title: [
-					'',
+					'(nenhum)',
 					'Dr.',
 					'Dr.ª',
 					'Exmo.',
@@ -117,7 +117,7 @@ export async function POST(request: Request) {
 					undefined,
 				].includes(validatedData.title)
 					? (validatedData.title as
-					| ''
+					| '(nenhum)'
 					| 'Dr.'
 					| 'Dr.ª'
 					| 'Exmo.'
@@ -128,7 +128,7 @@ export async function POST(request: Request) {
 					| 'Sr.ª'
 					| null
 					| undefined)
-					: '',
+					: '(nenhum)',
 				workplace_primary: validatedData.workplace_primary,
 				workplace_secondary: validatedData.workplace_secondary,
 			},
