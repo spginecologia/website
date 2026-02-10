@@ -4,7 +4,6 @@ import payloadConfig from '@/payload-config';
 import { payloadAccessControl } from '@/services/payload/utils/payload-access-control';
 import Papa from 'papaparse';
 import { getPayload } from 'payload';
-import { User } from 'payload-types';
 
 /* * */
 
@@ -41,7 +40,7 @@ export async function GET(request: Request) {
 		//
 		// Strip sensitive fields before exporting
 
-		const sanitizedDocs: Partial<User>[] = foundUsers.docs.map(item => ({
+		const sanitizedDocs: Record<string, boolean | null | number | string | undefined>[] = foundUsers.docs.map(item => ({
 			account_role: item.account_role,
 			account_status: item.account_status,
 			address_1: item.address_1,
@@ -66,6 +65,7 @@ export async function GET(request: Request) {
 			phone: item.phone,
 			postal_code: item.postal_code,
 			send_newsletter: item.send_newsletter,
+			subscribed_sections: item.subscribed_sections?.join('|'),
 			tax_id: item.tax_id,
 			title: item.title,
 			updatedAt: item.updatedAt,
