@@ -43,9 +43,9 @@ export async function brevoUpdateUser(userData: User, updateBy: 'email' | 'tax_i
 	else listsUnsubscribed.push(11);
 
 	//
-	// Wait for 6 seconds
+	// Wait for random amount between 1 and 10 seconds
 
-	await new Promise(resolve => setTimeout(resolve, 6_000));
+	await new Promise(resolve => setTimeout(resolve, Math.floor(Math.random() * 10 + 1) * 1000));
 
 	//
 	// Send the updated user data to Brevo
