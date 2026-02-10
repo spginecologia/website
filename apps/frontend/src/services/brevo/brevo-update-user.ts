@@ -43,6 +43,11 @@ export async function brevoUpdateUser(userData: User, updateBy: 'email' | 'tax_i
 	else listsUnsubscribed.push(11);
 
 	//
+	// Wait for 6 seconds
+
+	await new Promise(resolve => setTimeout(resolve, 6_000));
+
+	//
 	// Send the updated user data to Brevo
 
 	await BREVOAPI({
