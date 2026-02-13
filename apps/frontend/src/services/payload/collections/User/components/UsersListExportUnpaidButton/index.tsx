@@ -2,16 +2,16 @@
 
 /* * */
 
-export function UsersExportButton() {
+export function UsersListExportUnpaidButton() {
 	return (
 		<a
 			className="btn btn--size-small btn--style-pill"
-			href="/api/users/export"
+			href="/api/users/export-unpaid"
 			rel="noreferrer"
 			style={{ margin: 0 }}
 			target="_blank"
 		>
-			Exportar lista de socios (CSV)
+			Exportar sócios em dívida (CSV)
 		</a>
 	);
 }

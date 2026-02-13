@@ -26,7 +26,9 @@ export const Users: CollectionConfig = {
 
 		components: {
 			listMenuItems: [
-				'@/services/payload/components/UsersExportButton/index#UsersExportButton',
+				'@/services/payload/collections/User/components/UsersListExportAllButton/index#UsersListExportAllButton',
+				'@/services/payload/collections/User/components/UsersListExportUnpaidButton/index#UsersListExportUnpaidButton',
+				'@/services/payload/collections/User/components/UsersListExportWaitingButton/index#UsersListExportWaitingButton',
 			],
 		},
 
