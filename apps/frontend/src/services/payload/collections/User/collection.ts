@@ -48,6 +48,7 @@ export const Users: CollectionConfig = {
 			'first_name',
 			'last_name',
 			'email',
+			'phone',
 		],
 
 		pagination: {
