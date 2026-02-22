@@ -21,7 +21,7 @@
 		"react-email": "5.2.8"
 	},
 	"devDependencies": {
-		"@tmlmobilidade/eslint": "20260222.1525.56",
+		"@tmlmobilidade/eslint": "20260222.1537.50",
 		"@react-email/preview-server": "5.2.8",
 		"@types/node": "25.3.0",
 		"resolve-tspaths": "0.8.23",
