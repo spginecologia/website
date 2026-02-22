@@ -9,6 +9,12 @@ export default [
   ...next,
 
   {
+	rules: {
+		"@typescript-eslint/naming-convention": "off"
+	}
+  },
+
+  {
     ignores: [
       '.next/',
       'public/',
