@@ -2,11 +2,13 @@
 
 import { validateTaxId } from '@/services/general/validate-tax-id';
 import { UserOptions } from '@/services/payload/collections/User/options';
+import { getUserDisplayName } from '@/services/payload/collections/User/utils/get-user-display-name';
 import { type Field } from 'payload';
 
 /* * */
 
 export const userFieldsReferences: Field[] = [
+
 	{
 		fields: [
 			{
@@ -28,6 +30,7 @@ export const userFieldsReferences: Field[] = [
 		],
 		type: 'row',
 	},
+
 	{
 		fields: [
 			{
@@ -48,6 +51,7 @@ export const userFieldsReferences: Field[] = [
 		],
 		type: 'row',
 	},
+
 	{
 		fields: [
 			{
@@ -55,16 +59,30 @@ export const userFieldsReferences: Field[] = [
 				name: 'birthday',
 				type: 'date',
 			},
-			{
-				label: 'Sócio SPG desde o ano (inclusive)',
-				min: 1975,
-				name: 'member_since',
-				required: true,
-				type: 'number',
-			},
 		],
 		type: 'row',
 	},
+
+	{
+		access: {
+			create: () => false,
+			update: () => false,
+		},
+		defaultValue: '-',
+		hooks: {
+			afterRead: [
+				({ data }) => {
+					if (!data) return data;
+					return getUserDisplayName(data.title, data.first_name, data.last_name);
+				},
+			],
+		},
+		label: 'Nome Completo',
+		name: 'display_name',
+		type: 'text',
+		virtual: true,
+	},
+
 	{
 		fields: [
 			{
@@ -101,4 +119,5 @@ export const userFieldsReferences: Field[] = [
 		],
 		type: 'group',
 	},
+
 ];

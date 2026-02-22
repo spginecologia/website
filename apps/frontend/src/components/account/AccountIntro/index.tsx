@@ -2,8 +2,8 @@
 
 /* * */
 
-import { getUserDisplayName } from '@/services/general/get-user-display-name';
-import { getUserGenderFromTitle } from '@/services/general/get-user-gender-from-title';
+import { getUserDisplayName } from '@/services/payload/collections/User/utils/get-user-display-name';
+import { getUserGenderFromTitle } from '@/services/payload/collections/User/utils/get-user-gender-from-title';
 import { type PayloadMeResponse } from '@/types/payload-api-response';
 import { Skeleton, Text, Title } from '@mantine/core';
 import { useTranslation } from 'react-i18next';

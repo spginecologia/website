@@ -1,7 +1,7 @@
 /* * */
 
 import payloadConfig from '@/payload-config';
-import { getUserDisplayName } from '@/services/general/get-user-display-name';
+import { getUserDisplayName } from '@/services/payload/collections/User/utils/get-user-display-name';
 import { LOGGER } from '@/services/logger/LOGGER';
 import { mollieIsRefunded } from '@/services/mollie/mollie-is-refunded';
 import { MOLLIEAPI } from '@/services/mollie/MOLLIEAPI';

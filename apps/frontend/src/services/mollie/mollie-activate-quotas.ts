@@ -1,7 +1,7 @@
 /* * */
 
 import payloadConfig from '@/payload-config';
-import { getUserDisplayName } from '@/services/general/get-user-display-name';
+import { getUserDisplayName } from '@/services/payload/collections/User/utils/get-user-display-name';
 import { LOGGER } from '@/services/logger/LOGGER';
 import { MOLLIEAPI } from '@/services/mollie/MOLLIEAPI';
 import { renderQuotaActivationFreeTemplate, renderQuotaActivationTemplate } from '@spginecologia/website-emails';

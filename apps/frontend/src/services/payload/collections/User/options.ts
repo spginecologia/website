@@ -16,6 +16,17 @@ export const UserOptions = {
 		{ label: 'Inativo / Desconhecido', value: 'dormant' },
 	],
 
+	enrollment_sponsor_response: [
+		{ label: 'Aguarda Resposta', value: 'waiting' },
+		{ label: 'Aceite', value: 'accepted' },
+		{ label: 'Recusado', value: 'rejected' },
+	],
+
+	enrollment_type: [
+		{ label: 'Sócio Efetivo', value: 'effective' },
+		{ label: 'Sócio Afiliado', value: 'affiliate' },
+	],
+
 	payment_status: [
 		{ label: 'Aguarda Pagamento', value: 'waiting' },
 		{ label: 'Oferta', value: 'free' },
@@ -47,7 +58,5 @@ export const UserOptions = {
 } as const;
 
 /* * */
-
-export const userQuotaPaymentStatusValues = UserOptions.payment_status.map(option => option.value);
 
 export type UserQuotaPaymentStatus = typeof UserOptions.payment_status[number]['value'];

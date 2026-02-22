@@ -422,7 +422,6 @@ export interface User {
   tax_id: string;
   medical_id?: string | null;
   birthday?: string | null;
-  member_since: number;
   /**
    * Os sócios que são Internos não pagam quotas se a Quota for para um ano entre o ano de início e fim do Internato.
    */
@@ -475,8 +474,21 @@ export interface User {
         id?: string | null;
       }[]
     | null;
+  enrollment_signup_date: string;
+  enrollment_approval_date?: string | null;
+  member_since: number;
+  enrollment_type?: ('effective' | 'affiliate') | null;
+  enrollment_sponsors: {
+    sponsor_id: string | User;
+    response_status: 'waiting' | 'accepted' | 'rejected';
+    request_date?: string | null;
+    response_date?: string | null;
+    id?: string | null;
+  }[];
+  enrollment_curriculum: string | Document;
   account_status?: ('active' | 'waiting' | 'dormant') | null;
   account_role?: ('member' | 'video-manager' | 'content-manager' | 'users-manager' | 'admin') | null;
+  display_name?: string | null;
   updatedAt: string;
   createdAt: string;
   email: string;
@@ -954,7 +966,6 @@ export interface UsersSelect<T extends boolean = true> {
   tax_id?: T;
   medical_id?: T;
   birthday?: T;
-  member_since?: T;
   is_intern?: T;
   intern_since?: T;
   intern_until?: T;
@@ -996,8 +1007,23 @@ export interface UsersSelect<T extends boolean = true> {
             };
         id?: T;
       };
+  enrollment_signup_date?: T;
+  enrollment_approval_date?: T;
+  member_since?: T;
+  enrollment_type?: T;
+  enrollment_sponsors?:
+    | T
+    | {
+        sponsor_id?: T;
+        response_status?: T;
+        request_date?: T;
+        response_date?: T;
+        id?: T;
+      };
+  enrollment_curriculum?: T;
   account_status?: T;
   account_role?: T;
+  display_name?: T;
   updatedAt?: T;
   createdAt?: T;
   email?: T;

@@ -5,10 +5,10 @@ import { updateBrevo } from '@/services/payload/collections/User/actions/update-
 import { updateQuotaStatus } from '@/services/payload/collections/User/actions/update-quota-status';
 import { userFieldsActivity } from '@/services/payload/collections/User/fields/activity';
 import { userFieldsContacts } from '@/services/payload/collections/User/fields/contacts';
-import { userFieldsDocuments } from '@/services/payload/collections/User/fields/documents';
+import { userFieldsEnrollment } from '@/services/payload/collections/User/fields/enrollment';
 import { userFieldsQuotas } from '@/services/payload/collections/User/fields/quotas';
 import { userFieldsReferences } from '@/services/payload/collections/User/fields/references';
-import { UserOptions } from '@/services/payload/collections/User/options';
+import { userFieldsSidebar } from '@/services/payload/collections/User/fields/sidebar';
 import { payloadAccessControl } from '@/services/payload/utils/payload-access-control';
 import { type CollectionConfig } from 'payload';
 
@@ -34,9 +34,7 @@ export const Users: CollectionConfig = {
 
 		defaultColumns: [
 			'tax_id',
-			'title',
-			'first_name',
-			'last_name',
+			'display_name',
 			'email',
 			'account_status',
 			'account_role',
@@ -58,7 +56,7 @@ export const Users: CollectionConfig = {
 			limits: [50, 100, 300, 500],
 		},
 
-		useAsTitle: 'tax_id',
+		useAsTitle: 'display_name',
 
 	},
 
@@ -95,36 +93,19 @@ export const Users: CollectionConfig = {
 					label: 'Atividade',
 				},
 				{
-					fields: userFieldsDocuments,
-					label: 'Documentos',
-				},
-				{
 					fields: userFieldsQuotas,
 					label: 'Pagamentos de Quotas',
+				},
+				{
+					fields: userFieldsEnrollment,
+					label: 'Candidatura',
 				},
 			],
 			type: 'tabs',
 		},
-		{
-			admin: {
-				position: 'sidebar',
-			},
-			defaultValue: 'pending',
-			label: 'Estado do Sócio',
-			name: 'account_status',
-			options: [...UserOptions.account_status],
-			type: 'select',
-		},
-		{
-			admin: {
-				position: 'sidebar',
-			},
-			defaultValue: false,
-			label: 'Permissões do Sócio',
-			name: 'account_role',
-			options: [...UserOptions.account_role],
-			type: 'select',
-		},
+
+		...userFieldsSidebar,
+
 	],
 
 	hooks: {

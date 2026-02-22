@@ -1,7 +1,7 @@
 /* * */
 
 import payloadConfig from '@/payload-config';
-import { getUserDisplayName } from '@/services/general/get-user-display-name';
+import { getUserDisplayName } from '@/services/payload/collections/User/utils/get-user-display-name';
 import { renderVideoApprovalUserTemplate } from '@spginecologia/website-emails';
 import { type CollectionAfterChangeHook, getPayload } from 'payload';
 import { type Video } from 'payload-types';
