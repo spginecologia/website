@@ -79,7 +79,7 @@ export const userFieldsEnrollment: Field[] = [
 			{
 				label: 'Carta Curricular',
 				name: 'enrollment_curriculum',
-				relationTo: 'documents',
+				relationTo: 'user-files',
 				required: true,
 				type: 'upload',
 			},

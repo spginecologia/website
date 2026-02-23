@@ -3,7 +3,6 @@
 import { mongooseAdapter } from '@payloadcms/db-mongodb';
 import { nodemailerAdapter } from '@payloadcms/email-nodemailer';
 import { lexicalEditor } from '@payloadcms/richtext-lexical';
-// import { s3Storage } from '@payloadcms/storage-s3';
 import { buildConfig } from 'payload';
 import sharp from 'sharp';
 
@@ -23,6 +22,7 @@ import { Quotas } from '@/services/payload/collections/Quotas/collection';
 import { Sections } from '@/services/payload/collections/Section/collection';
 import { Topics } from '@/services/payload/collections/Topic/collection';
 import { Users } from '@/services/payload/collections/User/collection';
+import { UserFiles } from '@/services/payload/collections/UserFile/collection';
 import { Videos } from '@/services/payload/collections/Video/collection';
 import { VideoFiles } from '@/services/payload/collections/VideoFile/collection';
 import { Workgroups } from '@/services/payload/collections/Workgroup/collection';
@@ -57,6 +57,7 @@ export default buildConfig({
 		Quotas,
 		Sections,
 		Users,
+		UserFiles,
 		Videos,
 		VideoFiles,
 		Workgroups,
