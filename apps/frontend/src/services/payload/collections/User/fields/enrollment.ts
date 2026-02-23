@@ -11,13 +11,23 @@ export const userFieldsEnrollment: Field[] = [
 	{
 		fields: [
 			{
-				label: 'Data da Candidatura',
+				access: {
+					create: () => false,
+					update: () => false,
+				},
+				hooks: {
+					afterRead: [
+						({ data }) => data?.createdAt,
+					],
+				},
+				label: 'Selo da Candidatura',
 				name: 'enrollment_signup_date',
 				required: true,
 				type: 'date',
+				virtual: true,
 			},
 			{
-				label: 'Data e Hora da Aprovação',
+				label: 'Selo da Aprovação',
 				name: 'enrollment_approval_date',
 				type: 'date',
 			},

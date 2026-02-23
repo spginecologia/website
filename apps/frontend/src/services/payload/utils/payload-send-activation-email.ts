@@ -1,19 +1,23 @@
 /* * */
 
 import payloadConfig from '@/payload-config';
-import { getUserDisplayName } from '@/services/payload/collections/User/utils/get-user-display-name';
 import { navigationGetUrlWithRedirectParam } from '@/services/navigation/navigation-handle-redirect-param';
+import { getUserDisplayName } from '@/services/payload/collections/User/utils/get-user-display-name';
 import { renderAccountActivationTemplate } from '@spginecologia/website-emails';
 import { getPayload } from 'payload';
 import { type User } from 'payload-types';
 
 /**
  * Finds and returns a User from the database based on the given username (email or Tax ID).
- * @param username The username (email or Tax ID) to search for.
+ * @param userData An object containing the user's email and tax_id.
  * @returns The User object if found, or null if not found.
  */
 export async function payloadSendActivationEmail(userData: User) {
 	//
+
+	if (!userData.email) {
+		throw new Error('No email provided. Skipping...');
+	}
 
 	const payload = await getPayload({ config: payloadConfig });
 

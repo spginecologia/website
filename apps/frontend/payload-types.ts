@@ -422,6 +422,7 @@ export interface User {
   tax_id: string;
   medical_id?: string | null;
   birthday?: string | null;
+  display_name?: string | null;
   /**
    * Os sócios que são Internos não pagam quotas se a Quota for para um ano entre o ano de início e fim do Internato.
    */
@@ -488,7 +489,6 @@ export interface User {
   enrollment_curriculum: string | Document;
   account_status?: ('active' | 'waiting' | 'dormant') | null;
   account_role?: ('member' | 'video-manager' | 'content-manager' | 'users-manager' | 'admin') | null;
-  display_name?: string | null;
   updatedAt: string;
   createdAt: string;
   email: string;
@@ -966,6 +966,7 @@ export interface UsersSelect<T extends boolean = true> {
   tax_id?: T;
   medical_id?: T;
   birthday?: T;
+  display_name?: T;
   is_intern?: T;
   intern_since?: T;
   intern_until?: T;
@@ -1023,7 +1024,6 @@ export interface UsersSelect<T extends boolean = true> {
   enrollment_curriculum?: T;
   account_status?: T;
   account_role?: T;
-  display_name?: T;
   updatedAt?: T;
   createdAt?: T;
   email?: T;
