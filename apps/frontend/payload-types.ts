@@ -477,9 +477,9 @@ export interface User {
         id?: string | null;
       }[]
     | null;
-  enrollment_signup_date: string;
+  enrollment_signup_date?: string | null;
   enrollment_approval_date?: string | null;
-  member_since: number;
+  member_since?: number | null;
   enrollment_type?: ('effective' | 'affiliate') | null;
   enrollment_sponsors: {
     sponsor_id: string | User;

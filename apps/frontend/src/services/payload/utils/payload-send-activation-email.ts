@@ -22,6 +22,20 @@ export async function payloadSendActivationEmail(userData: User) {
 	const payload = await getPayload({ config: payloadConfig });
 
 	//
+	// Update the user's "enrollment_approval_date" field with the current date
+	// to indicate that the activation email has been sent. This needs to be done before
+	// calling the "forgotPassword" function as it triggers the "afterChange" hook,
+	// causing an infinite loop of sending emails if the "enrollment_approval_date" is not set.
+
+	await payload.update({
+		collection: 'users',
+		data: {
+			enrollment_approval_date: new Date().toISOString(),
+		},
+		id: userData.id,
+	});
+
+	//
 	// Request a reset password token for the given user.
 
 	const tokenresult = await payload.forgotPassword({
@@ -46,18 +60,6 @@ export async function payloadSendActivationEmail(userData: User) {
 		html: templateData.html,
 		subject: templateData.subject,
 		to: userData.email,
-	});
-
-	//
-	// Update the user's "enrollment_approval_date" field with the current date
-	// to indicate that the activation email has been sent.
-
-	await payload.update({
-		collection: 'users',
-		data: {
-			enrollment_approval_date: new Date().toISOString(),
-		},
-		id: userData.id,
 	});
 
 	console.log('Activation Email sent to:', userData.email);

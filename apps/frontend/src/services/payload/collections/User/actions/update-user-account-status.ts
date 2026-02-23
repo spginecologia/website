@@ -6,12 +6,10 @@ import { payloadSendActivationEmail } from '@/services/payload/utils/payload-sen
 import { getPayload } from 'payload';
 
 /**
- * This function runs after a `user` object is updated.
- * It checks if the `account_status` has changed, and if so,
- * sends an activation email to the user and updates the
- * "enrollment_approval_date" field with the current date.
- * @param doc The updated user.
- * @param previousDoc The previous user.
+ * This function updates the user's account status
+ * based on their enrollment sponsors' approval.
+ * @param userId The ID of the user to update.
+ * @throws Error if the user is not found or if there is an error during the update process.
  */
 export async function updateUserAccountStatus(userId: string) {
 	//
@@ -81,10 +79,8 @@ export async function updateUserAccountStatus(userId: string) {
 	});
 
 	//
-	// If the user has at least two accepted sponsor responses, we can consider
-	// the user as "active" and send the activation email. There is no need to call
-	// the email sending function here as the "account_status" field update will trigger
-	// the "afterChange" hook which will call the email sending function.
+	// If the user has at least two accepted sponsor responses,
+	// we can consider the user as "active" and send the activation email.
 
 	if (countOfAcceptedSponsorResponses < 2) {
 		LOGGER.info('update-user-account-status', `User with ID "${userId}" has only ${countOfAcceptedSponsorResponses} accepted sponsor responses. Skipping...`);
