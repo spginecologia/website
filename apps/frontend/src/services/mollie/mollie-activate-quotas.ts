@@ -18,9 +18,6 @@ import { type User } from 'payload-types';
 export async function mollieActivateQuotas(userId: string) {
 	//
 
-	//
-	// Setup payload
-
 	const payload = await getPayload({ config: payloadConfig });
 
 	//
