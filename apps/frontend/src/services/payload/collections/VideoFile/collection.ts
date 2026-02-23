@@ -30,7 +30,7 @@ export const VideoFiles: CollectionConfig = {
 				if ((operation === 'create' || operation === 'update') && req.file) {
 					const videoDuration = req.file.data ? getVideoDurationInSeconds(req.file.data) : null;
 					if (videoDuration) args.data.duration = videoDuration;
-					req.file.name = `${collection.slug}-${Date.now()}`;
+					req.file.name = `${collection.slug}-${Date.now()}.${req.file.mimetype.split('/')[1]}`;
 				}
 			},
 		],

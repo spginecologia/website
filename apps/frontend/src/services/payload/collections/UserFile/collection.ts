@@ -22,7 +22,7 @@ export const UserFiles: CollectionConfig = {
 		beforeOperation: [
 			({ collection, operation, req }) => {
 				if ((operation === 'create' || operation === 'update') && req.file) {
-					req.file.name = `${collection.slug}-${Date.now()}`;
+					req.file.name = `${collection.slug}-${Date.now()}.${req.file.mimetype.split('/')[1]}`;
 				}
 			},
 		],
