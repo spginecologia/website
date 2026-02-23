@@ -48,6 +48,18 @@ export async function payloadSendActivationEmail(userData: User) {
 		to: userData.email,
 	});
 
+	//
+	// Update the user's "enrollment_approval_date" field with the current date
+	// to indicate that the activation email has been sent.
+
+	await payload.update({
+		collection: 'users',
+		data: {
+			enrollment_approval_date: new Date().toISOString(),
+		},
+		id: userData.id,
+	});
+
 	console.log('Activation Email sent to:', userData.email);
 
 	//

@@ -9,7 +9,7 @@ import { type User } from 'payload-types';
  * @param doc The updated user.
  * @param previousDoc The previous user.
  */
-export const updateQuotaStatus: CollectionAfterLoginHook<User> = async ({ user }) => {
+export const updateUserQuotaStatusHook: CollectionAfterLoginHook<User> = async ({ user }) => {
 	//
 
 	//

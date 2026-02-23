@@ -1,14 +1,14 @@
 /* * */
 
 import { updateBrevo } from '@/services/payload/collections/User/actions/update-brevo';
-import { updateEnrollmentStatus } from '@/services/payload/collections/User/actions/update-enrollment-status';
-import { updateQuotaStatus } from '@/services/payload/collections/User/actions/update-quota-status';
 import { userFieldsActivity } from '@/services/payload/collections/User/fields/activity';
 import { userFieldsContacts } from '@/services/payload/collections/User/fields/contacts';
 import { userFieldsEnrollment } from '@/services/payload/collections/User/fields/enrollment';
 import { userFieldsQuotas } from '@/services/payload/collections/User/fields/quotas';
 import { userFieldsReferences } from '@/services/payload/collections/User/fields/references';
 import { userFieldsSidebar } from '@/services/payload/collections/User/fields/sidebar';
+import { updateUserAccountStatusHook } from '@/services/payload/collections/User/hooks/update-user-account-status-hook';
+import { updateUserQuotaStatusHook } from '@/services/payload/collections/User/hooks/update-user-quota-status-hook';
 import { payloadAccessControl } from '@/services/payload/utils/payload-access-control';
 import { type CollectionConfig } from 'payload';
 
@@ -111,10 +111,10 @@ export const Users: CollectionConfig = {
 	hooks: {
 		afterChange: [
 			updateBrevo,
-			updateEnrollmentStatus,
+			updateUserAccountStatusHook,
 		],
 		afterLogin: [
-			updateQuotaStatus,
+			updateUserQuotaStatusHook,
 		],
 	},
 
