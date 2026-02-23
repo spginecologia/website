@@ -8,7 +8,6 @@ import { type SignupResponse } from '@/services/payload/collections/Signup/types
 import { type SignupForm, SignupFormValidation } from '@/services/payload/collections/Signup/validation';
 import { payloadGetUser } from '@/services/payload/utils/payload-get-user';
 import { payloadSendSignupEmail } from '@/services/payload/utils/payload-send-signup-email';
-import { DateTime } from 'luxon';
 import { getPayload } from 'payload';
 
 /* * */
@@ -56,7 +55,7 @@ export async function POST(request: Request) {
 
 		//
 		// Now create the user object using the validated data.
-		// Override the birthday field to be a string and set the member_since field to the current date.
+		// Override the birthday field to be a string and set the enrollment_approval_date field to the current date.
 		// New users start with a pending account status until they are approved by an admin.
 
 		const newUserData = await payload.create({
@@ -76,10 +75,10 @@ export async function POST(request: Request) {
 				city: validatedData.city,
 				country: validatedData.country,
 				email: validatedData.email,
+				enrollment_type: validatedData.enrollment_type,
 				first_name: validatedData.first_name,
 				last_name: validatedData.last_name,
 				medical_id: validatedData.medical_id,
-				member_since: Number(DateTime.now().toFormat('yyyy')),
 				password: Math.random().toString(36).slice(0, 20),
 				phone: validatedData.phone,
 				postal_code: validatedData.postal_code,
@@ -146,8 +145,7 @@ export async function POST(request: Request) {
 		return new Response(JSON.stringify(response), { status: 200 });
 
 		//
-	}
-	catch (err) {
+	} catch (err) {
 		console.error(err);
 		return new Response(err.message, { status: 401 });
 	}
