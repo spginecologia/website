@@ -70,8 +70,7 @@ export async function GET() {
 						workplace_secondary: userData.workplace_secondary,
 					},
 				});
-			}
-			catch (error) {
+			} catch (error) {
 				invalidTaxIds.add(userData.tax_id + '-' + error.message);
 				console.error(`User with NIF ${userData.tax_id} has invalid fields:`);
 				console.log(error.message);
@@ -95,8 +94,7 @@ export async function GET() {
 		return new Response(JSON.stringify(response), { status: 200 });
 
 		//
-	}
-	catch (err) {
+	} catch (err) {
 		console.error(err.cause);
 		return new Response(err.message, { status: 401 });
 	}

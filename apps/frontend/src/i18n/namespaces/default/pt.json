@@ -228,12 +228,12 @@
 	},
 	"account": {
 		"AccountIntro": {
-			"error": "Não foi possível carregar o seu perfil",
-			"member_since": {
+			"enrollment_year": {
 				"female": "Sócia desde {value}",
 				"male": "Sócio desde {value}",
 				"other": "Membro desde {value}"
 			},
+			"error": "Não foi possível carregar o seu perfil",
 			"title": "Olá {name}"
 		},
 		"AccountLogoutButton": {
