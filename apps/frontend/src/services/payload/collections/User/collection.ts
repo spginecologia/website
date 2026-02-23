@@ -1,7 +1,7 @@
 /* * */
 
-import { sendActivationEmail } from '@/services/payload/collections/User/actions/send-activation-email';
 import { updateBrevo } from '@/services/payload/collections/User/actions/update-brevo';
+import { updateEnrollmentStatus } from '@/services/payload/collections/User/actions/update-enrollment-status';
 import { updateQuotaStatus } from '@/services/payload/collections/User/actions/update-quota-status';
 import { userFieldsActivity } from '@/services/payload/collections/User/fields/activity';
 import { userFieldsContacts } from '@/services/payload/collections/User/fields/contacts';
@@ -111,7 +111,7 @@ export const Users: CollectionConfig = {
 	hooks: {
 		afterChange: [
 			updateBrevo,
-			sendActivationEmail,
+			updateEnrollmentStatus,
 		],
 		afterLogin: [
 			updateQuotaStatus,

@@ -1,10 +1,10 @@
 /* * */
 
 import payloadConfig from '@/payload-config';
-import { getUserDisplayName } from '@/services/payload/collections/User/utils/get-user-display-name';
 import { LOGGER } from '@/services/logger/LOGGER';
 import { mollieIsRefunded } from '@/services/mollie/mollie-is-refunded';
 import { MOLLIEAPI } from '@/services/mollie/MOLLIEAPI';
+import { getUserDisplayName } from '@/services/payload/collections/User/utils/get-user-display-name';
 import { vendusCreateCreditNote } from '@/services/vendus/vendus-create-credit-note';
 import { vendusCreateInvoice } from '@/services/vendus/vendus-create-invoice';
 import { vendusGetClientFromUser } from '@/services/vendus/vendus-get-client-from-user';
@@ -152,8 +152,7 @@ export async function mollieUpdateQuotaStatus(userId: string) {
 						to: userData.email,
 					});
 					LOGGER.info('mollie-update-quota-status', 'Sent');
-				}
-				catch (error) {
+				} catch (error) {
 					LOGGER.error('mollie-update-quota-status', `Failed to send the invoice email to user NIF "${userData.tax_id}" for the quota year "${quotaData.year}". Error: ${error.message}`);
 				}
 			}
@@ -203,8 +202,7 @@ export async function mollieUpdateQuotaStatus(userId: string) {
 						subject: templateData.subject,
 						to: userData.email,
 					});
-				}
-				catch (error) {
+				} catch (error) {
 					LOGGER.error('mollie-update-quota-status', `Failed to send the credit note email to user NIF "${userData.tax_id}" for the quota year "${quotaData.year}". Error: ${error.message}`);
 				}
 			}

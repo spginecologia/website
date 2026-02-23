@@ -10,7 +10,8 @@ export default [
 
   {
 	rules: {
-		"@typescript-eslint/naming-convention": "off"
+		"@typescript-eslint/naming-convention": "off",
+		'no-console': 'off',
 	}
   },
 
