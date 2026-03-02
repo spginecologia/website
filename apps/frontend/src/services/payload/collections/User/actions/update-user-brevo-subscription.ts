@@ -1,7 +1,6 @@
 /* * */
 
 import { brevoUpdateUser } from '@/services/brevo/brevo-update-user';
-import { type CollectionAfterChangeHook } from 'payload';
 import { type User } from 'payload-types';
 
 /**
@@ -10,7 +9,7 @@ import { type User } from 'payload-types';
  * @param doc The updated user.
  * @param previousDoc The previous user.
  */
-export const updateBrevo: CollectionAfterChangeHook<User> = async ({ doc, previousDoc }) => {
+export async function updateUserBrevoSubscription(doc: User, previousDoc: User) {
 	//
 
 	//

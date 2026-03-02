@@ -1,7 +1,7 @@
 /* * */
 
-import { updateBrevo } from '@/services/payload/collections/User/actions/update-brevo';
 import { updateUserAccountStatus } from '@/services/payload/collections/User/actions/update-user-account-status';
+import { updateUserBrevoSubscription } from '@/services/payload/collections/User/actions/update-user-brevo-subscription';
 import { updateUserDisplayName } from '@/services/payload/collections/User/actions/update-user-display-name';
 import { updateUserQuotaStatus } from '@/services/payload/collections/User/actions/update-user-quota-status';
 import { userFieldsActivity } from '@/services/payload/collections/User/fields/activity';
@@ -111,7 +111,7 @@ export const Users: CollectionConfig = {
 
 	hooks: {
 		afterChange: [
-			updateBrevo,
+			async ({ doc, previousDoc }) => await updateUserBrevoSubscription(doc, previousDoc),
 			async ({ doc }) => await updateUserAccountStatus(doc.id),
 			async ({ doc }) => await updateUserDisplayName(doc.id),
 		],
