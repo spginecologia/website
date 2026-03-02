@@ -23,6 +23,7 @@ export const UserOptions = {
 	],
 
 	enrollment_type: [
+		{ label: 'Aprovação Direta', value: 'direct' },
 		{ label: 'Sócio Efetivo', value: 'effective' },
 		{ label: 'Sócio Afiliado', value: 'affiliate' },
 	],
