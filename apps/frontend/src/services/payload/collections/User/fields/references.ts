@@ -72,7 +72,7 @@ export const userFieldsReferences: Field[] = [
 		},
 		defaultValue: '-',
 		label: 'Nome Completo',
-		name: 'display_name',
+		name: 'full_name',
 		type: 'text',
 	},
 

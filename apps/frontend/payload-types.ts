@@ -427,7 +427,7 @@ export interface User {
   tax_id: string;
   medical_id?: string | null;
   birthday?: string | null;
-  display_name?: string | null;
+  full_name?: string | null;
   /**
    * Os sócios que são Internos não pagam quotas se a Quota for para um ano entre o ano de início e fim do Internato.
    */
@@ -993,7 +993,7 @@ export interface UsersSelect<T extends boolean = true> {
   tax_id?: T;
   medical_id?: T;
   birthday?: T;
-  display_name?: T;
+  full_name?: T;
   is_intern?: T;
   intern_since?: T;
   intern_until?: T;

@@ -2,7 +2,7 @@
 
 import { updateUserAccountStatus } from '@/services/payload/collections/User/actions/update-user-account-status';
 import { updateUserBrevoSubscription } from '@/services/payload/collections/User/actions/update-user-brevo-subscription';
-import { updateUserDisplayName } from '@/services/payload/collections/User/actions/update-user-display-name';
+import { updateUserFullName } from '@/services/payload/collections/User/actions/update-user-full-name';
 import { updateUserQuotaStatus } from '@/services/payload/collections/User/actions/update-user-quota-status';
 import { userFieldsActivity } from '@/services/payload/collections/User/fields/activity';
 import { userFieldsContacts } from '@/services/payload/collections/User/fields/contacts';
@@ -35,7 +35,7 @@ export const Users: CollectionConfig = {
 
 		defaultColumns: [
 			'tax_id',
-			'display_name',
+			'full_name',
 			'email',
 			'account_status',
 			'account_role',
@@ -57,7 +57,7 @@ export const Users: CollectionConfig = {
 			limits: [50, 100, 300, 500],
 		},
 
-		useAsTitle: 'display_name',
+		useAsTitle: 'full_name',
 
 	},
 
@@ -113,11 +113,11 @@ export const Users: CollectionConfig = {
 		afterChange: [
 			async ({ doc, previousDoc }) => await updateUserBrevoSubscription(doc, previousDoc),
 			async ({ doc }) => await updateUserAccountStatus(doc.id),
-			async ({ doc }) => await updateUserDisplayName(doc.id),
+			async ({ doc }) => await updateUserFullName(doc.id),
 		],
 		afterLogin: [
 			async ({ user }) => await updateUserQuotaStatus(user.id),
-			async ({ user }) => await updateUserDisplayName(user.id),
+			async ({ user }) => await updateUserFullName(user.id),
 		],
 	},
 
