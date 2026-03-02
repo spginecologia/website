@@ -483,7 +483,7 @@ export interface User {
   enrollment_signup_date?: string | null;
   enrollment_approval_date?: string | null;
   member_since?: number | null;
-  enrollment_type?: ('effective' | 'affiliate') | null;
+  enrollment_type?: ('direct' | 'effective' | 'affiliate') | null;
   enrollment_sponsors: {
     sponsor_id: string | User;
     response_status: 'waiting' | 'accepted' | 'rejected';
