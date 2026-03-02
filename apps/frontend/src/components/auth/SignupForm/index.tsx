@@ -8,7 +8,7 @@ import { SignupFormDefault } from '@/services/payload/collections/Signup/default
 import { type SignupResponse } from '@/services/payload/collections/Signup/types';
 import { SignupFormValidation } from '@/services/payload/collections/Signup/validation';
 import { UserOptions } from '@/services/payload/collections/User/options';
-import { Alert, Button, Checkbox, Loader, Paper, Select, Space, Text, TextInput, Title } from '@mantine/core';
+import { Alert, Button, Checkbox, Loader, Paper, Radio, Select, Space, Text, TextInput, Title } from '@mantine/core';
 import { DateInput } from '@mantine/dates';
 import { useForm } from '@mantine/form';
 import { IconRosetteDiscountCheckFilled, IconUserHeart } from '@tabler/icons-react';
@@ -59,6 +59,7 @@ export function SignupForm() {
 		const taxId = params.get('tax_id');
 		if (email) form.setFieldValue('email', email);
 		if (taxId) form.setFieldValue('tax_id', taxId);
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	const handleSignup = async () => {
@@ -75,8 +76,7 @@ export function SignupForm() {
 			const responseData = await response.json();
 			setIsLoading(false);
 			setSignupResponse(responseData);
-		}
-		catch (error) {
+		} catch (error) {
 			console.log(error.message);
 			setIsLoading(false);
 			setIsError(true);
@@ -86,7 +86,7 @@ export function SignupForm() {
 	//
 	// D. Render components
 
-	if (signupResponse && signupResponse.status === 'user_exists') {
+	if (signupResponse?.status === 'user_exists') {
 		return (
 			<Paper className={styles.container}>
 				<Title order={2}>{t('auth.SignupForm.title')}</Title>
@@ -101,7 +101,7 @@ export function SignupForm() {
 		);
 	}
 
-	if (signupResponse && signupResponse.status === 'user_created') {
+	if (signupResponse?.status === 'user_created') {
 		return (
 			<Paper className={styles.container}>
 				<Title order={2}>{t('auth.SignupForm.title')}</Title>
@@ -168,6 +168,14 @@ export function SignupForm() {
 				</div>
 				<TextInput label={t('auth.SignupForm.fields.country.label')} placeholder={t('auth.SignupForm.fields.country.placeholder')} required={isRequiredFromZod(SignupFormValidation.shape.country)} {...form.getInputProps('country')} />
 				<Checkbox label={t('auth.SignupForm.fields.send_newsletter.label')} required={isRequiredFromZod(SignupFormValidation.shape.send_newsletter)} {...form.getInputProps('send_newsletter', { type: 'checkbox' })} />
+			</FormSection>
+
+			<FormSection description={t('auth.SignupForm.sections.enrolment.description')} title={t('auth.SignupForm.sections.enrolment.title')}>
+				<Radio.Group label={t('auth.SignupForm.fields.enrollment_type.label')} {...form.getInputProps('enrollment_type')}>
+					{UserOptions.enrollment_type.filter(item => item.value !== 'direct').map(item => (
+						<Radio key={item.value} label={item.label} value={item.value} />
+					))}
+				</Radio.Group>
 			</FormSection>
 
 			{isLoading && <Loader />}

@@ -673,6 +673,9 @@
 					"label": "Email",
 					"placeholder": "Escolha uma opção..."
 				},
+				"enrollment_type": {
+					"label": "Tipo de Candidatura"
+				},
 				"first_name": {
 					"label": "Nome",
 					"placeholder": ""
@@ -736,6 +739,10 @@
 				"correspondence": {
 					"description": "Por favor indique onde gostaria de receber correspondência da SPG.",
 					"title": "Correspondência"
+				},
+				"enrolment": {
+					"description": "Como se pretende candidatar?",
+					"title": "Candidatura"
 				}
 			},
 			"status": {
