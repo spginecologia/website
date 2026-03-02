@@ -173,7 +173,12 @@ export function SignupForm() {
 			<FormSection description={t('auth.SignupForm.sections.enrolment.description')} title={t('auth.SignupForm.sections.enrolment.title')}>
 				<Radio.Group label={t('auth.SignupForm.fields.enrollment_type.label')} {...form.getInputProps('enrollment_type')}>
 					{UserOptions.enrollment_type.filter(item => item.value !== 'direct').map(item => (
-						<Radio key={item.value} label={item.label} value={item.value} />
+						<Radio
+							key={item.value}
+							description={t(`auth.SignupForm.fields.enrollment_type.description.${item.value}`)}
+							label={item.label}
+							value={item.value}
+						/>
 					))}
 				</Radio.Group>
 			</FormSection>
@@ -186,6 +191,7 @@ export function SignupForm() {
 					<Text variant="error">{t('auth.SignupForm.error')}</Text>
 				</>
 			)}
+
 		</Paper>
 	);
 
