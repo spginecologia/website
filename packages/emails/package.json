@@ -18,12 +18,12 @@
 		"@react-email/components": "1.0.8",
 		"@react-email/render": "2.0.4",
 		"browserslist": "4.28.1",
-		"react-email": "5.2.8"
+		"react-email": "5.2.9"
 	},
 	"devDependencies": {
-		"@tmlmobilidade/eslint": "20260222.2116.56",
-		"@react-email/preview-server": "5.2.8",
-		"@types/node": "25.3.0",
+		"@tmlmobilidade/eslint": "20260302.1453.8",
+		"@react-email/preview-server": "5.2.9",
+		"@types/node": "25.3.3",
 		"resolve-tspaths": "0.8.23",
 		"typescript": "5.9.3"
 	}
