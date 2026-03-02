@@ -6,7 +6,9 @@
  * the display name will be "Dr. John".
  * @param title The user's title.
  * @param firstName The user's first name.
- * @param lastName The user's last name.
+ * @param lastName The user's last name. If this parameter is not provided,
+ * the display name will only include the title and first name.
+ * @returns The user's display name.
  */
 export function getUserDisplayName(title: null | string | undefined, firstName: null | string | undefined, lastName?: null | string | undefined): string {
 	//

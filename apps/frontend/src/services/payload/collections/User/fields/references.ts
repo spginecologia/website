@@ -2,7 +2,6 @@
 
 import { validateTaxId } from '@/services/general/validate-tax-id';
 import { UserOptions } from '@/services/payload/collections/User/options';
-import { getUserDisplayName } from '@/services/payload/collections/User/utils/get-user-display-name';
 import { type Field } from 'payload';
 
 /* * */
@@ -68,19 +67,13 @@ export const userFieldsReferences: Field[] = [
 			create: () => false,
 			update: () => false,
 		},
-		defaultValue: '-',
-		hooks: {
-			afterRead: [
-				({ data }) => {
-					if (!data) return data;
-					return getUserDisplayName(data.title, data.first_name, data.last_name);
-				},
-			],
+		admin: {
+			disabled: true,
 		},
+		defaultValue: '-',
 		label: 'Nome Completo',
 		name: 'display_name',
 		type: 'text',
-		virtual: true,
 	},
 
 	{

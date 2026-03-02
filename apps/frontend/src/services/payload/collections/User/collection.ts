@@ -8,6 +8,7 @@ import { userFieldsQuotas } from '@/services/payload/collections/User/fields/quo
 import { userFieldsReferences } from '@/services/payload/collections/User/fields/references';
 import { userFieldsSidebar } from '@/services/payload/collections/User/fields/sidebar';
 import { updateUserAccountStatusHook } from '@/services/payload/collections/User/hooks/update-user-account-status-hook';
+import { updateUserDisplayNameHook } from '@/services/payload/collections/User/hooks/update-user-display-name-hook';
 import { updateUserQuotaStatusHook } from '@/services/payload/collections/User/hooks/update-user-quota-status-hook';
 import { payloadAccessControl } from '@/services/payload/utils/payload-access-control';
 import { type CollectionConfig } from 'payload';
@@ -112,6 +113,7 @@ export const Users: CollectionConfig = {
 		afterChange: [
 			updateBrevo,
 			updateUserAccountStatusHook,
+			updateUserDisplayNameHook,
 		],
 		afterLogin: [
 			updateUserQuotaStatusHook,
