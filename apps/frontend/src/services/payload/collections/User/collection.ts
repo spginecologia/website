@@ -1,15 +1,15 @@
 /* * */
 
 import { updateBrevo } from '@/services/payload/collections/User/actions/update-brevo';
+import { updateUserAccountStatus } from '@/services/payload/collections/User/actions/update-user-account-status';
+import { updateUserDisplayName } from '@/services/payload/collections/User/actions/update-user-display-name';
+import { updateUserQuotaStatus } from '@/services/payload/collections/User/actions/update-user-quota-status';
 import { userFieldsActivity } from '@/services/payload/collections/User/fields/activity';
 import { userFieldsContacts } from '@/services/payload/collections/User/fields/contacts';
 import { userFieldsEnrollment } from '@/services/payload/collections/User/fields/enrollment';
 import { userFieldsQuotas } from '@/services/payload/collections/User/fields/quotas';
 import { userFieldsReferences } from '@/services/payload/collections/User/fields/references';
 import { userFieldsSidebar } from '@/services/payload/collections/User/fields/sidebar';
-import { updateUserAccountStatusHook } from '@/services/payload/collections/User/hooks/update-user-account-status-hook';
-import { updateUserDisplayNameHook } from '@/services/payload/collections/User/hooks/update-user-display-name-hook';
-import { updateUserQuotaStatusHook } from '@/services/payload/collections/User/hooks/update-user-quota-status-hook';
 import { payloadAccessControl } from '@/services/payload/utils/payload-access-control';
 import { type CollectionConfig } from 'payload';
 
@@ -112,11 +112,12 @@ export const Users: CollectionConfig = {
 	hooks: {
 		afterChange: [
 			updateBrevo,
-			updateUserAccountStatusHook,
-			updateUserDisplayNameHook,
+			async ({ doc }) => await updateUserAccountStatus(doc.id),
+			async ({ doc }) => await updateUserDisplayName(doc.id),
 		],
 		afterLogin: [
-			updateUserQuotaStatusHook,
+			async ({ user }) => await updateUserQuotaStatus(user.id),
+			async ({ user }) => await updateUserDisplayName(user.id),
 		],
 	},
 

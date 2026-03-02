@@ -1,7 +1,7 @@
 /* * */
 
 import { mollieActivateQuotas } from '@/services/mollie/mollie-activate-quotas';
-import { mollieUpdateQuotaStatus } from '@/services/mollie/mollie-update-quota-status';
+import { updateUserQuotaStatus } from '@/services/payload/collections/User/actions/update-user-quota-status';
 import { redirect } from 'next/navigation';
 
 /* * */
@@ -32,19 +32,17 @@ export async function GET(request: Request, { params }: ContextProps) {
 
 		await mollieActivateQuotas(user_id);
 
-		await mollieUpdateQuotaStatus(user_id);
+		await updateUserQuotaStatus(user_id);
 
 		/* * */
 
 		return new Response('OK', { status: 300 });
 
 		//
-	}
-	catch (err) {
+	} catch (err) {
 		console.log(err);
 		return new Response(null, { status: 400 });
-	}
-	finally {
+	} finally {
 		redirect('/account');
 	}
 }
@@ -61,13 +59,12 @@ export async function POST(request: Request, { params }: ContextProps) {
 			return new Response('User ID is required', { status: 400 });
 		}
 
-		await mollieUpdateQuotaStatus(user_id);
+		await updateUserQuotaStatus(user_id);
 
 		return new Response('OK', { status: 200 });
 
 		//
-	}
-	catch (err) {
+	} catch (err) {
 		console.log(err);
 		return new Response(null, { status: 400 });
 	}

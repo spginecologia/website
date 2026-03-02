@@ -18,7 +18,7 @@ import { getPayload } from 'payload';
  * It also creates invoices or credit notes in Vendus if necessary.
  * @param userId User ID to update.
  */
-export async function mollieUpdateQuotaStatus(userId: string) {
+export async function updateUserQuotaStatus(userId: string) {
 	//
 
 	//
