@@ -20,7 +20,7 @@ export const userFieldsEnrollmentSponsor: Field[] = [
 				defaultValue: 'waiting',
 				label: 'Resposta do Sócio Proponente',
 				name: 'response_status',
-				options: [...UserOptions.enrollment_sponsor_response],
+				options: [...UserOptions.enrolment_sponsor_response],
 				required: true,
 				type: 'select',
 			},

@@ -3,7 +3,7 @@
 /* * */
 
 import { getUserDisplayName } from '@/services/payload/collections/User/utils/get-user-display-name';
-import { getUserEnrollmentYear } from '@/services/payload/collections/User/utils/get-user-enrollment-year';
+import { getUserEnrollmentYear } from '@/services/payload/collections/User/utils/get-user-enrolment-year';
 import { getUserGenderFromTitle } from '@/services/payload/collections/User/utils/get-user-gender-from-title';
 import { type PayloadMeResponse } from '@/types/payload-api-response';
 import { Skeleton, Text, Title } from '@mantine/core';
@@ -32,7 +32,7 @@ export function AccountIntro() {
 
 	const userDisplayName = getUserDisplayName(userData?.user?.title, userData?.user?.first_name);
 	const userGender = getUserGenderFromTitle(userData?.user?.title);
-	const userEnrollmentYear = getUserEnrollmentYear(userData?.user?.enrollment_approval_date);
+	const userEnrollmentYear = getUserEnrollmentYear(userData?.user?.enrolment_approval_date);
 
 	//
 	// D. Render components
@@ -59,9 +59,9 @@ export function AccountIntro() {
 		<div className={styles.container}>
 			<Title id={styles.displayName} order={2}>{t('account.AccountIntro.title', { name: userDisplayName })}</Title>
 			<Text variant="overline">{userData?.user?.email}</Text>
-			{userGender === 'female' && <Text variant="overline">{t('account.AccountIntro.enrollment_year.female', { value: userEnrollmentYear ?? '-' })}</Text>}
-			{userGender === 'male' && <Text variant="overline">{t('account.AccountIntro.enrollment_year.male', { value: userEnrollmentYear ?? '-' })}</Text>}
-			{userGender === 'other' && <Text variant="overline">{t('account.AccountIntro.enrollment_year.other', { value: userEnrollmentYear ?? '-' })}</Text>}
+			{userGender === 'female' && <Text variant="overline">{t('account.AccountIntro.enrolment_year.female', { value: userEnrollmentYear ?? '-' })}</Text>}
+			{userGender === 'male' && <Text variant="overline">{t('account.AccountIntro.enrolment_year.male', { value: userEnrollmentYear ?? '-' })}</Text>}
+			{userGender === 'other' && <Text variant="overline">{t('account.AccountIntro.enrolment_year.other', { value: userEnrollmentYear ?? '-' })}</Text>}
 		</div>
 	);
 

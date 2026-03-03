@@ -1,6 +1,6 @@
 /* * */
 
-import { userFieldsEnrollmentSponsor } from '@/services/payload/collections/User/fields/enrollment-sponsor';
+import { userFieldsEnrollmentSponsor } from '@/services/payload/collections/User/fields/enrolment-sponsor';
 import { UserOptions } from '@/services/payload/collections/User/options';
 import { type Field } from 'payload';
 
@@ -21,13 +21,13 @@ export const userFieldsEnrollment: Field[] = [
 					],
 				},
 				label: 'Selo da Candidatura',
-				name: 'enrollment_signup_date',
+				name: 'enrolment_signup_date',
 				type: 'date',
 				virtual: true,
 			},
 			{
 				label: 'Selo da Aprovação',
-				name: 'enrollment_approval_date',
+				name: 'enrolment_approval_date',
 				type: 'date',
 			},
 			{
@@ -42,14 +42,14 @@ export const userFieldsEnrollment: Field[] = [
 
 	{
 		label: 'Tipo de Candidatura',
-		name: 'enrollment_type',
-		options: [...UserOptions.enrollment_type],
+		name: 'enrolment_type',
+		options: [...UserOptions.enrolment_type],
 		type: 'select',
 	},
 
 	{
 		admin: {
-			condition: (_, siblingData) => siblingData?.enrollment_type === 'effective',
+			condition: (_, siblingData) => siblingData?.enrolment_type === 'effective',
 		},
 		fields: [
 			{
@@ -61,7 +61,7 @@ export const userFieldsEnrollment: Field[] = [
 				},
 				maxRows: 4,
 				minRows: 2,
-				name: 'enrollment_sponsors',
+				name: 'enrolment_sponsors',
 				required: true,
 				type: 'array',
 			},
@@ -71,12 +71,12 @@ export const userFieldsEnrollment: Field[] = [
 
 	{
 		admin: {
-			condition: (_, siblingData) => siblingData?.enrollment_type === 'affiliate',
+			condition: (_, siblingData) => siblingData?.enrolment_type === 'affiliate',
 		},
 		fields: [
 			{
 				label: 'Carta Curricular',
-				name: 'enrollment_curriculum',
+				name: 'enrolment_curriculum',
 				relationTo: 'user-files',
 				required: true,
 				type: 'upload',

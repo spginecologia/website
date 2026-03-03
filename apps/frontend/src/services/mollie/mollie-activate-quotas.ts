@@ -4,14 +4,14 @@ import payloadConfig from '@/payload-config';
 import { LOGGER } from '@/services/logger/LOGGER';
 import { MOLLIEAPI } from '@/services/mollie/MOLLIEAPI';
 import { getUserDisplayName } from '@/services/payload/collections/User/utils/get-user-display-name';
-import { getUserEnrollmentYear } from '@/services/payload/collections/User/utils/get-user-enrollment-year';
+import { getUserEnrollmentYear } from '@/services/payload/collections/User/utils/get-user-enrolment-year';
 import { renderQuotaActivationFreeTemplate, renderQuotaActivationTemplate } from '@spginecologia/website-emails';
 import { getPayload } from 'payload';
 import { type User } from 'payload-types';
 
 /**
  * This function activates quotas for a user by creating Mollie payment links for each quota.
- * It checks if the user is eligible for each quota based on their enrollment year and internship status.
+ * It checks if the user is eligible for each quota based on their enrolment year and internship status.
  * @param userId User ID to activate quotas for.
  * @throws Error if no quotas are found or if the user is not found.
  */
@@ -86,10 +86,10 @@ export async function mollieActivateQuotas(userId: string) {
 		// Compare the year this user joined SPG and the year of the quota,
 		// as well as if the user already has a quota set for this year.
 
-		const userEnrollmentYear = getUserEnrollmentYear(userData.enrollment_approval_date);
+		const userEnrollmentYear = getUserEnrollmentYear(userData.enrolment_approval_date);
 
 		if (!userEnrollmentYear) {
-			LOGGER.error('mollie-activate-quotas', `User with ID "${userId}" does not have an enrollment year. Skipping...`);
+			LOGGER.error('mollie-activate-quotas', `User with ID "${userId}" does not have an enrolment year. Skipping...`);
 			continue;
 		}
 

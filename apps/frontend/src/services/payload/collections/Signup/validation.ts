@@ -56,6 +56,21 @@ export const SignupFormValidation = z.object({
 	email: z
 		.email({ message: 'Por favor forneça um endereço de email válido.' }),
 
+	enrolment_sponsors: z
+		.array(z.object({
+			is_valid: z.boolean().default(false),
+			tax_id: z.string().refine(value => validateTaxId(value, true, ['singular']), { message: 'NIF deve ser um número de 9 caracteres. Apenas são aceites NIFs pessoais.' }),
+		}))
+		.min(2, { message: 'Deve fornecer pelo menos dois patrocinadores para candidatura a Sócio Efetivo.' })
+		.max(5, { message: 'Só pode fornecer até cinco patrocinadores para candidatura a Sócio Efetivo.' })
+		.nullish(),
+
+	enrolment_type: z
+		.enum([...UserOptions.enrolment_type
+			.filter(option => option.value !== 'direct')
+			.map(option => option.value)])
+		.nullish(),
+
 	first_name: z
 		.string({ message: 'Primeiro Nome é um campo obrigatório.' })
 		.max(25, { message: 'Primeiro Nome deve ser menor ou igual que 25 caracteres.' }),

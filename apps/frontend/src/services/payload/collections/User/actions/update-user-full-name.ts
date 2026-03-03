@@ -7,7 +7,7 @@ import { getPayload } from 'payload';
 
 /**
  * This function updates the user's full name
- * based on their enrollment sponsors' approval.
+ * based on their enrolment sponsors' approval.
  * @param userId The ID of the user to update.
  * @throws Error if the user is not found or if there is an error during the update process.
  */

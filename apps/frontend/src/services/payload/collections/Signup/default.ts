@@ -17,6 +17,8 @@ export const SignupFormDefault: SignupForm = {
 	city: '',
 	country: 'Portugal',
 	email: 'spg-proponente@joao.earth',
+	enrolment_sponsors: [],
+	enrolment_type: null,
 	first_name: 'Proponente 1',
 	last_name: 'Apelido',
 	medical_id: '1234',

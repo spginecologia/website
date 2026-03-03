@@ -23,7 +23,7 @@ export function payloadParseUserForExport(userData: User) {
 		account_role: userData.account_role,
 		email: userData.email,
 		phone: userData.phone,
-		enrollment_approval_date: userData.enrollment_approval_date,
+		enrolment_approval_date: userData.enrolment_approval_date,
 		is_intern: userData.is_intern,
 		//
 		address_1: userData.address_1,

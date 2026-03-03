@@ -480,18 +480,18 @@ export interface User {
         id?: string | null;
       }[]
     | null;
-  enrollment_signup_date?: string | null;
-  enrollment_approval_date?: string | null;
+  enrolment_signup_date?: string | null;
+  enrolment_approval_date?: string | null;
   member_since?: number | null;
-  enrollment_type?: ('direct' | 'effective' | 'affiliate') | null;
-  enrollment_sponsors: {
+  enrolment_type?: ('direct' | 'effective' | 'affiliate') | null;
+  enrolment_sponsors: {
     sponsor_id: string | User;
     response_status: 'waiting' | 'accepted' | 'rejected';
     request_date?: string | null;
     response_date?: string | null;
     id?: string | null;
   }[];
-  enrollment_curriculum: string | UserFile;
+  enrolment_curriculum: string | UserFile;
   account_status?: ('active' | 'waiting' | 'dormant') | null;
   account_role?: ('member' | 'video-manager' | 'content-manager' | 'users-manager' | 'admin') | null;
   updatedAt: string;
@@ -1035,11 +1035,11 @@ export interface UsersSelect<T extends boolean = true> {
             };
         id?: T;
       };
-  enrollment_signup_date?: T;
-  enrollment_approval_date?: T;
+  enrolment_signup_date?: T;
+  enrolment_approval_date?: T;
   member_since?: T;
-  enrollment_type?: T;
-  enrollment_sponsors?:
+  enrolment_type?: T;
+  enrolment_sponsors?:
     | T
     | {
         sponsor_id?: T;
@@ -1048,7 +1048,7 @@ export interface UsersSelect<T extends boolean = true> {
         response_date?: T;
         id?: T;
       };
-  enrollment_curriculum?: T;
+  enrolment_curriculum?: T;
   account_status?: T;
   account_role?: T;
   updatedAt?: T;

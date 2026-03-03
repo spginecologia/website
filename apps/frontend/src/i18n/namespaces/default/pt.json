@@ -228,7 +228,7 @@
 	},
 	"account": {
 		"AccountIntro": {
-			"enrollment_year": {
+			"enrolment_year": {
 				"female": "Sócia desde {value}",
 				"male": "Sócio desde {value}",
 				"other": "Membro desde {value}"
@@ -673,7 +673,7 @@
 					"label": "Email",
 					"placeholder": "Escolha uma opção..."
 				},
-				"enrollment_type": {
+				"enrolment_type": {
 					"description": {
 						"affiliate": "Sócios afiliados são profissionais que, embora não sejam médicos ginecologistas, pretendem colaborar com a SPG e usufruir dos conteúdos e ferramentas que disponibilizamos. Esta categoria de sócio é isenta do pagamento de quotas anuais, mas não tem direito a voto nas Assembleias Gerais.",
 						"effective": "Sócios efectivos são médicos ginecologistas que pretendem usufruir dos conteúdos e ferramentas que disponibilizamos. Esta categoria de sócio tem direito a voto nas Assembleias Gerais e tem acesso a todas as áreas reservadas da Academia SPG."

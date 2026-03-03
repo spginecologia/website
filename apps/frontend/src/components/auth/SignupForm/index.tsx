@@ -62,6 +62,14 @@ export function SignupForm() {
 	// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
+	const handleAddSponsor = () => {
+		form.insertListItem('enrolment_sponsors', { is_valid: false, tax_id: '' });
+	};
+
+	const handleRemoveSponsor = (index: number) => {
+		form.removeListItem('enrolment_sponsors', index);
+	};
+
 	const handleSignup = async () => {
 		try {
 			setIsLoading(true);
@@ -171,16 +179,27 @@ export function SignupForm() {
 			</FormSection>
 
 			<FormSection description={t('auth.SignupForm.sections.enrolment.description')} title={t('auth.SignupForm.sections.enrolment.title')}>
-				<Radio.Group label={t('auth.SignupForm.fields.enrollment_type.label')} {...form.getInputProps('enrollment_type')}>
-					{UserOptions.enrollment_type.filter(item => item.value !== 'direct').map(item => (
+				<Radio.Group label={t('auth.SignupForm.fields.enrolment_type.label')} {...form.getInputProps('enrolment_type')}>
+					{UserOptions.enrolment_type.filter(item => item.value !== 'direct').map(item => (
 						<Radio
 							key={item.value}
-							description={t(`auth.SignupForm.fields.enrollment_type.description.${item.value}`)}
+							description={t(`auth.SignupForm.fields.enrolment_type.description.${item.value}`)}
 							label={item.label}
 							value={item.value}
 						/>
 					))}
 				</Radio.Group>
+				<div style={{ alignItems: 'center', display: 'flex', gap: 10 }}>
+					<Button onClick={handleAddSponsor}>{t('auth.SignupForm.fields.enrolment_sponsors.actions.add.label')}</Button>
+					<Text size="sm">{t('auth.SignupForm.fields.enrolment_sponsors.description')}</Text>
+				</div>
+				{form.values.enrolment_sponsors?.map((sponsor, index) => (
+					<div key={index} style={{ alignItems: 'center', display: 'flex', gap: 10 }}>
+						<TextInput label={`${t('auth.SignupForm.fields.enrolment_sponsors.label')} ${index + 1}`} placeholder={t('auth.SignupForm.fields.enrolment_sponsors.placeholder')} required={isRequiredFromZod(SignupFormValidation.shape.enrolment_sponsors)} {...form.getInputProps(`enrolment_sponsors.${index}.tax_id`)} />
+						<Button color="red" onClick={() => handleRemoveSponsor(index)}>{t('auth.SignupForm.fields.enrolment_sponsors.actions.remove.label')}</Button>
+					</div>
+				))}
+				<TextInput label={t('auth.SignupForm.fields.country.label')} placeholder={t('auth.SignupForm.fields.country.placeholder')} required={isRequiredFromZod(SignupFormValidation.shape.country)} {...form.getInputProps('country')} />
 			</FormSection>
 
 			{isLoading && <Loader />}

@@ -16,13 +16,13 @@ export const UserOptions = {
 		{ label: 'Inativo / Desconhecido', value: 'dormant' },
 	],
 
-	enrollment_sponsor_response: [
+	enrolment_sponsor_response: [
 		{ label: 'Aguarda Resposta', value: 'waiting' },
 		{ label: 'Aceite', value: 'accepted' },
 		{ label: 'Recusado', value: 'rejected' },
 	],
 
-	enrollment_type: [
+	enrolment_type: [
 		{ label: 'Aprovação Direta', value: 'direct' },
 		{ label: 'Sócio Efetivo', value: 'effective' },
 		{ label: 'Sócio Afiliado', value: 'affiliate' },
