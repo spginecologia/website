@@ -673,6 +673,19 @@
 					"label": "Email",
 					"placeholder": "Escolha uma opção..."
 				},
+				"enrolment_sponsors": {
+					"actions": {
+						"add": {
+							"label": "Adicionar Patrocinador"
+						},
+						"remove": {
+							"label": "Remover Patrocinador"
+						}
+					},
+					"description": "Escolha um sócio SPG para ser seu patrocinador",
+					"label": "Tipo de Candidatura",
+					"placeholder": "Escolha um sócio SPG para ser seu patrocinador"
+				},
 				"enrolment_type": {
 					"description": {
 						"affiliate": "Sócios afiliados são profissionais que, embora não sejam médicos ginecologistas, pretendem colaborar com a SPG e usufruir dos conteúdos e ferramentas que disponibilizamos. Esta categoria de sócio é isenta do pagamento de quotas anuais, mas não tem direito a voto nas Assembleias Gerais.",
@@ -703,6 +716,10 @@
 				},
 				"send_newsletter": {
 					"label": "Receber Newsletter"
+				},
+				"sponsor_tax_id": {
+					"label": "NIF do Patrocinador",
+					"placeholder": "000 000 000"
 				},
 				"subscribed_sections": {
 					"label": "Secções de Interesse"

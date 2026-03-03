@@ -63,6 +63,11 @@ export const SignupFormValidation = z.object({
 		}))
 		.min(2, { message: 'Deve fornecer pelo menos dois patrocinadores para candidatura a Sócio Efetivo.' })
 		.max(5, { message: 'Só pode fornecer até cinco patrocinadores para candidatura a Sócio Efetivo.' })
+		.refine(sponsors => sponsors.every(sponsor => sponsor.is_valid), { message: 'Todos os patrocinadores fornecidos devem ser válidos.' })
+		.refine((sponsors) => {
+			const taxIds = sponsors.map(sponsor => sponsor.tax_id);
+			return new Set(taxIds).size === taxIds.length;
+		}, { message: 'Os NIFs dos patrocinadores devem ser únicos.' })
 		.nullish(),
 
 	enrolment_type: z

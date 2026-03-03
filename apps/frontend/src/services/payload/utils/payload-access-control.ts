@@ -32,12 +32,10 @@ export function payloadAccessControl(role: null | undefined | User['account_role
 	if ('user' in userOrRequest && userOrRequest.user) {
 		// The value is a request object
 		userData = userOrRequest.user;
-	}
-	else if ('account_role' in userOrRequest) {
+	} else if ('account_role' in userOrRequest) {
 		// The value is a User object
 		userData = userOrRequest;
-	}
-	else {
+	} else {
 		// The value is unknown,
 		// so access should be denied
 		return false;
@@ -60,7 +58,7 @@ export function payloadAccessControl(role: null | undefined | User['account_role
 
 	//
 	// If role was not provided still return true,
-	// as the User is active,
+	// as the User is active.
 
 	if (!role) {
 		return true;

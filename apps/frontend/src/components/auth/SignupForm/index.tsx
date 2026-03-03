@@ -6,18 +6,20 @@ import { FormSection } from '@/components/common/FormSection';
 import { isRequiredFromZod } from '@/services/general/is-required-from-zod';
 import { SignupFormDefault } from '@/services/payload/collections/Signup/default';
 import { type SignupResponse } from '@/services/payload/collections/Signup/types';
-import { SignupFormValidation } from '@/services/payload/collections/Signup/validation';
+import { type SignupForm, SignupFormValidation } from '@/services/payload/collections/Signup/validation';
 import { UserOptions } from '@/services/payload/collections/User/options';
-import { Alert, Button, Checkbox, Loader, Paper, Radio, Select, Space, Text, TextInput, Title } from '@mantine/core';
+import { ActionIcon, Alert, Button, Checkbox, Loader, Paper, Radio, Select, Space, Text, TextInput, Title } from '@mantine/core';
 import { DateInput } from '@mantine/dates';
 import { useForm } from '@mantine/form';
-import { IconRosetteDiscountCheckFilled, IconUserHeart } from '@tabler/icons-react';
+import { IconMinus, IconPlus, IconRosetteDiscountCheckFilled, IconUserHeart } from '@tabler/icons-react';
 import { zod4Resolver } from 'mantine-form-zod-resolver';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import styles from './styles.module.css';
+
+import { SignupFormSponsorInput } from '../SignupFormSponsorInput';
 
 /* * */
 
@@ -37,7 +39,7 @@ export function SignupForm() {
 	//
 	// B. Setup form
 
-	const form = useForm({
+	const form = useForm<SignupForm>({
 		// clearInputErrorOnChange: true,
 		initialValues: SignupFormDefault,
 		onValuesChange: () => {
@@ -63,6 +65,8 @@ export function SignupForm() {
 	}, []);
 
 	const handleAddSponsor = () => {
+		const currentSponsors = form.getValues().enrolment_sponsors ?? [];
+		if (currentSponsors.length >= 5) return; // Limit to 5 sponsors
 		form.insertListItem('enrolment_sponsors', { is_valid: false, tax_id: '' });
 	};
 
@@ -189,17 +193,28 @@ export function SignupForm() {
 						/>
 					))}
 				</Radio.Group>
-				<div style={{ alignItems: 'center', display: 'flex', gap: 10 }}>
-					<Button onClick={handleAddSponsor}>{t('auth.SignupForm.fields.enrolment_sponsors.actions.add.label')}</Button>
-					<Text size="sm">{t('auth.SignupForm.fields.enrolment_sponsors.description')}</Text>
-				</div>
-				{form.values.enrolment_sponsors?.map((sponsor, index) => (
-					<div key={index} style={{ alignItems: 'center', display: 'flex', gap: 10 }}>
-						<TextInput label={`${t('auth.SignupForm.fields.enrolment_sponsors.label')} ${index + 1}`} placeholder={t('auth.SignupForm.fields.enrolment_sponsors.placeholder')} required={isRequiredFromZod(SignupFormValidation.shape.enrolment_sponsors)} {...form.getInputProps(`enrolment_sponsors.${index}.tax_id`)} />
-						<Button color="red" onClick={() => handleRemoveSponsor(index)}>{t('auth.SignupForm.fields.enrolment_sponsors.actions.remove.label')}</Button>
-					</div>
-				))}
-				<TextInput label={t('auth.SignupForm.fields.country.label')} placeholder={t('auth.SignupForm.fields.country.placeholder')} required={isRequiredFromZod(SignupFormValidation.shape.country)} {...form.getInputProps('country')} />
+				{form.values.enrolment_type === 'effective' && (
+					<>
+						<div style={{ alignItems: 'center', display: 'flex', gap: 10 }}>
+							<Text size="sm">{t('auth.SignupForm.fields.enrolment_sponsors.description')}</Text>
+							<ActionIcon onClick={handleAddSponsor}>
+								<IconPlus />
+							</ActionIcon>
+						</div>
+						{form.values.enrolment_sponsors?.map((sponsor, index) => (
+							<div key={index} style={{ alignItems: 'center', display: 'flex', gap: 10 }}>
+								<SignupFormSponsorInput
+									onChange={value => form.setFieldValue(`enrolment_sponsors.${index}.tax_id`, value)}
+									onValidate={valid => form.setFieldValue(`enrolment_sponsors.${index}.is_valid`, valid)}
+									value={sponsor.tax_id}
+								/>
+								<ActionIcon onClick={() => handleRemoveSponsor(index)}>
+									<IconMinus />
+								</ActionIcon>
+							</div>
+						))}
+					</>
+				)}
 			</FormSection>
 
 			{isLoading && <Loader />}
