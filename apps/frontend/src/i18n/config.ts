@@ -9,7 +9,7 @@ import { initReactI18next } from 'react-i18next';
 
 /* * */
 
-i18next
+await i18next
 	.use(ICU)
 	.use(initReactI18next)
 	.init({
@@ -19,4 +19,5 @@ i18next
 		resources: {
 			pt: i18nResourceKeysPt,
 		},
+		showSupportNotice: false,
 	});
