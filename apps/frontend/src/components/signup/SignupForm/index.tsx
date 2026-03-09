@@ -8,18 +8,19 @@ import { SignupFormDefault } from '@/services/payload/collections/Signup/default
 import { type SignupResponse } from '@/services/payload/collections/Signup/types';
 import { type SignupForm, SignupFormValidation } from '@/services/payload/collections/Signup/validation';
 import { UserOptions } from '@/services/payload/collections/User/options';
-import { ActionIcon, Alert, Button, Checkbox, Loader, Paper, Radio, Select, Space, Text, TextInput, Title } from '@mantine/core';
+import { ActionIcon, Button, Checkbox, Loader, Paper, Radio, Select, Space, Text, TextInput, Title } from '@mantine/core';
 import { DateInput } from '@mantine/dates';
 import { useForm } from '@mantine/form';
-import { IconMinus, IconPlus, IconRosetteDiscountCheckFilled, IconUserHeart } from '@tabler/icons-react';
+import { IconMinus, IconPlus } from '@tabler/icons-react';
 import { zod4Resolver } from 'mantine-form-zod-resolver';
-import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import styles from './styles.module.css';
 
 import { SignupFormSponsorInput } from '../SignupFormSponsorInput';
+import { SignupFormUserCreated } from '../SignupFormUserCreated';
+import { SignupFormUserExists } from '../SignupFormUserExists';
 
 /* * */
 
@@ -99,35 +100,11 @@ export function SignupForm() {
 	// D. Render components
 
 	if (signupResponse?.status === 'user_exists') {
-		return (
-			<Paper className={styles.container}>
-				<Title order={2}>{t('auth.SignupForm.title')}</Title>
-				<Space h={5} />
-				<Alert icon={<IconUserHeart />} title={t('auth.SignupForm.status.user_exists.alert.title')} w="100%">
-					<Text size="sm">{t('auth.SignupForm.status.user_exists.alert.message')}</Text>
-					<Space h={5} />
-					<Button component={Link} href="/forgot">{t('auth.SignupForm.status.user_exists.alert.action')}</Button>
-					<Space h={5} />
-				</Alert>
-			</Paper>
-		);
+		return <SignupFormUserExists />;
 	}
 
 	if (signupResponse?.status === 'user_created') {
-		return (
-			<Paper className={styles.container}>
-				<Title order={2}>{t('auth.SignupForm.title')}</Title>
-				<Text>{t('auth.SignupForm.subtitle')}</Text>
-				<Space h={5} />
-				<Alert icon={<IconRosetteDiscountCheckFilled />} title={t('auth.SignupForm.status.user_created.alert.title')} w="100%">
-					<Text size="sm">{t('auth.SignupForm.status.user_created.alert.message')}</Text>
-					<Space h={5} />
-					<Text fw="bold" size="xs">+351 218 429 710</Text>
-					<Text fw="bold" size="xs">secretariado@spginecologia.pt</Text>
-					<Space h={5} />
-				</Alert>
-			</Paper>
-		);
+		return <SignupFormUserCreated />;
 	}
 
 	return (
