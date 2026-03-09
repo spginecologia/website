@@ -25,7 +25,7 @@ export function SignupFormSectionEnrolment() {
 	const signupFormContext = useSignupFormContext();
 
 	//
-	// C. Handle actions
+	// B. Handle actions
 
 	const handleAddSponsor = () => {
 		const currentSponsors = signupFormContext.data.form.getValues().enrolment_sponsors ?? [];
@@ -38,10 +38,11 @@ export function SignupFormSectionEnrolment() {
 	};
 
 	//
-	// B. Render components
+	// C. Render components
 
 	return (
 		<FormSection description={t('auth.SignupForm.sections.enrolment.description')} title={t('auth.SignupForm.sections.enrolment.title')}>
+
 			<Radio.Group label={t('auth.SignupForm.fields.medical_specialty.label')} {...signupFormContext.data.form.getInputProps('medical_specialty')}>
 				{UserOptions.medical_specialty.map(item => (
 					<Radio
@@ -52,6 +53,7 @@ export function SignupFormSectionEnrolment() {
 					/>
 				))}
 			</Radio.Group>
+
 			{signupFormContext.data.form.values.medical_specialty === 'gynecology' && (
 				<>
 					<div style={{ alignItems: 'center', display: 'flex', gap: 10 }}>
@@ -74,11 +76,18 @@ export function SignupFormSectionEnrolment() {
 					))}
 				</>
 			)}
+
 			{signupFormContext.data.form.values.medical_specialty && signupFormContext.data.form.values.medical_specialty !== 'gynecology' && (
 				<>
-					<TextInput label={t('auth.SignupForm.fields.medical_specialty_other.label')} placeholder={t('auth.SignupForm.fields.medical_specialty_other.placeholder')} required={isRequiredFromZod(SignupFormValidation.shape.medical_specialty_other)} {...signupFormContext.data.form.getInputProps('medical_specialty_other')} />
+					<TextInput
+						label={t('auth.SignupForm.fields.medical_specialty_other.label')}
+						placeholder={t('auth.SignupForm.fields.medical_specialty_other.placeholder')}
+						required={isRequiredFromZod(SignupFormValidation.shape.medical_specialty_other)}
+						{...signupFormContext.data.form.getInputProps('medical_specialty_other')}
+					/>
 				</>
 			)}
+
 		</FormSection>
 	);
 }

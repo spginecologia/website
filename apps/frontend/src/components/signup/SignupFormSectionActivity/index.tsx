@@ -25,13 +25,32 @@ export function SignupFormSectionActivity() {
 
 	return (
 		<FormSection description={t('auth.SignupForm.sections.activity.description')} title={t('auth.SignupForm.sections.activity.title')}>
-			<TextInput label={t('auth.SignupForm.fields.workplace_primary.label')} placeholder={t('auth.SignupForm.fields.workplace_primary.placeholder')} {...signupFormContext.data.form.getInputProps('workplace_primary')} />
-			<TextInput label={t('auth.SignupForm.fields.workplace_secondary.label')} placeholder={t('auth.SignupForm.fields.workplace_secondary.placeholder')} {...signupFormContext.data.form.getInputProps('workplace_secondary')} />
-			<Checkbox.Group label={t('auth.SignupForm.fields.subscribed_sections.label')} {...signupFormContext.data.form.getInputProps('subscribed_sections')}>
+
+			<TextInput
+				label={t('auth.SignupForm.fields.workplace_primary.label')}
+				placeholder={t('auth.SignupForm.fields.workplace_primary.placeholder')}
+				{...signupFormContext.data.form.getInputProps('workplace_primary')}
+			/>
+
+			<TextInput
+				label={t('auth.SignupForm.fields.workplace_secondary.label')}
+				placeholder={t('auth.SignupForm.fields.workplace_secondary.placeholder')}
+				{...signupFormContext.data.form.getInputProps('workplace_secondary')}
+			/>
+
+			<Checkbox.Group
+				label={t('auth.SignupForm.fields.subscribed_sections.label')}
+				{...signupFormContext.data.form.getInputProps('subscribed_sections')}
+			>
 				{UserOptions.subscribed_sections.map(section => (
-					<Checkbox key={section.value} label={section.label} value={section.value} />
+					<Checkbox
+						key={section.value}
+						label={section.label}
+						value={section.value}
+					/>
 				))}
 			</Checkbox.Group>
+
 		</FormSection>
 	);
 }
