@@ -61,19 +61,13 @@ export const SignupFormValidation = z.object({
 			is_valid: z.boolean().default(false),
 			tax_id: z.string().refine(value => validateTaxId(value, true, ['singular']), { message: 'NIF deve ser um número de 9 caracteres. Apenas são aceites NIFs pessoais.' }),
 		}))
-		.min(2, { message: 'Deve fornecer pelo menos dois patrocinadores para candidatura a Sócio Efetivo.' })
-		.max(5, { message: 'Só pode fornecer até cinco patrocinadores para candidatura a Sócio Efetivo.' })
-		.refine(sponsors => sponsors.every(sponsor => sponsor.is_valid), { message: 'Todos os patrocinadores fornecidos devem ser válidos.' })
+		.min(2, { message: 'Deve fornecer pelo menos dois NIFs para candidatura a Sócio Efetivo.' })
+		.max(5, { message: 'Só pode fornecer até cinco NIFs para candidatura a Sócio Efetivo.' })
+		.refine(sponsors => sponsors.every(sponsor => sponsor.is_valid), { message: 'Detetámos um NIF inválido.' })
 		.refine((sponsors) => {
 			const taxIds = sponsors.map(sponsor => sponsor.tax_id);
 			return new Set(taxIds).size === taxIds.length;
-		}, { message: 'Os NIFs dos patrocinadores devem ser únicos.' })
-		.nullish(),
-
-	enrolment_type: z
-		.enum([...UserOptions.enrolment_type
-			.filter(option => option.value !== 'direct')
-			.map(option => option.value)])
+		}, { message: 'Não pode indicar o mesmo NIF mais do que uma vez.' })
 		.nullish(),
 
 	first_name: z
@@ -87,6 +81,14 @@ export const SignupFormValidation = z.object({
 	medical_id: z
 		.string()
 		.max(10, { message: 'Número de Cédula Médica deve ser menor ou igual que 10 caracteres.' }),
+
+	medical_specialty: z
+		.enum([...UserOptions.medical_specialty.map(option => option.value)])
+		.nullish(),
+
+	medical_specialty_other: z
+		.string()
+		.nullish(),
 
 	phone: z
 		.string({ message: 'Telefone é um campo obrigatório.' })

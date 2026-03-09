@@ -28,6 +28,11 @@ export const UserOptions = {
 		{ label: 'Sócio Afiliado', value: 'affiliate' },
 	],
 
+	medical_specialty: [
+		{ label: 'Ginecologia', value: 'gynecology' },
+		{ label: 'Outra Atividade', value: 'other' },
+	],
+
 	payment_status: [
 		{ label: 'Aguarda Pagamento', value: 'waiting' },
 		{ label: 'Oferta', value: 'free' },

@@ -183,17 +183,17 @@ export function SignupForm() {
 			</FormSection>
 
 			<FormSection description={t('auth.SignupForm.sections.enrolment.description')} title={t('auth.SignupForm.sections.enrolment.title')}>
-				<Radio.Group label={t('auth.SignupForm.fields.enrolment_type.label')} {...form.getInputProps('enrolment_type')}>
-					{UserOptions.enrolment_type.filter(item => item.value !== 'direct').map(item => (
+				<Radio.Group label={t('auth.SignupForm.fields.medical_specialty.label')} {...form.getInputProps('medical_specialty')}>
+					{UserOptions.medical_specialty.map(item => (
 						<Radio
 							key={item.value}
-							description={t(`auth.SignupForm.fields.enrolment_type.description.${item.value}`)}
+							description={item.value}
 							label={item.label}
 							value={item.value}
 						/>
 					))}
 				</Radio.Group>
-				{form.values.enrolment_type === 'effective' && (
+				{form.values.medical_specialty === 'gynecology' && (
 					<>
 						<div style={{ alignItems: 'center', display: 'flex', gap: 10 }}>
 							<Text size="sm">{t('auth.SignupForm.fields.enrolment_sponsors.description')}</Text>
@@ -213,6 +213,11 @@ export function SignupForm() {
 								</ActionIcon>
 							</div>
 						))}
+					</>
+				)}
+				{form.values.medical_specialty && form.values.medical_specialty !== 'gynecology' && (
+					<>
+						<TextInput label={t('auth.SignupForm.fields.medical_specialty_other.label')} placeholder={t('auth.SignupForm.fields.medical_specialty_other.placeholder')} required={isRequiredFromZod(SignupFormValidation.shape.medical_specialty_other)} {...form.getInputProps('medical_specialty_other')} />
 					</>
 				)}
 			</FormSection>
