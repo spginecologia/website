@@ -1,6 +1,7 @@
 /* * */
 
 import { validateTaxId } from '@/services/general/validate-tax-id';
+import { SignupOptions } from '@/services/payload/collections/Signup/options';
 import { UserOptions } from '@/services/payload/collections/User/options';
 import { z } from 'zod/v4';
 
@@ -65,7 +66,7 @@ export const SignupFormValidation = z.object({
 			is_valid: z.boolean().default(false),
 			tax_id: z.string().refine(value => validateTaxId(value, true, ['singular']), { message: 'NIF deve ser um número de 9 caracteres. Apenas são aceites NIFs pessoais.' }),
 		}))
-		.min(2, { message: 'Deve fornecer pelo menos dois NIFs para candidatura a Sócio Efetivo.' })
+		.min(SignupOptions.required_sponsor_count, { message: `Deve fornecer pelo menos ${SignupOptions.required_sponsor_count} NIFs para candidatura a Sócio Efetivo.` })
 		.max(5, { message: 'Só pode fornecer até cinco NIFs para candidatura a Sócio Efetivo.' })
 		.refine(sponsors => sponsors.every(sponsor => sponsor.is_valid), { message: 'Detetámos um NIF inválido.' })
 		.refine((sponsors) => {
