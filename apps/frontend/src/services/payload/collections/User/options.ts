@@ -18,7 +18,7 @@ export const UserOptions = {
 
 	enrolment_sponsor_response: [
 		{ label: 'Aguarda Resposta', value: 'waiting' },
-		{ label: 'Aceite', value: 'accepted' },
+		{ label: 'Aceite', value: 'approved' },
 		{ label: 'Recusado', value: 'rejected' },
 	],
 

@@ -59,8 +59,7 @@ export function LoginForm() {
 			}
 			console.log('Login successful. Redirecting to account page...');
 			navigationHandleRedirectParam('/account');
-		}
-		catch (error) {
+		} catch (error) {
 			console.log(error.message);
 			form.setFieldValue('password', '');
 			setIsLoading(false);

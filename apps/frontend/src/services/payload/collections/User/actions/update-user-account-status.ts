@@ -2,6 +2,7 @@
 
 import payloadConfig from '@/payload-config';
 import { LOGGER } from '@/services/logger/LOGGER';
+import { SignupOptions } from '@/services/payload/collections/Signup/options';
 import { payloadSendActivationEmail } from '@/services/payload/utils/payload-send-activation-email';
 import { getPayload } from 'payload';
 
@@ -74,16 +75,16 @@ export async function updateUserAccountStatus(userId: string) {
 	let countOfAcceptedSponsorResponses = 0;
 
 	userData.enrolment_sponsors.forEach((sponsor) => {
-		if (sponsor.response_status !== 'accepted') return;
+		if (sponsor.response_status !== 'approved') return;
 		countOfAcceptedSponsorResponses++;
 	});
 
 	//
-	// If the user has at least two accepted sponsor responses,
+	// If the user has at least two approved sponsor responses,
 	// we can consider the user as "active" and send the activation email.
 
-	if (countOfAcceptedSponsorResponses < 2) {
-		LOGGER.info('update-user-account-status', `User with ID "${userId}" has only ${countOfAcceptedSponsorResponses} accepted sponsor responses. Skipping...`);
+	if (countOfAcceptedSponsorResponses < SignupOptions.required_sponsor_count) {
+		LOGGER.info('update-user-account-status', `User with ID "${userId}" has only ${countOfAcceptedSponsorResponses} approved sponsor responses. Skipping...`);
 		return;
 	}
 

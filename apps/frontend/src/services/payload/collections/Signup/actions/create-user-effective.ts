@@ -29,7 +29,7 @@ export async function createUserEffective(signupFormData: SignupForm) {
 	}
 
 	//
-	// The proponent user must have the minimum count of sponsors with an approved status
+	// The proponent user must have the minimum count of sponsors with an approval status
 	// in order to be created with the "effective" enrolment type.
 
 	const validSponsors: User[] = [];

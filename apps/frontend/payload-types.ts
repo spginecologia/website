@@ -486,7 +486,7 @@ export interface User {
   enrolment_type?: ('direct' | 'effective' | 'affiliate') | null;
   enrolment_sponsors: {
     sponsor_id: string | User;
-    response_status: 'waiting' | 'accepted' | 'rejected';
+    response_status: 'waiting' | 'approved' | 'rejected';
     request_date?: string | null;
     response_date?: string | null;
     id?: string | null;

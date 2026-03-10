@@ -21,8 +21,8 @@
 		"react-email": "5.2.9"
 	},
 	"devDependencies": {
-		"@tmlmobilidade/eslint": "20260309.1855.59",
 		"@react-email/preview-server": "5.2.9",
+		"@tmlmobilidade/eslint": "20260309.1855.59",
 		"@types/node": "25.4.0",
 		"resolve-tspaths": "0.8.23",
 		"typescript": "5.9.3"

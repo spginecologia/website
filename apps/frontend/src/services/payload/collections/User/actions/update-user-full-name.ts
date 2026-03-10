@@ -7,7 +7,7 @@ import { getPayload } from 'payload';
 
 /**
  * This function updates the user's full name
- * based on their enrolment sponsors' approval.
+ * based on their title, first name, and last name.
  * @param userId The ID of the user to update.
  * @throws Error if the user is not found or if there is an error during the update process.
  */
@@ -30,8 +30,8 @@ export async function updateUserFullName(userId: string) {
 	}
 
 	//
-	// Check the status of each sponsor response
-	// and update the user account_status accordingly.
+	// Calculate the user's full name based
+	// on their title, first name, and last name.
 
 	const userFullName = getUserDisplayName(userData.title, userData.first_name, userData.last_name);
 
@@ -41,8 +41,7 @@ export async function updateUserFullName(userId: string) {
 	}
 
 	//
-	// If the user has at least two accepted sponsor responses,
-	// we can consider the user as "active" and send the activation email.
+	// Update the user's full name in the database.
 
 	await payload.update({
 		collection: 'users',

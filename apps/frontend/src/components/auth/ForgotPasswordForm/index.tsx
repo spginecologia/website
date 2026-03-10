@@ -72,8 +72,7 @@ export function ForgotPasswordForm() {
 			const responseData = await response.json();
 			setIsLoading(false);
 			setForgotPasswordResponse(responseData);
-		}
-		catch (error) {
+		} catch (error) {
 			console.log(error.message);
 			setIsLoading(false);
 			setIsError(true);
