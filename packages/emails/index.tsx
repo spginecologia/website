@@ -98,3 +98,8 @@ export const renderVideoSubmitUserTemplate = async (props: VideoSubmitUserProps)
 		subject: videoSubmitUserSubject,
 	};
 };
+
+/* * */
+
+export * from '@/templates/signup-affiliate-approval';
+export * from '@/templates/signup-affiliate-confirmation';
