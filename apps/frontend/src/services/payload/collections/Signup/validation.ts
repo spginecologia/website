@@ -56,6 +56,10 @@ export const SignupFormValidation = z.object({
 	email: z
 		.email({ message: 'Por favor forneça um endereço de email válido.' }),
 
+	enrolment_curriculum: z
+		.string({ message: 'Currículo (resumo)' })
+		.nullish(),
+
 	enrolment_sponsors: z
 		.array(z.object({
 			is_valid: z.boolean().default(false),

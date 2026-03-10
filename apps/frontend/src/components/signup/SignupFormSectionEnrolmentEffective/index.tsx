@@ -5,7 +5,7 @@
 import { useSignupFormContext } from '@/components/signup/SignupForm.context';
 import { SignupFormSponsorInput } from '@/components/signup/SignupFormSponsorInput';
 import { ActionIcon, Text } from '@mantine/core';
-import { IconMinus, IconPlus } from '@tabler/icons-react';
+import { IconPlus } from '@tabler/icons-react';
 import { useTranslation } from 'react-i18next';
 
 /* * */
@@ -41,23 +41,22 @@ export function SignupFormSectionEnrolmentEffective() {
 
 			<div style={{ alignItems: 'center', display: 'flex', gap: 10 }}>
 				<Text size="sm">{t('auth.SignupForm.fields.enrolment_sponsors.description')}</Text>
-				<ActionIcon onClick={handleAddSponsor}>
-					<IconPlus />
-				</ActionIcon>
 			</div>
 
 			{signupFormContext.data.form.values.enrolment_sponsors?.map((sponsor, index) => (
-				<div key={index} style={{ alignItems: 'center', display: 'flex', gap: 10 }}>
-					<SignupFormSponsorInput
-						onChange={value => signupFormContext.data.form.setFieldValue(`enrolment_sponsors.${index}.tax_id`, value)}
-						onValidate={valid => signupFormContext.data.form.setFieldValue(`enrolment_sponsors.${index}.is_valid`, valid)}
-						value={sponsor.tax_id}
-					/>
-					<ActionIcon onClick={() => handleRemoveSponsor(index)}>
-						<IconMinus />
-					</ActionIcon>
-				</div>
+				<SignupFormSponsorInput
+					key={index}
+					index={index}
+					onChange={value => signupFormContext.data.form.setFieldValue(`enrolment_sponsors.${index}.tax_id`, value)}
+					onRemove={() => handleRemoveSponsor(index)}
+					onValidate={valid => signupFormContext.data.form.setFieldValue(`enrolment_sponsors.${index}.is_valid`, valid)}
+					value={sponsor.tax_id}
+				/>
 			))}
+
+			<ActionIcon onClick={handleAddSponsor}>
+				<IconPlus />
+			</ActionIcon>
 
 		</>
 	);

@@ -83,8 +83,7 @@ export function VideosSubmitForm() {
 				if (xhr.status >= 200 && xhr.status < 300) {
 					const resultData = JSON.parse(xhr.responseText);
 					window.location.href = `/academia/videos/${resultData.id}`;
-				}
-				else {
+				} else {
 					console.error('Upload failed', xhr.responseText);
 					setIsError(xhr.responseText || 'XHR generic error. Response status: ' + xhr.status);
 					setIsLoading(false);
@@ -96,8 +95,7 @@ export function VideosSubmitForm() {
 			};
 			xhr.open('POST', '/api/account/videos/new');
 			xhr.send(formData);
-		}
-		catch (error) {
+		} catch (error) {
 			console.log(error);
 			setIsLoading(false);
 		}

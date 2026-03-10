@@ -491,7 +491,7 @@ export interface User {
     response_date?: string | null;
     id?: string | null;
   }[];
-  enrolment_curriculum: string | UserFile;
+  enrolment_curriculum?: string | null;
   account_status?: ('active' | 'waiting' | 'dormant') | null;
   account_role?: ('member' | 'video-manager' | 'content-manager' | 'users-manager' | 'admin') | null;
   updatedAt: string;

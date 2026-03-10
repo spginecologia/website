@@ -75,11 +75,9 @@ export const userFieldsEnrollment: Field[] = [
 		},
 		fields: [
 			{
-				label: 'Carta Curricular',
+				label: 'Resumo Curricular',
 				name: 'enrolment_curriculum',
-				relationTo: 'user-files',
-				required: true,
-				type: 'upload',
+				type: 'textarea',
 			},
 		],
 		type: 'group',

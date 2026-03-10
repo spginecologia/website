@@ -673,6 +673,10 @@
 					"label": "Email",
 					"placeholder": "Escolha uma opção..."
 				},
+				"enrolment_curriculum": {
+					"label": "Currículo (resumo)",
+					"placeholder": "..."
+				},
 				"enrolment_sponsors": {
 					"actions": {
 						"add": {
@@ -793,6 +797,9 @@
 			},
 			"subtitle": "A sua candidatura será submetida a aprovação em Assembleia Geral.",
 			"title": "Candidatura a Sócio"
+		},
+		"SignupFormSponsorInput": {
+			"remove": "Remover"
 		},
 		"SignupGuide": {
 			"paragraph_1": "Contribua para o futuro desta especialidade. Ao tornar-se Sócio SPG ganha acesso às áreas reservadas da Academia SPG, onde pode partilhar as suas experiências cirúrgicas e discutir conteúdos científicos de qualidade com a comunidade ginecológica.",

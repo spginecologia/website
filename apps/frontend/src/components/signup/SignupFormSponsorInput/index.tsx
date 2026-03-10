@@ -2,23 +2,27 @@
 
 /* * */
 
+import { SignupFormSponsorInputState } from '@/components/signup/SignupFormSponsorInputState';
 import { validateTaxId } from '@/services/general/validate-tax-id';
-import { Loader, TextInput } from '@mantine/core';
-import { IconCircleCheckFilled, IconCircleXFilled } from '@tabler/icons-react';
+import { Anchor, TextInput } from '@mantine/core';
 import { useCallback, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+
+import styles from './styles.module.css';
 
 /* * */
 
 interface SignupFormSponsorInputProps {
+	index?: number
 	onChange?: (value: string) => void
+	onRemove?: () => void
 	onValidate?: (value: boolean) => void
 	value: string
 }
 
 /* * */
 
-export function SignupFormSponsorInput({ onChange, onValidate, value }: SignupFormSponsorInputProps) {
+export function SignupFormSponsorInput({ index, onChange, onRemove, onValidate, value }: SignupFormSponsorInputProps) {
 	//
 
 	//
@@ -65,18 +69,16 @@ export function SignupFormSponsorInput({ onChange, onValidate, value }: SignupFo
 	// C. Render components
 
 	return (
-		<TextInput
-			label={t('auth.SignupForm.fields.sponsor_tax_id.label')}
-			onChange={e => onChange?.(e.currentTarget.value)}
-			placeholder={t('auth.SignupForm.fields.sponsor_tax_id.placeholder')}
-			value={value}
-			rightSection={isLoading
-				? <Loader size="xs" />
-				: isValid === null ? null
-					: isValid ? <IconCircleCheckFilled color="green" size={18} />
-						: <IconCircleXFilled color="red" size={18} />}
-		/>
+		<div className={styles.container} data-is-valid={isValid}>
+			<TextInput
+				label={t('auth.SignupForm.fields.sponsor_tax_id.label') + (index !== undefined ? ` #${index + 1}` : '')}
+				onChange={e => onChange?.(e.currentTarget.value)}
+				placeholder={t('auth.SignupForm.fields.sponsor_tax_id.placeholder')}
+				rightSection={<SignupFormSponsorInputState isLoading={isLoading} isValid={isValid} />}
+				value={value}
+				w="100%"
+			/>
+			<Anchor onClick={onRemove} variant="overline">{t('auth.SignupFormSponsorInput.remove')}</Anchor>
+		</div>
 	);
-
-	//
 }
