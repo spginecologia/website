@@ -2,6 +2,7 @@
 
 import { Farewell } from '@/components/Farewell';
 import { Greeting } from '@/components/Greeting';
+import { MainButton } from '@/components/MainButton';
 import { Paragraph } from '@/components/Paragraph';
 import { Wrapper } from '@/components/Wrapper';
 import { type EmailTemplate } from '@/types/emai-template';
@@ -10,21 +11,23 @@ import { render } from '@react-email/render';
 /* * */
 
 export interface SignupEffectiveSponsorProps {
+	signupApprovalUrl: string
 	userDisplayName: string
 }
 
 /* * */
 
-export const signupEffectiveSponsorSubject = 'Recebemos a sua candidatura à SPG';
+export const signupEffectiveSponsorSubject = 'Foi indicado como patrocinador de uma candidatura à SPG';
 
 /* * */
 
-export default function SignupEffectiveSponsorTemplate({ userDisplayName }: SignupEffectiveSponsorProps) {
+export default function SignupEffectiveSponsorTemplate({ signupApprovalUrl, userDisplayName }: SignupEffectiveSponsorProps) {
 	return (
 		<Wrapper previewMessage="A sua conta SPG está em confirmação.">
 			<Greeting text={`${userDisplayName},`} />
-			<Paragraph>Agradecemos o seu interesse em tornar-se membro da SPG.</Paragraph>
-			<Paragraph>Os seus dados serão analisados em breve pela Direção da SPG. Após a análise, receberá um email com a confirmação de ativação da sua conta.</Paragraph>
+			<Paragraph>Foi indicado como patrocinador da candidatura de um novo membro da SPG.</Paragraph>
+			<Paragraph>Pedimos que tome uma decisão o mais breve possível, confirmando sempre os dados apresentados com atenção.</Paragraph>
+			<MainButton href={signupApprovalUrl} label="Tomar uma decisão" />
 			<Farewell text="Academia SPG" />
 		</Wrapper>
 	);
@@ -33,6 +36,7 @@ export default function SignupEffectiveSponsorTemplate({ userDisplayName }: Sign
 /* * */
 
 SignupEffectiveSponsorTemplate.PreviewProps = {
+	signupApprovalUrl: 'https://spginecologia.pt/signup-approval/123456789',
 	userDisplayName: 'Dra. Susana Silva',
 } as SignupEffectiveSponsorProps;
 

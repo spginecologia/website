@@ -24,7 +24,8 @@ export default function SignupEffectiveConfirmationTemplate({ userDisplayName }:
 		<Wrapper previewMessage="A sua conta SPG está em confirmação.">
 			<Greeting text={`${userDisplayName},`} />
 			<Paragraph>Agradecemos o seu interesse em tornar-se membro da SPG.</Paragraph>
-			<Paragraph>Os seus dados serão analisados em breve pela Direção da SPG. Após a análise, receberá um email com a confirmação de ativação da sua conta.</Paragraph>
+			<Paragraph>Foi enviado um pedido de confirmação a cada um dos Sócios SPG que indicou. Pelo menos 2 devem confirmar a sua candidatura para que a sua conta seja automaticamente ativada.</Paragraph>
+			<Paragraph>Para qualquer dúvida ou esclarecimento, por favor contacte o Secretariado da SPG.</Paragraph>
 			<Farewell text="Academia SPG" />
 		</Wrapper>
 	);

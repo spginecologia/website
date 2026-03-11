@@ -2,6 +2,7 @@
 
 import { Farewell } from '@/components/Farewell';
 import { Greeting } from '@/components/Greeting';
+import { MainButton } from '@/components/MainButton';
 import { Paragraph } from '@/components/Paragraph';
 import { Wrapper } from '@/components/Wrapper';
 import { type EmailTemplate } from '@/types/emai-template';
@@ -10,21 +11,25 @@ import { render } from '@react-email/render';
 /* * */
 
 export interface SignupAffiliateApprovalProps {
+	resetPasswordUrl: string
 	userDisplayName: string
 }
 
 /* * */
 
-export const signupAffiliateApprovalSubject = 'Recebemos a sua candidatura à SPG';
+export const signupAffiliateApprovalSubject = 'A sua conta está confirmada';
 
 /* * */
 
-export default function SignupAffiliateApprovalTemplate({ userDisplayName }: SignupAffiliateApprovalProps) {
+export default function SignupAffiliateApprovalTemplate({ resetPasswordUrl, userDisplayName }: SignupAffiliateApprovalProps) {
 	return (
-		<Wrapper previewMessage="A sua conta SPG está em confirmação.">
+		<Wrapper previewMessage="A Direção da SPG confirmou a sua conta.">
 			<Greeting text={`${userDisplayName},`} />
-			<Paragraph>Agradecemos o seu interesse em tornar-se membro da SPG.</Paragraph>
-			<Paragraph>Os seus dados serão analisados em breve pela Direção da SPG. Após a análise, receberá um email com a confirmação de ativação da sua conta.</Paragraph>
+			<Paragraph>A Direção da SPG analisou os seus dados e aceitou a sua candidatura à Sociedade.</Paragraph>
+			<Paragraph>Agora já pode definir a sua password e aceder aos conteúdos dedicados que temos preparados para si. Participe na discussão publicando um vídeo sobre a sua experiência cirúrgica, ou explore os inúmeros webinars disponíveis na Academia SPG.</Paragraph>
+			<Paragraph>Acedendo ao seu Perfil SPG pode também gerir os seus dados pessoais e de faturação, e manter as suas quotas de sócio em dia.</Paragraph>
+			<MainButton href={resetPasswordUrl} label="Definir Password" />
+			<Paragraph>Damos-lhe as boas vindas à Sociedade e esperamos que usufrua de todo o trabalho que desenvolvemos para si e para a especialidade.</Paragraph>
 			<Farewell text="Academia SPG" />
 		</Wrapper>
 	);
@@ -33,6 +38,7 @@ export default function SignupAffiliateApprovalTemplate({ userDisplayName }: Sig
 /* * */
 
 SignupAffiliateApprovalTemplate.PreviewProps = {
+	resetPasswordUrl: 'https://spginecologia.pt/reset?token=example-token',
 	userDisplayName: 'Dra. Susana Silva',
 } as SignupAffiliateApprovalProps;
 

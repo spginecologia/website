@@ -1,9 +1,7 @@
 /* * */
 
-import { type AccountActivationProps, accountActivationSubject, AccountActivationTemplate } from '@/templates/account-activation';
 import { type AccountPasswordChangedProps, accountPasswordChangedSubject, AccountPasswordChangedTemplate } from '@/templates/account-password-changed';
 import { type AccountPasswordResetProps, accountPasswordResetSubject, AccountPasswordResetTemplate } from '@/templates/account-password-reset';
-import { type AccountSignupProps, accountSignupSubject, AccountSignupTemplate } from '@/templates/account-signup';
 import { type QuotaActivationProps, quotaActivationSubject, QuotaActivationTemplate } from '@/templates/quota-activation';
 import { type QuotaActivationFreeProps, quotaActivationFreeSubject, QuotaActivationFreeTemplate } from '@/templates/quota-activation-free';
 import { type QuotaPaymentSuccessProps, quotaPaymentSuccessSubject, QuotaPaymentSuccessTemplate } from '@/templates/quota-payment-success';
@@ -22,13 +20,6 @@ interface EmailTemplate {
 
 /* * */
 
-export const renderAccountActivationTemplate = async (props: AccountActivationProps): Promise<EmailTemplate> => {
-	return {
-		html: await render(<AccountActivationTemplate {...props} />),
-		subject: accountActivationSubject,
-	};
-};
-
 export const renderAccountPasswordChangedTemplate = async (props: AccountPasswordChangedProps): Promise<EmailTemplate> => {
 	return {
 		html: await render(<AccountPasswordChangedTemplate {...props} />),
@@ -40,13 +31,6 @@ export const renderAccountPasswordResetTemplate = async (props: AccountPasswordR
 	return {
 		html: await render(<AccountPasswordResetTemplate {...props} />),
 		subject: accountPasswordResetSubject,
-	};
-};
-
-export const renderAccountSignupTemplate = async (props: AccountSignupProps): Promise<EmailTemplate> => {
-	return {
-		html: await render(<AccountSignupTemplate {...props} />),
-		subject: accountSignupSubject,
 	};
 };
 
@@ -103,3 +87,6 @@ export const renderVideoSubmitUserTemplate = async (props: VideoSubmitUserProps)
 
 export * from '@/templates/signup-affiliate-approval';
 export * from '@/templates/signup-affiliate-confirmation';
+export * from '@/templates/signup-effective-approval';
+export * from '@/templates/signup-effective-confirmation';
+export * from '@/templates/signup-effective-sponsor';
