@@ -40,7 +40,7 @@ export function SignupForm() {
 	}
 
 	return (
-		<Paper className={styles.container} component="form" onSubmit={signupFormContext.actions.signup}>
+		<Paper className={styles.container} component="form" onSubmit={signupFormContext.data.form.onSubmit(signupFormContext.actions.signup)}>
 
 			<Title order={2}>{t('auth.SignupForm.title')}</Title>
 			<Text>{t('auth.SignupForm.subtitle')}</Text>

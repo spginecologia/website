@@ -50,7 +50,7 @@
 		"zod": "4.3.6"
 	},
 	"devDependencies": {
-		"@tmlmobilidade/eslint": "20260309.1855.59",
+		"@tmlmobilidade/eslint": "20260309.2221.31",
 		"@types/luxon": "3.7.1",
 		"@types/node": "25.4.0",
 		"@types/nodemailer": "7.0.11",

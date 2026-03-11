@@ -5,7 +5,7 @@ import { Greeting } from '@/components/Greeting';
 import { MainButton } from '@/components/MainButton';
 import { Paragraph } from '@/components/Paragraph';
 import { Wrapper } from '@/components/Wrapper';
-import { type EmailTemplate } from '@/types/emai-template';
+import { type EmailTemplate } from '@/types/email-template';
 import { render } from '@react-email/render';
 
 /* * */

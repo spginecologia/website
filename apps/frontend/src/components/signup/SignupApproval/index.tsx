@@ -24,7 +24,7 @@ export function SignupApproval() {
 
 	const [proponentTaxIdValue] = useQueryState('proponent_tax_id');
 	const [sponsorTaxIdValue] = useQueryState('sponsor_tax_id');
-	const [sponsorUserIdValue] = useQueryState('sponsor_user_id');
+	const [approvalIdValue] = useQueryState('approval_id');
 
 	const [isLoading, setIsLoading] = useState(false);
 	const [isError, setIsError] = useState(false);
@@ -38,12 +38,12 @@ export function SignupApproval() {
 		try {
 			if (!sponsorTaxIdValue) return;
 			if (!proponentTaxIdValue) return;
-			if (!sponsorUserIdValue) return;
+			if (!approvalIdValue) return;
 			setIsLoading(true);
 			setIsError(false);
 			setSignupApprovalResponse(null);
 			const requestData: SignupApprovalRequest = {
-				approval_id: sponsorUserIdValue,
+				approval_id: approvalIdValue,
 				decision,
 				proponent_tax_id: proponentTaxIdValue,
 				sponsor_tax_id: sponsorTaxIdValue,
@@ -72,11 +72,11 @@ export function SignupApproval() {
 		(async () => {
 			if (!sponsorTaxIdValue) return;
 			if (!proponentTaxIdValue) return;
-			if (!sponsorUserIdValue) return;
+			if (!approvalIdValue) return;
 			await handleApprovalRequest('status_request');
 		})();
 		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [sponsorTaxIdValue, proponentTaxIdValue, sponsorUserIdValue]);
+	}, [sponsorTaxIdValue, proponentTaxIdValue, approvalIdValue]);
 
 	//
 	// D. Render components

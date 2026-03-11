@@ -3,7 +3,7 @@
 import payloadConfig from '@/payload-config';
 import { navigationGetUrlWithRedirectParam } from '@/services/navigation/navigation-handle-redirect-param';
 import { getUserDisplayName } from '@/services/payload/collections/User/utils/get-user-display-name';
-import { renderAccountActivationTemplate } from '@spginecologia/website-emails';
+import { type EmailTemplate, renderSignupAffiliateApprovalTemplate, renderSignupEffectiveApprovalTemplate } from '@spginecologia/website-emails';
 import { getPayload } from 'payload';
 import { type User } from 'payload-types';
 
@@ -12,7 +12,7 @@ import { type User } from 'payload-types';
  * @param userData An object containing the user's email and tax_id.
  * @returns The User object if found, or null if not found.
  */
-export async function payloadSendActivationEmail(userData: User) {
+export async function sendUserSignupApprovalEmail(userData: User) {
 	//
 
 	if (!userData.email) {
@@ -51,10 +51,19 @@ export async function payloadSendActivationEmail(userData: User) {
 	//
 	// Prepare the template and send the email to the user.
 
-	const templateData = await renderAccountActivationTemplate({
-		resetPasswordUrl: navigationGetUrlWithRedirectParam(`${process.env.NEXT_PUBLIC_URL}/reset?token=${tokenresult}`),
-		userDisplayName: getUserDisplayName(userData.title, userData.first_name),
-	});
+	let templateData: EmailTemplate;
+
+	if (userData.enrolment_type === 'effective') {
+		templateData = await renderSignupEffectiveApprovalTemplate({
+			resetPasswordUrl: navigationGetUrlWithRedirectParam(`${process.env.NEXT_PUBLIC_URL}/reset?token=${tokenresult}`),
+			userDisplayName: getUserDisplayName(userData.title, userData.first_name),
+		});
+	} else {
+		templateData = await renderSignupAffiliateApprovalTemplate({
+			resetPasswordUrl: navigationGetUrlWithRedirectParam(`${process.env.NEXT_PUBLIC_URL}/reset?token=${tokenresult}`),
+			userDisplayName: getUserDisplayName(userData.title, userData.first_name),
+		});
+	}
 
 	await payload.sendEmail({
 		html: templateData.html,

@@ -2,10 +2,11 @@
 
 import payloadConfig from '@/payload-config';
 import { LOGGER } from '@/services/logger/LOGGER';
+import { navigationGetUrlWithRedirectParam } from '@/services/navigation/navigation-handle-redirect-param';
 import { type SignupForm } from '@/services/payload/collections/Signup/validation';
 import { getUserDisplayName } from '@/services/payload/collections/User/utils/get-user-display-name';
 import { payloadGetUser } from '@/services/payload/utils/payload-get-user';
-import { renderAccountSignupTemplate } from '@spginecologia/website-emails';
+import { renderSignupEffectiveConfirmationTemplate, renderSignupEffectiveSponsorTemplate } from '@spginecologia/website-emails';
 import { getPayload } from 'payload';
 import { User } from 'payload-types';
 
@@ -131,7 +132,7 @@ export async function createUserEffective(signupFormData: SignupForm) {
 	//
 	// Send the signup confirmation email to the user.
 
-	const templateData = await renderAccountSignupTemplate({
+	const templateData = await renderSignupEffectiveConfirmationTemplate({
 		userDisplayName: getUserDisplayName(newUserData.title, newUserData.first_name),
 	});
 
@@ -147,14 +148,20 @@ export async function createUserEffective(signupFormData: SignupForm) {
 	// Send the signup notification email to the sponsors.
 
 	for (const sponsor of validSponsors) {
-		const templateData = await renderAccountSignupTemplate({
+		const approvalData = newUserData.enrolment_sponsors.find(item => typeof item.sponsor_id === 'string' ? item.sponsor_id === sponsor.id : item.sponsor_id?.id === sponsor.id);
+		if (!approvalData) {
+			console.log(`No approval data found for sponsor with ID "${sponsor.id}" in new user with Tax ID "${newUserData.tax_id}".`);
+			continue;
+		}
+		const templateData = await renderSignupEffectiveSponsorTemplate({
+			signupApprovalUrl: navigationGetUrlWithRedirectParam(`${process.env.NEXT_PUBLIC_URL}/signup-approval?proponent_tax_id=${newUserData.tax_id}&sponsor_tax_id=${sponsor.tax_id}&approval_id=${approvalData.id}`),
 			userDisplayName: getUserDisplayName(sponsor.title, sponsor.first_name),
 		});
 
 		await payload.sendEmail({
 			html: templateData.html,
 			subject: `New User Signup - ${getUserDisplayName(newUserData.title, newUserData.first_name)} ${newUserData.last_name}`,
-			to: sponsor.email,
+			to: 'spg@joao.earth', // sponsor.email,
 		});
 
 		LOGGER.info(

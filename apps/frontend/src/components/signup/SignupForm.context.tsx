@@ -13,7 +13,7 @@ import { createContext, PropsWithChildren, useContext, useEffect, useState } fro
 
 interface SignupFormContextState {
 	actions: {
-		signup?: () => void
+		signup: () => void
 	}
 	data: {
 		form: UseFormReturnType<SignupForm>
@@ -84,7 +84,7 @@ export const SignupFormContextProvider = ({ children }: PropsWithChildren) => {
 			setIsError(false);
 			setSignupResponse(null);
 			const response = await fetch('/api/auth/signup', {
-				body: JSON.stringify(form.values),
+				body: JSON.stringify(form.getValues()),
 				headers: { 'Content-Type': 'application/json' },
 				method: 'POST',
 			});

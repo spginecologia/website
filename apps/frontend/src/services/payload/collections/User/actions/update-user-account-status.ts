@@ -3,7 +3,7 @@
 import payloadConfig from '@/payload-config';
 import { LOGGER } from '@/services/logger/LOGGER';
 import { SignupOptions } from '@/services/payload/collections/Signup/options';
-import { payloadSendActivationEmail } from '@/services/payload/utils/payload-send-activation-email';
+import { sendUserSignupApprovalEmail } from '@/services/payload/collections/User/actions/send-user-signup-approval-email';
 import { getPayload } from 'payload';
 
 /**
@@ -48,7 +48,7 @@ export async function updateUserAccountStatus(userId: string) {
 
 	if (userData.account_status === 'active' && !userData.enrolment_approval_date) {
 		LOGGER.info('update-user-account-status', `User with ID "${userId}" is active but has no enrolment approval date. Sending activation email and updating enrolment approval date...`);
-		await payloadSendActivationEmail(userData);
+		await sendUserSignupApprovalEmail(userData);
 		return;
 	}
 

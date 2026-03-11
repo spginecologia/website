@@ -9,14 +9,8 @@ import { type QuotaRefundSuccessProps, quotaRefundSuccessSubject, QuotaRefundSuc
 import { type VideoApprovalUserProps, videoApprovalUserSubject, VideoApprovalUserTemplate } from '@/templates/video-approval-user';
 import { type VideoSubmitSectionProps, videoSubmitSectionSubject, VideoSubmitSectionTemplate } from '@/templates/video-submit-section';
 import { type VideoSubmitUserProps, videoSubmitUserSubject, VideoSubmitUserTemplate } from '@/templates/video-submit-user';
+import { type EmailTemplate } from '@/types/email-template';
 import { render } from '@react-email/render';
-
-/* * */
-
-interface EmailTemplate {
-	html: string
-	subject: string
-}
 
 /* * */
 
@@ -85,8 +79,5 @@ export const renderVideoSubmitUserTemplate = async (props: VideoSubmitUserProps)
 
 /* * */
 
-export * from '@/templates/signup-affiliate-approval';
-export * from '@/templates/signup-affiliate-confirmation';
-export * from '@/templates/signup-effective-approval';
-export * from '@/templates/signup-effective-confirmation';
-export * from '@/templates/signup-effective-sponsor';
+export * from '@/templates/index';
+export * from '@/types/index';
