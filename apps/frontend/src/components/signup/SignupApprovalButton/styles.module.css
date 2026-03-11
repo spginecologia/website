@@ -14,9 +14,11 @@
 	text-transform: uppercase;
 	cursor: pointer;
 	background-color: var(--color-brand-support-300);
+	border: 3px solid transparent;
 }
 
 .container:hover {
 	color: #fff;
 	background-color: var(--color-brand-primary-100);
+	border-color: var(--color-brand-support-200);
 }

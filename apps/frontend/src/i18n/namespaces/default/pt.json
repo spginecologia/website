@@ -445,21 +445,33 @@
 				"approve": "Aceitar",
 				"reject": "Recusar"
 			},
-			"error": {
-				"message": "Ocorreu um erro ao processar a aprovação. Por favor, tente novamente.",
-				"retry": "Tentar Novamente"
-			},
 			"status": {
-				"no_user": {
-					"alert": {
-						"action": "Iniciar Candidatura",
-						"message": "Clique em continuar para criar a sua conta SPG.",
-						"title": "Nenhuma conta encontrada"
-					}
+				"expired": {
+					"footnote": "Não foi possível obter o estado atual desta candidatura.",
+					"message": "O processo de candidatura em questão está expirado ou tem um erro. Entre em contacto com o Secretariado SPG para mais informações.",
+					"title": "Processo Expirado ou com Erro"
+				},
+				"sponsor_approved": {
+					"message": "Recebemos a sua decisão positiva para este processo de candidatura. Agradecemos a sua colaboração. O Sócio Proponente aguarda resposta dos restantes Sócios SPG para a conta ficar ativa.",
+					"overline": "Candidatura aceite por si",
+					"title": "Decisão recebida"
+				},
+				"sponsor_rejected": {
+					"message": "Recebemos a sua decisão negativa para este processo de candidatura. Agradecemos a sua colaboração.",
+					"overline": "Candidatura recusada por si",
+					"title": "Decisão recebida"
+				},
+				"user_active": {
+					"message": "O Sócio SPG associado a este processo de candidatura já tem a sua conta ativa. Agradecemos a sua colaboração.",
+					"overline": "Candidatura aprovada",
+					"title": "Processo concluído"
+				},
+				"waiting": {
+					"footnote": "Se não conhece o indivíduo em questão ou tem alguma dúvida sobre este processo, por favor contacte o Secretariado SPG para mais informações.",
+					"message": "Pedimos que ateste o seguinte indivíduo, validando as informações indicadas e confirmando que o mesmo é um profissional de saúde com interesse na Ginecologia e Obstetrícia.",
+					"title": "Aprovação de Sócio Efetivo"
 				}
-			},
-			"subtitle": "Pedimos que ateste o seguinte indivíduo, validando as informações indicadas e confirmando que o mesmo é um profissional de saúde com interesse na Ginecologia e Obstetrícia.",
-			"title": "Aprovação de Sócio Efetivo"
+			}
 		},
 		"SignupForm": {
 			"actions": {

@@ -6,7 +6,7 @@ import { AuthWrapper } from '@/components/auth/AuthWrapper';
 
 export default function Layout({ children }) {
 	return (
-		<AuthWrapper>
+		<AuthWrapper sidebar={<div />}>
 			{children}
 		</AuthWrapper>
 	);

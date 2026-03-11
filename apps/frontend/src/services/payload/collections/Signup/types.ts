@@ -1,9 +1,5 @@
 /* * */
 
-import { UserOptions } from '@/services/payload/collections/User/options';
-
-/* * */
-
 export interface SignupRequest {
 	redirect?: string
 	username: string
@@ -35,5 +31,5 @@ export interface SignupApprovalRequest {
 
 export interface SignupApprovalResponse {
 	error?: string
-	status?: typeof UserOptions.enrolment_sponsor_response[number]['value']
+	status?: 'sponsor_approved' | 'sponsor_rejected' | 'user_active' | 'waiting'
 }

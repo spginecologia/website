@@ -2,6 +2,7 @@
 
 /* * */
 
+import { SignupApprovalButton } from '@/components/signup/SignupApprovalButton';
 import { SignupApprovalRequest, SignupApprovalResponse } from '@/services/payload/collections/Signup/types';
 import { Loader, Paper, SimpleGrid, Space, Text, Title } from '@mantine/core';
 import { useQueryState } from 'nuqs';
@@ -9,8 +10,6 @@ import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import styles from './styles.module.css';
-
-import { SignupApprovalButton } from '../SignupApprovalButton';
 
 /* * */
 
@@ -27,7 +26,6 @@ export function SignupApproval() {
 	const [approvalIdValue] = useQueryState('approval_id');
 
 	const [isLoading, setIsLoading] = useState(false);
-	const [isError, setIsError] = useState(false);
 
 	const [signupApprovalResponse, setSignupApprovalResponse] = useState<null | SignupApprovalResponse>();
 
@@ -40,7 +38,6 @@ export function SignupApproval() {
 			if (!proponentTaxIdValue) return;
 			if (!approvalIdValue) return;
 			setIsLoading(true);
-			setIsError(false);
 			setSignupApprovalResponse(null);
 			const requestData: SignupApprovalRequest = {
 				approval_id: approvalIdValue,
@@ -55,7 +52,6 @@ export function SignupApproval() {
 			});
 			if (!response.ok) {
 				setIsLoading(false);
-				setIsError(true);
 				console.log(`Failed to submit Signup Approval Request. Status: ${response.status}`);
 			}
 			const responseData = await response.json();
@@ -64,7 +60,6 @@ export function SignupApproval() {
 		} catch (error) {
 			console.log(error.message);
 			setIsLoading(false);
-			setIsError(true);
 		}
 	};
 
@@ -81,30 +76,68 @@ export function SignupApproval() {
 	//
 	// D. Render components
 
+	if (isLoading) {
+		return (
+			<Paper className={styles.container}>
+				<Loader />
+			</Paper>
+		);
+	}
+
+	if (signupApprovalResponse?.status === 'waiting') {
+		return (
+			<Paper className={styles.container}>
+				<Title order={2}>{t('auth.SignupApproval.status.waiting.title')}</Title>
+				<Text size="sm">{t('auth.SignupApproval.status.waiting.message')}</Text>
+				<Space h={5} />
+				<SimpleGrid cols={2} w="100%">
+					<SignupApprovalButton decision="approve" onClick={() => handleApprovalRequest('approve')} />
+					<SignupApprovalButton decision="reject" onClick={() => handleApprovalRequest('reject')} />
+				</SimpleGrid>
+				<Space h={5} />
+				<Text variant="footnote">{t('auth.SignupApproval.status.waiting.footnote')}</Text>
+			</Paper>
+		);
+	}
+
+	if (signupApprovalResponse?.status === 'user_active') {
+		return (
+			<Paper className={styles.container}>
+				<Title order={2}>{t('auth.SignupApproval.status.user_active.title')}</Title>
+				<Text size="sm">{t('auth.SignupApproval.status.user_active.message')}</Text>
+				<Space h={5} />
+				<Text c="var(--color-state-success)" size="xs" variant="overline">{t('auth.SignupApproval.status.user_active.overline')}</Text>
+			</Paper>
+		);
+	}
+
+	if (signupApprovalResponse?.status === 'sponsor_approved') {
+		return (
+			<Paper className={styles.container}>
+				<Title order={2}>{t('auth.SignupApproval.status.sponsor_approved.title')}</Title>
+				<Text size="sm">{t('auth.SignupApproval.status.sponsor_approved.message')}</Text>
+				<Space h={5} />
+				<Text c="var(--color-brand-primary-200)" size="xs" variant="overline">{t('auth.SignupApproval.status.sponsor_approved.overline')}</Text>
+			</Paper>
+		);
+	}
+
+	if (signupApprovalResponse?.status === 'sponsor_rejected') {
+		return (
+			<Paper className={styles.container}>
+				<Title order={2}>{t('auth.SignupApproval.status.sponsor_rejected.title')}</Title>
+				<Text size="sm">{t('auth.SignupApproval.status.sponsor_rejected.message')}</Text>
+				<Space h={5} />
+				<Text size="xs" variant="overline">{t('auth.SignupApproval.status.sponsor_rejected.overline')}</Text>
+			</Paper>
+		);
+	}
+
 	return (
 		<Paper className={styles.container}>
-
-			<Title order={2}>{t('auth.SignupApproval.title')}</Title>
-			<Text size="sm">{t('auth.SignupApproval.subtitle')}</Text>
-
-			<Space h={5} />
-
-			<SimpleGrid cols={2} w="100%">
-				<SignupApprovalButton decision="approve" onClick={() => handleApprovalRequest('approve')} />
-				<SignupApprovalButton decision="reject" onClick={() => handleApprovalRequest('reject')} />
-			</SimpleGrid>
-
-			<Space h={5} />
-
-			{isLoading && <Loader />}
-
-			{(!isLoading && isError) && (
-				<>
-					<Space h={5} />
-					<Text variant="error">{t('auth.SignupApproval.error.message')}</Text>
-				</>
-			)}
-
+			<Title order={2}>{t('auth.SignupApproval.status.expired.title')}</Title>
+			<Text size="sm">{t('auth.SignupApproval.status.expired.message')}</Text>
+			<Text variant="footnote">{t('auth.SignupApproval.status.expired.footnote')}</Text>
 		</Paper>
 	);
 

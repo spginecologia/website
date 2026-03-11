@@ -44,7 +44,7 @@ export async function POST(request: Request) {
 		}
 
 		if (foundProponentUser.account_status === 'active') {
-			const response: SignupApprovalResponse = { status: 'approved' };
+			const response: SignupApprovalResponse = { status: 'user_active' };
 			return new Response(JSON.stringify(response), { status: 200 });
 		}
 
@@ -89,7 +89,10 @@ export async function POST(request: Request) {
 		// then return the current status of the approval request
 
 		if (requestBody.decision === 'status_request') {
-			const response: SignupApprovalResponse = { status: matchingApprovalRequest.response_status };
+			let response: SignupApprovalResponse = { error: 'Invalid status.' };
+			if (matchingApprovalRequest.response_status === 'approved') response = { status: 'sponsor_approved' };
+			if (matchingApprovalRequest.response_status === 'rejected') response = { status: 'sponsor_rejected' };
+			if (matchingApprovalRequest.response_status === 'waiting') response = { status: 'waiting' };
 			return new Response(JSON.stringify(response), { status: 200 });
 		}
 
@@ -113,7 +116,8 @@ export async function POST(request: Request) {
 			id: foundProponentUser.id,
 		});
 
-		return new Response(JSON.stringify({ status: requestBody.decision === 'approve' ? 'approved' : 'rejected' }), { status: 200 });
+		const response: SignupApprovalResponse = { status: requestBody.decision === 'approve' ? 'sponsor_approved' : 'sponsor_rejected' };
+		return new Response(JSON.stringify(response), { status: 200 });
 
 		//
 	} catch (err) {
