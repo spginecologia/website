@@ -29,7 +29,12 @@ export interface SignupApprovalRequest {
 	sponsor_tax_id: string
 }
 
-export interface SignupApprovalResponse {
-	error?: string
-	status?: 'sponsor_approved' | 'sponsor_rejected' | 'user_active' | 'waiting'
-}
+export type SignupApprovalResponse = {
+	message: string
+	status: 'error'
+} | {
+	proponent_display_name: string
+	proponent_tax_id: string
+	proponent_workplace_primary: string
+	status: 'sponsor_approved' | 'sponsor_rejected' | 'user_active' | 'waiting'
+};

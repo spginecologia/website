@@ -121,8 +121,7 @@ export const SignupFormValidation = z.object({
 		.nullish(),
 
 	workplace_primary: z
-		.string()
-		.nullish(),
+		.string(),
 
 	workplace_secondary: z
 		.string()

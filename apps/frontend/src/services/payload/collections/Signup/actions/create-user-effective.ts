@@ -5,6 +5,7 @@ import { LOGGER } from '@/services/logger/LOGGER';
 import { navigationGetUrlWithRedirectParam } from '@/services/navigation/navigation-handle-redirect-param';
 import { type SignupForm } from '@/services/payload/collections/Signup/validation';
 import { getUserDisplayName } from '@/services/payload/collections/User/utils/get-user-display-name';
+import { getUserSponsorCapability } from '@/services/payload/collections/User/utils/get-user-sponsor-capability';
 import { payloadGetUser } from '@/services/payload/utils/payload-get-user';
 import { renderSignupEffectiveConfirmationTemplate, renderSignupEffectiveSponsorTemplate } from '@spginecologia/website-emails';
 import { getPayload } from 'payload';
@@ -38,14 +39,16 @@ export async function createUserEffective(signupFormData: SignupForm) {
 	for (const sponsorTaxId of signupFormData.enrolment_sponsors ?? []) {
 		// Get the sponsor user by their tax ID
 		const sponsorUser = await payloadGetUser(sponsorTaxId.tax_id);
-		// Check if their account status is "active"
-		if (sponsorUser?.account_status !== 'active') continue;
+		if (!sponsorUser) continue;
+		// Check if they have the capability to be a sponsor
+		const hasSponsorCapability = getUserSponsorCapability(sponsorUser);
+		if (!hasSponsorCapability) continue;
 		// If all checks pass, add them to the list of valid sponsors
 		validSponsors.push(sponsorUser);
 	}
 
 	if (validSponsors.length < 2) {
-		throw new Error('At least 2 sponsors with an active account status are required for "effective" enrolment type.');
+		throw new Error('At least 2 sponsors with the capability to be a sponsor are required for "effective" enrolment type.');
 	}
 
 	//
@@ -133,6 +136,7 @@ export async function createUserEffective(signupFormData: SignupForm) {
 	// Send the signup confirmation email to the user.
 
 	const templateData = await renderSignupEffectiveConfirmationTemplate({
+		sponsorsTaxIds: validSponsors.map(sponsor => sponsor.tax_id),
 		userDisplayName: getUserDisplayName(newUserData.title, newUserData.first_name),
 	});
 

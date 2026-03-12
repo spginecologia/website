@@ -3,6 +3,7 @@
 import payloadConfig from '@/payload-config';
 import { validateTaxId } from '@/services/general/validate-tax-id';
 import { type SignupApprovalRequest, type SignupApprovalResponse } from '@/services/payload/collections/Signup/types';
+import { getUserDisplayName } from '@/services/payload/collections/User/utils/get-user-display-name';
 import { payloadGetUser } from '@/services/payload/utils/payload-get-user';
 import { getPayload } from 'payload';
 import { User } from 'payload-types';
@@ -26,25 +27,41 @@ export async function POST(request: Request) {
 		const requestBody: SignupApprovalRequest = await request.json();
 
 		//
-		// Validate the proponent user
+		// Validate the proponent user Tax ID
 		// (the user that requested the signup)
 
 		const isValidProponentTaxId = validateTaxId(requestBody.proponent_tax_id, false, ['singular']);
 
 		if (!isValidProponentTaxId) {
-			const response: SignupApprovalResponse = { error: 'Proponent Tax ID is invalid.' };
+			const response: SignupApprovalResponse = { message: 'Proponent Tax ID is invalid.', status: 'error' };
 			return new Response(JSON.stringify(response), { status: 400 });
 		}
+
+		//
+		// Check if the proponent user exists and prepare
+		// the common details for the following responses
 
 		const foundProponentUser = await payloadGetUser(requestBody.proponent_tax_id);
 
 		if (!foundProponentUser) {
-			const response: SignupApprovalResponse = { error: 'Proponent user not found.' };
+			const response: SignupApprovalResponse = { message: 'Proponent user not found.', status: 'error' };
 			return new Response(JSON.stringify(response), { status: 404 });
 		}
 
+		const proponentUserDisplayName = getUserDisplayName(foundProponentUser.title, foundProponentUser.first_name, foundProponentUser.last_name);
+		const proponentUserWorkplacePrimary = foundProponentUser.workplace_primary ?? 'N/A';
+
+		//
+		// If the proponent user is already active, return that status immediately
+		// without checking the sponsor user or the approval request.
+
 		if (foundProponentUser.account_status === 'active') {
-			const response: SignupApprovalResponse = { status: 'user_active' };
+			const response: SignupApprovalResponse = {
+				proponent_display_name: proponentUserDisplayName,
+				proponent_tax_id: foundProponentUser.tax_id,
+				proponent_workplace_primary: proponentUserWorkplacePrimary,
+				status: 'user_active',
+			};
 			return new Response(JSON.stringify(response), { status: 200 });
 		}
 
@@ -55,21 +72,21 @@ export async function POST(request: Request) {
 		const isValidSponsorTaxId = validateTaxId(requestBody.sponsor_tax_id, false, ['singular']);
 
 		if (!isValidSponsorTaxId) {
-			const response: SignupApprovalResponse = { error: 'Sponsor Tax ID is invalid.' };
+			const response: SignupApprovalResponse = { message: 'Sponsor Tax ID is invalid.', status: 'error' };
 			return new Response(JSON.stringify(response), { status: 400 });
 		}
 
 		const foundSponsorUser = await payloadGetUser(requestBody.sponsor_tax_id);
 
 		if (!foundSponsorUser) {
-			const response: SignupApprovalResponse = { error: 'Sponsor user not found.' };
+			const response: SignupApprovalResponse = { message: 'Sponsor user not found.', status: 'error' };
 			return new Response(JSON.stringify(response), { status: 404 });
 		}
 
 		const isActiveSponsorUser = foundSponsorUser.account_status === 'active';
 
 		if (!isActiveSponsorUser) {
-			const response: SignupApprovalResponse = { error: 'Sponsor user is not active.' };
+			const response: SignupApprovalResponse = { message: 'Sponsor user is not active.', status: 'error' };
 			return new Response(JSON.stringify(response), { status: 400 });
 		}
 
@@ -80,7 +97,7 @@ export async function POST(request: Request) {
 		const matchingApprovalRequest = foundProponentUser.enrolment_sponsors.find(item => item.id === requestBody.approval_id);
 
 		if (!matchingApprovalRequest) {
-			const response: SignupApprovalResponse = { error: 'No matching approval request found for this sponsor user.' };
+			const response: SignupApprovalResponse = { message: 'No matching approval request found for this sponsor user.', status: 'error' };
 			return new Response(JSON.stringify(response), { status: 400 });
 		}
 
@@ -89,10 +106,31 @@ export async function POST(request: Request) {
 		// then return the current status of the approval request
 
 		if (requestBody.decision === 'status_request') {
-			let response: SignupApprovalResponse = { error: 'Invalid status.' };
-			if (matchingApprovalRequest.response_status === 'approved') response = { status: 'sponsor_approved' };
-			if (matchingApprovalRequest.response_status === 'rejected') response = { status: 'sponsor_rejected' };
-			if (matchingApprovalRequest.response_status === 'waiting') response = { status: 'waiting' };
+			let response: SignupApprovalResponse = { message: 'Invalid status.', status: 'error' };
+			if (matchingApprovalRequest.response_status === 'approved') {
+				response = {
+					proponent_display_name: proponentUserDisplayName,
+					proponent_tax_id: foundProponentUser.tax_id,
+					proponent_workplace_primary: proponentUserWorkplacePrimary,
+					status: 'sponsor_approved',
+				};
+			}
+			if (matchingApprovalRequest.response_status === 'rejected') {
+				response = {
+					proponent_display_name: proponentUserDisplayName,
+					proponent_tax_id: foundProponentUser.tax_id,
+					proponent_workplace_primary: proponentUserWorkplacePrimary,
+					status: 'sponsor_rejected',
+				};
+			}
+			if (matchingApprovalRequest.response_status === 'waiting') {
+				response = {
+					proponent_display_name: proponentUserDisplayName,
+					proponent_tax_id: foundProponentUser.tax_id,
+					proponent_workplace_primary: proponentUserWorkplacePrimary,
+					status: 'waiting',
+				};
+			}
 			return new Response(JSON.stringify(response), { status: 200 });
 		}
 
@@ -116,7 +154,13 @@ export async function POST(request: Request) {
 			id: foundProponentUser.id,
 		});
 
-		const response: SignupApprovalResponse = { status: requestBody.decision === 'approve' ? 'sponsor_approved' : 'sponsor_rejected' };
+		const response: SignupApprovalResponse = {
+			proponent_display_name: proponentUserDisplayName,
+			proponent_tax_id: foundProponentUser.tax_id,
+			proponent_workplace_primary: proponentUserWorkplacePrimary,
+			status: requestBody.decision === 'approve' ? 'sponsor_approved' : 'sponsor_rejected',
+		};
+
 		return new Response(JSON.stringify(response), { status: 200 });
 
 		//

@@ -10,6 +10,7 @@ import { render } from '@react-email/render';
 /* * */
 
 export interface SignupEffectiveConfirmationProps {
+	sponsorsTaxIds: string[]
 	userDisplayName: string
 }
 
@@ -19,13 +20,17 @@ export const signupEffectiveConfirmationSubject = 'Recebemos a sua candidatura �
 
 /* * */
 
-export default function SignupEffectiveConfirmationTemplate({ userDisplayName }: SignupEffectiveConfirmationProps) {
+export default function SignupEffectiveConfirmationTemplate({ sponsorsTaxIds, userDisplayName }: SignupEffectiveConfirmationProps) {
 	return (
 		<Wrapper previewMessage="A sua conta SPG está em confirmação.">
 			<Greeting text={`${userDisplayName},`} />
 			<Paragraph>Agradecemos o seu interesse em tornar-se membro da SPG.</Paragraph>
-			<Paragraph>Foi enviado um pedido de confirmação a cada um dos Sócios SPG que indicou. Pelo menos 2 devem confirmar a sua candidatura para que a sua conta seja automaticamente ativada.</Paragraph>
+			<Paragraph>Foi enviado um pedido de confirmação aos {sponsorsTaxIds.length} Sócios SPG que indicou. Pelo menos 2 devem confirmar a sua candidatura para que a sua conta seja automaticamente ativada.</Paragraph>
 			<Paragraph>Para qualquer dúvida ou esclarecimento, por favor contacte o Secretariado da SPG.</Paragraph>
+			<Paragraph>NIFs indicados:</Paragraph>
+			{sponsorsTaxIds.map((taxId, index) => (
+				<Paragraph key={index}>{taxId}</Paragraph>
+			))}
 			<Farewell text="Academia SPG" />
 		</Wrapper>
 	);
@@ -34,6 +39,7 @@ export default function SignupEffectiveConfirmationTemplate({ userDisplayName }:
 /* * */
 
 SignupEffectiveConfirmationTemplate.PreviewProps = {
+	sponsorsTaxIds: ['123456789', '987654321'],
 	userDisplayName: 'Dra. Susana Silva',
 } as SignupEffectiveConfirmationProps;
 

@@ -1,6 +1,7 @@
 /* * */
 
 import { getAnonymizedEmail } from '@/services/general/get-anonymized-email';
+import { createUserAffiliate } from '@/services/payload/collections/Signup/actions/create-user-affiliate';
 import { createUserEffective } from '@/services/payload/collections/Signup/actions/create-user-effective';
 import { type SignupResponse } from '@/services/payload/collections/Signup/types';
 import { type SignupForm, SignupFormValidation } from '@/services/payload/collections/Signup/validation';
@@ -54,7 +55,7 @@ export async function POST(request: Request) {
 		if (validatedData.medical_specialty === 'gynecology') {
 			await createUserEffective(validatedData);
 		} else {
-			await createUserEffective(validatedData);
+			await createUserAffiliate(validatedData);
 		}
 
 		//
