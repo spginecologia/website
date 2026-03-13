@@ -9,7 +9,8 @@ import { initReactI18next } from 'react-i18next';
 
 /* * */
 
-await i18next
+// eslint-disable-next-line @typescript-eslint/no-floating-promises
+i18next
 	.use(ICU)
 	.use(initReactI18next)
 	.init({
