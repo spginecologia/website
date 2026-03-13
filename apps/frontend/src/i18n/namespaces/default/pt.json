@@ -456,13 +456,13 @@
 					"title": "Processo Expirado ou com Erro"
 				},
 				"sponsor_approved": {
-					"message": "Recebemos a sua decisão positiva para este processo de candidatura. Agradecemos a sua colaboração. O Sócio Proponente aguarda resposta dos restantes Sócios SPG para a conta ficar ativa.",
-					"overline": "Candidatura aceite por si",
+					"message": "Recebemos a sua decisão positiva para este processo de candidatura. Agradecemos a sua colaboração. O candidato aguarda resposta dos restantes Proponentes indicados para a conta ficar ativa.",
+					"overline": "Aceitou ser Proponente deste candidato",
 					"title": "Decisão recebida"
 				},
 				"sponsor_rejected": {
 					"message": "Recebemos a sua decisão negativa para este processo de candidatura. Agradecemos a sua colaboração.",
-					"overline": "Candidatura recusada por si",
+					"overline": "Não aceitou ser Proponente deste candidato",
 					"title": "Decisão recebida"
 				},
 				"user_active": {
