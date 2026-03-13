@@ -5,7 +5,7 @@ import { type Field } from 'payload';
 
 /* * */
 
-export const userFieldsEnrollmentSponsor: Field[] = [
+export const userFieldsEnrolmentSponsor: Field[] = [
 
 	{
 		fields: [

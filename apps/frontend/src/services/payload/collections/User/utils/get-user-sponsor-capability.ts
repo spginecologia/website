@@ -5,7 +5,7 @@ import { type User } from 'payload-types';
 /**
  * Check if the user has the capability to be a sponsor.
  * A user has the capability to be a sponsor if they exist, have an active account,
- * and have an enrollment_type of 'effective' or 'direct'.
+ * and have an enrolment_type of 'effective' or 'direct'.
  * @param userData The user data to check.
  * @returns `true`if the user has the capability to be a sponsor, `false` otherwise.
  */

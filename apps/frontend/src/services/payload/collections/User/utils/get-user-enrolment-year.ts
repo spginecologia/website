@@ -7,7 +7,7 @@ import { type User } from 'payload-types';
  * @param enrolmentApprovalDate The date when the user's enrolment was approved.
  * @returns The enrolment year of the user, or undefined if the approval date is not provided.
  */
-export function getUserEnrollmentYear(enrolmentApprovalDate: User['enrolment_approval_date']): number | undefined {
+export function getUserEnrolmentYear(enrolmentApprovalDate: User['enrolment_approval_date']): number | undefined {
 	//
 
 	if (!enrolmentApprovalDate) return;

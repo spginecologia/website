@@ -32,8 +32,8 @@ export function SignupFormSectionEnrolment() {
 				{UserOptions.medical_specialty.map(item => (
 					<Radio
 						key={item.value}
-						description={item.value}
-						label={item.label}
+						description={t(`auth.SignupForm.fields.medical_specialty.options.${item.value}.description`)}
+						label={t(`auth.SignupForm.fields.medical_specialty.options.${item.value}.label`)}
 						value={item.value}
 					/>
 				))}

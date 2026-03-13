@@ -1,12 +1,12 @@
 /* * */
 
-import { userFieldsEnrollmentSponsor } from '@/services/payload/collections/User/fields/enrolment-sponsor';
+import { userFieldsEnrolmentSponsor } from '@/services/payload/collections/User/fields/enrolment-sponsor';
 import { UserOptions } from '@/services/payload/collections/User/options';
 import { type Field } from 'payload';
 
 /* * */
 
-export const userFieldsEnrollment: Field[] = [
+export const userFieldsEnrolment: Field[] = [
 
 	{
 		fields: [
@@ -53,7 +53,7 @@ export const userFieldsEnrollment: Field[] = [
 		},
 		fields: [
 			{
-				fields: userFieldsEnrollmentSponsor,
+				fields: userFieldsEnrolmentSponsor,
 				label: 'Sócios Proponentes',
 				labels: {
 					plural: 'Sócios Proponentes',

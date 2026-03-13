@@ -544,15 +544,13 @@
 				"enrolment_sponsors": {
 					"actions": {
 						"add": {
-							"label": "Adicionar Patrocinador"
+							"label": "Adicionar Proponente"
 						},
 						"remove": {
-							"label": "Remover Patrocinador"
+							"label": "Remover Proponente"
 						}
 					},
-					"description": "Escolha um sócio SPG para ser seu patrocinador",
-					"label": "Tipo de Candidatura",
-					"placeholder": "Escolha um sócio SPG para ser seu patrocinador"
+					"description": "Escolha dois Sócios SPG para serem seus proponentes:"
 				},
 				"first_name": {
 					"label": "Nome",
@@ -568,11 +566,17 @@
 					"placeholder": "00000"
 				},
 				"medical_specialty": {
-					"description": {
-						"gynecology": "Ginecologias e Obstetras",
-						"other": "Outras Especialidades / Atividades"
-					},
-					"label": "A sua especialidade"
+					"label": "Qual a sua especialidade médica ou atividade profissional?",
+					"options": {
+						"gynecology": {
+							"description": "Médicos especialistas em Ginecologia Obstetrícia podem indicar 2 sócios SPG como seus proponentes. Estes dois sócios recebem um email para validar os dados introduzidos nesta candidatura e podem imediatamente ativar a sua conta SPG.",
+							"label": "Ginecologia Obstetrícia"
+						},
+						"other": {
+							"description": "Outros profissionais de saúde podem submeter a sua candidatura, indicando a sua atividade e um breve currículo, que será submetida a consideração da Direção da SPG.",
+							"label": "Outra Atividade na área da saúde "
+						}
+					}
 				},
 				"medical_specialty_other": {
 					"label": "Especialidade ou Atividade",
@@ -590,8 +594,8 @@
 					"label": "Receber Newsletter"
 				},
 				"sponsor_tax_id": {
-					"label": "NIF do Patrocinador",
-					"placeholder": "000 000 000"
+					"label": "NIF do Sócio SPG",
+					"placeholder": "000000000"
 				},
 				"subscribed_sections": {
 					"label": "Secções de Interesse"
@@ -654,7 +658,7 @@
 				"user_exists": {
 					"alert": {
 						"action": "Recuperar Password",
-						"message": "Por favor uitlize a opção de recuperação de password para aceder à sua conta.",
+						"message": "Por favor utilize a opção de recuperação de password para aceder à sua conta.",
 						"title": "Já existe uma conta SPG com estes dados"
 					}
 				}

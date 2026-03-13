@@ -6,7 +6,7 @@ import { updateUserFullName } from '@/services/payload/collections/User/actions/
 import { updateUserQuotaStatus } from '@/services/payload/collections/User/actions/update-user-quota-status';
 import { userFieldsActivity } from '@/services/payload/collections/User/fields/activity';
 import { userFieldsContacts } from '@/services/payload/collections/User/fields/contacts';
-import { userFieldsEnrollment } from '@/services/payload/collections/User/fields/enrolment';
+import { userFieldsEnrolment } from '@/services/payload/collections/User/fields/enrolment';
 import { userFieldsQuotas } from '@/services/payload/collections/User/fields/quotas';
 import { userFieldsReferences } from '@/services/payload/collections/User/fields/references';
 import { userFieldsSidebar } from '@/services/payload/collections/User/fields/sidebar';
@@ -98,7 +98,7 @@ export const Users: CollectionConfig = {
 					label: 'Pagamentos de Quotas',
 				},
 				{
-					fields: userFieldsEnrollment,
+					fields: userFieldsEnrolment,
 					label: 'Candidatura',
 				},
 			],
