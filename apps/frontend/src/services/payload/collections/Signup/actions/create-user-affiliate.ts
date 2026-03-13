@@ -4,7 +4,7 @@ import payloadConfig from '@/payload-config';
 import { LOGGER } from '@/services/logger/LOGGER';
 import { type SignupForm } from '@/services/payload/collections/Signup/validation';
 import { getUserDisplayName } from '@/services/payload/collections/User/utils/get-user-display-name';
-import { renderAccountSignupTemplate } from '@spginecologia/website-emails';
+import { renderSignupAffiliateConfirmationTemplate } from '@spginecologia/website-emails';
 import { getPayload } from 'payload';
 
 /**
@@ -100,7 +100,7 @@ export async function createUserAffiliate(signupFormData: SignupForm) {
 	//
 	// Send the signup confirmation email to the user.
 
-	const templateData = await renderAccountSignupTemplate({
+	const templateData = await renderSignupAffiliateConfirmationTemplate({
 		userDisplayName: getUserDisplayName(newUserData.title, newUserData.first_name),
 	});
 
