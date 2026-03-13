@@ -25,7 +25,7 @@ export default function SignupEffectiveApprovalTemplate({ resetPasswordUrl, user
 	return (
 		<Wrapper previewMessage="A sua conta está confirmada.">
 			<Greeting text={`${userDisplayName},`} />
-			<Paragraph>Os Sócios SPG que indicou na sua candidatura confirmaram a sua conta.</Paragraph>
+			<Paragraph>Os Sócios SPG que indicou na sua candidatura aceitaram ser seus Proponentes.</Paragraph>
 			<Paragraph>Agora já pode definir a sua password e aceder aos conteúdos dedicados que temos preparados para si. Participe na discussão publicando um vídeo sobre a sua experiência cirúrgica, ou explore os inúmeros webinars disponíveis na Academia SPG.</Paragraph>
 			<Paragraph>Acedendo ao seu Perfil SPG pode também gerir os seus dados pessoais e de faturação, e manter as suas quotas de sócio em dia.</Paragraph>
 			<MainButton href={resetPasswordUrl} label="Definir Password" />

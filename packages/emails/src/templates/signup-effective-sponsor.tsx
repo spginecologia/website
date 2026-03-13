@@ -17,7 +17,7 @@ export interface SignupEffectiveSponsorProps {
 
 /* * */
 
-export const signupEffectiveSponsorSubject = 'Foi indicado como patrocinador de uma candidatura à SPG';
+export const signupEffectiveSponsorSubject = 'Foi indicado como Proponente de uma candidatura à SPG';
 
 /* * */
 
@@ -25,7 +25,7 @@ export default function SignupEffectiveSponsorTemplate({ signupApprovalUrl, user
 	return (
 		<Wrapper previewMessage="A sua conta SPG está em confirmação.">
 			<Greeting text={`${userDisplayName},`} />
-			<Paragraph>Foi indicado como patrocinador da candidatura de um novo membro da SPG.</Paragraph>
+			<Paragraph>Foi indicado como Proponente de um candidato a Sócio SPG.</Paragraph>
 			<Paragraph>Pedimos que tome uma decisão o mais breve possível, confirmando sempre os dados apresentados com atenção.</Paragraph>
 			<MainButton href={signupApprovalUrl} label="Tomar uma decisão" />
 			<Farewell text="Academia SPG" />
