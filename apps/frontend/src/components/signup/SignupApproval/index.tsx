@@ -88,7 +88,10 @@ export function SignupApproval() {
 		return (
 			<Paper className={styles.container}>
 				<Title order={2}>{t('auth.SignupApproval.status.waiting.title')}</Title>
-				<Text size="sm">{t('auth.SignupApproval.status.waiting.message')}</Text>
+				<Text size="sm">{t('auth.SignupApproval.status.waiting.message', { proponent_display_name: signupApprovalResponse.proponent_display_name })}</Text>
+				<Space h={5} />
+				<Text size="sm">{t('auth.SignupApproval.proponent_details.display_name', { value: signupApprovalResponse.proponent_display_name })}</Text>
+				<Text size="sm">{t('auth.SignupApproval.proponent_details.workplace_primary', { value: signupApprovalResponse.proponent_workplace_primary || 'N/A' })}</Text>
 				<Space h={5} />
 				<SimpleGrid cols={2} w="100%">
 					<SignupApprovalButton decision="approve" onClick={() => handleApprovalRequest('approve')} />

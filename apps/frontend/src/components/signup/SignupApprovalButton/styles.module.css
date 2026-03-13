@@ -11,6 +11,7 @@
 	padding: 30px 10px;
 	font-size: 20px;
 	color: var(--color-brand-support-500);
+	text-align: center;
 	text-transform: uppercase;
 	cursor: pointer;
 	background-color: var(--color-brand-support-300);

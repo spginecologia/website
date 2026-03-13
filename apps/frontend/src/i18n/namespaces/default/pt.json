@@ -442,8 +442,12 @@
 		},
 		"SignupApproval": {
 			"actions": {
-				"approve": "Aceitar",
-				"reject": "Recusar"
+				"approve": "Aceito ser Proponente",
+				"reject": "Não Aceito"
+			},
+			"proponent_details": {
+				"display_name": "Nome: {value}",
+				"workplace_primary": "Instituição: {value}"
 			},
 			"status": {
 				"expired": {
@@ -467,9 +471,9 @@
 					"title": "Processo concluído"
 				},
 				"waiting": {
-					"footnote": "Se não conhece o indivíduo em questão ou tem alguma dúvida sobre este processo, por favor contacte o Secretariado SPG para mais informações.",
-					"message": "Pedimos que ateste o seguinte indivíduo, validando as informações indicadas e confirmando que o mesmo é um profissional de saúde com interesse na Ginecologia e Obstetrícia.",
-					"title": "Aprovação de Sócio Efetivo"
+					"footnote": "Se não está a par deste pedido ou tem alguma dúvida sobre este processo, por favor contacte o Secretariado SPG.",
+					"message": "O seu NIF foi indicado para ser Proponente do candidato a Sócio SPG, {proponent_display_name}. Perguntamos se aceita, validando as informações indicadas e confirmando que o mesmo é colega da Especialidade de Ginecologia Obstetrícia.",
+					"title": "Aceito ser Proponente desta candidatura"
 				}
 			}
 		},
