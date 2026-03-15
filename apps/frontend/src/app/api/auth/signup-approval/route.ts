@@ -14,15 +14,7 @@ export async function POST(request: Request) {
 	try {
 		//
 
-		//
-		// Add an artificial delay to prevent abuse
-
-		await new Promise(resolve => setTimeout(resolve, 1_000));
-
 		const payload = await getPayload({ config: payloadConfig });
-
-		//
-		// Parse the request body
 
 		const requestBody: SignupApprovalRequest = await request.json();
 
@@ -142,6 +134,7 @@ export async function POST(request: Request) {
 			if (item.id !== requestBody.approval_id) return item;
 			return {
 				...item,
+				response_date: new Date().toISOString(),
 				response_status: requestBody.decision === 'approve' ? 'approved' : 'rejected',
 			};
 		});
