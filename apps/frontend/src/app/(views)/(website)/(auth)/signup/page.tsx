@@ -1,9 +1,14 @@
 /* * */
 
-import { SignupForm } from '@/components/auth/SignupForm';
+import { SignupForm } from '@/components/signup/SignupForm';
+import { SignupFormContextProvider } from '@/components/signup/SignupForm.context';
 
 /* * */
 
 export default function Page() {
-	return <SignupForm />;
+	return (
+		<SignupFormContextProvider>
+			<SignupForm />
+		</SignupFormContextProvider>
+	);
 }

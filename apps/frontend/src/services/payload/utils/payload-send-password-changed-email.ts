@@ -1,7 +1,7 @@
 /* * */
 
 import payloadConfig from '@/payload-config';
-import { getUserDisplayName } from '@/services/general/get-user-display-name';
+import { getUserDisplayName } from '@/services/payload/collections/User/utils/get-user-display-name';
 import { renderAccountPasswordChangedTemplate } from '@spginecologia/website-emails';
 import { getPayload } from 'payload';
 import { type User } from 'payload-types';

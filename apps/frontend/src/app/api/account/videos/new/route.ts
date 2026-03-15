@@ -1,7 +1,7 @@
 /* * */
 
 import payloadConfig from '@/payload-config';
-import { getUserDisplayName } from '@/services/general/get-user-display-name';
+import { getUserDisplayName } from '@/services/payload/collections/User/utils/get-user-display-name';
 import { getVideoDurationInSeconds } from '@/services/general/get-video-duration-in-seconds';
 import { VideoValidationServer } from '@/services/payload/collections/Video/validation';
 import { renderVideoSubmitSectionTemplate, renderVideoSubmitUserTemplate } from '@spginecologia/website-emails';

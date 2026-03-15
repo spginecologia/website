@@ -30,8 +30,7 @@ export async function GET() {
 		return Response.json(videoFiles);
 
 		//
-	}
-	catch (err) {
+	} catch (err) {
 		console.log(err);
 		return Response.error();
 	}

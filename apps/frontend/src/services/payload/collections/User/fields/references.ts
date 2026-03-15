@@ -7,6 +7,7 @@ import { type Field } from 'payload';
 /* * */
 
 export const userFieldsReferences: Field[] = [
+
 	{
 		fields: [
 			{
@@ -28,6 +29,7 @@ export const userFieldsReferences: Field[] = [
 		],
 		type: 'row',
 	},
+
 	{
 		fields: [
 			{
@@ -48,6 +50,7 @@ export const userFieldsReferences: Field[] = [
 		],
 		type: 'row',
 	},
+
 	{
 		fields: [
 			{
@@ -55,16 +58,24 @@ export const userFieldsReferences: Field[] = [
 				name: 'birthday',
 				type: 'date',
 			},
-			{
-				label: 'Sócio SPG desde o ano (inclusive)',
-				min: 1975,
-				name: 'member_since',
-				required: true,
-				type: 'number',
-			},
 		],
 		type: 'row',
 	},
+
+	{
+		access: {
+			create: () => false,
+			update: () => false,
+		},
+		admin: {
+			disabled: true,
+		},
+		defaultValue: '-',
+		label: 'Nome Completo',
+		name: 'full_name',
+		type: 'text',
+	},
+
 	{
 		fields: [
 			{
@@ -101,4 +112,5 @@ export const userFieldsReferences: Field[] = [
 		],
 		type: 'group',
 	},
+
 ];

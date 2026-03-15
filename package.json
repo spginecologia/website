@@ -14,12 +14,12 @@
 		"start": "turbo start"
 	},
 	"devDependencies": {
-		"@carrismetropolitana/eslint": "20250622.1204.50",
 		"@dotenv-run/cli": "1.3.6",
-		"turbo": "2.8.3",
+		"@tmlmobilidade/eslint": "20260309.2221.31",
+		"turbo": "2.8.16",
 		"typescript": "5.9.3"
 	},
-	"packageManager": "npm@11.9.0",
+	"packageManager": "npm@11.11.1",
 	"workspaces": [
 		"apps/*",
 		"packages/*"

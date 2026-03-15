@@ -1,7 +1,6 @@
 /* * */
 
 import { HeaderAcademia } from '@/components/header/HeaderAcademia';
-import { HeaderBreadcrumbs } from '@/components/header/HeaderBreadcrumbs';
 import { HeaderLogo } from '@/components/header/HeaderLogo';
 import { HeaderMenu } from '@/components/header/HeaderMenu';
 import { HeaderUser } from '@/components/header/HeaderUser';
@@ -24,11 +23,6 @@ export function Header() {
 							<HeaderAcademia />
 							<HeaderUser />
 						</div>
-					</div>
-				</div>
-				<div className={styles.secondaryWrapper}>
-					<div className={styles.secondary}>
-						<HeaderBreadcrumbs />
 					</div>
 				</div>
 			</div>

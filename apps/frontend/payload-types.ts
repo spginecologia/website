@@ -81,6 +81,7 @@ export interface Config {
     quotas: Quota;
     sections: Section;
     users: User;
+    'user-files': UserFile;
     videos: Video;
     'video-files': VideoFile;
     workgroups: Workgroup;
@@ -105,6 +106,7 @@ export interface Config {
     quotas: QuotasSelect<false> | QuotasSelect<true>;
     sections: SectionsSelect<false> | SectionsSelect<true>;
     users: UsersSelect<false> | UsersSelect<true>;
+    'user-files': UserFilesSelect<false> | UserFilesSelect<true>;
     videos: VideosSelect<false> | VideosSelect<true>;
     'video-files': VideoFilesSelect<false> | VideoFilesSelect<true>;
     workgroups: WorkgroupsSelect<false> | WorkgroupsSelect<true>;
@@ -126,6 +128,9 @@ export interface Config {
     'social-bodies': SocialBodiesSelect<false> | SocialBodiesSelect<true>;
   };
   locale: null;
+  widgets: {
+    collections: CollectionsWidget;
+  };
   user: User;
   jobs: {
     tasks: unknown;
@@ -422,7 +427,7 @@ export interface User {
   tax_id: string;
   medical_id?: string | null;
   birthday?: string | null;
-  member_since: number;
+  full_name?: string | null;
   /**
    * Os sócios que são Internos não pagam quotas se a Quota for para um ano entre o ano de início e fim do Internato.
    */
@@ -475,6 +480,18 @@ export interface User {
         id?: string | null;
       }[]
     | null;
+  enrolment_signup_date?: string | null;
+  enrolment_approval_date?: string | null;
+  member_since?: number | null;
+  enrolment_type?: ('direct' | 'effective' | 'affiliate') | null;
+  enrolment_sponsors: {
+    sponsor_id: string | User;
+    response_status: 'waiting' | 'approved' | 'rejected';
+    request_date?: string | null;
+    response_date?: string | null;
+    id?: string | null;
+  }[];
+  enrolment_curriculum?: string | null;
   account_status?: ('active' | 'waiting' | 'dormant') | null;
   account_role?: ('member' | 'video-manager' | 'content-manager' | 'users-manager' | 'admin') | null;
   updatedAt: string;
@@ -493,6 +510,24 @@ export interface User {
     | null;
   password?: string | null;
   collection: 'users';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "user-files".
+ */
+export interface UserFile {
+  id: string;
+  updatedAt: string;
+  createdAt: string;
+  url?: string | null;
+  thumbnailURL?: string | null;
+  filename?: string | null;
+  mimeType?: string | null;
+  filesize?: number | null;
+  width?: number | null;
+  height?: number | null;
+  focalX?: number | null;
+  focalY?: number | null;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -650,6 +685,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'users';
         value: string | User;
+      } | null)
+    | ({
+        relationTo: 'user-files';
+        value: string | UserFile;
       } | null)
     | ({
         relationTo: 'videos';
@@ -954,7 +993,7 @@ export interface UsersSelect<T extends boolean = true> {
   tax_id?: T;
   medical_id?: T;
   birthday?: T;
-  member_since?: T;
+  full_name?: T;
   is_intern?: T;
   intern_since?: T;
   intern_until?: T;
@@ -996,6 +1035,20 @@ export interface UsersSelect<T extends boolean = true> {
             };
         id?: T;
       };
+  enrolment_signup_date?: T;
+  enrolment_approval_date?: T;
+  member_since?: T;
+  enrolment_type?: T;
+  enrolment_sponsors?:
+    | T
+    | {
+        sponsor_id?: T;
+        response_status?: T;
+        request_date?: T;
+        response_date?: T;
+        id?: T;
+      };
+  enrolment_curriculum?: T;
   account_status?: T;
   account_role?: T;
   updatedAt?: T;
@@ -1012,6 +1065,23 @@ export interface UsersSelect<T extends boolean = true> {
         createdAt?: T;
         expiresAt?: T;
       };
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "user-files_select".
+ */
+export interface UserFilesSelect<T extends boolean = true> {
+  updatedAt?: T;
+  createdAt?: T;
+  url?: T;
+  thumbnailURL?: T;
+  filename?: T;
+  mimeType?: T;
+  filesize?: T;
+  width?: T;
+  height?: T;
+  focalX?: T;
+  focalY?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -1260,6 +1330,16 @@ export interface SocialBodiesSelect<T extends boolean = true> {
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "collections_widget".
+ */
+export interface CollectionsWidget {
+  data?: {
+    [k: string]: unknown;
+  };
+  width: 'full';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

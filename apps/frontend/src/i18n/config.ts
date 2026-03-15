@@ -9,6 +9,7 @@ import { initReactI18next } from 'react-i18next';
 
 /* * */
 
+// eslint-disable-next-line @typescript-eslint/no-floating-promises
 i18next
 	.use(ICU)
 	.use(initReactI18next)
@@ -19,4 +20,5 @@ i18next
 		resources: {
 			pt: i18nResourceKeysPt,
 		},
+		showSupportNotice: false,
 	});

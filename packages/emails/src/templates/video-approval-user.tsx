@@ -24,7 +24,7 @@ export function VideoApprovalUserTemplate({ userDisplayName, videoTitle, videoUr
 	return (
 		<Wrapper previewMessage="Obrigado por partilhar a sua experiência.">
 			<Greeting text={`${userDisplayName},`} />
-			<Paragraph>O vídeo <strong>"{videoTitle}"</strong> foi aprovado e já está disponível na Academia SPG!</Paragraph>
+			<Paragraph>O vídeo <strong>&quot;{videoTitle}&quot;</strong> foi aprovado e já está disponível na Academia SPG!</Paragraph>
 			<MainButton href={videoUrl} label="Ver Vídeo" />
 			<Paragraph>Partilhe este link com os seus colegas: <strong>{videoUrl}</strong></Paragraph>
 			<Paragraph>Obrigado por contribuir para o crescimento da nossa comunidade científica.</Paragraph>

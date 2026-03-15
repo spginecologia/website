@@ -21,15 +21,13 @@ export async function brevoUpdateUser(userData: User, updateBy: 'email' | 'tax_i
 		// as it will create a new user or update an existing one.
 		requestPath = undefined;
 		requestMethod = 'POST';
-	}
-	else if (updateBy === 'tax_id') {
+	} else if (updateBy === 'tax_id') {
 		// If we use tax_id, then we must use a PUT as it will
 		// update an existing user. This happens when the user
 		// changes their email, for example.
 		requestPath = `${userData.tax_id}?identifierType=ext_id`;
 		requestMethod = 'PUT';
-	}
-	else {
+	} else {
 		throw new Error('Invalid updateBy parameter. Use "email" or "tax_id".');
 	}
 

@@ -1,6 +1,6 @@
 /* * */
 
-import { SignupForm } from '@/services/payload/collections/Signup/validation';
+import { type SignupForm } from '@/services/payload/collections/Signup/validation';
 
 /* * */
 
@@ -17,9 +17,13 @@ export const SignupFormDefault: SignupForm = {
 	city: '',
 	country: 'Portugal',
 	email: '',
+	enrolment_sponsors: [
+		{ is_valid: false, tax_id: '' },
+	],
 	first_name: '',
 	last_name: '',
 	medical_id: '',
+	medical_specialty: undefined,
 	phone: '',
 	postal_code: '',
 	send_newsletter: true,

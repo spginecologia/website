@@ -1,12 +1,19 @@
 /* * */
 
-import { next } from '@carrismetropolitana/eslint'
+import { next } from '@tmlmobilidade/eslint'
 
 /* * */
 
 export default [
 
   ...next,
+
+  {
+	rules: {
+		"@typescript-eslint/naming-convention": "off",
+		'no-console': 'off',
+	}
+  },
 
   {
     ignores: [

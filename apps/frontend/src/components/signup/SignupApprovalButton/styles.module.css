@@ -1,0 +1,25 @@
+/* * */
+/* CONTAINER */
+
+.container {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	padding: 30px 10px;
+	font-size: 20px;
+	color: var(--color-brand-support-500);
+	text-align: center;
+	text-transform: uppercase;
+	cursor: pointer;
+	background-color: var(--color-brand-support-300);
+	border: 3px solid transparent;
+}
+
+.container:hover {
+	color: #fff;
+	background-color: var(--color-brand-primary-100);
+	border-color: var(--color-brand-support-200);
+}

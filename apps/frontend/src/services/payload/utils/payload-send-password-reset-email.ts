@@ -1,8 +1,8 @@
 /* * */
 
 import payloadConfig from '@/payload-config';
-import { getUserDisplayName } from '@/services/general/get-user-display-name';
 import { navigationGetUrlWithRedirectParam } from '@/services/navigation/navigation-handle-redirect-param';
+import { getUserDisplayName } from '@/services/payload/collections/User/utils/get-user-display-name';
 import { renderAccountPasswordResetTemplate } from '@spginecologia/website-emails';
 import { getPayload } from 'payload';
 import { type User } from 'payload-types';

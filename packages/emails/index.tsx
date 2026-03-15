@@ -1,9 +1,7 @@
 /* * */
 
-import { type AccountActivationProps, accountActivationSubject, AccountActivationTemplate } from '@/templates/account-activation';
 import { type AccountPasswordChangedProps, accountPasswordChangedSubject, AccountPasswordChangedTemplate } from '@/templates/account-password-changed';
 import { type AccountPasswordResetProps, accountPasswordResetSubject, AccountPasswordResetTemplate } from '@/templates/account-password-reset';
-import { type AccountSignupProps, accountSignupSubject, AccountSignupTemplate } from '@/templates/account-signup';
 import { type QuotaActivationProps, quotaActivationSubject, QuotaActivationTemplate } from '@/templates/quota-activation';
 import { type QuotaActivationFreeProps, quotaActivationFreeSubject, QuotaActivationFreeTemplate } from '@/templates/quota-activation-free';
 import { type QuotaPaymentSuccessProps, quotaPaymentSuccessSubject, QuotaPaymentSuccessTemplate } from '@/templates/quota-payment-success';
@@ -11,23 +9,10 @@ import { type QuotaRefundSuccessProps, quotaRefundSuccessSubject, QuotaRefundSuc
 import { type VideoApprovalUserProps, videoApprovalUserSubject, VideoApprovalUserTemplate } from '@/templates/video-approval-user';
 import { type VideoSubmitSectionProps, videoSubmitSectionSubject, VideoSubmitSectionTemplate } from '@/templates/video-submit-section';
 import { type VideoSubmitUserProps, videoSubmitUserSubject, VideoSubmitUserTemplate } from '@/templates/video-submit-user';
+import { type EmailTemplate } from '@/types/email-template';
 import { render } from '@react-email/render';
 
 /* * */
-
-interface EmailTemplate {
-	html: string
-	subject: string
-}
-
-/* * */
-
-export const renderAccountActivationTemplate = async (props: AccountActivationProps): Promise<EmailTemplate> => {
-	return {
-		html: await render(<AccountActivationTemplate {...props} />),
-		subject: accountActivationSubject,
-	};
-};
 
 export const renderAccountPasswordChangedTemplate = async (props: AccountPasswordChangedProps): Promise<EmailTemplate> => {
 	return {
@@ -40,13 +25,6 @@ export const renderAccountPasswordResetTemplate = async (props: AccountPasswordR
 	return {
 		html: await render(<AccountPasswordResetTemplate {...props} />),
 		subject: accountPasswordResetSubject,
-	};
-};
-
-export const renderAccountSignupTemplate = async (props: AccountSignupProps): Promise<EmailTemplate> => {
-	return {
-		html: await render(<AccountSignupTemplate {...props} />),
-		subject: accountSignupSubject,
 	};
 };
 
@@ -98,3 +76,8 @@ export const renderVideoSubmitUserTemplate = async (props: VideoSubmitUserProps)
 		subject: videoSubmitUserSubject,
 	};
 };
+
+/* * */
+
+export * from '@/templates/index';
+export * from '@/types/index';

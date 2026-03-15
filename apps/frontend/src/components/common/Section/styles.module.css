@@ -76,11 +76,11 @@
 /* VARIANTS / WITH TOP SPACER */
 
 .container[data-with-top-spacer='transparent'] {
-	padding-top: 150px;
+	padding-top: 120px;
 }
 
 @media (width <= 1200px) {
 	.container[data-with-top-spacer='transparent'] {
-		padding-top: 100px;
+		padding-top: 80px;
 	}
 }

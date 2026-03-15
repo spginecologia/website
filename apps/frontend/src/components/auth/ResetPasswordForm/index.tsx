@@ -76,8 +76,7 @@ export function ResetPasswordForm() {
 				throw new Error(`Failed to reset password. Status: ${response.status}`);
 			}
 			navigationHandleRedirectParam('/account');
-		}
-		catch (error) {
+		} catch (error) {
 			console.log(error.message);
 			setIsLoading(false);
 			setIsError(true);

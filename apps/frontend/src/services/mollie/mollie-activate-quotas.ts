@@ -1,24 +1,22 @@
 /* * */
 
 import payloadConfig from '@/payload-config';
-import { getUserDisplayName } from '@/services/general/get-user-display-name';
 import { LOGGER } from '@/services/logger/LOGGER';
 import { MOLLIEAPI } from '@/services/mollie/MOLLIEAPI';
+import { getUserDisplayName } from '@/services/payload/collections/User/utils/get-user-display-name';
+import { getUserEnrolmentYear } from '@/services/payload/collections/User/utils/get-user-enrolment-year';
 import { renderQuotaActivationFreeTemplate, renderQuotaActivationTemplate } from '@spginecologia/website-emails';
 import { getPayload } from 'payload';
 import { type User } from 'payload-types';
 
 /**
  * This function activates quotas for a user by creating Mollie payment links for each quota.
- * It checks if the user is eligible for each quota based on their membership year and internship status.
+ * It checks if the user is eligible for each quota based on their enrolment year and internship status.
  * @param userId User ID to activate quotas for.
  * @throws Error if no quotas are found or if the user is not found.
  */
 export async function mollieActivateQuotas(userId: string) {
 	//
-
-	//
-	// Setup payload
 
 	const payload = await getPayload({ config: payloadConfig });
 
@@ -54,7 +52,7 @@ export async function mollieActivateQuotas(userId: string) {
 		collection: 'quotas',
 	});
 
-	if (!allQuotasData || !allQuotasData.docs.length) {
+	if (!allQuotasData?.docs.length) {
 		LOGGER.error('mollie-activate-quotas', 'No quotas found. Skipping...');
 		return;
 	}
@@ -88,13 +86,15 @@ export async function mollieActivateQuotas(userId: string) {
 		// Compare the year this user joined SPG and the year of the quota,
 		// as well as if the user already has a quota set for this year.
 
-		if (!userData.member_since) {
-			LOGGER.error('mollie-activate-quotas', `User with ID "${userId}" does not have a member_since year. Skipping...`);
+		const userEnrolmentYear = getUserEnrolmentYear(userData.enrolment_approval_date);
+
+		if (!userEnrolmentYear) {
+			LOGGER.error('mollie-activate-quotas', `User with ID "${userId}" does not have an enrolment year. Skipping...`);
 			continue;
 		}
 
-		if (userData.member_since > quotaData.year) {
-			LOGGER.info('mollie-activate-quotas', `User with ID "${userId}" joined in "${userData.member_since}" which is after the quota year "${quotaData.year}". Skipping...`);
+		if (userEnrolmentYear > quotaData.year) {
+			LOGGER.info('mollie-activate-quotas', `User with ID "${userId}" joined in "${userEnrolmentYear}" which is after the quota year "${quotaData.year}". Skipping...`);
 			continue;
 		}
 
