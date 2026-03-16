@@ -2,17 +2,17 @@
 
 /* * */
 
-import { useField } from '@payloadcms/ui';
+import { useDocumentInfo } from '@payloadcms/ui';
 
 /* * */
 
-export function UserDetailQuotasRefresh({ path }) {
+export function UserDetailQuotasRefresh() {
 	//
 
 	//
 	// A. Fetch data
 
-	const { value: userId } = useField({ path: '_id' });
+	const { id: userId } = useDocumentInfo();
 
 	//
 	// B. Render components
@@ -25,7 +25,7 @@ export function UserDetailQuotasRefresh({ path }) {
 			style={{ margin: 0 }}
 			target="_blank"
 		>
-			Atualizar Quotas - {userId} - {path}
+			Atualizar Quotas
 		</a>
 	);
 }

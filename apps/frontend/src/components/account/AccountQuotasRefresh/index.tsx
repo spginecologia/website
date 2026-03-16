@@ -35,6 +35,4 @@ export function AccountQuotasRefresh() {
 			<Text maw={400} variant="footnote">{t('account.AccountQuotasRefresh.footnote')}</Text>
 		</Link>
 	);
-
-	//
 }
