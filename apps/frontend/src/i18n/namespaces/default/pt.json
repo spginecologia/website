@@ -569,7 +569,7 @@
 					"label": "Qual a sua especialidade médica ou atividade profissional?",
 					"options": {
 						"gynecology": {
-							"description": "Médicos especialistas em Ginecologia Obstetrícia podem indicar 2 sócios SPG como seus proponentes. Estes dois sócios recebem um email para validar os dados introduzidos nesta candidatura e podem imediatamente ativar a sua conta SPG.",
+							"description": "Médicos especialistas ou internos de Ginecologia Obstetrícia podem indicar 2 sócios SPG como seus proponentes. Estes dois sócios recebem um email para validar os dados introduzidos nesta candidatura e podem imediatamente ativar a sua conta SPG.",
 							"label": "Ginecologia Obstetrícia"
 						},
 						"other": {
