@@ -2,7 +2,8 @@
 
 /* * */
 
-import { useDocumentInfo } from '@payloadcms/ui';
+import { LoadingOverlay, useDocumentInfo } from '@payloadcms/ui';
+import { useState } from 'react';
 
 /* * */
 
@@ -14,16 +15,29 @@ export function UserDetailQuotasRefresh() {
 
 	const { id: userId } = useDocumentInfo();
 
+	const [isLoading, setIsLoading] = useState(false);
+
 	//
-	// B. Render components
+	// B. Handle actions
+
+	const handleRefresh = async () => {
+		setIsLoading(true);
+		await fetch(`/api/account/quotas/refresh-status/${userId}`);
+		window.location.reload();
+	};
+
+	//
+	// C. Render components
+
+	if (isLoading) {
+		return <LoadingOverlay />;
+	}
 
 	return (
 		<a
 			className="btn btn--size-small btn--style-pill"
-			href={`/api/account/quotas/refresh-status/${userId}`}
-			rel="noreferrer"
+			onClick={handleRefresh}
 			style={{ margin: 0 }}
-			target="_blank"
 		>
 			Atualizar Quotas
 		</a>
