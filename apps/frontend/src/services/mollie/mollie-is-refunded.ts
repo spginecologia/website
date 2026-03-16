@@ -27,7 +27,7 @@ export function mollieIsRefunded(paymentData: Payment): boolean {
 	// Check if the payment has been refunded by checking the amountRefunded field.
 	// If the amountRefunded is present and greater than zero, it means the payment has been refunded.
 
-	const hasRefundedAmount = paymentData.amountRefunded && paymentData.amountRefunded.value;
+	const hasRefundedAmount = paymentData.amountRefunded?.value;
 	const refundedAmountIsZero = hasRefundedAmount && paymentData.amountRefunded.value === '0.00';
 	const refundedAmountEqualsPaymentAmount = hasRefundedAmount && paymentData.amountRefunded.value === paymentData.amount.value;
 
