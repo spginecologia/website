@@ -6,7 +6,7 @@ import { useField } from '@payloadcms/ui';
 
 /* * */
 
-export function OpenTransactionDocumentButton({ path }) {
+export function UserDetailOpenTransactionDocumentButton({ path }) {
 	//
 
 	//

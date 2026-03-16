@@ -23,7 +23,8 @@ import { BoldFeatureClient as BoldFeatureClient_e70f5e05f09f93e00b997edb1ef0c864
 import { ItalicFeatureClient as ItalicFeatureClient_e70f5e05f09f93e00b997edb1ef0c864 } from '@payloadcms/richtext-lexical/client'
 import { SpgMemberRowLabel as SpgMemberRowLabel_c6a59ba124efbe19240b0bf5154fe8b4 } from '@/services/payload/components/SpgMemberRowLabel/index'
 import { FileOrUrlRowLabel as FileOrUrlRowLabel_e392e86270e94bf15012006ccac0b5ce } from '@/services/payload/components/FileOrUrlRowLabel/index'
-import { OpenTransactionDocumentButton as OpenTransactionDocumentButton_ff581ccc4f936cf6b07007539c523b86 } from '@/services/payload/components/OpenTransactionDocumentButton/index'
+import { UserDetailOpenTransactionDocumentButton as UserDetailOpenTransactionDocumentButton_5ec8b6dace1a8f3294c661fba6ff83a8 } from '@/services/payload/collections/User/components/UserDetailOpenTransactionDocumentButton/index'
+import { UserDetailQuotasRefresh as UserDetailQuotasRefresh_8213642671ef6beea8a9f7e8d329f877 } from '@/services/payload/collections/User/components/UserDetailQuotasRefresh/index'
 import { UsersListExportAllButton as UsersListExportAllButton_c2bab1cc781bba2ec19796000c0d96eb } from '@/services/payload/collections/User/components/UsersListExportAllButton/index'
 import { UsersListExportUnpaidButton as UsersListExportUnpaidButton_c052b88ae1a7e15a18f6b71caa570702 } from '@/services/payload/collections/User/components/UsersListExportUnpaidButton/index'
 import { UsersListExportWaitingButton as UsersListExportWaitingButton_80561668937d4c1303c1bdfbee77f274 } from '@/services/payload/collections/User/components/UsersListExportWaitingButton/index'
@@ -55,7 +56,8 @@ export const importMap = {
   "@payloadcms/richtext-lexical/client#ItalicFeatureClient": ItalicFeatureClient_e70f5e05f09f93e00b997edb1ef0c864,
   "@/services/payload/components/SpgMemberRowLabel/index#SpgMemberRowLabel": SpgMemberRowLabel_c6a59ba124efbe19240b0bf5154fe8b4,
   "@/services/payload/components/FileOrUrlRowLabel/index#FileOrUrlRowLabel": FileOrUrlRowLabel_e392e86270e94bf15012006ccac0b5ce,
-  "@/services/payload/components/OpenTransactionDocumentButton/index#OpenTransactionDocumentButton": OpenTransactionDocumentButton_ff581ccc4f936cf6b07007539c523b86,
+  "@/services/payload/collections/User/components/UserDetailOpenTransactionDocumentButton/index#UserDetailOpenTransactionDocumentButton": UserDetailOpenTransactionDocumentButton_5ec8b6dace1a8f3294c661fba6ff83a8,
+  "@/services/payload/collections/User/components/UserDetailQuotasRefresh/index#UserDetailQuotasRefresh": UserDetailQuotasRefresh_8213642671ef6beea8a9f7e8d329f877,
   "@/services/payload/collections/User/components/UsersListExportAllButton/index#UsersListExportAllButton": UsersListExportAllButton_c2bab1cc781bba2ec19796000c0d96eb,
   "@/services/payload/collections/User/components/UsersListExportUnpaidButton/index#UsersListExportUnpaidButton": UsersListExportUnpaidButton_c052b88ae1a7e15a18f6b71caa570702,
   "@/services/payload/collections/User/components/UsersListExportWaitingButton/index#UsersListExportWaitingButton": UsersListExportWaitingButton_80561668937d4c1303c1bdfbee77f274,

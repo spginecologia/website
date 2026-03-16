@@ -145,7 +145,7 @@ export const userFieldsQuotasPayments: Field[] = [
 							{
 								admin: {
 									components: {
-										Field: '@/services/payload/components/OpenTransactionDocumentButton/index#OpenTransactionDocumentButton',
+										Field: '@/services/payload/collections/User/components/UserDetailOpenTransactionDocumentButton/index#UserDetailOpenTransactionDocumentButton',
 									},
 								},
 								name: 'open_pdf',
@@ -163,6 +163,15 @@ export const userFieldsQuotasPayments: Field[] = [
 		label: 'Pagamentos de Quotas',
 		name: 'quotas',
 		type: 'array',
+	},
+	{
+		admin: {
+			components: {
+				Field: '@/services/payload/collections/User/components/UserDetailQuotasRefresh/index#UserDetailQuotasRefresh',
+			},
+		},
+		name: 'quotas_refresh',
+		type: 'ui',
 	},
 ];
 
