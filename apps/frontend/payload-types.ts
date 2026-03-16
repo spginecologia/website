@@ -465,13 +465,13 @@ export interface User {
         year: number;
         payment_amount: number;
         payment_status: 'waiting' | 'free' | 'paid' | 'refunded' | 'canceled';
-        payment_link_id: string;
-        payment_link_url: string;
+        payment_link_id?: string | null;
+        payment_link_url?: string | null;
         invoices?:
           | {
               doc_id: number;
               doc_number: string;
-              payment_id: string;
+              payment_id?: string | null;
               doc_type: 'invoice' | 'credit_note';
               doc_system_time: string;
               id?: string | null;

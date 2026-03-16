@@ -94,13 +94,11 @@ export const userFieldsQuotasPayments: Field[] = [
 					{
 						label: 'Mollie Payment Link ID',
 						name: 'payment_link_id',
-						required: true,
 						type: 'text',
 					},
 					{
 						label: 'Mollie Payment Link URL',
 						name: 'payment_link_url',
-						required: true,
 						type: 'text',
 					},
 				],
@@ -126,7 +124,6 @@ export const userFieldsQuotasPayments: Field[] = [
 							{
 								label: 'Mollie Payment ID',
 								name: 'payment_id',
-								required: true,
 								type: 'text',
 							},
 							{
