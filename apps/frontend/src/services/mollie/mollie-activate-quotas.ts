@@ -58,6 +58,12 @@ export async function mollieActivateQuotas(userId: string) {
 	}
 
 	//
+	// Setup the resulting quotas array that will be used
+	// to update the user data at the end of the process.
+
+	const resultingQuotas: User['quotas'] = userData.quotas ?? [];
+
+	//
 	// Loop through all quotas and validate the required fields.
 
 	for (const quotaData of allQuotasData.docs) {
@@ -98,7 +104,7 @@ export async function mollieActivateQuotas(userId: string) {
 			continue;
 		}
 
-		if (userData.quotas?.some(item => item.year === quotaData.year)) {
+		if (resultingQuotas.some(item => item.year === quotaData.year)) {
 			LOGGER.info('mollie-activate-quotas', `User with ID "${userId}" already has a quota for the year "${quotaData.year}". Skipping...`);
 			continue;
 		}
@@ -117,23 +123,14 @@ export async function mollieActivateQuotas(userId: string) {
 			// Set the quota as free and update the user data
 			// with the new payment link and status.
 
-			const newUserQuotas: User['quotas'] = [
-				{
-					invoices: [],
-					payment_amount: quotaData.amount,
-					payment_link_id: 'internship',
-					payment_link_url: 'internship',
-					payment_status: 'free',
-					request_date: new Date().toISOString(),
-					year: quotaData.year,
-				},
-				...userData.quotas ?? [],
-			];
-
-			await payload.update({
-				collection: 'users',
-				data: { quotas: newUserQuotas },
-				id: userData.id,
+			resultingQuotas.push({
+				invoices: [],
+				payment_amount: quotaData.amount,
+				payment_link_id: 'internship',
+				payment_link_url: 'internship',
+				payment_status: 'free',
+				request_date: new Date().toISOString(),
+				year: quotaData.year,
 			});
 
 			//
@@ -186,23 +183,14 @@ export async function mollieActivateQuotas(userId: string) {
 		//
 		// Update the user with the new payment link and status
 
-		const newUserQuotas: User['quotas'] = [
-			{
-				invoices: [],
-				payment_amount: quotaData.amount,
-				payment_link_id: paymentLink.id,
-				payment_link_url: paymentLink.getPaymentUrl(),
-				payment_status: 'waiting',
-				request_date: new Date().toISOString(),
-				year: quotaData.year,
-			},
-			...userData.quotas ?? [],
-		];
-
-		await payload.update({
-			collection: 'users',
-			data: { quotas: newUserQuotas },
-			id: userData.id,
+		resultingQuotas.push({
+			invoices: [],
+			payment_amount: quotaData.amount,
+			payment_link_id: paymentLink.id,
+			payment_link_url: paymentLink.getPaymentUrl(),
+			payment_status: 'waiting',
+			request_date: new Date().toISOString(),
+			year: quotaData.year,
 		});
 
 		//
@@ -227,10 +215,16 @@ export async function mollieActivateQuotas(userId: string) {
 		//
 		// Set a timeout to avoid overloading the server
 
-		await new Promise(resolve => setTimeout(resolve, 200));
+		await new Promise(resolve => setTimeout(resolve, 500));
 
 		//
 	}
+
+	await payload.update({
+		collection: 'users',
+		data: { quotas: resultingQuotas },
+		id: userData.id,
+	});
 
 	//
 };
