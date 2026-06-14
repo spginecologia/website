@@ -35,7 +35,7 @@ export function SocietySocialBodies() {
 			<Section withPadding>
 
 				<Title order={1}>{t('society.SocietySocialBodies.title')}</Title>
-				<Image src="/generic/orgaos-sociais-spg-2023.jpg" />
+				<Image src="/generic/orgaos-sociais-spg-2026.jpg" />
 
 				<div className={styles.grid}>
 
