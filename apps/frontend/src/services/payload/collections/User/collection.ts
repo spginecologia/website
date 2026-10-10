@@ -7,6 +7,7 @@ import { updateUserQuotaStatus } from '@/services/payload/collections/User/actio
 import { userFieldsActivity } from '@/services/payload/collections/User/fields/activity';
 import { userFieldsContacts } from '@/services/payload/collections/User/fields/contacts';
 import { userFieldsEnrolment } from '@/services/payload/collections/User/fields/enrolment';
+import { userFieldsNotes } from '@/services/payload/collections/User/fields/notes';
 import { userFieldsQuotas } from '@/services/payload/collections/User/fields/quotas';
 import { userFieldsReferences } from '@/services/payload/collections/User/fields/references';
 import { userFieldsSidebar } from '@/services/payload/collections/User/fields/sidebar';
@@ -100,6 +101,10 @@ export const Users: CollectionConfig = {
 				{
 					fields: userFieldsEnrolment,
 					label: 'Candidatura',
+				},
+				{
+					fields: userFieldsNotes,
+					label: 'Notas',
 				},
 			],
 			type: 'tabs',
