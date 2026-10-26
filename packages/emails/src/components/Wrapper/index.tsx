@@ -2,8 +2,8 @@
 
 import { CoverLogo } from '@/components/CoverLogo';
 import { Footer } from '@/components/Footer';
-import { Body, Container, Font, Head, Html, Preview } from '@react-email/components';
 import { type PropsWithChildren } from 'react';
+import { Body, Container, Font, Head, Html, Preview } from 'react-email';
 
 import styles from './styles';
 

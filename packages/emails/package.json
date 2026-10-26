@@ -15,16 +15,14 @@
 		"lint": "eslint ./src/ && tsc --noEmit"
 	},
 	"dependencies": {
-		"@react-email/components": "1.0.9",
-		"@react-email/render": "2.0.4",
-		"browserslist": "4.28.1",
-		"react-email": "5.2.9"
+		"browserslist": "4.29.4",
+		"react-email": "6.11.3"
 	},
 	"devDependencies": {
-		"@react-email/preview-server": "5.2.9",
-		"@tmlmobilidade/eslint": "20260309.2221.31",
-		"@types/node": "25.5.0",
+		"@react-email/ui": "6.11.3",
+		"@tmlmobilidade/eslint": "20261026.1111.43",
+		"@types/node": "26.6.5",
 		"resolve-tspaths": "0.8.23",
-		"typescript": "5.9.3"
+		"typescript": "6.0.3"
 	}
 }

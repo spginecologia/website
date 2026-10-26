@@ -1,7 +1,7 @@
 /* * */
 
-import { Text } from '@react-email/components';
 import { type PropsWithChildren } from 'react';
+import { Text } from 'react-email';
 
 import styles from './styles';
 

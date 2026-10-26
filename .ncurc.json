@@ -1,3 +1,5 @@
 {
-	"reject": ["next"]
+	"reject": [
+		"typescript"
+	]
 }

@@ -10,7 +10,7 @@ import { type VideoApprovalUserProps, videoApprovalUserSubject, VideoApprovalUse
 import { type VideoSubmitSectionProps, videoSubmitSectionSubject, VideoSubmitSectionTemplate } from '@/templates/video-submit-section';
 import { type VideoSubmitUserProps, videoSubmitUserSubject, VideoSubmitUserTemplate } from '@/templates/video-submit-user';
 import { type EmailTemplate } from '@/types/email-template';
-import { render } from '@react-email/render';
+import { render } from 'react-email';
 
 /* * */
 
